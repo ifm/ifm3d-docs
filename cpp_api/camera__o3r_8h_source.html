@@ -114,33 +114,55 @@ $(document).ready(function(){initNavTree('camera__o3r_8h_source.html',''); initR
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1O3RCamera.html#a2cad8dfa3c9b8a711952ef8c81d88f5a">FactoryReset</a>(<span class="keywordtype">bool</span> keepNetworkSettings);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    json <a class="code" href="classifm3d_1_1O3RCamera.html#a856a32f946a0dd915b5af51f59455aea">Schema</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    json <a class="code" href="classifm3d_1_1O3RCamera.html#a49e36cb8582d36d471b0e5ae338274c4">GetSchema</a>();</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1O3RCamera.html#ad1d1062a69ac73c8fb0a60200bda22a9">Reboot</a>(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1CameraBase.html#a1d5f216e9ca6faee38b460815bc63dff">boot_mode</a>&amp; mode =</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                  ifm3d::CameraBase::boot_mode::PRODUCTIVE) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    device_family <a class="code" href="classifm3d_1_1O3RCamera.html#a234bb3fd3eb24988137cb2b2abd9af0e">WhoAmI</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    ifm3d::CameraBase::swu_version <a class="code" href="classifm3d_1_1O3RCamera.html#ab0e7b5641c88db8bc05f9429a2f125a6">SwUpdateVersion</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    json <a class="code" href="classifm3d_1_1O3RCamera.html#aa55a2f0d926c84c079770e02a9d210c5">ToJSON</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1O3RCamera.html#a88a4aceb57fd6766416a08a206ca1c7e">FromJSON</a>(<span class="keyword">const</span> json&amp; j) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">class </span>Impl;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    std::unique_ptr&lt;Impl&gt; pImpl;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }; <span class="comment">// end: class O3RCamera</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif // IFM3D_CAMERA_CAMERA_O3R_H</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    json <a class="code" href="classifm3d_1_1O3RCamera.html#a275baae3de9789e6b04eb8202def49b7">Get</a>(</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; path = std::vector&lt;std::string&gt;());</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1O3RCamera.html#a5dd2b6528e1de94c79b2acbfe4e622fd">Set</a>(<span class="keyword">const</span> json&amp; j);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    json <a class="code" href="classifm3d_1_1O3RCamera.html#a5ac6936e1dda449dd583fe4f7859063c">GetInit</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1O3RCamera.html#a828aed8a5d32d7e6818ce1070a99306f">SaveInit</a>();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    std::string <a class="code" href="classifm3d_1_1O3RCamera.html#af5541b21e98118c4d9db59debeaa1f5d">GetInitStatus</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1O3RCamera.html#a86f918d774e9939cb0501c1377725e4d">Lock</a>(<span class="keyword">const</span> std::string&amp; password);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1O3RCamera.html#ab83a8ea7f46e3cb8dde2efc8a25ee5e3">Unlock</a>(<span class="keyword">const</span> std::string&amp; password);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1O3RCamera.html#ad1d1062a69ac73c8fb0a60200bda22a9">Reboot</a>(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1CameraBase.html#a1d5f216e9ca6faee38b460815bc63dff">boot_mode</a>&amp; mode =</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                  ifm3d::CameraBase::boot_mode::PRODUCTIVE) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    device_family <a class="code" href="classifm3d_1_1O3RCamera.html#a234bb3fd3eb24988137cb2b2abd9af0e">WhoAmI</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    ifm3d::CameraBase::swu_version <a class="code" href="classifm3d_1_1O3RCamera.html#ab0e7b5641c88db8bc05f9429a2f125a6">SwUpdateVersion</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    json <a class="code" href="classifm3d_1_1O3RCamera.html#aa55a2f0d926c84c079770e02a9d210c5">ToJSON</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1O3RCamera.html#a88a4aceb57fd6766416a08a206ca1c7e">FromJSON</a>(<span class="keyword">const</span> json&amp; j) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">class </span>Impl;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    std::unique_ptr&lt;Impl&gt; pImpl;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  }; <span class="comment">// end: class O3RCamera</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#endif // IFM3D_CAMERA_CAMERA_O3R_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclassifm3d_1_1O3RCamera_html_a828aed8a5d32d7e6818ce1070a99306f"><div class="ttname"><a href="classifm3d_1_1O3RCamera.html#a828aed8a5d32d7e6818ce1070a99306f">ifm3d::O3RCamera::SaveInit</a></div><div class="ttdeci">void SaveInit()</div></div>
+<div class="ttc" id="aclassifm3d_1_1O3RCamera_html_a49e36cb8582d36d471b0e5ae338274c4"><div class="ttname"><a href="classifm3d_1_1O3RCamera.html#a49e36cb8582d36d471b0e5ae338274c4">ifm3d::O3RCamera::GetSchema</a></div><div class="ttdeci">json GetSchema()</div></div>
 <div class="ttc" id="aclassifm3d_1_1O3RCamera_html_aa55a2f0d926c84c079770e02a9d210c5"><div class="ttname"><a href="classifm3d_1_1O3RCamera.html#aa55a2f0d926c84c079770e02a9d210c5">ifm3d::O3RCamera::ToJSON</a></div><div class="ttdeci">json ToJSON() override</div></div>
+<div class="ttc" id="aclassifm3d_1_1O3RCamera_html_ab83a8ea7f46e3cb8dde2efc8a25ee5e3"><div class="ttname"><a href="classifm3d_1_1O3RCamera.html#ab83a8ea7f46e3cb8dde2efc8a25ee5e3">ifm3d::O3RCamera::Unlock</a></div><div class="ttdeci">void Unlock(const std::string &amp;password)</div></div>
+<div class="ttc" id="aclassifm3d_1_1O3RCamera_html_af5541b21e98118c4d9db59debeaa1f5d"><div class="ttname"><a href="classifm3d_1_1O3RCamera.html#af5541b21e98118c4d9db59debeaa1f5d">ifm3d::O3RCamera::GetInitStatus</a></div><div class="ttdeci">std::string GetInitStatus()</div></div>
+<div class="ttc" id="aclassifm3d_1_1O3RCamera_html_a86f918d774e9939cb0501c1377725e4d"><div class="ttname"><a href="classifm3d_1_1O3RCamera.html#a86f918d774e9939cb0501c1377725e4d">ifm3d::O3RCamera::Lock</a></div><div class="ttdeci">void Lock(const std::string &amp;password)</div></div>
+<div class="ttc" id="aclassifm3d_1_1O3RCamera_html_a275baae3de9789e6b04eb8202def49b7"><div class="ttname"><a href="classifm3d_1_1O3RCamera.html#a275baae3de9789e6b04eb8202def49b7">ifm3d::O3RCamera::Get</a></div><div class="ttdeci">json Get(const std::vector&lt; std::string &gt; &amp;path=std::vector&lt; std::string &gt;())</div></div>
 <div class="ttc" id="aclassifm3d_1_1O3RCamera_html_ad1d1062a69ac73c8fb0a60200bda22a9"><div class="ttname"><a href="classifm3d_1_1O3RCamera.html#ad1d1062a69ac73c8fb0a60200bda22a9">ifm3d::O3RCamera::Reboot</a></div><div class="ttdeci">void Reboot(const boot_mode &amp;mode=ifm3d::CameraBase::boot_mode::PRODUCTIVE) override</div></div>
+<div class="ttc" id="aclassifm3d_1_1O3RCamera_html_a5ac6936e1dda449dd583fe4f7859063c"><div class="ttname"><a href="classifm3d_1_1O3RCamera.html#a5ac6936e1dda449dd583fe4f7859063c">ifm3d::O3RCamera::GetInit</a></div><div class="ttdeci">json GetInit()</div></div>
 <div class="ttc" id="aclassifm3d_1_1O3RCamera_html_ab0e7b5641c88db8bc05f9429a2f125a6"><div class="ttname"><a href="classifm3d_1_1O3RCamera.html#ab0e7b5641c88db8bc05f9429a2f125a6">ifm3d::O3RCamera::SwUpdateVersion</a></div><div class="ttdeci">ifm3d::CameraBase::swu_version SwUpdateVersion() override</div></div>
+<div class="ttc" id="aclassifm3d_1_1O3RCamera_html_a5dd2b6528e1de94c79b2acbfe4e622fd"><div class="ttname"><a href="classifm3d_1_1O3RCamera.html#a5dd2b6528e1de94c79b2acbfe4e622fd">ifm3d::O3RCamera::Set</a></div><div class="ttdeci">void Set(const json &amp;j)</div></div>
 <div class="ttc" id="aclassifm3d_1_1O3RCamera_html_a2cad8dfa3c9b8a711952ef8c81d88f5a"><div class="ttname"><a href="classifm3d_1_1O3RCamera.html#a2cad8dfa3c9b8a711952ef8c81d88f5a">ifm3d::O3RCamera::FactoryReset</a></div><div class="ttdeci">virtual void FactoryReset(bool keepNetworkSettings)</div></div>
 <div class="ttc" id="aclassifm3d_1_1CameraBase_html"><div class="ttname"><a href="classifm3d_1_1CameraBase.html">ifm3d::CameraBase</a></div><div class="ttdef"><b>Definition:</b> camera_base.h:72</div></div>
 <div class="ttc" id="aclassifm3d_1_1O3RCamera_html_a88a4aceb57fd6766416a08a206ca1c7e"><div class="ttname"><a href="classifm3d_1_1O3RCamera.html#a88a4aceb57fd6766416a08a206ca1c7e">ifm3d::O3RCamera::FromJSON</a></div><div class="ttdeci">void FromJSON(const json &amp;j) override</div></div>
 <div class="ttc" id="aclassifm3d_1_1O3RCamera_html_a234bb3fd3eb24988137cb2b2abd9af0e"><div class="ttname"><a href="classifm3d_1_1O3RCamera.html#a234bb3fd3eb24988137cb2b2abd9af0e">ifm3d::O3RCamera::WhoAmI</a></div><div class="ttdeci">device_family WhoAmI() override</div></div>
 <div class="ttc" id="aclassifm3d_1_1O3RCamera_html"><div class="ttname"><a href="classifm3d_1_1O3RCamera.html">ifm3d::O3RCamera</a></div><div class="ttdef"><b>Definition:</b> camera_o3r.h:16</div></div>
-<div class="ttc" id="aclassifm3d_1_1O3RCamera_html_a856a32f946a0dd915b5af51f59455aea"><div class="ttname"><a href="classifm3d_1_1O3RCamera.html#a856a32f946a0dd915b5af51f59455aea">ifm3d::O3RCamera::Schema</a></div><div class="ttdeci">json Schema()</div></div>
 <div class="ttc" id="aclassifm3d_1_1CameraBase_html_a1d5f216e9ca6faee38b460815bc63dff"><div class="ttname"><a href="classifm3d_1_1CameraBase.html#a1d5f216e9ca6faee38b460815bc63dff">ifm3d::CameraBase::boot_mode</a></div><div class="ttdeci">boot_mode</div><div class="ttdef"><b>Definition:</b> camera_base.h:83</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
