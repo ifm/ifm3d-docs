@@ -1,0 +1,485 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ImageBuffer &mdash; ifm3d  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="O3RCamera" href="ifm3dpy.O3RCamera.html" />
+    <link rel="prev" title="FrameGrabber" href="ifm3dpy.FrameGrabber.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ifm3d
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Home page</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../python_api.html">Python API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../python_api.html#module-ifm3dpy">ifm3dpy Module</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../python_api.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="ifm3dpy.Camera.html">Camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ifm3dpy.CameraBase.html">CameraBase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ifm3dpy.FrameGrabber.html">FrameGrabber</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">ImageBuffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ifm3dpy.O3RCamera.html">O3RCamera</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../python_api.html#variables">Variables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/annotated.html">C++ API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ifm3d</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../python_api.html">Python API Reference</a> &raquo;</li>
+        
+      <li>ImageBuffer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/ifm3dpy.ImageBuffer.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="imagebuffer">
+<h1>ImageBuffer<a class="headerlink" href="#imagebuffer" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="ifm3dpy.ImageBuffer">
+<em class="property">class </em><code class="descclassname">ifm3dpy.</code><code class="descname">ImageBuffer</code><a class="headerlink" href="#ifm3dpy.ImageBuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<p>Class which holds a validated image buffer from the sensor that
+represents a single time-synchronized set of images based on the current
+schema mask set on the active framegrabber.</p>
+<p class="rubric">Methods Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.ImageBuffer.amplitude_image" title="ifm3dpy.ImageBuffer.amplitude_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">amplitude_image</span></code></a>(self)</td>
+<td>Retrieves the amplitude image</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.ImageBuffer.confidence_image" title="ifm3dpy.ImageBuffer.confidence_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">confidence_image</span></code></a>(self)</td>
+<td>Retrieves the confidence image</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.ImageBuffer.distance_image" title="ifm3dpy.ImageBuffer.distance_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">distance_image</span></code></a>(self)</td>
+<td>Retrieves the radial distance image</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.ImageBuffer.exposure_times" title="ifm3dpy.ImageBuffer.exposure_times"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exposure_times</span></code></a>(self)</td>
+<td>Returns the exposure times for the current frame.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.ImageBuffer.extrinsics" title="ifm3dpy.ImageBuffer.extrinsics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extrinsics</span></code></a>(self)</td>
+<td>Returns a 6-element vector containing the extrinsic calibration of the camera.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.ImageBuffer.gray_image" title="ifm3dpy.ImageBuffer.gray_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gray_image</span></code></a>(self)</td>
+<td>Retrieves the gray image</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.ImageBuffer.illu_temp" title="ifm3dpy.ImageBuffer.illu_temp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">illu_temp</span></code></a>(self)</td>
+<td>Returns the temperature of the illumination unit.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.ImageBuffer.intrinsics" title="ifm3dpy.ImageBuffer.intrinsics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intrinsics</span></code></a>(self)</td>
+<td>Retrieves the intrinsic calibration of the camera</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.ImageBuffer.inverse_intrinsics" title="ifm3dpy.ImageBuffer.inverse_intrinsics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inverse_intrinsics</span></code></a>(self)</td>
+<td>Retrieves the inverse intrinsic calibration of the camera.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.ImageBuffer.jpeg_image" title="ifm3dpy.ImageBuffer.jpeg_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">jpeg_image</span></code></a>(self)</td>
+<td>Retrieves the jpeg encoded 2d image</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.ImageBuffer.json_model" title="ifm3dpy.ImageBuffer.json_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">json_model</span></code></a>(self)</td>
+<td>Returns the JSON model of the output of the active application</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.ImageBuffer.organize" title="ifm3dpy.ImageBuffer.organize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">organize</span></code></a>(self)</td>
+<td>This is the interface hook that synchronizes the internally wrapped byte buffer with the semantically meaningful image/cloud data structures.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.ImageBuffer.raw_amplitude_image" title="ifm3dpy.ImageBuffer.raw_amplitude_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">raw_amplitude_image</span></code></a>(self)</td>
+<td>Retrieves the raw amplitude image</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.ImageBuffer.timestamp" title="ifm3dpy.ImageBuffer.timestamp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timestamp</span></code></a>(self)</td>
+<td>Returns the time stamp of the image data.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.ImageBuffer.unit_vectors" title="ifm3dpy.ImageBuffer.unit_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unit_vectors</span></code></a>(self)</td>
+<td>Retrieves the unit vector image</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.ImageBuffer.xyz_image" title="ifm3dpy.ImageBuffer.xyz_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xyz_image</span></code></a>(self)</td>
+<td>Retrieves the xyz image (cartesian point cloud)</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt id="ifm3dpy.ImageBuffer.amplitude_image">
+<code class="descname">amplitude_image</code><span class="sig-paren">(</span><em>self: ifm3dpy.ImageBuffer</em><span class="sig-paren">)</span> &#x2192; array<a class="headerlink" href="#ifm3dpy.ImageBuffer.amplitude_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the amplitude image</p>
+<dl class="docutils">
+<dt>numpy.ndarray</dt>
+<dd>Image organized on the pixel array [rows, cols]</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.ImageBuffer.confidence_image">
+<code class="descname">confidence_image</code><span class="sig-paren">(</span><em>self: ifm3dpy.ImageBuffer</em><span class="sig-paren">)</span> &#x2192; array<a class="headerlink" href="#ifm3dpy.ImageBuffer.confidence_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the confidence image</p>
+<dl class="docutils">
+<dt>numpy.ndarray</dt>
+<dd>Image organized on the pixel array [rows, cols]</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.ImageBuffer.distance_image">
+<code class="descname">distance_image</code><span class="sig-paren">(</span><em>self: ifm3dpy.ImageBuffer</em><span class="sig-paren">)</span> &#x2192; array<a class="headerlink" href="#ifm3dpy.ImageBuffer.distance_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the radial distance image</p>
+<dl class="docutils">
+<dt>numpy.ndarray</dt>
+<dd>Image organized on the pixel array [rows, cols]</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.ImageBuffer.exposure_times">
+<code class="descname">exposure_times</code><span class="sig-paren">(</span><em>self: ifm3dpy.ImageBuffer</em><span class="sig-paren">)</span> &#x2192; List[int]<a class="headerlink" href="#ifm3dpy.ImageBuffer.exposure_times" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the exposure times for the current frame.</p>
+<dl class="docutils">
+<dt>list[int]</dt>
+<dd><p class="first">A 3-element vector containing the exposure times (usec) for the
+current frame. Unused exposure times are reported as 0.</p>
+<p class="last">If all elements are reported as 0 either the exposure times are not
+configured to be returned back in the data stream from the camera
+or an error in parsing them has occured.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.ImageBuffer.extrinsics">
+<code class="descname">extrinsics</code><span class="sig-paren">(</span><em>self: ifm3dpy.ImageBuffer</em><span class="sig-paren">)</span> &#x2192; List[float]<a class="headerlink" href="#ifm3dpy.ImageBuffer.extrinsics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a 6-element vector containing the extrinsic
+calibration of the camera. NOTE: This is the extrinsics WRT to the ifm
+optical frame.</p>
+<p>The elements are: tx, ty, tz, rot_x, rot_y, rot_z</p>
+<p>Translation units are mm, rotations are degrees</p>
+<p>Users of this library are highly DISCOURAGED from using the extrinsic
+calibration data stored on the camera itself.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.ImageBuffer.gray_image">
+<code class="descname">gray_image</code><span class="sig-paren">(</span><em>self: ifm3dpy.ImageBuffer</em><span class="sig-paren">)</span> &#x2192; array<a class="headerlink" href="#ifm3dpy.ImageBuffer.gray_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the gray image</p>
+<dl class="docutils">
+<dt>numpy.ndarray</dt>
+<dd>Image organized on the pixel array [rows, cols]</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.ImageBuffer.illu_temp">
+<code class="descname">illu_temp</code><span class="sig-paren">(</span><em>self: ifm3dpy.ImageBuffer</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#ifm3dpy.ImageBuffer.illu_temp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the temperature of the illumination unit.</p>
+<p>NOTE: To get the temperature of the illumination unit to the frame, you
+need to make sure your current pcic schema asks for it.</p>
+<dl class="docutils">
+<dt>float</dt>
+<dd>The temperature of the illumination unit</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.ImageBuffer.intrinsics">
+<code class="descname">intrinsics</code><span class="sig-paren">(</span><em>self: ifm3dpy.ImageBuffer</em><span class="sig-paren">)</span> &#x2192; List[float]<a class="headerlink" href="#ifm3dpy.ImageBuffer.intrinsics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the intrinsic calibration of the camera</p>
+<dl class="docutils">
+<dt>list[float]</dt>
+<dd><p class="first">16-element list containing the intrinsic calibration of the camera
+The elements are:</p>
+<p class="last">Name   Unit          Description
+fx     px            Focal length of the camera in the sensor’s x axis direction.
+fy     px            Focal length of the camera in the sensor’s y axis direction.
+mx     px            Main point in the sensor’s x direction
+my     px            Main point in the sensor’s y direction
+alpha  dimensionless Skew parameter
+k1     dimensionless First radial distortion coefficient
+k2     dimensionless Second radial distortion coefficient
+k5     dimensionless Third radial distortion coefficient
+k3     dimensionless First tangential distortion coefficient
+k4     dimensionless Second tangential distortion coefficient
+transX mm            Translation along x-direction in meters.
+transY mm            Translation along y-direction in meters.
+transZ mm            Translation along z-direction in meters.
+rotX   float  degree Rotation along x-axis in radians. Positive values indicate clockwise rotation.
+rotY   float  degree Rotation along y-axis in radians. Positive values indicate clockwise rotation.
+rotZ   float  degree Rotation along z-axis in radians. Positive values indicate clockwise rotation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.ImageBuffer.inverse_intrinsics">
+<code class="descname">inverse_intrinsics</code><span class="sig-paren">(</span><em>self: ifm3dpy.ImageBuffer</em><span class="sig-paren">)</span> &#x2192; List[float]<a class="headerlink" href="#ifm3dpy.ImageBuffer.inverse_intrinsics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the inverse intrinsic calibration of the camera. See the
+documentation for ifm3dpy.intrinsics for details on contents.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.ImageBuffer.jpeg_image">
+<code class="descname">jpeg_image</code><span class="sig-paren">(</span><em>self: ifm3dpy.ImageBuffer</em><span class="sig-paren">)</span> &#x2192; array<a class="headerlink" href="#ifm3dpy.ImageBuffer.jpeg_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the jpeg encoded 2d image</p>
+<dl class="docutils">
+<dt>numpy.ndarray</dt>
+<dd>Jpeg encoded image data</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.ImageBuffer.json_model">
+<code class="descname">json_model</code><span class="sig-paren">(</span><em>self: ifm3dpy.ImageBuffer</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#ifm3dpy.ImageBuffer.json_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the JSON model of the output of the active application</p>
+<p>NOTE: To get the JSON data for the application running on the device,
+you need to make sure your current pcic schema asks for it by including
+ifm3d::JSON_MODEL in the schema. This will return an empty dict for
+Camera devices like the O3D303, versus ifm Smart Sensors like the 
+O3D302.</p>
+<dl class="docutils">
+<dt>dict</dt>
+<dd>A JSON encoding of the model</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.ImageBuffer.organize">
+<code class="descname">organize</code><span class="sig-paren">(</span><em>self: ifm3dpy.ImageBuffer</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ifm3dpy.ImageBuffer.organize" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the interface hook that synchronizes the internally wrapped
+byte buffer with the semantically meaningful image/cloud data
+structures. Within the overall <cite>ifm3d</cite> framework, this function is
+called by the <cite>FrameGrabber</cite> when a complete “frame packet” has been
+recieved. This then parses the bytes and, in-line, will statically
+dispatch to the underly dervied class to populate their image/cloud
+data structures.</p>
+<p>Additionally, this function will populate the extrinsics, exposure
+times, timestamp, and illumination temperature as appropriate and
+subject to the current pcic schema.</p>
+<p>NOTE: This function is called automatically as needed the first time
+frame data are accessed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.ImageBuffer.raw_amplitude_image">
+<code class="descname">raw_amplitude_image</code><span class="sig-paren">(</span><em>self: ifm3dpy.ImageBuffer</em><span class="sig-paren">)</span> &#x2192; array<a class="headerlink" href="#ifm3dpy.ImageBuffer.raw_amplitude_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the raw amplitude image</p>
+<dl class="docutils">
+<dt>numpy.ndarray</dt>
+<dd>Image organized on the pixel array [rows, cols]</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.ImageBuffer.timestamp">
+<code class="descname">timestamp</code><span class="sig-paren">(</span><em>self: ifm3dpy.ImageBuffer</em><span class="sig-paren">)</span> &#x2192; datetime.datetime<a class="headerlink" href="#ifm3dpy.ImageBuffer.timestamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the time stamp of the image data.</p>
+<p>NOTE: To get the timestamp of the confidence data, you
+need to make sure your current pcic schema mask have enabled confidence
+data.</p>
+<p>datetime.datetime</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.ImageBuffer.unit_vectors">
+<code class="descname">unit_vectors</code><span class="sig-paren">(</span><em>self: ifm3dpy.ImageBuffer</em><span class="sig-paren">)</span> &#x2192; array<a class="headerlink" href="#ifm3dpy.ImageBuffer.unit_vectors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the unit vector image</p>
+<dl class="docutils">
+<dt>numpy.ndarray</dt>
+<dd>Image organized on the pixel array [rows, cols]</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.ImageBuffer.xyz_image">
+<code class="descname">xyz_image</code><span class="sig-paren">(</span><em>self: ifm3dpy.ImageBuffer</em><span class="sig-paren">)</span> &#x2192; array<a class="headerlink" href="#ifm3dpy.ImageBuffer.xyz_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the xyz image (cartesian point cloud)</p>
+<dl class="docutils">
+<dt>numpy.ndarray nxmx3</dt>
+<dd>Image organized on the pixel array [rows, cols, chans(x,y,z)]</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ifm3dpy.O3RCamera.html" class="btn btn-neutral float-right" title="O3RCamera" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ifm3dpy.FrameGrabber.html" class="btn btn-neutral float-left" title="FrameGrabber" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, ifm electronic
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

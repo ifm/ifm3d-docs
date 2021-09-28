@@ -1,0 +1,6 @@
+IMG_RDIS
+========
+
+.. currentmodule:: ifm3dpy
+
+.. autodata:: IMG_RDIS

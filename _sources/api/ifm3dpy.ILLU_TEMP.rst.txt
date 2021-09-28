@@ -1,0 +1,6 @@
+ILLU_TEMP
+=========
+
+.. currentmodule:: ifm3dpy
+
+.. autodata:: ILLU_TEMP

@@ -1,0 +1,6 @@
+DEFAULT_IP
+==========
+
+.. currentmodule:: ifm3dpy
+
+.. autodata:: DEFAULT_IP

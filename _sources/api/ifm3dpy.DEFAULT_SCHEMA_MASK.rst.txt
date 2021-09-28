@@ -1,0 +1,6 @@
+DEFAULT_SCHEMA_MASK
+===================
+
+.. currentmodule:: ifm3dpy
+
+.. autodata:: DEFAULT_SCHEMA_MASK

@@ -1,0 +1,19 @@
+O3RCamera
+=========
+
+.. currentmodule:: ifm3dpy
+
+.. autoclass:: O3RCamera
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~O3RCamera.factory_reset
+      ~O3RCamera.schema
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: factory_reset
+   .. automethod:: schema

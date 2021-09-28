@@ -1,0 +1,6 @@
+Python API Reference
+====================
+
+.. automodapi:: ifm3dpy
+    :include-all-objects:
+    :no-inheritance-diagram:

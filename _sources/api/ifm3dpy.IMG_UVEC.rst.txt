@@ -1,0 +1,6 @@
+IMG_UVEC
+========
+
+.. currentmodule:: ifm3dpy
+
+.. autodata:: IMG_UVEC

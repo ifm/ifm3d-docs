@@ -1,0 +1,6 @@
+EXP_TIME
+========
+
+.. currentmodule:: ifm3dpy
+
+.. autodata:: EXP_TIME

@@ -1,0 +1,448 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CameraBase &mdash; ifm3d  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FrameGrabber" href="ifm3dpy.FrameGrabber.html" />
+    <link rel="prev" title="Camera" href="ifm3dpy.Camera.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ifm3d
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Home page</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../python_api.html">Python API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../python_api.html#module-ifm3dpy">ifm3dpy Module</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../python_api.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="ifm3dpy.Camera.html">Camera</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">CameraBase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ifm3dpy.FrameGrabber.html">FrameGrabber</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ifm3dpy.ImageBuffer.html">ImageBuffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ifm3dpy.O3RCamera.html">O3RCamera</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../python_api.html#variables">Variables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/annotated.html">C++ API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ifm3d</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../python_api.html">Python API Reference</a> &raquo;</li>
+        
+      <li>CameraBase</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/ifm3dpy.CameraBase.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="camerabase">
+<h1>CameraBase<a class="headerlink" href="#camerabase" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="ifm3dpy.CameraBase">
+<em class="property">class </em><code class="descclassname">ifm3dpy.</code><code class="descname">CameraBase</code><a class="headerlink" href="#ifm3dpy.CameraBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<p>Base class for managing an instance of an all cameras</p>
+<p class="rubric">Attributes Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.CameraBase.ip" title="ifm3dpy.CameraBase.ip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ip</span></code></a></td>
+<td>The IP address associated with this Camera instance</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.CameraBase.xmlrpc_port" title="ifm3dpy.CameraBase.xmlrpc_port"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xmlrpc_port</span></code></a></td>
+<td>The XMLRPC port associated with this Camera instance</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.CameraBase.am_i" title="ifm3dpy.CameraBase.am_i"><code class="xref py py-obj docutils literal notranslate"><span class="pre">am_i</span></code></a>(self,&nbsp;family)</td>
+<td>Checking whether a device is one of the specified device family</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.CameraBase.check_minimum_firmware_version" title="ifm3dpy.CameraBase.check_minimum_firmware_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_minimum_firmware_version</span></code></a>(self,&nbsp;major,&nbsp;…)</td>
+<td>Checks for a minimum ifm camera software version</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.CameraBase.device_parameter" title="ifm3dpy.CameraBase.device_parameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">device_parameter</span></code></a>(self,&nbsp;key)</td>
+<td>Convenience accessor for extracting a device parameter</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.CameraBase.device_type" title="ifm3dpy.CameraBase.device_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">device_type</span></code></a>(self,&nbsp;use_cached)</td>
+<td>Obtains the device type of the connected camera.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.CameraBase.force_trigger" title="ifm3dpy.CameraBase.force_trigger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">force_trigger</span></code></a>(self)</td>
+<td>Sends a S/W trigger to the camera over XMLRPC.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.CameraBase.from_json" title="ifm3dpy.CameraBase.from_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json</span></code></a>(self,&nbsp;json)</td>
+<td>Configures the camera based on the parameter values of the passed in JSON.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.CameraBase.reboot" title="ifm3dpy.CameraBase.reboot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reboot</span></code></a>(self,&nbsp;mode)</td>
+<td>Reboot the sensor</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.CameraBase.to_json" title="ifm3dpy.CameraBase.to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code></a>(self)</td>
+<td>A JSON object containing the state of the camera</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.CameraBase.trace_logs" title="ifm3dpy.CameraBase.trace_logs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trace_logs</span></code></a>(self,&nbsp;count)</td>
+<td>Delivers the trace log from the camera</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.CameraBase.who_am_i" title="ifm3dpy.CameraBase.who_am_i"><code class="xref py py-obj docutils literal notranslate"><span class="pre">who_am_i</span></code></a>(self)</td>
+<td>Retrieve the device family of the connected device</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes Documentation</p>
+<dl class="attribute">
+<dt id="ifm3dpy.CameraBase.ip">
+<code class="descname">ip</code><a class="headerlink" href="#ifm3dpy.CameraBase.ip" title="Permalink to this definition">¶</a></dt>
+<dd><p>The IP address associated with this Camera instance</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ifm3dpy.CameraBase.xmlrpc_port">
+<code class="descname">xmlrpc_port</code><a class="headerlink" href="#ifm3dpy.CameraBase.xmlrpc_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>The XMLRPC port associated with this Camera instance</p>
+</dd></dl>
+
+<p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt id="ifm3dpy.CameraBase.am_i">
+<code class="descname">am_i</code><span class="sig-paren">(</span><em>self: ifm3dpy.CameraBase</em>, <em>family: ifm3dpy.CameraBase.device_family</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#ifm3dpy.CameraBase.am_i" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checking whether a device is one of the specified device family</p>
+<dl class="docutils">
+<dt>family <span class="classifier-delimiter">:</span> <span class="classifier">CameraBase.device_family</span></dt>
+<dd>The family to check for</dd>
+</dl>
+<dl class="docutils">
+<dt>bool</dt>
+<dd>True if the device is of the specified family</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.CameraBase.check_minimum_firmware_version">
+<code class="descname">check_minimum_firmware_version</code><span class="sig-paren">(</span><em>self: ifm3dpy.CameraBase</em>, <em>major: int</em>, <em>minor: int</em>, <em>patch: int</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#ifm3dpy.CameraBase.check_minimum_firmware_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks for a minimum ifm camera software version</p>
+<dl class="docutils">
+<dt>major <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Major version of software</dd>
+<dt>minor <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Minor Version of software</dd>
+<dt>patch <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Patch Number of software</dd>
+</dl>
+<dl class="docutils">
+<dt>bool</dt>
+<dd>True if current software version is greater
+or equal to the value passed</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.CameraBase.device_parameter">
+<code class="descname">device_parameter</code><span class="sig-paren">(</span><em>self: ifm3dpy.CameraBase</em>, <em>key: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#ifm3dpy.CameraBase.device_parameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience accessor for extracting a device parameter</p>
+<p>No edit session is created on the camera</p>
+<dl class="docutils">
+<dt>key <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>Name of the parameter to extract</dd>
+</dl>
+<dl class="docutils">
+<dt>str</dt>
+<dd>Value of the requested parameter</dd>
+</dl>
+<p>RuntimeError</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.CameraBase.device_type">
+<code class="descname">device_type</code><span class="sig-paren">(</span><em>self: ifm3dpy.CameraBase</em>, <em>use_cached: bool = True</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#ifm3dpy.CameraBase.device_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtains the device type of the connected camera.</p>
+<p>This is a convenience function for extracting out the device type of the
+connected camera. The primary intention of this function is for internal
+usage (i.e., to trigger conditional logic based on the model hardware
+we are talking to) however, it will likely be useful in
+application-level logic as well, so, it is available in the public
+interface.</p>
+<dl class="docutils">
+<dt>use_cached <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>If set to true, a cached lookup of the device type will be used as
+the return value. If false, it will make a network call to the camera
+to get the “real” device type. The only reason for setting this to
+<cite>false</cite> would be if you expect over the lifetime of your camera
+instance that you will swap out (for example) an O3D for an O3X (or
+vice versa) – literally, swapping out the network cables while an
+object instance is still alive. If that is not something you are
+worried about, leaving this set to true should result in a signficant
+performance increase.</dd>
+</dl>
+<dl class="docutils">
+<dt>str</dt>
+<dd>Type of device connected</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.CameraBase.force_trigger">
+<code class="descname">force_trigger</code><span class="sig-paren">(</span><em>self: ifm3dpy.CameraBase</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ifm3dpy.CameraBase.force_trigger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends a S/W trigger to the camera over XMLRPC.</p>
+<p>The O3X does not S/W trigger over PCIC, so, this function
+has been developed specficially for it. For the O3D, this is a NOOP.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.CameraBase.from_json">
+<code class="descname">from_json</code><span class="sig-paren">(</span><em>self: ifm3dpy.CameraBase</em>, <em>json: dict</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ifm3dpy.CameraBase.from_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures the camera based on the parameter values of the passed in
+JSON. This function is _the_ way to tune the
+camera/application/imager/etc. parameters.</p>
+<dl class="docutils">
+<dt>json <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd>A json object encoding a camera configuration to apply
+to the hardware.</dd>
+</dl>
+<dl class="docutils">
+<dt>RuntimeError</dt>
+<dd>If this raises an exception, you are
+encouraged to check the log file as a best effort is made to be
+as descriptive as possible as to the specific error that has
+occured.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.CameraBase.reboot">
+<code class="descname">reboot</code><span class="sig-paren">(</span><em>self: ifm3dpy.CameraBase</em>, <em>mode: ifm3dpy.CameraBase.boot_mode = boot_mode.PRODUCTIVE</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ifm3dpy.CameraBase.reboot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reboot the sensor</p>
+<dl class="docutils">
+<dt>mode <span class="classifier-delimiter">:</span> <span class="classifier">CameraBase.boot_mode</span></dt>
+<dd>The system mode to boot into upon restart of the sensor</dd>
+</dl>
+<p>RuntimeError</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.CameraBase.to_json">
+<code class="descname">to_json</code><span class="sig-paren">(</span><em>self: ifm3dpy.CameraBase</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#ifm3dpy.CameraBase.to_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>A JSON object containing the state of the camera</p>
+<dl class="docutils">
+<dt>dict</dt>
+<dd>Camera JSON, compatible with python’s json module</dd>
+</dl>
+<p>RuntimeError</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.CameraBase.trace_logs">
+<code class="descname">trace_logs</code><span class="sig-paren">(</span><em>self: ifm3dpy.CameraBase</em>, <em>count: int</em><span class="sig-paren">)</span> &#x2192; List[str]<a class="headerlink" href="#ifm3dpy.CameraBase.trace_logs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delivers the trace log from the camera</p>
+<p>A session is not required to call this function.</p>
+<dl class="docutils">
+<dt>count <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Number of entries to retrieve</dd>
+</dl>
+<dl class="docutils">
+<dt>list[str]</dt>
+<dd>List of strings for each entry in the tracelog</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.CameraBase.who_am_i">
+<code class="descname">who_am_i</code><span class="sig-paren">(</span><em>self: ifm3dpy.CameraBase</em><span class="sig-paren">)</span> &#x2192; ifm3dpy.CameraBase.device_family<a class="headerlink" href="#ifm3dpy.CameraBase.who_am_i" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the device family of the connected device</p>
+<dl class="docutils">
+<dt>CameraBase.device_family</dt>
+<dd>The device family</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ifm3dpy.FrameGrabber.html" class="btn btn-neutral float-right" title="FrameGrabber" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ifm3dpy.Camera.html" class="btn btn-neutral float-left" title="Camera" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, ifm electronic
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

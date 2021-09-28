@@ -1,0 +1,370 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python API Reference &mdash; ifm3d  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Camera" href="api/ifm3dpy.Camera.html" />
+    <link rel="prev" title="Welcome to ifm3d’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ifm3d
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Home page</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-ifm3dpy">ifm3dpy Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.Camera.html">Camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.CameraBase.html">CameraBase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.FrameGrabber.html">FrameGrabber</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.ImageBuffer.html">ImageBuffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.O3RCamera.html">O3RCamera</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#variables">Variables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.DEFAULT_IP.html">DEFAULT_IP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.DEFAULT_PASSWORD.html">DEFAULT_PASSWORD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.DEFAULT_SCHEMA_MASK.html">DEFAULT_SCHEMA_MASK</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.DEFAULT_XMLRPC_PORT.html">DEFAULT_XMLRPC_PORT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.EXP_TIME.html">EXP_TIME</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.ILLU_TEMP.html">ILLU_TEMP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.IMG_AMP.html">IMG_AMP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.IMG_CART.html">IMG_CART</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.IMG_GRAY.html">IMG_GRAY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.IMG_RAMP.html">IMG_RAMP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.IMG_RDIS.html">IMG_RDIS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.IMG_UVEC.html">IMG_UVEC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.INTR_CAL.html">INTR_CAL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.INV_INTR_CAL.html">INV_INTR_CAL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.JSON_MODEL.html">JSON_MODEL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.O3D_INTRINSIC_PARAM_SUPPORT_MAJOR.html">O3D_INTRINSIC_PARAM_SUPPORT_MAJOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.O3D_INTRINSIC_PARAM_SUPPORT_MINOR.html">O3D_INTRINSIC_PARAM_SUPPORT_MINOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.O3D_INTRINSIC_PARAM_SUPPORT_PATCH.html">O3D_INTRINSIC_PARAM_SUPPORT_PATCH</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_MAJOR.html">O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_MAJOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_MINOR.html">O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_MINOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_PATCH.html">O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_PATCH</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.O3D_TIME_SUPPORT_MAJOR.html">O3D_TIME_SUPPORT_MAJOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.O3D_TIME_SUPPORT_MINOR.html">O3D_TIME_SUPPORT_MINOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.O3D_TIME_SUPPORT_PATCH.html">O3D_TIME_SUPPORT_PATCH</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.O3D_TMP_PARAMS_SUPPORT_MAJOR.html">O3D_TMP_PARAMS_SUPPORT_MAJOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.O3D_TMP_PARAMS_SUPPORT_MINOR.html">O3D_TMP_PARAMS_SUPPORT_MINOR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/ifm3dpy.O3D_TMP_PARAMS_SUPPORT_PATCH.html">O3D_TMP_PARAMS_SUPPORT_PATCH</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cpp_api/annotated.html">C++ API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ifm3d</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Python API Reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/python_api.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-api-reference">
+<h1>Python API Reference<a class="headerlink" href="#python-api-reference" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-ifm3dpy">
+<span id="ifm3dpy-module"></span><h2>ifm3dpy Module<a class="headerlink" href="#module-ifm3dpy" title="Permalink to this headline">¶</a></h2>
+<p>Bindings for the ifm3d Camera Library</p>
+<div class="section" id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="api/ifm3dpy.Camera.html#ifm3dpy.Camera" title="ifm3dpy.Camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Camera</span></code></a></td>
+<td>Class for managing an instance of an O3D/O3X Camera</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/ifm3dpy.CameraBase.html#ifm3dpy.CameraBase" title="ifm3dpy.CameraBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CameraBase</span></code></a></td>
+<td>Base class for managing an instance of an all cameras</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/ifm3dpy.FrameGrabber.html#ifm3dpy.FrameGrabber" title="ifm3dpy.FrameGrabber"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FrameGrabber</span></code></a></td>
+<td>Implements a TCP FrameGrabber connected to a provided Camera</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/ifm3dpy.ImageBuffer.html#ifm3dpy.ImageBuffer" title="ifm3dpy.ImageBuffer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImageBuffer</span></code></a></td>
+<td>Class which holds a validated image buffer from the sensor that represents a single time-synchronized set of images based on the current schema mask set on the active framegrabber.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/ifm3dpy.O3RCamera.html#ifm3dpy.O3RCamera" title="ifm3dpy.O3RCamera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3RCamera</span></code></a></td>
+<td>Class for managing an instance of an O3R Camera</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="variables">
+<h3>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="api/ifm3dpy.DEFAULT_IP.html#ifm3dpy.DEFAULT_IP" title="ifm3dpy.DEFAULT_IP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DEFAULT_IP</span></code></a></td>
+<td>str(object=’’) -&gt; str str(bytes_or_buffer[, encoding[, errors]]) -&gt; str</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/ifm3dpy.DEFAULT_PASSWORD.html#ifm3dpy.DEFAULT_PASSWORD" title="ifm3dpy.DEFAULT_PASSWORD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DEFAULT_PASSWORD</span></code></a></td>
+<td>str(object=’’) -&gt; str str(bytes_or_buffer[, encoding[, errors]]) -&gt; str</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/ifm3dpy.DEFAULT_SCHEMA_MASK.html#ifm3dpy.DEFAULT_SCHEMA_MASK" title="ifm3dpy.DEFAULT_SCHEMA_MASK"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DEFAULT_SCHEMA_MASK</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/ifm3dpy.DEFAULT_XMLRPC_PORT.html#ifm3dpy.DEFAULT_XMLRPC_PORT" title="ifm3dpy.DEFAULT_XMLRPC_PORT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DEFAULT_XMLRPC_PORT</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/ifm3dpy.EXP_TIME.html#ifm3dpy.EXP_TIME" title="ifm3dpy.EXP_TIME"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXP_TIME</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/ifm3dpy.ILLU_TEMP.html#ifm3dpy.ILLU_TEMP" title="ifm3dpy.ILLU_TEMP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ILLU_TEMP</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/ifm3dpy.IMG_AMP.html#ifm3dpy.IMG_AMP" title="ifm3dpy.IMG_AMP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IMG_AMP</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/ifm3dpy.IMG_CART.html#ifm3dpy.IMG_CART" title="ifm3dpy.IMG_CART"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IMG_CART</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/ifm3dpy.IMG_GRAY.html#ifm3dpy.IMG_GRAY" title="ifm3dpy.IMG_GRAY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IMG_GRAY</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/ifm3dpy.IMG_RAMP.html#ifm3dpy.IMG_RAMP" title="ifm3dpy.IMG_RAMP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IMG_RAMP</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/ifm3dpy.IMG_RDIS.html#ifm3dpy.IMG_RDIS" title="ifm3dpy.IMG_RDIS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IMG_RDIS</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/ifm3dpy.IMG_UVEC.html#ifm3dpy.IMG_UVEC" title="ifm3dpy.IMG_UVEC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IMG_UVEC</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/ifm3dpy.INTR_CAL.html#ifm3dpy.INTR_CAL" title="ifm3dpy.INTR_CAL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INTR_CAL</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/ifm3dpy.INV_INTR_CAL.html#ifm3dpy.INV_INTR_CAL" title="ifm3dpy.INV_INTR_CAL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INV_INTR_CAL</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/ifm3dpy.JSON_MODEL.html#ifm3dpy.JSON_MODEL" title="ifm3dpy.JSON_MODEL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JSON_MODEL</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/ifm3dpy.O3D_INTRINSIC_PARAM_SUPPORT_MAJOR.html#ifm3dpy.O3D_INTRINSIC_PARAM_SUPPORT_MAJOR" title="ifm3dpy.O3D_INTRINSIC_PARAM_SUPPORT_MAJOR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3D_INTRINSIC_PARAM_SUPPORT_MAJOR</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/ifm3dpy.O3D_INTRINSIC_PARAM_SUPPORT_MINOR.html#ifm3dpy.O3D_INTRINSIC_PARAM_SUPPORT_MINOR" title="ifm3dpy.O3D_INTRINSIC_PARAM_SUPPORT_MINOR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3D_INTRINSIC_PARAM_SUPPORT_MINOR</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/ifm3dpy.O3D_INTRINSIC_PARAM_SUPPORT_PATCH.html#ifm3dpy.O3D_INTRINSIC_PARAM_SUPPORT_PATCH" title="ifm3dpy.O3D_INTRINSIC_PARAM_SUPPORT_PATCH"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3D_INTRINSIC_PARAM_SUPPORT_PATCH</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/ifm3dpy.O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_MAJOR.html#ifm3dpy.O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_MAJOR" title="ifm3dpy.O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_MAJOR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_MAJOR</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/ifm3dpy.O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_MINOR.html#ifm3dpy.O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_MINOR" title="ifm3dpy.O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_MINOR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_MINOR</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/ifm3dpy.O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_PATCH.html#ifm3dpy.O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_PATCH" title="ifm3dpy.O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_PATCH"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_PATCH</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/ifm3dpy.O3D_TIME_SUPPORT_MAJOR.html#ifm3dpy.O3D_TIME_SUPPORT_MAJOR" title="ifm3dpy.O3D_TIME_SUPPORT_MAJOR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3D_TIME_SUPPORT_MAJOR</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/ifm3dpy.O3D_TIME_SUPPORT_MINOR.html#ifm3dpy.O3D_TIME_SUPPORT_MINOR" title="ifm3dpy.O3D_TIME_SUPPORT_MINOR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3D_TIME_SUPPORT_MINOR</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/ifm3dpy.O3D_TIME_SUPPORT_PATCH.html#ifm3dpy.O3D_TIME_SUPPORT_PATCH" title="ifm3dpy.O3D_TIME_SUPPORT_PATCH"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3D_TIME_SUPPORT_PATCH</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/ifm3dpy.O3D_TMP_PARAMS_SUPPORT_MAJOR.html#ifm3dpy.O3D_TMP_PARAMS_SUPPORT_MAJOR" title="ifm3dpy.O3D_TMP_PARAMS_SUPPORT_MAJOR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3D_TMP_PARAMS_SUPPORT_MAJOR</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="api/ifm3dpy.O3D_TMP_PARAMS_SUPPORT_MINOR.html#ifm3dpy.O3D_TMP_PARAMS_SUPPORT_MINOR" title="ifm3dpy.O3D_TMP_PARAMS_SUPPORT_MINOR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3D_TMP_PARAMS_SUPPORT_MINOR</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="api/ifm3dpy.O3D_TMP_PARAMS_SUPPORT_PATCH.html#ifm3dpy.O3D_TMP_PARAMS_SUPPORT_PATCH" title="ifm3dpy.O3D_TMP_PARAMS_SUPPORT_PATCH"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3D_TMP_PARAMS_SUPPORT_PATCH</span></code></a></td>
+<td>int([x]) -&gt; integer int(x, base=10) -&gt; integer</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api/ifm3dpy.Camera.html" class="btn btn-neutral float-right" title="Camera" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to ifm3d’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, ifm electronic
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

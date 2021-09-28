@@ -1,0 +1,605 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Camera &mdash; ifm3d  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CameraBase" href="ifm3dpy.CameraBase.html" />
+    <link rel="prev" title="Python API Reference" href="../python_api.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ifm3d
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Home page</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../python_api.html">Python API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../python_api.html#module-ifm3dpy">ifm3dpy Module</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../python_api.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ifm3dpy.CameraBase.html">CameraBase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ifm3dpy.FrameGrabber.html">FrameGrabber</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ifm3dpy.ImageBuffer.html">ImageBuffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ifm3dpy.O3RCamera.html">O3RCamera</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../python_api.html#variables">Variables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/annotated.html">C++ API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ifm3d</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../python_api.html">Python API Reference</a> &raquo;</li>
+        
+      <li>Camera</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/ifm3dpy.Camera.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="camera">
+<h1>Camera<a class="headerlink" href="#camera" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="ifm3dpy.Camera">
+<em class="property">class </em><code class="descclassname">ifm3dpy.</code><code class="descname">Camera</code><a class="headerlink" href="#ifm3dpy.Camera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ifm3dpy.CameraBase.html#ifm3dpy.CameraBase" title="ifm3dpy.CameraBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ifm3dpy.CameraBase</span></code></a></p>
+<p>Class for managing an instance of an O3D/O3X Camera</p>
+<p class="rubric">Attributes Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.Camera.password" title="ifm3dpy.Camera.password"><code class="xref py py-obj docutils literal notranslate"><span class="pre">password</span></code></a></td>
+<td>The password associated with this Camera instance</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.Camera.session_id" title="ifm3dpy.Camera.session_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">session_id</span></code></a></td>
+<td>Retrieves the active session ID</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.Camera.active_application" title="ifm3dpy.Camera.active_application"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_application</span></code></a>(self)</td>
+<td>Returns the index of the active application.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.Camera.application_list" title="ifm3dpy.Camera.application_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">application_list</span></code></a>(self)</td>
+<td>Delivers basic information about all applications stored on the device.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.Camera.application_types" title="ifm3dpy.Camera.application_types"><code class="xref py py-obj docutils literal notranslate"><span class="pre">application_types</span></code></a>(self)</td>
+<td>Lists the valid application types supported by the sensor.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.Camera.cancel_session" title="ifm3dpy.Camera.cancel_session"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cancel_session</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Overloaded function.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.Camera.copy_application" title="ifm3dpy.Camera.copy_application"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy_application</span></code></a>(self,&nbsp;idx)</td>
+<td>Creates a new application by copying the configuration of another application.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.Camera.create_application" title="ifm3dpy.Camera.create_application"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_application</span></code></a>(self,&nbsp;type)</td>
+<td>Creates a new application on the camera of the given type.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.Camera.delete_application" title="ifm3dpy.Camera.delete_application"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_application</span></code></a>(self,&nbsp;idx)</td>
+<td>Deletes the application at the specified index from the sensor.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.Camera.export_ifm_app" title="ifm3dpy.Camera.export_ifm_app"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_ifm_app</span></code></a>(self,&nbsp;idx)</td>
+<td>Export the application at the specified index into a byte array suitable for writing to a file.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.Camera.export_ifm_config" title="ifm3dpy.Camera.export_ifm_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_ifm_config</span></code></a>(self)</td>
+<td>Exports the entire camera configuration in a format compatible with Vision Assistant.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.Camera.factory_reset" title="ifm3dpy.Camera.factory_reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">factory_reset</span></code></a>(self)</td>
+<td>Sets the camera configuration back to the state in which it shipped from the ifm factory.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.Camera.heartbeat" title="ifm3dpy.Camera.heartbeat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">heartbeat</span></code></a>(self,&nbsp;hb)</td>
+<td>Sends a heartbeat message and sets the next heartbeat interval</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.Camera.imager_types" title="ifm3dpy.Camera.imager_types"><code class="xref py py-obj docutils literal notranslate"><span class="pre">imager_types</span></code></a>(self)</td>
+<td>Lists the valid imager types supported by the sensor.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.Camera.import_ifm_app" title="ifm3dpy.Camera.import_ifm_app"><code class="xref py py-obj docutils literal notranslate"><span class="pre">import_ifm_app</span></code></a>(self,&nbsp;bytes)</td>
+<td>Import the IFM-encoded application.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.Camera.import_ifm_config" title="ifm3dpy.Camera.import_ifm_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">import_ifm_config</span></code></a>(self,&nbsp;bytes,&nbsp;flags)</td>
+<td>Imports the entire camera configuration in a format compatible with Vision Assistant.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.Camera.request_session" title="ifm3dpy.Camera.request_session"><code class="xref py py-obj docutils literal notranslate"><span class="pre">request_session</span></code></a>(self)</td>
+<td>Requests an edit-mode session with the camera.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.Camera.set_current_time" title="ifm3dpy.Camera.set_current_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_current_time</span></code></a>(self,&nbsp;epoch_secs)</td>
+<td>Sets the current time on the camera</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.Camera.set_temporary_application_parameters" title="ifm3dpy.Camera.set_temporary_application_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_temporary_application_parameters</span></code></a>(self,&nbsp;…)</td>
+<td>Sets temporary application parameters in run mode.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.Camera.unit_vectors" title="ifm3dpy.Camera.unit_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unit_vectors</span></code></a>(self)</td>
+<td>For cameras that support fetching the Unit Vectors over XML-RPC, this function will return those data as a binary blob.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes Documentation</p>
+<dl class="attribute">
+<dt id="ifm3dpy.Camera.password">
+<code class="descname">password</code><a class="headerlink" href="#ifm3dpy.Camera.password" title="Permalink to this definition">¶</a></dt>
+<dd><p>The password associated with this Camera instance</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ifm3dpy.Camera.session_id">
+<code class="descname">session_id</code><a class="headerlink" href="#ifm3dpy.Camera.session_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the active session ID</p>
+</dd></dl>
+
+<p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt id="ifm3dpy.Camera.active_application">
+<code class="descname">active_application</code><span class="sig-paren">(</span><em>self: ifm3dpy.Camera</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#ifm3dpy.Camera.active_application" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the index of the active application.</p>
+<p>A negative number indicates no application is marked as active on the
+sensor.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.Camera.application_list">
+<code class="descname">application_list</code><span class="sig-paren">(</span><em>self: ifm3dpy.Camera</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#ifm3dpy.Camera.application_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delivers basic information about all applications stored on the device.
+A call to this function does not require establishing a session with the
+camera.</p>
+<p>The returned information is encoded as an array of JSON objects.
+Each object in the array is basically a dictionary with the following
+keys: ‘index’, ‘id’, ‘name’, ‘description’, ‘active’</p>
+<dl class="docutils">
+<dt>dict</dt>
+<dd>A JSON encoding of the application information</dd>
+</dl>
+<p>RuntimeError</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.Camera.application_types">
+<code class="descname">application_types</code><span class="sig-paren">(</span><em>self: ifm3dpy.Camera</em><span class="sig-paren">)</span> &#x2192; List[str]<a class="headerlink" href="#ifm3dpy.Camera.application_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the valid application types supported by the sensor.</p>
+<dl class="docutils">
+<dt>list[str]</dt>
+<dd>List of strings of the available types of applications supported by
+the sensor. Each element in the list is a string suitable to passing
+to ‘CreateApplication’.</dd>
+</dl>
+<p>RuntimeError</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.Camera.cancel_session">
+<code class="descname">cancel_session</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ifm3dpy.Camera.cancel_session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic">
+<li><p class="first">cancel_session(self: ifm3dpy.Camera) -&gt; bool</p>
+<blockquote>
+<div><p>Explictly stops the current session with the sensor.</p>
+<dl class="docutils">
+<dt>bool</dt>
+<dd><p class="first last">Indicates success or failure. On failure, check the ifm3d system log
+for details.</p>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+<li><p class="first">cancel_session(self: ifm3dpy.Camera, sid: str) -&gt; bool</p>
+<blockquote>
+<div><p>Attempts to cancel a session with a particular session id.</p>
+<dl class="docutils">
+<dt>sid <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Session ID to cancel.</p>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>bool</dt>
+<dd><p class="first last">Indicates success or failure. On failure, check the ifm3d system log
+for details.</p>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.Camera.copy_application">
+<code class="descname">copy_application</code><span class="sig-paren">(</span><em>self: ifm3dpy.Camera</em>, <em>idx: int</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#ifm3dpy.Camera.copy_application" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new application by copying the configuration of another
+application. The device will generate an ID for the new application and
+put it on a free index.</p>
+<dl class="docutils">
+<dt>idx <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>The index of the application to copy</dd>
+</dl>
+<dl class="docutils">
+<dt>int</dt>
+<dd>Index of the new application</dd>
+</dl>
+<p>RuntimeError</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.Camera.create_application">
+<code class="descname">create_application</code><span class="sig-paren">(</span><em>self: ifm3dpy.Camera</em>, <em>type: str = 'Camera'</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#ifm3dpy.Camera.create_application" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new application on the camera of the given type.</p>
+<p>To figure out valid <cite>type`s, you should call the
+AvailableApplicationTypes()</cite> method.</p>
+<p>Upon creation of the application, the embedded device will initialize
+all parameters as necessary based on the type. However, based on the
+type, the application may not be in an _activatable_ state. That is, it
+can be created and saved on the device, but it cannot be marked as
+active.</p>
+<dl class="docutils">
+<dt>type <span class="classifier-delimiter">:</span> <span class="classifier">str, optional</span></dt>
+<dd>The (optional) application type to create. By default,
+it will create a new “Camera” application.</dd>
+</dl>
+<dl class="docutils">
+<dt>int</dt>
+<dd>The index of the new application.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.Camera.delete_application">
+<code class="descname">delete_application</code><span class="sig-paren">(</span><em>self: ifm3dpy.Camera</em>, <em>idx: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ifm3dpy.Camera.delete_application" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the application at the specified index from the sensor.</p>
+<dl class="docutils">
+<dt>idx <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>The index of the application to delete</dd>
+</dl>
+<p>RuntimeError</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.Camera.export_ifm_app">
+<code class="descname">export_ifm_app</code><span class="sig-paren">(</span><em>self: ifm3dpy.Camera</em>, <em>idx: int</em><span class="sig-paren">)</span> &#x2192; List[int]<a class="headerlink" href="#ifm3dpy.Camera.export_ifm_app" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export the application at the specified index into a byte array suitable
+for writing to a file. The exported bytes represent the ifm serialization
+of an application.</p>
+<p>This function provides compatibility with tools like IFM’s Vision
+Assistant.</p>
+<dl class="docutils">
+<dt>idx <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>The index of the application to export.</dd>
+</dl>
+<dl class="docutils">
+<dt>list[int]</dt>
+<dd>A list of bytes representing the IFM serialization of the
+exported application.</dd>
+</dl>
+<p>RuntimeError</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.Camera.export_ifm_config">
+<code class="descname">export_ifm_config</code><span class="sig-paren">(</span><em>self: ifm3dpy.Camera</em><span class="sig-paren">)</span> &#x2192; List[int]<a class="headerlink" href="#ifm3dpy.Camera.export_ifm_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exports the entire camera configuration in a format compatible with
+Vision Assistant.</p>
+<p>list[int]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.Camera.factory_reset">
+<code class="descname">factory_reset</code><span class="sig-paren">(</span><em>self: ifm3dpy.Camera</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ifm3dpy.Camera.factory_reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the camera configuration back to the state in which it shipped from
+the ifm factory.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.Camera.heartbeat">
+<code class="descname">heartbeat</code><span class="sig-paren">(</span><em>self: ifm3dpy.Camera</em>, <em>hb: int</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#ifm3dpy.Camera.heartbeat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends a heartbeat message and sets the next heartbeat interval</p>
+<p>Heartbeat messages are used to keep a session with the sensor
+alive. This function sends a heartbeat message to the sensor and sets
+when the next heartbeat message is required.</p>
+<dl class="docutils">
+<dt>hb <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>The time (seconds) of when the next heartbeat message will
+be required.</dd>
+</dl>
+<dl class="docutils">
+<dt>int</dt>
+<dd>The current timeout interval in seconds for heartbeat messages</dd>
+</dl>
+<p>RuntimeError</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.Camera.imager_types">
+<code class="descname">imager_types</code><span class="sig-paren">(</span><em>self: ifm3dpy.Camera</em><span class="sig-paren">)</span> &#x2192; List[str]<a class="headerlink" href="#ifm3dpy.Camera.imager_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the valid imager types supported by the sensor.</p>
+<dl class="docutils">
+<dt>list[str]</dt>
+<dd>List of strings of the available imager types supported by the sensor</dd>
+</dl>
+<p>RuntimeError</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.Camera.import_ifm_app">
+<code class="descname">import_ifm_app</code><span class="sig-paren">(</span><em>self: ifm3dpy.Camera, bytes: List[int]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#ifm3dpy.Camera.import_ifm_app" title="Permalink to this definition">¶</a></dt>
+<dd><p>Import the IFM-encoded application.</p>
+<p>This function provides compatibility with tools like IFM’s Vision
+Assistant. An application configuration exported from VA, can be
+imported using this function.</p>
+<dl class="docutils">
+<dt>bytes <span class="classifier-delimiter">:</span> <span class="classifier">list[int]</span></dt>
+<dd>The raw bytes from the zip’d JSON file. NOTE: This
+function will base64 encode the data for tranmission
+over XML-RPC.</dd>
+</dl>
+<dl class="docutils">
+<dt>int</dt>
+<dd>The index of the imported application.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.Camera.import_ifm_config">
+<code class="descname">import_ifm_config</code><span class="sig-paren">(</span><em>self: ifm3dpy.Camera, bytes: List[int], flags: int = 0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ifm3dpy.Camera.import_ifm_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Imports the entire camera configuration in a format compatible with
+Vision Assistant.</p>
+<dl class="docutils">
+<dt>bytes <span class="classifier-delimiter">:</span> <span class="classifier">list[int]</span></dt>
+<dd>The camera configuration, serialized in the ifm format</dd>
+</dl>
+<p>flags : int</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.Camera.request_session">
+<code class="descname">request_session</code><span class="sig-paren">(</span><em>self: ifm3dpy.Camera</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#ifm3dpy.Camera.request_session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Requests an edit-mode session with the camera.</p>
+<p>In order to (permanently) mutate parameters on the camera, an edit
+session needs to be established. Only a single edit sesson may be
+established at any one time with the camera (think of it as a global
+mutex on the camera state – except if you ask for the mutex and it is
+already taken, an exception will be thrown).</p>
+<p>Most typical use-cases for end-users will not involve establishing an
+edit-session with the camera. To mutate camera parameters, the
+<cite>FromJSON</cite> family of functions should be used, which, under-the-hood,
+on the user’s behalf, will establish the edit session and gracefully
+close it. There is an exception. For users who plan to modulate imager
+parameters (temporary parameters) on the fly while running the
+framegrabber, managing the session manually is necessary. For this
+reason, we expose this method in the public <cite>Camera</cite> interface.</p>
+<p>NOTE: The session timeout is implicitly set to <cite>ifm3d::MAX_HEARTBEAT</cite>
+after the session has been successfully established.</p>
+<dl class="docutils">
+<dt>str</dt>
+<dd>The session id issued or accepted by the camera (see
+IFM3D_SESSION_ID environment variable)</dd>
+</dl>
+<p>RuntimeError</p>
+<p>&#64;throws ifm3d::error_t if an error is encountered.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.Camera.set_current_time">
+<code class="descname">set_current_time</code><span class="sig-paren">(</span><em>self: ifm3dpy.Camera</em>, <em>epoch_secs: int = -1</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ifm3dpy.Camera.set_current_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the current time on the camera</p>
+<dl class="docutils">
+<dt>epoch_secs <span class="classifier-delimiter">:</span> <span class="classifier">int, optional</span></dt>
+<dd>Time since the Unix epoch in seconds. A value less than 0 will
+implicity set the time to the current system time.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.Camera.set_temporary_application_parameters">
+<code class="descname">set_temporary_application_parameters</code><span class="sig-paren">(</span><em>self: ifm3dpy.Camera, params: Dict[str, str]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ifm3dpy.Camera.set_temporary_application_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets temporary application parameters in run mode.</p>
+<p>The changes are not persistent and are lost when entering edit mode or
+turning the device off. The parameters “ExposureTime” and
+“ExposureTimeRatio” of the imager configuration are supported. All
+additional parameters are ignored (for now). Exposure times are clamped
+to their allowed range, depending on the exposure mode. The user must
+provide the complete set of parameters depending on the exposure mode,
+i.e., “ExposureTime” only for single exposure modes and both
+“ExposureTime” and “ExposureTimeRatio” for double exposure
+modes. Otherwise, behavior is undefined.</p>
+<dl class="docutils">
+<dt>params <span class="classifier-delimiter">:</span> <span class="classifier">dict[str, str]</span></dt>
+<dd>The parameters to set on the camera.</dd>
+</dl>
+<p>RuntimeError</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.Camera.unit_vectors">
+<code class="descname">unit_vectors</code><span class="sig-paren">(</span><em>self: ifm3dpy.Camera</em><span class="sig-paren">)</span> &#x2192; List[int]<a class="headerlink" href="#ifm3dpy.Camera.unit_vectors" title="Permalink to this definition">¶</a></dt>
+<dd><p>For cameras that support fetching the Unit Vectors over XML-RPC, this
+function will return those data as a binary blob.</p>
+<p>list[int]</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ifm3dpy.CameraBase.html" class="btn btn-neutral float-right" title="CameraBase" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../python_api.html" class="btn btn-neutral float-left" title="Python API Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, ifm electronic
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

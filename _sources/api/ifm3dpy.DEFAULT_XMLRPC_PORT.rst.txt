@@ -1,0 +1,6 @@
+DEFAULT_XMLRPC_PORT
+===================
+
+.. currentmodule:: ifm3dpy
+
+.. autodata:: DEFAULT_XMLRPC_PORT

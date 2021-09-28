@@ -1,0 +1,6 @@
+IMG_RAMP
+========
+
+.. currentmodule:: ifm3dpy
+
+.. autodata:: IMG_RAMP

@@ -1,0 +1,6 @@
+O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_PATCH
+=========================================
+
+.. currentmodule:: ifm3dpy
+
+.. autodata:: O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_PATCH

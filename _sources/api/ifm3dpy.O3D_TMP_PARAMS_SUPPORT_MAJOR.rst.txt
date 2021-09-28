@@ -1,0 +1,6 @@
+O3D_TMP_PARAMS_SUPPORT_MAJOR
+============================
+
+.. currentmodule:: ifm3dpy
+
+.. autodata:: O3D_TMP_PARAMS_SUPPORT_MAJOR

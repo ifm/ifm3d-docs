@@ -1,0 +1,6 @@
+IMG_AMP
+=======
+
+.. currentmodule:: ifm3dpy
+
+.. autodata:: IMG_AMP
