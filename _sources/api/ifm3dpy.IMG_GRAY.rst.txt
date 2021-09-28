@@ -1,6 +1,0 @@
-IMG_GRAY
-========
-
-.. currentmodule:: ifm3dpy
-
-.. autodata:: IMG_GRAY

@@ -1,6 +1,0 @@
-JSON_MODEL
-==========
-
-.. currentmodule:: ifm3dpy
-
-.. autodata:: JSON_MODEL

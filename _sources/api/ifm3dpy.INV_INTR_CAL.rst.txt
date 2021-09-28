@@ -1,6 +1,0 @@
-INV_INTR_CAL
-============
-
-.. currentmodule:: ifm3dpy
-
-.. autodata:: INV_INTR_CAL
