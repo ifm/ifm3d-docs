@@ -23,13 +23,29 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "ifm3d", "index.html", [
-    [ "Python API Reference", "../python_api.html", null ]
+    [ "Python API Reference", "../python_api.html", null ],
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ],
+        [ "Typedefs", "functions_type.html", null ],
+        [ "Enumerations", "functions_enum.html", null ]
+      ] ]
+    ] ],
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ]
+    ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"../python_api.html"
+"../python_api.html",
+"classifm3d_1_1O3DCamera.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
