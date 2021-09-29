@@ -182,8 +182,29 @@
 <tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.O3RCamera.factory_reset" title="ifm3dpy.O3RCamera.factory_reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">factory_reset</span></code></a>(self,&nbsp;keep_network_settings)</td>
 <td>Sets the camera configuration back to the state in which it shipped from the ifm factory.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.O3RCamera.schema" title="ifm3dpy.O3RCamera.schema"><code class="xref py py-obj docutils literal notranslate"><span class="pre">schema</span></code></a>(self)</td>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.O3RCamera.get" title="ifm3dpy.O3RCamera.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a>(self,&nbsp;path)</td>
+<td>Returns the configuration formatted as JSON based on a path.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.O3RCamera.get_init" title="ifm3dpy.O3RCamera.get_init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_init</span></code></a>(self)</td>
+<td>Return the initial JSON configuration.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.O3RCamera.get_init_status" title="ifm3dpy.O3RCamera.get_init_status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_init_status</span></code></a>(self)</td>
+<td>Returns the init status of the device</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.O3RCamera.get_schema" title="ifm3dpy.O3RCamera.get_schema"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_schema</span></code></a>(self)</td>
 <td>Returns the current JSON schema configuration</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.O3RCamera.lock" title="ifm3dpy.O3RCamera.lock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lock</span></code></a>(self,&nbsp;password)</td>
+<td>Release the lock from the Device</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.O3RCamera.save_init" title="ifm3dpy.O3RCamera.save_init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_init</span></code></a>(self)</td>
+<td>Save to current temporary JSON configuration as initial JSON configuration</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.O3RCamera.set" title="ifm3dpy.O3RCamera.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(self,&nbsp;json)</td>
+<td>Overwrites parts of the temporary JSON configuration which is achieved by merging the provided JSON fragment with the current temporary JSON.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.O3RCamera.unlock" title="ifm3dpy.O3RCamera.unlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unlock</span></code></a>(self,&nbsp;password)</td>
+<td>Locks the device until it is unlocked.</td>
 </tr>
 </tbody>
 </table>
@@ -200,12 +221,83 @@ the ifm factory.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="ifm3dpy.O3RCamera.schema">
-<code class="descname">schema</code><span class="sig-paren">(</span><em>self: ifm3dpy.O3RCamera</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#ifm3dpy.O3RCamera.schema" title="Permalink to this definition">¶</a></dt>
+<dt id="ifm3dpy.O3RCamera.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>self: ifm3dpy.O3RCamera</em>, <em>path: List[str] = []</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#ifm3dpy.O3RCamera.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the configuration formatted as JSON based on a path.
+If the path is empty, returns the whole configuration.</p>
+<dl class="docutils">
+<dt>dict</dt>
+<dd>The JSON configuration for the list of object path fragments</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.O3RCamera.get_init">
+<code class="descname">get_init</code><span class="sig-paren">(</span><em>self: ifm3dpy.O3RCamera</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#ifm3dpy.O3RCamera.get_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the initial JSON configuration.</p>
+<dl class="docutils">
+<dt>dict</dt>
+<dd>The initial JSON configuration</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.O3RCamera.get_init_status">
+<code class="descname">get_init_status</code><span class="sig-paren">(</span><em>self: ifm3dpy.O3RCamera</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#ifm3dpy.O3RCamera.get_init_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the init status of the device</p>
+<dl class="docutils">
+<dt>dict</dt>
+<dd>The init status of the device</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.O3RCamera.get_schema">
+<code class="descname">get_schema</code><span class="sig-paren">(</span><em>self: ifm3dpy.O3RCamera</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#ifm3dpy.O3RCamera.get_schema" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the current JSON schema configuration</p>
 <dl class="docutils">
 <dt>dict</dt>
 <dd>The current json schema configuration</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.O3RCamera.lock">
+<code class="descname">lock</code><span class="sig-paren">(</span><em>self: ifm3dpy.O3RCamera</em>, <em>password: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ifm3dpy.O3RCamera.lock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Release the lock from the Device</p>
+<dl class="docutils">
+<dt>string</dt>
+<dd>The password used to unlock the device</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.O3RCamera.save_init">
+<code class="descname">save_init</code><span class="sig-paren">(</span><em>self: ifm3dpy.O3RCamera</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ifm3dpy.O3RCamera.save_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save to current temporary JSON configuration as initial JSON
+configuration</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.O3RCamera.set">
+<code class="descname">set</code><span class="sig-paren">(</span><em>self: ifm3dpy.O3RCamera</em>, <em>json: dict</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ifm3dpy.O3RCamera.set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites parts of the temporary JSON configuration which is achieved
+by merging the provided JSON fragment with the current temporary JSON.</p>
+<dl class="docutils">
+<dt>json <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd>The new temporay JSON configuration of the device.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ifm3dpy.O3RCamera.unlock">
+<code class="descname">unlock</code><span class="sig-paren">(</span><em>self: ifm3dpy.O3RCamera</em>, <em>password: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ifm3dpy.O3RCamera.unlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Locks the device until it is unlocked.
+If the device is unlocked and an empty password is provided the password
+protection is removed.</p>
+<dl class="docutils">
+<dt>string</dt>
+<dd>The password used to lock the device</dd>
 </dl>
 </dd></dl>
 
