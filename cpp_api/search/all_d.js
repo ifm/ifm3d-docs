@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['o3dcamera_95',['O3DCamera',['../classifm3d_1_1O3DCamera.html',1,'ifm3d']]],
-  ['o3rcamera_96',['O3RCamera',['../classifm3d_1_1O3RCamera.html',1,'ifm3d']]],
-  ['o3xcamera_97',['O3XCamera',['../classifm3d_1_1O3XCamera.html',1,'ifm3d']]],
-  ['opencvbuffer_98',['OpenCVBuffer',['../classifm3d_1_1OpenCVBuffer.html',1,'ifm3d']]],
-  ['operating_5fmode_99',['operating_mode',['../classifm3d_1_1CameraBase.html#ab2e87f951d6e5ea855bdf2af723dfee9',1,'ifm3d::CameraBase']]],
-  ['organize_100',['Organize',['../classifm3d_1_1ByteBuffer.html#a0e2d81476f104e6625c588474bcc7700',1,'ifm3d::ByteBuffer']]]
+  ['password_96',['Password',['../classifm3d_1_1Camera.html#ae3b8330b4f17a226cf792d49e241fe6d',1,'ifm3d::Camera']]],
+  ['pcicclient_97',['PCICClient',['../classifm3d_1_1PCICClient.html',1,'ifm3d::PCICClient'],['../classifm3d_1_1PCICClient.html#a24a2331b190073c4a8246531add561ea',1,'ifm3d::PCICClient::PCICClient()']]],
+  ['point_98',['point',['../structifm3d_1_1point.html',1,'ifm3d']]],
+  ['ptr_99',['ptr',['../classifm3d_1_1Image.html#a453b90061ccb05ca514426ad2f9e33c7',1,'ifm3d::Image::ptr(const std::uint32_t row)'],['../classifm3d_1_1Image.html#af9598aa54286a8c871c9be7d487e6d5f',1,'ifm3d::Image::ptr(const std::uint32_t row, const std::uint32_t col)'],['../classifm3d_1_1Image__.html#ab1022041402722564fe038ec7838b9e7',1,'ifm3d::Image_::ptr(const std::uint32_t row)'],['../classifm3d_1_1Image__.html#a162ec6ae4a165fd649c3658d8c04c556',1,'ifm3d::Image_::ptr(const std::uint32_t row, const std::uint32_t col)']]]
 ];
