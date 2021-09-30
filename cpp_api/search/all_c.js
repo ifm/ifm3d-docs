@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['o3dcamera_90',['O3DCamera',['../classifm3d_1_1O3DCamera.html',1,'ifm3d']]],
-  ['o3rcamera_91',['O3RCamera',['../classifm3d_1_1O3RCamera.html',1,'ifm3d']]],
-  ['o3xcamera_92',['O3XCamera',['../classifm3d_1_1O3XCamera.html',1,'ifm3d']]],
-  ['opencvbuffer_93',['OpenCVBuffer',['../classifm3d_1_1OpenCVBuffer.html',1,'ifm3d']]],
-  ['operating_5fmode_94',['operating_mode',['../classifm3d_1_1CameraBase.html#ab2e87f951d6e5ea855bdf2af723dfee9',1,'ifm3d::CameraBase']]],
-  ['organize_95',['Organize',['../classifm3d_1_1ByteBuffer.html#a0e2d81476f104e6625c588474bcc7700',1,'ifm3d::ByteBuffer']]]
+  ['makeshared_93',['MakeShared',['../classifm3d_1_1Camera.html#aee3625a91760b643a13989ad1121a441',1,'ifm3d::Camera::MakeShared()'],['../classifm3d_1_1CameraBase.html#acddc38d23dd1954f313422f382ee6d72',1,'ifm3d::CameraBase::MakeShared()']]],
+  ['mfilt_5fmask_5fsize_94',['mfilt_mask_size',['../classifm3d_1_1CameraBase.html#a7f8f11b9045e3c851b5237931bb7f4d6',1,'ifm3d::CameraBase']]]
 ];
