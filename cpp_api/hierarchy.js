@@ -1,9 +1,6 @@
 var hierarchy =
 [
     [ "ifm3d::ByteBuffer< Derived >", "classifm3d_1_1ByteBuffer.html", null ],
-    [ "ifm3d::ByteBuffer< ifm3d::ImageBuffer >", "classifm3d_1_1ByteBuffer.html", [
-      [ "ifm3d::ImageBuffer", "classifm3d_1_1ImageBuffer.html", null ]
-    ] ],
     [ "ifm3d::ByteBuffer< ifm3d::OpenCVBuffer >", "classifm3d_1_1ByteBuffer.html", [
       [ "ifm3d::OpenCVBuffer", "classifm3d_1_1OpenCVBuffer.html", null ]
     ] ],

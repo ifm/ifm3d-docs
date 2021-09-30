@@ -10,7 +10,6 @@ var annotated_dup =
       [ "IFMNetworkDevice", "classifm3d_1_1IFMNetworkDevice.html", "classifm3d_1_1IFMNetworkDevice" ],
       [ "Image", "classifm3d_1_1Image.html", "classifm3d_1_1Image" ],
       [ "Image_", "classifm3d_1_1Image__.html", "classifm3d_1_1Image__" ],
-      [ "ImageBuffer", "classifm3d_1_1ImageBuffer.html", "classifm3d_1_1ImageBuffer" ],
       [ "IntrinsicCalibration", "structifm3d_1_1IntrinsicCalibration.html", "structifm3d_1_1IntrinsicCalibration" ],
       [ "IteratorAdapter", "classifm3d_1_1IteratorAdapter.html", "classifm3d_1_1IteratorAdapter" ],
       [ "O3DCamera", "classifm3d_1_1O3DCamera.html", "classifm3d_1_1O3DCamera" ],
