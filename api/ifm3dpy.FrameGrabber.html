@@ -179,7 +179,7 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.FrameGrabber.reset" title="ifm3dpy.FrameGrabber.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></a>(self,&nbsp;cam,&nbsp;mask)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.FrameGrabber.reset" title="ifm3dpy.FrameGrabber.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></a>(self,&nbsp;cam,&nbsp;mask,&nbsp;pcic_port)</td>
 <td>Resets the FrameGrabber with a new camera/bitmask</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.FrameGrabber.sw_trigger" title="ifm3dpy.FrameGrabber.sw_trigger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sw_trigger</span></code></a>(self)</td>
@@ -193,7 +193,7 @@
 <p class="rubric">Methods Documentation</p>
 <dl class="method">
 <dt id="ifm3dpy.FrameGrabber.reset">
-<code class="descname">reset</code><span class="sig-paren">(</span><em>self: ifm3dpy.FrameGrabber</em>, <em>cam: ifm3d::CameraBase</em>, <em>mask: int = 10</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ifm3dpy.FrameGrabber.reset" title="Permalink to this definition">¶</a></dt>
+<code class="descname">reset</code><span class="sig-paren">(</span><em>self: ifm3dpy.FrameGrabber</em>, <em>cam: ifm3d::CameraBase</em>, <em>mask: int = 10</em>, <em>pcic_port: int = 0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ifm3dpy.FrameGrabber.reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resets the FrameGrabber with a new camera/bitmask</p>
 <dl class="docutils">
 <dt>cam <span class="classifier-delimiter">:</span> <span class="classifier">ifm3dpy.Camera</span></dt>
@@ -201,6 +201,8 @@
 <dt>mask <span class="classifier-delimiter">:</span> <span class="classifier">uint16</span></dt>
 <dd>A bitmask encoding the image acquisition schema to stream in from
 the camera.</dd>
+<dt>pcic_port <span class="classifier-delimiter">:</span> <span class="classifier">uint16</span></dt>
+<dd>The PCIC port</dd>
 </dl>
 </dd></dl>
 
