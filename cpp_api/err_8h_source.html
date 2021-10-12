@@ -162,31 +162,32 @@ $(document).ready(function(){initNavTree('err_8h_source.html',''); initResizable
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">extern</span> IFM3D_CAMERA_EXPORT <span class="keyword">const</span> <span class="keywordtype">int</span> IFM3D_LED_DUTY_CYCLE_VIOLATION;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">extern</span> IFM3D_CAMERA_EXPORT <span class="keyword">const</span> <span class="keywordtype">int</span> IFM3D_AUTO_EXPOSURE_NOT_SUPPORTED;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">extern</span> IFM3D_CAMERA_EXPORT <span class="keyword">const</span> <span class="keywordtype">int</span> IFM3D_INVALID_FIRMWARE_VERSION;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">namespace </span>ifm3d</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* strerror(<span class="keywordtype">int</span> errnum);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classifm3d_1_1error__t.html">   91</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classifm3d_1_1error__t.html">error_t</a> : <span class="keyword">public</span> std::exception</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="classifm3d_1_1error__t.html#a2c686f85a836d5fe7babeda1946c9546">error_t</a>(<span class="keywordtype">int</span> errnum);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classifm3d_1_1error__t.html#a94415f792f9dd6d2b00765e5841e3a8d">what</a>() <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classifm3d_1_1error__t.html#a37120b885f933f3899099eb9887e733e">code</a>() <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">int</span> errnum_;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  }; <span class="comment">// end: class error_t</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif // IFM3D_CAMERA_ERR_H</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">extern</span> IFM3D_CAMERA_EXPORT <span class="keyword">const</span> <span class="keywordtype">int</span> IFM3D_PROXY_AUTH_REQUIRED;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">namespace </span>ifm3d</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* strerror(<span class="keywordtype">int</span> errnum);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classifm3d_1_1error__t.html">   92</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classifm3d_1_1error__t.html">error_t</a> : <span class="keyword">public</span> std::exception</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="classifm3d_1_1error__t.html#a2c686f85a836d5fe7babeda1946c9546">error_t</a>(<span class="keywordtype">int</span> errnum);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classifm3d_1_1error__t.html#a94415f792f9dd6d2b00765e5841e3a8d">what</a>() <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classifm3d_1_1error__t.html#a37120b885f933f3899099eb9887e733e">code</a>() <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">int</span> errnum_;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  }; <span class="comment">// end: class error_t</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">#endif // IFM3D_CAMERA_ERR_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassifm3d_1_1error__t_html"><div class="ttname"><a href="classifm3d_1_1error__t.html">ifm3d::error_t</a></div><div class="ttdef"><b>Definition:</b> err.h:91</div></div>
+<div class="ttc" id="aclassifm3d_1_1error__t_html"><div class="ttname"><a href="classifm3d_1_1error__t.html">ifm3d::error_t</a></div><div class="ttdef"><b>Definition:</b> err.h:92</div></div>
 <div class="ttc" id="aclassifm3d_1_1error__t_html_a2c686f85a836d5fe7babeda1946c9546"><div class="ttname"><a href="classifm3d_1_1error__t.html#a2c686f85a836d5fe7babeda1946c9546">ifm3d::error_t::error_t</a></div><div class="ttdeci">error_t(int errnum)</div></div>
 <div class="ttc" id="aclassifm3d_1_1error__t_html_a94415f792f9dd6d2b00765e5841e3a8d"><div class="ttname"><a href="classifm3d_1_1error__t.html#a94415f792f9dd6d2b00765e5841e3a8d">ifm3d::error_t::what</a></div><div class="ttdeci">virtual const char * what() const noexcept</div></div>
 <div class="ttc" id="aclassifm3d_1_1error__t_html_a37120b885f933f3899099eb9887e733e"><div class="ttname"><a href="classifm3d_1_1error__t.html#a37120b885f933f3899099eb9887e733e">ifm3d::error_t::code</a></div><div class="ttdeci">int code() const noexcept</div></div>
