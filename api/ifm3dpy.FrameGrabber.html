@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -33,6 +33,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -83,6 +85,7 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Home page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/o3r/index.html">Examples</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../python_api.html">Python API</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../python_api.html#module-ifm3dpy">ifm3dpy Module</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../python_api.html#variables">Variables</a></li>
@@ -152,7 +155,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/api/ifm3dpy.FrameGrabber.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/api/ifm3dpy.FrameGrabber.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -165,98 +168,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="framegrabber">
+  <div class="tex2jax_ignore mathjax_ignore section" id="framegrabber">
 <h1>FrameGrabber<a class="headerlink" href="#framegrabber" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
-<dt id="ifm3dpy.FrameGrabber">
-<em class="property">class </em><code class="descclassname">ifm3dpy.</code><code class="descname">FrameGrabber</code><a class="headerlink" href="#ifm3dpy.FrameGrabber" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
-<p>Implements a TCP FrameGrabber connected to a provided Camera</p>
-<p class="rubric">Methods Summary</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.FrameGrabber.reset" title="ifm3dpy.FrameGrabber.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></a>(self,&nbsp;cam,&nbsp;mask,&nbsp;pcic_port)</td>
-<td>Resets the FrameGrabber with a new camera/bitmask</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#ifm3dpy.FrameGrabber.sw_trigger" title="ifm3dpy.FrameGrabber.sw_trigger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sw_trigger</span></code></a>(self)</td>
-<td>Triggers the camera for image acquisition</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#ifm3dpy.FrameGrabber.wait_for_frame" title="ifm3dpy.FrameGrabber.wait_for_frame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for_frame</span></code></a>(self,&nbsp;buff,&nbsp;timeout_millis,&nbsp;…)</td>
-<td>This function is used to grab and parse out time synchronized image data from the camera.</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Methods Documentation</p>
-<dl class="method">
-<dt id="ifm3dpy.FrameGrabber.reset">
-<code class="descname">reset</code><span class="sig-paren">(</span><em>self: ifm3dpy.FrameGrabber</em>, <em>cam: ifm3d::CameraBase</em>, <em>mask: int = 10</em>, <em>pcic_port: int = 0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ifm3dpy.FrameGrabber.reset" title="Permalink to this definition">¶</a></dt>
-<dd><p>Resets the FrameGrabber with a new camera/bitmask</p>
-<dl class="docutils">
-<dt>cam <span class="classifier-delimiter">:</span> <span class="classifier">ifm3dpy.Camera</span></dt>
-<dd>The camera instance to grab frames from.</dd>
-<dt>mask <span class="classifier-delimiter">:</span> <span class="classifier">uint16</span></dt>
-<dd>A bitmask encoding the image acquisition schema to stream in from
-the camera.</dd>
-<dt>pcic_port <span class="classifier-delimiter">:</span> <span class="classifier">uint16</span></dt>
-<dd>The PCIC port</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="ifm3dpy.FrameGrabber.sw_trigger">
-<code class="descname">sw_trigger</code><span class="sig-paren">(</span><em>self: ifm3dpy.FrameGrabber</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#ifm3dpy.FrameGrabber.sw_trigger" title="Permalink to this definition">¶</a></dt>
-<dd><p>Triggers the camera for image acquisition</p>
-<p>You should be sure to set the <cite>TriggerMode</cite> for your application to
-<cite>SW</cite> in order for this to be effective. This function
-simply does the triggering, data are still received asynchronously via
-<cite>WaitForFrame()</cite>.</p>
-<p>Calling this function when the camera is not in <cite>SW</cite> trigger mode or on
-a device that does not support software-trigger should result in a NOOP
-and no error will be returned (no exceptions thrown). However, we do
-not recommend calling this function in a tight framegrabbing loop when
-you know it is not needed. The “cost” of the NOOP is undefined and
-incurring it is not recommended.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ifm3dpy.FrameGrabber.wait_for_frame">
-<code class="descname">wait_for_frame</code><span class="sig-paren">(</span><em>self: ifm3dpy.FrameGrabber</em>, <em>buff: ifm3dpy.ImageBuffer</em>, <em>timeout_millis: int = 0</em>, <em>copy_buff: bool = False</em>, <em>organize: bool = True</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#ifm3dpy.FrameGrabber.wait_for_frame" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function is used to grab and parse out time synchronized image
-data from the camera.</p>
-<dl class="docutils">
-<dt>buff <span class="classifier-delimiter">:</span> <span class="classifier">ifm3dpy.FrameBuffer</span></dt>
-<dd>A FrameBuffer object to update with the latest data from the
-camera.</dd>
-<dt>timeout_millis <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Timeout in millis to wait for new image data from the FrameGrabber.
-If <cite>timeout_millis</cite> is set to 0, this function will block
-indefinitely.</dd>
-<dt>copy_buff <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
-<dd>Flag indicating whether the framegrabber’s internal
-buffer should be copied (O(n)) or swapped
-(O(1)) with the raw bytes of the passed in
-<cite>buff</cite>. You should only flag this as <cite>true</cite> if
-you are planning to use multiple clients with
-a single <cite>FrameGrabber</cite> – even then, think
-carefully before copying data around.</dd>
-<dt>organize <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
-<dd>Flag indicating whether or not <cite>Organize</cite> should be called on the
-<cite>ByteBuffer</cite> before returning, or whether it should be deferred
-until the data is accessed.</dd>
-</dl>
-<dl class="docutils">
-<dt>bool</dt>
-<dd>True if a new buffer was acquired w/in “timeout_millis”, false
-otherwise.</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
+<p>.. currentmodule:: ifm3dpy</p>
+<p>.. autoclass:: FrameGrabber
+:show-inheritance:</p>
+<p>.. rubric:: Methods Summary</p>
+<p>.. autosummary::</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  ~FrameGrabber.reset
+  ~FrameGrabber.sw_trigger
+  ~FrameGrabber.wait_for_frame
+</pre></div>
+</div>
+<p>.. rubric:: Methods Documentation</p>
+<p>.. automethod:: reset
+.. automethod:: sw_trigger
+.. automethod:: wait_for_frame</p>
 </div>
 
 

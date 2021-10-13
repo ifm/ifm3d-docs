@@ -23,7 +23,7 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "ifm3d", "index.html", [
-    [ "Python API Reference", "../python_api.html", null ],
+    [ "Python API", "../python_api.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

@@ -21,7 +21,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 for the JavaScript code in this file
 */
 var menudata={children:[
-{text:"Python API Reference",url:"../python_api.html"},
+{text:"Python API",url:"../python_api.html"},
 {text:"Main Page",url:"index.html"},
 {text:"Classes",url:"annotated.html",children:[
 {text:"Class List",url:"annotated.html"},
