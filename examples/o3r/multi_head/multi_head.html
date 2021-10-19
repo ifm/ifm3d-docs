@@ -210,31 +210,24 @@
 
     <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Available connections:&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 
-    <span class="c1">// Retrieve all the ports numbers for display later.</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">port_nbs</span><span class="p">;</span>
-    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">port_nb</span> <span class="p">:</span> <span class="n">conf</span><span class="p">[</span><span class="s">&quot;ports&quot;</span><span class="p">].</span><span class="n">items</span><span class="p">())</span>
-    <span class="p">{</span>
-        <span class="n">port_nbs</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">port_nb</span><span class="p">.</span><span class="n">key</span><span class="p">());</span>
-    <span class="p">}</span>
-
-    <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="nl">port</span> <span class="p">:</span> <span class="n">conf</span><span class="p">[</span><span class="s">&quot;ports&quot;</span><span class="p">])</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="nl">port</span> <span class="p">:</span> <span class="n">conf</span><span class="p">[</span><span class="s">&quot;ports&quot;</span><span class="p">].</span><span class="n">items</span><span class="p">())</span>
     <span class="p">{</span>
         <span class="c1">// Create lists of connected PCIC ports along with types</span>
-        <span class="k">const</span> <span class="k">auto</span> <span class="n">pcic</span> <span class="o">=</span> <span class="n">port</span><span class="p">[</span><span class="s">&quot;/data/pcicTCPPort&quot;</span><span class="n">_json_pointer</span><span class="p">];</span>
-        <span class="k">const</span> <span class="k">auto</span> <span class="n">type</span> <span class="o">=</span> <span class="n">port</span><span class="p">[</span><span class="s">&quot;/info/features/type&quot;</span><span class="n">_json_pointer</span><span class="p">];</span>
+        <span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span><span class="o">::</span><span class="n">json_pointer</span> <span class="n">p1</span><span class="p">(</span><span class="s">&quot;/ports/&quot;</span><span class="o">+</span><span class="n">port</span><span class="p">.</span><span class="n">key</span><span class="p">()</span><span class="o">+</span><span class="s">&quot;/data/pcicTCPPort&quot;</span><span class="p">);</span>
+        <span class="k">const</span> <span class="k">auto</span> <span class="n">pcic</span> <span class="o">=</span> <span class="n">conf</span><span class="p">[</span><span class="n">p1</span><span class="p">];</span>
+        <span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span><span class="o">::</span><span class="n">json_pointer</span> <span class="n">p2</span><span class="p">(</span><span class="s">&quot;/ports/&quot;</span><span class="o">+</span><span class="n">port</span><span class="p">.</span><span class="n">key</span><span class="p">()</span><span class="o">+</span><span class="s">&quot;/info/features/type&quot;</span><span class="p">);</span>
+        <span class="k">const</span> <span class="k">auto</span> <span class="n">type</span> <span class="o">=</span> <span class="n">conf</span><span class="p">[</span><span class="n">p2</span><span class="p">];</span>
         <span class="c1">//Display connected port with type</span>
-        <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Port: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">port_nbs</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\t</span><span class="s"> PCIC: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">pcic</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\t</span><span class="s"> Type: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">type</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Port: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">port</span><span class="p">.</span><span class="n">key</span><span class="p">()</span> 
+                  <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\t</span><span class="s"> PCIC: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">pcic</span> 
+                  <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\t</span><span class="s"> Type: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">type</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
         <span class="c1">// Create list of FrameGrabber and ImageBuffer objects for connected ports    </span>
         <span class="k">auto</span> <span class="n">fg</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FrameGrabber</span><span class="o">&gt;</span><span class="p">(</span><span class="n">cam</span><span class="p">,</span> <span class="n">ifm3d</span><span class="o">::</span><span class="n">DEFAULT_SCHEMA_MASK</span><span class="p">,</span> <span class="n">pcic</span><span class="p">);</span>
         <span class="n">fgs</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">fg</span><span class="p">);</span>    
-        <span class="n">j</span><span class="o">++</span><span class="p">;</span>
     <span class="p">}</span>
 
     <span class="c1">// Grab frames from each heads</span>
-    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="c1">// The timestamp has two parts, the timestamp in seconds and the timestamp in nanoseconds</span>
-    <span class="n">ifm3d</span><span class="o">::</span><span class="n">TimePointT</span> <span class="n">timestamp</span><span class="p">;</span>
     <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">fg</span> <span class="p">:</span> <span class="n">fgs</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="o">!</span> <span class="n">fg</span><span class="o">-&gt;</span><span class="n">WaitForFrame</span><span class="p">(</span><span class="n">im</span><span class="p">.</span><span class="n">get</span><span class="p">(),</span> <span class="mi">3000</span><span class="p">))</span>
@@ -243,11 +236,9 @@
             <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
         <span class="p">}</span>
 
-        <span class="n">i</span><span class="o">++</span><span class="p">;</span>
-        <span class="n">timestamp</span> <span class="o">=</span> <span class="n">im</span><span class="o">-&gt;</span><span class="n">TimeStamp</span><span class="p">();</span>
         <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Timestamp of frame &quot;</span>
                 <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">setw</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">setfill</span><span class="p">(</span><span class="sc">&#39;0&#39;</span><span class="p">)</span>
-                <span class="o">&lt;&lt;</span> <span class="s">&quot;: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">formatTimestamp</span><span class="p">(</span><span class="n">timestamp</span><span class="p">)</span>
+                <span class="o">&lt;&lt;</span> <span class="s">&quot;: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">formatTimestamp</span><span class="p">(</span><span class="n">im</span><span class="o">-&gt;</span><span class="n">TimeStamp</span><span class="p">())</span>
                 <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>  
     <span class="p">}</span>
 
