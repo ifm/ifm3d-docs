@@ -1,70 +1,36 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>How to: receive an image &mdash; ifm3d  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-
-  
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+        <script src="../../../_static/tabs.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="How to: receive data from multiple heads" href="../multi_head/multi_head.html" />
     <link rel="prev" title="How to: configure the camera" href="../configuration/configuration.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../../../index.html" class="icon icon-home"> ifm3d
-          
-
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -72,17 +38,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../index.html">Home page</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Examples</a><ul class="current">
@@ -91,11 +47,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#o3rcamera-framegrabber-and-stlimagebuffer">O3RCamera, FrameGrabber and StlImageBuffer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#receive-an-image">Receive an image</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#access-the-data">Access the data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#the-full-example">The full example</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#c">c++</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#python">Python</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="#the-full-example">The full example</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../multi_head/multi_head.html">How to: receive data from multiple heads</a></li>
@@ -105,76 +57,37 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../cpp_api/annotated.html">C++ API</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../../index.html">ifm3d</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../../index.html">Docs</a> &raquo;</li>
-        
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../index.html">O3R examples</a> &raquo;</li>
-        
       <li>How to: receive an image</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="../../../_sources/examples/o3r/getting_data/getting_data.md.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <div class="tex2jax_ignore mathjax_ignore section" id="how-to-receive-an-image">
-<h1>How to: receive an image<a class="headerlink" href="#how-to-receive-an-image" title="Permalink to this headline">¶</a></h1>
+<h1>How to: receive an image<a class="headerlink" href="#how-to-receive-an-image" title="Permalink to this headline"></a></h1>
 <p>You successfully installed the ifm3d library which contains all you need to use the O3R. This library wraps around PCIC and XML-RPC communication protocols to facilitate the communication with the device.</p>
 <p>At the end of this ‘how to’, you should be able to receive images and know the basic usage of the <code class="docutils literal notranslate"><span class="pre">O3RCamera</span></code>, <code class="docutils literal notranslate"><span class="pre">FrameGrabber</span></code> and <code class="docutils literal notranslate"><span class="pre">StlImageBuffer</span></code> classes.</p>
 <div class="section" id="o3rcamera-framegrabber-and-stlimagebuffer">
-<h2>O3RCamera, FrameGrabber and StlImageBuffer<a class="headerlink" href="#o3rcamera-framegrabber-and-stlimagebuffer" title="Permalink to this headline">¶</a></h2>
+<h2>O3RCamera, FrameGrabber and StlImageBuffer<a class="headerlink" href="#o3rcamera-framegrabber-and-stlimagebuffer" title="Permalink to this headline"></a></h2>
 <p>ifm3d provides three main classes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">O3RCamera</span></code> holds the configuration of the camera heads, handles the connection, etc;</p></li>
@@ -182,11 +95,18 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">StlImageBuffer</span></code> stores the image data.</p></li>
 </ul>
 <p>Instantiating these objects is as follows:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span> <span class="n">cam</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3RCamera</span><span class="o">&gt;</span><span class="p">();</span>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-0-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-0-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-0-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cam</span> <span class="o">=</span> <span class="n">O3RCamera</span><span class="p">()</span>
+<span class="n">fg</span> <span class="o">=</span> <span class="n">FrameGrabber</span><span class="p">(</span><span class="n">o3r</span><span class="p">,</span> <span class="n">pcic_port</span><span class="o">=</span><span class="mi">50012</span><span class="p">)</span>
+<span class="n">im</span> <span class="o">=</span>  <span class="n">ImageBuffer</span><span class="p">()</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span> <span class="n">cam</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3RCamera</span><span class="o">&gt;</span><span class="p">();</span>
 <span class="k">auto</span> <span class="n">fg</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FrameGrabber</span><span class="o">&gt;</span><span class="p">(</span><span class="n">cam</span><span class="p">,</span> <span class="n">ifm3d</span><span class="o">::</span><span class="n">DEFAULT_SCHEMA_MASK</span><span class="p">,</span> <span class="mi">50012</span><span class="p">);</span>
 <span class="k">auto</span> <span class="n">im</span> <span class="o">=</span>  <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">StlImageBuffer</span><span class="o">&gt;</span><span class="p">();</span>
 </pre></div>
 </div>
+</div></div>
 <p>The <code class="docutils literal notranslate"><span class="pre">O3RCamera</span></code> class, counter-intuitively, refers to the computing unit (the VPU). It inherits its name from previous ifm 3D devices that only used one camera, with no distinction between sensing and computing units.
 You can input:</p>
 <ul class="simple">
@@ -207,28 +127,58 @@ Its inputs:</p>
 </div></blockquote>
 </div>
 <div class="section" id="receive-an-image">
-<h2>Receive an image<a class="headerlink" href="#receive-an-image" title="Permalink to this headline">¶</a></h2>
+<h2>Receive an image<a class="headerlink" href="#receive-an-image" title="Permalink to this headline"></a></h2>
 <p>You just need to call the <code class="docutils literal notranslate"><span class="pre">WaitForFrame</span></code> function. Input an <code class="docutils literal notranslate"><span class="pre">ImageBuffer</span></code> object as well as a timeout value in ms. Make sure the camera head is in “RUN” mode.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">WaitForFrame</span><span class="p">(</span><span class="n">im</span><span class="p">.</span><span class="n">get</span><span class="p">(),</span> <span class="mi">1000</span><span class="p">);</span>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-1-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-1-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-1-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-1-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fg</span><span class="o">.</span><span class="n">wait_for_frame</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
 </pre></div>
 </div>
+</div><div aria-labelledby="tab-1-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">WaitForFrame</span><span class="p">(</span><span class="n">im</span><span class="p">.</span><span class="n">get</span><span class="p">(),</span> <span class="mi">1000</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></div>
 <p>And you’re good to go! Now you can do something with all this data.</p>
 </div>
 <div class="section" id="access-the-data">
-<h2>Access the data<a class="headerlink" href="#access-the-data" title="Permalink to this headline">¶</a></h2>
+<h2>Access the data<a class="headerlink" href="#access-the-data" title="Permalink to this headline"></a></h2>
 <p>Accessing the received data is done through the <code class="docutils literal notranslate"><span class="pre">StlImageBuffer</span></code>. Different data types are available depending on whether the camera is a 2D or a 3D camera. Simply access the image like so:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// For 3D data: </span>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-2-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-2-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-2-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-2-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># For 3D data:</span>
+<span class="n">dist</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">distance_image</span><span class="p">();</span>
+<span class="c1"># For 2D data:</span>
+<span class="n">rgb</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">jpeg_image</span><span class="p">();</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-2-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// For 3D data:</span>
 <span class="k">auto</span> <span class="n">dist</span> <span class="o">=</span> <span class="n">im</span><span class="o">-&gt;</span><span class="n">DistanceImage</span><span class="p">();</span>
 <span class="c1">// For 2D data:</span>
 <span class="k">auto</span> <span class="n">rgb</span> <span class="o">=</span> <span class="n">im</span><span class="o">-&gt;</span><span class="n">JPEGImage</span><span class="p">();</span>
 </pre></div>
 </div>
+</div></div>
 </div>
 <div class="section" id="the-full-example">
-<h2>The full example<a class="headerlink" href="#the-full-example" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="c">
-<h3>c++<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<h2>The full example<a class="headerlink" href="#the-full-example" title="Permalink to this headline"></a></h2>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-3-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-3-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-3-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-3-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ifm3dpy</span> <span class="kn">import</span> <span class="n">O3RCamera</span><span class="p">,</span> <span class="n">ImageBuffer</span><span class="p">,</span> <span class="n">FrameGrabber</span>
+
+<span class="c1"># Initialize the objects</span>
+<span class="n">o3r</span> <span class="o">=</span> <span class="n">O3RCamera</span><span class="p">(</span><span class="s1">&#39;192.168.0.69&#39;</span><span class="p">)</span>
+<span class="n">port</span><span class="o">=</span><span class="s1">&#39;port2&#39;</span>
+<span class="n">fg</span> <span class="o">=</span> <span class="n">FrameGrabber</span><span class="p">(</span><span class="n">o3r</span><span class="p">,</span> <span class="n">pcic_port</span><span class="o">=</span><span class="mi">50012</span><span class="p">)</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">ImageBuffer</span><span class="p">()</span>
+
+<span class="c1"># Get a frame</span>
+<span class="k">if</span> <span class="n">fg</span><span class="o">.</span><span class="n">wait_for_frame</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span><span class="o">==</span><span class="bp">False</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span> <span class="c1">#Exception(&#39;fg-timeout on &#39; + port + &#39; reached&#39;)</span>
+
+<span class="c1"># Read the distance image and display a pixel in the center</span>
+<span class="n">dist</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">distance_image</span><span class="p">()</span>
+<span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">shape</span>
+<span class="k">print</span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">width</span><span class="o">//</span><span class="mi">2</span><span class="p">,</span><span class="n">height</span><span class="o">//</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-3-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-3-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm"> * Copyright 2021-present ifm electronic, gmbh</span>
 <span class="cm"> * SPDX-License-Identifier: Apache-2.0</span>
 <span class="cm"> */</span>
@@ -272,78 +222,42 @@ Its inputs:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="python">
-<h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ifm3dpy</span> <span class="k">import</span> <span class="n">O3RCamera</span><span class="p">,</span> <span class="n">ImageBuffer</span><span class="p">,</span> <span class="n">FrameGrabber</span>
-
-<span class="c1"># Initialize the objects</span>
-<span class="n">o3r</span> <span class="o">=</span> <span class="n">O3RCamera</span><span class="p">(</span><span class="s1">&#39;192.168.0.69&#39;</span><span class="p">)</span>
-<span class="n">port</span><span class="o">=</span><span class="s1">&#39;port2&#39;</span>
-<span class="n">fg</span> <span class="o">=</span> <span class="n">FrameGrabber</span><span class="p">(</span><span class="n">o3r</span><span class="p">,</span> <span class="n">pcic_port</span><span class="o">=</span><span class="mi">50012</span><span class="p">)</span>
-<span class="n">im</span> <span class="o">=</span> <span class="n">ImageBuffer</span><span class="p">()</span>
-
-<span class="c1"># Get a frame</span>
-<span class="k">if</span> <span class="n">fg</span><span class="o">.</span><span class="n">wait_for_frame</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span><span class="o">==</span><span class="kc">False</span><span class="p">:</span>
-    <span class="k">raise</span> <span class="ne">ValueError</span> <span class="c1">#Exception(&#39;fg-timeout on &#39; + port + &#39; reached&#39;)</span>
-
-<span class="c1"># Read the distance image and display a pixel in the center</span>
-<span class="n">dist</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">distance_image</span><span class="p">()</span>
-<span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">shape</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">width</span><span class="o">//</span><span class="mi">2</span><span class="p">,</span><span class="n">height</span><span class="o">//</span><span class="mi">2</span><span class="p">])</span>
+</div></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
-</div>
 </div>
 </div>
 </div>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../multi_head/multi_head.html" class="btn btn-neutral float-right" title="How to: receive data from multiple heads" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="../configuration/configuration.html" class="btn btn-neutral float-left" title="How to: configure the camera" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../configuration/configuration.html" class="btn btn-neutral float-left" title="How to: configure the camera" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../multi_head/multi_head.html" class="btn btn-neutral float-right" title="How to: receive data from multiple heads" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2021, ifm electronic
-
-    </p>
+    <p>&#169; Copyright 2021, ifm electronic.</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

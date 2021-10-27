@@ -1,68 +1,33 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ifm3dpy Viewer &mdash; ifm3d  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-
-  
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../../../index.html" class="icon icon-home"> ifm3d
-          
-
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -70,17 +35,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../index.html">Home page</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Examples</a></li>
@@ -88,82 +43,44 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../cpp_api/annotated.html">C++ API</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../../index.html">ifm3d</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../../index.html">Docs</a> &raquo;</li>
-        
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
       <li>ifm3dpy Viewer</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="../../../_sources/examples/o3r/viewer/README.md.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <div class="tex2jax_ignore mathjax_ignore section" id="ifm3dpy-viewer">
-<h1>ifm3dpy Viewer<a class="headerlink" href="#ifm3dpy-viewer" title="Permalink to this headline">¶</a></h1>
+<h1>ifm3dpy Viewer<a class="headerlink" href="#ifm3dpy-viewer" title="Permalink to this headline"></a></h1>
 <p>This is an example application for retrieving different kinds of images from an</p>
 <div class="section" id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
 <p>The recommended way is to use a venv.</p>
 <div class="section" id="create-a-new-venv">
-<h3>Create a new venv<a class="headerlink" href="#create-a-new-venv" title="Permalink to this headline">¶</a></h3>
+<h3>Create a new venv<a class="headerlink" href="#create-a-new-venv" title="Permalink to this headline"></a></h3>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python3 -m venv my_venv
 </pre></div>
 </div>
 </div>
 <div class="section" id="activate-the-venv">
-<h3>Activate the venv<a class="headerlink" href="#activate-the-venv" title="Permalink to this headline">¶</a></h3>
+<h3>Activate the venv<a class="headerlink" href="#activate-the-venv" title="Permalink to this headline"></a></h3>
 <table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Platform</p></th>
@@ -200,9 +117,9 @@
 </table>
 </div>
 <div class="section" id="install-ifm3dpy">
-<h3>Install ifm3dpy<a class="headerlink" href="#install-ifm3dpy" title="Permalink to this headline">¶</a></h3>
+<h3>Install ifm3dpy<a class="headerlink" href="#install-ifm3dpy" title="Permalink to this headline"></a></h3>
 <div class="section" id="from-source">
-<h4>From Source<a class="headerlink" href="#from-source" title="Permalink to this headline">¶</a></h4>
+<h4>From Source<a class="headerlink" href="#from-source" title="Permalink to this headline"></a></h4>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># In the ifm3d root folder</span>
 pip install -r requirements.txt
 pip install .
@@ -212,14 +129,14 @@ pip install .
 </div>
 </div>
 <div class="section" id="install-requirements">
-<h3>Install requirements<a class="headerlink" href="#install-requirements" title="Permalink to this headline">¶</a></h3>
+<h3>Install requirements<a class="headerlink" href="#install-requirements" title="Permalink to this headline"></a></h3>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip install -r examples/python/viewer/requirements.txt
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline"></a></h2>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>usage: ifm3dpy_viewer.py <span class="o">[</span>-h<span class="o">]</span> --pcic-port PORT --image <span class="o">{</span>jpeg,distance,amplitude,xyz<span class="o">}</span> <span class="o">[</span>--ip IP<span class="o">]</span> <span class="o">[</span>--xmlrpc-port XMLRPC_PORT<span class="o">]</span>
 
 optional arguments:
@@ -233,25 +150,25 @@ optional arguments:
 </pre></div>
 </div>
 <div class="section" id="display-the-distance-image">
-<h3>Display the distance image<a class="headerlink" href="#display-the-distance-image" title="Permalink to this headline">¶</a></h3>
+<h3>Display the distance image<a class="headerlink" href="#display-the-distance-image" title="Permalink to this headline"></a></h3>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python examples/python/viewer/ifm3dpy_viewer.py --pcic-port <span class="m">50012</span> --image distance
 </pre></div>
 </div>
 </div>
 <div class="section" id="display-the-amplitude-image">
-<h3>Display the amplitude image<a class="headerlink" href="#display-the-amplitude-image" title="Permalink to this headline">¶</a></h3>
+<h3>Display the amplitude image<a class="headerlink" href="#display-the-amplitude-image" title="Permalink to this headline"></a></h3>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python examples/python/viewer/ifm3dpy_viewer.py --pcic-port <span class="m">50012</span> --image amplitude
 </pre></div>
 </div>
 </div>
 <div class="section" id="display-the-point-cloud">
-<h3>Display the point cloud<a class="headerlink" href="#display-the-point-cloud" title="Permalink to this headline">¶</a></h3>
+<h3>Display the point cloud<a class="headerlink" href="#display-the-point-cloud" title="Permalink to this headline"></a></h3>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python examples/python/viewer/ifm3dpy_viewer.py --pcic-port <span class="m">50012</span> --image xyz
 </pre></div>
 </div>
 </div>
 <div class="section" id="display-the-jpeg-image">
-<h3>Display the jpeg image<a class="headerlink" href="#display-the-jpeg-image" title="Permalink to this headline">¶</a></h3>
+<h3>Display the jpeg image<a class="headerlink" href="#display-the-jpeg-image" title="Permalink to this headline"></a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">examples</span><span class="o">/</span><span class="n">python</span><span class="o">/</span><span class="n">viewer</span><span class="o">/</span><span class="n">ifm3dpy_viewer</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">pcic</span><span class="o">-</span><span class="n">port</span> <span class="mi">50010</span> <span class="o">--</span><span class="n">image</span> <span class="n">jpeg</span>
 </pre></div>
 </div>
@@ -261,42 +178,30 @@ optional arguments:
 
 
            </div>
-           
           </div>
           <footer>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2021, ifm electronic
-
-    </p>
+    <p>&#169; Copyright 2021, ifm electronic.</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
