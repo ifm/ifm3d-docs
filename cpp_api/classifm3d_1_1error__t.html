@@ -107,18 +107,20 @@ Collaboration diagram for ifm3d::error_t:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2c686f85a836d5fe7babeda1946c9546"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1error__t.html#a2c686f85a836d5fe7babeda1946c9546">error_t</a> (int errnum)</td></tr>
-<tr class="separator:a2c686f85a836d5fe7babeda1946c9546"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee1bbc29a69446fc5adf6e967093a73c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1error__t.html#aee1bbc29a69446fc5adf6e967093a73c">error_t</a> (int errnum, const std::string &amp;msg=&quot;&quot;)</td></tr>
+<tr class="separator:aee1bbc29a69446fc5adf6e967093a73c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94415f792f9dd6d2b00765e5841e3a8d"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1error__t.html#a94415f792f9dd6d2b00765e5841e3a8d">what</a> () const noexcept</td></tr>
 <tr class="separator:a94415f792f9dd6d2b00765e5841e3a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37120b885f933f3899099eb9887e733e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1error__t.html#a37120b885f933f3899099eb9887e733e">code</a> () const noexcept</td></tr>
 <tr class="separator:a37120b885f933f3899099eb9887e733e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68527cc36b83eb42e5166907916138df"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1error__t.html#a68527cc36b83eb42e5166907916138df">message</a> () const noexcept</td></tr>
+<tr class="separator:a68527cc36b83eb42e5166907916138df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Exception wrapper for library and system errors encountered by the library. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a2c686f85a836d5fe7babeda1946c9546"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c686f85a836d5fe7babeda1946c9546">&#9670;&nbsp;</a></span>error_t()</h2>
+<a id="aee1bbc29a69446fc5adf6e967093a73c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee1bbc29a69446fc5adf6e967093a73c">&#9670;&nbsp;</a></span>error_t()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -127,12 +129,22 @@ Public Member Functions</h2></td></tr>
           <td class="memname">ifm3d::error_t::error_t </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>errnum</em></td><td>)</td>
+          <td class="paramname"><em>errnum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>msg</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The ctor simply sets the error value into a local instance variable that may be retrieved with a call to <code><a class="el" href="classifm3d_1_1error__t.html#a37120b885f933f3899099eb9887e733e">code()</a></code>. </p>
+<p>The ctor simply sets the error value and optional message into a local instance variables that may be retrieved with a call to <a class="el" href="classifm3d_1_1error__t.html#a37120b885f933f3899099eb9887e733e">code()</a> and <a class="el" href="classifm3d_1_1error__t.html#a68527cc36b83eb42e5166907916138df">message()</a>. </p>
 
 </div>
 </div>
@@ -160,6 +172,32 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Accessor to the underlying error code </p>
+
+</div>
+</div>
+<a id="a68527cc36b83eb42e5166907916138df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68527cc36b83eb42e5166907916138df">&#9670;&nbsp;</a></span>message()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* ifm3d::error_t::message </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Accessor to the underlying error msg </p>
 
 </div>
 </div>
