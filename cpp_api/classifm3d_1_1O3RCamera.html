@@ -325,6 +325,8 @@ std::unique_ptr&lt; Impl &gt;&#160;</td><td class="memItemRight" valign="bottom"
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p></p>
 <p>Configures the camera based on the parameter values of the passed in JSON. This function is <em>the</em> way to tune the camera/application/imager/etc. parameters.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -337,7 +339,7 @@ std::unique_ptr&lt; Impl &gt;&#160;</td><td class="memItemRight" valign="bottom"
 </ul>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classifm3d_1_1error__t.html">ifm3d::error_t</a></td><td>upon error - if this throws an exception, you are encouraged to check the log file as a best effort is made to be as descriptive as possible as to the specific error that has occured. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classifm3d_1_1error__t.html">ifm3d::error_t</a></td><td>upon error - if this throws an exception, you are encouraged to check the log file as a best effort is made to be as descriptive as possible as to the specific error that has occured. Equivalent to <a class="el" href="classifm3d_1_1O3RCamera.html#a5dd2b6528e1de94c79b2acbfe4e622fd">Set()</a> followed by <a class="el" href="classifm3d_1_1O3RCamera.html#a828aed8a5d32d7e6818ce1070a99306f">SaveInit()</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -589,13 +591,15 @@ std::unique_ptr&lt; Impl &gt;&#160;</td><td class="memItemRight" valign="bottom"
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p></p>
 <p>Serializes the state of the camera to JSON.</p>
 <p>The JSON interface returned here is the excellent <a href="https://github.com/nlohmann/json">JSON for Modern C++</a>.</p>
 <p>This function (along with its <code>std::string</code> equivalent <code><a class="el" href="classifm3d_1_1CameraBase.html#a1b6fd2967e38bf4bd76418908818284c">ToJSONStr()</a></code>) provides the primary gateway into obtaining the current parameter settings for the camera and PMD imager. Data returned from this function can be manipulated as a <code>json</code> object, then fed into <code>FromJSON(...)</code> to mutate parameter settings on the camera.</p>
 <dl class="section return"><dt>Returns</dt><dd>A JSON object representation of the current state of the hardware.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classifm3d_1_1error__t.html">ifm3d::error_t</a></td><td>upon error </td></tr>
+    <tr><td class="paramname"><a class="el" href="classifm3d_1_1error__t.html">ifm3d::error_t</a></td><td>upon error Equivalent to the <a class="el" href="classifm3d_1_1O3RCamera.html#a275baae3de9789e6b04eb8202def49b7">Get()</a> method </td></tr>
   </table>
   </dd>
 </dl>

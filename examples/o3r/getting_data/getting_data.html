@@ -40,8 +40,9 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Home page</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Examples</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../content/installation_instructions.html">Installation instructions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Basic library usage</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../configuration/configuration.html">How to: configure the camera</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">How to: receive an image</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#o3rcamera-framegrabber-and-stlimagebuffer">O3RCamera, FrameGrabber and StlImageBuffer</a></li>
@@ -53,6 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../multi_head/multi_head.html">How to: receive data from multiple heads</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cli_link.html">Command Line tool</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../python_api.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../cpp_api/annotated.html">C++ API</a></li>
 </ul>
@@ -84,8 +86,13 @@
              
   <div class="tex2jax_ignore mathjax_ignore section" id="how-to-receive-an-image">
 <h1>How to: receive an image<a class="headerlink" href="#how-to-receive-an-image" title="Permalink to this headline"></a></h1>
-<p>You successfully installed the ifm3d library which contains all you need to use the O3R. This library wraps around PCIC and XML-RPC communication protocols to facilitate the communication with the device.</p>
+<p>A primary objective of <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> is to make it as simple and performant as possible to acquire pixel data from an ifm 3D camera.
+Additionally, those data should be encoded in a useful format for performing computer vision and/or robotics perception tasks.
+A typical <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> client program will follow the structure of a control loop whereby images are continuously acquired from the camera and acted upon in some application-specific way.</p>
 <p>At the end of this ‘how to’, you should be able to receive images and know the basic usage of the <code class="docutils literal notranslate"><span class="pre">O3RCamera</span></code>, <code class="docutils literal notranslate"><span class="pre">FrameGrabber</span></code> and <code class="docutils literal notranslate"><span class="pre">StlImageBuffer</span></code> classes.</p>
+<blockquote>
+<div><p>Note: for O3D or O3X devices, simply use the <code class="docutils literal notranslate"><span class="pre">Camera</span></code> class in place of the <code class="docutils literal notranslate"><span class="pre">O3RCamera</span></code> in the following code.</p>
+</div></blockquote>
 <div class="section" id="o3rcamera-framegrabber-and-stlimagebuffer">
 <h2>O3RCamera, FrameGrabber and StlImageBuffer<a class="headerlink" href="#o3rcamera-framegrabber-and-stlimagebuffer" title="Permalink to this headline"></a></h2>
 <p>ifm3d provides three main classes:</p>
@@ -125,6 +132,11 @@ Its inputs:</p>
 <blockquote>
 <div><p>Note: instantiating the objects is done the same way for any imager type (2D, 3D, different resolutions, etc).</p>
 </div></blockquote>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> encourages the use of <code class="docutils literal notranslate"><span class="pre">std::shared_ptr</span></code> as a means to manage the ownership and lifetimes of the core actors in an <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> program.
+Indeed, you will notice that there is no need to explicitly allocate and deallocate memory.
+To instantiate the <code class="docutils literal notranslate"><span class="pre">ifm3d::O3RCamera</span></code> object (or <code class="docutils literal notranslate"><span class="pre">ifm3d::Camera</span></code>), a call to <code class="docutils literal notranslate"><span class="pre">ifm3d::O3RCamera::MakeShared()</span></code> is made (or <code class="docutils literal notranslate"><span class="pre">ifm3d::Camera::MakeShared()</span></code>), rather than calling <code class="docutils literal notranslate"><span class="pre">std::make_shared</span></code> directly.
+This wrapper function is used to handle direct hardware probing to determine the type of camera that is connected.
+For example, this may be an O3R, O3D303, O3X, or something else. Regardless, a <code class="docutils literal notranslate"><span class="pre">std::shared_ptr</span></code> is returned from this call.</p>
 </div>
 <div class="section" id="receive-an-image">
 <h2>Receive an image<a class="headerlink" href="#receive-an-image" title="Permalink to this headline"></a></h2>
@@ -138,6 +150,13 @@ Its inputs:</p>
 </div>
 </div></div>
 <p>And you’re good to go! Now you can do something with all this data.</p>
+<blockquote>
+<div><p>Note :
+The <code class="docutils literal notranslate"><span class="pre">WaitForFrame</span></code> method is called on our <code class="docutils literal notranslate"><span class="pre">ifm3d::FrameGrabber</span></code> pointer.
+It is passed the <em>raw</em> pointer to the <code class="docutils literal notranslate"><span class="pre">ifm3d::ImageBuffer</span></code> and a timeout in milliseconds.
+If a new frame from the camera cannot be acquired within the timeout, <code class="docutils literal notranslate"><span class="pre">WaitForFrame</span></code> will return false.
+For the curious, we pass the raw pointer to the <code class="docutils literal notranslate"><span class="pre">ImageBuffer</span></code> as opposed to the smart pointer because it is more performant (the <code class="docutils literal notranslate"><span class="pre">std::shared_ptr</span></code> reference count does not need to be incremented and decremented with every call to <code class="docutils literal notranslate"><span class="pre">WaitForFrame</span></code> and, semantically, the <code class="docutils literal notranslate"><span class="pre">FrameGrabber</span></code> via the <code class="docutils literal notranslate"><span class="pre">WaitForFrame</span></code> call does not participate in the ownership of the <code class="docutils literal notranslate"><span class="pre">ImageBuffer</span></code>).</p>
+</div></blockquote>
 </div>
 <div class="section" id="access-the-data">
 <h2>Access the data<a class="headerlink" href="#access-the-data" title="Permalink to this headline"></a></h2>
