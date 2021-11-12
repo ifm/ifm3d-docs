@@ -79,17 +79,17 @@ a Windows platform using Visual Studio.</p>
 <div class="section" id="build-tools">
 <h2>Build tools<a class="headerlink" href="#build-tools" title="Permalink to this headline"></a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="http://www.cmake.org">CMake v3.5.0</a> or newer (also available through the
+<li><p><a class="reference external" href="http://www.cmake.org">CMake v3.11.0</a> or newer (also available through the
 Visual Studio installer)</p></li>
 <li><p><a class="reference external" href="https://gitforwindows.org">Git for Windows</a> (also available through the
 Visual Studio installer)</p></li>
 <li><p><a class="reference external" href="https://www.visualstudio.com">Microsoft Visual Studio</a>
-version 2015, 2017 or 2019. The free ‘Community’ edition is sufficient. Be
+version 2017 or 2019. The free ‘Community’ edition is sufficient. Be
 sure to select the ‘Desktop development with C++’ workflow.</p></li>
 </ul>
 </div>
-<div class="section" id="binary-dependencies-for-ifm3d-image-and-ifm3d-opencv-modules">
-<h2>Binary Dependencies for ifm3d::image and ifm3d::opencv modules<a class="headerlink" href="#binary-dependencies-for-ifm3d-image-and-ifm3d-opencv-modules" title="Permalink to this headline"></a></h2>
+<div class="section" id="binary-dependencies-for-ifm3d-image-and-ifm3d-opencv-optional-modules">
+<h2>Binary Dependencies for ifm3d::image and ifm3d::opencv optional modules<a class="headerlink" href="#binary-dependencies-for-ifm3d-image-and-ifm3d-opencv-optional-modules" title="Permalink to this headline"></a></h2>
 <div class="section" id="pcl">
 <h3><a class="reference external" href="http://www.pointclouds.org">PCL</a><a class="headerlink" href="#pcl" title="Permalink to this headline"></a></h3>
 <p>PCL is available in binary form for Windows platforms via the project’s GitHub
@@ -97,7 +97,6 @@ releases page. <code class="docutils literal notranslate"><span class="pre">ifm3
 downloaded and installed via the following links.</p>
 <p>Choose ONE of the following based on your target version of Visual Studio.</p>
 <ul class="simple">
-<li><p>Visual Studio 2015: <a class="reference external" href="https://github.com/PointCloudLibrary/pcl/releases/download/pcl-1.8.1/PCL-1.8.1-AllInOne-msvc2015-win64.exe">PCL-1.8.1-AllInOne-msvc2015-win64.exe</a></p></li>
 <li><p>Visual Studio 2017/2019: <a class="reference external" href="https://github.com/PointCloudLibrary/pcl/releases/download/pcl-1.8.1/PCL-1.8.1-AllInOne-msvc2017-win64.exe">PCL-1.8.1-AllInOne-msvc2017-win64.exe</a></p></li>
 </ul>
 <p><strong>NOTE</strong>: Opt-in to installing the 3rd party dependencies of <code class="docutils literal notranslate"><span class="pre">PCL</span></code>. <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code>
@@ -134,7 +133,7 @@ please clone googletest as explained in <span class="xref myst">gtest</span> sec
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#set the environment variables</span>
 <span class="nb">set</span> <span class="n">IFM3D_CMAKE_GENERATOR</span><span class="o">=</span><span class="s2">&quot;Visual Studio 16 2019&quot;</span>
 <span class="nb">set</span> <span class="n">IFM3D_BUILD_DIR</span><span class="o">=</span><span class="n">C</span><span class="p">:</span>\<span class="n">ifm3d</span>
-<span class="nb">set</span> <span class="n">CONFIG</span><span class="o">=</span><span class="n">Release</span>
+<span class="nb">set</span> <span class="n">CONFIG</span><span class="o">=</span><span class="n">Release</span> <span class="c1">#set to Debug for debug binaries</span>
 
 <span class="c1">#make the working dir</span>
 <span class="n">mkdir</span> <span class="o">%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>
@@ -151,9 +150,6 @@ please clone googletest as explained in <span class="xref myst">gtest</span> sec
 
 <span class="c1"># Build ifm3d and dependencies</span>
 <span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="o">%</span><span class="n">CONFIG</span><span class="o">%</span> <span class="o">--</span><span class="n">target</span> <span class="n">ALL_BUILD</span>
-
-<span class="c1"># run tests</span>
-<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="o">%</span><span class="n">CONFIG</span><span class="o">%</span> <span class="o">--</span><span class="n">target</span> <span class="n">check</span>
 
 <span class="c1"># install</span>
 <span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="o">%</span><span class="n">CONFIG</span><span class="o">%</span> <span class="o">--</span><span class="n">target</span> <span class="n">install</span>
@@ -173,9 +169,8 @@ Also append the opencv install binary path to -DCMAKE_PREFIX_PATH as shown in <s
 <p>The following environment variables are used by this tutorial to make
 customization simpler. Modify them as needed for your environment. You can
 obtain a list of valid cmake generator strings via <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">-h</span></code>. Again, <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code>
-supports version 2015 and newer.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">IFM3D_BOOST_ROOT</span><span class="o">=</span><span class="s2">&quot;C:\Program Files\PCL 1.8.1</span><span class="se">\3</span><span class="s2">rdParty\Boost&quot;</span>
-<span class="nb">set</span> <span class="n">IFM3D_OPENCV_PATH</span><span class="o">=</span><span class="n">C</span><span class="p">:</span>\<span class="n">opencv</span>\<span class="n">build</span>
+supports version 2017 and newer.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">IFM3D_OPENCV_PATH</span><span class="o">=</span><span class="n">C</span><span class="p">:</span>\<span class="n">opencv</span>\<span class="n">build</span>
 <span class="nb">set</span> <span class="n">IFM3D_CMAKE_GENERATOR</span><span class="o">=</span><span class="s2">&quot;Visual Studio 15 2017 Win64&quot;</span>
 <span class="nb">set</span> <span class="n">IFM3D_BUILD_DIR</span><span class="o">=</span><span class="n">C</span><span class="p">:</span>\<span class="n">ifm3d</span>
 <span class="nb">set</span> <span class="n">CONFIG</span><span class="o">=</span><span class="n">Release</span>
@@ -266,10 +261,6 @@ your path.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">PATH</span><span class="o">=%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>\<span class="n">install</span>\<span class="nb">bin</span><span class="p">;</span><span class="o">%</span><span class="n">IFM3D_OPENCV_PATH</span><span class="o">%</span>\<span class="n">x64</span>\<span class="n">vc15</span>\<span class="nb">bin</span><span class="p">;</span><span class="o">%</span><span class="n">PATH</span><span class="o">%</span>
 </pre></div>
 </div>
-<p>If built targeting Visual Studio 2015:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">PATH</span><span class="o">=%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>\<span class="n">install</span>\<span class="nb">bin</span><span class="p">;</span><span class="o">%</span><span class="n">IFM3D_OPENCV_PATH</span><span class="o">%</span>\<span class="n">x64</span>\<span class="n">vc14</span>\<span class="nb">bin</span><span class="p">;</span><span class="o">%</span><span class="n">PATH</span><span class="o">%</span>
-</pre></div>
-</div>
 <p>After that you should be able to run the ifm3d tool</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ifm3d</span>
 </pre></div>
@@ -281,22 +272,6 @@ your path.</p>
 only depends on <code class="docutils literal notranslate"><span class="pre">OpenCV</span></code>, thus eliminating a dependency on <code class="docutils literal notranslate"><span class="pre">PCL</span></code>. In order to
 build <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> without a dependency on <code class="docutils literal notranslate"><span class="pre">PCL</span></code>, the following modifications to
 the instructions above are necessary.</p>
-<div class="section" id="download-boost">
-<h2>Download Boost<a class="headerlink" href="#download-boost" title="Permalink to this headline"></a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> takes a dependency on the <code class="docutils literal notranslate"><span class="pre">Boost</span></code> libraries which are also distributed by <code class="docutils literal notranslate"><span class="pre">the</span> </code>PCL all-in-one installer. Since we will not be installing <code class="docutils literal notranslate"><span class="pre">PCL</span></code>, <code class="docutils literal notranslate"><span class="pre">Boost</span></code> must be downloaded individually. Binaries for the latest release are available here (choose the version which matches your target msvc version):</p>
-<ul class="simple">
-<li><p>Visual Studio 2015: <a class="reference external" href="https://sourceforge.net/projects/boost/files/boost-binaries/1.72.0/boost_1_72_0-msvc-14.0-64.exe/download">boost_1_72_0-msvc-14.0-64.exe</a></p></li>
-<li><p>Visual Studio 2017: <a class="reference external" href="https://sourceforge.net/projects/boost/files/boost-binaries/1.72.0/boost_1_72_0-msvc-14.1-64.exe/download">boost_1_72_0-msvc-14.1-64.exe</a></p></li>
-<li><p>Visual Studio 2019: <a class="reference external" href="https://sourceforge.net/projects/boost/files/boost-binaries/1.72.0/boost_1_72_0-msvc-14.2-64.exe/download">boost_1_72_0-msvc-14.2-64.exe</a></p></li>
-</ul>
-</div>
-<div class="section" id="set-the-proper-boost-root-path">
-<h2>Set the proper BOOST_ROOT path<a class="headerlink" href="#set-the-proper-boost-root-path" title="Permalink to this headline"></a></h2>
-<p>In the environment setup step, choose the proper path for BOOST_ROOT:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">IFM3D_BOOST_ROOT</span><span class="o">=</span><span class="s2">&quot;C:\local</span><span class="se">\b</span><span class="s2">oost_1_72_0&quot;</span>
-</pre></div>
-</div>
-</div>
 <div class="section" id="select-the-opencv-image-container">
 <h2>Select the OpenCV Image Container<a class="headerlink" href="#select-the-opencv-image-container" title="Permalink to this headline"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">ifm3d::ImageBuffer</span></code> module (has dependency on PCL) must be disabled with
