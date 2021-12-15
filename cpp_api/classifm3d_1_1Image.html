@@ -154,10 +154,10 @@ ifm3d::pixel_format&#160;</td><td class="memItemRight" valign="bottom"><b>dataFo
 <tr class="memitem:af9598aa54286a8c871c9be7d487e6d5f"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Image.html#af9598aa54286a8c871c9be7d487e6d5f">ptr</a> (const std::uint32_t row, const std::uint32_t col)</td></tr>
 <tr class="memdesc:af9598aa54286a8c871c9be7d487e6d5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the Pixel at row,col.  <a href="classifm3d_1_1Image.html#af9598aa54286a8c871c9be7d487e6d5f">More...</a><br /></td></tr>
 <tr class="separator:af9598aa54286a8c871c9be7d487e6d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca8fb534b84761602667121bc7c9a2e9"><td class="memTemplParams" colspan="2"><a id="aca8fb534b84761602667121bc7c9a2e9"></a>
+<tr class="memitem:a939f595cf1541390a459a4e7879d7697"><td class="memTemplParams" colspan="2"><a id="a939f595cf1541390a459a4e7879d7697"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:aca8fb534b84761602667121bc7c9a2e9"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>at</b> (const std::uint32_t index)</td></tr>
-<tr class="separator:aca8fb534b84761602667121bc7c9a2e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a939f595cf1541390a459a4e7879d7697"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>at</b> (const std::size_t index)</td></tr>
+<tr class="separator:a939f595cf1541390a459a4e7879d7697"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3a3b24a46aaaa57c4c212b0bc841b9d"><td class="memTemplParams" colspan="2"><a id="ab3a3b24a46aaaa57c4c212b0bc841b9d"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ab3a3b24a46aaaa57c4c212b0bc841b9d"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>at</b> (const std::uint32_t row, const std::uint32_t col)</td></tr>
@@ -205,10 +205,10 @@ template&lt;typename T &gt; </td></tr>
 <div class="line"><span class="comment">//now individual channel values can be access with</span></div>
 <div class="line">val[0], val[1] , val[2]</div>
 </div><!-- fragment --><p>-Processing the whole array If you need to process a whole <a class="el" href="classifm3d_1_1Image.html" title="The class Image represent a STL conatiner to stored image data from the ifm devices in 2 dimension an...">Image</a>, the most efficient way is to get the pointer to the row first, and then just use the plain C operator [] : </p><div class="fragment"><div class="line"><a class="code" href="classifm3d_1_1Image.html#ad3960c941b5ebffc8ab77aef1ae4afc1">Image</a> I(100,100,1,FORMAT_8U);</div>
-<div class="line"> <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; I.rows; i++)</div>
+<div class="line"> <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; I.height(); i++)</div>
 <div class="line"> {</div>
 <div class="line">     <span class="keyword">const</span> uint8_t* rowi = M.ptr&lt;uint8_t&gt;(i);</div>
-<div class="line">     <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; I.cols; j++)</div>
+<div class="line">     <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; I.width(); j++)</div>
 <div class="line">         {</div>
 <div class="line">           <span class="comment">//some operation here</span></div>
 <div class="line">         }</div>
