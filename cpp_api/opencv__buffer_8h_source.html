@@ -131,51 +131,53 @@ $(document).ready(function(){initNavTree('opencv__buffer_8h_source.html',''); in
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    cv::Mat ConfidenceImage();</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    cv::Mat XYZImage();</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    cv::Mat JPEGImage();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    template &lt;typename T&gt;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    void <a class="code" href="classifm3d_1_1ByteBuffer.html#aeb79544f5a59af1b17a983b6f1bf45ba">ImCreate</a>(ifm3d::image_chunk im,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                  std::uint32_t fmt,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                  std::size_t idx,</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                  std::uint32_t width,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                  std::uint32_t height,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                  int nchan,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                  std::uint32_t npts,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                  const std::vector&lt;std::uint8_t&gt;&amp; bytes);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    template &lt;typename T&gt;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    void <a class="code" href="classifm3d_1_1ByteBuffer.html#a5594cd7bb84894800d3a16ac2f55bac7">CloudCreate</a>(std::uint32_t fmt,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                     std::size_t xidx,</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                     std::size_t yidx,</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                     std::size_t zidx,</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                     std::uint32_t width,</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                     std::uint32_t height,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                     std::uint32_t npts,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                     const std::vector&lt;std::uint8_t&gt;&amp; bytes);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    cv::Mat dist_;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    cv::Mat uvec_;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    cv::Mat gray_;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    cv::Mat amp_;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    cv::Mat ramp_;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    cv::Mat conf_;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    cv::Mat xyz_;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    cv::Mat jpeg_;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    cv::Mat_&lt;std::uint8_t&gt; bad_; <span class="comment">// bad pixel mask</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }; <span class="comment">// end: class OpenCVBuffer</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#include &lt;ifm3d/opencv/detail/opencv_buffer.hpp&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    cv::Mat DistanceNoiseImage();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    template &lt;typename T&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    void <a class="code" href="classifm3d_1_1ByteBuffer.html#aeb79544f5a59af1b17a983b6f1bf45ba">ImCreate</a>(ifm3d::image_chunk im,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                  std::uint32_t fmt,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                  std::size_t idx,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                  std::uint32_t width,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                  std::uint32_t height,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                  int nchan,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                  std::uint32_t npts,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                  const std::vector&lt;std::uint8_t&gt;&amp; bytes);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    template &lt;typename T&gt;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    void <a class="code" href="classifm3d_1_1ByteBuffer.html#a5594cd7bb84894800d3a16ac2f55bac7">CloudCreate</a>(std::uint32_t fmt,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                     std::size_t xidx,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                     std::size_t yidx,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                     std::size_t zidx,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                     std::uint32_t width,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                     std::uint32_t height,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                     std::uint32_t npts,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                     const std::vector&lt;std::uint8_t&gt;&amp; bytes);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    cv::Mat dist_;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    cv::Mat uvec_;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    cv::Mat gray_;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    cv::Mat amp_;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    cv::Mat ramp_;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    cv::Mat conf_;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    cv::Mat xyz_;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    cv::Mat jpeg_;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    cv::Mat dis_noise_;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    cv::Mat_&lt;std::uint8_t&gt; bad_; <span class="comment">// bad pixel mask</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }; <span class="comment">// end: class OpenCVBuffer</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif // __IFM3D_OPENCV_OPENCV_BUFFER_H__</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#include &lt;ifm3d/opencv/detail/opencv_buffer.hpp&gt;</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif // __IFM3D_OPENCV_OPENCV_BUFFER_H__</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassifm3d_1_1ByteBuffer_html"><div class="ttname"><a href="classifm3d_1_1ByteBuffer.html">ifm3d::ByteBuffer</a></div><div class="ttdef"><b>Definition:</b> byte_buffer.h:226</div></div>
-<div class="ttc" id="aclassifm3d_1_1ByteBuffer_html_aeb79544f5a59af1b17a983b6f1bf45ba"><div class="ttname"><a href="classifm3d_1_1ByteBuffer.html#aeb79544f5a59af1b17a983b6f1bf45ba">ifm3d::ByteBuffer::ImCreate</a></div><div class="ttdeci">void ImCreate(ifm3d::image_chunk im, std::uint32_t fmt, std::size_t idx, std::uint32_t width, std::uint32_t height, int nchan, std::uint32_t npts, const std::vector&lt; std::uint8_t &gt; &amp;bytes)</div><div class="ttdef"><b>Definition:</b> byte_buffer.h:425</div></div>
+<div class="ttc" id="aclassifm3d_1_1ByteBuffer_html"><div class="ttname"><a href="classifm3d_1_1ByteBuffer.html">ifm3d::ByteBuffer</a></div><div class="ttdef"><b>Definition:</b> byte_buffer.h:227</div></div>
+<div class="ttc" id="aclassifm3d_1_1ByteBuffer_html_aeb79544f5a59af1b17a983b6f1bf45ba"><div class="ttname"><a href="classifm3d_1_1ByteBuffer.html#aeb79544f5a59af1b17a983b6f1bf45ba">ifm3d::ByteBuffer::ImCreate</a></div><div class="ttdeci">void ImCreate(ifm3d::image_chunk im, std::uint32_t fmt, std::size_t idx, std::uint32_t width, std::uint32_t height, int nchan, std::uint32_t npts, const std::vector&lt; std::uint8_t &gt; &amp;bytes)</div><div class="ttdef"><b>Definition:</b> byte_buffer.h:428</div></div>
 <div class="ttc" id="aclassifm3d_1_1OpenCVBuffer_html"><div class="ttname"><a href="classifm3d_1_1OpenCVBuffer.html">ifm3d::OpenCVBuffer</a></div><div class="ttdef"><b>Definition:</b> opencv_buffer.h:18</div></div>
-<div class="ttc" id="aclassifm3d_1_1ByteBuffer_html_a5594cd7bb84894800d3a16ac2f55bac7"><div class="ttname"><a href="classifm3d_1_1ByteBuffer.html#a5594cd7bb84894800d3a16ac2f55bac7">ifm3d::ByteBuffer::CloudCreate</a></div><div class="ttdeci">void CloudCreate(std::uint32_t fmt, std::size_t xidx, std::size_t yidx, std::size_t zidx, std::uint32_t width, std::uint32_t height, std::uint32_t npts, const std::vector&lt; std::uint8_t &gt; &amp;bytes)</div><div class="ttdef"><b>Definition:</b> byte_buffer.h:468</div></div>
+<div class="ttc" id="aclassifm3d_1_1ByteBuffer_html_a5594cd7bb84894800d3a16ac2f55bac7"><div class="ttname"><a href="classifm3d_1_1ByteBuffer.html#a5594cd7bb84894800d3a16ac2f55bac7">ifm3d::ByteBuffer::CloudCreate</a></div><div class="ttdeci">void CloudCreate(std::uint32_t fmt, std::size_t xidx, std::size_t yidx, std::size_t zidx, std::uint32_t width, std::uint32_t height, std::uint32_t npts, const std::vector&lt; std::uint8_t &gt; &amp;bytes)</div><div class="ttdef"><b>Definition:</b> byte_buffer.h:471</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

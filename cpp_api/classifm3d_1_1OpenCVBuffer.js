@@ -9,6 +9,7 @@ var classifm3d_1_1OpenCVBuffer =
     [ "CloudCreate", "classifm3d_1_1OpenCVBuffer.html#a0a2d43ddde00ce2c9c67dbb9e1067d19", null ],
     [ "ConfidenceImage", "classifm3d_1_1OpenCVBuffer.html#ad915a3df2f8f33d78796907a27570fbd", null ],
     [ "DistanceImage", "classifm3d_1_1OpenCVBuffer.html#a61e0553e3da65b05906aa68137a6a010", null ],
+    [ "DistanceNoiseImage", "classifm3d_1_1OpenCVBuffer.html#a5d830574dc59270ef83c3a9534bc7caf", null ],
     [ "GrayImage", "classifm3d_1_1OpenCVBuffer.html#a01865073d9c2845afe75150716fdc5e0", null ],
     [ "ImCreate", "classifm3d_1_1OpenCVBuffer.html#aeac293cdf416bf567ee971b9fbe700a9", null ],
     [ "JPEGImage", "classifm3d_1_1OpenCVBuffer.html#a77bdfad1e01684c39ea77832a6ad6f31", null ],

@@ -198,7 +198,7 @@ be built:</p>
 <span class="n">cd</span> <span class="o">%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>\<span class="n">xmlrpc</span><span class="o">-</span><span class="n">c</span>
 <span class="n">mkdir</span> <span class="n">build</span>
 <span class="n">cd</span> <span class="n">build</span>
-<span class="n">cmake</span> <span class="o">-</span><span class="n">G</span> <span class="o">%</span><span class="n">IFM3D_CMAKE_GENERATOR</span><span class="o">%</span> <span class="o">-</span><span class="n">DCMAKE_INSTALL_PREFIX</span><span class="o">=%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>\<span class="n">install</span> <span class="o">..</span>
+<span class="n">cmake</span> <span class="o">-</span><span class="n">G</span> <span class="o">%</span><span class="n">IFM3D_CMAKE_GENERATOR</span><span class="o">%</span> <span class="o">-</span><span class="n">DBUILD_SHARED_LIBS</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DCMAKE_INSTALL_PREFIX</span><span class="o">=%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>\<span class="n">install</span> <span class="o">..</span>
 <span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">clean</span><span class="o">-</span><span class="n">first</span> <span class="o">--</span><span class="n">config</span> <span class="o">%</span><span class="n">CONFIG</span><span class="o">%</span> <span class="o">--</span><span class="n">target</span> <span class="n">INSTALL</span>
 </pre></div>
 </div>
