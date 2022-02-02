@@ -9,5 +9,6 @@ var dir_ed895fb73aef646ab87dafa9a8904df8 =
     [ "err.h", "err_8h_source.html", null ],
     [ "ifm_network_device.h", "ifm__network__device_8h_source.html", null ],
     [ "logging.h", "logging_8h_source.html", null ],
+    [ "semver.h", "semver_8h_source.html", null ],
     [ "util.h", "util_8h_source.html", null ]
 ];
