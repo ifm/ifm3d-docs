@@ -132,69 +132,66 @@ $(document).ready(function(){initNavTree('semver_8h_source.html',''); initResiza
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keywordflow">return</span> major_num &lt; rhs.major_num ||</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;             (major_num == rhs.major_num &amp;&amp;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;              (minor_num &lt; rhs.minor_num ||</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;               (minor_num == rhs.minor_num &amp;&amp;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                (patch_num &lt; rhs.patch_num ||</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                 (patch_num == rhs.patch_num &amp;&amp; prerelease.has_value() &amp;&amp;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                  !(rhs.prerelease.has_value()))))));</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    constexpr <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    operator==(<span class="keyword">const</span> <a class="code" href="structifm3d_1_1SemVer.html">SemVer</a>&amp; rhs)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keywordflow">return</span> ((major_num == rhs.major_num) &amp;&amp; (minor_num == rhs.minor_num) &amp;&amp;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;              (patch_num == rhs.patch_num) &amp;&amp; (prerelease == rhs.prerelease) &amp;&amp;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;              (build_meta == rhs.build_meta));</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    constexpr <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    operator!=(<span class="keyword">const</span> <a class="code" href="structifm3d_1_1SemVer.html">SemVer</a>&amp; rhs)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="keywordflow">return</span> !(*<span class="keyword">this</span> == rhs);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    constexpr <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    operator&gt;=(<span class="keyword">const</span> <a class="code" href="structifm3d_1_1SemVer.html">SemVer</a>&amp; rhs)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keywordflow">return</span> !(*<span class="keyword">this</span> &lt; rhs);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    constexpr <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    operator&gt;(<span class="keyword">const</span> <a class="code" href="structifm3d_1_1SemVer.html">SemVer</a>&amp; rhs)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keywordflow">return</span> rhs &lt; *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    constexpr <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    operator&lt;=(<span class="keyword">const</span> <a class="code" href="structifm3d_1_1SemVer.html">SemVer</a>&amp; rhs)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordflow">return</span> !(rhs &lt; *<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">/* To support fmt ostream */</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">friend</span> std::ostream&amp;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    operator&lt;&lt;(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="structifm3d_1_1SemVer.html">SemVer</a>&amp; version)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      os &lt;&lt; version.major_num &lt;&lt; <span class="charliteral">&#39;.&#39;</span> &lt;&lt; version.minor_num &lt;&lt; <span class="charliteral">&#39;.&#39;</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;         &lt;&lt; version.patch_num;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <span class="keywordflow">if</span> (version.prerelease.has_value())</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;          os &lt;&lt; <span class="charliteral">&#39;-&#39;</span> &lt;&lt; version.prerelease.value();</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <span class="keywordflow">if</span> (version.build_meta.has_value())</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;          os &lt;&lt; <span class="charliteral">&#39;+&#39;</span> &lt;&lt; version.build_meta.value();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;               (minor_num == rhs.minor_num &amp;&amp; (patch_num &lt; rhs.patch_num))));</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    constexpr <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    operator==(<span class="keyword">const</span> <a class="code" href="structifm3d_1_1SemVer.html">SemVer</a>&amp; rhs)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keywordflow">return</span> ((major_num == rhs.major_num) &amp;&amp; (minor_num == rhs.minor_num) &amp;&amp;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;              (patch_num == rhs.patch_num) &amp;&amp; (prerelease == rhs.prerelease) &amp;&amp;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;              (build_meta == rhs.build_meta));</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    constexpr <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    operator!=(<span class="keyword">const</span> <a class="code" href="structifm3d_1_1SemVer.html">SemVer</a>&amp; rhs)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <span class="keywordflow">return</span> !(*<span class="keyword">this</span> == rhs);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    constexpr <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    operator&gt;=(<span class="keyword">const</span> <a class="code" href="structifm3d_1_1SemVer.html">SemVer</a>&amp; rhs)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keywordflow">return</span> !(*<span class="keyword">this</span> &lt; rhs);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    constexpr <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    operator&gt;(<span class="keyword">const</span> <a class="code" href="structifm3d_1_1SemVer.html">SemVer</a>&amp; rhs)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keywordflow">return</span> rhs &lt; *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    constexpr <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    operator&lt;=(<span class="keyword">const</span> <a class="code" href="structifm3d_1_1SemVer.html">SemVer</a>&amp; rhs)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keywordflow">return</span> !(rhs &lt; *<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">/* To support fmt ostream */</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">friend</span> std::ostream&amp;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    operator&lt;&lt;(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="structifm3d_1_1SemVer.html">SemVer</a>&amp; version)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      os &lt;&lt; version.major_num &lt;&lt; <span class="charliteral">&#39;.&#39;</span> &lt;&lt; version.minor_num &lt;&lt; <span class="charliteral">&#39;.&#39;</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;         &lt;&lt; version.patch_num;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keywordflow">if</span> (version.prerelease.has_value())</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;          os &lt;&lt; <span class="charliteral">&#39;-&#39;</span> &lt;&lt; version.prerelease.value();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <span class="keywordflow">if</span> (version.build_meta.has_value())</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;          os &lt;&lt; <span class="charliteral">&#39;+&#39;</span> &lt;&lt; version.build_meta.value();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      <span class="keywordflow">return</span> os;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="keywordflow">return</span> os;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">static</span> std::optional&lt;SemVer&gt; Parse(<span class="keyword">const</span> std::string&amp; version_string);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  };</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#endif // IFM3D_CAMERA_SEMVER_H</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">static</span> std::optional&lt;SemVer&gt; Parse(<span class="keyword">const</span> std::string&amp; version_string);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  };</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#endif // IFM3D_CAMERA_SEMVER_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="astructifm3d_1_1SemVer_html"><div class="ttname"><a href="structifm3d_1_1SemVer.html">ifm3d::SemVer</a></div><div class="ttdef"><b>Definition:</b> semver.h:17</div></div>
