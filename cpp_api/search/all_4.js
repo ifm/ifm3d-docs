@@ -10,5 +10,5 @@ var searchData=
   ['dirty_5f_33',['dirty_',['../classifm3d_1_1ByteBuffer.html#a3e01fe2938a5ee313c70de5ae31c70f0',1,'ifm3d::ByteBuffer']]],
   ['distanceimage_34',['DistanceImage',['../classifm3d_1_1ImageBuffer.html#a1c6320a3a8fae80a79aa3ee4e09e52fb',1,'ifm3d::ImageBuffer::DistanceImage()'],['../classifm3d_1_1StlImageBuffer.html#a23ebf53b7629cf21417104969ab7ab37',1,'ifm3d::StlImageBuffer::DistanceImage()']]],
   ['distanceimageinfo_35',['DistanceImageInfo',['../classifm3d_1_1DistanceImageInfo.html',1,'ifm3d']]],
-  ['distancenoiseimage_36',['DistanceNoiseImage',['../classifm3d_1_1ImageBuffer.html#a46abd1171b6abe0583865b0fa9a8b9e3',1,'ifm3d::ImageBuffer']]]
+  ['distancenoiseimage_36',['DistanceNoiseImage',['../classifm3d_1_1ImageBuffer.html#a46abd1171b6abe0583865b0fa9a8b9e3',1,'ifm3d::ImageBuffer::DistanceNoiseImage()'],['../classifm3d_1_1StlImageBuffer.html#a475b4087dd037593bd406ecedcccebef',1,'ifm3d::StlImageBuffer::DistanceNoiseImage()']]]
 ];

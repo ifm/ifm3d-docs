@@ -7,5 +7,5 @@ var searchData=
   ['devicetype_202',['DeviceType',['../classifm3d_1_1CameraBase.html#a4a0bdca9b23ca96cad3915cb6720d17d',1,'ifm3d::CameraBase']]],
   ['dirty_203',['Dirty',['../classifm3d_1_1ByteBuffer.html#a4e93589d149d669063741b008b1d073a',1,'ifm3d::ByteBuffer']]],
   ['distanceimage_204',['DistanceImage',['../classifm3d_1_1ImageBuffer.html#a1c6320a3a8fae80a79aa3ee4e09e52fb',1,'ifm3d::ImageBuffer::DistanceImage()'],['../classifm3d_1_1StlImageBuffer.html#a23ebf53b7629cf21417104969ab7ab37',1,'ifm3d::StlImageBuffer::DistanceImage()']]],
-  ['distancenoiseimage_205',['DistanceNoiseImage',['../classifm3d_1_1ImageBuffer.html#a46abd1171b6abe0583865b0fa9a8b9e3',1,'ifm3d::ImageBuffer']]]
+  ['distancenoiseimage_205',['DistanceNoiseImage',['../classifm3d_1_1ImageBuffer.html#a46abd1171b6abe0583865b0fa9a8b9e3',1,'ifm3d::ImageBuffer::DistanceNoiseImage()'],['../classifm3d_1_1StlImageBuffer.html#a475b4087dd037593bd406ecedcccebef',1,'ifm3d::StlImageBuffer::DistanceNoiseImage()']]]
 ];

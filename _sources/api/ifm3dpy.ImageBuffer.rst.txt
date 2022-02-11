@@ -13,6 +13,7 @@ ImageBuffer
       ~ImageBuffer.amplitude_image
       ~ImageBuffer.confidence_image
       ~ImageBuffer.distance_image
+      ~ImageBuffer.distance_noise_image
       ~ImageBuffer.exposure_times
       ~ImageBuffer.extrinsics
       ~ImageBuffer.gray_image
@@ -32,6 +33,7 @@ ImageBuffer
    .. automethod:: amplitude_image
    .. automethod:: confidence_image
    .. automethod:: distance_image
+   .. automethod:: distance_noise_image
    .. automethod:: exposure_times
    .. automethod:: extrinsics
    .. automethod:: gray_image

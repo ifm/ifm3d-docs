@@ -9,6 +9,7 @@ var classifm3d_1_1StlImageBuffer =
     [ "CloudCreate", "classifm3d_1_1StlImageBuffer.html#af1864b906cb7c0d45c7b69574916b3d7", null ],
     [ "ConfidenceImage", "classifm3d_1_1StlImageBuffer.html#a00c33562f6ca648fd5688035dd56283c", null ],
     [ "DistanceImage", "classifm3d_1_1StlImageBuffer.html#a23ebf53b7629cf21417104969ab7ab37", null ],
+    [ "DistanceNoiseImage", "classifm3d_1_1StlImageBuffer.html#a475b4087dd037593bd406ecedcccebef", null ],
     [ "GrayImage", "classifm3d_1_1StlImageBuffer.html#a3ac75f897293b4acf30c3803a1726db0", null ],
     [ "ImCreate", "classifm3d_1_1StlImageBuffer.html#a2b48fb75767b946d885811d69e60cf4d", null ],
     [ "JPEGImage", "classifm3d_1_1StlImageBuffer.html#a5100a6322c8b938ff4db0137e09ee931", null ],
