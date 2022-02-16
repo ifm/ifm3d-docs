@@ -31,6 +31,7 @@ var hierarchy =
     [ "ifm3d::IteratorAdapter< T >", "classifm3d_1_1IteratorAdapter.html", null ],
     [ "ifm3d::PCICClient", "classifm3d_1_1PCICClient.html", null ],
     [ "ifm3d::point< T, n >", "structifm3d_1_1point.html", null ],
+    [ "ifm3d::PortInfo", "structifm3d_1_1PortInfo.html", null ],
     [ "ifm3d::SemVer", "structifm3d_1_1SemVer.html", null ],
     [ "ifm3d::SWUpdater", "classifm3d_1_1SWUpdater.html", null ]
 ];

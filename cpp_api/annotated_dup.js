@@ -19,6 +19,7 @@ var annotated_dup =
       [ "OpenCVBuffer", "classifm3d_1_1OpenCVBuffer.html", "classifm3d_1_1OpenCVBuffer" ],
       [ "PCICClient", "classifm3d_1_1PCICClient.html", "classifm3d_1_1PCICClient" ],
       [ "point", "structifm3d_1_1point.html", "structifm3d_1_1point" ],
+      [ "PortInfo", "structifm3d_1_1PortInfo.html", "structifm3d_1_1PortInfo" ],
       [ "SemVer", "structifm3d_1_1SemVer.html", "structifm3d_1_1SemVer" ],
       [ "StlImageBuffer", "classifm3d_1_1StlImageBuffer.html", "classifm3d_1_1StlImageBuffer" ],
       [ "SWUpdater", "classifm3d_1_1SWUpdater.html", "classifm3d_1_1SWUpdater" ]

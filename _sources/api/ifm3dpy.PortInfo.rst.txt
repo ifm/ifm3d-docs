@@ -1,0 +1,21 @@
+PortInfo
+========
+
+.. currentmodule:: ifm3dpy
+
+.. autoclass:: PortInfo
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~PortInfo.pcic_port
+      ~PortInfo.port
+      ~PortInfo.type
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: pcic_port
+   .. autoattribute:: port
+   .. autoattribute:: type

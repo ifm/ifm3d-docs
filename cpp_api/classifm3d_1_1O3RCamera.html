@@ -182,6 +182,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a49e36cb8582d36d471b0e5ae338274c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a275baae3de9789e6b04eb8202def49b7"><td class="memItemLeft" align="right" valign="top">json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3RCamera.html#a275baae3de9789e6b04eb8202def49b7">Get</a> (const std::vector&lt; std::string &gt; &amp;path=std::vector&lt; std::string &gt;())</td></tr>
 <tr class="separator:a275baae3de9789e6b04eb8202def49b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e015760df7ddaa90322501102792aff"><td class="memItemLeft" align="right" valign="top">json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3RCamera.html#a6e015760df7ddaa90322501102792aff">ResolveConfig</a> (const json::json_pointer &amp;ptr)</td></tr>
+<tr class="separator:a6e015760df7ddaa90322501102792aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5dd2b6528e1de94c79b2acbfe4e622fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3RCamera.html#a5dd2b6528e1de94c79b2acbfe4e622fd">Set</a> (const json &amp;j)</td></tr>
 <tr class="separator:a5dd2b6528e1de94c79b2acbfe4e622fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ac6936e1dda449dd583fe4f7859063c"><td class="memItemLeft" align="right" valign="top">json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3RCamera.html#a5ac6936e1dda449dd583fe4f7859063c">GetInit</a> ()</td></tr>
@@ -194,6 +196,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a86f918d774e9939cb0501c1377725e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab83a8ea7f46e3cb8dde2efc8a25ee5e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3RCamera.html#ab83a8ea7f46e3cb8dde2efc8a25ee5e3">Unlock</a> (const std::string &amp;password)</td></tr>
 <tr class="separator:ab83a8ea7f46e3cb8dde2efc8a25ee5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a904c9fca577f3a7f479729fb7328eded"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structifm3d_1_1PortInfo.html">PortInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3RCamera.html#a904c9fca577f3a7f479729fb7328eded">Ports</a> ()</td></tr>
+<tr class="separator:a904c9fca577f3a7f479729fb7328eded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a823aead477539ac53244f6509654688c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structifm3d_1_1PortInfo.html">PortInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3RCamera.html#a823aead477539ac53244f6509654688c">Port</a> (const std::string &amp;port)</td></tr>
+<tr class="separator:a823aead477539ac53244f6509654688c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1d1062a69ac73c8fb0a60200bda22a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3RCamera.html#ad1d1062a69ac73c8fb0a60200bda22a9">Reboot</a> (const <a class="el" href="classifm3d_1_1CameraBase.html#a1d5f216e9ca6faee38b460815bc63dff">boot_mode</a> &amp;mode=ifm3d::CameraBase::boot_mode::PRODUCTIVE) override</td></tr>
 <tr class="separator:ad1d1062a69ac73c8fb0a60200bda22a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a234bb3fd3eb24988137cb2b2abd9af0e"><td class="memItemLeft" align="right" valign="top">device_family&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3RCamera.html#a234bb3fd3eb24988137cb2b2abd9af0e">WhoAmI</a> () override</td></tr>
@@ -449,10 +455,55 @@ std::unique_ptr&lt; Impl &gt;&#160;</td><td class="memItemRight" valign="bottom"
 <p>Release the lock from the Device</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">the</td><td>password used to unlock the device </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">password</td><td>the password used to unlock the device </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a823aead477539ac53244f6509654688c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a823aead477539ac53244f6509654688c">&#9670;&nbsp;</a></span>Port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structifm3d_1_1PortInfo.html">PortInfo</a> ifm3d::O3RCamera::Port </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>port</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns information about a given physical port</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">port</td><td>the port for which to get the information</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the port information </dd></dl>
+
+</div>
+</div>
+<a id="a904c9fca577f3a7f479729fb7328eded"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a904c9fca577f3a7f479729fb7328eded">&#9670;&nbsp;</a></span>Ports()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structifm3d_1_1PortInfo.html">PortInfo</a>&gt; ifm3d::O3RCamera::Ports </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns a list containing information about all connected physical ports</p>
+<dl class="section return"><dt>Returns</dt><dd>the list of ports </dd></dl>
 
 </div>
 </div>
@@ -494,6 +545,32 @@ std::unique_ptr&lt; Impl &gt;&#160;</td><td class="memItemRight" valign="bottom"
 </dl>
 
 <p>Reimplemented from <a class="el" href="classifm3d_1_1CameraBase.html#ab13cabb353b1eb394bbf6790a8402d44">ifm3d::CameraBase</a>.</p>
+
+</div>
+</div>
+<a id="a6e015760df7ddaa90322501102792aff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e015760df7ddaa90322501102792aff">&#9670;&nbsp;</a></span>ResolveConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">json ifm3d::O3RCamera::ResolveConfig </td>
+          <td>(</td>
+          <td class="paramtype">const json::json_pointer &amp;&#160;</td>
+          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns a part of the configuration formatted as JSON based on a JSON pointer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>A JSON pointer to retrieve the information for</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The partial JSON configuration for the given JSON pointer </dd></dl>
 
 </div>
 </div>
@@ -626,7 +703,7 @@ std::unique_ptr&lt; Impl &gt;&#160;</td><td class="memItemRight" valign="bottom"
 <p>Locks the device until it is unlocked. If the device is unlocked and an empty password is provided the password protection is removed.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">the</td><td>password used to lock the device </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">password</td><td>the password used to lock the device </td></tr>
   </table>
   </dd>
 </dl>

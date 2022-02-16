@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>run &mdash; ifm3d  documentation</title>
+  <title>PortInfo &mdash; ifm3d  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Camera" href="ifm3dpy.Camera.html" />
-    <link rel="prev" title="Python API Reference" href="../python_api.html" /> 
+    <link rel="next" title="C++ API Reference" href="../cpp_api/annotated.html" />
+    <link rel="prev" title="O3RCamera" href="ifm3dpy.O3RCamera.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,13 +42,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../content/installation_instructions.html">Installation instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cli_link.html">Command Line tool</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../python_api.html">Python API</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.run.html">run</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.Camera.html">Camera</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.CameraBase.html">CameraBase</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.FrameGrabber.html">FrameGrabber</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.ImageBuffer.html">ImageBuffer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.O3RCamera.html">O3RCamera</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.PortInfo.html">PortInfo</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">PortInfo</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../cpp_api/annotated.html">C++ API</a></li>
@@ -69,9 +69,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../python_api.html">Python API Reference</a> &raquo;</li>
-      <li>run</li>
+      <li>PortInfo</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/api/ifm3dpy.run.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/api/ifm3dpy.PortInfo.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -79,21 +79,46 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="run">
-<h1>run<a class="headerlink" href="#run" title="Permalink to this headline"></a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="ifm3dpy.run">
-<span class="sig-prename descclassname"><span class="pre">ifm3dpy.</span></span><span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ifm3dpy.run" title="Permalink to this definition"></a></dt>
-<dd><p>This function provides python application interface to run command line tool</p>
-<dl class="simple">
-<dt>argv<span class="classifier">py::list</span></dt><dd><p>command line parameter in the list. e.g. to call a ‘ls’ command
-[‘ls’, ‘–ip=192.168.0.69’]</p>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Tuple(int,string): py::tuple(int,string)</dt><dd><p>execution state and output string.</p>
-</dd>
-</dl>
+  <div class="section" id="portinfo">
+<h1>PortInfo<a class="headerlink" href="#portinfo" title="Permalink to this headline"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ifm3dpy.PortInfo">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ifm3dpy.</span></span><span class="sig-name descname"><span class="pre">PortInfo</span></span><a class="headerlink" href="#ifm3dpy.PortInfo" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<p class="rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.PortInfo.pcic_port" title="ifm3dpy.PortInfo.pcic_port"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcic_port</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.PortInfo.port" title="ifm3dpy.PortInfo.port"><code class="xref py py-obj docutils literal notranslate"><span class="pre">port</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.PortInfo.type" title="ifm3dpy.PortInfo.type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes Documentation</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.PortInfo.pcic_port">
+<span class="sig-name descname"><span class="pre">pcic_port</span></span><a class="headerlink" href="#ifm3dpy.PortInfo.pcic_port" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.PortInfo.port">
+<span class="sig-name descname"><span class="pre">port</span></span><a class="headerlink" href="#ifm3dpy.PortInfo.port" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.PortInfo.type">
+<span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#ifm3dpy.PortInfo.type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 </div>
@@ -102,8 +127,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../python_api.html" class="btn btn-neutral float-left" title="Python API Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ifm3dpy.Camera.html" class="btn btn-neutral float-right" title="Camera" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ifm3dpy.O3RCamera.html" class="btn btn-neutral float-left" title="O3RCamera" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../cpp_api/annotated.html" class="btn btn-neutral float-right" title="C++ API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

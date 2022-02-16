@@ -16,6 +16,9 @@ O3RCamera
       ~O3RCamera.get_init_status
       ~O3RCamera.get_schema
       ~O3RCamera.lock
+      ~O3RCamera.port
+      ~O3RCamera.ports
+      ~O3RCamera.resolve_config
       ~O3RCamera.save_init
       ~O3RCamera.set
       ~O3RCamera.unlock
@@ -28,6 +31,9 @@ O3RCamera
    .. automethod:: get_init_status
    .. automethod:: get_schema
    .. automethod:: lock
+   .. automethod:: port
+   .. automethod:: ports
+   .. automethod:: resolve_config
    .. automethod:: save_init
    .. automethod:: set
    .. automethod:: unlock
