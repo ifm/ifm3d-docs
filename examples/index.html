@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>run &mdash; ifm3d  documentation</title>
+  <title>Basic Library Usage &mdash; ifm3d  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -18,9 +18,7 @@
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Camera" href="ifm3dpy.Camera.html" />
-    <link rel="prev" title="Python API Reference" href="../python_api.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,19 +36,10 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../content/installation_instructions/index.html">Installation instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cli_link.html">Command Line tool</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../python_api.html">Python API</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">run</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.Camera.html">Camera</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.CameraBase.html">CameraBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.FrameGrabber.html">FrameGrabber</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.ImageBuffer.html">ImageBuffer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.O3RCamera.html">O3RCamera</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.PortInfo.html">PortInfo</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../python_api.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cpp_api/annotated.html">C++ API</a></li>
 </ul>
 
@@ -68,10 +57,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../python_api.html">Python API Reference</a> &raquo;</li>
-      <li>run</li>
+      <li>Basic Library Usage</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/api/ifm3dpy.run.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/examples/index.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -79,32 +67,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="run">
-<h1>run<a class="headerlink" href="#run" title="Permalink to this headline"></a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="ifm3dpy.run">
-<span class="sig-prename descclassname"><span class="pre">ifm3dpy.</span></span><span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ifm3dpy.run" title="Permalink to this definition"></a></dt>
-<dd><p>This function provides python application interface to run command line tool</p>
-<dl class="simple">
-<dt>argv<span class="classifier">py::list</span></dt><dd><p>command line parameter in the list. e.g. to call a ‘ls’ command
-[‘ls’, ‘–ip=192.168.0.69’]</p>
-</dd>
-</dl>
-<dl class="simple">
-<dt>Tuple(int,string): py::tuple(int,string)</dt><dd><p>execution state and output string.</p>
-</dd>
-</dl>
-</dd></dl>
-
+  <div class="tex2jax_ignore mathjax_ignore section" id="basic-library-usage">
+<h1>Basic Library Usage<a class="headerlink" href="#basic-library-usage" title="Permalink to this headline"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="o3r/configuration/configuration.html">How to: configure the camera</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="o3r/configuration/configuration.html#read-the-current-configuration">Read the current configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="o3r/configuration/configuration.html#write-a-new-configuration">Write a new configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="o3r/configuration/configuration.html#the-full-example">The full example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="o3r/getting_data/getting_data.html">How to: receive an image</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="o3r/getting_data/getting_data.html#o3rcamera-framegrabber-and-stlimagebuffer">O3RCamera, FrameGrabber and StlImageBuffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="o3r/getting_data/getting_data.html#receive-an-image">Receive an image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="o3r/getting_data/getting_data.html#access-the-data">Access the data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="o3r/getting_data/getting_data.html#the-full-example">The full example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="o3r/multi_head/multi_head.html">How to: receive data from multiple heads</a></li>
+</ul>
+</div>
 </div>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../python_api.html" class="btn btn-neutral float-left" title="Python API Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ifm3dpy.Camera.html" class="btn btn-neutral float-right" title="Camera" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 
