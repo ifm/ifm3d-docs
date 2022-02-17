@@ -151,13 +151,15 @@ var NAVTREEINDEX0 =
 "classifm3d_1_1CameraBase.html#af4d236de8f20538c135ca5942d756c6baf2c5f7ea4bb11bc579158954bcd7136c":[1,0,0,2,9,0],
 "classifm3d_1_1DistanceImageInfo.html":[1,0,0,3],
 "classifm3d_1_1DistanceImageInfo.html#a0265e2e564650c8e86c6e01e13136480":[1,0,0,3,2],
-"classifm3d_1_1DistanceImageInfo.html#a12dd188547fcda83e76d2369175df2ce":[1,0,0,3,5],
+"classifm3d_1_1DistanceImageInfo.html#a12dd188547fcda83e76d2369175df2ce":[1,0,0,3,7],
 "classifm3d_1_1DistanceImageInfo.html#a4d91486c29d6c5fe492ebb18a94b6807":[1,0,0,3,3],
 "classifm3d_1_1DistanceImageInfo.html#a5efa034a8928a21024dce44e27fe3c82":[1,0,0,3,4],
-"classifm3d_1_1DistanceImageInfo.html#a71f2858f8d88ba7afd221e39c64b2481":[1,0,0,3,7],
+"classifm3d_1_1DistanceImageInfo.html#a6ea37cd4a82d559efc22baeff1ab8467":[1,0,0,3,6],
+"classifm3d_1_1DistanceImageInfo.html#a71f2858f8d88ba7afd221e39c64b2481":[1,0,0,3,9],
 "classifm3d_1_1DistanceImageInfo.html#a7872ea06b2cb91b12d0dd2dace6f7c50":[1,0,0,3,0],
+"classifm3d_1_1DistanceImageInfo.html#ae312f98ffd08d5fd81227b967e1c873c":[1,0,0,3,5],
 "classifm3d_1_1DistanceImageInfo.html#aef79ca995bcfb1324e4323c35b162eaf":[1,0,0,3,1],
-"classifm3d_1_1DistanceImageInfo.html#af68ce9aa879ed3ab06de1ce7f1987288":[1,0,0,3,6],
+"classifm3d_1_1DistanceImageInfo.html#af68ce9aa879ed3ab06de1ce7f1987288":[1,0,0,3,8],
 "classifm3d_1_1FrameGrabber.html":[1,0,0,5],
 "classifm3d_1_1FrameGrabber.html#a37e8d692b7cb118b374cb98fad80f696":[1,0,0,5,6],
 "classifm3d_1_1FrameGrabber.html#a41a544aec91f9490e5df655ef0793a42":[1,0,0,5,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "classifm3d_1_1Image__.html#abb516c6428658605f2914a0b1012cdb8":[1,0,0,8,6],
 "classifm3d_1_1Image__.html#ad5e4b3ae3fa97ba08ebdb690592d76d9":[1,0,0,8,1],
 "classifm3d_1_1Image__.html#afee6deea0450dcb9e87d8a1d85daaed6":[1,0,0,8,13],
-"classifm3d_1_1IteratorAdapter.html":[1,0,0,11],
-"classifm3d_1_1IteratorAdapter.html#a5bdcf1f7241d9643e8fec5d3dc9f08c8":[1,0,0,11,1],
-"classifm3d_1_1IteratorAdapter.html#aafc11d2eac22da378b4704e79f3de613":[1,0,0,11,2]
+"classifm3d_1_1IteratorAdapter.html":[1,0,0,11]
 };

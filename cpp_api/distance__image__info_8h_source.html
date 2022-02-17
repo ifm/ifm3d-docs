@@ -153,38 +153,50 @@ $(document).ready(function(){initNavTree('distance__image__info_8h_source.html',
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordflow">return</span> extrinsic_optic_to_user;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">auto</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    getNPTS()</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keywordflow">return</span> (width * height);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    std::vector&lt;uint64_t&gt;</div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classifm3d_1_1DistanceImageInfo.html#af68ce9aa879ed3ab06de1ce7f1987288">   77</a></span>&#160;    <a class="code" href="classifm3d_1_1DistanceImageInfo.html#af68ce9aa879ed3ab06de1ce7f1987288">getTimestamps</a>()</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keywordflow">return</span> timestamps_nsec;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    std::vector&lt;float&gt;</div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classifm3d_1_1DistanceImageInfo.html#a4d91486c29d6c5fe492ebb18a94b6807">   87</a></span>&#160;    <a class="code" href="classifm3d_1_1DistanceImageInfo.html#a4d91486c29d6c5fe492ebb18a94b6807">getExposureTimes</a>()</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <span class="keywordflow">return</span> exposure_times_sec;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  };</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keyword">using</span> DistanceImageInfoPtr = std::unique_ptr&lt;DistanceImageInfo&gt;;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  DistanceImageInfoPtr CreateDistanceImageInfo(</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">const</span> std::vector&lt;std::uint8_t&gt;&amp; data_buffer,</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">const</span> std::size_t dist_idx,</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">const</span> std::size_t amp_idx,</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">const</span> std::uint32_t width,</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">const</span> std::uint32_t height);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif // IFM3D_DISTANCE_IMAGE_INFO_H</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">auto</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    getIntrinsicCalibration()</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <span class="keywordflow">return</span> intrinsic_calibration;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">auto</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    getInverseIntrinsicCalibration()</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keywordflow">return</span> inverse_intrinsic_calibration;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">auto</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    getNPTS()</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <span class="keywordflow">return</span> (width * height);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    std::vector&lt;uint64_t&gt;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classifm3d_1_1DistanceImageInfo.html#af68ce9aa879ed3ab06de1ce7f1987288">   89</a></span>&#160;    <a class="code" href="classifm3d_1_1DistanceImageInfo.html#af68ce9aa879ed3ab06de1ce7f1987288">getTimestamps</a>()</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <span class="keywordflow">return</span> timestamps_nsec;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    std::vector&lt;float&gt;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classifm3d_1_1DistanceImageInfo.html#a4d91486c29d6c5fe492ebb18a94b6807">   99</a></span>&#160;    <a class="code" href="classifm3d_1_1DistanceImageInfo.html#a4d91486c29d6c5fe492ebb18a94b6807">getExposureTimes</a>()</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="keywordflow">return</span> exposure_times_sec;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  };</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keyword">using</span> DistanceImageInfoPtr = std::unique_ptr&lt;DistanceImageInfo&gt;;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  DistanceImageInfoPtr CreateDistanceImageInfo(</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">const</span> std::vector&lt;std::uint8_t&gt;&amp; data_buffer,</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keyword">const</span> std::size_t dist_idx,</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">const</span> std::size_t amp_idx,</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">const</span> std::uint32_t width,</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">const</span> std::uint32_t height);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#endif // IFM3D_DISTANCE_IMAGE_INFO_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassifm3d_1_1DistanceImageInfo_html_af68ce9aa879ed3ab06de1ce7f1987288"><div class="ttname"><a href="classifm3d_1_1DistanceImageInfo.html#af68ce9aa879ed3ab06de1ce7f1987288">ifm3d::DistanceImageInfo::getTimestamps</a></div><div class="ttdeci">std::vector&lt; uint64_t &gt; getTimestamps()</div><div class="ttdoc">returns the timestamps in nano seconds</div><div class="ttdef"><b>Definition:</b> distance_image_info.h:77</div></div>
-<div class="ttc" id="aclassifm3d_1_1DistanceImageInfo_html_a4d91486c29d6c5fe492ebb18a94b6807"><div class="ttname"><a href="classifm3d_1_1DistanceImageInfo.html#a4d91486c29d6c5fe492ebb18a94b6807">ifm3d::DistanceImageInfo::getExposureTimes</a></div><div class="ttdeci">std::vector&lt; float &gt; getExposureTimes()</div><div class="ttdoc">return the exposure time for each phase data</div><div class="ttdef"><b>Definition:</b> distance_image_info.h:87</div></div>
+<div class="ttc" id="aclassifm3d_1_1DistanceImageInfo_html_af68ce9aa879ed3ab06de1ce7f1987288"><div class="ttname"><a href="classifm3d_1_1DistanceImageInfo.html#af68ce9aa879ed3ab06de1ce7f1987288">ifm3d::DistanceImageInfo::getTimestamps</a></div><div class="ttdeci">std::vector&lt; uint64_t &gt; getTimestamps()</div><div class="ttdoc">returns the timestamps in nano seconds</div><div class="ttdef"><b>Definition:</b> distance_image_info.h:89</div></div>
+<div class="ttc" id="aclassifm3d_1_1DistanceImageInfo_html_a4d91486c29d6c5fe492ebb18a94b6807"><div class="ttname"><a href="classifm3d_1_1DistanceImageInfo.html#a4d91486c29d6c5fe492ebb18a94b6807">ifm3d::DistanceImageInfo::getExposureTimes</a></div><div class="ttdeci">std::vector&lt; float &gt; getExposureTimes()</div><div class="ttdoc">return the exposure time for each phase data</div><div class="ttdef"><b>Definition:</b> distance_image_info.h:99</div></div>
 <div class="ttc" id="aclassifm3d_1_1DistanceImageInfo_html"><div class="ttname"><a href="classifm3d_1_1DistanceImageInfo.html">ifm3d::DistanceImageInfo</a></div><div class="ttdef"><b>Definition:</b> distance_image_info.h:31</div></div>
 <div class="ttc" id="astructifm3d_1_1IntrinsicCalibration_html"><div class="ttname"><a href="structifm3d_1_1IntrinsicCalibration.html">ifm3d::IntrinsicCalibration</a></div><div class="ttdef"><b>Definition:</b> distance_image_info.h:25</div></div>
 <!-- start footer part -->
