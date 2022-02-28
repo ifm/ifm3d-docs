@@ -85,6 +85,87 @@
              
   <div class="section" id="installing-ifm3d-from-source">
 <h1>Installing ifm3d from source<a class="headerlink" href="#installing-ifm3d-from-source" title="Permalink to this headline"></a></h1>
+<div class="section" id="overview-of-the-available-build-flags">
+<h2>Overview of the available build flags<a class="headerlink" href="#overview-of-the-available-build-flags" title="Permalink to this headline"></a></h2>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Flag name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Default value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>BUILD_MODULE_FRAMEGRABBER</p></td>
+<td><p>Build the framegrabber module</p></td>
+<td><p>ON</p></td>
+</tr>
+<tr class="row-odd"><td><p>BUILD_MODULE_STLIMAGE</p></td>
+<td><p>Build the stl image module (Only relies on standard c++ libraries)</p></td>
+<td><p>ON</p></td>
+</tr>
+<tr class="row-even"><td><p>BUILD_MODULE_IMAGE <strong>DEPRECATED</strong></p></td>
+<td><p>Build the image module (Depends on OpenCV and PCL)</p></td>
+<td><p>OFF</p></td>
+</tr>
+<tr class="row-odd"><td><p>BUILD_MODULE_OPENCV <strong>DEPRECATED</strong></p></td>
+<td><p>Build the OpenCV-only image container</p></td>
+<td><p>OFF</p></td>
+</tr>
+<tr class="row-even"><td><p>BUILD_MODULE_TOOLS</p></td>
+<td><p>Build the command-line utility</p></td>
+<td><p>ON</p></td>
+</tr>
+<tr class="row-odd"><td><p>BUILD_IN_DEPS</p></td>
+<td><p>Download and build dependencies</p></td>
+<td><p>ON</p></td>
+</tr>
+<tr class="row-even"><td><p>BUILD_MODULE_PYBIND11</p></td>
+<td><p>Build the ifm3dpy python package (it can also be installed directly through <code class="docutils literal notranslate"><span class="pre">pip</span></code>)</p></td>
+<td><p>OFF</p></td>
+</tr>
+<tr class="row-odd"><td><p>USE_LEGACY_COORDINATES</p></td>
+<td><p>Use the legacy coordinates (ifm3d &lt;= 0.92.x) with swapped axis</p></td>
+<td><p>OFF</p></td>
+</tr>
+<tr class="row-even"><td><p>BUILD_MODULE_SWUPDATER</p></td>
+<td><p>Build the swupdater module</p></td>
+<td><p>ON</p></td>
+</tr>
+<tr class="row-odd"><td><p>BUILD_SDK_PKG</p></td>
+<td><p>Build install packages for development purposes</p></td>
+<td><p>ON</p></td>
+</tr>
+<tr class="row-even"><td><p>FORCE_OPENCV3</p></td>
+<td><p>Force the build to require OpenCV 3</p></td>
+<td><p>OFF</p></td>
+</tr>
+<tr class="row-odd"><td><p>FORCE_OPENCV2</p></td>
+<td><p>Force the build to require OpenCV 2.4</p></td>
+<td><p>OFF</p></td>
+</tr>
+<tr class="row-even"><td><p>BUILD_SHARED_LIBS</p></td>
+<td><p>Build modules as shared libraries</p></td>
+<td><p>ON</p></td>
+</tr>
+<tr class="row-odd"><td><p>BUILD_EXAMPLES</p></td>
+<td><p>Build the examples</p></td>
+<td><p>OFF</p></td>
+</tr>
+<tr class="row-even"><td><p>BUILD_DOC</p></td>
+<td><p>Build documentation</p></td>
+<td><p>OFF</p></td>
+</tr>
+<tr class="row-odd"><td><p>BUILD_TESTS</p></td>
+<td><p>Build unit tests</p></td>
+<td><p>ON</p></td>
+</tr>
+<tr class="row-even"><td><p>BUILD_MODULE_PCICCLIENT</p></td>
+<td><p>Build the pcicclient module</p></td>
+<td><p>OFF</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="build-dependencies">
 <h2>Build Dependencies<a class="headerlink" href="#build-dependencies" title="Permalink to this headline"></a></h2>
 <table>
