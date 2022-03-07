@@ -255,6 +255,9 @@ Above apt-get commands are specific to Debian based systems</p>
 </div>
 <div class="section" id="building-from-source">
 <h2>Building From Source<a class="headerlink" href="#building-from-source" title="Permalink to this headline"></a></h2>
+<p>Start with cloning the code from the ifm3d github repository {{ ‘<span class="xref myst">here</span>’.format(ifm3d_gh_url) }}.</p>
+<p>⚠ The code on the branch {{ ifm3d_main_branch }} is updated nightly and contains the latest changes to the library. It is typically a work in progress.<br />
+⚠ We recommend using tagged versions for your builds, to ensure consistency between builds. The latest tagged version can be found {{ ‘<span class="xref myst">here</span>’.format(ifm3d_latest_tag_url) }}.</p>
 <div class="section" id="the-default-build">
 <h3>The default build<a class="headerlink" href="#the-default-build" title="Permalink to this headline"></a></h3>
 <p>By default, the <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> build enables the <code class="docutils literal notranslate"><span class="pre">camera</span></code>, <code class="docutils literal notranslate"><span class="pre">framegrabber</span></code>, <code class="docutils literal notranslate"><span class="pre">stlimage</span></code>,
@@ -280,7 +283,7 @@ $ sudo cmake --build . --target install
 </pre></div>
 </div>
 <blockquote>
-<div><p>Note: Many <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> users ultimately plan to use this library along with its associated <a class="reference external" href="https://github.com/ifm/ifm3d-ros">ROS wrapper</a>.
+<div><p>Note: Many <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> users ultimately plan to use this library along with its associated <span class="xref myst">ROS wrapper</span>.
 If this is the case, you need to be sure that the version of OpenCV that you link to in both <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> and <code class="docutils literal notranslate"><span class="pre">ifm3d-ros</span></code> are consistent.
 To give you some control over that, the build process allows you to explicitly call out which version of OpenCV you wish to use.
 For example, if you are using OpenCV 2.4, your <code class="docutils literal notranslate"><span class="pre">cmake</span></code> line above should look something like: <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cmake</span> <span class="pre">-DCMAKE_INSTALL_PREFIX=/usr</span> <span class="pre">-DFORCE_OPENCV2=ON</span> <span class="pre">..</span></code>.
