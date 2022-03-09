@@ -140,10 +140,13 @@ schema mask set on the active framegrabber.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.ImageBuffer.timestamp" title="ifm3dpy.ImageBuffer.timestamp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timestamp</span></code></a>(self)</p></td>
 <td><p>Returns the time stamp of the image data.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.ImageBuffer.unit_vectors" title="ifm3dpy.ImageBuffer.unit_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unit_vectors</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.ImageBuffer.timestamps" title="ifm3dpy.ImageBuffer.timestamps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timestamps</span></code></a>(self)</p></td>
+<td><p>Returns the list timestamps of the image data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.ImageBuffer.unit_vectors" title="ifm3dpy.ImageBuffer.unit_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unit_vectors</span></code></a>(self)</p></td>
 <td><p>Retrieves the unit vector image</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.ImageBuffer.xyz_image" title="ifm3dpy.ImageBuffer.xyz_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xyz_image</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.ImageBuffer.xyz_image" title="ifm3dpy.ImageBuffer.xyz_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xyz_image</span></code></a>(self)</p></td>
 <td><p>Retrieves the xyz image (cartesian point cloud)</p></td>
 </tr>
 </tbody>
@@ -332,6 +335,13 @@ frame data are accessed.</p>
 need to make sure your current pcic schema mask have enabled confidence
 data.</p>
 <p>datetime.datetime</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.ImageBuffer.timestamps">
+<span class="sig-name descname"><span class="pre">timestamps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.ImageBuffer" title="ifm3dpy.ImageBuffer"><span class="pre">ifm3dpy.ImageBuffer</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#ifm3dpy.ImageBuffer.timestamps" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the list timestamps of the image data.</p>
+<p>list[datetime.datetime]</p>
 </dd></dl>
 
 <dl class="py method">

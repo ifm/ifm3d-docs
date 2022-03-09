@@ -25,6 +25,7 @@ ImageBuffer
       ~ImageBuffer.organize
       ~ImageBuffer.raw_amplitude_image
       ~ImageBuffer.timestamp
+      ~ImageBuffer.timestamps
       ~ImageBuffer.unit_vectors
       ~ImageBuffer.xyz_image
 
@@ -45,5 +46,6 @@ ImageBuffer
    .. automethod:: organize
    .. automethod:: raw_amplitude_image
    .. automethod:: timestamp
+   .. automethod:: timestamps
    .. automethod:: unit_vectors
    .. automethod:: xyz_image
