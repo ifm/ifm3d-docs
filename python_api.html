@@ -45,10 +45,10 @@
 <li class="toctree-l2"><a class="reference internal" href="api/ifm3dpy.run.html">run</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ifm3dpy.Camera.html">Camera</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ifm3dpy.CameraBase.html">CameraBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/ifm3dpy.Frame.html">Frame</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ifm3dpy.FrameGrabber.html">FrameGrabber</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/ifm3dpy.ImageBuffer.html">ImageBuffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/ifm3dpy.FutureAwaitable__FramePtr.html">FutureAwaitable__FramePtr</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ifm3dpy.O3RCamera.html">O3RCamera</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/ifm3dpy.PortInfo.html">PortInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/ifm3dpy.SWUpdater.html">SWUpdater</a></li>
 </ul>
 </li>
@@ -107,79 +107,40 @@
 <tr class="row-odd"><td><p>DEFAULT_PASSWORD</p></td>
 <td><p>The default password.</p></td>
 </tr>
-<tr class="row-even"><td><p>DEFAULT_SCHEMA_MASK</p></td>
-<td><p>The default pcic schema mask.</p></td>
-</tr>
-<tr class="row-odd"><td><p>IMG_RDIS</p></td>
-<td><p>Pcic schema constant for the radial distance image.</p></td>
-</tr>
-<tr class="row-even"><td><p>IMG_AMP</p></td>
-<td><p>Pcic schema constant for the normalized amplitude image.</p></td>
-</tr>
-<tr class="row-odd"><td><p>IMG_RAMP</p></td>
-<td><p>Pcic schema constant for the raw amplitude image.</p></td>
-</tr>
-<tr class="row-even"><td><p>IMG_CART</p></td>
-<td><p>Pcic schema constant for the cartesian image.</p></td>
-</tr>
-<tr class="row-odd"><td><p>IMG_UVEC</p></td>
-<td><p>Pcic schema constant for the wrapped unit vectors.</p></td>
-</tr>
-<tr class="row-even"><td><p>EXP_TIME</p></td>
-<td><p>Pcic schema constant for the amplitude image.</p></td>
-</tr>
-<tr class="row-odd"><td><p>IMG_GRAY</p></td>
-<td><p>Pcic schema constant for the wrapped ambient light image.</p></td>
-</tr>
-<tr class="row-even"><td><p>ILLU_TEMP</p></td>
-<td><p>Pcic schema constant for the illu temp.</p></td>
-</tr>
-<tr class="row-odd"><td><p>INTR_CAL</p></td>
-<td><p>Pcic schema constant for the intrinsic calibration.</p></td>
-</tr>
-<tr class="row-even"><td><p>INV_INTR_CAL</p></td>
-<td><p>Pcic schema constant for the inverse intrinsic calibration.</p></td>
-</tr>
-<tr class="row-odd"><td><p>JSON_MODEL</p></td>
-<td><p>Pcic schema constant for the json model.</p></td>
-</tr>
-<tr class="row-even"><td><p>IMG_DISTANCE_NOISE</p></td>
-<td><p>Pcic schema constant for the distance noise image.</p></td>
-</tr>
-<tr class="row-odd"><td><p>O3D_TIME_SUPPORT_MAJOR</p></td>
+<tr class="row-even"><td><p>O3D_TIME_SUPPORT_MAJOR</p></td>
 <td><p>Constant for querying for O3D time support.</p></td>
 </tr>
-<tr class="row-even"><td><p>O3D_TIME_SUPPORT_MINOR</p></td>
+<tr class="row-odd"><td><p>O3D_TIME_SUPPORT_MINOR</p></td>
 <td><p>Constant for querying for O3D time support.</p></td>
 </tr>
-<tr class="row-odd"><td><p>O3D_TIME_SUPPORT_PATCH</p></td>
+<tr class="row-even"><td><p>O3D_TIME_SUPPORT_PATCH</p></td>
 <td><p>Constant for querying for O3D time support.</p></td>
 </tr>
-<tr class="row-even"><td><p>O3D_TMP_PARAMS_SUPPORT_MAJOR</p></td>
+<tr class="row-odd"><td><p>O3D_TMP_PARAMS_SUPPORT_MAJOR</p></td>
 <td><p>Constant for querying for O3D temporary parameter support.</p></td>
 </tr>
-<tr class="row-odd"><td><p>O3D_TMP_PARAMS_SUPPORT_MINOR</p></td>
+<tr class="row-even"><td><p>O3D_TMP_PARAMS_SUPPORT_MINOR</p></td>
 <td><p>Constant for querying for O3D temporary parameter support.</p></td>
 </tr>
-<tr class="row-even"><td><p>O3D_TMP_PARAMS_SUPPORT_PATCH</p></td>
+<tr class="row-odd"><td><p>O3D_TMP_PARAMS_SUPPORT_PATCH</p></td>
 <td><p>Constant for querying for O3D temporary parameter support.</p></td>
 </tr>
-<tr class="row-odd"><td><p>O3D_INTRINSIC_PARAM_SUPPORT_MAJOR</p></td>
+<tr class="row-even"><td><p>O3D_INTRINSIC_PARAM_SUPPORT_MAJOR</p></td>
 <td><p>Constant for querying for O3D intrinsic parameter support.</p></td>
 </tr>
-<tr class="row-even"><td><p>O3D_INTRINSIC_PARAM_SUPPORT_MINOR</p></td>
+<tr class="row-odd"><td><p>O3D_INTRINSIC_PARAM_SUPPORT_MINOR</p></td>
 <td><p>Constant for querying for O3D intrinsic parameter support.</p></td>
 </tr>
-<tr class="row-odd"><td><p>O3D_INTRINSIC_PARAM_SUPPORT_PATCH</p></td>
+<tr class="row-even"><td><p>O3D_INTRINSIC_PARAM_SUPPORT_PATCH</p></td>
 <td><p>Constant for querying for O3D intrinsic parameter support.</p></td>
 </tr>
-<tr class="row-even"><td><p>O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_MAJOR</p></td>
+<tr class="row-odd"><td><p>O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_MAJOR</p></td>
 <td><p>Constant for querying for O3D inverse intrinsic parameter support.</p></td>
 </tr>
-<tr class="row-odd"><td><p>O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_MINOR</p></td>
+<tr class="row-even"><td><p>O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_MINOR</p></td>
 <td><p>Constant for querying for O3D inverse intrinsic parameter support.</p></td>
 </tr>
-<tr class="row-even"><td><p>O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_PATCH</p></td>
+<tr class="row-odd"><td><p>O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_PATCH</p></td>
 <td><p>Constant for querying for O3D inverse intrinsic parameter support.</p></td>
 </tr>
 </tbody>
@@ -216,17 +177,17 @@
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Error</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="api/ifm3dpy.FrameGrabber.html#ifm3dpy.FrameGrabber" title="ifm3dpy.FrameGrabber"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FrameGrabber</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="api/ifm3dpy.Frame.html#ifm3dpy.Frame" title="ifm3dpy.Frame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Frame</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/ifm3dpy.FrameGrabber.html#ifm3dpy.FrameGrabber" title="ifm3dpy.FrameGrabber"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FrameGrabber</span></code></a></p></td>
 <td><p>Implements a TCP FrameGrabber connected to a provided Camera</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="api/ifm3dpy.ImageBuffer.html#ifm3dpy.ImageBuffer" title="ifm3dpy.ImageBuffer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ImageBuffer</span></code></a></p></td>
-<td><p>Class which holds a validated image buffer from the sensor that represents a single time-synchronized set of images based on the current schema mask set on the active framegrabber.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="api/ifm3dpy.O3RCamera.html#ifm3dpy.O3RCamera" title="ifm3dpy.O3RCamera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3RCamera</span></code></a></p></td>
-<td><p>Class for managing an instance of an O3R Camera</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="api/ifm3dpy.PortInfo.html#ifm3dpy.PortInfo" title="ifm3dpy.PortInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PortInfo</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="api/ifm3dpy.FutureAwaitable__FramePtr.html#ifm3dpy.FutureAwaitable__FramePtr" title="ifm3dpy.FutureAwaitable__FramePtr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FutureAwaitable__FramePtr</span></code></a></p></td>
 <td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/ifm3dpy.O3RCamera.html#ifm3dpy.O3RCamera" title="ifm3dpy.O3RCamera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3RCamera</span></code></a></p></td>
+<td><p>Class for managing an instance of an O3R Camera</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="api/ifm3dpy.SWUpdater.html#ifm3dpy.SWUpdater" title="ifm3dpy.SWUpdater"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SWUpdater</span></code></a></p></td>
 <td><p>Class for managing an instance of an swupdater</p></td>

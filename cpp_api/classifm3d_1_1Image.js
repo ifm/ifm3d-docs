@@ -7,7 +7,9 @@ var classifm3d_1_1Image =
     [ "Image", "classifm3d_1_1Image.html#a36d50c9d87cd1e8ed5b95b595b01a45f", null ],
     [ "Image", "classifm3d_1_1Image.html#a1c67ab0bf0d47d9f6ee9a5484d4c71fc", null ],
     [ "at", "classifm3d_1_1Image.html#a939f595cf1541390a459a4e7879d7697", null ],
+    [ "at", "classifm3d_1_1Image.html#a121898d4f2b420224b8b3bece2224808", null ],
     [ "at", "classifm3d_1_1Image.html#ab3a3b24a46aaaa57c4c212b0bc841b9d", null ],
+    [ "at", "classifm3d_1_1Image.html#ad03d6015a7b561748bb2f41e3e3832cd", null ],
     [ "begin", "classifm3d_1_1Image.html#a98cda679b6b31e9c1d163407920ae1d5", null ],
     [ "clone", "classifm3d_1_1Image.html#adaa9ff56a926e17831afd38e7ac06bd5", null ],
     [ "create", "classifm3d_1_1Image.html#a38952dd357be729d84c660850bd9be81", null ],
@@ -18,7 +20,9 @@ var classifm3d_1_1Image =
     [ "operator=", "classifm3d_1_1Image.html#ac9c5faa70804ae1ed5cc09f4bfab45f0", null ],
     [ "operator=", "classifm3d_1_1Image.html#acbdb13cddd54fdf95a517df4016386e3", null ],
     [ "ptr", "classifm3d_1_1Image.html#a453b90061ccb05ca514426ad2f9e33c7", null ],
+    [ "ptr", "classifm3d_1_1Image.html#a4976aaa4b1bf6fbaa71ca6925a37616a", null ],
     [ "ptr", "classifm3d_1_1Image.html#af9598aa54286a8c871c9be7d487e6d5f", null ],
-    [ "setTo", "classifm3d_1_1Image.html#a483e3243c06505e3da61fc51cfd15070", null ],
+    [ "ptr", "classifm3d_1_1Image.html#a85b1e50bebbaa01e5af2672b98d2f73e", null ],
+    [ "setTo", "classifm3d_1_1Image.html#af3c9373d78783d020861ab92e677c27d", null ],
     [ "width", "classifm3d_1_1Image.html#ab09414d792dbb7050803e80a66dbcb57", null ]
 ];

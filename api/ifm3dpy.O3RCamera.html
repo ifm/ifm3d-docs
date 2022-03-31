@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="PortInfo" href="ifm3dpy.PortInfo.html" />
-    <link rel="prev" title="ImageBuffer" href="ifm3dpy.ImageBuffer.html" /> 
+    <link rel="next" title="SWUpdater" href="ifm3dpy.SWUpdater.html" />
+    <link rel="prev" title="FutureAwaitable__FramePtr" href="ifm3dpy.FutureAwaitable__FramePtr.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -45,10 +45,10 @@
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.run.html">run</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.Camera.html">Camera</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.CameraBase.html">CameraBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.Frame.html">Frame</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.FrameGrabber.html">FrameGrabber</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.ImageBuffer.html">ImageBuffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.FutureAwaitable__FramePtr.html">FutureAwaitable__FramePtr</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">O3RCamera</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.PortInfo.html">PortInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.SWUpdater.html">SWUpdater</a></li>
 </ul>
 </li>
@@ -112,22 +112,13 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.O3RCamera.lock" title="ifm3dpy.O3RCamera.lock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lock</span></code></a>(self, password)</p></td>
 <td><p>Release the lock from the Device</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.O3RCamera.port" title="ifm3dpy.O3RCamera.port"><code class="xref py py-obj docutils literal notranslate"><span class="pre">port</span></code></a>(self, port)</p></td>
-<td><p>Returns information about a given port</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.O3RCamera.ports" title="ifm3dpy.O3RCamera.ports"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ports</span></code></a>(self)</p></td>
-<td><p>Returns a list containing information about all connected ports</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.O3RCamera.resolve_config" title="ifm3dpy.O3RCamera.resolve_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_config</span></code></a>(self, ptr)</p></td>
-<td><p>Returns a part of the configuration formatted as JSON based on a JSON pointer.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.O3RCamera.save_init" title="ifm3dpy.O3RCamera.save_init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_init</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.O3RCamera.save_init" title="ifm3dpy.O3RCamera.save_init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_init</span></code></a>(self)</p></td>
 <td><p>Save to current temporary JSON configuration as initial JSON configuration</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.O3RCamera.set" title="ifm3dpy.O3RCamera.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(self, json)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.O3RCamera.set" title="ifm3dpy.O3RCamera.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(self, json)</p></td>
 <td><p>Overwrites parts of the temporary JSON configuration which is achieved by merging the provided JSON fragment with the current temporary JSON.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.O3RCamera.unlock" title="ifm3dpy.O3RCamera.unlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unlock</span></code></a>(self, password)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.O3RCamera.unlock" title="ifm3dpy.O3RCamera.unlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unlock</span></code></a>(self, password)</p></td>
 <td><p>Locks the device until it is unlocked.</p></td>
 </tr>
 </tbody>
@@ -196,37 +187,6 @@ If the path is empty, returns the whole configuration.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ifm3dpy.O3RCamera.port">
-<span class="sig-name descname"><span class="pre">port</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.O3RCamera" title="ifm3dpy.O3RCamera"><span class="pre">ifm3dpy.O3RCamera</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ifm3d::PortInfo</span></span></span><a class="headerlink" href="#ifm3dpy.O3RCamera.port" title="Permalink to this definition"></a></dt>
-<dd><p>Returns information about a given port</p>
-<dl class="simple">
-<dt>PortInfo</dt><dd><p>the port information</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="ifm3dpy.O3RCamera.ports">
-<span class="sig-name descname"><span class="pre">ports</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.O3RCamera" title="ifm3dpy.O3RCamera"><span class="pre">ifm3dpy.O3RCamera</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List[ifm3d::PortInfo]</span></span></span><a class="headerlink" href="#ifm3dpy.O3RCamera.ports" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a list containing information about all connected ports</p>
-<dl class="simple">
-<dt>PortInfo</dt><dd><p>the list of ports</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="ifm3dpy.O3RCamera.resolve_config">
-<span class="sig-name descname"><span class="pre">resolve_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.O3RCamera" title="ifm3dpy.O3RCamera"><span class="pre">ifm3dpy.O3RCamera</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ptr</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#ifm3dpy.O3RCamera.resolve_config" title="Permalink to this definition"></a></dt>
-<dd><p>Returns a part of the configuration formatted as JSON based on a
-JSON pointer.</p>
-<dl class="simple">
-<dt>dict</dt><dd><p>The partial JSON configuration for the given JSON pointer</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.O3RCamera.save_init">
 <span class="sig-name descname"><span class="pre">save_init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.O3RCamera" title="ifm3dpy.O3RCamera"><span class="pre">ifm3dpy.O3RCamera</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.O3RCamera.save_init" title="Permalink to this definition"></a></dt>
 <dd><p>Save to current temporary JSON configuration as initial JSON
@@ -264,8 +224,8 @@ protection is removed.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="ifm3dpy.ImageBuffer.html" class="btn btn-neutral float-left" title="ImageBuffer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ifm3dpy.PortInfo.html" class="btn btn-neutral float-right" title="PortInfo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ifm3dpy.FutureAwaitable__FramePtr.html" class="btn btn-neutral float-left" title="FutureAwaitable__FramePtr" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ifm3dpy.SWUpdater.html" class="btn btn-neutral float-right" title="SWUpdater" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

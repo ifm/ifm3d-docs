@@ -86,7 +86,6 @@ $(document).ready(function(){initNavTree('classifm3d_1_1FrameGrabber.html',''); 
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classifm3d_1_1FrameGrabber-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ifm3d::FrameGrabber Class Reference</div>  </div>
@@ -100,11 +99,14 @@ Public Types</h2></td></tr>
 <tr class="memitem:a41a544aec91f9490e5df655ef0793a42"><td class="memItemLeft" align="right" valign="top"><a id="a41a544aec91f9490e5df655ef0793a42"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>Ptr</b> = std::shared_ptr&lt; <a class="el" href="classifm3d_1_1FrameGrabber.html">FrameGrabber</a> &gt;</td></tr>
 <tr class="separator:a41a544aec91f9490e5df655ef0793a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a209971f7d9fc910525cf0bfa858dc947"><td class="memItemLeft" align="right" valign="top"><a id="a209971f7d9fc910525cf0bfa858dc947"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>NewFrameCallback</b> = std::function&lt; void(Frame::Ptr)&gt;</td></tr>
+<tr class="separator:a209971f7d9fc910525cf0bfa858dc947"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aba146fe258d6b238435a7d9e7fab84a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#aba146fe258d6b238435a7d9e7fab84a5">FrameGrabber</a> (ifm3d::CameraBase::Ptr cam, std::uint16_t mask=ifm3d::DEFAULT_SCHEMA_MASK, const std::uint16_t nat_pcic_port=ifm3d::PCIC_PORT)</td></tr>
-<tr class="separator:aba146fe258d6b238435a7d9e7fab84a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31128bc0d5c654254ec5681504a3705b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a31128bc0d5c654254ec5681504a3705b">FrameGrabber</a> (ifm3d::CameraBase::Ptr cam, std::optional&lt; std::uint16_t &gt; pcic_port=std::nullopt)</td></tr>
+<tr class="separator:a31128bc0d5c654254ec5681504a3705b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad0462fed9a5fc30e35f100af2217826"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#aad0462fed9a5fc30e35f100af2217826">~FrameGrabber</a> ()</td></tr>
 <tr class="separator:aad0462fed9a5fc30e35f100af2217826"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf590f2260f4b7cddfa573a63706c16b"><td class="memItemLeft" align="right" valign="top"><a id="abf590f2260f4b7cddfa573a63706c16b"></a>
@@ -121,20 +123,30 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afa616a11d0998001183522e5df9db5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2c5da6f6b74e5eb059e2cc2ddde2b57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#af2c5da6f6b74e5eb059e2cc2ddde2b57">SWTrigger</a> ()</td></tr>
 <tr class="separator:af2c5da6f6b74e5eb059e2cc2ddde2b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae57e62ddffcb97fa21e2dd4161021381"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ae57e62ddffcb97fa21e2dd4161021381"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#ae57e62ddffcb97fa21e2dd4161021381">WaitForFrame</a> (<a class="el" href="classifm3d_1_1ByteBuffer.html">ifm3d::ByteBuffer</a>&lt; T &gt; *buff, long timeout_millis=0, bool copy_buff=false, bool organize=true)</td></tr>
-<tr class="separator:ae57e62ddffcb97fa21e2dd4161021381"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a5b44ebe901ce279d7149f922fc113562"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a5b44ebe901ce279d7149f922fc113562">WaitForFrame</a> (long timeout_millis, std::function&lt; void(std::vector&lt; std::uint8_t &gt; &amp;)&gt; set_bytes)</td></tr>
-<tr class="separator:a5b44ebe901ce279d7149f922fc113562"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad76d616c98cfde74adedb6de34d1793"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#aad76d616c98cfde74adedb6de34d1793">OnNewFrame</a> (NewFrameCallback callback=nullptr)</td></tr>
+<tr class="separator:aad76d616c98cfde74adedb6de34d1793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcc6650f6078973ddb9d24baf0d5103c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#abcc6650f6078973ddb9d24baf0d5103c">Start</a> (const std::set&lt; ImageId &gt; &amp;images={})</td></tr>
+<tr class="separator:abcc6650f6078973ddb9d24baf0d5103c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9cd86d332f48a2fae312eb327bc8a9b"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:ae9cd86d332f48a2fae312eb327bc8a9b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_enum_v&lt; T &gt;, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#ae9cd86d332f48a2fae312eb327bc8a9b">Start</a> (std::set&lt; ImageId &gt; &amp;images, T id, Args... args)</td></tr>
+<tr class="separator:ae9cd86d332f48a2fae312eb327bc8a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4eff3293cdc0166aabc7f25a0024d65"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:ab4eff3293cdc0166aabc7f25a0024d65"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_enum_v&lt; T &gt;, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#ab4eff3293cdc0166aabc7f25a0024d65">Start</a> (T id, Args... args)</td></tr>
+<tr class="separator:ab4eff3293cdc0166aabc7f25a0024d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64a5d1cfd4f5ce826b3fa7daa488c408"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a64a5d1cfd4f5ce826b3fa7daa488c408">Stop</a> ()</td></tr>
+<tr class="separator:a64a5d1cfd4f5ce826b3fa7daa488c408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41863acd226d087671594f47af3b0e32"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a41863acd226d087671594f47af3b0e32">IsRunning</a> ()</td></tr>
+<tr class="separator:a41863acd226d087671594f47af3b0e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8911d6f0a032c9c072f812194ec9bb85"><td class="memItemLeft" align="right" valign="top">std::shared_future&lt; Frame::Ptr &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a8911d6f0a032c9c072f812194ec9bb85">WaitForFrame</a> ()</td></tr>
+<tr class="separator:a8911d6f0a032c9c072f812194ec9bb85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9b7752f418e4f937e31808b4c20c226"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#ad9b7752f418e4f937e31808b4c20c226">SetOrganizer</a> (std::unique_ptr&lt; <a class="el" href="classifm3d_1_1Organizer.html">Organizer</a> &gt; organizer)</td></tr>
+<tr class="separator:ad9b7752f418e4f937e31808b4c20c226"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implements a TCP <a class="el" href="classifm3d_1_1FrameGrabber.html">FrameGrabber</a> connected to the camera passed to its ctor </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aba146fe258d6b238435a7d9e7fab84a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba146fe258d6b238435a7d9e7fab84a5">&#9670;&nbsp;</a></span>FrameGrabber()</h2>
+<a id="a31128bc0d5c654254ec5681504a3705b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31128bc0d5c654254ec5681504a3705b">&#9670;&nbsp;</a></span>FrameGrabber()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -148,14 +160,8 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::uint16_t&#160;</td>
-          <td class="paramname"><em>mask</em> = <code>ifm3d::DEFAULT_SCHEMA_MASK</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::uint16_t&#160;</td>
-          <td class="paramname"><em>nat_pcic_port</em> = <code>ifm3d::PCIC_PORT</code>&#160;</td>
+          <td class="paramtype">std::optional&lt; std::uint16_t &gt;&#160;</td>
+          <td class="paramname"><em>pcic_port</em> = <code>std::nullopt</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -164,12 +170,11 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Stores a reference to the passed in camera shared pointer and starts a worker thread to stream in pixel data from the device.</p>
+<p>Stores a reference to the passed in camera shared pointer</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">cam</td><td>The camera instance to grab frames from </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>A bitmask encoding the image acquisition schema to stream in from the camera. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">nat_pcic_port</td><td>Port for devices behind NAT router, user must provide this value according to there NAT router configuration. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pcic_port</td><td>TCP port for the pcic connection </td></tr>
   </table>
   </dd>
 </dl>
@@ -203,6 +208,207 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a41863acd226d087671594f47af3b0e32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41863acd226d087671594f47af3b0e32">&#9670;&nbsp;</a></span>IsRunning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ifm3d::FrameGrabber::IsRunning </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns true if the worker thread is currently running </p>
+
+</div>
+</div>
+<a id="aad76d616c98cfde74adedb6de34d1793"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad76d616c98cfde74adedb6de34d1793">&#9670;&nbsp;</a></span>OnNewFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ifm3d::FrameGrabber::OnNewFrame </td>
+          <td>(</td>
+          <td class="paramtype">NewFrameCallback&#160;</td>
+          <td class="paramname"><em>callback</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The callback will be executed whenever a new frame is available. It receives a Frame::Ptr to the received frame as an argument. </p>
+
+</div>
+</div>
+<a id="ad9b7752f418e4f937e31808b4c20c226"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9b7752f418e4f937e31808b4c20c226">&#9670;&nbsp;</a></span>SetOrganizer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ifm3d::FrameGrabber::SetOrganizer </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classifm3d_1_1Organizer.html">Organizer</a> &gt;&#160;</td>
+          <td class="paramname"><em>organizer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This allows to override the <a class="el" href="classifm3d_1_1Organizer.html">Organizer</a> which is used for extracting the data from the raw PCIC stream.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">organizer</td><td>The new organizer to be used </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abcc6650f6078973ddb9d24baf0d5103c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcc6650f6078973ddb9d24baf0d5103c">&#9670;&nbsp;</a></span>Start() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ifm3d::FrameGrabber::Start </td>
+          <td>(</td>
+          <td class="paramtype">const std::set&lt; ImageId &gt; &amp;&#160;</td>
+          <td class="paramname"><em>images</em> = <code>{}</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Starts the worker thread for streaming in pixel data from the device</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">images</td><td>set of ImageIds for receiving, passing in an empty set will received all available images. The ImageIds are specific to the current <a class="el" href="classifm3d_1_1Organizer.html">Organizer</a>. See image_id for a list of ImageIds available with the default <a class="el" href="classifm3d_1_1Organizer.html">Organizer</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae9cd86d332f48a2fae312eb327bc8a9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9cd86d332f48a2fae312eb327bc8a9b">&#9670;&nbsp;</a></span>Start() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt;std::is_enum_v&lt;T&gt;, bool&gt; ifm3d::FrameGrabber::Start </td>
+          <td>(</td>
+          <td class="paramtype">std::set&lt; ImageId &gt; &amp;&#160;</td>
+          <td class="paramname"><em>images</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Starts the worker thread for streaming in pixel data from the device</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">images</td><td>set of ImageIds for receiving, passing in an empty set will received all available images. The ImageIds are specific to the current <a class="el" href="classifm3d_1_1Organizer.html">Organizer</a>. See image_id for a list of ImageIds available with the default <a class="el" href="classifm3d_1_1Organizer.html">Organizer</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab4eff3293cdc0166aabc7f25a0024d65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4eff3293cdc0166aabc7f25a0024d65">&#9670;&nbsp;</a></span>Start() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt;std::is_enum_v&lt;T&gt;, bool&gt; ifm3d::FrameGrabber::Start </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Starts the worker thread for streaming in pixel data from the device</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">images</td><td>set of ImageIds for receiving, passing in an empty set will received all available images. The ImageIds are specific to the current <a class="el" href="classifm3d_1_1Organizer.html">Organizer</a>. See image_id for a list of ImageIds available with the default <a class="el" href="classifm3d_1_1Organizer.html">Organizer</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a64a5d1cfd4f5ce826b3fa7daa488c408"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64a5d1cfd4f5ce826b3fa7daa488c408">&#9670;&nbsp;</a></span>Stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ifm3d::FrameGrabber::Stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stops the worker thread for streaming in pixel data from the device </p>
+
+</div>
+</div>
 <a id="af2c5da6f6b74e5eb059e2cc2ddde2b57"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af2c5da6f6b74e5eb059e2cc2ddde2b57">&#9670;&nbsp;</a></span>SWTrigger()</h2>
 
@@ -218,113 +424,26 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Triggers the camera for image acquisition</p>
-<p>You should be sure to set the <code>TriggerMode</code> for your application to <code>SW</code> in order for this to be effective. This function simply does the triggering, data are still received asynchronously via <code><a class="el" href="classifm3d_1_1FrameGrabber.html#ae57e62ddffcb97fa21e2dd4161021381">WaitForFrame()</a></code>.</p>
+<p>You should be sure to set the <code>TriggerMode</code> for your application to <code>SW</code> in order for this to be effective. This function simply does the triggering, data are still received asynchronously via <code><a class="el" href="classifm3d_1_1FrameGrabber.html#a8911d6f0a032c9c072f812194ec9bb85">WaitForFrame()</a></code>.</p>
 <p>Calling this function when the camera is not in <code>SW</code> trigger mode or on a device that does not support software-trigger should result in a NOOP and no error will be returned (no exceptions thrown). However, we do not recommend calling this function in a tight framegrabbing loop when you know it is not needed. The "cost" of the NOOP is undefined and incurring it is not recommended. </p>
 
 </div>
 </div>
-<a id="ae57e62ddffcb97fa21e2dd4161021381"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae57e62ddffcb97fa21e2dd4161021381">&#9670;&nbsp;</a></span>WaitForFrame() <span class="overload">[1/2]</span></h2>
+<a id="a8911d6f0a032c9c072f812194ec9bb85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8911d6f0a032c9c072f812194ec9bb85">&#9670;&nbsp;</a></span>WaitForFrame()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool ifm3d::FrameGrabber::WaitForFrame </td>
+          <td class="memname">std::shared_future&lt;Frame::Ptr&gt; ifm3d::FrameGrabber::WaitForFrame </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classifm3d_1_1ByteBuffer.html">ifm3d::ByteBuffer</a>&lt; T &gt; *&#160;</td>
-          <td class="paramname"><em>buff</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>timeout_millis</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>copy_buff</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>organize</em> = <code>true</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>This function is used to grab and parse out time synchronized image data from the camera. It will call <code>SetBytes</code> on the passed in <code><a class="el" href="classifm3d_1_1ByteBuffer.html">ByteBuffer</a></code> as well as (optionally, but by default) call <code>Organize</code>. Calling <code>Organize</code> is the default behavior so the <code>buff</code> output parameter is assumed to be synchronized and ready for analysis provided this function returns true. In certain applications, it may be a performance enhancement to not call <code>Organize</code> but rather handle that outside of the <code><a class="el" href="classifm3d_1_1FrameGrabber.html">FrameGrabber</a></code>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">buff</td><td>A pointer to an <code><a class="el" href="classifm3d_1_1ByteBuffer.html">ifm3d::ByteBuffer</a>&lt;Dervied&gt;</code> object to update with the latest data from the camera.</td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">timeout_millis</td><td>Timeout in millis to wait for new image data from the <a class="el" href="classifm3d_1_1FrameGrabber.html">FrameGrabber</a>. If <code>timeout_millis</code> is set to 0, this function will block indefinitely. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">copy_buff</td><td>Flag indicating whether the framegrabber's internal buffer should be copied (O(n)) or swapped (O(1)) with the raw bytes of the passed in <code>buff</code>. You should only flag this as <code>true</code> if you are planning to use multiple clients with a single <code><a class="el" href="classifm3d_1_1FrameGrabber.html">FrameGrabber</a></code> &ndash; even then, think carefully before copying data around. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">organize</td><td>Flag indicating whether or not <code>Organize</code> should be called on the <code><a class="el" href="classifm3d_1_1ByteBuffer.html">ByteBuffer</a></code> before returning.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if a new buffer was acquired w/in <code>timeout_millis</code>, false otherwise. </dd></dl>
-
-</div>
-</div>
-<a id="a5b44ebe901ce279d7149f922fc113562"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b44ebe901ce279d7149f922fc113562">&#9670;&nbsp;</a></span>WaitForFrame() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ifm3d::FrameGrabber::WaitForFrame </td>
-          <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>timeout_millis</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::function&lt; void(std::vector&lt; std::uint8_t &gt; &amp;)&gt;&#160;</td>
-          <td class="paramname"><em>set_bytes</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>This is a convenience/wrapper function used to proxy <code>WaitForFrame</code> calls through to the pimpl class w/o requiring the pimpl to know about the <a class="el" href="classifm3d_1_1ByteBuffer.html">ByteBuffer</a> CRTP class hierarchy &ndash; i.e., it operates on a vector of bytes not an <code><a class="el" href="classifm3d_1_1ByteBuffer.html">ifm3d::ByteBuffer</a>&lt;Derived&gt;</code>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">timeout_millis</td><td>Timeout in millis to wait for new image data from the <a class="el" href="classifm3d_1_1FrameGrabber.html">FrameGrabber</a>. If <code>timeout_millis</code> is set to 0, this function will block indefinitely.</td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">set_bytes</td><td>A mutator function that will be called with the latest frame data bytes from the camera. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Returns a future that will resolve when a new frame is available </p>
 
 </div>
 </div>

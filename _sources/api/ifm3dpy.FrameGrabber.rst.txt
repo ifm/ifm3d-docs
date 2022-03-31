@@ -10,12 +10,16 @@ FrameGrabber
 
    .. autosummary::
 
-      ~FrameGrabber.reset
-      ~FrameGrabber.sw_trigger
+      ~FrameGrabber.is_running
+      ~FrameGrabber.on_new_frame
+      ~FrameGrabber.start
+      ~FrameGrabber.stop
       ~FrameGrabber.wait_for_frame
 
    .. rubric:: Methods Documentation
 
-   .. automethod:: reset
-   .. automethod:: sw_trigger
+   .. automethod:: is_running
+   .. automethod:: on_new_frame
+   .. automethod:: start
+   .. automethod:: stop
    .. automethod:: wait_for_frame

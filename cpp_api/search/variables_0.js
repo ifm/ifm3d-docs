@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bytes_5f_304',['bytes_',['../classifm3d_1_1ByteBuffer.html#aacec5c8eabc5c0b29024f376e2061743',1,'ifm3d::ByteBuffer']]]
+  ['device_5ftype_5f_238',['device_type_',['../classifm3d_1_1CameraBase.html#acbe4be44297d546d99b98f69d1a9fdba',1,'ifm3d::CameraBase']]]
 ];

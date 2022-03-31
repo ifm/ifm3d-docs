@@ -1,11 +1,8 @@
 var searchData=
 [
-  ['temporal_5ffilter_133',['temporal_filter',['../classifm3d_1_1CameraBase.html#a1ae6baee24b533d8d093011bacf4faa9',1,'ifm3d::CameraBase']]],
-  ['time_5fstamps_5f_134',['time_stamps_',['../classifm3d_1_1ByteBuffer.html#a6a5f3bc241807b3a1b5497258192df69',1,'ifm3d::ByteBuffer']]],
-  ['timestamp_135',['TimeStamp',['../classifm3d_1_1ByteBuffer.html#a19eccf6455b5ad3deb0c40a2cacc1c75',1,'ifm3d::ByteBuffer']]],
-  ['timestamps_136',['TimeStamps',['../classifm3d_1_1ByteBuffer.html#a8d9069aa2afbce6f8a14e1fdd14d20d2',1,'ifm3d::ByteBuffer']]],
-  ['tojson_137',['ToJSON',['../classifm3d_1_1Camera.html#a829ec771eafba8be95936defd8c68549',1,'ifm3d::Camera::ToJSON()'],['../classifm3d_1_1CameraBase.html#a30d9ff01bce12ddb51b05e4420929fb5',1,'ifm3d::CameraBase::ToJSON()'],['../classifm3d_1_1O3RCamera.html#aa55a2f0d926c84c079770e02a9d210c5',1,'ifm3d::O3RCamera::ToJSON()']]],
-  ['tojsonstr_138',['ToJSONStr',['../classifm3d_1_1CameraBase.html#a1b6fd2967e38bf4bd76418908818284c',1,'ifm3d::CameraBase']]],
-  ['tracelogs_139',['TraceLogs',['../classifm3d_1_1CameraBase.html#a53c0f59884abf245655ee2b9ee32d7a9',1,'ifm3d::CameraBase']]],
-  ['trigger_5fmode_140',['trigger_mode',['../classifm3d_1_1CameraBase.html#af4d236de8f20538c135ca5942d756c6b',1,'ifm3d::CameraBase']]]
+  ['waitforframe_111',['WaitForFrame',['../classifm3d_1_1FrameGrabber.html#a8911d6f0a032c9c072f812194ec9bb85',1,'ifm3d::FrameGrabber']]],
+  ['waitforproductive_112',['WaitForProductive',['../classifm3d_1_1SWUpdater.html#a17e1b150eac6b995787420ed7efe9f4a',1,'ifm3d::SWUpdater']]],
+  ['waitforrecovery_113',['WaitForRecovery',['../classifm3d_1_1SWUpdater.html#a15b7cd28dd1fe49fb1f830862e1a555c',1,'ifm3d::SWUpdater']]],
+  ['what_114',['what',['../classifm3d_1_1error__t.html#a94415f792f9dd6d2b00765e5841e3a8d',1,'ifm3d::error_t']]],
+  ['whoami_115',['WhoAmI',['../classifm3d_1_1CameraBase.html#a87ec42bca408afef1fdf3cd2df97075a',1,'ifm3d::CameraBase::WhoAmI()'],['../classifm3d_1_1O3DCamera.html#af4637e8491e649e935597f6a58d7497d',1,'ifm3d::O3DCamera::WhoAmI()'],['../classifm3d_1_1O3RCamera.html#a234bb3fd3eb24988137cb2b2abd9af0e',1,'ifm3d::O3RCamera::WhoAmI()'],['../classifm3d_1_1O3XCamera.html#a573510952293d457aad53ac62607c4ed',1,'ifm3d::O3XCamera::WhoAmI()']]]
 ];

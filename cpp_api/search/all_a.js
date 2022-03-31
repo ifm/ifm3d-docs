@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['jpegimage_91',['JPEGImage',['../classifm3d_1_1ImageBuffer.html#a02f15fb1dab86d04ec7897096660a6e3',1,'ifm3d::ImageBuffer::JPEGImage()'],['../classifm3d_1_1StlImageBuffer.html#a5100a6322c8b938ff4db0137e09ee931',1,'ifm3d::StlImageBuffer::JPEGImage()']]],
-  ['json_5fmodel_5f_92',['json_model_',['../classifm3d_1_1ByteBuffer.html#a24424fac54ddd40ac83dbc720e6dd250',1,'ifm3d::ByteBuffer']]],
-  ['jsonmodel_93',['JSONModel',['../classifm3d_1_1ByteBuffer.html#a8bd79ee0d4ba1152015ecd54cf59b02a',1,'ifm3d::ByteBuffer']]]
+  ['makeshared_66',['MakeShared',['../classifm3d_1_1Camera.html#aee3625a91760b643a13989ad1121a441',1,'ifm3d::Camera::MakeShared()'],['../classifm3d_1_1CameraBase.html#acddc38d23dd1954f313422f382ee6d72',1,'ifm3d::CameraBase::MakeShared()']]],
+  ['message_67',['message',['../classifm3d_1_1error__t.html#a68527cc36b83eb42e5166907916138df',1,'ifm3d::error_t']]],
+  ['mfilt_5fmask_5fsize_68',['mfilt_mask_size',['../classifm3d_1_1CameraBase.html#a7f8f11b9045e3c851b5237931bb7f4d6',1,'ifm3d::CameraBase']]]
 ];

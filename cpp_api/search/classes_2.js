@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['distanceimageinfo_162',['DistanceImageInfo',['../classifm3d_1_1DistanceImageInfo.html',1,'ifm3d']]]
+  ['error_5ft_123',['error_t',['../classifm3d_1_1error__t.html',1,'ifm3d']]]
 ];

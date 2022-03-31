@@ -1,8 +1,13 @@
 var searchData=
 [
-  ['activeapplication_183',['ActiveApplication',['../classifm3d_1_1Camera.html#a555c8718eca07c2cb70001c9f377b673',1,'ifm3d::Camera']]],
-  ['ami_184',['AmI',['../classifm3d_1_1CameraBase.html#a19777c0a5c4a0929947234a8ae8ff571',1,'ifm3d::CameraBase']]],
-  ['amplitudeimage_185',['AmplitudeImage',['../classifm3d_1_1ImageBuffer.html#aeccde6426ae0a7350b8475637b1963ad',1,'ifm3d::ImageBuffer::AmplitudeImage()'],['../classifm3d_1_1StlImageBuffer.html#ab87035882b6839571666f6c9d3ab2bdc',1,'ifm3d::StlImageBuffer::AmplitudeImage()']]],
-  ['applicationlist_186',['ApplicationList',['../classifm3d_1_1Camera.html#a5f73bf3888479bfa2cd26a2f71b7ecf4',1,'ifm3d::Camera']]],
-  ['applicationtypes_187',['ApplicationTypes',['../classifm3d_1_1Camera.html#a04da1c9f55e3e00491e3cad8beafd134',1,'ifm3d::Camera']]]
+  ['call_146',['Call',['../classifm3d_1_1PCICClient.html#a5b33d371605d558fbfa6c90fd69f36bb',1,'ifm3d::PCICClient::Call(const std::string &amp;request, std::function&lt; void(const std::string &amp;response)&gt; callback)'],['../classifm3d_1_1PCICClient.html#a0c55134f22d23542449344bcf898e9e0',1,'ifm3d::PCICClient::Call(const std::string &amp;request)'],['../classifm3d_1_1PCICClient.html#a0f6cfe3e11f0e73c95d0ce34d98fb027',1,'ifm3d::PCICClient::Call(const std::string &amp;request, std::string &amp;response, long timeout_millis)']]],
+  ['camera_147',['Camera',['../classifm3d_1_1Camera.html#a76ea484635767e7b47ef68d8d815d0ca',1,'ifm3d::Camera']]],
+  ['camerabase_148',['CameraBase',['../classifm3d_1_1CameraBase.html#ae7904da7e07560e4dfdbb29a8a05f6c5',1,'ifm3d::CameraBase']]],
+  ['cancelcallback_149',['CancelCallback',['../classifm3d_1_1PCICClient.html#a55ab9adeb7a46dfa5ec55a28327bceaf',1,'ifm3d::PCICClient']]],
+  ['cancelsession_150',['CancelSession',['../classifm3d_1_1Camera.html#a9789292842d86243bf43bf1827118c84',1,'ifm3d::Camera::CancelSession()'],['../classifm3d_1_1Camera.html#a5311b12bcce819e7fef40bfc22849fc7',1,'ifm3d::Camera::CancelSession(const std::string &amp;sid)']]],
+  ['checkminimumfirmwareversion_151',['CheckMinimumFirmwareVersion',['../classifm3d_1_1CameraBase.html#a2ce1c290985cb1c883cbac5100109f90',1,'ifm3d::CameraBase']]],
+  ['clone_152',['clone',['../classifm3d_1_1Image.html#adaa9ff56a926e17831afd38e7ac06bd5',1,'ifm3d::Image::clone()'],['../classifm3d_1_1Image__.html#a50425918e4aa90830726c8d8a9ab39de',1,'ifm3d::Image_::clone()']]],
+  ['code_153',['code',['../classifm3d_1_1error__t.html#a37120b885f933f3899099eb9887e733e',1,'ifm3d::error_t']]],
+  ['copyapplication_154',['CopyApplication',['../classifm3d_1_1Camera.html#afc9f196c3cef0b10caa4d4475fce9f2e',1,'ifm3d::Camera']]],
+  ['createapplication_155',['CreateApplication',['../classifm3d_1_1Camera.html#a179deaea6a10ecb96bc7fd10fbbe0f13',1,'ifm3d::Camera']]]
 ];

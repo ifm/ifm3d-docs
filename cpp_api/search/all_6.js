@@ -1,11 +1,21 @@
 var searchData=
 [
-  ['factoryreset_44',['FactoryReset',['../classifm3d_1_1Camera.html#ac31af80e7b8e9712256430270e69f96d',1,'ifm3d::Camera::FactoryReset()'],['../classifm3d_1_1O3RCamera.html#a2cad8dfa3c9b8a711952ef8c81d88f5a',1,'ifm3d::O3RCamera::FactoryReset()']]],
-  ['flashfirmware_45',['FlashFirmware',['../classifm3d_1_1SWUpdater.html#a5e61c6b57890bfc62720e4176eef6eba',1,'ifm3d::SWUpdater']]],
-  ['flashstatuscb_46',['FlashStatusCb',['../classifm3d_1_1SWUpdater.html#ab90463e11ba0306bc62e087ed00260b1',1,'ifm3d::SWUpdater']]],
-  ['forcetrigger_47',['ForceTrigger',['../classifm3d_1_1Camera.html#a5e52fb6796f154d527ba978d73b7e845',1,'ifm3d::Camera::ForceTrigger()'],['../classifm3d_1_1CameraBase.html#ad0c632947ea7797bec7e95a7c0ee5b53',1,'ifm3d::CameraBase::ForceTrigger()']]],
-  ['framegrabber_48',['FrameGrabber',['../classifm3d_1_1FrameGrabber.html',1,'ifm3d::FrameGrabber'],['../classifm3d_1_1FrameGrabber.html#aba146fe258d6b238435a7d9e7fab84a5',1,'ifm3d::FrameGrabber::FrameGrabber()']]],
-  ['fromjson_49',['FromJSON',['../classifm3d_1_1Camera.html#a9105d839be09af33bf9fce6444095264',1,'ifm3d::Camera::FromJSON()'],['../classifm3d_1_1CameraBase.html#ab2d504719393e4dbbb535987ff46284d',1,'ifm3d::CameraBase::FromJSON()'],['../classifm3d_1_1O3RCamera.html#a88a4aceb57fd6766416a08a206ca1c7e',1,'ifm3d::O3RCamera::FromJSON()']]],
-  ['fromjson_5f_50',['FromJSON_',['../classifm3d_1_1Camera.html#a44d4b5b7970a3df84b90e73bf6ec69f6',1,'ifm3d::Camera']]],
-  ['fromjsonstr_51',['FromJSONStr',['../classifm3d_1_1CameraBase.html#a097fe6d95fd97cfceb6c336e37347a34',1,'ifm3d::CameraBase']]]
+  ['get_34',['Get',['../classifm3d_1_1O3RCamera.html#a275baae3de9789e6b04eb8202def49b7',1,'ifm3d::O3RCamera']]],
+  ['getappjson_35',['getAppJSON',['../classifm3d_1_1Camera.html#a2e4f9d45db41860b4d67bd0c3d61a999',1,'ifm3d::Camera']]],
+  ['getdeviceid_36',['GetDeviceId',['../classifm3d_1_1IFMNetworkDevice.html#a15e74fd05c4f07b490f08bdf1ea44173',1,'ifm3d::IFMNetworkDevice']]],
+  ['getdevicename_37',['GetDeviceName',['../classifm3d_1_1IFMNetworkDevice.html#a3603933cf3f1a183c0f596de12d0541f',1,'ifm3d::IFMNetworkDevice']]],
+  ['getexposuretimes_38',['getExposureTimes',['../classifm3d_1_1DistanceImageInfo.html#a4d91486c29d6c5fe492ebb18a94b6807',1,'ifm3d::DistanceImageInfo']]],
+  ['getflag_39',['GetFlag',['../classifm3d_1_1IFMNetworkDevice.html#a5d970c6ba3740a84d2f5f86572875a50',1,'ifm3d::IFMNetworkDevice']]],
+  ['getfoundvia_40',['GetFoundVia',['../classifm3d_1_1IFMNetworkDevice.html#aedbacece95caa6c1f148fa16bbc66005',1,'ifm3d::IFMNetworkDevice']]],
+  ['getgateway_41',['GetGateway',['../classifm3d_1_1IFMNetworkDevice.html#a992310b9244dc5273c8bd3cb349c177f',1,'ifm3d::IFMNetworkDevice']]],
+  ['gethostname_42',['GetHostName',['../classifm3d_1_1IFMNetworkDevice.html#a707ac1059ca8dc2ce188713ede899fd7',1,'ifm3d::IFMNetworkDevice']]],
+  ['getinit_43',['GetInit',['../classifm3d_1_1O3RCamera.html#a5ac6936e1dda449dd583fe4f7859063c',1,'ifm3d::O3RCamera']]],
+  ['getinitstatus_44',['GetInitStatus',['../classifm3d_1_1O3RCamera.html#af5541b21e98118c4d9db59debeaa1f5d',1,'ifm3d::O3RCamera']]],
+  ['getipaddress_45',['GetIPAddress',['../classifm3d_1_1IFMNetworkDevice.html#ae5465a39c1fc128873b13910498d12ca',1,'ifm3d::IFMNetworkDevice']]],
+  ['getmacaddress_46',['GetMACAddress',['../classifm3d_1_1IFMNetworkDevice.html#a7d43c55ace9605605ab78525975e82b8',1,'ifm3d::IFMNetworkDevice']]],
+  ['getnetmask_47',['GetNetmask',['../classifm3d_1_1IFMNetworkDevice.html#acb57559c3e57978cebb23a56a1c1e01f',1,'ifm3d::IFMNetworkDevice']]],
+  ['getport_48',['GetPort',['../classifm3d_1_1IFMNetworkDevice.html#a6d9f3582cb49ce92600b346cce99a9ce',1,'ifm3d::IFMNetworkDevice']]],
+  ['getschema_49',['GetSchema',['../classifm3d_1_1O3RCamera.html#a49e36cb8582d36d471b0e5ae338274c4',1,'ifm3d::O3RCamera']]],
+  ['gettimestamps_50',['getTimestamps',['../classifm3d_1_1DistanceImageInfo.html#af68ce9aa879ed3ab06de1ce7f1987288',1,'ifm3d::DistanceImageInfo']]],
+  ['getvendorid_51',['GetVendorId',['../classifm3d_1_1IFMNetworkDevice.html#af48559851c7db3001f4619cb0ae3897f',1,'ifm3d::IFMNetworkDevice']]]
 ];

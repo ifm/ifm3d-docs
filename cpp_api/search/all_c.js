@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['makeshared_95',['MakeShared',['../classifm3d_1_1Camera.html#aee3625a91760b643a13989ad1121a441',1,'ifm3d::Camera::MakeShared()'],['../classifm3d_1_1CameraBase.html#acddc38d23dd1954f313422f382ee6d72',1,'ifm3d::CameraBase::MakeShared()']]],
-  ['message_96',['message',['../classifm3d_1_1error__t.html#a68527cc36b83eb42e5166907916138df',1,'ifm3d::error_t']]],
-  ['mfilt_5fmask_5fsize_97',['mfilt_mask_size',['../classifm3d_1_1CameraBase.html#a7f8f11b9045e3c851b5237931bb7f4d6',1,'ifm3d::CameraBase']]]
+  ['password_75',['Password',['../classifm3d_1_1Camera.html#ae3b8330b4f17a226cf792d49e241fe6d',1,'ifm3d::Camera']]],
+  ['pcicclient_76',['PCICClient',['../classifm3d_1_1PCICClient.html',1,'ifm3d::PCICClient'],['../classifm3d_1_1PCICClient.html#a24a2331b190073c4a8246531add561ea',1,'ifm3d::PCICClient::PCICClient()']]],
+  ['point_77',['point',['../structifm3d_1_1point.html',1,'ifm3d']]],
+  ['port_78',['Port',['../classifm3d_1_1O3RCamera.html#a823aead477539ac53244f6509654688c',1,'ifm3d::O3RCamera']]],
+  ['portinfo_79',['PortInfo',['../structifm3d_1_1PortInfo.html',1,'ifm3d']]],
+  ['ports_80',['Ports',['../classifm3d_1_1O3RCamera.html#a904c9fca577f3a7f479729fb7328eded',1,'ifm3d::O3RCamera']]],
+  ['ptr_81',['ptr',['../classifm3d_1_1Image.html#a453b90061ccb05ca514426ad2f9e33c7',1,'ifm3d::Image::ptr(const std::uint32_t row)'],['../classifm3d_1_1Image.html#a4976aaa4b1bf6fbaa71ca6925a37616a',1,'ifm3d::Image::ptr(const std::uint32_t row) const'],['../classifm3d_1_1Image.html#af9598aa54286a8c871c9be7d487e6d5f',1,'ifm3d::Image::ptr(const std::uint32_t row, const std::uint32_t col)'],['../classifm3d_1_1Image.html#a85b1e50bebbaa01e5af2672b98d2f73e',1,'ifm3d::Image::ptr(const std::uint32_t row, const std::uint32_t col) const'],['../classifm3d_1_1Image__.html#ab1022041402722564fe038ec7838b9e7',1,'ifm3d::Image_::ptr(const std::uint32_t row)'],['../classifm3d_1_1Image__.html#a162ec6ae4a165fd649c3658d8c04c556',1,'ifm3d::Image_::ptr(const std::uint32_t row, const std::uint32_t col)']]]
 ];
