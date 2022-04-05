@@ -87,6 +87,23 @@
 <h1>Building ifm3d from source on Windows<a class="headerlink" href="#building-ifm3d-from-source-on-windows" title="Permalink to this headline"></a></h1>
 <p>This tutorial details how to compile the ifm3d library and its dependencies on
 a Windows platform using Visual Studio.</p>
+<div class="section" id="how-to-install-and-use-ifm3d-binaries">
+<h2>How to install and use ifm3d binaries<a class="headerlink" href="#how-to-install-and-use-ifm3d-binaries" title="Permalink to this headline"></a></h2>
+<ol>
+<li><p>Installation</p>
+<p>Download the ifm3d installer ifm3d_windows_x.x.x.exe.</p>
+<p>This installer provides binaries for Windows OS for Visual Studio 2019 and above. For any other compiler we recommend to build ifm3d from sources.</p>
+<p>Follow the instructions on the installer. It will install binaries at default location as C:/ProgramFiles/ifm3d x.x.x. Make a environment variable with this path.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IFM3D_BINARY_DIR</span> <span class="o">=</span> <span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">ProgramFiles</span><span class="o">/</span><span class="n">ifm3d</span> <span class="n">x</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">x</span><span class="o">/</span><span class="nb">bin</span>      <span class="c1"># Please put the correct install path in case installation is done on other than default path</span>
+</pre></div>
+</div>
+</li>
+<li><p>Usage</p>
+<p>Clone ifm3d-example.</p>
+<p>Add install path (IFM3D_BINARY_DIR) to CMAKE_PREFIX_PATH and build ifm3d-example.</p>
+</li>
+</ol>
+</div>
 <div class="section" id="dependencies">
 <h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline"></a></h2>
 <div class="section" id="build-tools">
