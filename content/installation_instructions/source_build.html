@@ -237,6 +237,7 @@ are available through the offical debian repositories and should be a simple
 $ sudo apt-get update &amp;&amp; sudo apt-get install -y 
       git \ 
       jq \ 
+      libssl-dev \
       libcurl4-openssl-dev \
       libgtest-dev libgoogle-glog-dev  \
       libxmlrpc-c++8-dev \ 
@@ -287,7 +288,8 @@ $ sudo cmake --build . --target install
 If this is the case, you need to be sure that the version of OpenCV that you link to in both <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> and <code class="docutils literal notranslate"><span class="pre">ifm3d-ros</span></code> are consistent.
 To give you some control over that, the build process allows you to explicitly call out which version of OpenCV you wish to use.
 For example, if you are using OpenCV 2.4, your <code class="docutils literal notranslate"><span class="pre">cmake</span></code> line above should look something like: <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cmake</span> <span class="pre">-DCMAKE_INSTALL_PREFIX=/usr</span> <span class="pre">-DFORCE_OPENCV2=ON</span> <span class="pre">..</span></code>.
-Similarly, if you are using OpenCV 3, your <code class="docutils literal notranslate"><span class="pre">cmake</span></code> line above should look something like: <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cmake</span> <span class="pre">-DCMAKE_INSTALL_PREFIX=/usr</span> <span class="pre">-DFORCE_OPENCV3=ON</span> <span class="pre">..</span></code></p>
+Similarly, if you are using OpenCV 3, your <code class="docutils literal notranslate"><span class="pre">cmake</span></code> line above should look something like: <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cmake</span> <span class="pre">-DCMAKE_INSTALL_PREFIX=/usr</span> <span class="pre">-DFORCE_OPENCV3=ON</span> <span class="pre">..</span></code>
+Note that as of version 1.0.1, the <code class="docutils literal notranslate"><span class="pre">ifm3d-ros2</span></code> wrapper does not require OpenCV anymore.</p>
 </div></blockquote>
 </div>
 <div class="section" id="building-the-python-bindings">
