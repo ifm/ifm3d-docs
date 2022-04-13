@@ -152,16 +152,15 @@ v3.4.9, available from the following link:</p>
 <h3>Source Dependencies<a class="headerlink" href="#source-dependencies" title="Permalink to this headline"></a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> depends on several additional libraries (curl, xmlrpc-c, glog, and
 gtest) which are not available as binary packages on Windows.</p>
-<div class="section" id="building-source-dependencies-with-ifm3d">
-<h4>Building source dependencies with ifm3d<a class="headerlink" href="#building-source-dependencies-with-ifm3d" title="Permalink to this headline"></a></h4>
-<p>ifm3d from version 0.90.4 onwards provides <code class="docutils literal notranslate"><span class="pre">BUILT_IN_DEPS</span></code> option to cmake configure command,
-which fetch required dependencies and build it with ifm3d. On sucessfull first installation
-user can disable BUILT_IN_DEPS option and can use the installed dependencies for future builds of the ifm3d.</p>
-<p><strong>Note</strong>: As gtest is not a part of the build time dependencies, to enable the testing of ifm3d
-please clone googletest as explained in <span class="xref myst">gtest</span> section.</p>
+<div class="section" id="automatically-building-source-dependencies-with-ifm3d">
+<h4>Automatically building source dependencies with ifm3d<a class="headerlink" href="#automatically-building-source-dependencies-with-ifm3d" title="Permalink to this headline"></a></h4>
+<p>ifm3d from version 0.90.4 onwards provides <code class="docutils literal notranslate"><span class="pre">BUILD_IN_DEPS</span></code> option to cmake configure command,
+which fetches the required dependencies and builds them with ifm3d. After a successful first installation, the
+user can disable BUILD_IN_DEPS option and can use the installed dependencies for future builds of the ifm3d.</p>
 <p>Following instructions detail how to build ifm3d along with its dependencies.</p>
 <p>⚠ The code on the branch {{ ifm3d_main_branch }} is updated nightly and contains the latest changes to the library. It is typically a work in progress.<br />
 ⚠ We recommend using tagged versions for your builds, to ensure consistency between builds. The latest tagged version can be found {{ ‘<span class="xref myst">here</span>’.format(ifm3d_latest_tag_url) }}.</p>
+<p>Open Command Prompt and execute following instructions</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#set the environment variables</span>
 <span class="nb">set</span> <span class="n">IFM3D_CMAKE_GENERATOR</span><span class="o">=</span><span class="s2">&quot;Visual Studio 16 2019&quot;</span>
 <span class="nb">set</span> <span class="n">IFM3D_BUILD_DIR</span><span class="o">=</span><span class="n">C</span><span class="p">:</span>\<span class="n">ifm3d</span>
@@ -172,13 +171,13 @@ please clone googletest as explained in <span class="xref myst">gtest</span> sec
 
 <span class="c1"># Clone the repository</span>
 <span class="n">cd</span> <span class="o">%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>
-<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ifm</span><span class="o">/</span><span class="n">ifm3d</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ifm</span><span class="o">/</span><span class="n">ifm3d</span><span class="o">.</span><span class="n">git</span> <span class="o">--</span><span class="n">branch</span> <span class="n">o3r</span><span class="o">/</span><span class="n">main</span><span class="o">-</span><span class="nb">next</span>
 <span class="n">cd</span> <span class="o">%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>\<span class="n">ifm3d</span>
 
 <span class="c1"># Configure</span>
 <span class="n">mkdir</span> <span class="n">build</span>
 <span class="n">cd</span> <span class="n">build</span>
-<span class="n">cmake</span> <span class="o">-</span><span class="n">G</span> <span class="o">%</span><span class="n">IFM3D_CMAKE_GENERATOR</span><span class="o">%</span> <span class="o">-</span><span class="n">DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DBUILD_SDK_PKG</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DGTEST_CMAKE_DIR</span><span class="o">=%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>\<span class="n">googletest</span>\<span class="n">googletest</span> <span class="o">-</span><span class="n">Dgtest_force_shared_crt</span><span class="o">=</span><span class="n">TRUE</span> <span class="o">-</span><span class="n">DCMAKE_PREFIX_PATH</span><span class="o">=%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>\<span class="n">install</span> <span class="o">-</span><span class="n">DCMAKE_BUILD_TYPE</span><span class="o">=%</span><span class="n">CONFIG</span><span class="o">%</span> <span class="o">-</span><span class="n">DCMAKE_INSTALL_PREFIX</span><span class="o">=%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>\<span class="n">install</span> <span class="o">..</span>
+<span class="n">cmake</span> <span class="o">-</span><span class="n">G</span> <span class="o">%</span><span class="n">IFM3D_CMAKE_GENERATOR</span><span class="o">%</span> <span class="o">-</span><span class="n">DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DCMAKE_PREFIX_PATH</span><span class="o">=%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>\<span class="n">install</span> <span class="o">-</span><span class="n">DCMAKE_BUILD_TYPE</span><span class="o">=%</span><span class="n">CONFIG</span><span class="o">%</span> <span class="o">-</span><span class="n">DCMAKE_INSTALL_PREFIX</span><span class="o">=%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>\<span class="n">install</span> <span class="o">-</span><span class="n">DBUILD_IN_DEPS</span><span class="o">=</span><span class="n">ON</span> <span class="o">..</span>
 
 <span class="c1"># Build ifm3d and dependencies</span>
 <span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="o">%</span><span class="n">CONFIG</span><span class="o">%</span> <span class="o">--</span><span class="n">target</span> <span class="n">ALL_BUILD</span>
@@ -193,8 +192,8 @@ please clone googletest as explained in <span class="xref myst">gtest</span> sec
 use <code class="docutils literal notranslate"><span class="pre">-DBUILD_MODULE_IMAGE=ON</span></code> and <code class="docutils literal notranslate"><span class="pre">-DBUILD_MODULE_OPENCV=ON</span></code> respectively to cmake configure command.
 Also append the opencv install binary path to -DCMAKE_PREFIX_PATH as shown in <span class="xref myst">Building ifm3d</span> section</p>
 </div>
-<div class="section" id="buidling-the-source-dependencies-independent-of-ifm3d">
-<h4>Buidling the source dependencies independent of ifm3d<a class="headerlink" href="#buidling-the-source-dependencies-independent-of-ifm3d" title="Permalink to this headline"></a></h4>
+<div class="section" id="manually-building-the-source-dependencies">
+<h4>Manually building the source dependencies<a class="headerlink" href="#manually-building-the-source-dependencies" title="Permalink to this headline"></a></h4>
 <p>The following instructions detail how to compile them from source for your target.</p>
 <div class="section" id="environment-configuration">
 <h5>Environment Configuration<a class="headerlink" href="#environment-configuration" title="Permalink to this headline"></a></h5>
@@ -202,6 +201,7 @@ Also append the opencv install binary path to -DCMAKE_PREFIX_PATH as shown in <s
 customization simpler. Modify them as needed for your environment. You can
 obtain a list of valid cmake generator strings via <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">-h</span></code>. Again, <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code>
 supports version 2017 and newer.</p>
+<p>Open Command Prompt and execute following instructions</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">IFM3D_OPENCV_PATH</span><span class="o">=</span><span class="n">C</span><span class="p">:</span>\<span class="n">opencv</span>\<span class="n">build</span>
 <span class="nb">set</span> <span class="n">IFM3D_CMAKE_GENERATOR</span><span class="o">=</span><span class="s2">&quot;Visual Studio 15 2017 Win64&quot;</span>
 <span class="nb">set</span> <span class="n">IFM3D_BUILD_DIR</span><span class="o">=</span><span class="n">C</span><span class="p">:</span>\<span class="n">ifm3d</span>
@@ -250,21 +250,8 @@ be built:</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="gtest">
-<h5><a class="reference external" href="https://github.com/google/googletest.git">gtest</a><a class="headerlink" href="#gtest" title="Permalink to this headline"></a></h5>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>
-<span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">branch</span> <span class="n">release</span><span class="o">-</span><span class="mf">1.8</span><span class="o">.</span><span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">google</span><span class="o">/</span><span class="n">googletest</span><span class="o">.</span><span class="n">git</span>
-</pre></div>
-</div>
-<p>NOTE: <code class="docutils literal notranslate"><span class="pre">gtest</span></code> is only needed to build and run unit tests. To skip, add
-<code class="docutils literal notranslate"><span class="pre">-DBUILD_TESTS=OFF</span></code> to the cmake configuration command line on the <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code>
-library below.</p>
-</div>
-</div>
-</div>
-</div>
 <div class="section" id="building-ifm3d">
-<h2>Building ifm3d<a class="headerlink" href="#building-ifm3d" title="Permalink to this headline"></a></h2>
+<h5>Building ifm3d<a class="headerlink" href="#building-ifm3d" title="Permalink to this headline"></a></h5>
 <p>⚠ The code on the branch {{ ifm3d_main_branch }} is updated nightly and contains the latest changes to the library. It is typically a work in progress.<br />
 ⚠ We recommend using tagged versions for your builds, to ensure consistency between builds. The latest tagged version can be found {{ ‘<span class="xref myst">here</span>’.format(ifm3d_latest_tag_url) }}.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clone the repository</span>
@@ -275,13 +262,29 @@ library below.</p>
 <span class="c1"># Configure</span>
 <span class="n">mkdir</span> <span class="n">build</span>
 <span class="n">cd</span> <span class="n">build</span>
-<span class="n">cmake</span> <span class="o">-</span><span class="n">G</span> <span class="o">%</span><span class="n">IFM3D_CMAKE_GENERATOR</span><span class="o">%</span> <span class="o">-</span><span class="n">DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DBUILD_SDK_PKG</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DGTEST_CMAKE_DIR</span><span class="o">=%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>\<span class="n">googletest</span>\<span class="n">googletest</span> <span class="o">-</span><span class="n">Dgtest_force_shared_crt</span><span class="o">=</span><span class="n">TRUE</span> <span class="o">-</span><span class="n">DCMAKE_PREFIX_PATH</span><span class="o">=%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>\<span class="n">install</span><span class="p">;</span><span class="o">%</span><span class="n">IFM3D_OPENCV_PATH</span><span class="o">%</span> <span class="o">-</span><span class="n">DBOOST_ROOT</span><span class="o">=%</span><span class="n">IFM3D_BOOST_ROOT</span><span class="o">%</span> <span class="o">-</span><span class="n">DBoost_USE_STATIC_LIBS</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DCMAKE_BUILD_TYPE</span><span class="o">=%</span><span class="n">CONFIG</span><span class="o">%</span> <span class="o">-</span><span class="n">DCMAKE_INSTALL_PREFIX</span><span class="o">=%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>\<span class="n">install</span> <span class="o">..</span>
-
-<span class="c1"># run tests</span>
-<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="o">%</span><span class="n">CONFIG</span><span class="o">%</span> <span class="o">--</span><span class="n">target</span> <span class="n">check</span>
+<span class="n">cmake</span> <span class="o">-</span><span class="n">G</span> <span class="o">%</span><span class="n">IFM3D_CMAKE_GENERATOR</span><span class="o">%</span> <span class="o">-</span><span class="n">DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DCMAKE_PREFIX_PATH</span><span class="o">=%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>\<span class="n">install</span><span class="p">;</span><span class="o">%</span><span class="n">IFM3D_OPENCV_PATH</span><span class="o">%</span> <span class="o">-</span><span class="n">DCMAKE_BUILD_TYPE</span><span class="o">=%</span><span class="n">CONFIG</span><span class="o">%</span> <span class="o">-</span><span class="n">DCMAKE_INSTALL_PREFIX</span><span class="o">=%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>\<span class="n">install</span> <span class="o">..</span>
 
 <span class="c1">#install</span>
 <span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="o">%</span><span class="n">CONFIG</span><span class="o">%</span> <span class="o">--</span><span class="n">target</span> <span class="n">INSTALL</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="running-the-ifm3d-test-with-device-optional">
+<h2>Running the ifm3d test with device (optional)<a class="headerlink" href="#running-the-ifm3d-test-with-device-optional" title="Permalink to this headline"></a></h2>
+<p>ifm3d tests are based on <a class="reference external" href="https://github.com/google/googletest.git">gtest</a>. Use following instructions to build and run the tests</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># clone </span>
+<span class="n">cd</span> <span class="o">%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">branch</span> <span class="n">release</span><span class="o">-</span><span class="mf">1.8</span><span class="o">.</span><span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">google</span><span class="o">/</span><span class="n">googletest</span><span class="o">.</span><span class="n">git</span>
+
+<span class="n">cd</span> <span class="n">ifm3d</span>
+<span class="n">cd</span> <span class="n">build</span> 
+<span class="n">cmake</span> <span class="o">-</span><span class="n">G</span> <span class="o">%</span><span class="n">IFM3D_CMAKE_GENERATOR</span><span class="o">%</span> <span class="o">-</span><span class="n">DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DBUILD_TESTS</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DGTEST_CMAKE_DIR</span><span class="o">=%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>\<span class="n">googletest</span>\<span class="n">googletest</span> <span class="o">-</span><span class="n">Dgtest_force_shared_crt</span><span class="o">=</span><span class="n">TRUE</span> <span class="o">-</span><span class="n">DCMAKE_PREFIX_PATH</span><span class="o">=%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>\<span class="n">install</span><span class="p">;</span><span class="o">%</span><span class="n">IFM3D_OPENCV_PATH</span><span class="o">%</span> <span class="o">-</span><span class="n">DCMAKE_BUILD_TYPE</span><span class="o">=%</span><span class="n">CONFIG</span><span class="o">%</span> <span class="o">-</span><span class="n">DCMAKE_INSTALL_PREFIX</span><span class="o">=%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>\<span class="n">install</span> <span class="o">..</span>
+
+<span class="c1">#Tests</span>
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="o">%</span><span class="n">CONFIG</span><span class="o">%</span> <span class="o">--</span><span class="n">target</span> <span class="n">check</span> 
 </pre></div>
 </div>
 </div>
