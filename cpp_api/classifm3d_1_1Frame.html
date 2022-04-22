@@ -91,6 +91,8 @@ $(document).ready(function(){initNavTree('classifm3d_1_1Frame.html',''); initRes
 <div class="title">ifm3d::Frame Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="frame_8h_source.html">frame.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -100,9 +102,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>Ptr</b> = std::share
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac6d7a542475c0d4b6b461d6ff72845d7"><td class="memItemLeft" align="right" valign="top"><a id="ac6d7a542475c0d4b6b461d6ff72845d7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const std::map&lt; ImageId, <a class="el" href="classifm3d_1_1Image.html">Image</a> &gt; &amp;images, const std::vector&lt; TimePointT &gt; timestamps)</td></tr>
-<tr class="separator:ac6d7a542475c0d4b6b461d6ff72845d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c01774693e85f8ca40de0332b7af4f4"><td class="memItemLeft" align="right" valign="top"><a id="a1c01774693e85f8ca40de0332b7af4f4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const std::map&lt; image_id, <a class="el" href="classifm3d_1_1Image.html">Image</a> &gt; &amp;images, const std::vector&lt; TimePointT &gt; timestamps)</td></tr>
+<tr class="separator:a1c01774693e85f8ca40de0332b7af4f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17377a20079de03dbfd53ef1d49034a2"><td class="memItemLeft" align="right" valign="top"><a id="a17377a20079de03dbfd53ef1d49034a2"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const <a class="el" href="classifm3d_1_1Frame.html">Frame</a> &amp;t)</td></tr>
 <tr class="separator:a17377a20079de03dbfd53ef1d49034a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,32 +117,113 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0ec694226f11a764ed241eb2e876fd4e"><td class="memItemLeft" align="right" valign="top"><a id="a0ec694226f11a764ed241eb2e876fd4e"></a>
 <a class="el" href="classifm3d_1_1Frame.html">Frame</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classifm3d_1_1Frame.html">Frame</a> &amp;&amp;t)</td></tr>
 <tr class="separator:a0ec694226f11a764ed241eb2e876fd4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6501c61f1d9b47003cbac1119477e6e"><td class="memItemLeft" align="right" valign="top"><a id="af6501c61f1d9b47003cbac1119477e6e"></a>
-std::vector&lt; TimePointT &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>TimeStamps</b> ()</td></tr>
+<tr class="memitem:af6501c61f1d9b47003cbac1119477e6e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; TimePointT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Frame.html#af6501c61f1d9b47003cbac1119477e6e">TimeStamps</a> ()</td></tr>
+<tr class="memdesc:af6501c61f1d9b47003cbac1119477e6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the timestamps of the frame.  <a href="classifm3d_1_1Frame.html#af6501c61f1d9b47003cbac1119477e6e">More...</a><br /></td></tr>
 <tr class="separator:af6501c61f1d9b47003cbac1119477e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab89ea1c54c5a985f98521578ee39d900"><td class="memItemLeft" align="right" valign="top"><a id="ab89ea1c54c5a985f98521578ee39d900"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>HasImage</b> (ImageId id)</td></tr>
-<tr class="separator:ab89ea1c54c5a985f98521578ee39d900"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a286a7c26fa75b2e10c8f1e2ec142e667"><td class="memItemLeft" align="right" valign="top"><a id="a286a7c26fa75b2e10c8f1e2ec142e667"></a>
-<a class="el" href="classifm3d_1_1Image.html">Image</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetImage</b> (ImageId key)</td></tr>
-<tr class="separator:a286a7c26fa75b2e10c8f1e2ec142e667"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12c0a11bf41845a2d5ec725390a08d96"><td class="memTemplParams" colspan="2"><a id="a12c0a11bf41845a2d5ec725390a08d96"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a12c0a11bf41845a2d5ec725390a08d96"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_enum_v&lt; T &gt;, <a class="el" href="classifm3d_1_1Image.html">Image</a> &amp; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>GetImage</b> (T key)</td></tr>
-<tr class="separator:a12c0a11bf41845a2d5ec725390a08d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73c4fded569a24d1f55027ea29528438"><td class="memItemLeft" align="right" valign="top"><a id="a73c4fded569a24d1f55027ea29528438"></a>
-decltype(std::declval&lt; std::map&lt; ImageId, <a class="el" href="classifm3d_1_1Image.html">Image</a> &gt;&gt;().begin())&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () noexcept</td></tr>
-<tr class="separator:a73c4fded569a24d1f55027ea29528438"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d833fc3f85493a8237b4552086a9fe1"><td class="memItemLeft" align="right" valign="top"><a id="a1d833fc3f85493a8237b4552086a9fe1"></a>
-decltype(std::declval&lt; const std::map&lt; ImageId, <a class="el" href="classifm3d_1_1Image.html">Image</a> &gt;&gt;().begin())&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () const noexcept</td></tr>
-<tr class="separator:a1d833fc3f85493a8237b4552086a9fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a735da2e01519180a9469752cb3e1e437"><td class="memItemLeft" align="right" valign="top"><a id="a735da2e01519180a9469752cb3e1e437"></a>
-decltype(std::declval&lt; std::map&lt; ImageId, <a class="el" href="classifm3d_1_1Image.html">Image</a> &gt;&gt;().end())&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () noexcept</td></tr>
-<tr class="separator:a735da2e01519180a9469752cb3e1e437"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c9095826a3ac77497d103fc564ef5b3"><td class="memItemLeft" align="right" valign="top"><a id="a1c9095826a3ac77497d103fc564ef5b3"></a>
-decltype(std::declval&lt; const std::map&lt; ImageId, <a class="el" href="classifm3d_1_1Image.html">Image</a> &gt;&gt;().end())&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const noexcept</td></tr>
-<tr class="separator:a1c9095826a3ac77497d103fc564ef5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35fcc1cc2ae9f829e69beda6a5e2f1f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Frame.html#a35fcc1cc2ae9f829e69beda6a5e2f1f4">HasImage</a> (image_id id)</td></tr>
+<tr class="memdesc:a35fcc1cc2ae9f829e69beda6a5e2f1f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a image with the given id is available in this frame.  <a href="classifm3d_1_1Frame.html#a35fcc1cc2ae9f829e69beda6a5e2f1f4">More...</a><br /></td></tr>
+<tr class="separator:a35fcc1cc2ae9f829e69beda6a5e2f1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84ce0e3db240a37db0fe6370ef7f2209"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classifm3d_1_1Image.html">Image</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Frame.html#a84ce0e3db240a37db0fe6370ef7f2209">GetImage</a> (image_id id)</td></tr>
+<tr class="memdesc:a84ce0e3db240a37db0fe6370ef7f2209"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the image with the given id.  <a href="classifm3d_1_1Frame.html#a84ce0e3db240a37db0fe6370ef7f2209">More...</a><br /></td></tr>
+<tr class="separator:a84ce0e3db240a37db0fe6370ef7f2209"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07fbfed040fdb17f310e2ed33f8aae36"><td class="memItemLeft" align="right" valign="top"><a id="a07fbfed040fdb17f310e2ed33f8aae36"></a>
+decltype(std::declval&lt; std::map&lt; image_id, <a class="el" href="classifm3d_1_1Image.html">Image</a> &gt;&gt;().begin())&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () noexcept</td></tr>
+<tr class="separator:a07fbfed040fdb17f310e2ed33f8aae36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ea30d4bbe6cd2144cfb0d6964eb7ead"><td class="memItemLeft" align="right" valign="top"><a id="a9ea30d4bbe6cd2144cfb0d6964eb7ead"></a>
+decltype(std::declval&lt; const std::map&lt; image_id, <a class="el" href="classifm3d_1_1Image.html">Image</a> &gt;&gt;().begin())&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () const noexcept</td></tr>
+<tr class="separator:a9ea30d4bbe6cd2144cfb0d6964eb7ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea3fd2825a7b18bd107f24511f3a3156"><td class="memItemLeft" align="right" valign="top"><a id="aea3fd2825a7b18bd107f24511f3a3156"></a>
+decltype(std::declval&lt; std::map&lt; image_id, <a class="el" href="classifm3d_1_1Image.html">Image</a> &gt;&gt;().end())&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () noexcept</td></tr>
+<tr class="separator:aea3fd2825a7b18bd107f24511f3a3156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7203a72b776719684d85c53ef33b9da3"><td class="memItemLeft" align="right" valign="top"><a id="a7203a72b776719684d85c53ef33b9da3"></a>
+decltype(std::declval&lt; const std::map&lt; image_id, <a class="el" href="classifm3d_1_1Image.html">Image</a> &gt;&gt;().end())&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const noexcept</td></tr>
+<tr class="separator:a7203a72b776719684d85c53ef33b9da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represent a frame of data received from the the device. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a84ce0e3db240a37db0fe6370ef7f2209"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84ce0e3db240a37db0fe6370ef7f2209">&#9670;&nbsp;</a></span>GetImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classifm3d_1_1Image.html">Image</a>&amp; ifm3d::Frame::GetImage </td>
+          <td>(</td>
+          <td class="paramtype">image_id&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the image with the given id. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the id of the image to get </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classifm3d_1_1Image.html" title="The class Image represent a STL conatiner to stored image data from the ifm devices in 2 dimension an...">Image</a>&amp; Reference to the requrest image </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>if no image with the give id exists </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a35fcc1cc2ae9f829e69beda6a5e2f1f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35fcc1cc2ae9f829e69beda6a5e2f1f4">&#9670;&nbsp;</a></span>HasImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ifm3d::Frame::HasImage </td>
+          <td>(</td>
+          <td class="paramtype">image_id&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if a image with the given id is available in this frame. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the id of the image </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if a image with the give id is available </dd>
+<dd>
+false if no image with the given id is availale </dd></dl>
+
+</div>
+</div>
+<a id="af6501c61f1d9b47003cbac1119477e6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6501c61f1d9b47003cbac1119477e6e">&#9670;&nbsp;</a></span>TimeStamps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;TimePointT&gt; ifm3d::Frame::TimeStamps </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the timestamps of the frame. </p>
+<dl class="section return"><dt>Returns</dt><dd>the timestamps </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/ifm3d/modules/framegrabber/include/ifm3d/fg/<a class="el" href="frame_8h_source.html">frame.h</a></li>
 </ul>

@@ -1,0 +1,42 @@
+ifm3dpy.CameraBase
+==================
+
+.. currentmodule:: ifm3dpy
+
+.. autoclass:: CameraBase
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~CameraBase.__init__
+      ~CameraBase.am_i
+      ~CameraBase.check_minimum_firmware_version
+      ~CameraBase.device_parameter
+      ~CameraBase.device_type
+      ~CameraBase.force_trigger
+      ~CameraBase.from_json
+      ~CameraBase.reboot
+      ~CameraBase.to_json
+      ~CameraBase.trace_logs
+      ~CameraBase.who_am_i
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~CameraBase.ip
+      ~CameraBase.xmlrpc_port
+   
+   

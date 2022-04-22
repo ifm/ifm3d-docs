@@ -3,10 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FrameGrabber &mdash; ifm3d  documentation</title>
+  <title>ifm3dpy.FrameGrabber &mdash; ifm3d  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -19,8 +18,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="FutureAwaitable__FramePtr" href="ifm3dpy.FutureAwaitable__FramePtr.html" />
-    <link rel="prev" title="Frame" href="ifm3dpy.Frame.html" /> 
+    <link rel="next" title="ifm3dpy.O3RCamera" href="ifm3dpy.O3RCamera.html" />
+    <link rel="prev" title="ifm3dpy.Frame" href="ifm3dpy.Frame.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,14 +41,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../content/installation_instructions/index.html">Installation instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cli_link.html">Command Line tool</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../python_api.html">Python API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.run.html">run</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.Camera.html">Camera</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.CameraBase.html">CameraBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.Frame.html">Frame</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">FrameGrabber</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.FutureAwaitable__FramePtr.html">FutureAwaitable__FramePtr</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.O3RCamera.html">O3RCamera</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.SWUpdater.html">SWUpdater</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="ifm3dpy.html">ifm3dpy</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.run.html">ifm3dpy.run</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.Camera.html">ifm3dpy.Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.CameraBase.html">ifm3dpy.CameraBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.Frame.html">ifm3dpy.Frame</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ifm3dpy.FrameGrabber</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.O3RCamera.html">ifm3dpy.O3RCamera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.SWUpdater.html">ifm3dpy.SWUpdater</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.image_id.html">ifm3dpy.image_id</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../cpp_api/annotated.html">C++ API</a></li>
@@ -70,9 +72,10 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../python_api.html">Python API Reference</a> &raquo;</li>
-      <li>FrameGrabber</li>
+          <li><a href="ifm3dpy.html">ifm3dpy</a> &raquo;</li>
+      <li>ifm3dpy.FrameGrabber</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/api/ifm3dpy.FrameGrabber.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/_autosummary/ifm3dpy.FrameGrabber.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -80,38 +83,54 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="framegrabber">
-<h1>FrameGrabber<a class="headerlink" href="#framegrabber" title="Permalink to this headline"></a></h1>
+  <div class="section" id="ifm3dpy-framegrabber">
+<h1>ifm3dpy.FrameGrabber<a class="headerlink" href="#ifm3dpy-framegrabber" title="Permalink to this headline"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ifm3dpy.FrameGrabber">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ifm3dpy.</span></span><span class="sig-name descname"><span class="pre">FrameGrabber</span></span><a class="headerlink" href="#ifm3dpy.FrameGrabber" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
 <p>Implements a TCP FrameGrabber connected to a provided Camera</p>
-<p class="rubric">Methods Summary</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.FrameGrabber.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.FrameGrabber" title="ifm3dpy.FrameGrabber"><span class="pre">ifm3dpy.FrameGrabber</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">cam</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="ifm3dpy.CameraBase.html#ifm3dpy.CameraBase" title="ifm3dpy.CameraBase"><span class="pre">ifm3dpy.CameraBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pcic_port</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.FrameGrabber.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cam</strong> (<a class="reference internal" href="ifm3dpy.Camera.html#ifm3dpy.Camera" title="ifm3dpy.Camera"><em>ifm3dpy.Camera</em></a>) – The camera instance to grab frames from.</p></li>
+<li><p><strong>pcic_port</strong> (<em>uint16</em>) – The PCIC port</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Methods</p>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.is_running" title="ifm3dpy.FrameGrabber.is_running"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_running</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.__init__" title="ifm3dpy.FrameGrabber.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self, cam[, pcic_port])</p></td>
+<td><p>Constructor</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.is_running" title="ifm3dpy.FrameGrabber.is_running"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_running</span></code></a>(self)</p></td>
 <td><p>Returns true if the worker thread is currently running</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.on_new_frame" title="ifm3dpy.FrameGrabber.on_new_frame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_new_frame</span></code></a>(self[, callback])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.on_new_frame" title="ifm3dpy.FrameGrabber.on_new_frame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_new_frame</span></code></a>(self[, callback])</p></td>
 <td><p>The callback will be executed whenever a new frame is available.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.start" title="ifm3dpy.FrameGrabber.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a>(self[, images])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.start" title="ifm3dpy.FrameGrabber.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a>(self[, images])</p></td>
 <td><p>Starts the worker thread for streaming in pixel data from the device</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.stop" title="ifm3dpy.FrameGrabber.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.stop" title="ifm3dpy.FrameGrabber.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>(self)</p></td>
 <td><p>Stops the worker thread for streaming in pixel data from the device</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.wait_for_frame" title="ifm3dpy.FrameGrabber.wait_for_frame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for_frame</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.wait_for_frame" title="ifm3dpy.FrameGrabber.wait_for_frame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for_frame</span></code></a>(self)</p></td>
 <td><p>Returns an Awaitable that will resolve when a new frame is available</p></td>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Methods Documentation</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.FrameGrabber.is_running">
 <span class="sig-name descname"><span class="pre">is_running</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.FrameGrabber" title="ifm3dpy.FrameGrabber"><span class="pre">ifm3dpy.FrameGrabber</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ifm3dpy.FrameGrabber.is_running" title="Permalink to this definition"></a></dt>
@@ -127,10 +146,11 @@ It receives the frame as an argument.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.FrameGrabber.start">
-<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.FrameGrabber" title="ifm3dpy.FrameGrabber"><span class="pre">ifm3dpy.FrameGrabber</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">images</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">set()</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ifm3dpy.FrameGrabber.start" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.FrameGrabber" title="ifm3dpy.FrameGrabber"><span class="pre">ifm3dpy.FrameGrabber</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">images</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="ifm3dpy.image_id.html#ifm3dpy.image_id" title="ifm3dpy.image_id"><span class="pre">ifm3dpy.image_id</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">set()</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ifm3dpy.FrameGrabber.start" title="Permalink to this definition"></a></dt>
 <dd><p>Starts the worker thread for streaming in pixel data from the device</p>
-<dl class="simple">
-<dt>images<span class="classifier">List[uint64]</span></dt><dd><p>A List of ImageId which to receive</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>images</strong> (<em>List</em><em>[</em><em>uint64</em><em>]</em>) – A List of image_id which to receive</p>
 </dd>
 </dl>
 </dd></dl>
@@ -143,7 +163,7 @@ It receives the frame as an argument.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.FrameGrabber.wait_for_frame">
-<span class="sig-name descname"><span class="pre">wait_for_frame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.FrameGrabber" title="ifm3dpy.FrameGrabber"><span class="pre">ifm3dpy.FrameGrabber</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ifm3dpy.FutureAwaitable__FramePtr.html#ifm3dpy.FutureAwaitable__FramePtr" title="ifm3dpy.FutureAwaitable__FramePtr"><span class="pre">ifm3dpy.FutureAwaitable__FramePtr</span></a></span></span><a class="headerlink" href="#ifm3dpy.FrameGrabber.wait_for_frame" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">wait_for_frame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.FrameGrabber" title="ifm3dpy.FrameGrabber"><span class="pre">ifm3dpy.FrameGrabber</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ifm3dpy._FutureAwaitable__FramePtr</span></span></span><a class="headerlink" href="#ifm3dpy.FrameGrabber.wait_for_frame" title="Permalink to this definition"></a></dt>
 <dd><p>Returns an Awaitable that will resolve when a new frame is available</p>
 </dd></dl>
 
@@ -155,8 +175,8 @@ It receives the frame as an argument.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="ifm3dpy.Frame.html" class="btn btn-neutral float-left" title="Frame" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ifm3dpy.FutureAwaitable__FramePtr.html" class="btn btn-neutral float-right" title="FutureAwaitable__FramePtr" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ifm3dpy.Frame.html" class="btn btn-neutral float-left" title="ifm3dpy.Frame" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ifm3dpy.O3RCamera.html" class="btn btn-neutral float-right" title="ifm3dpy.O3RCamera" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

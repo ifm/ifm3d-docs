@@ -6,7 +6,6 @@
   <title>Python API Reference &mdash; ifm3d  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
       <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
@@ -19,7 +18,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="run" href="api/ifm3dpy.run.html" />
+    <link rel="next" title="ifm3dpy" href="_autosummary/ifm3dpy.html" />
     <link rel="prev" title="ifm3d - Command Line Tool" href="cli_link.html" /> 
 </head>
 
@@ -42,14 +41,7 @@
 <li class="toctree-l1"><a class="reference internal" href="content/installation_instructions/index.html">Installation instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cli_link.html">Command Line tool</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Python API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api/ifm3dpy.run.html">run</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/ifm3dpy.Camera.html">Camera</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/ifm3dpy.CameraBase.html">CameraBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/ifm3dpy.Frame.html">Frame</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/ifm3dpy.FrameGrabber.html">FrameGrabber</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/ifm3dpy.FutureAwaitable__FramePtr.html">FutureAwaitable__FramePtr</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/ifm3dpy.O3RCamera.html">O3RCamera</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/ifm3dpy.SWUpdater.html">SWUpdater</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ifm3dpy.html">ifm3dpy</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="cpp_api/annotated.html">C++ API</a></li>
@@ -81,121 +73,17 @@
              
   <div class="tex2jax_ignore mathjax_ignore section" id="python-api-reference">
 <h1>Python API Reference<a class="headerlink" href="#python-api-reference" title="Permalink to this headline"></a></h1>
-<div class="section" id="module-ifm3dpy">
-<span id="ifm3dpy-module"></span><h2>ifm3dpy Module<a class="headerlink" href="#module-ifm3dpy" title="Permalink to this headline"></a></h2>
-<p>Bindings for the ifm3d Camera Library</p>
-<div class="section" id="variables">
-<h3>Variables<a class="headerlink" href="#variables" title="Permalink to this headline"></a></h3>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p>__version__</p></td>
-<td><p>The ifm3d version.</p></td>
-</tr>
-<tr class="row-even"><td><p>__package__</p></td>
-<td><p>The ifm3d package.</p></td>
-</tr>
-<tr class="row-odd"><td><p>DEFAULT_IP</p></td>
-<td><p>The default IP to connect to.</p></td>
-</tr>
-<tr class="row-even"><td><p>DEFAULT_XMLRPC_PORT</p></td>
-<td><p>The default XMLRPC port.</p></td>
-</tr>
-<tr class="row-odd"><td><p>DEFAULT_PASSWORD</p></td>
-<td><p>The default password.</p></td>
-</tr>
-<tr class="row-even"><td><p>O3D_TIME_SUPPORT_MAJOR</p></td>
-<td><p>Constant for querying for O3D time support.</p></td>
-</tr>
-<tr class="row-odd"><td><p>O3D_TIME_SUPPORT_MINOR</p></td>
-<td><p>Constant for querying for O3D time support.</p></td>
-</tr>
-<tr class="row-even"><td><p>O3D_TIME_SUPPORT_PATCH</p></td>
-<td><p>Constant for querying for O3D time support.</p></td>
-</tr>
-<tr class="row-odd"><td><p>O3D_TMP_PARAMS_SUPPORT_MAJOR</p></td>
-<td><p>Constant for querying for O3D temporary parameter support.</p></td>
-</tr>
-<tr class="row-even"><td><p>O3D_TMP_PARAMS_SUPPORT_MINOR</p></td>
-<td><p>Constant for querying for O3D temporary parameter support.</p></td>
-</tr>
-<tr class="row-odd"><td><p>O3D_TMP_PARAMS_SUPPORT_PATCH</p></td>
-<td><p>Constant for querying for O3D temporary parameter support.</p></td>
-</tr>
-<tr class="row-even"><td><p>O3D_INTRINSIC_PARAM_SUPPORT_MAJOR</p></td>
-<td><p>Constant for querying for O3D intrinsic parameter support.</p></td>
-</tr>
-<tr class="row-odd"><td><p>O3D_INTRINSIC_PARAM_SUPPORT_MINOR</p></td>
-<td><p>Constant for querying for O3D intrinsic parameter support.</p></td>
-</tr>
-<tr class="row-even"><td><p>O3D_INTRINSIC_PARAM_SUPPORT_PATCH</p></td>
-<td><p>Constant for querying for O3D intrinsic parameter support.</p></td>
-</tr>
-<tr class="row-odd"><td><p>O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_MAJOR</p></td>
-<td><p>Constant for querying for O3D inverse intrinsic parameter support.</p></td>
-</tr>
-<tr class="row-even"><td><p>O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_MINOR</p></td>
-<td><p>Constant for querying for O3D inverse intrinsic parameter support.</p></td>
-</tr>
-<tr class="row-odd"><td><p>O3D_INVERSE_INTRINSIC_PARAM_SUPPORT_PATCH</p></td>
-<td><p>Constant for querying for O3D inverse intrinsic parameter support.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="functions">
-<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h3>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="api/ifm3dpy.run.html#ifm3dpy.run" title="ifm3dpy.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(arg0)</p></td>
-<td><p>This function provides python application interface to run command line tool</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ifm3dpy.html#module-ifm3dpy" title="ifm3dpy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ifm3dpy</span></code></a></p></td>
+<td><p>Bindings for the ifm3d Camera Library</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="classes">
-<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h3>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="api/ifm3dpy.Camera.html#ifm3dpy.Camera" title="ifm3dpy.Camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Camera</span></code></a></p></td>
-<td><p>Class for managing an instance of an O3D/O3X Camera</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="api/ifm3dpy.CameraBase.html#ifm3dpy.CameraBase" title="ifm3dpy.CameraBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CameraBase</span></code></a></p></td>
-<td><p>Base class for managing an instance of an all cameras</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Error</span></code></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="api/ifm3dpy.Frame.html#ifm3dpy.Frame" title="ifm3dpy.Frame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Frame</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="api/ifm3dpy.FrameGrabber.html#ifm3dpy.FrameGrabber" title="ifm3dpy.FrameGrabber"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FrameGrabber</span></code></a></p></td>
-<td><p>Implements a TCP FrameGrabber connected to a provided Camera</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="api/ifm3dpy.FutureAwaitable__FramePtr.html#ifm3dpy.FutureAwaitable__FramePtr" title="ifm3dpy.FutureAwaitable__FramePtr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FutureAwaitable__FramePtr</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="api/ifm3dpy.O3RCamera.html#ifm3dpy.O3RCamera" title="ifm3dpy.O3RCamera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3RCamera</span></code></a></p></td>
-<td><p>Class for managing an instance of an O3R Camera</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="api/ifm3dpy.SWUpdater.html#ifm3dpy.SWUpdater" title="ifm3dpy.SWUpdater"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SWUpdater</span></code></a></p></td>
-<td><p>Class for managing an instance of an swupdater</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
 </div>
 
 
@@ -203,7 +91,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="cli_link.html" class="btn btn-neutral float-left" title="ifm3d - Command Line Tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="api/ifm3dpy.run.html" class="btn btn-neutral float-right" title="run" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="_autosummary/ifm3dpy.html" class="btn btn-neutral float-right" title="ifm3dpy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

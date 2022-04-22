@@ -6,7 +6,6 @@
   <title>How to: receive an image &mdash; ifm3d  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
@@ -222,7 +221,7 @@ For the curious, we pass the raw pointer to the <code class="docutils literal no
   <span class="c1">//////////////////////////</span>
   <span class="c1">// Example for 3D data:</span>
   <span class="c1">//////////////////////////</span>
-  <span class="k">auto</span> <span class="n">dist</span> <span class="o">=</span> <span class="n">frame</span><span class="o">-&gt;</span><span class="n">GetImage</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">image_chunk</span><span class="o">::</span><span class="n">RADIAL_DISTANCE</span><span class="p">);</span>
+  <span class="k">auto</span> <span class="n">dist</span> <span class="o">=</span> <span class="n">frame</span><span class="o">-&gt;</span><span class="n">GetImage</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">image_id</span><span class="o">::</span><span class="n">RADIAL_DISTANCE</span><span class="p">);</span>
 
   <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">dist</span><span class="p">.</span><span class="n">height</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">dist</span><span class="p">.</span><span class="n">width</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 

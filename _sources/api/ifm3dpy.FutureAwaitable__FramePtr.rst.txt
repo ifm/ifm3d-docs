@@ -1,7 +1,0 @@
-FutureAwaitable__FramePtr
-=========================
-
-.. currentmodule:: ifm3dpy
-
-.. autoclass:: FutureAwaitable__FramePtr
-   :show-inheritance:

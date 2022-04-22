@@ -3,10 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SWUpdater &mdash; ifm3d  documentation</title>
+  <title>ifm3dpy.SWUpdater &mdash; ifm3d  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -19,8 +18,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="C++ API Reference" href="../cpp_api/annotated.html" />
-    <link rel="prev" title="O3RCamera" href="ifm3dpy.O3RCamera.html" /> 
+    <link rel="next" title="ifm3dpy.image_id" href="ifm3dpy.image_id.html" />
+    <link rel="prev" title="ifm3dpy.O3RCamera" href="ifm3dpy.O3RCamera.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,14 +41,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../content/installation_instructions/index.html">Installation instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cli_link.html">Command Line tool</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../python_api.html">Python API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.run.html">run</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.Camera.html">Camera</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.CameraBase.html">CameraBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.Frame.html">Frame</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.FrameGrabber.html">FrameGrabber</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.FutureAwaitable__FramePtr.html">FutureAwaitable__FramePtr</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.O3RCamera.html">O3RCamera</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">SWUpdater</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="ifm3dpy.html">ifm3dpy</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.run.html">ifm3dpy.run</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.Camera.html">ifm3dpy.Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.CameraBase.html">ifm3dpy.CameraBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.Frame.html">ifm3dpy.Frame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.FrameGrabber.html">ifm3dpy.FrameGrabber</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.O3RCamera.html">ifm3dpy.O3RCamera</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ifm3dpy.SWUpdater</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.image_id.html">ifm3dpy.image_id</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../cpp_api/annotated.html">C++ API</a></li>
@@ -70,9 +72,10 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../python_api.html">Python API Reference</a> &raquo;</li>
-      <li>SWUpdater</li>
+          <li><a href="ifm3dpy.html">ifm3dpy</a> &raquo;</li>
+      <li>ifm3dpy.SWUpdater</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/api/ifm3dpy.SWUpdater.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/_autosummary/ifm3dpy.SWUpdater.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -80,14 +83,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="swupdater">
-<h1>SWUpdater<a class="headerlink" href="#swupdater" title="Permalink to this headline"></a></h1>
+  <div class="section" id="ifm3dpy-swupdater">
+<h1>ifm3dpy.SWUpdater<a class="headerlink" href="#ifm3dpy-swupdater" title="Permalink to this headline"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ifm3dpy.SWUpdater">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ifm3dpy.</span></span><span class="sig-name descname"><span class="pre">SWUpdater</span></span><a class="headerlink" href="#ifm3dpy.SWUpdater" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
 <p>Class for managing an instance of an swupdater</p>
-<p class="rubric">Methods Summary</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.SWUpdater.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">ifm3dpy.SWUpdater,</span> <span class="pre">cam:</span> <span class="pre">ifm3dpy.CameraBase,</span> <span class="pre">cb:</span> <span class="pre">Callable[[float,</span> <span class="pre">str],</span> <span class="pre">None]</span> <span class="pre">=</span> <span class="pre">&lt;built-in</span> <span class="pre">method</span>&#160; <span class="pre">of</span> <span class="pre">PyCapsule</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f5202b53090&gt;,</span> <span class="pre">swupdate_recovery_port:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">8080</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.SWUpdater.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cam</strong> (<a class="reference internal" href="ifm3dpy.Camera.html#ifm3dpy.Camera" title="ifm3dpy.Camera"><em>ifm3dpy.Camera</em></a>) – The camera instance to grab frames from</p></li>
+<li><p><strong>cb</strong> (<em>callback function  with parameters</em><em> (</em><em>float</em><em>, </em><em>string</em><em>)</em>) – A  function for progress of the update</p></li>
+<li><p><strong>swupdate_recovery_port</strong> (<em>uint16_t</em>) – The Swupdate communication port</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Methods</p>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
@@ -109,9 +127,11 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.SWUpdater.WaitForRecovery" title="ifm3dpy.SWUpdater.WaitForRecovery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WaitForRecovery</span></code></a>(self[, timeout_millis])</p></td>
 <td><p>Waits and check for device in recovery mode till timeout</p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.SWUpdater.__init__" title="ifm3dpy.SWUpdater.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self, cam, cb, str], None] =, ...)</p></td>
+<td><p>Constructor</p></td>
+</tr>
 </tbody>
 </table>
-<p class="rubric">Methods Documentation</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.SWUpdater.FlashFirmware">
 <span class="sig-name descname"><span class="pre">FlashFirmware</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.SWUpdater" title="ifm3dpy.SWUpdater"><span class="pre">ifm3dpy.SWUpdater</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">swu_file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_millis</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ifm3dpy.SWUpdater.FlashFirmware" title="Permalink to this definition"></a></dt>
@@ -122,8 +142,12 @@
 <dt>timeout_millis<span class="classifier">long</span></dt><dd><p>A timeout value in milliseconds</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>bool</dt><dd><p>True if firmware upload is successful</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if firmware upload is successful</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
 </dd>
 </dl>
 </dd></dl>
@@ -149,8 +173,12 @@ till timeout</p>
 <dt>timeout_millis<span class="classifier">long</span></dt><dd><p>A timeout value in milliseconds</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>bool</dt><dd><p>True if device in the productive mode</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if device in the productive mode</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
 </dd>
 </dl>
 </dd></dl>
@@ -164,8 +192,12 @@ till timeout</p>
 <dt>timeout_millis<span class="classifier">long</span></dt><dd><p>A timeout value in milliseconds</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>bool</dt><dd><p>True if device in the recovery mode</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if device in the recovery mode</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
 </dd>
 </dl>
 </dd></dl>
@@ -178,8 +210,8 @@ till timeout</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="ifm3dpy.O3RCamera.html" class="btn btn-neutral float-left" title="O3RCamera" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../cpp_api/annotated.html" class="btn btn-neutral float-right" title="C++ API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ifm3dpy.O3RCamera.html" class="btn btn-neutral float-left" title="ifm3dpy.O3RCamera" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ifm3dpy.image_id.html" class="btn btn-neutral float-right" title="ifm3dpy.image_id" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
