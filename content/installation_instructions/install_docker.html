@@ -84,10 +84,32 @@
              
   <div class="section" id="docker-dev-containers">
 <h1>Docker dev containers<a class="headerlink" href="#docker-dev-containers" title="Permalink to this headline"></a></h1>
-<p>Development containers are available. They are built nightly with the latest version of ifm3d available on the {{ ifm3d_main_branch }} branch. You can pull them using the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ docker pull ghcr.io/ifm/ifm3d:latest
+<p>Multiple development containers are available. You can pull them using the following command, with the relevant tag:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ docker pull ghcr.io/ifm/ifm3d:TAG
 </pre></div>
 </div>
+<p>The following tags are available:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">stable</span></code>: this is the {{ ‘<span class="xref myst">latest released version</span>’.format(ifm3d_latest_tag_url) }}.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">latest</span></code>: this is a nightly build with the latest version of ifm3d available on the {{ ifm3d_main_branch }} branch. This typically contains work in progress.</p></li>
+<li><p>VERSION: you can specify a specific version of ifm3d, for instance, use:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ docker pull ghcr.io/ifm/ifm3d:v0.93.0
+</pre></div>
+</div>
+<p>The full list of available container versions is available {{ ‘<span class="xref myst">here</span>’.format(ifm3d_containers_list_url) }}.</p>
+<p>For each tag, several suffixes are available:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ubuntu</span></code>: an Ubuntu-based build, available both for amd64 and aarch64.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">l4t</span></code>: a build based on nvidia’s Linux 4 Tegra, only available for aarch64 architecture.</p></li>
+</ul>
+<p>Each of these suffixes can be combined with a tag to get a specific version for a specific OS. For instance, you can use the tag <code class="docutils literal notranslate"><span class="pre">v0.93.0-l4t</span></code> to get the Linux 4 Tegra based build of ifm3d version 0.93.0.
+When no suffix is added to the tag, the default build is used, which is Ubuntu based.</p>
+<p>To explicitly specify the architecture required for the image, one can use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">pull</span> <span class="o">--</span><span class="n">platform</span><span class="o">=</span><span class="n">linux</span><span class="o">/</span><span class="n">arm64</span> <span class="n">ghcr</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ifm</span><span class="o">/</span><span class="n">ifm3d</span><span class="p">:</span><span class="n">stable</span>
+</pre></div>
+</div>
+<p>Suffixes are also available to define the platform. For instance, one can use the tag <code class="docutils literal notranslate"><span class="pre">stable-ubuntu-arm64</span></code>.</p>
 <p>For more detailed documentation on using docker containers with the O3R platform, you can refer to <span class="xref myst">this section</span>.</p>
 </div>
 
