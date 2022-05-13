@@ -128,57 +128,58 @@ $(document).ready(function(){initNavTree('frame_8h_source.html',''); initResizab
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    O3R_DISTANCE_IMAGE_INFORMATION = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::O3R_DISTANCE_IMAGE_INFORMATION),</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    JSON_MODEL = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::JSON_MODEL),</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    ALGO_DEBUG = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::ALGO_DEBUG),</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    XYZ = std::numeric_limits&lt;std::uint32_t&gt;::max(), <span class="comment">// The point cloud encoded as a 3 channel XYZ image</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// clang-format on</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  };</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">using</span> TimePointT = std::chrono::time_point&lt;std::chrono::system_clock,</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                                             std::chrono::nanoseconds&gt;;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classifm3d_1_1Frame.html">   56</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classifm3d_1_1Frame.html">Frame</a></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">using</span> Ptr = std::shared_ptr&lt;Frame&gt;;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>(<span class="keyword">const</span> std::map&lt;image_id, Image&gt;&amp; images,</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;          <span class="keyword">const</span> std::vector&lt;TimePointT&gt; timestamps);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    ~<a class="code" href="classifm3d_1_1Frame.html">Frame</a>();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; t);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; t);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>(<a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp;&amp; t);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; operator=(<a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp;&amp; t);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    std::vector&lt;TimePointT&gt; <a class="code" href="classifm3d_1_1Frame.html#af6501c61f1d9b47003cbac1119477e6e">TimeStamps</a>();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classifm3d_1_1Frame.html#a35fcc1cc2ae9f829e69beda6a5e2f1f4">HasImage</a>(image_id <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="classifm3d_1_1Image.html">Image</a>&amp; <a class="code" href="classifm3d_1_1Frame.html#a84ce0e3db240a37db0fe6370ef7f2209">GetImage</a>(image_id <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    decltype(std::declval&lt;std::map&lt;image_id, Image&gt;&gt;().begin())</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    begin() noexcept;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    decltype(std::declval&lt;<span class="keyword">const</span> std::map&lt;image_id, Image&gt;&gt;().begin()) begin()</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    decltype(std::declval&lt;std::map&lt;image_id, Image&gt;&gt;().end()) end() noexcept;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    decltype(std::declval&lt;<span class="keyword">const</span> std::map&lt;image_id, Image&gt;&gt;().end()) end()</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">class </span>Impl;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    std::unique_ptr&lt;Impl&gt; pImpl;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  }; <span class="comment">// end: class Organizer</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#endif // IFM3D_FG_FRAME_H</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    EXPOSURE_TIME,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    ILLUMINATION_TEMP,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    XYZ = std::numeric_limits&lt;std::uint32_t&gt;::max(), <span class="comment">// The point cloud encoded as a 3 channel XYZ image</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// clang-format on</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  };</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">using</span> TimePointT = std::chrono::time_point&lt;std::chrono::system_clock,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                             std::chrono::nanoseconds&gt;;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classifm3d_1_1Frame.html">   57</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classifm3d_1_1Frame.html">Frame</a></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">using</span> Ptr = std::shared_ptr&lt;Frame&gt;;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>(<span class="keyword">const</span> std::map&lt;image_id, Image&gt;&amp; images,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;          <span class="keyword">const</span> std::vector&lt;TimePointT&gt; timestamps);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    ~<a class="code" href="classifm3d_1_1Frame.html">Frame</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; t);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; t);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>(<a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp;&amp; t);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; operator=(<a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp;&amp; t);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    std::vector&lt;TimePointT&gt; <a class="code" href="classifm3d_1_1Frame.html#af6501c61f1d9b47003cbac1119477e6e">TimeStamps</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classifm3d_1_1Frame.html#a35fcc1cc2ae9f829e69beda6a5e2f1f4">HasImage</a>(image_id <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="classifm3d_1_1Image.html">Image</a>&amp; <a class="code" href="classifm3d_1_1Frame.html#a84ce0e3db240a37db0fe6370ef7f2209">GetImage</a>(image_id <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    decltype(std::declval&lt;std::map&lt;image_id, Image&gt;&gt;().begin())</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    begin() noexcept;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    decltype(std::declval&lt;<span class="keyword">const</span> std::map&lt;image_id, Image&gt;&gt;().begin()) begin()</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    decltype(std::declval&lt;std::map&lt;image_id, Image&gt;&gt;().end()) end() noexcept;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    decltype(std::declval&lt;<span class="keyword">const</span> std::map&lt;image_id, Image&gt;&gt;().end()) end()</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">class </span>Impl;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    std::unique_ptr&lt;Impl&gt; pImpl;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  }; <span class="comment">// end: class Organizer</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">#endif // IFM3D_FG_FRAME_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassifm3d_1_1Image_html"><div class="ttname"><a href="classifm3d_1_1Image.html">ifm3d::Image</a></div><div class="ttdoc">The class Image represent a STL conatiner to stored image data from the ifm devices in 2 dimension an...</div><div class="ttdef"><b>Definition:</b> image.h:95</div></div>
 <div class="ttc" id="aclassifm3d_1_1Frame_html_a84ce0e3db240a37db0fe6370ef7f2209"><div class="ttname"><a href="classifm3d_1_1Frame.html#a84ce0e3db240a37db0fe6370ef7f2209">ifm3d::Frame::GetImage</a></div><div class="ttdeci">Image &amp; GetImage(image_id id)</div><div class="ttdoc">Get the image with the given id.</div></div>
 <div class="ttc" id="aclassifm3d_1_1Frame_html_a35fcc1cc2ae9f829e69beda6a5e2f1f4"><div class="ttname"><a href="classifm3d_1_1Frame.html#a35fcc1cc2ae9f829e69beda6a5e2f1f4">ifm3d::Frame::HasImage</a></div><div class="ttdeci">bool HasImage(image_id id)</div><div class="ttdoc">Check if a image with the given id is available in this frame.</div></div>
-<div class="ttc" id="aclassifm3d_1_1Frame_html"><div class="ttname"><a href="classifm3d_1_1Frame.html">ifm3d::Frame</a></div><div class="ttdef"><b>Definition:</b> frame.h:56</div></div>
+<div class="ttc" id="aclassifm3d_1_1Frame_html"><div class="ttname"><a href="classifm3d_1_1Frame.html">ifm3d::Frame</a></div><div class="ttdef"><b>Definition:</b> frame.h:57</div></div>
 <div class="ttc" id="aclassifm3d_1_1Frame_html_af6501c61f1d9b47003cbac1119477e6e"><div class="ttname"><a href="classifm3d_1_1Frame.html#af6501c61f1d9b47003cbac1119477e6e">ifm3d::Frame::TimeStamps</a></div><div class="ttdeci">std::vector&lt; TimePointT &gt; TimeStamps()</div><div class="ttdoc">Get the timestamps of the frame.</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
