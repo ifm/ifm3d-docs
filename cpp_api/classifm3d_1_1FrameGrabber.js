@@ -15,6 +15,6 @@ var classifm3d_1_1FrameGrabber =
     [ "Start", "classifm3d_1_1FrameGrabber.html#a61d84ebd2b85ac5fbdb3de21acde4abd", null ],
     [ "Start", "classifm3d_1_1FrameGrabber.html#a93a37f082c3792c8b8202eac27548cc4", null ],
     [ "Stop", "classifm3d_1_1FrameGrabber.html#a64a5d1cfd4f5ce826b3fa7daa488c408", null ],
-    [ "SWTrigger", "classifm3d_1_1FrameGrabber.html#af2c5da6f6b74e5eb059e2cc2ddde2b57", null ],
+    [ "SWTrigger", "classifm3d_1_1FrameGrabber.html#a0bcaaf3a21897fadbcd4fe267aa139d9", null ],
     [ "WaitForFrame", "classifm3d_1_1FrameGrabber.html#a8911d6f0a032c9c072f812194ec9bb85", null ]
 ];

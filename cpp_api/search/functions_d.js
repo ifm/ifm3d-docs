@@ -11,7 +11,7 @@ var searchData=
   ['settemporaryapplicationparameters_223',['SetTemporaryApplicationParameters',['../classifm3d_1_1Camera.html#a7f9ab85a8f9c6c2695d3cfe9eb74b661',1,'ifm3d::Camera']]],
   ['start_224',['Start',['../classifm3d_1_1FrameGrabber.html#ac9f4c0830e2cf65e423560e783fc6bba',1,'ifm3d::FrameGrabber::Start(const std::set&lt; ifm3d::image_id &gt; &amp;images={ ifm3d::image_id::AMPLITUDE, ifm3d::image_id::XYZ})'],['../classifm3d_1_1FrameGrabber.html#a61d84ebd2b85ac5fbdb3de21acde4abd',1,'ifm3d::FrameGrabber::Start(std::set&lt; image_id &gt; &amp;images, T id, Args... args)'],['../classifm3d_1_1FrameGrabber.html#a93a37f082c3792c8b8202eac27548cc4',1,'ifm3d::FrameGrabber::Start(T id, Args... args)']]],
   ['stop_225',['Stop',['../classifm3d_1_1FrameGrabber.html#a64a5d1cfd4f5ce826b3fa7daa488c408',1,'ifm3d::FrameGrabber::Stop()'],['../classifm3d_1_1PCICClient.html#ae76ab7d6821e6c46b65f788045385de4',1,'ifm3d::PCICClient::Stop()']]],
-  ['swtrigger_226',['SWTrigger',['../classifm3d_1_1FrameGrabber.html#af2c5da6f6b74e5eb059e2cc2ddde2b57',1,'ifm3d::FrameGrabber']]],
+  ['swtrigger_226',['SWTrigger',['../classifm3d_1_1FrameGrabber.html#a0bcaaf3a21897fadbcd4fe267aa139d9',1,'ifm3d::FrameGrabber']]],
   ['swupdater_227',['SWUpdater',['../classifm3d_1_1SWUpdater.html#af794ca875bc7619f2d56aabd7ace3111',1,'ifm3d::SWUpdater']]],
   ['swupdateversion_228',['SwUpdateVersion',['../classifm3d_1_1CameraBase.html#aba1ae6db8945028caded3ca1e2946380',1,'ifm3d::CameraBase::SwUpdateVersion()'],['../classifm3d_1_1O3RCamera.html#ab0e7b5641c88db8bc05f9429a2f125a6',1,'ifm3d::O3RCamera::SwUpdateVersion()']]]
 ];
