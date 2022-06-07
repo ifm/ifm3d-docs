@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('pcicclient_2pcicclient_8h_source.html'
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;mutex&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;thread&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;ifm3d/camera.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;ifm3d/device.h&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>ifm3d</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
@@ -110,15 +110,15 @@ $(document).ready(function(){initNavTree('pcicclient_2pcicclient_8h_source.html'
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">using</span> Ptr = std::shared_ptr&lt;PCICClient&gt;;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classifm3d_1_1PCICClient.html#a24a2331b190073c4a8246531add561ea">PCICClient</a>(ifm3d::Camera::Ptr cam,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classifm3d_1_1PCICClient.html#a216862c9f37385ec769d848d8a0283ec">PCICClient</a>(ifm3d::LegacyDevice::Ptr cam,</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;               <span class="keyword">const</span> std::uint16_t pcic_port = ifm3d::PCIC_PORT);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classifm3d_1_1PCICClient.html#a23868be539bfc42602863864ac7c05e0">~PCICClient</a>();</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// copy and move semantics</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classifm3d_1_1PCICClient.html#a24a2331b190073c4a8246531add561ea">PCICClient</a>(<a class="code" href="classifm3d_1_1PCICClient.html">PCICClient</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classifm3d_1_1PCICClient.html#a216862c9f37385ec769d848d8a0283ec">PCICClient</a>(<a class="code" href="classifm3d_1_1PCICClient.html">PCICClient</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classifm3d_1_1PCICClient.html">PCICClient</a>&amp; operator=(<a class="code" href="classifm3d_1_1PCICClient.html">PCICClient</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classifm3d_1_1PCICClient.html#a24a2331b190073c4a8246531add561ea">PCICClient</a>(<a class="code" href="classifm3d_1_1PCICClient.html">PCICClient</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classifm3d_1_1PCICClient.html#a216862c9f37385ec769d848d8a0283ec">PCICClient</a>(<a class="code" href="classifm3d_1_1PCICClient.html">PCICClient</a>&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classifm3d_1_1PCICClient.html">PCICClient</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1PCICClient.html">PCICClient</a>&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1PCICClient.html#ae76ab7d6821e6c46b65f788045385de4">Stop</a>();</div>
@@ -157,8 +157,8 @@ $(document).ready(function(){initNavTree('pcicclient_2pcicclient_8h_source.html'
 <div class="ttc" id="aclassifm3d_1_1PCICClient_html_a23868be539bfc42602863864ac7c05e0"><div class="ttname"><a href="classifm3d_1_1PCICClient.html#a23868be539bfc42602863864ac7c05e0">ifm3d::PCICClient::~PCICClient</a></div><div class="ttdeci">virtual ~PCICClient()</div></div>
 <div class="ttc" id="aclassifm3d_1_1PCICClient_html_ae76ab7d6821e6c46b65f788045385de4"><div class="ttname"><a href="classifm3d_1_1PCICClient.html#ae76ab7d6821e6c46b65f788045385de4">ifm3d::PCICClient::Stop</a></div><div class="ttdeci">void Stop()</div></div>
 <div class="ttc" id="aclassifm3d_1_1PCICClient_html_a6e003c59cae62678410aadeb06967ee7"><div class="ttname"><a href="classifm3d_1_1PCICClient.html#a6e003c59cae62678410aadeb06967ee7">ifm3d::PCICClient::SetErrorCallback</a></div><div class="ttdeci">long SetErrorCallback(std::function&lt; void(const std::string &amp;error)&gt; callback)</div></div>
+<div class="ttc" id="aclassifm3d_1_1PCICClient_html_a216862c9f37385ec769d848d8a0283ec"><div class="ttname"><a href="classifm3d_1_1PCICClient.html#a216862c9f37385ec769d848d8a0283ec">ifm3d::PCICClient::PCICClient</a></div><div class="ttdeci">PCICClient(ifm3d::LegacyDevice::Ptr cam, const std::uint16_t pcic_port=ifm3d::PCIC_PORT)</div></div>
 <div class="ttc" id="aclassifm3d_1_1PCICClient_html_a600017cd6a147eab52e8422e8cf82788"><div class="ttname"><a href="classifm3d_1_1PCICClient.html#a600017cd6a147eab52e8422e8cf82788">ifm3d::PCICClient::SetNotificationCallback</a></div><div class="ttdeci">long SetNotificationCallback(std::function&lt; void(const std::string &amp;notification)&gt; callback)</div></div>
-<div class="ttc" id="aclassifm3d_1_1PCICClient_html_a24a2331b190073c4a8246531add561ea"><div class="ttname"><a href="classifm3d_1_1PCICClient.html#a24a2331b190073c4a8246531add561ea">ifm3d::PCICClient::PCICClient</a></div><div class="ttdeci">PCICClient(ifm3d::Camera::Ptr cam, const std::uint16_t pcic_port=ifm3d::PCIC_PORT)</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

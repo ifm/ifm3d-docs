@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operating_5fmode_251',['operating_mode',['../classifm3d_1_1CameraBase.html#ab2e87f951d6e5ea855bdf2af723dfee9',1,'ifm3d::CameraBase']]]
+  ['operating_5fmode_251',['operating_mode',['../classifm3d_1_1Device.html#ad490f12fe50608c0d93a926271e9e7ea',1,'ifm3d::Device']]]
 ];

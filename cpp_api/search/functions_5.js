@@ -1,22 +1,10 @@
 var searchData=
 [
-  ['get_175',['Get',['../classifm3d_1_1O3RCamera.html#a275baae3de9789e6b04eb8202def49b7',1,'ifm3d::O3RCamera']]],
-  ['getappjson_176',['getAppJSON',['../classifm3d_1_1Camera.html#a2e4f9d45db41860b4d67bd0c3d61a999',1,'ifm3d::Camera']]],
-  ['getdeviceid_177',['GetDeviceId',['../classifm3d_1_1IFMNetworkDevice.html#a15e74fd05c4f07b490f08bdf1ea44173',1,'ifm3d::IFMNetworkDevice']]],
-  ['getdevicename_178',['GetDeviceName',['../classifm3d_1_1IFMNetworkDevice.html#a3603933cf3f1a183c0f596de12d0541f',1,'ifm3d::IFMNetworkDevice']]],
-  ['getexposuretimes_179',['getExposureTimes',['../classifm3d_1_1DistanceImageInfo.html#a4d91486c29d6c5fe492ebb18a94b6807',1,'ifm3d::DistanceImageInfo']]],
-  ['getflag_180',['GetFlag',['../classifm3d_1_1IFMNetworkDevice.html#a5d970c6ba3740a84d2f5f86572875a50',1,'ifm3d::IFMNetworkDevice']]],
-  ['getfoundvia_181',['GetFoundVia',['../classifm3d_1_1IFMNetworkDevice.html#aedbacece95caa6c1f148fa16bbc66005',1,'ifm3d::IFMNetworkDevice']]],
-  ['getgateway_182',['GetGateway',['../classifm3d_1_1IFMNetworkDevice.html#a992310b9244dc5273c8bd3cb349c177f',1,'ifm3d::IFMNetworkDevice']]],
-  ['gethostname_183',['GetHostName',['../classifm3d_1_1IFMNetworkDevice.html#a707ac1059ca8dc2ce188713ede899fd7',1,'ifm3d::IFMNetworkDevice']]],
-  ['getimage_184',['GetImage',['../classifm3d_1_1Frame.html#a84ce0e3db240a37db0fe6370ef7f2209',1,'ifm3d::Frame']]],
-  ['getinit_185',['GetInit',['../classifm3d_1_1O3RCamera.html#a5ac6936e1dda449dd583fe4f7859063c',1,'ifm3d::O3RCamera']]],
-  ['getinitstatus_186',['GetInitStatus',['../classifm3d_1_1O3RCamera.html#af5541b21e98118c4d9db59debeaa1f5d',1,'ifm3d::O3RCamera']]],
-  ['getipaddress_187',['GetIPAddress',['../classifm3d_1_1IFMNetworkDevice.html#ae5465a39c1fc128873b13910498d12ca',1,'ifm3d::IFMNetworkDevice']]],
-  ['getmacaddress_188',['GetMACAddress',['../classifm3d_1_1IFMNetworkDevice.html#a7d43c55ace9605605ab78525975e82b8',1,'ifm3d::IFMNetworkDevice']]],
-  ['getnetmask_189',['GetNetmask',['../classifm3d_1_1IFMNetworkDevice.html#acb57559c3e57978cebb23a56a1c1e01f',1,'ifm3d::IFMNetworkDevice']]],
-  ['getport_190',['GetPort',['../classifm3d_1_1IFMNetworkDevice.html#a6d9f3582cb49ce92600b346cce99a9ce',1,'ifm3d::IFMNetworkDevice']]],
-  ['getschema_191',['GetSchema',['../classifm3d_1_1O3RCamera.html#a49e36cb8582d36d471b0e5ae338274c4',1,'ifm3d::O3RCamera']]],
-  ['gettimestamps_192',['getTimestamps',['../classifm3d_1_1DistanceImageInfo.html#af68ce9aa879ed3ab06de1ce7f1987288',1,'ifm3d::DistanceImageInfo']]],
-  ['getvendorid_193',['GetVendorId',['../classifm3d_1_1IFMNetworkDevice.html#af48559851c7db3001f4619cb0ae3897f',1,'ifm3d::IFMNetworkDevice']]]
+  ['factoryreset_168',['FactoryReset',['../classifm3d_1_1LegacyDevice.html#ab93db59f9980278605af075ed27d3e74',1,'ifm3d::LegacyDevice::FactoryReset()'],['../classifm3d_1_1O3R.html#a51c399c7672a1be536e6b1b81b5a0ddc',1,'ifm3d::O3R::FactoryReset()']]],
+  ['flashfirmware_169',['FlashFirmware',['../classifm3d_1_1SWUpdater.html#a5e61c6b57890bfc62720e4176eef6eba',1,'ifm3d::SWUpdater']]],
+  ['forcetrigger_170',['ForceTrigger',['../classifm3d_1_1Device.html#a010b25d8c4f34075a57e30f1dbacc93b',1,'ifm3d::Device::ForceTrigger()'],['../classifm3d_1_1LegacyDevice.html#afd25834449cf1bc4d78d09fda75b83e5',1,'ifm3d::LegacyDevice::ForceTrigger()']]],
+  ['framegrabber_171',['FrameGrabber',['../classifm3d_1_1FrameGrabber.html#a7f4419ec5b42ba076b92e5a0540946fd',1,'ifm3d::FrameGrabber']]],
+  ['fromjson_172',['FromJSON',['../classifm3d_1_1Device.html#a4706acd5532e7a9fc520c98d6100eee0',1,'ifm3d::Device::FromJSON()'],['../classifm3d_1_1LegacyDevice.html#aa93fe38faec10e6fb5079ced5a3818ca',1,'ifm3d::LegacyDevice::FromJSON()'],['../classifm3d_1_1O3R.html#aa81663e1ae0cc862a6b196dbf634617d',1,'ifm3d::O3R::FromJSON()']]],
+  ['fromjson_5f_173',['FromJSON_',['../classifm3d_1_1LegacyDevice.html#a86d74810263ea21e5f3a3d3516a52ba9',1,'ifm3d::LegacyDevice']]],
+  ['fromjsonstr_174',['FromJSONStr',['../classifm3d_1_1Device.html#a3036b0cfbaae2ffd3ca8bd8eb697ab50',1,'ifm3d::Device']]]
 ];

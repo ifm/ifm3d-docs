@@ -102,9 +102,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>Ptr</b> = std::share
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1c01774693e85f8ca40de0332b7af4f4"><td class="memItemLeft" align="right" valign="top"><a id="a1c01774693e85f8ca40de0332b7af4f4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const std::map&lt; image_id, <a class="el" href="classifm3d_1_1Image.html">Image</a> &gt; &amp;images, const std::vector&lt; TimePointT &gt; timestamps)</td></tr>
-<tr class="separator:a1c01774693e85f8ca40de0332b7af4f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeed8378702c490cace185950792e5007"><td class="memItemLeft" align="right" valign="top"><a id="aeed8378702c490cace185950792e5007"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const std::map&lt; buffer_id, <a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &gt; &amp;images, const std::vector&lt; TimePointT &gt; timestamps)</td></tr>
+<tr class="separator:aeed8378702c490cace185950792e5007"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17377a20079de03dbfd53ef1d49034a2"><td class="memItemLeft" align="right" valign="top"><a id="a17377a20079de03dbfd53ef1d49034a2"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const <a class="el" href="classifm3d_1_1Frame.html">Frame</a> &amp;t)</td></tr>
 <tr class="separator:a17377a20079de03dbfd53ef1d49034a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,38 +120,38 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af6501c61f1d9b47003cbac1119477e6e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; TimePointT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Frame.html#af6501c61f1d9b47003cbac1119477e6e">TimeStamps</a> ()</td></tr>
 <tr class="memdesc:af6501c61f1d9b47003cbac1119477e6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the timestamps of the frame.  <a href="classifm3d_1_1Frame.html#af6501c61f1d9b47003cbac1119477e6e">More...</a><br /></td></tr>
 <tr class="separator:af6501c61f1d9b47003cbac1119477e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35fcc1cc2ae9f829e69beda6a5e2f1f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Frame.html#a35fcc1cc2ae9f829e69beda6a5e2f1f4">HasImage</a> (image_id id)</td></tr>
-<tr class="memdesc:a35fcc1cc2ae9f829e69beda6a5e2f1f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a image with the given id is available in this frame.  <a href="classifm3d_1_1Frame.html#a35fcc1cc2ae9f829e69beda6a5e2f1f4">More...</a><br /></td></tr>
-<tr class="separator:a35fcc1cc2ae9f829e69beda6a5e2f1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84ce0e3db240a37db0fe6370ef7f2209"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classifm3d_1_1Image.html">Image</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Frame.html#a84ce0e3db240a37db0fe6370ef7f2209">GetImage</a> (image_id id)</td></tr>
-<tr class="memdesc:a84ce0e3db240a37db0fe6370ef7f2209"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the image with the given id.  <a href="classifm3d_1_1Frame.html#a84ce0e3db240a37db0fe6370ef7f2209">More...</a><br /></td></tr>
-<tr class="separator:a84ce0e3db240a37db0fe6370ef7f2209"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07fbfed040fdb17f310e2ed33f8aae36"><td class="memItemLeft" align="right" valign="top"><a id="a07fbfed040fdb17f310e2ed33f8aae36"></a>
-decltype(std::declval&lt; std::map&lt; image_id, <a class="el" href="classifm3d_1_1Image.html">Image</a> &gt;&gt;().begin())&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () noexcept</td></tr>
-<tr class="separator:a07fbfed040fdb17f310e2ed33f8aae36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ea30d4bbe6cd2144cfb0d6964eb7ead"><td class="memItemLeft" align="right" valign="top"><a id="a9ea30d4bbe6cd2144cfb0d6964eb7ead"></a>
-decltype(std::declval&lt; const std::map&lt; image_id, <a class="el" href="classifm3d_1_1Image.html">Image</a> &gt;&gt;().begin())&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () const noexcept</td></tr>
-<tr class="separator:a9ea30d4bbe6cd2144cfb0d6964eb7ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea3fd2825a7b18bd107f24511f3a3156"><td class="memItemLeft" align="right" valign="top"><a id="aea3fd2825a7b18bd107f24511f3a3156"></a>
-decltype(std::declval&lt; std::map&lt; image_id, <a class="el" href="classifm3d_1_1Image.html">Image</a> &gt;&gt;().end())&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () noexcept</td></tr>
-<tr class="separator:aea3fd2825a7b18bd107f24511f3a3156"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7203a72b776719684d85c53ef33b9da3"><td class="memItemLeft" align="right" valign="top"><a id="a7203a72b776719684d85c53ef33b9da3"></a>
-decltype(std::declval&lt; const std::map&lt; image_id, <a class="el" href="classifm3d_1_1Image.html">Image</a> &gt;&gt;().end())&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const noexcept</td></tr>
-<tr class="separator:a7203a72b776719684d85c53ef33b9da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13e840f03bc27a443be8ac1e44cefa90"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Frame.html#a13e840f03bc27a443be8ac1e44cefa90">HasBuffer</a> (buffer_id id)</td></tr>
+<tr class="memdesc:a13e840f03bc27a443be8ac1e44cefa90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a image with the given id is available in this frame.  <a href="classifm3d_1_1Frame.html#a13e840f03bc27a443be8ac1e44cefa90">More...</a><br /></td></tr>
+<tr class="separator:a13e840f03bc27a443be8ac1e44cefa90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4514940165e6a990c82bd4554da05f0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Frame.html#a4514940165e6a990c82bd4554da05f0b">GetBuffer</a> (buffer_id id)</td></tr>
+<tr class="memdesc:a4514940165e6a990c82bd4554da05f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the image with the given id.  <a href="classifm3d_1_1Frame.html#a4514940165e6a990c82bd4554da05f0b">More...</a><br /></td></tr>
+<tr class="separator:a4514940165e6a990c82bd4554da05f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39a555b9c37524e117eb06a421e15c5e"><td class="memItemLeft" align="right" valign="top"><a id="a39a555b9c37524e117eb06a421e15c5e"></a>
+decltype(std::declval&lt; std::map&lt; buffer_id, <a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &gt;&gt;().begin())&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () noexcept</td></tr>
+<tr class="separator:a39a555b9c37524e117eb06a421e15c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0761ead4d43f013b22f4665ce7225a90"><td class="memItemLeft" align="right" valign="top"><a id="a0761ead4d43f013b22f4665ce7225a90"></a>
+decltype(std::declval&lt; const std::map&lt; buffer_id, <a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &gt;&gt;().begin())&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () const noexcept</td></tr>
+<tr class="separator:a0761ead4d43f013b22f4665ce7225a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a4265107e9a61010a1c4486db3ab344"><td class="memItemLeft" align="right" valign="top"><a id="a5a4265107e9a61010a1c4486db3ab344"></a>
+decltype(std::declval&lt; std::map&lt; buffer_id, <a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &gt;&gt;().end())&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () noexcept</td></tr>
+<tr class="separator:a5a4265107e9a61010a1c4486db3ab344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77b932062af65df75ca8161eae857a88"><td class="memItemLeft" align="right" valign="top"><a id="a77b932062af65df75ca8161eae857a88"></a>
+decltype(std::declval&lt; const std::map&lt; buffer_id, <a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &gt;&gt;().end())&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const noexcept</td></tr>
+<tr class="separator:a77b932062af65df75ca8161eae857a88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represent a frame of data received from the the device. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a84ce0e3db240a37db0fe6370ef7f2209"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84ce0e3db240a37db0fe6370ef7f2209">&#9670;&nbsp;</a></span>GetImage()</h2>
+<a id="a4514940165e6a990c82bd4554da05f0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4514940165e6a990c82bd4554da05f0b">&#9670;&nbsp;</a></span>GetBuffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classifm3d_1_1Image.html">Image</a>&amp; ifm3d::Frame::GetImage </td>
+          <td class="memname"><a class="el" href="classifm3d_1_1Buffer.html">Buffer</a>&amp; ifm3d::Frame::GetBuffer </td>
           <td>(</td>
-          <td class="paramtype">image_id&#160;</td>
+          <td class="paramtype">buffer_id&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
           <td></td>
         </tr>
@@ -165,7 +165,7 @@ decltype(std::declval&lt; const std::map&lt; image_id, <a class="el" href="class
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classifm3d_1_1Image.html" title="The class Image represent a STL conatiner to stored image data from the ifm devices in 2 dimension an...">Image</a>&amp; Reference to the requrest image </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Image&amp; Reference to the requrest image </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::out_of_range</td><td>if no image with the give id exists </td></tr>
@@ -175,16 +175,16 @@ decltype(std::declval&lt; const std::map&lt; image_id, <a class="el" href="class
 
 </div>
 </div>
-<a id="a35fcc1cc2ae9f829e69beda6a5e2f1f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35fcc1cc2ae9f829e69beda6a5e2f1f4">&#9670;&nbsp;</a></span>HasImage()</h2>
+<a id="a13e840f03bc27a443be8ac1e44cefa90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13e840f03bc27a443be8ac1e44cefa90">&#9670;&nbsp;</a></span>HasBuffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool ifm3d::Frame::HasImage </td>
+          <td class="memname">bool ifm3d::Frame::HasBuffer </td>
           <td>(</td>
-          <td class="paramtype">image_id&#160;</td>
+          <td class="paramtype">buffer_id&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
           <td></td>
         </tr>

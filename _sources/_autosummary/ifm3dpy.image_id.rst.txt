@@ -34,8 +34,10 @@ ifm3dpy.image\_id
       ~image_id.CARTESIAN_Z
       ~image_id.CONFIDENCE
       ~image_id.DIAGNOSTIC_DATA
+      ~image_id.EXPOSURE_TIME
       ~image_id.EXTRINSIC_CALIBRATION
       ~image_id.GRAY
+      ~image_id.ILLUMINATION_TEMP
       ~image_id.INTRINSIC_CALIBRATION
       ~image_id.INVERSE_INTRINSIC_CALIBRATION
       ~image_id.JPEG

@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['reboot_85',['Reboot',['../classifm3d_1_1CameraBase.html#ab13cabb353b1eb394bbf6790a8402d44',1,'ifm3d::CameraBase::Reboot()'],['../classifm3d_1_1O3RCamera.html#ad1d1062a69ac73c8fb0a60200bda22a9',1,'ifm3d::O3RCamera::Reboot()']]],
+  ['reboot_85',['Reboot',['../classifm3d_1_1Device.html#ac00f90b5349f30da07a448c6469ec2c0',1,'ifm3d::Device::Reboot()'],['../classifm3d_1_1O3R.html#ab50df498165624f643ff73c9cd9a0d9d',1,'ifm3d::O3R::Reboot()']]],
   ['reboottoproductive_86',['RebootToProductive',['../classifm3d_1_1SWUpdater.html#a5ed7d927b9ff35a6808394345bdced8e',1,'ifm3d::SWUpdater']]],
   ['reboottorecovery_87',['RebootToRecovery',['../classifm3d_1_1SWUpdater.html#a1f56ac0283802c2c1ec9c94fa39d3437',1,'ifm3d::SWUpdater']]],
-  ['requestsession_88',['RequestSession',['../classifm3d_1_1Camera.html#a80b6dd627975029f947b96bfbaa9fcd0',1,'ifm3d::Camera']]],
-  ['resolveconfig_89',['ResolveConfig',['../classifm3d_1_1O3RCamera.html#a6e015760df7ddaa90322501102792aff',1,'ifm3d::O3RCamera']]],
+  ['requestsession_88',['RequestSession',['../classifm3d_1_1LegacyDevice.html#ad9b77b797052f7e41ef12dced1d579aa',1,'ifm3d::LegacyDevice']]],
+  ['resolveconfig_89',['ResolveConfig',['../classifm3d_1_1O3R.html#a3a829eb053ef1ca8e14c3e14284f5aec',1,'ifm3d::O3R']]],
   ['result_90',['Result',['../structifm3d_1_1Organizer_1_1Result.html',1,'ifm3d::Organizer']]]
 ];

@@ -102,8 +102,8 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>Ptr</b> = std::share
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a24a2331b190073c4a8246531add561ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1PCICClient.html#a24a2331b190073c4a8246531add561ea">PCICClient</a> (ifm3d::Camera::Ptr cam, const std::uint16_t pcic_port=ifm3d::PCIC_PORT)</td></tr>
-<tr class="separator:a24a2331b190073c4a8246531add561ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a216862c9f37385ec769d848d8a0283ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1PCICClient.html#a216862c9f37385ec769d848d8a0283ec">PCICClient</a> (ifm3d::LegacyDevice::Ptr cam, const std::uint16_t pcic_port=ifm3d::PCIC_PORT)</td></tr>
+<tr class="separator:a216862c9f37385ec769d848d8a0283ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23868be539bfc42602863864ac7c05e0"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1PCICClient.html#a23868be539bfc42602863864ac7c05e0">~PCICClient</a> ()</td></tr>
 <tr class="separator:a23868be539bfc42602863864ac7c05e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab306f8ba4593e065f8cf7c2711d5cafd"><td class="memItemLeft" align="right" valign="top"><a id="ab306f8ba4593e065f8cf7c2711d5cafd"></a>
@@ -136,8 +136,8 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classifm3d_1_1PCICClient.html">PCICClient</a> is a class that, when given access to an ifm3d::Camera::Ptr, it provides unbuffered communication with the PCIC interface. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a24a2331b190073c4a8246531add561ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24a2331b190073c4a8246531add561ea">&#9670;&nbsp;</a></span>PCICClient()</h2>
+<a id="a216862c9f37385ec769d848d8a0283ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a216862c9f37385ec769d848d8a0283ec">&#9670;&nbsp;</a></span>PCICClient()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -145,7 +145,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">ifm3d::PCICClient::PCICClient </td>
           <td>(</td>
-          <td class="paramtype">ifm3d::Camera::Ptr&#160;</td>
+          <td class="paramtype">ifm3d::LegacyDevice::Ptr&#160;</td>
           <td class="paramname"><em>cam</em>, </td>
         </tr>
         <tr>
@@ -164,7 +164,7 @@ Public Member Functions</h2></td></tr>
 <p>Stores reference to the passed in camera and starts connect/receive thread</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">cam</td><td>The camera instance to grab frames from </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cam</td><td>The <a class="el" href="classifm3d_1_1Device.html">Device</a> instance to grab frames from </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">nat_pcic_port</td><td>pcic port for NAT configuartion </td></tr>
   </table>
   </dd>
@@ -403,7 +403,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Interrupts the running thread by throwing an <a class="el" href="classifm3d_1_1error__t.html">ifm3d::error_t</a> with code IFM3D_THREAD_INTERRUPTED.</p>
+<p>Interrupts the running thread by throwing an ifm3d::error_t with code IFM3D_THREAD_INTERRUPTED.</p>
 <p>While this is (currently) part of the public interface, clients should be aware that there is really no way to restart a stopped <a class="el" href="classifm3d_1_1PCICClient.html">PCICClient</a> instance. To do that, you would need to instantiate a new <a class="el" href="classifm3d_1_1PCICClient.html">PCICClient</a>. </p>
 
 </div>

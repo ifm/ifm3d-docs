@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['factoryreset_25',['FactoryReset',['../classifm3d_1_1Camera.html#ac31af80e7b8e9712256430270e69f96d',1,'ifm3d::Camera::FactoryReset()'],['../classifm3d_1_1O3RCamera.html#a2cad8dfa3c9b8a711952ef8c81d88f5a',1,'ifm3d::O3RCamera::FactoryReset()']]],
-  ['flashfirmware_26',['FlashFirmware',['../classifm3d_1_1SWUpdater.html#a5e61c6b57890bfc62720e4176eef6eba',1,'ifm3d::SWUpdater']]],
-  ['flashstatuscb_27',['FlashStatusCb',['../classifm3d_1_1SWUpdater.html#ab90463e11ba0306bc62e087ed00260b1',1,'ifm3d::SWUpdater']]],
-  ['forcetrigger_28',['ForceTrigger',['../classifm3d_1_1Camera.html#a5e52fb6796f154d527ba978d73b7e845',1,'ifm3d::Camera::ForceTrigger()'],['../classifm3d_1_1CameraBase.html#ad0c632947ea7797bec7e95a7c0ee5b53',1,'ifm3d::CameraBase::ForceTrigger()']]],
-  ['frame_29',['Frame',['../classifm3d_1_1Frame.html',1,'ifm3d']]],
-  ['framegrabber_30',['FrameGrabber',['../classifm3d_1_1FrameGrabber.html',1,'ifm3d::FrameGrabber'],['../classifm3d_1_1FrameGrabber.html#a31128bc0d5c654254ec5681504a3705b',1,'ifm3d::FrameGrabber::FrameGrabber()']]],
-  ['fromjson_31',['FromJSON',['../classifm3d_1_1Camera.html#a9105d839be09af33bf9fce6444095264',1,'ifm3d::Camera::FromJSON()'],['../classifm3d_1_1CameraBase.html#ab2d504719393e4dbbb535987ff46284d',1,'ifm3d::CameraBase::FromJSON()'],['../classifm3d_1_1O3RCamera.html#a88a4aceb57fd6766416a08a206ca1c7e',1,'ifm3d::O3RCamera::FromJSON()']]],
-  ['fromjson_5f_32',['FromJSON_',['../classifm3d_1_1Camera.html#a44d4b5b7970a3df84b90e73bf6ec69f6',1,'ifm3d::Camera']]],
-  ['fromjsonstr_33',['FromJSONStr',['../classifm3d_1_1CameraBase.html#a097fe6d95fd97cfceb6c336e37347a34',1,'ifm3d::CameraBase']]]
+  ['factoryreset_26',['FactoryReset',['../classifm3d_1_1LegacyDevice.html#ab93db59f9980278605af075ed27d3e74',1,'ifm3d::LegacyDevice::FactoryReset()'],['../classifm3d_1_1O3R.html#a51c399c7672a1be536e6b1b81b5a0ddc',1,'ifm3d::O3R::FactoryReset()']]],
+  ['flashfirmware_27',['FlashFirmware',['../classifm3d_1_1SWUpdater.html#a5e61c6b57890bfc62720e4176eef6eba',1,'ifm3d::SWUpdater']]],
+  ['flashstatuscb_28',['FlashStatusCb',['../classifm3d_1_1SWUpdater.html#ab90463e11ba0306bc62e087ed00260b1',1,'ifm3d::SWUpdater']]],
+  ['forcetrigger_29',['ForceTrigger',['../classifm3d_1_1Device.html#a010b25d8c4f34075a57e30f1dbacc93b',1,'ifm3d::Device::ForceTrigger()'],['../classifm3d_1_1LegacyDevice.html#afd25834449cf1bc4d78d09fda75b83e5',1,'ifm3d::LegacyDevice::ForceTrigger()']]],
+  ['frame_30',['Frame',['../classifm3d_1_1Frame.html',1,'ifm3d']]],
+  ['framegrabber_31',['FrameGrabber',['../classifm3d_1_1FrameGrabber.html',1,'ifm3d::FrameGrabber'],['../classifm3d_1_1FrameGrabber.html#a7f4419ec5b42ba076b92e5a0540946fd',1,'ifm3d::FrameGrabber::FrameGrabber()']]],
+  ['fromjson_32',['FromJSON',['../classifm3d_1_1Device.html#a4706acd5532e7a9fc520c98d6100eee0',1,'ifm3d::Device::FromJSON()'],['../classifm3d_1_1LegacyDevice.html#aa93fe38faec10e6fb5079ced5a3818ca',1,'ifm3d::LegacyDevice::FromJSON()'],['../classifm3d_1_1O3R.html#aa81663e1ae0cc862a6b196dbf634617d',1,'ifm3d::O3R::FromJSON()']]],
+  ['fromjson_5f_33',['FromJSON_',['../classifm3d_1_1LegacyDevice.html#a86d74810263ea21e5f3a3d3516a52ba9',1,'ifm3d::LegacyDevice']]],
+  ['fromjsonstr_34',['FromJSONStr',['../classifm3d_1_1Device.html#a3036b0cfbaae2ffd3ca8bd8eb697ab50',1,'ifm3d::Device']]]
 ];

@@ -1,13 +1,11 @@
 var searchData=
 [
-  ['call_5',['Call',['../classifm3d_1_1PCICClient.html#a5b33d371605d558fbfa6c90fd69f36bb',1,'ifm3d::PCICClient::Call(const std::string &amp;request, std::function&lt; void(const std::string &amp;response)&gt; callback)'],['../classifm3d_1_1PCICClient.html#a0c55134f22d23542449344bcf898e9e0',1,'ifm3d::PCICClient::Call(const std::string &amp;request)'],['../classifm3d_1_1PCICClient.html#a0f6cfe3e11f0e73c95d0ce34d98fb027',1,'ifm3d::PCICClient::Call(const std::string &amp;request, std::string &amp;response, long timeout_millis)']]],
-  ['camera_6',['Camera',['../classifm3d_1_1Camera.html',1,'ifm3d::Camera'],['../classifm3d_1_1Camera.html#a76ea484635767e7b47ef68d8d815d0ca',1,'ifm3d::Camera::Camera()']]],
-  ['camerabase_7',['CameraBase',['../classifm3d_1_1CameraBase.html',1,'ifm3d::CameraBase'],['../classifm3d_1_1CameraBase.html#ae7904da7e07560e4dfdbb29a8a05f6c5',1,'ifm3d::CameraBase::CameraBase()']]],
+  ['call_7',['Call',['../classifm3d_1_1PCICClient.html#a5b33d371605d558fbfa6c90fd69f36bb',1,'ifm3d::PCICClient::Call(const std::string &amp;request, std::function&lt; void(const std::string &amp;response)&gt; callback)'],['../classifm3d_1_1PCICClient.html#a0c55134f22d23542449344bcf898e9e0',1,'ifm3d::PCICClient::Call(const std::string &amp;request)'],['../classifm3d_1_1PCICClient.html#a0f6cfe3e11f0e73c95d0ce34d98fb027',1,'ifm3d::PCICClient::Call(const std::string &amp;request, std::string &amp;response, long timeout_millis)']]],
   ['cancelcallback_8',['CancelCallback',['../classifm3d_1_1PCICClient.html#a55ab9adeb7a46dfa5ec55a28327bceaf',1,'ifm3d::PCICClient']]],
-  ['cancelsession_9',['CancelSession',['../classifm3d_1_1Camera.html#a9789292842d86243bf43bf1827118c84',1,'ifm3d::Camera::CancelSession()'],['../classifm3d_1_1Camera.html#a5311b12bcce819e7fef40bfc22849fc7',1,'ifm3d::Camera::CancelSession(const std::string &amp;sid)']]],
-  ['checkminimumfirmwareversion_10',['CheckMinimumFirmwareVersion',['../classifm3d_1_1CameraBase.html#a2ce1c290985cb1c883cbac5100109f90',1,'ifm3d::CameraBase']]],
-  ['clone_11',['clone',['../classifm3d_1_1Image.html#adaa9ff56a926e17831afd38e7ac06bd5',1,'ifm3d::Image::clone()'],['../classifm3d_1_1Image__.html#a50425918e4aa90830726c8d8a9ab39de',1,'ifm3d::Image_::clone()']]],
-  ['code_12',['code',['../classifm3d_1_1error__t.html#a37120b885f933f3899099eb9887e733e',1,'ifm3d::error_t']]],
-  ['copyapplication_13',['CopyApplication',['../classifm3d_1_1Camera.html#afc9f196c3cef0b10caa4d4475fce9f2e',1,'ifm3d::Camera']]],
-  ['createapplication_14',['CreateApplication',['../classifm3d_1_1Camera.html#a179deaea6a10ecb96bc7fd10fbbe0f13',1,'ifm3d::Camera']]]
+  ['cancelsession_9',['CancelSession',['../classifm3d_1_1LegacyDevice.html#a45763257d8b1b319ef419f84d478d343',1,'ifm3d::LegacyDevice::CancelSession()'],['../classifm3d_1_1LegacyDevice.html#a1ef75fc8b7162a832df144ea1aa0ff55',1,'ifm3d::LegacyDevice::CancelSession(const std::string &amp;sid)']]],
+  ['checkminimumfirmwareversion_10',['CheckMinimumFirmwareVersion',['../classifm3d_1_1Device.html#ad0d20a261a0dd280884bc5c59b3ce9f6',1,'ifm3d::Device']]],
+  ['clone_11',['clone',['../classifm3d_1_1Buffer.html#af3013a0a21394815bc4901d42a316136',1,'ifm3d::Buffer::clone()'],['../classifm3d_1_1Buffer__.html#a0a3bda2954d4f7b81d18852b6c5a4c9b',1,'ifm3d::Buffer_::clone()']]],
+  ['code_12',['code',['../classifm3d_1_1Error.html#a55941c65ba566878c000075bed9533b6',1,'ifm3d::Error']]],
+  ['copyapplication_13',['CopyApplication',['../classifm3d_1_1LegacyDevice.html#a58bfa891ae470a39fff0742514b7f1b0',1,'ifm3d::LegacyDevice']]],
+  ['createapplication_14',['CreateApplication',['../classifm3d_1_1LegacyDevice.html#a4217801bc184f1f8db8acfdc9c2092ca',1,'ifm3d::LegacyDevice']]]
 ];

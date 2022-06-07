@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['camera_124',['Camera',['../classifm3d_1_1Camera.html',1,'ifm3d']]],
-  ['camerabase_125',['CameraBase',['../classifm3d_1_1CameraBase.html',1,'ifm3d']]]
+  ['buffer_124',['Buffer',['../classifm3d_1_1Buffer.html',1,'ifm3d']]],
+  ['buffer_5f_125',['Buffer_',['../classifm3d_1_1Buffer__.html',1,'ifm3d']]]
 ];

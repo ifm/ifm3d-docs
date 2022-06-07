@@ -26,11 +26,11 @@
       :toctree:                                          
       :template: class.rst               
    
-      Camera
-      CameraBase
+      Device
       Frame
       FrameGrabber
-      O3RCamera
+      LegacyDevice
+      O3R
       SWUpdater
       image_id
    

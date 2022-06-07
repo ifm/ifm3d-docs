@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['temporal_5ffilter_107',['temporal_filter',['../classifm3d_1_1CameraBase.html#a1ae6baee24b533d8d093011bacf4faa9',1,'ifm3d::CameraBase']]],
+  ['temporal_5ffilter_107',['temporal_filter',['../classifm3d_1_1Device.html#afebad872139042f57c28b95df7a1d483',1,'ifm3d::Device']]],
   ['timestamps_108',['TimeStamps',['../classifm3d_1_1Frame.html#af6501c61f1d9b47003cbac1119477e6e',1,'ifm3d::Frame']]],
-  ['tojson_109',['ToJSON',['../classifm3d_1_1Camera.html#a829ec771eafba8be95936defd8c68549',1,'ifm3d::Camera::ToJSON()'],['../classifm3d_1_1CameraBase.html#a30d9ff01bce12ddb51b05e4420929fb5',1,'ifm3d::CameraBase::ToJSON()'],['../classifm3d_1_1O3RCamera.html#aa55a2f0d926c84c079770e02a9d210c5',1,'ifm3d::O3RCamera::ToJSON()']]],
-  ['tojsonstr_110',['ToJSONStr',['../classifm3d_1_1CameraBase.html#a1b6fd2967e38bf4bd76418908818284c',1,'ifm3d::CameraBase']]],
-  ['tracelogs_111',['TraceLogs',['../classifm3d_1_1CameraBase.html#a53c0f59884abf245655ee2b9ee32d7a9',1,'ifm3d::CameraBase']]],
-  ['trigger_5fmode_112',['trigger_mode',['../classifm3d_1_1CameraBase.html#af4d236de8f20538c135ca5942d756c6b',1,'ifm3d::CameraBase']]]
+  ['tojson_109',['ToJSON',['../classifm3d_1_1Device.html#ae28a22aa0cdc1ec1365b165f053570a4',1,'ifm3d::Device::ToJSON()'],['../classifm3d_1_1LegacyDevice.html#a745e7ce575f78fb4940e910ed588ce2c',1,'ifm3d::LegacyDevice::ToJSON()'],['../classifm3d_1_1O3R.html#a9e9ae86629b8119af831aceaaa1c786c',1,'ifm3d::O3R::ToJSON()']]],
+  ['tojsonstr_110',['ToJSONStr',['../classifm3d_1_1Device.html#ae6a009493ff158fc3f18d86544aedad8',1,'ifm3d::Device']]],
+  ['tracelogs_111',['TraceLogs',['../classifm3d_1_1Device.html#a649d525094c8e266bc84decc4618f26d',1,'ifm3d::Device']]],
+  ['trigger_5fmode_112',['trigger_mode',['../classifm3d_1_1Device.html#ae98a6e123c250bfde6dea15214f4356f',1,'ifm3d::Device']]]
 ];

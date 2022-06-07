@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['lock_67',['Lock',['../classifm3d_1_1O3RCamera.html#a86f918d774e9939cb0501c1377725e4d',1,'ifm3d::O3RCamera']]]
+  ['legacydevice_66',['LegacyDevice',['../classifm3d_1_1LegacyDevice.html',1,'ifm3d::LegacyDevice'],['../classifm3d_1_1LegacyDevice.html#aa1ec31065d18ba99af459a4f23cf1dc3',1,'ifm3d::LegacyDevice::LegacyDevice()']]],
+  ['lock_67',['Lock',['../classifm3d_1_1O3R.html#a6508ed039407644c820296cf6564b887',1,'ifm3d::O3R']]]
 ];

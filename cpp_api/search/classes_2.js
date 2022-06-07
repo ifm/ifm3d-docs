@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['error_5ft_127',['error_t',['../classifm3d_1_1error__t.html',1,'ifm3d']]]
+  ['error_128',['Error',['../classifm3d_1_1Error.html',1,'ifm3d']]]
 ];

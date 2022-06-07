@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['makeshared_68',['MakeShared',['../classifm3d_1_1Camera.html#aee3625a91760b643a13989ad1121a441',1,'ifm3d::Camera::MakeShared()'],['../classifm3d_1_1CameraBase.html#acddc38d23dd1954f313422f382ee6d72',1,'ifm3d::CameraBase::MakeShared()']]],
-  ['message_69',['message',['../classifm3d_1_1error__t.html#a68527cc36b83eb42e5166907916138df',1,'ifm3d::error_t']]],
-  ['mfilt_5fmask_5fsize_70',['mfilt_mask_size',['../classifm3d_1_1CameraBase.html#a7f8f11b9045e3c851b5237931bb7f4d6',1,'ifm3d::CameraBase']]]
+  ['makeshared_68',['MakeShared',['../classifm3d_1_1Device.html#a83a01f67e444007eab4218de1ea165d8',1,'ifm3d::Device::MakeShared()'],['../classifm3d_1_1LegacyDevice.html#a1745e665a699e5ab47ca88f0cbfbcb70',1,'ifm3d::LegacyDevice::MakeShared()']]],
+  ['message_69',['message',['../classifm3d_1_1Error.html#aa1c693d09de6ccf38b576b58f11e5c54',1,'ifm3d::Error']]],
+  ['mfilt_5fmask_5fsize_70',['mfilt_mask_size',['../classifm3d_1_1Device.html#acafe3c37a98a3c47c8cbaaf07452bc31',1,'ifm3d::Device']]]
 ];

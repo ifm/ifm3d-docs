@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['makeshared_203',['MakeShared',['../classifm3d_1_1Camera.html#aee3625a91760b643a13989ad1121a441',1,'ifm3d::Camera::MakeShared()'],['../classifm3d_1_1CameraBase.html#acddc38d23dd1954f313422f382ee6d72',1,'ifm3d::CameraBase::MakeShared()']]],
-  ['message_204',['message',['../classifm3d_1_1error__t.html#a68527cc36b83eb42e5166907916138df',1,'ifm3d::error_t']]]
+  ['legacydevice_201',['LegacyDevice',['../classifm3d_1_1LegacyDevice.html#aa1ec31065d18ba99af459a4f23cf1dc3',1,'ifm3d::LegacyDevice']]],
+  ['lock_202',['Lock',['../classifm3d_1_1O3R.html#a6508ed039407644c820296cf6564b887',1,'ifm3d::O3R']]]
 ];

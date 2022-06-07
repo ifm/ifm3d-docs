@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['activeapplication_0',['ActiveApplication',['../classifm3d_1_1Camera.html#a555c8718eca07c2cb70001c9f377b673',1,'ifm3d::Camera']]],
-  ['ami_1',['AmI',['../classifm3d_1_1CameraBase.html#a19777c0a5c4a0929947234a8ae8ff571',1,'ifm3d::CameraBase']]],
-  ['applicationlist_2',['ApplicationList',['../classifm3d_1_1Camera.html#a5f73bf3888479bfa2cd26a2f71b7ecf4',1,'ifm3d::Camera']]],
-  ['applicationtypes_3',['ApplicationTypes',['../classifm3d_1_1Camera.html#a04da1c9f55e3e00491e3cad8beafd134',1,'ifm3d::Camera']]]
+  ['activeapplication_0',['ActiveApplication',['../classifm3d_1_1LegacyDevice.html#a91de1a198af94a4d83d43951c7696a59',1,'ifm3d::LegacyDevice']]],
+  ['ami_1',['AmI',['../classifm3d_1_1Device.html#a825db9a420e07ab247a664a58b320374',1,'ifm3d::Device']]],
+  ['applicationlist_2',['ApplicationList',['../classifm3d_1_1LegacyDevice.html#af1670594651bf115788e3d60ce1e733b',1,'ifm3d::LegacyDevice']]],
+  ['applicationtypes_3',['ApplicationTypes',['../classifm3d_1_1LegacyDevice.html#a925eaac36090795f0da30c74c33b6813',1,'ifm3d::LegacyDevice']]]
 ];
