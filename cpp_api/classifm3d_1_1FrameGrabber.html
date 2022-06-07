@@ -102,6 +102,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>Ptr</b> = std::share
 <tr class="memitem:a209971f7d9fc910525cf0bfa858dc947"><td class="memItemLeft" align="right" valign="top"><a id="a209971f7d9fc910525cf0bfa858dc947"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>NewFrameCallback</b> = std::function&lt; void(Frame::Ptr)&gt;</td></tr>
 <tr class="separator:a209971f7d9fc910525cf0bfa858dc947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc1f02afb3aa99151e25d3a048ab14cf"><td class="memItemLeft" align="right" valign="top"><a id="abc1f02afb3aa99151e25d3a048ab14cf"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>AsynErrorCallback</b> = std::function&lt; void(const int, const std::string &amp;)&gt;</td></tr>
+<tr class="separator:abc1f02afb3aa99151e25d3a048ab14cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -141,6 +144,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8911d6f0a032c9c072f812194ec9bb85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9b7752f418e4f937e31808b4c20c226"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#ad9b7752f418e4f937e31808b4c20c226">SetOrganizer</a> (std::unique_ptr&lt; <a class="el" href="classifm3d_1_1Organizer.html">Organizer</a> &gt; organizer)</td></tr>
 <tr class="separator:ad9b7752f418e4f937e31808b4c20c226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74e315705ae92a33d1469d435b69677a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a74e315705ae92a33d1469d435b69677a">OnAsyncError</a> (AsynErrorCallback callback=nullptr)</td></tr>
+<tr class="separator:a74e315705ae92a33d1469d435b69677a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implements a TCP <a class="el" href="classifm3d_1_1FrameGrabber.html">FrameGrabber</a> connected to the camera passed to its ctor </p>
@@ -223,6 +228,25 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Returns true if the worker thread is currently running </p>
+
+</div>
+</div>
+<a id="a74e315705ae92a33d1469d435b69677a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74e315705ae92a33d1469d435b69677a">&#9670;&nbsp;</a></span>OnAsyncError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ifm3d::FrameGrabber::OnAsyncError </td>
+          <td>(</td>
+          <td class="paramtype">AsynErrorCallback&#160;</td>
+          <td class="paramname"><em>callback</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function will enable the async error messages on device. The callback will be executed whenever a async error are avaliable. It receives a error code and error string to the received async error as an argument. </p>
 
 </div>
 </div>
