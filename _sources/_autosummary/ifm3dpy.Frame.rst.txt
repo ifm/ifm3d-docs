@@ -17,8 +17,8 @@ ifm3dpy.Frame
    .. autosummary::
    
       ~Frame.__init__
-      ~Frame.get_image
-      ~Frame.has_image
+      ~Frame.get_buffer
+      ~Frame.has_buffer
       ~Frame.timestamps
    
    
