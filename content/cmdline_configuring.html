@@ -72,7 +72,7 @@
 <p>Configuring the parameters of an ifm 3D camera is accomplished in ifm3d in one
 of two ways: 1) via the <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> command line tool; 2) via the <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code>
 library’s <code class="docutils literal notranslate"><span class="pre">camera</span></code> module API. We show below how to do so with the command line tool.
-Please refer to the <span class="xref std std-doc">../examples/o3r/index</span> for instructions on configuring the camera through <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> library.</p>
+Please refer to <span class="xref myst">this doc</span> for instructions on configuring the camera through <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> library.</p>
 <p>The primary mechanism for using the <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> command line tool to configure an
 ifm 3D camera is to utilize the <code class="docutils literal notranslate"><span class="pre">dump</span></code> and <code class="docutils literal notranslate"><span class="pre">config</span></code> subcommands to <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code>. The
 <code class="docutils literal notranslate"><span class="pre">dump</span></code> command serializes the camera state to JSON and prints it to <code class="docutils literal notranslate"><span class="pre">stdout</span></code>,
@@ -417,71 +417,114 @@ cameras. However, sometimes we need to look at the camera configuration to
 simply answer a question we may have. For example, if we wanted to see which
 version of the firmware the camera is running we could issue the following
 command.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d dump | jq .ifm3d._.SWVersion.IFM_Software
-&quot;1.20.1138&quot;
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-1-TzNE" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TzNE" name="TzNE" role="tab" tabindex="0">O3D</button><button aria-controls="panel-1-TzNS" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-TzNS" name="TzNS" role="tab" tabindex="-1">O3R</button></div><div aria-labelledby="tab-1-TzNE" class="sphinx-tabs-panel group-tab" id="panel-1-TzNE" name="TzNE" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ifm3d dump <span class="p">|</span> jq .ifm3d._.SWVersion.IFM_Software
+<span class="s2">&quot;1.20.1138&quot;</span>
 </pre></div>
 </div>
+</div><div aria-labelledby="tab-1-TzNS" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-TzNS" name="TzNS" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ifm3d dump <span class="p">|</span> jq .device.swVersion.firmware
+<span class="s2">&quot;0.14.23-493&quot;</span>
+</pre></div>
+</div>
+</div></div>
 <p>It follows that the entire JSON serialized configuration may be further
 processed either programmatically or manually via a text editor.</p>
 </div>
 <div class="section" id="config">
 <h2>Config<a class="headerlink" href="#config" title="Permalink to this headline"></a></h2>
+<div class="section" id="setting-single-parameters-with-ifm3d-config">
+<h3>Setting single parameters with <code class="docutils literal notranslate"><span class="pre">ifm3d</span> <span class="pre">config</span></code><a class="headerlink" href="#setting-single-parameters-with-ifm3d-config" title="Permalink to this headline"></a></h3>
 <p>Mutating parameters on the camera is done by creating a <em>desired</em> camera state
-encoded in JSON compliant to the output produced by <code class="docutils literal notranslate"><span class="pre">ifm3d</span> <span class="pre">dump</span></code>. For example,
-if we wanted to change the framerate of the <em>first</em> application on the camera
+encoded in JSON compliant to the output produced by <code class="docutils literal notranslate"><span class="pre">ifm3d</span> <span class="pre">dump</span></code>.
+For example, if we wanted to change the framerate on the camera
 we could do the following.</p>
 <ol class="simple">
 <li><p>Before changing the framerate, let’s see what it is currently set to:</p></li>
 </ol>
-<p>(NOTE: This step is not necessary. We do this to illustrate the state of the
-camera prior to mutating the parameter).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d dump | jq .ifm3d.Apps[0].Imager.FrameRate
-&quot;5&quot;
+<blockquote>
+<div><p>NOTE: This step is not necessary. We do this to illustrate the state of the
+camera prior to mutating the parameter.</p>
+</div></blockquote>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-2-TzNE" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-TzNE" name="TzNE" role="tab" tabindex="0">O3D</button><button aria-controls="panel-2-TzNS" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-TzNS" name="TzNS" role="tab" tabindex="-1">O3R</button></div><div aria-labelledby="tab-2-TzNE" class="sphinx-tabs-panel group-tab" id="panel-2-TzNE" name="TzNE" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ifm3d dump <span class="p">|</span> jq .ifm3d.Apps<span class="o">[</span><span class="m">0</span><span class="o">]</span>.Imager.FrameRate
+<span class="s2">&quot;5&quot;</span>
 </pre></div>
 </div>
+</div><div aria-labelledby="tab-2-TzNS" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-TzNS" name="TzNS" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ifm3d dump <span class="p">|</span> jq .ports.port2.acquisition.framerate
+<span class="m">5</span>
+</pre></div>
+</div>
+</div></div>
+<blockquote>
+<div><p>Note: This example shows how to view and change the framerate for the <em>first</em> application instantiated on the O3D camera, and for the camera head connected on <em>port 2</em> for the O3R platform.</p>
+</div></blockquote>
 <p>We see the current framerate is 5 fps.</p>
 <ol class="simple">
 <li><p>Let’s set it to 10 fps:</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d dump | jq &#39;.ifm3d.Apps[0].Imager.FrameRate=&quot;10&quot;&#39; | ifm3d config
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-3-TzNE" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-TzNE" name="TzNE" role="tab" tabindex="0">O3D</button><button aria-controls="panel-3-TzNS" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-TzNS" name="TzNS" role="tab" tabindex="-1">O3R</button></div><div aria-labelledby="tab-3-TzNE" class="sphinx-tabs-panel group-tab" id="panel-3-TzNE" name="TzNE" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">echo</span> <span class="o">{}</span> <span class="p">|</span> jq <span class="s1">&#39;.ifm3d.Apps[0].Imager.FrameRate=&quot;10&quot;&#39;</span> <span class="p">|</span> ifm3d config
 </pre></div>
 </div>
+</div><div aria-labelledby="tab-3-TzNS" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-3-TzNS" name="TzNS" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">echo</span> <span class="o">{}</span> <span class="p">|</span> jq <span class="s1">&#39;.ports.port2.acquisition.framerate=10&#39;</span> <span class="p">|</span> ifm3d config
+</pre></div>
+</div>
+</div></div>
 <ol class="simple">
 <li><p>Let’s check to make sure that our configuration has persisted.</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d dump | jq .ifm3d.Apps[0].Imager.FrameRate
-&quot;10&quot;
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-4-TzNE" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-4-TzNE" name="TzNE" role="tab" tabindex="0">O3D</button><button aria-controls="panel-4-TzNS" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-TzNS" name="TzNS" role="tab" tabindex="-1">O3R</button></div><div aria-labelledby="tab-4-TzNE" class="sphinx-tabs-panel group-tab" id="panel-4-TzNE" name="TzNE" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ifm3d dump <span class="p">|</span> jq .ifm3d.Apps<span class="o">[</span><span class="m">0</span><span class="o">]</span>.Imager.FrameRate
+<span class="s2">&quot;10&quot;</span>
 </pre></div>
 </div>
+</div><div aria-labelledby="tab-4-TzNS" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-4-TzNS" name="TzNS" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ifm3d dump <span class="p">|</span> jq .ports.port2.acquisition.framerate
+<span class="m">10</span>
+</pre></div>
+</div>
+</div></div>
 <p>Let’s now break down what we did in this single Linux pipeline.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d dump | jq &#39;.ifm3d.Apps[0].Imager.FrameRate=&quot;10&quot;&#39; | ifm3d config
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-5-TzNE" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-5-TzNE" name="TzNE" role="tab" tabindex="0">O3D</button><button aria-controls="panel-5-TzNS" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-TzNS" name="TzNS" role="tab" tabindex="-1">O3R</button></div><div aria-labelledby="tab-5-TzNE" class="sphinx-tabs-panel group-tab" id="panel-5-TzNE" name="TzNE" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">echo</span> <span class="o">{}</span> <span class="p">|</span> jq <span class="s1">&#39;.ifm3d.Apps[0].Imager.FrameRate=&quot;10&quot;&#39;</span> <span class="p">|</span> ifm3d config
 </pre></div>
 </div>
-<p>First we dump the entire state of the camera to JSON, process the JSON in-line
-via <code class="docutils literal notranslate"><span class="pre">jq</span></code> to set the FrameRate to 10 fps, then pipe the resulting output to
-<code class="docutils literal notranslate"><span class="pre">ifm3d</span> <span class="pre">config</span></code> which accepts the new (mutated) JSON stream on <code class="docutils literal notranslate"><span class="pre">stdin</span></code> and
+</div><div aria-labelledby="tab-5-TzNS" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-5-TzNS" name="TzNS" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">echo</span> <span class="o">{}</span> <span class="p">|</span> jq <span class="s1">&#39;.ports.port2.acquisition.framerate=10&#39;</span> <span class="p">|</span> ifm3d config
+</pre></div>
+</div>
+</div></div>
+<p>First, we start with an empty string which we fill with the JSON string processed
+via <code class="docutils literal notranslate"><span class="pre">jq</span></code> to set the FrameRate to 10 fps. We then pipe the resulting output to
+<code class="docutils literal notranslate"><span class="pre">ifm3d</span> <span class="pre">config</span></code> which accepts the new JSON stream on <code class="docutils literal notranslate"><span class="pre">stdin</span></code> and
 carries out the necessary network calls to mutate the camera settings and
 persist them.</p>
 <p>This is the basic paradigm that can be followed to tune just about any
-parameter on the camera. To carry out more complex configuration tasks (e.g.,
+parameter on the camera.</p>
+</div>
+<div class="section" id="setting-multiple-parameters">
+<h3>Setting multiple parameters<a class="headerlink" href="#setting-multiple-parameters" title="Permalink to this headline"></a></h3>
+<p>To carry out more complex configuration tasks (e.g.,
 changing several parameters at once), the dump can be saved to a file, edited
 via a text editor, then fed into <code class="docutils literal notranslate"><span class="pre">ifm3d</span> <span class="pre">config</span></code> to perform the
-configuration. It is also important to point out that <code class="docutils literal notranslate"><span class="pre">ifm3d</span> <span class="pre">config</span></code> does not
-need the entire ifm3d JSON <em>object</em> to operate correctly. <em>Snippets</em> are
-valid. For example, if we wanted to set the framerate back to <code class="docutils literal notranslate"><span class="pre">5</span></code>, we could do
-this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ echo &#39;{&quot;Apps&quot;:[{&quot;Index&quot;:&quot;1&quot;,&quot;Imager&quot;:{&quot;FrameRate&quot;:&quot;5&quot;}}]}&#39; | ifm3d config
+configuration.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ifm3d dump &gt; settings.json
+<span class="c1"># Edit the settings.json file</span>
+<span class="c1"># Save the new settings in new_settings.json</span>
+$ ifm3d config &lt; new_settings.json
 </pre></div>
 </div>
-<p>Let’s validate that it worked:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d dump | jq .ifm3d.Apps[0].Imager.FrameRate
-&quot;5&quot;
+<p>One can also take advantage of <code class="docutils literal notranslate"><span class="pre">jq</span></code>’s powerful features to mutate multiple parameters at once. For instance, to copy the configuration from one port to another for the O3R platform, use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ifm3d dump <span class="p">|</span> jq <span class="s1">&#39;.ports.port1=.ports.port0&#39;</span> <span class="p">|</span> ifm3d config
+</pre></div>
+</div>
+<p>Another example for the O3R platforms: set all the 2D ports to <code class="docutils literal notranslate"><span class="pre">RUN</span></code> mode:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ifm3d dump <span class="p">|</span> jq <span class="s1">&#39;(.ports[] | select(.info.features.type == &quot;2D&quot;) | .state ) = &quot;RUN&quot;&#39;</span> <span class="p">|</span> ifm3d config
 </pre></div>
 </div>
 <p>In summary, the primary concept in configuring your camera via <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> is that
 the <code class="docutils literal notranslate"><span class="pre">dump</span></code> subcommand can be used to access the current camera state while the
 <code class="docutils literal notranslate"><span class="pre">config</span></code> subcommand is used to declare and mutate the camera into a desired
 state – assuming the desired state is valid.</p>
+</div>
 </div>
 </div>
 
