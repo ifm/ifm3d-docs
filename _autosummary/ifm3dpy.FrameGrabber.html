@@ -49,7 +49,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.LegacyDevice.html">ifm3dpy.LegacyDevice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.O3R.html">ifm3dpy.O3R</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.SWUpdater.html">ifm3dpy.SWUpdater</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.image_id.html">ifm3dpy.image_id</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.buffer_id.html">ifm3dpy.buffer_id</a></li>
 </ul>
 </li>
 </ul>
@@ -120,7 +120,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.on_new_frame" title="ifm3dpy.FrameGrabber.on_new_frame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_new_frame</span></code></a>(self[, callback])</p></td>
 <td><p>The callback will be executed whenever a new frame is available.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.start" title="ifm3dpy.FrameGrabber.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a>(self[, images])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.start" title="ifm3dpy.FrameGrabber.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a>(self, buffers, int, ...)</p></td>
 <td><p>Starts the worker thread for streaming in pixel data from the device</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.stop" title="ifm3dpy.FrameGrabber.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>(self)</p></td>
@@ -146,11 +146,24 @@ It receives the frame as an argument.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.FrameGrabber.start">
-<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.FrameGrabber" title="ifm3dpy.FrameGrabber"><span class="pre">ifm3dpy.FrameGrabber</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">images</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="ifm3dpy.image_id.html#ifm3dpy.image_id" title="ifm3dpy.image_id"><span class="pre">ifm3dpy.image_id</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">set()</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ifm3dpy.FrameGrabber.start" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">ifm3dpy.FrameGrabber</span></em>, <em class="sig-param"><span class="pre">buffers:</span> <span class="pre">List[Union[int</span></em>, <em class="sig-param"><span class="pre">int</span></em>, <em class="sig-param"><span class="pre">ifm3dpy.buffer_id]]</span> <span class="pre">=</span> <span class="pre">[]</span></em>, <em class="sig-param"><span class="pre">schema:</span> <span class="pre">Optional[nlohmann::basic_json&lt;std::map</span></em>, <em class="sig-param"><span class="pre">std::vector</span></em>, <em class="sig-param"><span class="pre">std::__cxx11::basic_string&lt;char</span></em>, <em class="sig-param"><span class="pre">std::char_traits&lt;char&gt;</span></em>, <em class="sig-param"><span class="pre">std::allocator&lt;char&gt;</span> <span class="pre">&gt;</span></em>, <em class="sig-param"><span class="pre">bool</span></em>, <em class="sig-param"><span class="pre">long</span></em>, <em class="sig-param"><span class="pre">unsigned</span> <span class="pre">long</span></em>, <em class="sig-param"><span class="pre">double</span></em>, <em class="sig-param"><span class="pre">std::allocator</span></em>, <em class="sig-param"><span class="pre">nlohmann::adl_serializer&gt;]</span> <span class="pre">=</span> <span class="pre">None</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ifm3dpy.FrameGrabber.start" title="Permalink to this definition"></a></dt>
 <dd><p>Starts the worker thread for streaming in pixel data from the device</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>images</strong> (<em>List</em><em>[</em><em>uint64</em><em>]</em>) – A List of image_id which to receive</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>buffers</strong> (<em>List</em><em>[</em><em>uint64</em><em>]</em>) – A List of buffer_ids for receiving, passing in an List
+set will received all available images. The buffer_ids are specific to
+the current Organizer. See buffer_id for a list of buffer_ids available
+with the default Organizer</p></li>
+<li><p><strong>pcicFormat</strong> (<em>Dict</em>) – <p>allows to manually set a PCIC pcicFormat for
+asynchronous results. See ifm3d::make_schema for generation logic of the
+default pcicFormat. Manually setting the pcicFormat should rarely be needed and
+most usecases should be covered by the default generated pcicFormat.</p>
+<p>Note: The FrameGrabber is relying on some specific formatting rules, if
+they are missing from the pcicFormat the FrameGrabber will not be able to
+extract the image data.</p>
+</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

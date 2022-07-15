@@ -32,7 +32,7 @@
       LegacyDevice
       O3R
       SWUpdater
-      image_id
+      buffer_id
    
    
 

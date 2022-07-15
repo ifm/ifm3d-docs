@@ -107,17 +107,16 @@ $(document).ready(function(){initNavTree('schema_8h_source.html',''); initResiza
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>ifm3d</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  std::string make_schema(<span class="keyword">const</span> std::set&lt;ifm3d::buffer_id&gt;&amp; image_ids,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                          ifm3d::Device::device_family device_type);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  json make_schema(<span class="keyword">const</span> std::set&lt;ifm3d::buffer_id&gt;&amp; buffer_ids,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                   ifm3d::Device::device_family device_type);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  std::string make_o3x_json_from_mask(</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">const</span> std::set&lt;ifm3d::buffer_id&gt;&amp; chunk_ids);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  std::uint32_t schema_mask_from_string(<span class="keyword">const</span> std::string&amp; in);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif // __IFM3D_FG_SCHEMA_H__</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  json make_o3x_json_from_mask(<span class="keyword">const</span> std::set&lt;ifm3d::buffer_id&gt;&amp; chunk_ids);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  std::uint32_t schema_mask_from_string(<span class="keyword">const</span> std::string&amp; in);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif // __IFM3D_FG_SCHEMA_H__</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

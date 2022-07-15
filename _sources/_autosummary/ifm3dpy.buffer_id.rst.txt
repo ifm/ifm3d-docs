@@ -1,0 +1,53 @@
+ifm3dpy.buffer\_id
+==================
+
+.. currentmodule:: ifm3dpy
+
+.. autoclass:: buffer_id
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~buffer_id.__init__
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~buffer_id.ALGO_DEBUG
+      ~buffer_id.AMPLITUDE
+      ~buffer_id.CARTESIAN_ALL
+      ~buffer_id.CARTESIAN_X
+      ~buffer_id.CARTESIAN_Y
+      ~buffer_id.CARTESIAN_Z
+      ~buffer_id.CONFIDENCE
+      ~buffer_id.DIAGNOSTIC_DATA
+      ~buffer_id.EXPOSURE_TIME
+      ~buffer_id.EXTRINSIC_CALIBRATION
+      ~buffer_id.GRAY
+      ~buffer_id.ILLUMINATION_TEMP
+      ~buffer_id.INTRINSIC_CALIBRATION
+      ~buffer_id.INVERSE_INTRINSIC_CALIBRATION
+      ~buffer_id.JPEG
+      ~buffer_id.JSON_MODEL
+      ~buffer_id.O3R_DISTANCE_IMAGE_INFORMATION
+      ~buffer_id.RADIAL_DISTANCE
+      ~buffer_id.RAW_AMPLITUDE
+      ~buffer_id.UNIT_VECTOR_ALL
+      ~buffer_id.XYZ
+      ~buffer_id.name
+      ~buffer_id.value
+   
+   

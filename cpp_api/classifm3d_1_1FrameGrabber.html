@@ -105,6 +105,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>NewFrameCallback</b>
 <tr class="memitem:abc1f02afb3aa99151e25d3a048ab14cf"><td class="memItemLeft" align="right" valign="top"><a id="abc1f02afb3aa99151e25d3a048ab14cf"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>AsynErrorCallback</b> = std::function&lt; void(const int, const std::string &amp;)&gt;</td></tr>
 <tr class="separator:abc1f02afb3aa99151e25d3a048ab14cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a81a3701da57be978361c2214fc96db"><td class="memItemLeft" align="right" valign="top"><a id="a0a81a3701da57be978361c2214fc96db"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>BufferList</b> = std::vector&lt; std::variant&lt; std::uint64_t, int, ifm3d::buffer_id &gt; &gt;</td></tr>
+<tr class="separator:a0a81a3701da57be978361c2214fc96db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -128,14 +131,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0bcaaf3a21897fadbcd4fe267aa139d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad76d616c98cfde74adedb6de34d1793"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#aad76d616c98cfde74adedb6de34d1793">OnNewFrame</a> (NewFrameCallback callback=nullptr)</td></tr>
 <tr class="separator:aad76d616c98cfde74adedb6de34d1793"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71b14ccfa2e5c14e8900852c1acc2887"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a71b14ccfa2e5c14e8900852c1acc2887">Start</a> (const std::set&lt; ifm3d::buffer_id &gt; &amp;images={ ifm3d::buffer_id::AMPLITUDE, ifm3d::buffer_id::XYZ})</td></tr>
-<tr class="separator:a71b14ccfa2e5c14e8900852c1acc2887"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd7f79f959acd44b653354a3b37e1cc7"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
-<tr class="memitem:acd7f79f959acd44b653354a3b37e1cc7"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#acd7f79f959acd44b653354a3b37e1cc7">Start</a> (std::set&lt; buffer_id &gt; &amp;images, T id, Args... args)</td></tr>
-<tr class="separator:acd7f79f959acd44b653354a3b37e1cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93a37f082c3792c8b8202eac27548cc4"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
-<tr class="memitem:a93a37f082c3792c8b8202eac27548cc4"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a93a37f082c3792c8b8202eac27548cc4">Start</a> (T id, Args... args)</td></tr>
-<tr class="separator:a93a37f082c3792c8b8202eac27548cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adffefb711cacd2730991af483de3cc73"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#adffefb711cacd2730991af483de3cc73">Start</a> (const BufferList &amp;buffers, const std::optional&lt; json &gt; &amp;pcicFormat=std::nullopt)</td></tr>
+<tr class="separator:adffefb711cacd2730991af483de3cc73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64a5d1cfd4f5ce826b3fa7daa488c408"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a64a5d1cfd4f5ce826b3fa7daa488c408">Stop</a> ()</td></tr>
 <tr class="separator:a64a5d1cfd4f5ce826b3fa7daa488c408"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41863acd226d087671594f47af3b0e32"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a41863acd226d087671594f47af3b0e32">IsRunning</a> ()</td></tr>
@@ -294,8 +291,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a71b14ccfa2e5c14e8900852c1acc2887"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71b14ccfa2e5c14e8900852c1acc2887">&#9670;&nbsp;</a></span>Start() <span class="overload">[1/3]</span></h2>
+<a id="adffefb711cacd2730991af483de3cc73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adffefb711cacd2730991af483de3cc73">&#9670;&nbsp;</a></span>Start()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -303,50 +300,14 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">bool ifm3d::FrameGrabber::Start </td>
           <td>(</td>
-          <td class="paramtype">const std::set&lt; ifm3d::buffer_id &gt; &amp;&#160;</td>
-          <td class="paramname"><em>images</em> = <code>{&#160;ifm3d::buffer_id::AMPLITUDE,&#160;ifm3d::buffer_id::XYZ}</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Starts the worker thread for streaming in pixel data from the device</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>set of buffer_ids for receiving, passing in an empty set will received all available images. The image_ids are specific to the current <a class="el" href="classifm3d_1_1Organizer.html">Organizer</a>. See image_id for a list of image_ids available with the default <a class="el" href="classifm3d_1_1Organizer.html">Organizer</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="acd7f79f959acd44b653354a3b37e1cc7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd7f79f959acd44b653354a3b37e1cc7">&#9670;&nbsp;</a></span>Start() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename... Args&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ifm3d::FrameGrabber::Start </td>
-          <td>(</td>
-          <td class="paramtype">std::set&lt; buffer_id &gt; &amp;&#160;</td>
-          <td class="paramname"><em>images</em>, </td>
+          <td class="paramtype">const BufferList &amp;&#160;</td>
+          <td class="paramname"><em>buffers</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args...&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
+          <td class="paramtype">const std::optional&lt; json &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pcicFormat</em> = <code>std::nullopt</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -354,64 +315,16 @@ template&lt;typename T , typename... Args&gt; </div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Starts the worker thread for streaming in pixel data from the device</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">images</td><td>set of image_ids for receiving, passing in an empty set will received all available images. The image_ids are specific to the current <a class="el" href="classifm3d_1_1Organizer.html">Organizer</a>. See image_id for a list of image_ids available with the default <a class="el" href="classifm3d_1_1Organizer.html">Organizer</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffers</td><td>set of buffer_ids for receiving, passing in an empty set will received all available images. The buffer_ids are specific to the current <a class="el" href="classifm3d_1_1Organizer.html">Organizer</a>. See buffer_id for a list of buffer_ids available with the default <a class="el" href="classifm3d_1_1Organizer.html">Organizer</a></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pcicFormat</td><td>allows to manually set a PCIC schema for asynchronous results. See ifm3d::make_schema for generation logic of the default pcicFormat. Manually setting the pcicFormat should rarely be needed and most usecases should be covered by the default generated pcicFormat.</td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a93a37f082c3792c8b8202eac27548cc4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93a37f082c3792c8b8202eac27548cc4">&#9670;&nbsp;</a></span>Start() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename... Args&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ifm3d::FrameGrabber::Start </td>
-          <td>(</td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Args...&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Starts the worker thread for streaming in pixel data from the device</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">images</td><td>set of image_ids for receiving, passing in an empty set will received all available images. The image_ids are specific to the current <a class="el" href="classifm3d_1_1Organizer.html">Organizer</a>. See image_id for a list of image_ids available with the default <a class="el" href="classifm3d_1_1Organizer.html">Organizer</a> </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Note: The <a class="el" href="classifm3d_1_1FrameGrabber.html">FrameGrabber</a> is relying on some specific formatting rules, if they are missing from the schema the <a class="el" href="classifm3d_1_1FrameGrabber.html">FrameGrabber</a> will not be able to extract the image data. </p>
 
 </div>
 </div>
