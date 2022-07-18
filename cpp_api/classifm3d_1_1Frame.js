@@ -10,6 +10,7 @@ var classifm3d_1_1Frame =
     [ "end", "classifm3d_1_1Frame.html#a77b932062af65df75ca8161eae857a88", null ],
     [ "end", "classifm3d_1_1Frame.html#a5a4265107e9a61010a1c4486db3ab344", null ],
     [ "GetBuffer", "classifm3d_1_1Frame.html#a4514940165e6a990c82bd4554da05f0b", null ],
+    [ "GetBuffers", "classifm3d_1_1Frame.html#a4d26762e4adcbf7bb61a445b435623af", null ],
     [ "HasBuffer", "classifm3d_1_1Frame.html#a13e840f03bc27a443be8ac1e44cefa90", null ],
     [ "operator=", "classifm3d_1_1Frame.html#add956b9f533e4945693ef20d54a8d8ae", null ],
     [ "operator=", "classifm3d_1_1Frame.html#a0ec694226f11a764ed241eb2e876fd4e", null ],

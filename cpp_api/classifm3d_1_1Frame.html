@@ -126,6 +126,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4514940165e6a990c82bd4554da05f0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Frame.html#a4514940165e6a990c82bd4554da05f0b">GetBuffer</a> (buffer_id id)</td></tr>
 <tr class="memdesc:a4514940165e6a990c82bd4554da05f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the image with the given id.  <a href="classifm3d_1_1Frame.html#a4514940165e6a990c82bd4554da05f0b">More...</a><br /></td></tr>
 <tr class="separator:a4514940165e6a990c82bd4554da05f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d26762e4adcbf7bb61a445b435623af"><td class="memItemLeft" align="right" valign="top">std::vector&lt; buffer_id &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Frame.html#a4d26762e4adcbf7bb61a445b435623af">GetBuffers</a> ()</td></tr>
+<tr class="memdesc:a4d26762e4adcbf7bb61a445b435623af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of available buffers.  <a href="classifm3d_1_1Frame.html#a4d26762e4adcbf7bb61a445b435623af">More...</a><br /></td></tr>
+<tr class="separator:a4d26762e4adcbf7bb61a445b435623af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39a555b9c37524e117eb06a421e15c5e"><td class="memItemLeft" align="right" valign="top"><a id="a39a555b9c37524e117eb06a421e15c5e"></a>
 decltype(std::declval&lt; std::map&lt; buffer_id, <a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &gt;&gt;().begin())&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () noexcept</td></tr>
 <tr class="separator:a39a555b9c37524e117eb06a421e15c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,13 +168,39 @@ decltype(std::declval&lt; const std::map&lt; buffer_id, <a class="el" href="clas
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Image&amp; Reference to the requrest image </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Image&amp; Reference to the requested buffer </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::out_of_range</td><td>if no image with the give id exists </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a4d26762e4adcbf7bb61a445b435623af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d26762e4adcbf7bb61a445b435623af">&#9670;&nbsp;</a></span>GetBuffers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;buffer_id&gt; ifm3d::Frame::GetBuffers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the list of available buffers. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the id of the image to get </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the list of available buffer_ids </dd></dl>
 
 </div>
 </div>

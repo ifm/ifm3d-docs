@@ -92,24 +92,32 @@
 <p>Enum: buffer_id available for use with the default Organizer.</p>
 <p>Members:</p>
 <blockquote>
-<div><p>RADIAL_DISTANCE</p>
-<p>AMPLITUDE</p>
-<p>RAW_AMPLITUDE</p>
-<p>GRAY</p>
-<p>CARTESIAN_X</p>
-<p>CARTESIAN_Y</p>
-<p>CARTESIAN_Z</p>
+<div><p>RADIAL_DISTANCE_IMAGE</p>
+<p>NORM_AMPLITUDE_IMAGE</p>
+<p>AMPLITUDE_IMAGE</p>
+<p>GRAYSCALE_IMAGE</p>
+<p>RADIAL_DISTANCE_NOISE</p>
+<p>REFLECTIVITY</p>
+<p>CARTESIAN_X_COMPONENT</p>
+<p>CARTESIAN_Y_COMPONENT</p>
+<p>CARTESIAN_Z_COMPONENT</p>
 <p>CARTESIAN_ALL</p>
 <p>UNIT_VECTOR_ALL</p>
-<p>JPEG</p>
-<p>CONFIDENCE</p>
-<p>DIAGNOSTIC_DATA</p>
-<p>EXTRINSIC_CALIBRATION</p>
-<p>INTRINSIC_CALIBRATION</p>
+<p>MONOCHROM_2D_12BIT</p>
+<p>MONOCHROM_2D</p>
+<p>JPEG_IMAGE</p>
+<p>CONFIDENCE_IMAGE</p>
+<p>DIAGNOSTIC</p>
+<p>JSON_DIAGNOSTIC</p>
+<p>EXTRINSIC_CALIB</p>
+<p>INTRINSIC_CALIB</p>
 <p>INVERSE_INTRINSIC_CALIBRATION</p>
-<p>O3R_DISTANCE_IMAGE_INFORMATION</p>
+<p>O3R_DISTANCE_IMAGE_INFO</p>
+<p>O3R_RGB_IMAGE_INFO</p>
 <p>JSON_MODEL</p>
 <p>ALGO_DEBUG</p>
+<p>O3R_ODS_OCCUPANCY_GRID</p>
+<p>O3R_ODS_INFO</p>
 <p>XYZ</p>
 <p>EXPOSURE_TIME</p>
 <p>ILLUMINATION_TEMP</p>
@@ -141,58 +149,82 @@
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ALGO_DEBUG</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">AMPLITUDE</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">AMPLITUDE_IMAGE</span></code></p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">CARTESIAN_ALL</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">CARTESIAN_X</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">CARTESIAN_X_COMPONENT</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">CARTESIAN_Y</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">CARTESIAN_Y_COMPONENT</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">CARTESIAN_Z</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">CARTESIAN_Z_COMPONENT</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONFIDENCE</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONFIDENCE_IMAGE</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">DIAGNOSTIC_DATA</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">DIAGNOSTIC</span></code></p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPOSURE_TIME</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXTRINSIC_CALIBRATION</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXTRINSIC_CALIB</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">GRAY</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">GRAYSCALE_IMAGE</span></code></p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ILLUMINATION_TEMP</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">INTRINSIC_CALIBRATION</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">INTRINSIC_CALIB</span></code></p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">INVERSE_INTRINSIC_CALIBRATION</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">JPEG</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">JPEG_IMAGE</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">JSON_MODEL</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">JSON_DIAGNOSTIC</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_DISTANCE_IMAGE_INFORMATION</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">JSON_MODEL</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">RADIAL_DISTANCE</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">MONOCHROM_2D</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">RAW_AMPLITUDE</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">MONOCHROM_2D_12BIT</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">NORM_AMPLITUDE_IMAGE</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_DISTANCE_IMAGE_INFO</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_ODS_INFO</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_ODS_OCCUPANCY_GRID</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_RGB_IMAGE_INFO</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">RADIAL_DISTANCE_IMAGE</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">RADIAL_DISTANCE_NOISE</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">REFLECTIVITY</span></code></p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">UNIT_VECTOR_ALL</span></code></p></td>
