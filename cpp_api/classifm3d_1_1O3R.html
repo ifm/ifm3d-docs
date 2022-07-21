@@ -186,6 +186,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3a829eb053ef1ca8e14c3e14284f5aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0952daae6643332cbdd48d7c8d282e75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3R.html#a0952daae6643332cbdd48d7c8d282e75">Set</a> (const json &amp;j)</td></tr>
 <tr class="separator:a0952daae6643332cbdd48d7c8d282e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac922d3a9400e4724228091a429fc396"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3R.html#aac922d3a9400e4724228091a429fc396">Remove</a> (const std::string &amp;jsonPointer)</td></tr>
+<tr class="separator:aac922d3a9400e4724228091a429fc396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab426c636e257766f0caa35b09ea97fea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3R.html#ab426c636e257766f0caa35b09ea97fea">Reset</a> (const std::string &amp;jsonPointer)</td></tr>
+<tr class="separator:ab426c636e257766f0caa35b09ea97fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d703bc04a0d893733cbb1f5c6983d82"><td class="memItemLeft" align="right" valign="top">json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3R.html#a0d703bc04a0d893733cbb1f5c6983d82">GetInit</a> ()</td></tr>
 <tr class="separator:a0d703bc04a0d893733cbb1f5c6983d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7316e073bf5625c08d7c11a70e5ce07a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3R.html#a7316e073bf5625c08d7c11a70e5ce07a">SaveInit</a> ()</td></tr>
@@ -545,6 +549,60 @@ std::unique_ptr&lt; Impl &gt;&#160;</td><td class="memItemRight" valign="bottom"
 </dl>
 
 <p>Reimplemented from <a class="el" href="classifm3d_1_1Device.html#ac00f90b5349f30da07a448c6469ec2c0">ifm3d::Device</a>.</p>
+
+</div>
+</div>
+<a id="aac922d3a9400e4724228091a429fc396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac922d3a9400e4724228091a429fc396">&#9670;&nbsp;</a></span>Remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ifm3d::O3R::Remove </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>jsonPointer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Removes an object from the JSON. The scope of this method is limited to the following regular expressions</p>
+<ul>
+<li>^\/applications\/instances\/app\d+$</li>
+<li>^\/device\/log\/components\/[a-zA-Z0-9-_]+$</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">jsonPointer</td><td>A JSON Pointer to the object to be removed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab426c636e257766f0caa35b09ea97fea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab426c636e257766f0caa35b09ea97fea">&#9670;&nbsp;</a></span>Reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ifm3d::O3R::Reset </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>jsonPointer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the default value of an object inside the JSON. The object is addressed by a JSON Pointer. The object is resetted to the values defined in the JSON schema.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">jsonPointer</td><td>A JSON Pointer to the object to be set to default. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

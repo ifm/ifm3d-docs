@@ -30,6 +30,8 @@ ifm3dpy.O3R
       ~O3R.get_schema
       ~O3R.lock
       ~O3R.reboot
+      ~O3R.remove
+      ~O3R.reset
       ~O3R.save_init
       ~O3R.set
       ~O3R.to_json

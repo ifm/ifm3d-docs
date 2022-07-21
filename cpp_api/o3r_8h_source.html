@@ -111,7 +111,7 @@ $(document).ready(function(){initNavTree('o3r_8h_source.html',''); initResizable
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">using</span> Ptr = std::shared_ptr&lt;O3R&gt;;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classifm3d_1_1O3R.html">O3R</a>(<span class="keyword">const</span> std::string&amp; ip = ifm3d::DEFAULT_IP,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;              <span class="keyword">const</span> std::uint16_t xmlrpc_port = ifm3d::DEFAULT_XMLRPC_PORT);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">const</span> std::uint16_t xmlrpc_port = ifm3d::DEFAULT_XMLRPC_PORT);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classifm3d_1_1O3R.html">O3R</a>();</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classifm3d_1_1O3R.html">O3R</a>(<a class="code" href="classifm3d_1_1O3R.html">O3R</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
@@ -130,42 +130,48 @@ $(document).ready(function(){initNavTree('o3r_8h_source.html',''); initResizable
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1O3R.html#a0952daae6643332cbdd48d7c8d282e75">Set</a>(<span class="keyword">const</span> json&amp; j);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    json <a class="code" href="classifm3d_1_1O3R.html#a0d703bc04a0d893733cbb1f5c6983d82">GetInit</a>();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1O3R.html#a7316e073bf5625c08d7c11a70e5ce07a">SaveInit</a>();</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    std::string <a class="code" href="classifm3d_1_1O3R.html#a30dd23d4ba5b9919c75107bf9b2c3569">GetInitStatus</a>();</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1O3R.html#a6508ed039407644c820296cf6564b887">Lock</a>(<span class="keyword">const</span> std::string&amp; password);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1O3R.html#a2c7a7f0a8cd315c014c2b5d8b6c1347b">Unlock</a>(<span class="keyword">const</span> std::string&amp; password);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    std::vector&lt;PortInfo&gt; <a class="code" href="classifm3d_1_1O3R.html#ab82367443890c0526f2da7c79147e6b5">Ports</a>();</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="structifm3d_1_1PortInfo.html">PortInfo</a> <a class="code" href="classifm3d_1_1O3R.html#ace851644d8586ad20a68865f80860f89">Port</a>(<span class="keyword">const</span> std::string&amp; port);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1O3R.html#ab50df498165624f643ff73c9cd9a0d9d">Reboot</a>(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1Device.html#a752c3ebe308ebac6b2fe987cd0d53775">boot_mode</a>&amp; mode =</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                  ifm3d::Device::boot_mode::PRODUCTIVE) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    device_family <a class="code" href="classifm3d_1_1O3R.html#a047049bbce215aeee7f0f8ee1868831f">WhoAmI</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    ifm3d::Device::swu_version <a class="code" href="classifm3d_1_1O3R.html#af30eaa6348c6f06bef31f2082abfa275">SwUpdateVersion</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1O3R.html#aac922d3a9400e4724228091a429fc396">Remove</a>(<span class="keyword">const</span> std::string&amp; jsonPointer);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1O3R.html#ab426c636e257766f0caa35b09ea97fea">Reset</a>(<span class="keyword">const</span> std::string&amp; jsonPointer);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    json <a class="code" href="classifm3d_1_1O3R.html#a0d703bc04a0d893733cbb1f5c6983d82">GetInit</a>();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1O3R.html#a7316e073bf5625c08d7c11a70e5ce07a">SaveInit</a>();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    std::string <a class="code" href="classifm3d_1_1O3R.html#a30dd23d4ba5b9919c75107bf9b2c3569">GetInitStatus</a>();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1O3R.html#a6508ed039407644c820296cf6564b887">Lock</a>(<span class="keyword">const</span> std::string&amp; password);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1O3R.html#a2c7a7f0a8cd315c014c2b5d8b6c1347b">Unlock</a>(<span class="keyword">const</span> std::string&amp; password);</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    json <a class="code" href="classifm3d_1_1O3R.html#a9e9ae86629b8119af831aceaaa1c786c">ToJSON</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1O3R.html#aa81663e1ae0cc862a6b196dbf634617d">FromJSON</a>(<span class="keyword">const</span> json&amp; j) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keyword">class </span>Impl;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    std::unique_ptr&lt;Impl&gt; pImpl;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  }; <span class="comment">// end: class O3R</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="preprocessor">#endif // IFM3D_DEVICE_O3R_H</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    std::vector&lt;PortInfo&gt; <a class="code" href="classifm3d_1_1O3R.html#ab82367443890c0526f2da7c79147e6b5">Ports</a>();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="structifm3d_1_1PortInfo.html">PortInfo</a> <a class="code" href="classifm3d_1_1O3R.html#ace851644d8586ad20a68865f80860f89">Port</a>(<span class="keyword">const</span> std::string&amp; port);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1O3R.html#ab50df498165624f643ff73c9cd9a0d9d">Reboot</a>(</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;      <span class="keyword">const</span> <a class="code" href="classifm3d_1_1Device.html#a752c3ebe308ebac6b2fe987cd0d53775">boot_mode</a>&amp; mode = ifm3d::Device::boot_mode::PRODUCTIVE) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    device_family <a class="code" href="classifm3d_1_1O3R.html#a047049bbce215aeee7f0f8ee1868831f">WhoAmI</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    ifm3d::Device::swu_version <a class="code" href="classifm3d_1_1O3R.html#af30eaa6348c6f06bef31f2082abfa275">SwUpdateVersion</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    json <a class="code" href="classifm3d_1_1O3R.html#a9e9ae86629b8119af831aceaaa1c786c">ToJSON</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classifm3d_1_1O3R.html#aa81663e1ae0cc862a6b196dbf634617d">FromJSON</a>(<span class="keyword">const</span> json&amp; j) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keyword">class </span>Impl;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    std::unique_ptr&lt;Impl&gt; pImpl;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  }; <span class="comment">// end: class O3R</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">#endif // IFM3D_DEVICE_O3R_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassifm3d_1_1O3R_html_a1352ba9088aaea3cafd09d1c1a5d270c"><div class="ttname"><a href="classifm3d_1_1O3R.html#a1352ba9088aaea3cafd09d1c1a5d270c">ifm3d::O3R::GetSchema</a></div><div class="ttdeci">json GetSchema()</div></div>
 <div class="ttc" id="aclassifm3d_1_1O3R_html_aa81663e1ae0cc862a6b196dbf634617d"><div class="ttname"><a href="classifm3d_1_1O3R.html#aa81663e1ae0cc862a6b196dbf634617d">ifm3d::O3R::FromJSON</a></div><div class="ttdeci">void FromJSON(const json &amp;j) override</div></div>
+<div class="ttc" id="aclassifm3d_1_1O3R_html_ab426c636e257766f0caa35b09ea97fea"><div class="ttname"><a href="classifm3d_1_1O3R.html#ab426c636e257766f0caa35b09ea97fea">ifm3d::O3R::Reset</a></div><div class="ttdeci">void Reset(const std::string &amp;jsonPointer)</div></div>
 <div class="ttc" id="aclassifm3d_1_1O3R_html_a047049bbce215aeee7f0f8ee1868831f"><div class="ttname"><a href="classifm3d_1_1O3R.html#a047049bbce215aeee7f0f8ee1868831f">ifm3d::O3R::WhoAmI</a></div><div class="ttdeci">device_family WhoAmI() override</div></div>
 <div class="ttc" id="aclassifm3d_1_1O3R_html_ab50df498165624f643ff73c9cd9a0d9d"><div class="ttname"><a href="classifm3d_1_1O3R.html#ab50df498165624f643ff73c9cd9a0d9d">ifm3d::O3R::Reboot</a></div><div class="ttdeci">void Reboot(const boot_mode &amp;mode=ifm3d::Device::boot_mode::PRODUCTIVE) override</div></div>
 <div class="ttc" id="aclassifm3d_1_1Device_html_a752c3ebe308ebac6b2fe987cd0d53775"><div class="ttname"><a href="classifm3d_1_1Device.html#a752c3ebe308ebac6b2fe987cd0d53775">ifm3d::Device::boot_mode</a></div><div class="ttdeci">boot_mode</div><div class="ttdef"><b>Definition:</b> device.h:135</div></div>
 <div class="ttc" id="aclassifm3d_1_1O3R_html_a9e9ae86629b8119af831aceaaa1c786c"><div class="ttname"><a href="classifm3d_1_1O3R.html#a9e9ae86629b8119af831aceaaa1c786c">ifm3d::O3R::ToJSON</a></div><div class="ttdeci">json ToJSON() override</div></div>
+<div class="ttc" id="aclassifm3d_1_1O3R_html_aac922d3a9400e4724228091a429fc396"><div class="ttname"><a href="classifm3d_1_1O3R.html#aac922d3a9400e4724228091a429fc396">ifm3d::O3R::Remove</a></div><div class="ttdeci">void Remove(const std::string &amp;jsonPointer)</div></div>
 <div class="ttc" id="aclassifm3d_1_1O3R_html_a4aac4d3ceda92e3143ab4626d843189b"><div class="ttname"><a href="classifm3d_1_1O3R.html#a4aac4d3ceda92e3143ab4626d843189b">ifm3d::O3R::Get</a></div><div class="ttdeci">json Get(const std::vector&lt; std::string &gt; &amp;path=std::vector&lt; std::string &gt;())</div></div>
 <div class="ttc" id="aclassifm3d_1_1Device_html"><div class="ttname"><a href="classifm3d_1_1Device.html">ifm3d::Device</a></div><div class="ttdef"><b>Definition:</b> device.h:124</div></div>
 <div class="ttc" id="aclassifm3d_1_1O3R_html_a0952daae6643332cbdd48d7c8d282e75"><div class="ttname"><a href="classifm3d_1_1O3R.html#a0952daae6643332cbdd48d7c8d282e75">ifm3d::O3R::Set</a></div><div class="ttdeci">void Set(const json &amp;j)</div></div>

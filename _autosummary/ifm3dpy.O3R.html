@@ -158,6 +158,12 @@ those changes. Defaults to ‘’ (no password).</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.O3R.reboot" title="ifm3dpy.O3R.reboot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reboot</span></code></a>(self, mode)</p></td>
 <td><p>Reboot the sensor</p></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.O3R.remove" title="ifm3dpy.O3R.remove"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove</span></code></a>(self, json_pointer)</p></td>
+<td><p>Removes an object from the JSON.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.O3R.reset" title="ifm3dpy.O3R.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></a>(self, json_pointer)</p></td>
+<td><p>Sets the default value of an object inside the JSON.</p></td>
+</tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.O3R.save_init" title="ifm3dpy.O3R.save_init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_init</span></code></a>(self)</p></td>
 <td><p>Save to current temporary JSON configuration as initial JSON configuration</p></td>
 </tr>
@@ -499,6 +505,37 @@ If the path is empty, returns the whole configuration.</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>RuntimeError</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.O3R.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.O3R" title="ifm3dpy.O3R"><span class="pre">ifm3dpy.O3R</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_pointer</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.O3R.remove" title="Permalink to this definition"></a></dt>
+<dd><p>Removes an object from the JSON. The scope of this method is limited to
+the following regular expressions</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>^/applications/instances/appd+$</p></li>
+<li><p>^/device/log/components/[a-zA-Z0-9-_]+$</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>json_pointer</strong> (<em>string</em>) – A JSON Pointer to the object to be removed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.O3R.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.O3R" title="ifm3dpy.O3R"><span class="pre">ifm3dpy.O3R</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_pointer</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.O3R.reset" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the default value of an object inside the JSON. The object is
+addressed by a JSON Pointer. The object is resetted to the values
+defined in the JSON schema.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>json_pointer</strong> (<em>string</em>) – A JSON Pointer to the object to be set to default.</p>
 </dd>
 </dl>
 </dd></dl>

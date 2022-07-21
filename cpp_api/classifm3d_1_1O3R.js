@@ -17,6 +17,8 @@ var classifm3d_1_1O3R =
     [ "Port", "classifm3d_1_1O3R.html#ace851644d8586ad20a68865f80860f89", null ],
     [ "Ports", "classifm3d_1_1O3R.html#ab82367443890c0526f2da7c79147e6b5", null ],
     [ "Reboot", "classifm3d_1_1O3R.html#ab50df498165624f643ff73c9cd9a0d9d", null ],
+    [ "Remove", "classifm3d_1_1O3R.html#aac922d3a9400e4724228091a429fc396", null ],
+    [ "Reset", "classifm3d_1_1O3R.html#ab426c636e257766f0caa35b09ea97fea", null ],
     [ "ResolveConfig", "classifm3d_1_1O3R.html#a3a829eb053ef1ca8e14c3e14284f5aec", null ],
     [ "SaveInit", "classifm3d_1_1O3R.html#a7316e073bf5625c08d7c11a70e5ce07a", null ],
     [ "Set", "classifm3d_1_1O3R.html#a0952daae6643332cbdd48d7c8d282e75", null ],
