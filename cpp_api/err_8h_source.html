@@ -175,18 +175,18 @@ $(document).ready(function(){initNavTree('err_8h_source.html',''); initResizable
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">namespace </span>ifm3d</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span>* strerror(<span class="keywordtype">int</span> errnum);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  IFM3D_DEVICE_EXPORT <span class="keyword">const</span> <span class="keywordtype">char</span>* strerror(<span class="keywordtype">int</span> errnum);</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classifm3d_1_1Error.html">  101</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classifm3d_1_1Error.html">Error</a> : <span class="keyword">public</span> std::exception</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classifm3d_1_1Error.html">  101</a></span>&#160;  <span class="keyword">class </span>IFM3D_DEVICE_EXPORT <a class="code" href="classifm3d_1_1Error.html">Error</a> : <span class="keyword">public</span> std::exception</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  {</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="classifm3d_1_1Error.html#afab46311f4bb0a720bedc7fb87c3ff61">Error</a>(<span class="keywordtype">int</span> errnum, <span class="keyword">const</span> std::string&amp; msg = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="classifm3d_1_1Error.html">Error</a>(<span class="keywordtype">int</span> errnum, <span class="keyword">const</span> std::string&amp; msg = <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classifm3d_1_1Error.html#a73277f5526471dcb49d0dfad0ce7fb69">what</a>() <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* what() <span class="keyword">const</span> noexcept;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classifm3d_1_1Error.html#a55941c65ba566878c000075bed9533b6">code</a>() <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">int</span> code() <span class="keyword">const</span> noexcept;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classifm3d_1_1Error.html#aa1c693d09de6ccf38b576b58f11e5c54">message</a>() <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* message() <span class="keyword">const</span> noexcept;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">int</span> errnum_;</div>
@@ -202,11 +202,7 @@ $(document).ready(function(){initNavTree('err_8h_source.html',''); initResizable
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">#endif // IFM3D_DEVICE_ERR_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassifm3d_1_1Error_html_a55941c65ba566878c000075bed9533b6"><div class="ttname"><a href="classifm3d_1_1Error.html#a55941c65ba566878c000075bed9533b6">ifm3d::Error::code</a></div><div class="ttdeci">int code() const noexcept</div></div>
-<div class="ttc" id="aclassifm3d_1_1Error_html_afab46311f4bb0a720bedc7fb87c3ff61"><div class="ttname"><a href="classifm3d_1_1Error.html#afab46311f4bb0a720bedc7fb87c3ff61">ifm3d::Error::Error</a></div><div class="ttdeci">Error(int errnum, const std::string &amp;msg=&quot;&quot;)</div></div>
-<div class="ttc" id="aclassifm3d_1_1Error_html_aa1c693d09de6ccf38b576b58f11e5c54"><div class="ttname"><a href="classifm3d_1_1Error.html#aa1c693d09de6ccf38b576b58f11e5c54">ifm3d::Error::message</a></div><div class="ttdeci">const char * message() const noexcept</div></div>
 <div class="ttc" id="aclassifm3d_1_1Error_html"><div class="ttname"><a href="classifm3d_1_1Error.html">ifm3d::Error</a></div><div class="ttdef"><b>Definition:</b> err.h:101</div></div>
-<div class="ttc" id="aclassifm3d_1_1Error_html_a73277f5526471dcb49d0dfad0ce7fb69"><div class="ttname"><a href="classifm3d_1_1Error.html#a73277f5526471dcb49d0dfad0ce7fb69">ifm3d::Error::what</a></div><div class="ttdeci">virtual const char * what() const noexcept</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

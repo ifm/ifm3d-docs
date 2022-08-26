@@ -214,8 +214,7 @@ template&lt;typename T &gt; </td></tr>
 </div><!-- fragment --><p>changing the pixel value can be done as follow : writing 100 at pixel postion 50,50</p>
 <div class="fragment"><div class="line">I&lt;uint8_t&gt;(50,50) = 100;</div>
 <div class="line">I&lt;uint8_t&gt;(index) = 100;</div>
-</div><!-- fragment --><p>to access a pixel in n-channel <a class="el" href="classifm3d_1_1Buffer.html" title="The class Buffer represent a STL conatiner to store data from the ifm devices in 2 dimension and supp...">Buffer</a> I ( 100,100,3,ifm3d::FORMAT_8U) at 50,50 position This will be the case accessing the values for 3 channel <a class="el" href="classifm3d_1_1Buffer.html" title="The class Buffer represent a STL conatiner to store data from the ifm devices in 2 dimension and supp...">Buffer</a></p>
-<p>as pixel is structure of the values of n-chanel at given position.</p>
+</div><!-- fragment --><p>to access a pixel in n-channel <a class="el" href="classifm3d_1_1Buffer.html" title="The class Buffer represent a STL conatiner to store data from the ifm devices in 2 dimension and supp...">Buffer</a> I ( 100,100,3,ifm3d::FORMAT_8U) at 50,50 position This will be the case accessing the values for 3 channel <a class="el" href="classifm3d_1_1Buffer.html" title="The class Buffer represent a STL conatiner to store data from the ifm devices in 2 dimension and supp...">Buffer</a> as pixel is structure of the values of n-chanel at given position.</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> pixel = I&lt;Point3D&lt;uint8_t&gt;&gt;(50,50);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">//now individual channel values can be access with</span></div>

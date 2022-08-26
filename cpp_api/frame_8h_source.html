@@ -102,94 +102,91 @@ $(document).ready(function(){initNavTree('frame_8h_source.html',''); initResizab
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;ifm3d/device/device.h&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;ifm3d/fg/buffer.h&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>ifm3d</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">enum class</span> buffer_id : uint64_t</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">// clang-format off</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    RADIAL_DISTANCE_IMAGE = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::RADIAL_DISTANCE_IMAGE),</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    NORM_AMPLITUDE_IMAGE = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::NORM_AMPLITUDE_IMAGE),</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    AMPLITUDE_IMAGE = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::AMPLITUDE_IMAGE),</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    GRAYSCALE_IMAGE = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::GRAYSCALE_IMAGE),</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    RADIAL_DISTANCE_NOISE = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::RADIAL_DISTANCE_NOISE),</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    REFLECTIVITY = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::REFLECTIVITY),</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    CARTESIAN_X_COMPONENT = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::CARTESIAN_X_COMPONENT),</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    CARTESIAN_Y_COMPONENT = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::CARTESIAN_Y_COMPONENT),</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    CARTESIAN_Z_COMPONENT = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::CARTESIAN_Z_COMPONENT),</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    CARTESIAN_ALL = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::CARTESIAN_ALL),</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    UNIT_VECTOR_ALL = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::UNIT_VECTOR_ALL),</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    MONOCHROM_2D_12BIT = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::MONOCHROM_2D_12BIT),</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    MONOCHROM_2D = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::MONOCHROM_2D),</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    JPEG_IMAGE = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::JPEG_IMAGE),</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    CONFIDENCE_IMAGE = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::CONFIDENCE_IMAGE),</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    DIAGNOSTIC = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::DIAGNOSTIC),</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    JSON_DIAGNOSTIC = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::JSON_DIAGNOSTIC),</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    EXTRINSIC_CALIB = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::EXTRINSIC_CALIB),</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    INTRINSIC_CALIB = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::INTRINSIC_CALIB),</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    INVERSE_INTRINSIC_CALIBRATION = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::INVERSE_INTRINSIC_CALIBRATION),</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    O3R_DISTANCE_IMAGE_INFO = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::O3R_DISTANCE_IMAGE_INFO),</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    O3R_RGB_IMAGE_INFO = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::O3R_RGB_IMAGE_INFO),</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    JSON_MODEL = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::JSON_MODEL),</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    ALGO_DEBUG = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::ALGO_DEBUG),</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    O3R_ODS_OCCUPANCY_GRID = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::O3R_ODS_OCCUPANCY_GRID),</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    O3R_ODS_INFO = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::O3R_ODS_INFO),</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    XYZ = std::numeric_limits&lt;std::uint32_t&gt;::max(), <span class="comment">// The point cloud encoded as a 3 channel XYZ image</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    EXPOSURE_TIME,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    ILLUMINATION_TEMP,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// clang-format on</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  };</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keyword">using</span> TimePointT = std::chrono::time_point&lt;std::chrono::system_clock,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                             std::chrono::nanoseconds&gt;;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classifm3d_1_1Frame.html">   63</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classifm3d_1_1Frame.html">Frame</a></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">using</span> Ptr = std::shared_ptr&lt;Frame&gt;;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>(<span class="keyword">const</span> std::map&lt;buffer_id, Buffer&gt;&amp; images,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;          <span class="keyword">const</span> std::vector&lt;TimePointT&gt; timestamps);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    ~<a class="code" href="classifm3d_1_1Frame.html">Frame</a>();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; t);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; t);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>(<a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp;&amp; t);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; operator=(<a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp;&amp; t);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    std::vector&lt;TimePointT&gt; <a class="code" href="classifm3d_1_1Frame.html#af6501c61f1d9b47003cbac1119477e6e">TimeStamps</a>();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classifm3d_1_1Frame.html#a13e840f03bc27a443be8ac1e44cefa90">HasBuffer</a>(buffer_id <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="classifm3d_1_1Buffer.html">Buffer</a>&amp; <a class="code" href="classifm3d_1_1Frame.html#a4514940165e6a990c82bd4554da05f0b">GetBuffer</a>(buffer_id <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    std::vector&lt;buffer_id&gt; <a class="code" href="classifm3d_1_1Frame.html#a4d26762e4adcbf7bb61a445b435623af">GetBuffers</a>();</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    decltype(std::declval&lt;std::map&lt;buffer_id, Buffer&gt;&gt;().begin())</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    begin() noexcept;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    decltype(std::declval&lt;<span class="keyword">const</span> std::map&lt;buffer_id, Buffer&gt;&gt;().begin()) begin()</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    decltype(std::declval&lt;std::map&lt;buffer_id, Buffer&gt;&gt;().end()) end() noexcept;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    decltype(std::declval&lt;<span class="keyword">const</span> std::map&lt;buffer_id, Buffer&gt;&gt;().end()) end()</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">class </span>Impl;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    std::unique_ptr&lt;Impl&gt; pImpl;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  }; <span class="comment">// end: class Organizer</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#endif // IFM3D_FG_FRAME_H</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;ifm3d/fg/frame_grabber_export.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>ifm3d</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">enum class</span> buffer_id : uint64_t</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">// clang-format off</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    RADIAL_DISTANCE_IMAGE = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::RADIAL_DISTANCE_IMAGE),</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    NORM_AMPLITUDE_IMAGE = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::NORM_AMPLITUDE_IMAGE),</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    AMPLITUDE_IMAGE = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::AMPLITUDE_IMAGE),</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    GRAYSCALE_IMAGE = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::GRAYSCALE_IMAGE),</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    RADIAL_DISTANCE_NOISE = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::RADIAL_DISTANCE_NOISE),</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    REFLECTIVITY = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::REFLECTIVITY),</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    CARTESIAN_X_COMPONENT = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::CARTESIAN_X_COMPONENT),</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    CARTESIAN_Y_COMPONENT = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::CARTESIAN_Y_COMPONENT),</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    CARTESIAN_Z_COMPONENT = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::CARTESIAN_Z_COMPONENT),</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    CARTESIAN_ALL = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::CARTESIAN_ALL),</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    UNIT_VECTOR_ALL = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::UNIT_VECTOR_ALL),</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    MONOCHROM_2D_12BIT = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::MONOCHROM_2D_12BIT),</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    MONOCHROM_2D = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::MONOCHROM_2D),</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    JPEG_IMAGE = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::JPEG_IMAGE),</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    CONFIDENCE_IMAGE = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::CONFIDENCE_IMAGE),</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    DIAGNOSTIC = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::DIAGNOSTIC),</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    JSON_DIAGNOSTIC = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::JSON_DIAGNOSTIC),</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    EXTRINSIC_CALIB = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::EXTRINSIC_CALIB),</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    INTRINSIC_CALIB = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::INTRINSIC_CALIB),</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    INVERSE_INTRINSIC_CALIBRATION = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::INVERSE_INTRINSIC_CALIBRATION),</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    O3R_DISTANCE_IMAGE_INFO = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::O3R_DISTANCE_IMAGE_INFO),</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    O3R_RGB_IMAGE_INFO = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::O3R_RGB_IMAGE_INFO),</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    JSON_MODEL = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::JSON_MODEL),</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    ALGO_DEBUG = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::ALGO_DEBUG),</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    O3R_ODS_OCCUPANCY_GRID = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::O3R_ODS_OCCUPANCY_GRID),</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    O3R_ODS_INFO = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ifm3d::image_chunk::O3R_ODS_INFO),</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    XYZ = std::numeric_limits&lt;std::uint32_t&gt;::max(), <span class="comment">// The point cloud encoded as a 3 channel XYZ image</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    EXPOSURE_TIME,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    ILLUMINATION_TEMP,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">// clang-format on</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  };</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">using</span> TimePointT = std::chrono::time_point&lt;std::chrono::system_clock,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                             std::chrono::nanoseconds&gt;;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classifm3d_1_1Frame.html">   64</a></span>&#160;  <span class="keyword">class </span>IFM3D_FRAME_GRABBER_EXPORT <a class="code" href="classifm3d_1_1Frame.html">Frame</a></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">using</span> Ptr = std::shared_ptr&lt;Frame&gt;;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>(<span class="keyword">const</span> std::map&lt;buffer_id, Buffer&gt;&amp; images,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;          <span class="keyword">const</span> std::vector&lt;TimePointT&gt; timestamps);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    ~<a class="code" href="classifm3d_1_1Frame.html">Frame</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; t);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; t);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>(<a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp;&amp; t);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; operator=(<a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp;&amp; t);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    std::vector&lt;TimePointT&gt; TimeStamps();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">bool</span> HasBuffer(buffer_id <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="classifm3d_1_1Buffer.html">Buffer</a>&amp; GetBuffer(buffer_id <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    std::vector&lt;buffer_id&gt; GetBuffers();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    decltype(std::declval&lt;std::map&lt;buffer_id, Buffer&gt;&gt;().begin())</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    begin() noexcept;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    decltype(std::declval&lt;<span class="keyword">const</span> std::map&lt;buffer_id, Buffer&gt;&gt;().begin()) begin()</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    decltype(std::declval&lt;std::map&lt;buffer_id, Buffer&gt;&gt;().end()) end() noexcept;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    decltype(std::declval&lt;<span class="keyword">const</span> std::map&lt;buffer_id, Buffer&gt;&gt;().end()) end()</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">class </span>Impl;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    std::unique_ptr&lt;Impl&gt; pImpl;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  }; <span class="comment">// end: class Organizer</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#endif // IFM3D_FG_FRAME_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassifm3d_1_1Buffer_html"><div class="ttname"><a href="classifm3d_1_1Buffer.html">ifm3d::Buffer</a></div><div class="ttdoc">The class Buffer represent a STL conatiner to store data from the ifm devices in 2 dimension and supp...</div><div class="ttdef"><b>Definition:</b> buffer.h:96</div></div>
-<div class="ttc" id="aclassifm3d_1_1Frame_html_a4d26762e4adcbf7bb61a445b435623af"><div class="ttname"><a href="classifm3d_1_1Frame.html#a4d26762e4adcbf7bb61a445b435623af">ifm3d::Frame::GetBuffers</a></div><div class="ttdeci">std::vector&lt; buffer_id &gt; GetBuffers()</div><div class="ttdoc">Get the list of available buffers.</div></div>
-<div class="ttc" id="aclassifm3d_1_1Frame_html_a13e840f03bc27a443be8ac1e44cefa90"><div class="ttname"><a href="classifm3d_1_1Frame.html#a13e840f03bc27a443be8ac1e44cefa90">ifm3d::Frame::HasBuffer</a></div><div class="ttdeci">bool HasBuffer(buffer_id id)</div><div class="ttdoc">Check if a image with the given id is available in this frame.</div></div>
-<div class="ttc" id="aclassifm3d_1_1Frame_html"><div class="ttname"><a href="classifm3d_1_1Frame.html">ifm3d::Frame</a></div><div class="ttdef"><b>Definition:</b> frame.h:63</div></div>
-<div class="ttc" id="aclassifm3d_1_1Frame_html_af6501c61f1d9b47003cbac1119477e6e"><div class="ttname"><a href="classifm3d_1_1Frame.html#af6501c61f1d9b47003cbac1119477e6e">ifm3d::Frame::TimeStamps</a></div><div class="ttdeci">std::vector&lt; TimePointT &gt; TimeStamps()</div><div class="ttdoc">Get the timestamps of the frame.</div></div>
-<div class="ttc" id="aclassifm3d_1_1Frame_html_a4514940165e6a990c82bd4554da05f0b"><div class="ttname"><a href="classifm3d_1_1Frame.html#a4514940165e6a990c82bd4554da05f0b">ifm3d::Frame::GetBuffer</a></div><div class="ttdeci">Buffer &amp; GetBuffer(buffer_id id)</div><div class="ttdoc">Get the image with the given id.</div></div>
+<div class="ttc" id="aclassifm3d_1_1Frame_html"><div class="ttname"><a href="classifm3d_1_1Frame.html">ifm3d::Frame</a></div><div class="ttdef"><b>Definition:</b> frame.h:64</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
