@@ -82,7 +82,7 @@
 <span class="cm"> along with its type and create `FrameGrabber` and `ImageBuffer` objects for</span>
 <span class="cm"> each.</span>
 <span class="cm">*/</span>
-<span class="cp">#include</span> <span class="cpf">&lt;ifm3d/camera/camera_o3r.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;ifm3d/device/o3r.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;chrono&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;iomanip&gt;</span><span class="cp"></span>
@@ -116,7 +116,7 @@
 <span class="p">{</span>
 
   <span class="c1">// Declare the camera object</span>
-  <span class="k">auto</span> <span class="n">cam</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3RCamera</span><span class="o">&gt;</span><span class="p">();</span>
+  <span class="k">auto</span> <span class="n">cam</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3R</span><span class="o">&gt;</span><span class="p">();</span>
   <span class="c1">// Retreive ports configuration</span>
   <span class="n">json</span> <span class="n">conf</span> <span class="o">=</span> <span class="n">cam</span><span class="o">-&gt;</span><span class="n">Get</span><span class="p">();</span>
   <span class="c1">// Initialize the structures</span>
@@ -139,6 +139,9 @@
       <span class="c1">// Create list of FrameGrabber and ImageBuffer objects for connected</span>
       <span class="c1">// ports</span>
       <span class="k">auto</span> <span class="n">fg</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FrameGrabber</span><span class="o">&gt;</span><span class="p">(</span><span class="n">cam</span><span class="p">,</span> <span class="n">pcic</span><span class="p">);</span>
+
+      <span class="c1">// Start the framegrabber</span>
+      <span class="n">fg</span><span class="o">-&gt;</span><span class="n">Start</span><span class="p">({</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">XYZ</span><span class="p">,</span> <span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">JPEG_IMAGE</span><span class="p">});</span>
       <span class="n">fgs</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">fg</span><span class="p">);</span>
     <span class="p">}</span>
 
