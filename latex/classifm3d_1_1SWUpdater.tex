@@ -1,0 +1,174 @@
+\hypertarget{classifm3d_1_1SWUpdater}{}\doxysection{ifm3d\+::S\+W\+Updater Class Reference}
+\label{classifm3d_1_1SWUpdater}\index{ifm3d::SWUpdater@{ifm3d::SWUpdater}}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classifm3d_1_1SWUpdater_a156fa7c35d6b264efecb017c495f4110}\label{classifm3d_1_1SWUpdater_a156fa7c35d6b264efecb017c495f4110}} 
+using {\bfseries Ptr} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classifm3d_1_1SWUpdater}{S\+W\+Updater}} $>$
+\item 
+using \mbox{\hyperlink{classifm3d_1_1SWUpdater_ab90463e11ba0306bc62e087ed00260b1}{Flash\+Status\+Cb}} = std\+::function$<$ void(float, const std\+::string \&)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classifm3d_1_1SWUpdater_a930023e5e858f0680888d2b20f267330}{S\+W\+Updater}} (ifm3d\+::\+Device\+::\+Ptr cam, const \mbox{\hyperlink{classifm3d_1_1SWUpdater_ab90463e11ba0306bc62e087ed00260b1}{ifm3d\+::\+S\+W\+Updater\+::\+Flash\+Status\+Cb}} \&cb=\{\}, const std\+::uint16\+\_\+t swupdate\+\_\+recovery\+\_\+port=ifm3d\+::\+S\+W\+U\+P\+D\+A\+T\+E\+R\+\_\+\+R\+E\+C\+O\+V\+E\+R\+Y\+\_\+\+P\+O\+RT)
+\item 
+\mbox{\Hypertarget{classifm3d_1_1SWUpdater_ad894014e430bed353d30d8e9310ca050}\label{classifm3d_1_1SWUpdater_ad894014e430bed353d30d8e9310ca050}} 
+{\bfseries S\+W\+Updater} (\mbox{\hyperlink{classifm3d_1_1SWUpdater}{S\+W\+Updater}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classifm3d_1_1SWUpdater_a82a7f2eef394a54bcb397577b0605f8a}\label{classifm3d_1_1SWUpdater_a82a7f2eef394a54bcb397577b0605f8a}} 
+\mbox{\hyperlink{classifm3d_1_1SWUpdater}{S\+W\+Updater}} \& {\bfseries operator=} (\mbox{\hyperlink{classifm3d_1_1SWUpdater}{S\+W\+Updater}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classifm3d_1_1SWUpdater_ab6dc84dea1396c291aaa8132ec111903}\label{classifm3d_1_1SWUpdater_ab6dc84dea1396c291aaa8132ec111903}} 
+{\bfseries S\+W\+Updater} (\mbox{\hyperlink{classifm3d_1_1SWUpdater}{S\+W\+Updater}} \&)=delete
+\item 
+\mbox{\Hypertarget{classifm3d_1_1SWUpdater_ab78c2c926b27d73cc93536907cbdafb1}\label{classifm3d_1_1SWUpdater_ab78c2c926b27d73cc93536907cbdafb1}} 
+\mbox{\hyperlink{classifm3d_1_1SWUpdater}{S\+W\+Updater}} \& {\bfseries operator=} (const \mbox{\hyperlink{classifm3d_1_1SWUpdater}{S\+W\+Updater}} \&)=delete
+\item 
+void \mbox{\hyperlink{classifm3d_1_1SWUpdater_a1f56ac0283802c2c1ec9c94fa39d3437}{Reboot\+To\+Recovery}} ()
+\item 
+bool \mbox{\hyperlink{classifm3d_1_1SWUpdater_a15b7cd28dd1fe49fb1f830862e1a555c}{Wait\+For\+Recovery}} (long timeout\+\_\+millis=0)
+\item 
+void \mbox{\hyperlink{classifm3d_1_1SWUpdater_a5ed7d927b9ff35a6808394345bdced8e}{Reboot\+To\+Productive}} ()
+\item 
+bool \mbox{\hyperlink{classifm3d_1_1SWUpdater_a17e1b150eac6b995787420ed7efe9f4a}{Wait\+For\+Productive}} (long timeout\+\_\+millis=0)
+\item 
+bool \mbox{\hyperlink{classifm3d_1_1SWUpdater_a5e61c6b57890bfc62720e4176eef6eba}{Flash\+Firmware}} (const std\+::string \&swu\+\_\+file, long timeout\+\_\+millis=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classifm3d_1_1SWUpdater_ab3db14bb5fb1ea2d54b98f46072be670}\label{classifm3d_1_1SWUpdater_ab3db14bb5fb1ea2d54b98f46072be670}} 
+class I\+F\+M3\+D\+\_\+\+S\+W\+U\+P\+D\+A\+T\+E\+R\+\_\+\+L\+O\+C\+AL {\bfseries Impl}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classifm3d_1_1SWUpdater_ab90463e11ba0306bc62e087ed00260b1}\label{classifm3d_1_1SWUpdater_ab90463e11ba0306bc62e087ed00260b1}} 
+\index{ifm3d::SWUpdater@{ifm3d::SWUpdater}!FlashStatusCb@{FlashStatusCb}}
+\index{FlashStatusCb@{FlashStatusCb}!ifm3d::SWUpdater@{ifm3d::SWUpdater}}
+\doxysubsubsection{\texorpdfstring{FlashStatusCb}{FlashStatusCb}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classifm3d_1_1SWUpdater_ab90463e11ba0306bc62e087ed00260b1}{ifm3d\+::\+S\+W\+Updater\+::\+Flash\+Status\+Cb}} =  std\+::function$<$void(float, const std\+::string\&)$>$}
+
+Signature for user callback to receive status information about firmware flashing.
+
+The first parameter is a percentage (0.\+0-\/1.\+0) indicating the status of uploading the file to the device.
+
+The second parameter is a status message from the device during install. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classifm3d_1_1SWUpdater_a930023e5e858f0680888d2b20f267330}\label{classifm3d_1_1SWUpdater_a930023e5e858f0680888d2b20f267330}} 
+\index{ifm3d::SWUpdater@{ifm3d::SWUpdater}!SWUpdater@{SWUpdater}}
+\index{SWUpdater@{SWUpdater}!ifm3d::SWUpdater@{ifm3d::SWUpdater}}
+\doxysubsubsection{\texorpdfstring{SWUpdater()}{SWUpdater()}}
+{\footnotesize\ttfamily ifm3d\+::\+S\+W\+Updater\+::\+S\+W\+Updater (\begin{DoxyParamCaption}\item[{ifm3d\+::\+Device\+::\+Ptr}]{cam,  }\item[{const \mbox{\hyperlink{classifm3d_1_1SWUpdater_ab90463e11ba0306bc62e087ed00260b1}{ifm3d\+::\+S\+W\+Updater\+::\+Flash\+Status\+Cb}} \&}]{cb = {\ttfamily \{\}},  }\item[{const std\+::uint16\+\_\+t}]{swupdate\+\_\+recovery\+\_\+port = {\ttfamily ifm3d\+:\+:SWUPDATER\+\_\+RECOVERY\+\_\+PORT} }\end{DoxyParamCaption})}
+
+Ctor
+
+
+\begin{DoxyParams}{Parameters}
+{\em cam} & \mbox{\hyperlink{classifm3d_1_1Device}{Device}} object to manipulate\\
+\hline
+{\em cb} & Optional user-\/defined callback to handle status updates\\
+\hline
+{\em swupdate\+\_\+recovery\+\_\+port} & swupate recovery port for the device \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classifm3d_1_1SWUpdater_a5e61c6b57890bfc62720e4176eef6eba}\label{classifm3d_1_1SWUpdater_a5e61c6b57890bfc62720e4176eef6eba}} 
+\index{ifm3d::SWUpdater@{ifm3d::SWUpdater}!FlashFirmware@{FlashFirmware}}
+\index{FlashFirmware@{FlashFirmware}!ifm3d::SWUpdater@{ifm3d::SWUpdater}}
+\doxysubsubsection{\texorpdfstring{FlashFirmware()}{FlashFirmware()}}
+{\footnotesize\ttfamily bool ifm3d\+::\+S\+W\+Updater\+::\+Flash\+Firmware (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{swu\+\_\+file,  }\item[{long}]{timeout\+\_\+millis = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Uploads a firmware image to the device\textquotesingle{}s recovery system. Assumes device has already been rebooted to recovery mode.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em swu\+\_\+file} & The firmware image file to flash to the device.\\
+\hline
+\mbox{\texttt{ in}}  & {\em timeout\+\_\+millis} & Timeout in millis to wait for the firmware upload to complete. If {\ttfamily timeout\+\_\+millis} is set to 0, this function will block indefinitely.\\
+\hline
+\end{DoxyParams}
+N\+O\+TE\+: Firmware uploading and flashing typically takes several minutes. The blocking version of the A\+PI (timeout\+\_\+millis = 0) is recommended in most cases. If a timeout is truly required, it is recommended to use a value of at least 300000 (5 minutes).
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em ifm3d\+::error\+\_\+t} & on error \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classifm3d_1_1SWUpdater_a5ed7d927b9ff35a6808394345bdced8e}\label{classifm3d_1_1SWUpdater_a5ed7d927b9ff35a6808394345bdced8e}} 
+\index{ifm3d::SWUpdater@{ifm3d::SWUpdater}!RebootToProductive@{RebootToProductive}}
+\index{RebootToProductive@{RebootToProductive}!ifm3d::SWUpdater@{ifm3d::SWUpdater}}
+\doxysubsubsection{\texorpdfstring{RebootToProductive()}{RebootToProductive()}}
+{\footnotesize\ttfamily void ifm3d\+::\+S\+W\+Updater\+::\+Reboot\+To\+Productive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reboots the device from recovery to productive. The function returns immediately, but the reboot process takes some time. The function {\ttfamily Wait\+For\+Productive} may be used to poll for completion.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em ifm3d\+::error\+\_\+t} & on error \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classifm3d_1_1SWUpdater_a1f56ac0283802c2c1ec9c94fa39d3437}\label{classifm3d_1_1SWUpdater_a1f56ac0283802c2c1ec9c94fa39d3437}} 
+\index{ifm3d::SWUpdater@{ifm3d::SWUpdater}!RebootToRecovery@{RebootToRecovery}}
+\index{RebootToRecovery@{RebootToRecovery}!ifm3d::SWUpdater@{ifm3d::SWUpdater}}
+\doxysubsubsection{\texorpdfstring{RebootToRecovery()}{RebootToRecovery()}}
+{\footnotesize\ttfamily void ifm3d\+::\+S\+W\+Updater\+::\+Reboot\+To\+Recovery (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reboots the device from productive to recovery. The function returns immediately, but the reboot process takes some time. The function {\ttfamily Wait\+For\+Recovery} may be used to poll for completion.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em ifm3d\+::error\+\_\+t} & on error \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classifm3d_1_1SWUpdater_a17e1b150eac6b995787420ed7efe9f4a}\label{classifm3d_1_1SWUpdater_a17e1b150eac6b995787420ed7efe9f4a}} 
+\index{ifm3d::SWUpdater@{ifm3d::SWUpdater}!WaitForProductive@{WaitForProductive}}
+\index{WaitForProductive@{WaitForProductive}!ifm3d::SWUpdater@{ifm3d::SWUpdater}}
+\doxysubsubsection{\texorpdfstring{WaitForProductive()}{WaitForProductive()}}
+{\footnotesize\ttfamily bool ifm3d\+::\+S\+W\+Updater\+::\+Wait\+For\+Productive (\begin{DoxyParamCaption}\item[{long}]{timeout\+\_\+millis = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Polls on status of the device, waiting for it to present in productive mode. Should be used following a call to \mbox{\hyperlink{classifm3d_1_1SWUpdater_a5ed7d927b9ff35a6808394345bdced8e}{Reboot\+To\+Productive()}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em timeout\+\_\+millis} & Timeout in millis to wait for the device to become available. If {\ttfamily timeout\+\_\+millis} is set to 0, this function will block indefinitely. If {\ttfamily timeout\+\_\+millis} is set to -\/1, this function will check once and return immediately.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the device became available w/in {\ttfamily timeout\+\_\+millis}, false otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em ifm3d\+::error\+\_\+t} & on error \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classifm3d_1_1SWUpdater_a15b7cd28dd1fe49fb1f830862e1a555c}\label{classifm3d_1_1SWUpdater_a15b7cd28dd1fe49fb1f830862e1a555c}} 
+\index{ifm3d::SWUpdater@{ifm3d::SWUpdater}!WaitForRecovery@{WaitForRecovery}}
+\index{WaitForRecovery@{WaitForRecovery}!ifm3d::SWUpdater@{ifm3d::SWUpdater}}
+\doxysubsubsection{\texorpdfstring{WaitForRecovery()}{WaitForRecovery()}}
+{\footnotesize\ttfamily bool ifm3d\+::\+S\+W\+Updater\+::\+Wait\+For\+Recovery (\begin{DoxyParamCaption}\item[{long}]{timeout\+\_\+millis = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Polls on status of the device, waiting for it to present in recovery mode. Should be used following a call to \mbox{\hyperlink{classifm3d_1_1SWUpdater_a1f56ac0283802c2c1ec9c94fa39d3437}{Reboot\+To\+Recovery()}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em timeout\+\_\+millis} & Timeout in millis to wait for the recovery system to become available. If {\ttfamily timeout\+\_\+millis} is set to 0, this function will block indefinitely. If {\ttfamily timeout\+\_\+millis} is set to -\/1, this function will check once and return immediately.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the recovery system became available w/in {\ttfamily timeout\+\_\+millis}, false otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em ifm3d\+::error\+\_\+t} & on error \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/ifm3d/modules/swupdater/include/ifm3d/swupdater/swupdater.\+h\end{DoxyCompactItemize}
