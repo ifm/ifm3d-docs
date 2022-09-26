@@ -13,8 +13,11 @@ using {\bfseries Ptr} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classifm3d_1_
 \mbox{\Hypertarget{classifm3d_1_1FrameGrabber_a209971f7d9fc910525cf0bfa858dc947}\label{classifm3d_1_1FrameGrabber_a209971f7d9fc910525cf0bfa858dc947}} 
 using {\bfseries New\+Frame\+Callback} = std\+::function$<$ void(Frame\+::\+Ptr)$>$
 \item 
-\mbox{\Hypertarget{classifm3d_1_1FrameGrabber_abc1f02afb3aa99151e25d3a048ab14cf}\label{classifm3d_1_1FrameGrabber_abc1f02afb3aa99151e25d3a048ab14cf}} 
-using {\bfseries Asyn\+Error\+Callback} = std\+::function$<$ void(const int, const std\+::string \&)$>$
+\mbox{\Hypertarget{classifm3d_1_1FrameGrabber_a8effa331c8998c182be1a1b95bf5f3ab}\label{classifm3d_1_1FrameGrabber_a8effa331c8998c182be1a1b95bf5f3ab}} 
+using {\bfseries Async\+Error\+Callback} = std\+::function$<$ void(int, const std\+::string \&)$>$
+\item 
+\mbox{\Hypertarget{classifm3d_1_1FrameGrabber_a4dced90cd3ec64faef3026d9e2709470}\label{classifm3d_1_1FrameGrabber_a4dced90cd3ec64faef3026d9e2709470}} 
+using {\bfseries Async\+Notification\+Callback} = std\+::function$<$ void(const std\+::string \&, const std\+::string \&)$>$
 \item 
 \mbox{\Hypertarget{classifm3d_1_1FrameGrabber_a0a81a3701da57be978361c2214fc96db}\label{classifm3d_1_1FrameGrabber_a0a81a3701da57be978361c2214fc96db}} 
 using {\bfseries Buffer\+List} = std\+::vector$<$ std\+::variant$<$ std\+::uint64\+\_\+t, int, ifm3d\+::buffer\+\_\+id $>$ $>$
@@ -52,7 +55,9 @@ std\+::shared\+\_\+future$<$ Frame\+::\+Ptr $>$ \mbox{\hyperlink{classifm3d_1_1F
 \item 
 void \mbox{\hyperlink{classifm3d_1_1FrameGrabber_ad9b7752f418e4f937e31808b4c20c226}{Set\+Organizer}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classifm3d_1_1Organizer}{Organizer}} $>$ organizer)
 \item 
-void \mbox{\hyperlink{classifm3d_1_1FrameGrabber_a74e315705ae92a33d1469d435b69677a}{On\+Async\+Error}} (Asyn\+Error\+Callback callback=nullptr)
+void \mbox{\hyperlink{classifm3d_1_1FrameGrabber_a420ba8b039d15d68e09650b9531a75e1}{On\+Async\+Error}} (Async\+Error\+Callback callback=nullptr)
+\item 
+void \mbox{\hyperlink{classifm3d_1_1FrameGrabber_aa05b4b418fed47a19e63af35eff3fd37}{On\+Async\+Notification}} (Async\+Notification\+Callback callback=nullptr)
 \end{DoxyCompactItemize}
 
 
@@ -90,13 +95,19 @@ Cleans up resources held by the framegrabbing thread object and blocks until the
 \doxysubsubsection{\texorpdfstring{IsRunning()}{IsRunning()}}
 {\footnotesize\ttfamily bool ifm3d\+::\+Frame\+Grabber\+::\+Is\+Running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Returns true if the worker thread is currently running \mbox{\Hypertarget{classifm3d_1_1FrameGrabber_a74e315705ae92a33d1469d435b69677a}\label{classifm3d_1_1FrameGrabber_a74e315705ae92a33d1469d435b69677a}} 
+Returns true if the worker thread is currently running \mbox{\Hypertarget{classifm3d_1_1FrameGrabber_a420ba8b039d15d68e09650b9531a75e1}\label{classifm3d_1_1FrameGrabber_a420ba8b039d15d68e09650b9531a75e1}} 
 \index{ifm3d::FrameGrabber@{ifm3d::FrameGrabber}!OnAsyncError@{OnAsyncError}}
 \index{OnAsyncError@{OnAsyncError}!ifm3d::FrameGrabber@{ifm3d::FrameGrabber}}
 \doxysubsubsection{\texorpdfstring{OnAsyncError()}{OnAsyncError()}}
-{\footnotesize\ttfamily void ifm3d\+::\+Frame\+Grabber\+::\+On\+Async\+Error (\begin{DoxyParamCaption}\item[{Asyn\+Error\+Callback}]{callback = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void ifm3d\+::\+Frame\+Grabber\+::\+On\+Async\+Error (\begin{DoxyParamCaption}\item[{Async\+Error\+Callback}]{callback = {\ttfamily nullptr} }\end{DoxyParamCaption})}
 
-This function will enable the async error messages on device. The callback will be executed whenever a async error are avaliable. It receives a error code and error string to the received async error as an argument. \mbox{\Hypertarget{classifm3d_1_1FrameGrabber_aad76d616c98cfde74adedb6de34d1793}\label{classifm3d_1_1FrameGrabber_aad76d616c98cfde74adedb6de34d1793}} 
+This function will enable the async error messages on device. The callback will be executed whenever a async error are avaliable. It receives a error code and error string to the received async error as an argument. \mbox{\Hypertarget{classifm3d_1_1FrameGrabber_aa05b4b418fed47a19e63af35eff3fd37}\label{classifm3d_1_1FrameGrabber_aa05b4b418fed47a19e63af35eff3fd37}} 
+\index{ifm3d::FrameGrabber@{ifm3d::FrameGrabber}!OnAsyncNotification@{OnAsyncNotification}}
+\index{OnAsyncNotification@{OnAsyncNotification}!ifm3d::FrameGrabber@{ifm3d::FrameGrabber}}
+\doxysubsubsection{\texorpdfstring{OnAsyncNotification()}{OnAsyncNotification()}}
+{\footnotesize\ttfamily void ifm3d\+::\+Frame\+Grabber\+::\+On\+Async\+Notification (\begin{DoxyParamCaption}\item[{Async\+Notification\+Callback}]{callback = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+This function will enable the async notifications on device. The callback will be executed whenever a async notification is avaliable. It receives a message id and payload string \mbox{\Hypertarget{classifm3d_1_1FrameGrabber_aad76d616c98cfde74adedb6de34d1793}\label{classifm3d_1_1FrameGrabber_aad76d616c98cfde74adedb6de34d1793}} 
 \index{ifm3d::FrameGrabber@{ifm3d::FrameGrabber}!OnNewFrame@{OnNewFrame}}
 \index{OnNewFrame@{OnNewFrame}!ifm3d::FrameGrabber@{ifm3d::FrameGrabber}}
 \doxysubsubsection{\texorpdfstring{OnNewFrame()}{OnNewFrame()}}

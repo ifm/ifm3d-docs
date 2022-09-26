@@ -119,6 +119,12 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.is_running" title="ifm3dpy.FrameGrabber.is_running"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_running</span></code></a>(self)</p></td>
 <td><p>Returns true if the worker thread is currently running</p></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.on_async_error" title="ifm3dpy.FrameGrabber.on_async_error"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_async_error</span></code></a>(self[, callback])</p></td>
+<td><p>This function will enable the async error messages on device.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.on_async_notification" title="ifm3dpy.FrameGrabber.on_async_notification"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_async_notification</span></code></a>(self[, callback])</p></td>
+<td><p>This function will enable the async notifications on device.</p></td>
+</tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.on_new_frame" title="ifm3dpy.FrameGrabber.on_new_frame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_new_frame</span></code></a>(self[, callback])</p></td>
 <td><p>The callback will be executed whenever a new frame is available.</p></td>
 </tr>
@@ -137,6 +143,23 @@
 <dt class="sig sig-object py" id="ifm3dpy.FrameGrabber.is_running">
 <span class="sig-name descname"><span class="pre">is_running</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.FrameGrabber" title="ifm3dpy.FrameGrabber"><span class="pre">ifm3dpy.FrameGrabber</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ifm3dpy.FrameGrabber.is_running" title="Permalink to this definition"></a></dt>
 <dd><p>Returns true if the worker thread is currently running</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.FrameGrabber.on_async_error">
+<span class="sig-name descname"><span class="pre">on_async_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.FrameGrabber" title="ifm3dpy.FrameGrabber"><span class="pre">ifm3dpy.FrameGrabber</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.FrameGrabber.on_async_error" title="Permalink to this definition"></a></dt>
+<dd><p>This function will enable the async error messages on device.
+The callback will be executed whenever a async error
+are avaliable. It receives a error code and error string
+to the received async error as an argument.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.FrameGrabber.on_async_notification">
+<span class="sig-name descname"><span class="pre">on_async_notification</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.FrameGrabber" title="ifm3dpy.FrameGrabber"><span class="pre">ifm3dpy.FrameGrabber</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.FrameGrabber.on_async_notification" title="Permalink to this definition"></a></dt>
+<dd><p>This function will enable the async notifications on device.
+The callback will be executed whenever a async notification
+is avaliable. It receives a message id and payload string</p>
 </dd></dl>
 
 <dl class="py method">

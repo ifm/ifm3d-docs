@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['onasyncerror_209',['OnAsyncError',['../classifm3d_1_1FrameGrabber.html#a74e315705ae92a33d1469d435b69677a',1,'ifm3d::FrameGrabber']]],
-  ['onnewframe_210',['OnNewFrame',['../classifm3d_1_1FrameGrabber.html#aad76d616c98cfde74adedb6de34d1793',1,'ifm3d::FrameGrabber']]]
+  ['onasyncerror_210',['OnAsyncError',['../classifm3d_1_1FrameGrabber.html#a420ba8b039d15d68e09650b9531a75e1',1,'ifm3d::FrameGrabber']]],
+  ['onasyncnotification_211',['OnAsyncNotification',['../classifm3d_1_1FrameGrabber.html#aa05b4b418fed47a19e63af35eff3fd37',1,'ifm3d::FrameGrabber']]],
+  ['onnewframe_212',['OnNewFrame',['../classifm3d_1_1FrameGrabber.html#aad76d616c98cfde74adedb6de34d1793',1,'ifm3d::FrameGrabber']]]
 ];
