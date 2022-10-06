@@ -28,6 +28,7 @@
    
       Device
       Frame
+      FrameAwaitable
       FrameGrabber
       LegacyDevice
       O3R
