@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ROS/ROS2 &mdash; ifm3d  documentation</title>
+  <title>Install binary package &mdash; ifm3d  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
@@ -18,8 +18,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Migrating guide" href="../migrating_guide.html" />
-    <link rel="prev" title="Linux for Tegra" href="install_linux_tegra.html" /> 
+    <link rel="next" title="Installing ifm3d from source" href="install_from_source_linux.html" />
+    <link rel="prev" title="Installing the software" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -39,19 +39,13 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Installation instructions</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="o3r_early_adopter_index.html">O3R early adopters</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="stable_release_index.html">Stable release</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="install_ubuntu_apt.html">Ubuntu Linux via Apt (amd64/arm64)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="install_linux_tegra.html">Linux for Tegra</a></li>
-<li class="toctree-l3"><a class="reference internal" href="source_build.html">Linux source build</a></li>
-<li class="toctree-l3"><a class="reference internal" href="windows.html">Install using the ifm3d installer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="windows.html#building-ifm3d-from-source-on-windows">Building ifm3d from source on Windows</a></li>
-<li class="toctree-l3"><a class="reference internal" href="windows.html#usage">Usage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="windows.html#running-ifm3d-command-line-tools">Running ifm3d command line tools</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">ROS/ROS2 binaries</a></li>
-<li class="toctree-l3"><a class="reference internal" href="install_docker.html">Docker</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Install from source</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="install_from_source_linux.html">Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_from_source_windows.html">Windows</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="install_py.html">ifm3dpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install_docker.html">Docker</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../migrating_guide.html">**Migrating to v1.x**</a></li>
@@ -76,10 +70,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="index.html">Installing the software</a> &raquo;</li>
-          <li><a href="stable_release_index.html">Stable release</a> &raquo;</li>
-      <li>ROS/ROS2</li>
+      <li>Install binary package</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/content/installation_instructions/install_ros_bin.md.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/content/installation_instructions/Install_source_package_index.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -87,32 +80,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="ros-ros2">
-<h1>ROS/ROS2<a class="headerlink" href="#ros-ros2" title="Permalink to this headline"></a></h1>
-<p>For users interested in using our <a class="reference external" href="https://github.com/ifm/ifm3d-ros">ROS</a>
-bindings, <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> and <code class="docutils literal notranslate"><span class="pre">ifm3d-ros</span></code> are both available in the ROS distribution
-for Kinetic and Melodic (Noetic coming shortly).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo apt install ros-kinetic-ifm3d
-</pre></div>
+  <div class="section" id="install-binary-package">
+<h1>Install binary package<a class="headerlink" href="#install-binary-package" title="Permalink to this headline"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install_from_source_linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install_from_source_windows.html">Windows</a></li>
+</ul>
 </div>
-<p>or</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo apt install ros-melodic-ifm3d
-</pre></div>
-</div>
-<p>For users interested in using our <a class="reference external" href="https://github.com/ifm/ifm3d-ros2">ROS2</a>
-bindings, binaries will be included (starting with dashing) very soon. For now,
-packages must be built from source. Do not use the debian mirror for
-<code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> since (depending on version) ROS2 ships parallel versions of some core
-libraries (OpenCV, PCL) as compared with standard Ubuntu. <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> must be built
-against the proper dependencies.</p>
 </div>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="install_linux_tegra.html" class="btn btn-neutral float-left" title="Linux for Tegra" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../migrating_guide.html" class="btn btn-neutral float-right" title="Migrating guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Installing the software" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="install_from_source_linux.html" class="btn btn-neutral float-right" title="Installing ifm3d from source" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
