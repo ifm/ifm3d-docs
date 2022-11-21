@@ -26,6 +26,7 @@
       :toctree:                                          
       :template: class.rst               
    
+      Awaitable
       Device
       Frame
       FrameAwaitable

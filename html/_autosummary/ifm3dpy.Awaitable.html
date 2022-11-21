@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ifm3dpy.FrameAwaitable &mdash; ifm3d  documentation</title>
+  <title>ifm3dpy.Awaitable &mdash; ifm3d  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -18,8 +18,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ifm3dpy.FrameGrabber" href="ifm3dpy.FrameGrabber.html" />
-    <link rel="prev" title="ifm3dpy.Frame" href="ifm3dpy.Frame.html" /> 
+    <link rel="next" title="ifm3dpy.Device" href="ifm3dpy.Device.html" />
+    <link rel="prev" title="ifm3dpy.run" href="ifm3dpy.run.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -45,10 +45,10 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../python_api.html">Python API</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="ifm3dpy.html">ifm3dpy</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.run.html">ifm3dpy.run</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.Awaitable.html">ifm3dpy.Awaitable</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ifm3dpy.Awaitable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.Device.html">ifm3dpy.Device</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.Frame.html">ifm3dpy.Frame</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">ifm3dpy.FrameAwaitable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.FrameAwaitable.html">ifm3dpy.FrameAwaitable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.FrameGrabber.html">ifm3dpy.FrameGrabber</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.LegacyDevice.html">ifm3dpy.LegacyDevice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.O3R.html">ifm3dpy.O3R</a></li>
@@ -77,9 +77,9 @@
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../python_api.html">Python API Reference</a> &raquo;</li>
           <li><a href="ifm3dpy.html">ifm3dpy</a> &raquo;</li>
-      <li>ifm3dpy.FrameAwaitable</li>
+      <li>ifm3dpy.Awaitable</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/_autosummary/ifm3dpy.FrameAwaitable.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/_autosummary/ifm3dpy.Awaitable.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -87,17 +87,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="ifm3dpy-frameawaitable">
-<h1>ifm3dpy.FrameAwaitable<a class="headerlink" href="#ifm3dpy-frameawaitable" title="Permalink to this headline"></a></h1>
+  <div class="section" id="ifm3dpy-awaitable">
+<h1>ifm3dpy.Awaitable<a class="headerlink" href="#ifm3dpy-awaitable" title="Permalink to this headline"></a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="ifm3dpy.FrameAwaitable">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ifm3dpy.</span></span><span class="sig-name descname"><span class="pre">FrameAwaitable</span></span><a class="headerlink" href="#ifm3dpy.FrameAwaitable" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="ifm3dpy.Awaitable">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">ifm3dpy.</span></span><span class="sig-name descname"><span class="pre">Awaitable</span></span><a class="headerlink" href="#ifm3dpy.Awaitable" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
-<p>Provides a mechanism to access the frame object</p>
+<p>Provides a mechanism to wait for completion of a task</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="ifm3dpy.FrameAwaitable.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.FrameAwaitable" title="ifm3dpy.FrameAwaitable"><span class="pre">ifm3dpy.FrameAwaitable</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.FrameAwaitable.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Provides a mechanism to access the frame object</p>
+<dt class="sig sig-object py" id="ifm3dpy.Awaitable.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.Awaitable" title="ifm3dpy.Awaitable"><span class="pre">ifm3dpy.Awaitable</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.Awaitable.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Provides a mechanism to wait for completion of a task</p>
 </dd></dl>
 
 <p class="rubric">Methods</p>
@@ -107,26 +107,26 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.FrameAwaitable.__init__" title="ifm3dpy.FrameAwaitable.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self)</p></td>
-<td><p>Provides a mechanism to access the frame object</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.Awaitable.__init__" title="ifm3dpy.Awaitable.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self)</p></td>
+<td><p>Provides a mechanism to wait for completion of a task</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.FrameAwaitable.wait" title="ifm3dpy.FrameAwaitable.wait"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.Awaitable.wait" title="ifm3dpy.Awaitable.wait"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait</span></code></a>(self)</p></td>
 <td><p>Blocks until the result becomes available.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.FrameAwaitable.wait_for" title="ifm3dpy.FrameAwaitable.wait_for"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for</span></code></a>(self, timeout_ms)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.Awaitable.wait_for" title="ifm3dpy.Awaitable.wait_for"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for</span></code></a>(self, timeout_ms)</p></td>
 <td><p>Blocks until specified timeout runs out or the result to becomes available.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
-<dt class="sig sig-object py" id="ifm3dpy.FrameAwaitable.wait">
-<span class="sig-name descname"><span class="pre">wait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.FrameAwaitable" title="ifm3dpy.FrameAwaitable"><span class="pre">ifm3dpy.FrameAwaitable</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ifm3dpy.Frame.html#ifm3dpy.Frame" title="ifm3dpy.Frame"><span class="pre">ifm3dpy.Frame</span></a></span></span><a class="headerlink" href="#ifm3dpy.FrameAwaitable.wait" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="ifm3dpy.Awaitable.wait">
+<span class="sig-name descname"><span class="pre">wait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.Awaitable" title="ifm3dpy.Awaitable"><span class="pre">ifm3dpy.Awaitable</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.Awaitable.wait" title="Permalink to this definition"></a></dt>
 <dd><p>Blocks until the result becomes available.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ifm3dpy.FrameAwaitable.wait_for">
-<span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.FrameAwaitable" title="ifm3dpy.FrameAwaitable"><span class="pre">ifm3dpy.FrameAwaitable</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_ms</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">,</span> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="ifm3dpy.Frame.html#ifm3dpy.Frame" title="ifm3dpy.Frame"><span class="pre">ifm3dpy.Frame</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ifm3dpy.FrameAwaitable.wait_for" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="ifm3dpy.Awaitable.wait_for">
+<span class="sig-name descname"><span class="pre">wait_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.Awaitable" title="ifm3dpy.Awaitable"><span class="pre">ifm3dpy.Awaitable</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_ms</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">,</span> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ifm3dpy.Awaitable.wait_for" title="Permalink to this definition"></a></dt>
 <dd><p>Blocks until specified timeout runs out or the result to becomes available.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -143,8 +143,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="ifm3dpy.Frame.html" class="btn btn-neutral float-left" title="ifm3dpy.Frame" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ifm3dpy.FrameGrabber.html" class="btn btn-neutral float-right" title="ifm3dpy.FrameGrabber" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ifm3dpy.run.html" class="btn btn-neutral float-left" title="ifm3dpy.run" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ifm3dpy.Device.html" class="btn btn-neutral float-right" title="ifm3dpy.Device" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

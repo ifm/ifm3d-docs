@@ -23,6 +23,7 @@ ifm3dpy.FrameGrabber
       ~FrameGrabber.on_new_frame
       ~FrameGrabber.start
       ~FrameGrabber.stop
+      ~FrameGrabber.sw_trigger
       ~FrameGrabber.wait_for_frame
    
    

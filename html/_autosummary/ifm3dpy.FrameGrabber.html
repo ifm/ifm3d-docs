@@ -45,6 +45,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../python_api.html">Python API</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="ifm3dpy.html">ifm3dpy</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.run.html">ifm3dpy.run</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.Awaitable.html">ifm3dpy.Awaitable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.Device.html">ifm3dpy.Device</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.Frame.html">ifm3dpy.Frame</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.FrameAwaitable.html">ifm3dpy.FrameAwaitable</a></li>
@@ -135,7 +136,10 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.stop" title="ifm3dpy.FrameGrabber.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>(self)</p></td>
 <td><p>Stops the worker thread for streaming in pixel data from the device</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.wait_for_frame" title="ifm3dpy.FrameGrabber.wait_for_frame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for_frame</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.sw_trigger" title="ifm3dpy.FrameGrabber.sw_trigger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sw_trigger</span></code></a>(self)</p></td>
+<td><p>Triggers the device for image acquisition</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.FrameGrabber.wait_for_frame" title="ifm3dpy.FrameGrabber.wait_for_frame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for_frame</span></code></a>(self)</p></td>
 <td><p>Returns an Awaitable that will resolve when a new frame is available</p></td>
 </tr>
 </tbody>
@@ -198,6 +202,22 @@ extract the image data.</p>
 <dt class="sig sig-object py" id="ifm3dpy.FrameGrabber.stop">
 <span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.FrameGrabber" title="ifm3dpy.FrameGrabber"><span class="pre">ifm3dpy.FrameGrabber</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ifm3dpy.FrameGrabber.stop" title="Permalink to this definition"></a></dt>
 <dd><p>Stops the worker thread for streaming in pixel data from the device</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.FrameGrabber.sw_trigger">
+<span class="sig-name descname"><span class="pre">sw_trigger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.FrameGrabber" title="ifm3dpy.FrameGrabber"><span class="pre">ifm3dpy.FrameGrabber</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ifm3dpy.Awaitable.html#ifm3dpy.Awaitable" title="ifm3dpy.Awaitable"><span class="pre">ifm3dpy.Awaitable</span></a></span></span><a class="headerlink" href="#ifm3dpy.FrameGrabber.sw_trigger" title="Permalink to this definition"></a></dt>
+<dd><p>Triggers the device for image acquisition</p>
+<p>You should be sure to set the <cite>TriggerMode</cite> for your application to
+<cite>SW</cite> in order for this to be effective. This function
+simply does the triggering, data are still received asynchronously via
+<cite>wait_for_frame()</cite>.</p>
+<p>Calling this function when the device is not in <cite>SW</cite> trigger mode or on
+a device that does not support software-trigger should result in a NOOP
+and no error will be returned (no exceptions thrown). However, we do not
+recommend calling this function in a tight framegrabbing loop when you
+know it is not needed. The “cost” of the NOOP is undefined and incurring
+it is not recommended.</p>
 </dd></dl>
 
 <dl class="py method">
