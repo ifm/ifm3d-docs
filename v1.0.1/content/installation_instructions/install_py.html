@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python installation &mdash; ifm3d  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Docker dev containers" href="install_docker.html" />
+    <link rel="prev" title="Install using the ifm3d installer" href="windows.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> ifm3d
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Installation instructions</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="o3r_early_adopter_index.html">O3R early adopters</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="source_build.html">Linux c++ source build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows.html">Install using the ifm3d installer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows.html#building-ifm3d-from-source-on-windows">Building ifm3d from source on Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows.html#usage">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows.html#running-ifm3d-command-line-tools">Running ifm3d command line tools</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Python installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_docker.html">Docker dev containers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="stable_release_index.html">Stable release</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../migrating_guide.html">**Migrating to v1.x**</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cli_link.html">Command Line tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stlimage.html">Manipulating images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python_api.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp_api/annotated.html">C++ API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">ifm3d</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Installing the software</a> &raquo;</li>
+          <li><a href="o3r_early_adopter_index.html">O3R early adopters</a> &raquo;</li>
+      <li>Python installation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/content/installation_instructions/install_py.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="python-installation">
+<h1>Python installation<a class="headerlink" href="#python-installation" title="Permalink to this headline"></a></h1>
+<blockquote>
+<div><p>Note: We recommend for testing purposes to install the ifm3dpy package in an clean python environment first. You can use <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">venv</span> <span class="pre">&quot;venv-name&quot;</span></code> to create a new virtual environment.</p>
+</div></blockquote>
+<p>You can use the official PyPI package to install the ifm3dpy within your virtual environment:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ifm3dpy</span>
+</pre></div>
+</div>
+<p>Now, you can check your installation.</p>
+<div class="section" id="check-the-ifm3dpy-installation">
+<h2>Check the ifm3dpy installation<a class="headerlink" href="#check-the-ifm3dpy-installation" title="Permalink to this headline"></a></h2>
+<p>Let’s verify quickly that the installation worked! This command should display the list of packages installed in your environment:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">freeze</span>
+</pre></div>
+</div>
+<p>Open up a python shell with:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span><span class="o">.</span><span class="n">exe</span>
+<span class="n">OR</span>
+<span class="o">./</span><span class="n">python</span><span class="o">.</span><span class="n">exe</span>
+<span class="n">OR</span>
+<span class="n">python</span>
+</pre></div>
+</div>
+<p>Then try importing the package:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ifm3dpy</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ifm3dpy</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="mf">0.91.0</span>
+</pre></div>
+</div>
+<p>You can test the connection from VPU to camera head with following lines:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ifm3dpy</span> <span class="kn">import</span> <span class="n">O3R</span>
+<span class="n">o3r</span> <span class="o">=</span> <span class="n">O3R</span><span class="p">()</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">o3r</span><span class="o">.</span><span class="n">get</span><span class="p">()</span> <span class="c1">#get the configuration saved on the VPU</span>
+</pre></div>
+</div>
+<p>Using the package <code class="docutils literal notranslate"><span class="pre">json</span></code> provides an easier tool for displaying JSON-Strings. The configuration from the VPU is always a JSON-String (output below shortened for display purposes).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
+<span class="o">&gt;&gt;&gt;</span><span class="p">{</span>
+    <span class="s2">&quot;device&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;clock&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;currentTime&quot;</span><span class="p">:</span> <span class="mi">1581090739817663072</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;diagnostic&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;temperatures&quot;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s2">&quot;upTime&quot;</span><span class="p">:</span> <span class="mi">94000000000</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;device&quot;</span><span class="p">:</span> <span class="s2">&quot;0301&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;deviceTreeBinaryBlob&quot;</span><span class="p">:</span> <span class="s2">&quot;tegra186-quill-p3310-1000-c03-00-base.dtb&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;TableTop2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;partNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;M03975&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;productionState&quot;</span><span class="p">:</span> <span class="s2">&quot;AA&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;serialNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;000201234176&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;vendor&quot;</span><span class="p">:</span> <span class="s2">&quot;0001&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;network&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;authorized_keys&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ipAddressConfig&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;macEth0&quot;</span><span class="p">:</span> <span class="s2">&quot;00:04:4B:EA:9F:D1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;macEth1&quot;</span><span class="p">:</span> <span class="s2">&quot;00:02:01:23:41:76&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;networkSpeed&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+            <span class="s2">&quot;staticIPv4Address&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.0.69&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;staticIPv4Gateway&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.0.201&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;staticIPv4SubNetMask&quot;</span><span class="p">:</span> <span class="s2">&quot;255.255.255.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;useDHCP&quot;</span><span class="p">:</span> <span class="n">false</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;errorMessage&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;errorNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;swVersion&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;kernel&quot;</span><span class="p">:</span> <span class="s2">&quot;4.9.140-l4t-r32.4+gc35f5eb9d1d9&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;l4t&quot;</span><span class="p">:</span> <span class="s2">&quot;r32.4.3&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;os&quot;</span><span class="p">:</span> <span class="s2">&quot;0.13.13-221&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;schema&quot;</span><span class="p">:</span> <span class="s2">&quot;v0.1.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;swu&quot;</span><span class="p">:</span> <span class="s2">&quot;0.15.12&quot;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;ports&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;port0&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;acquisition&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;framerate&quot;</span><span class="p">:</span> <span class="mf">10.0</span><span class="p">,</span>
+                <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;major&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;minor&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;patch&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;algoDebugConfig&quot;</span><span class="p">:</span> <span class="p">{},</span>
+                <span class="s2">&quot;availablePCICOutput&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                <span class="s2">&quot;pcicTCPPort&quot;</span><span class="p">:</span> <span class="mi">50010</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;device&quot;</span><span class="p">:</span> <span class="s2">&quot;2301&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;deviceTreeBinaryBlobOverlay&quot;</span><span class="p">:</span> <span class="s2">&quot;001-ov9782.dtbo&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;fov&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;horizontal&quot;</span><span class="p">:</span> <span class="mi">127</span><span class="p">,</span>
+                        <span class="s2">&quot;vertical&quot;</span><span class="p">:</span> <span class="mi">80</span>
+                    <span class="p">},</span>
+                    <span class="s2">&quot;resolution&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mi">800</span><span class="p">,</span>
+                        <span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">1280</span>
+                    <span class="p">},</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;2D&quot;</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;partNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;M03976&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;productionState&quot;</span><span class="p">:</span> <span class="s2">&quot;AA&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;sensor&quot;</span><span class="p">:</span> <span class="s2">&quot;OV9782&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;sensorID&quot;</span><span class="p">:</span> <span class="s2">&quot;OV9782_127x80_noIllu_Csample&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;serialNumber&quot;</span><span class="p">:</span> <span class="s2">&quot;000000000281&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;vendor&quot;</span><span class="p">:</span> <span class="s2">&quot;0001&quot;</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;experimental_autoexposure2D&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;processing&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;extrinsicHeadToUser&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;rotX&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+                    <span class="s2">&quot;rotY&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+                    <span class="s2">&quot;rotZ&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+                    <span class="s2">&quot;transX&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+                    <span class="s2">&quot;transY&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+                    <span class="s2">&quot;transZ&quot;</span><span class="p">:</span> <span class="mf">0.0</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;major&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;minor&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;patch&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;RUN&quot;</span>
+        <span class="p">},</span>
+        <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="windows.html" class="btn btn-neutral float-left" title="Install using the ifm3d installer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="install_docker.html" class="btn btn-neutral float-right" title="Docker dev containers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, ifm electronic.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

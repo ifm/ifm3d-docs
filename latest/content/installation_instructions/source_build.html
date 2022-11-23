@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installing ifm3d from source &mdash; ifm3d  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Install using the ifm3d installer" href="windows.html" />
+    <link rel="prev" title="O3R early adopters" href="o3r_early_adopter_index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> ifm3d
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Installation instructions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="o3r_early_adopter_index.html">O3R early adopters</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="stable_release_index.html">Stable release</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="install_ubuntu_apt.html">Ubuntu Linux via Apt (amd64/arm64)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_linux_tegra.html">Linux for Tegra</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Linux source build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows.html">Install using the ifm3d installer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows.html#building-ifm3d-from-source-on-windows">Building ifm3d from source on Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows.html#usage">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows.html#running-ifm3d-command-line-tools">Running ifm3d command line tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_ros_bin.html">ROS/ROS2 binaries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_docker.html">Docker</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../migrating_guide.html">**Migrating to v1.x**</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cli_link.html">Command Line tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stlimage.html">Manipulating images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python_api.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp_api/annotated.html">C++ API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">ifm3d</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Installing the software</a> &raquo;</li>
+          <li><a href="o3r_early_adopter_index.html">O3R early adopters</a> &raquo;</li>
+      <li>Installing ifm3d from source</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/content/installation_instructions/source_build.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="installing-ifm3d-from-source">
+<h1>Installing ifm3d from source<a class="headerlink" href="#installing-ifm3d-from-source" title="Permalink to this headline"></a></h1>
+<div class="section" id="overview-of-the-available-build-flags">
+<h2>Overview of the available build flags<a class="headerlink" href="#overview-of-the-available-build-flags" title="Permalink to this headline"></a></h2>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Flag name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Default value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>BUILD_MODULE_FRAMEGRABBER</p></td>
+<td><p>Build the framegrabber module</p></td>
+<td><p>ON</p></td>
+</tr>
+<tr class="row-odd"><td><p>BUILD_MODULE_STLIMAGE</p></td>
+<td><p>Build the stl image module (Only relies on standard c++ libraries)</p></td>
+<td><p>ON</p></td>
+</tr>
+<tr class="row-even"><td><p>BUILD_MODULE_IMAGE <strong>DEPRECATED</strong></p></td>
+<td><p>Build the image module (Depends on OpenCV and PCL)</p></td>
+<td><p>OFF</p></td>
+</tr>
+<tr class="row-odd"><td><p>BUILD_MODULE_OPENCV <strong>DEPRECATED</strong></p></td>
+<td><p>Build the OpenCV-only image container</p></td>
+<td><p>OFF</p></td>
+</tr>
+<tr class="row-even"><td><p>BUILD_MODULE_TOOLS</p></td>
+<td><p>Build the command-line utility</p></td>
+<td><p>ON</p></td>
+</tr>
+<tr class="row-odd"><td><p>BUILD_IN_DEPS</p></td>
+<td><p>Download and build dependencies</p></td>
+<td><p>ON</p></td>
+</tr>
+<tr class="row-even"><td><p>BUILD_MODULE_PYBIND11</p></td>
+<td><p>Build the ifm3dpy python package (it can also be installed directly through <code class="docutils literal notranslate"><span class="pre">pip</span></code>)</p></td>
+<td><p>OFF</p></td>
+</tr>
+<tr class="row-odd"><td><p>USE_LEGACY_COORDINATES</p></td>
+<td><p>Use the legacy coordinates (ifm3d &lt;= 0.92.x) with swapped axis</p></td>
+<td><p>OFF</p></td>
+</tr>
+<tr class="row-even"><td><p>BUILD_MODULE_SWUPDATER</p></td>
+<td><p>Build the swupdater module</p></td>
+<td><p>ON</p></td>
+</tr>
+<tr class="row-odd"><td><p>BUILD_SDK_PKG</p></td>
+<td><p>Build install packages for development purposes</p></td>
+<td><p>ON</p></td>
+</tr>
+<tr class="row-even"><td><p>FORCE_OPENCV3</p></td>
+<td><p>Force the build to require OpenCV 3</p></td>
+<td><p>OFF</p></td>
+</tr>
+<tr class="row-odd"><td><p>FORCE_OPENCV2</p></td>
+<td><p>Force the build to require OpenCV 2.4</p></td>
+<td><p>OFF</p></td>
+</tr>
+<tr class="row-even"><td><p>BUILD_SHARED_LIBS</p></td>
+<td><p>Build modules as shared libraries</p></td>
+<td><p>ON</p></td>
+</tr>
+<tr class="row-odd"><td><p>BUILD_EXAMPLES</p></td>
+<td><p>Build the examples</p></td>
+<td><p>OFF</p></td>
+</tr>
+<tr class="row-even"><td><p>BUILD_DOC</p></td>
+<td><p>Build documentation</p></td>
+<td><p>OFF</p></td>
+</tr>
+<tr class="row-odd"><td><p>BUILD_TESTS</p></td>
+<td><p>Build unit tests</p></td>
+<td><p>ON</p></td>
+</tr>
+<tr class="row-even"><td><p>BUILD_MODULE_PCICCLIENT</p></td>
+<td><p>Build the pcicclient module</p></td>
+<td><p>OFF</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="build-dependencies">
+<h2>Build Dependencies<a class="headerlink" href="#build-dependencies" title="Permalink to this headline"></a></h2>
+<table>
+  <tr>
+    <th>Dependency</th>
+    <th>Dependent ifm3d module</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td><a href="http://www.cmake.org">CMake</a></td>
+    <td>camera, framegrabber, swupdater, image, opencv, stlimage, pcicclient, tools,
+    pybind11</td>
+    <td>Meta-build framework</td>
+  </tr>
+  <tr>
+    <td><a href="https://curl.haxx.se/libcurl">Curl</a></td>
+    <td>tools, swupdater</td>
+    <td>Used to help enable command-line based firmware flashing.</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/google/glog">Glog</a></td>
+    <td>camera, framegrabber, swupdater, image, opencv, stlimage, pcicclient, tools,
+    pybind11</td>
+    <td>Logging framework</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/google/googletest">Gtest</a></td>
+    <td>camera, framegrabber, swupdater, image, opencv, stlimage, pcicclient, tools</td>
+    <td>Unit testing framework</td>
+  </tr>
+  <tr>
+    <td><a href="http://xmlrpc-c.sourceforge.net/">libxmlrpc</a></td>
+    <td>camera, pybind11</td>
+    <td>XMLRPC client used call into the camera configuration interface</td>
+  </tr>
+  <tr>
+    <td><a href="http://opencv.org">OpenCV</a></td>
+    <td>image, opencv, pybind11</td>
+    <td>N-dimensional array container for encoding 2d and 3d image data</td>
+  </tr>
+  <tr>
+    <td><a href="http://pointclouds.org">PCL</a></td>
+    <td>image</td>
+    <td>A 3D point cloud encoding. NOTE: the PCL dependency in ifm3d is
+    header-only (we need to construct a point cloud) however there is no
+    runtime linking dependency.</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/pybind/pybind11">pybind11</a></td>
+    <td>pybind11</td>
+    <td>A header-only library that exposes C++ types in Python and vice versa,
+    mainly to create Python bindings of existing C++ code.</td>
+  </tr>
+</table>
+<p>Additionally, if you plan to build the debian packages and have the
+dependencies computed for you dynamically (see the note below on the
+<code class="docutils literal notranslate"><span class="pre">repackage</span></code> target), you will also need:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.python.org/">Python 2.7</a></p></li>
+<li><p><a class="reference external" href="https://www.gnu.org/software/binutils/">readelf</a> (Part of the <code class="docutils literal notranslate"><span class="pre">binutils</span></code> package)</p></li>
+<li><p><a class="reference external" href="http://man7.org/linux/man-pages/man1/ldd.1.html">ldd</a> (Part of the <code class="docutils literal notranslate"><span class="pre">libc-bin</span></code> package)</p></li>
+<li><p><a class="reference external" href="https://help.ubuntu.com/lts/serverguide/dpkg.html">dpkg</a></p></li>
+</ul>
+<p>We note that, if you are running on a supported Linux, all of these packages
+are available through the offical debian repositories and should be a simple
+<code class="docutils literal notranslate"><span class="pre">apt-get</span></code> away from being installed on your machine.</p>
+<p>Use the following steps to install all the library dependencies on Debian based systems</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get update &amp;&amp; sudo apt-get -y upgrade
+$ sudo apt-get update &amp;&amp; sudo apt-get install -y 
+      git \ 
+      jq \ 
+      libssl-dev \
+      libcurl4-openssl-dev \
+      libgtest-dev libgoogle-glog-dev  \
+      libxmlrpc-c++8-dev \ 
+      libproj-dev \
+      build-essential \
+      coreutils \
+      cmake
+# Only if you wish to build the image and/or opencv modules
+$ sudo apt-get update &amp;&amp; sudo apt-get install -y libopencv-dev libpcl-dev                 
+# Only if you wish to build the python bindings
+$ sudo apt-get update &amp;&amp; sudo apt-get install pybind11-dev                          
+</pre></div>
+</div>
+<p>Note: The package name may differ in different flavours of Linux.
+Above apt-get commands are specific to Debian based systems</p>
+</div>
+<div class="section" id="building-from-source">
+<h2>Building From Source<a class="headerlink" href="#building-from-source" title="Permalink to this headline"></a></h2>
+<p>Start with cloning the code from the ifm3d github repository {{ ‘<span class="xref myst">here</span>’.format(ifm3d_gh_url) }}.</p>
+<p>⚠ The code on the branch {{ ifm3d_main_branch }} is updated nightly and contains the latest changes to the library. It is typically a work in progress.<br />
+⚠ We recommend using tagged versions for your builds, to ensure consistency between builds. The latest tagged version can be found {{ ‘<span class="xref myst">here</span>’.format(ifm3d_latest_tag_url) }}.</p>
+<div class="section" id="the-default-build">
+<h3>The default build<a class="headerlink" href="#the-default-build" title="Permalink to this headline"></a></h3>
+<p>By default, the <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> build enables the <code class="docutils literal notranslate"><span class="pre">camera</span></code>, <code class="docutils literal notranslate"><span class="pre">framegrabber</span></code>, <code class="docutils literal notranslate"><span class="pre">stlimage</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">tools</span></code> modules. Building the software follows the usual cmake idiom of:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mkdir build
+$ cd build
+$ cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+$ cmake --build .
+$ sudo cmake --build . --target install
+</pre></div>
+</div>
+</div>
+<div class="section" id="building-with-pcl-and-or-opencv">
+<h3>Building with PCL and/or OPENCV<a class="headerlink" href="#building-with-pcl-and-or-opencv" title="Permalink to this headline"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> provides multiple image buffers. The default one, <code class="docutils literal notranslate"><span class="pre">stlimage</span></code> only relies on standard c++ libraries. The <code class="docutils literal notranslate"><span class="pre">image</span></code> module relies on opencv and pcl. The <code class="docutils literal notranslate"><span class="pre">opencv</span></code> modules relies only on openCV. To build either of these use the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mkdir build
+$ cd build
+$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_MODULE_OPENCV=ON  -DBUILD_IN_DEPS=OFF ..
+# OR
+$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_MODULE_IMAGE=ON -DBUILD_IN_DEPS=OFF ..
+$ cmake --build .
+$ sudo cmake --build . --target install
+</pre></div>
+</div>
+<blockquote>
+<div><p>Note: Many <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> users ultimately plan to use this library along with its associated <span class="xref myst">ROS wrapper</span>.
+If this is the case, you need to be sure that the version of OpenCV that you link to in both <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> and <code class="docutils literal notranslate"><span class="pre">ifm3d-ros</span></code> are consistent.
+To give you some control over that, the build process allows you to explicitly call out which version of OpenCV you wish to use.
+For example, if you are using OpenCV 2.4, your <code class="docutils literal notranslate"><span class="pre">cmake</span></code> line above should look something like: <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cmake</span> <span class="pre">-DCMAKE_INSTALL_PREFIX=/usr</span> <span class="pre">-DFORCE_OPENCV2=ON</span> <span class="pre">..</span></code>.
+Similarly, if you are using OpenCV 3, your <code class="docutils literal notranslate"><span class="pre">cmake</span></code> line above should look something like: <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cmake</span> <span class="pre">-DCMAKE_INSTALL_PREFIX=/usr</span> <span class="pre">-DFORCE_OPENCV3=ON</span> <span class="pre">..</span></code>
+Note that as of version 1.0.1, the <code class="docutils literal notranslate"><span class="pre">ifm3d-ros2</span></code> wrapper does not require OpenCV anymore.</p>
+</div></blockquote>
+</div>
+<div class="section" id="building-the-python-bindings">
+<h3>Building the Python Bindings<a class="headerlink" href="#building-the-python-bindings" title="Permalink to this headline"></a></h3>
+<p>There are several options available for building and/or installing the <code class="docutils literal notranslate"><span class="pre">ifm3dpy</span></code> module. The most simple one is to install with pip:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ifm3dpy</span>
+</pre></div>
+</div>
+<p>For more options, please refer to the <span class="xref myst">python</span> documentation.</p>
+</div>
+<div class="section" id="a-sumo-build">
+<h3>A sumo-build<a class="headerlink" href="#a-sumo-build" title="Permalink to this headline"></a></h3>
+<p>If you want to build everything:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mkdir build
+$ cd build
+$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_MODULE_OPENCV=ON -DBUILD_MODULE_PCICCLIENT=ON -DBUILD_MODULE_IMAGE=ON -DBUILS_IN_DEPS=OFF ..
+$ cmake --build .
+$ sudo cmake --build . --target install
+</pre></div>
+</div>
+</div>
+<div class="section" id="building-the-examples">
+<h3>Building the examples<a class="headerlink" href="#building-the-examples" title="Permalink to this headline"></a></h3>
+<p>The examples can be built along with the rest of the library by switching the proper flag on. Assuming you are in the /build folder:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_O3R_EXAMPLES=ON ..
+$ make
+</pre></div>
+</div>
+</div>
+<div class="section" id="building-debian-packages">
+<h3>Building debian packages<a class="headerlink" href="#building-debian-packages" title="Permalink to this headline"></a></h3>
+<p>Alternatively, to build <em>debs</em> to be distributed to multiple runtime machines, you can use the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mkdir build
+$ cd build
+$ cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+$ cmake --build .
+$ cmake --build . package
+$ cmake --build . repackage
+$ sudo dpkg -i ifm3d_0.18.0_amd64-camera.deb
+$ sudo dpkg -i ifm3d_0.18.0_amd64-swupdater.deb
+$ sudo dpkg -i ifm3d_0.18.0_amd64-framegrabber.deb
+$ sudo dpkg -i ifm3d_0.18.0_amd64-stlimage.deb
+$ sudo dpkg -i ifm3d_0.18.0_amd64-tools.deb
+</pre></div>
+</div>
+<p>(The version number embedded in the deb file will be dependent upon which
+version of the <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> software you are building)</p>
+<blockquote>
+<div><p>Note: Experienced users may be puzzled by the <code class="docutils literal notranslate"><span class="pre">repackage</span></code> step.
+This step is used to dynamically compute the debian dependencies for the particular module.
+Due to how we are partitioning out the software, this approach is necessary vs. the more traditional <code class="docutils literal notranslate"><span class="pre">CPACK_DEBIAN_PACKAGE_SHLIBDEPS</span></code> wrapper around <code class="docutils literal notranslate"><span class="pre">dpkg-shlibdeps</span></code>.
+We basically created <span class="xref myst">a version of that tool</span> that exploits <em>a-priori</em> information about the <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> environment to properly compute the debian dependencies.
+If you are building debs on a build machine to be distributed out to various runtime computers, you will certainly want to execute the <code class="docutils literal notranslate"><span class="pre">repackage</span></code> target so that you are ensured the runtime machines have the proper dependency chain in place.</p>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="o3r_early_adopter_index.html" class="btn btn-neutral float-left" title="O3R early adopters" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="windows.html" class="btn btn-neutral float-right" title="Install using the ifm3d installer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, ifm electronic.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
