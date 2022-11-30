@@ -146,43 +146,52 @@ those changes. Defaults to ‘’ (no password).</p></li>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.O3R.get" title="ifm3dpy.O3R.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a>(self[, path])</p></td>
 <td><p>Returns the configuration formatted as JSON based on a path.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.O3R.get_init" title="ifm3dpy.O3R.get_init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_init</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.O3R.get_diagnostic" title="ifm3dpy.O3R.get_diagnostic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_diagnostic</span></code></a>(self)</p></td>
+<td><p>Returns the content of the diagnostic memory formatted in JSON</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.O3R.get_diagnostic_filter_schema" title="ifm3dpy.O3R.get_diagnostic_filter_schema"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_diagnostic_filter_schema</span></code></a>(self)</p></td>
+<td><p>Returns the JSON schema for the filter expression provided to the getFiltered() method</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.O3R.get_diagnostic_filtered" title="ifm3dpy.O3R.get_diagnostic_filtered"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_diagnostic_filtered</span></code></a>(self, filter)</p></td>
+<td><p>Returns the content of the diagnostic memory formatted in JSON and filtered according to the JSON filter expression</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.O3R.get_init" title="ifm3dpy.O3R.get_init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_init</span></code></a>(self)</p></td>
 <td><p>Return the initial JSON configuration.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.O3R.get_init_status" title="ifm3dpy.O3R.get_init_status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_init_status</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.O3R.get_init_status" title="ifm3dpy.O3R.get_init_status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_init_status</span></code></a>(self)</p></td>
 <td><p>Returns the init status of the device</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.O3R.get_schema" title="ifm3dpy.O3R.get_schema"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_schema</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.O3R.get_schema" title="ifm3dpy.O3R.get_schema"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_schema</span></code></a>(self)</p></td>
 <td><p>Returns the current JSON schema configuration</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.O3R.lock" title="ifm3dpy.O3R.lock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lock</span></code></a>(self, password)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.O3R.lock" title="ifm3dpy.O3R.lock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lock</span></code></a>(self, password)</p></td>
 <td><p>Release the lock from the Device</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.O3R.reboot" title="ifm3dpy.O3R.reboot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reboot</span></code></a>(self, mode)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.O3R.reboot" title="ifm3dpy.O3R.reboot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reboot</span></code></a>(self, mode)</p></td>
 <td><p>Reboot the sensor</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.O3R.remove" title="ifm3dpy.O3R.remove"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove</span></code></a>(self, json_pointer)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.O3R.remove" title="ifm3dpy.O3R.remove"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove</span></code></a>(self, json_pointer)</p></td>
 <td><p>Removes an object from the JSON.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.O3R.reset" title="ifm3dpy.O3R.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></a>(self, json_pointer)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.O3R.reset" title="ifm3dpy.O3R.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></a>(self, json_pointer)</p></td>
 <td><p>Sets the default value of an object inside the JSON.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.O3R.save_init" title="ifm3dpy.O3R.save_init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_init</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.O3R.save_init" title="ifm3dpy.O3R.save_init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_init</span></code></a>(self)</p></td>
 <td><p>Save to current temporary JSON configuration as initial JSON configuration</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.O3R.set" title="ifm3dpy.O3R.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(self, json)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.O3R.set" title="ifm3dpy.O3R.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(self, json)</p></td>
 <td><p>Overwrites parts of the temporary JSON configuration which is achieved by merging the provided JSON fragment with the current temporary JSON.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.O3R.to_json" title="ifm3dpy.O3R.to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.O3R.to_json" title="ifm3dpy.O3R.to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code></a>(self)</p></td>
 <td><p>A JSON object containing the state of the camera</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.O3R.trace_logs" title="ifm3dpy.O3R.trace_logs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trace_logs</span></code></a>(self, count)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.O3R.trace_logs" title="ifm3dpy.O3R.trace_logs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trace_logs</span></code></a>(self, count)</p></td>
 <td><p>Delivers the trace log from the camera</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.O3R.unlock" title="ifm3dpy.O3R.unlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unlock</span></code></a>(self, password)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.O3R.unlock" title="ifm3dpy.O3R.unlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unlock</span></code></a>(self, password)</p></td>
 <td><p>Locks the device until it is unlocked.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.O3R.who_am_i" title="ifm3dpy.O3R.who_am_i"><code class="xref py py-obj docutils literal notranslate"><span class="pre">who_am_i</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.O3R.who_am_i" title="ifm3dpy.O3R.who_am_i"><code class="xref py py-obj docutils literal notranslate"><span class="pre">who_am_i</span></code></a>(self)</p></td>
 <td><p>Retrieve the device family of the connected device</p></td>
 </tr>
 </tbody>
@@ -380,6 +389,53 @@ If the path is empty, returns the whole configuration.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.O3R.get_diagnostic">
+<span class="sig-name descname"><span class="pre">get_diagnostic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.O3R" title="ifm3dpy.O3R"><span class="pre">ifm3dpy.O3R</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#ifm3dpy.O3R.get_diagnostic" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the content of the diagnostic memory formatted in JSON</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.O3R.get_diagnostic_filter_schema">
+<span class="sig-name descname"><span class="pre">get_diagnostic_filter_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.O3R" title="ifm3dpy.O3R"><span class="pre">ifm3dpy.O3R</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#ifm3dpy.O3R.get_diagnostic_filter_schema" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the JSON schema for the filter expression provided to the
+getFiltered() method</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The JSON schema</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.O3R.get_diagnostic_filtered">
+<span class="sig-name descname"><span class="pre">get_diagnostic_filtered</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.O3R" title="ifm3dpy.O3R"><span class="pre">ifm3dpy.O3R</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#ifm3dpy.O3R.get_diagnostic_filtered" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the content of the diagnostic memory formatted in JSON
+and filtered according to the JSON filter expression</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filter</strong> (<em>dict</em>) – A filter expression in JSON format</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>

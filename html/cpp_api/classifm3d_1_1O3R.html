@@ -204,6 +204,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab82367443890c0526f2da7c79147e6b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace851644d8586ad20a68865f80860f89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structifm3d_1_1PortInfo.html">PortInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3R.html#ace851644d8586ad20a68865f80860f89">Port</a> (const std::string &amp;port)</td></tr>
 <tr class="separator:ace851644d8586ad20a68865f80860f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4065b662a3fdc743bcceab1c2d984aa"><td class="memItemLeft" align="right" valign="top">json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3R.html#ae4065b662a3fdc743bcceab1c2d984aa">GetDiagnostic</a> ()</td></tr>
+<tr class="memdesc:ae4065b662a3fdc743bcceab1c2d984aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the content of the diagnostic memory formatted in JSON.  <a href="classifm3d_1_1O3R.html#ae4065b662a3fdc743bcceab1c2d984aa">More...</a><br /></td></tr>
+<tr class="separator:ae4065b662a3fdc743bcceab1c2d984aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11fca069af27c5a8eea3deea8d330d76"><td class="memItemLeft" align="right" valign="top">json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3R.html#a11fca069af27c5a8eea3deea8d330d76">GetDiagnosticFilterSchema</a> ()</td></tr>
+<tr class="memdesc:a11fca069af27c5a8eea3deea8d330d76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the JSON schema for the filter expression provided to the getFiltered() method.  <a href="classifm3d_1_1O3R.html#a11fca069af27c5a8eea3deea8d330d76">More...</a><br /></td></tr>
+<tr class="separator:a11fca069af27c5a8eea3deea8d330d76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbb1030fab198f9a9e9f9e4cdc3140c9"><td class="memItemLeft" align="right" valign="top">json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3R.html#acbb1030fab198f9a9e9f9e4cdc3140c9">GetDiagnosticFiltered</a> (json filter)</td></tr>
+<tr class="memdesc:acbb1030fab198f9a9e9f9e4cdc3140c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the content of the diagnostic memory formatted in JSON and filtered according to the JSON filter expression.  <a href="classifm3d_1_1O3R.html#acbb1030fab198f9a9e9f9e4cdc3140c9">More...</a><br /></td></tr>
+<tr class="separator:acbb1030fab198f9a9e9f9e4cdc3140c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab50df498165624f643ff73c9cd9a0d9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3R.html#ab50df498165624f643ff73c9cd9a0d9d">Reboot</a> (const <a class="el" href="classifm3d_1_1Device.html#a752c3ebe308ebac6b2fe987cd0d53775">boot_mode</a> &amp;mode=ifm3d::Device::boot_mode::PRODUCTIVE) override</td></tr>
 <tr class="separator:ab50df498165624f643ff73c9cd9a0d9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a047049bbce215aeee7f0f8ee1868831f"><td class="memItemLeft" align="right" valign="top">device_family&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3R.html#a047049bbce215aeee7f0f8ee1868831f">WhoAmI</a> () override</td></tr>
@@ -381,6 +390,73 @@ std::unique_ptr&lt; Impl &gt;&#160;</td><td class="memItemRight" valign="bottom"
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The JSON configuration for the list of object path fragments </dd></dl>
+
+</div>
+</div>
+<a id="ae4065b662a3fdc743bcceab1c2d984aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4065b662a3fdc743bcceab1c2d984aa">&#9670;&nbsp;</a></span>GetDiagnostic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">json ifm3d::O3R::GetDiagnostic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the content of the diagnostic memory formatted in JSON. </p>
+<dl class="section return"><dt>Returns</dt><dd>The JSON containing all known diagnostic events </dd></dl>
+
+</div>
+</div>
+<a id="acbb1030fab198f9a9e9f9e4cdc3140c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbb1030fab198f9a9e9f9e4cdc3140c9">&#9670;&nbsp;</a></span>GetDiagnosticFiltered()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">json ifm3d::O3R::GetDiagnosticFiltered </td>
+          <td>(</td>
+          <td class="paramtype">json&#160;</td>
+          <td class="paramname"><em>filter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the content of the diagnostic memory formatted in JSON and filtered according to the JSON filter expression. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filter</td><td>A filter expression in JSON format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>json </dd></dl>
+
+</div>
+</div>
+<a id="a11fca069af27c5a8eea3deea8d330d76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11fca069af27c5a8eea3deea8d330d76">&#9670;&nbsp;</a></span>GetDiagnosticFilterSchema()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">json ifm3d::O3R::GetDiagnosticFilterSchema </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the JSON schema for the filter expression provided to the getFiltered() method. </p>
+<dl class="section return"><dt>Returns</dt><dd>The JSON schema </dd></dl>
 
 </div>
 </div>
