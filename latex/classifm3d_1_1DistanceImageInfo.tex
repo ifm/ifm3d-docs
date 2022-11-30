@@ -1,0 +1,46 @@
+\hypertarget{classifm3d_1_1DistanceImageInfo}{}\doxysection{ifm3d\+::Distance\+Image\+Info Class Reference}
+\label{classifm3d_1_1DistanceImageInfo}\index{ifm3d::DistanceImageInfo@{ifm3d::DistanceImageInfo}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classifm3d_1_1DistanceImageInfo_a7872ea06b2cb91b12d0dd2dace6f7c50}\label{classifm3d_1_1DistanceImageInfo_a7872ea06b2cb91b12d0dd2dace6f7c50}} 
+{\bfseries Distance\+Image\+Info} (const float dist\+\_\+res, const float ampl\+\_\+res, const std\+::vector$<$ float $>$ \&amp\+\_\+norm\+\_\+fctrs, const std\+::vector$<$ float $>$ \&extr\+\_\+opt\+\_\+to\+\_\+usr, const \mbox{\hyperlink{structifm3d_1_1IntrinsicCalibration}{Intrinsic\+Calibration}} \&intr\+\_\+calib, const \mbox{\hyperlink{structifm3d_1_1IntrinsicCalibration}{Intrinsic\+Calibration}} \&inv\+\_\+intr\+\_\+calib, const std\+::vector$<$ std\+::uint16\+\_\+t $>$ \&distance\+\_\+buffer, const std\+::vector$<$ std\+::uint16\+\_\+t $>$ \&amplitude\+\_\+buffer, const std\+::vector$<$ uint64\+\_\+t $>$ \&timestamps\+\_\+nsec, const std\+::vector$<$ float $>$ \&exposure\+\_\+times\+\_\+sec, const std\+::uint32\+\_\+t width, const std\+::uint32\+\_\+t height)
+\item 
+\mbox{\Hypertarget{classifm3d_1_1DistanceImageInfo_a71f2858f8d88ba7afd221e39c64b2481}\label{classifm3d_1_1DistanceImageInfo_a71f2858f8d88ba7afd221e39c64b2481}} 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ {\bfseries get\+X\+Y\+Z\+D\+Vector} ()
+\item 
+\mbox{\Hypertarget{classifm3d_1_1DistanceImageInfo_a0265e2e564650c8e86c6e01e13136480}\label{classifm3d_1_1DistanceImageInfo_a0265e2e564650c8e86c6e01e13136480}} 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ {\bfseries get\+Amplitude\+Vector} ()
+\item 
+\mbox{\Hypertarget{classifm3d_1_1DistanceImageInfo_a5efa034a8928a21024dce44e27fe3c82}\label{classifm3d_1_1DistanceImageInfo_a5efa034a8928a21024dce44e27fe3c82}} 
+auto {\bfseries get\+Extrinsic\+Optic\+To\+User} ()
+\item 
+\mbox{\Hypertarget{classifm3d_1_1DistanceImageInfo_ae312f98ffd08d5fd81227b967e1c873c}\label{classifm3d_1_1DistanceImageInfo_ae312f98ffd08d5fd81227b967e1c873c}} 
+auto {\bfseries get\+Intrinsic\+Calibration} ()
+\item 
+\mbox{\Hypertarget{classifm3d_1_1DistanceImageInfo_a6ea37cd4a82d559efc22baeff1ab8467}\label{classifm3d_1_1DistanceImageInfo_a6ea37cd4a82d559efc22baeff1ab8467}} 
+auto {\bfseries get\+Inverse\+Intrinsic\+Calibration} ()
+\item 
+\mbox{\Hypertarget{classifm3d_1_1DistanceImageInfo_a12dd188547fcda83e76d2369175df2ce}\label{classifm3d_1_1DistanceImageInfo_a12dd188547fcda83e76d2369175df2ce}} 
+auto {\bfseries get\+N\+P\+TS} ()
+\item 
+\mbox{\Hypertarget{classifm3d_1_1DistanceImageInfo_aaa9be2718cff592eb0909ad7b6483924}\label{classifm3d_1_1DistanceImageInfo_aaa9be2718cff592eb0909ad7b6483924}} 
+auto {\bfseries get\+Width} ()
+\item 
+\mbox{\Hypertarget{classifm3d_1_1DistanceImageInfo_a1395ff6e4c287cf85940d74cb56840e1}\label{classifm3d_1_1DistanceImageInfo_a1395ff6e4c287cf85940d74cb56840e1}} 
+auto {\bfseries get\+Height} ()
+\item 
+\mbox{\Hypertarget{classifm3d_1_1DistanceImageInfo_af68ce9aa879ed3ab06de1ce7f1987288}\label{classifm3d_1_1DistanceImageInfo_af68ce9aa879ed3ab06de1ce7f1987288}} 
+std\+::vector$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{classifm3d_1_1DistanceImageInfo_af68ce9aa879ed3ab06de1ce7f1987288}{get\+Timestamps}} ()
+\begin{DoxyCompactList}\small\item\em returns the timestamps in nano seconds \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classifm3d_1_1DistanceImageInfo_a4d91486c29d6c5fe492ebb18a94b6807}\label{classifm3d_1_1DistanceImageInfo_a4d91486c29d6c5fe492ebb18a94b6807}} 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{classifm3d_1_1DistanceImageInfo_a4d91486c29d6c5fe492ebb18a94b6807}{get\+Exposure\+Times}} ()
+\begin{DoxyCompactList}\small\item\em return the exposure time for each phase data \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classifm3d_1_1DistanceImageInfo_aa31f6c991e3f0d64c6920126387b539e}\label{classifm3d_1_1DistanceImageInfo_aa31f6c991e3f0d64c6920126387b539e}} 
+\mbox{\hyperlink{classifm3d_1_1Buffer}{ifm3d\+::\+Buffer}} \mbox{\hyperlink{classifm3d_1_1DistanceImageInfo_aa31f6c991e3f0d64c6920126387b539e}{apply\+Distance\+Resolution}} (const \mbox{\hyperlink{classifm3d_1_1Buffer}{ifm3d\+::\+Buffer}} \&ui16\+\_\+distance\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em multiply distance noise image with distance resolution return \mbox{\hyperlink{classifm3d_1_1Buffer}{Buffer}} with float values \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/ifm3d/modules/framegrabber/include/ifm3d/fg/distance\+\_\+image\+\_\+info.\+h\end{DoxyCompactItemize}

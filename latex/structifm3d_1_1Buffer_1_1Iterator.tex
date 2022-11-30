@@ -1,0 +1,55 @@
+\hypertarget{structifm3d_1_1Buffer_1_1Iterator}{}\doxysection{ifm3d\+::Buffer\+::Iterator$<$ T $>$ Struct Template Reference}
+\label{structifm3d_1_1Buffer_1_1Iterator}\index{ifm3d::Buffer::Iterator$<$ T $>$@{ifm3d::Buffer::Iterator$<$ T $>$}}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structifm3d_1_1Buffer_1_1Iterator_afc8ace4d609e2a49bad812369090fcbd}\label{structifm3d_1_1Buffer_1_1Iterator_afc8ace4d609e2a49bad812369090fcbd}} 
+using {\bfseries iterator\+\_\+category} = std\+::random\+\_\+access\+\_\+iterator\+\_\+tag
+\item 
+\mbox{\Hypertarget{structifm3d_1_1Buffer_1_1Iterator_a22ca69da4873fc015348d01e6ba01e63}\label{structifm3d_1_1Buffer_1_1Iterator_a22ca69da4873fc015348d01e6ba01e63}} 
+using {\bfseries difference\+\_\+type} = std\+::ptrdiff\+\_\+t
+\item 
+\mbox{\Hypertarget{structifm3d_1_1Buffer_1_1Iterator_a19065756d7285769f9113b2c800f07b5}\label{structifm3d_1_1Buffer_1_1Iterator_a19065756d7285769f9113b2c800f07b5}} 
+using {\bfseries value\+\_\+type} = T
+\item 
+\mbox{\Hypertarget{structifm3d_1_1Buffer_1_1Iterator_ae26afca4c6a135361a2f06cc46be4432}\label{structifm3d_1_1Buffer_1_1Iterator_ae26afca4c6a135361a2f06cc46be4432}} 
+using {\bfseries pointer} = T $\ast$
+\item 
+\mbox{\Hypertarget{structifm3d_1_1Buffer_1_1Iterator_acb9aded936b8ea070b48d7fb4d906c06}\label{structifm3d_1_1Buffer_1_1Iterator_acb9aded936b8ea070b48d7fb4d906c06}} 
+using {\bfseries reference} = T \&
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structifm3d_1_1Buffer_1_1Iterator_aefd586f6fa4fb8db06c026ec1cc0dda0}\label{structifm3d_1_1Buffer_1_1Iterator_aefd586f6fa4fb8db06c026ec1cc0dda0}} 
+{\bfseries Iterator} (uint8\+\_\+t $\ast$\mbox{\hyperlink{classifm3d_1_1Buffer_ad7f0a9f097ceeb380b1adfe1162bd3cc}{ptr}})
+\item 
+\mbox{\Hypertarget{structifm3d_1_1Buffer_1_1Iterator_a7da86b9dd6b0bd9289ec6071d8ba34d8}\label{structifm3d_1_1Buffer_1_1Iterator_a7da86b9dd6b0bd9289ec6071d8ba34d8}} 
+reference {\bfseries operator$\ast$} () const
+\item 
+\mbox{\Hypertarget{structifm3d_1_1Buffer_1_1Iterator_aea982227be0ae087ce135d1246b3034b}\label{structifm3d_1_1Buffer_1_1Iterator_aea982227be0ae087ce135d1246b3034b}} 
+pointer {\bfseries operator-\/$>$} ()
+\item 
+\mbox{\Hypertarget{structifm3d_1_1Buffer_1_1Iterator_a59863f47db13592a707cb73b73aac4ad}\label{structifm3d_1_1Buffer_1_1Iterator_a59863f47db13592a707cb73b73aac4ad}} 
+\mbox{\hyperlink{structifm3d_1_1Buffer_1_1Iterator}{Iterator}} \& {\bfseries operator++} ()
+\item 
+\mbox{\Hypertarget{structifm3d_1_1Buffer_1_1Iterator_ac54798a42d818df0b6544642eb353ff9}\label{structifm3d_1_1Buffer_1_1Iterator_ac54798a42d818df0b6544642eb353ff9}} 
+\mbox{\hyperlink{structifm3d_1_1Buffer_1_1Iterator}{Iterator}} {\bfseries operator++} (std\+::int32\+\_\+t)
+\item 
+\mbox{\Hypertarget{structifm3d_1_1Buffer_1_1Iterator_a0b45aa3216278040a897e1ae40259178}\label{structifm3d_1_1Buffer_1_1Iterator_a0b45aa3216278040a897e1ae40259178}} 
+bool {\bfseries operator-\/} (const \mbox{\hyperlink{structifm3d_1_1Buffer_1_1Iterator}{Iterator}} \&rhs) const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structifm3d_1_1Buffer_1_1Iterator_adf9a9358b475317bd816d7b47a0f5cd1}\label{structifm3d_1_1Buffer_1_1Iterator_adf9a9358b475317bd816d7b47a0f5cd1}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{structifm3d_1_1Buffer_1_1Iterator}{Iterator}} \&a, const \mbox{\hyperlink{structifm3d_1_1Buffer_1_1Iterator}{Iterator}} \&b)
+\item 
+\mbox{\Hypertarget{structifm3d_1_1Buffer_1_1Iterator_a27aed9f3ea67a677964fa51de28a5824}\label{structifm3d_1_1Buffer_1_1Iterator_a27aed9f3ea67a677964fa51de28a5824}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{structifm3d_1_1Buffer_1_1Iterator}{Iterator}} \&a, const \mbox{\hyperlink{structifm3d_1_1Buffer_1_1Iterator}{Iterator}} \&b)
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/ifm3d/modules/framegrabber/include/ifm3d/fg/buffer.\+h\end{DoxyCompactItemize}
