@@ -21,6 +21,9 @@ using {\bfseries Async\+Notification\+Callback} = std\+::function$<$ void(const 
 \item 
 \mbox{\Hypertarget{classifm3d_1_1FrameGrabber_a0a81a3701da57be978361c2214fc96db}\label{classifm3d_1_1FrameGrabber_a0a81a3701da57be978361c2214fc96db}} 
 using {\bfseries Buffer\+List} = std\+::vector$<$ std\+::variant$<$ std\+::uint64\+\_\+t, int, ifm3d\+::buffer\+\_\+id $>$ $>$
+\item 
+\mbox{\Hypertarget{classifm3d_1_1FrameGrabber_a0b002b1b97d8b758c5c68bda77733f32}\label{classifm3d_1_1FrameGrabber_a0b002b1b97d8b758c5c68bda77733f32}} 
+using {\bfseries Error\+Callback} = std\+::function$<$ void(const \mbox{\hyperlink{classifm3d_1_1Error}{ifm3d\+::\+Error}} \&)$>$
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -47,7 +50,7 @@ void \mbox{\hyperlink{classifm3d_1_1FrameGrabber_aad76d616c98cfde74adedb6de34d17
 \item 
 bool \mbox{\hyperlink{classifm3d_1_1FrameGrabber_adffefb711cacd2730991af483de3cc73}{Start}} (const Buffer\+List \&buffers, const std\+::optional$<$ json $>$ \&pcic\+Format=std\+::nullopt)
 \item 
-bool \mbox{\hyperlink{classifm3d_1_1FrameGrabber_a64a5d1cfd4f5ce826b3fa7daa488c408}{Stop}} ()
+std\+::shared\+\_\+future$<$ void $>$ \mbox{\hyperlink{classifm3d_1_1FrameGrabber_a6a12c26b81bd4cd01291f649ac7ce844}{Stop}} ()
 \item 
 bool \mbox{\hyperlink{classifm3d_1_1FrameGrabber_a41863acd226d087671594f47af3b0e32}{Is\+Running}} ()
 \item 
@@ -58,6 +61,8 @@ void \mbox{\hyperlink{classifm3d_1_1FrameGrabber_ad9b7752f418e4f937e31808b4c20c2
 void \mbox{\hyperlink{classifm3d_1_1FrameGrabber_a420ba8b039d15d68e09650b9531a75e1}{On\+Async\+Error}} (Async\+Error\+Callback callback=nullptr)
 \item 
 void \mbox{\hyperlink{classifm3d_1_1FrameGrabber_aa05b4b418fed47a19e63af35eff3fd37}{On\+Async\+Notification}} (Async\+Notification\+Callback callback=nullptr)
+\item 
+void \mbox{\hyperlink{classifm3d_1_1FrameGrabber_ab45396f5e290ede681cb1639a9bf9060}{On\+Error}} (Error\+Callback callback=nullptr)
 \end{DoxyCompactItemize}
 
 
@@ -107,7 +112,13 @@ This function will enable the async error messages on device. The callback will 
 \doxysubsubsection{\texorpdfstring{OnAsyncNotification()}{OnAsyncNotification()}}
 {\footnotesize\ttfamily void ifm3d\+::\+Frame\+Grabber\+::\+On\+Async\+Notification (\begin{DoxyParamCaption}\item[{Async\+Notification\+Callback}]{callback = {\ttfamily nullptr} }\end{DoxyParamCaption})}
 
-This function will enable the async notifications on device. The callback will be executed whenever a async notification is avaliable. It receives a message id and payload string \mbox{\Hypertarget{classifm3d_1_1FrameGrabber_aad76d616c98cfde74adedb6de34d1793}\label{classifm3d_1_1FrameGrabber_aad76d616c98cfde74adedb6de34d1793}} 
+This function will enable the async notifications on device. The callback will be executed whenever a async notification is avaliable. It receives a message id and payload string \mbox{\Hypertarget{classifm3d_1_1FrameGrabber_ab45396f5e290ede681cb1639a9bf9060}\label{classifm3d_1_1FrameGrabber_ab45396f5e290ede681cb1639a9bf9060}} 
+\index{ifm3d::FrameGrabber@{ifm3d::FrameGrabber}!OnError@{OnError}}
+\index{OnError@{OnError}!ifm3d::FrameGrabber@{ifm3d::FrameGrabber}}
+\doxysubsubsection{\texorpdfstring{OnError()}{OnError()}}
+{\footnotesize\ttfamily void ifm3d\+::\+Frame\+Grabber\+::\+On\+Error (\begin{DoxyParamCaption}\item[{Error\+Callback}]{callback = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+The callback will be executed whenever an error condition occur while grabbing the data from device. \mbox{\Hypertarget{classifm3d_1_1FrameGrabber_aad76d616c98cfde74adedb6de34d1793}\label{classifm3d_1_1FrameGrabber_aad76d616c98cfde74adedb6de34d1793}} 
 \index{ifm3d::FrameGrabber@{ifm3d::FrameGrabber}!OnNewFrame@{OnNewFrame}}
 \index{OnNewFrame@{OnNewFrame}!ifm3d::FrameGrabber@{ifm3d::FrameGrabber}}
 \doxysubsubsection{\texorpdfstring{OnNewFrame()}{OnNewFrame()}}
@@ -141,13 +152,15 @@ Starts the worker thread for streaming in pixel data from the device
 \mbox{\texttt{ in}}  & {\em pcic\+Format} & allows to manually set a P\+C\+IC schema for asynchronous results. See ifm3d\+::make\+\_\+schema for generation logic of the default pcic\+Format. Manually setting the pcic\+Format should rarely be needed and most usecases should be covered by the default generated pcic\+Format.\\
 \hline
 \end{DoxyParams}
-Note\+: The \mbox{\hyperlink{classifm3d_1_1FrameGrabber}{Frame\+Grabber}} is relying on some specific formatting rules, if they are missing from the schema the \mbox{\hyperlink{classifm3d_1_1FrameGrabber}{Frame\+Grabber}} will not be able to extract the image data. \mbox{\Hypertarget{classifm3d_1_1FrameGrabber_a64a5d1cfd4f5ce826b3fa7daa488c408}\label{classifm3d_1_1FrameGrabber_a64a5d1cfd4f5ce826b3fa7daa488c408}} 
+Note\+: The \mbox{\hyperlink{classifm3d_1_1FrameGrabber}{Frame\+Grabber}} is relying on some specific formatting rules, if they are missing from the schema the \mbox{\hyperlink{classifm3d_1_1FrameGrabber}{Frame\+Grabber}} will not be able to extract the image data. \mbox{\Hypertarget{classifm3d_1_1FrameGrabber_a6a12c26b81bd4cd01291f649ac7ce844}\label{classifm3d_1_1FrameGrabber_a6a12c26b81bd4cd01291f649ac7ce844}} 
 \index{ifm3d::FrameGrabber@{ifm3d::FrameGrabber}!Stop@{Stop}}
 \index{Stop@{Stop}!ifm3d::FrameGrabber@{ifm3d::FrameGrabber}}
 \doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
-{\footnotesize\ttfamily bool ifm3d\+::\+Frame\+Grabber\+::\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::shared\+\_\+future$<$void$>$ ifm3d\+::\+Frame\+Grabber\+::\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Stops the worker thread for streaming in pixel data from the device \mbox{\Hypertarget{classifm3d_1_1FrameGrabber_a0bcaaf3a21897fadbcd4fe267aa139d9}\label{classifm3d_1_1FrameGrabber_a0bcaaf3a21897fadbcd4fe267aa139d9}} 
+Stops the worker thread for streaming in pixel data from the device
+
+Returns a future which will resolve when framegrabber stops. \mbox{\Hypertarget{classifm3d_1_1FrameGrabber_a0bcaaf3a21897fadbcd4fe267aa139d9}\label{classifm3d_1_1FrameGrabber_a0bcaaf3a21897fadbcd4fe267aa139d9}} 
 \index{ifm3d::FrameGrabber@{ifm3d::FrameGrabber}!SWTrigger@{SWTrigger}}
 \index{SWTrigger@{SWTrigger}!ifm3d::FrameGrabber@{ifm3d::FrameGrabber}}
 \doxysubsubsection{\texorpdfstring{SWTrigger()}{SWTrigger()}}

@@ -111,6 +111,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>AsyncNotificationCal
 <tr class="memitem:a0a81a3701da57be978361c2214fc96db"><td class="memItemLeft" align="right" valign="top"><a id="a0a81a3701da57be978361c2214fc96db"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>BufferList</b> = std::vector&lt; std::variant&lt; std::uint64_t, int, ifm3d::buffer_id &gt; &gt;</td></tr>
 <tr class="separator:a0a81a3701da57be978361c2214fc96db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b002b1b97d8b758c5c68bda77733f32"><td class="memItemLeft" align="right" valign="top"><a id="a0b002b1b97d8b758c5c68bda77733f32"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ErrorCallback</b> = std::function&lt; void(const <a class="el" href="classifm3d_1_1Error.html">ifm3d::Error</a> &amp;)&gt;</td></tr>
+<tr class="separator:a0b002b1b97d8b758c5c68bda77733f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -136,8 +139,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aad76d616c98cfde74adedb6de34d1793"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adffefb711cacd2730991af483de3cc73"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#adffefb711cacd2730991af483de3cc73">Start</a> (const BufferList &amp;buffers, const std::optional&lt; json &gt; &amp;pcicFormat=std::nullopt)</td></tr>
 <tr class="separator:adffefb711cacd2730991af483de3cc73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64a5d1cfd4f5ce826b3fa7daa488c408"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a64a5d1cfd4f5ce826b3fa7daa488c408">Stop</a> ()</td></tr>
-<tr class="separator:a64a5d1cfd4f5ce826b3fa7daa488c408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a12c26b81bd4cd01291f649ac7ce844"><td class="memItemLeft" align="right" valign="top">std::shared_future&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a6a12c26b81bd4cd01291f649ac7ce844">Stop</a> ()</td></tr>
+<tr class="separator:a6a12c26b81bd4cd01291f649ac7ce844"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41863acd226d087671594f47af3b0e32"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a41863acd226d087671594f47af3b0e32">IsRunning</a> ()</td></tr>
 <tr class="separator:a41863acd226d087671594f47af3b0e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8911d6f0a032c9c072f812194ec9bb85"><td class="memItemLeft" align="right" valign="top">std::shared_future&lt; Frame::Ptr &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a8911d6f0a032c9c072f812194ec9bb85">WaitForFrame</a> ()</td></tr>
@@ -148,6 +151,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a420ba8b039d15d68e09650b9531a75e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa05b4b418fed47a19e63af35eff3fd37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#aa05b4b418fed47a19e63af35eff3fd37">OnAsyncNotification</a> (AsyncNotificationCallback callback=nullptr)</td></tr>
 <tr class="separator:aa05b4b418fed47a19e63af35eff3fd37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab45396f5e290ede681cb1639a9bf9060"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#ab45396f5e290ede681cb1639a9bf9060">OnError</a> (ErrorCallback callback=nullptr)</td></tr>
+<tr class="separator:ab45396f5e290ede681cb1639a9bf9060"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implements a TCP <a class="el" href="classifm3d_1_1FrameGrabber.html">FrameGrabber</a> connected to the device passed to its ctor </p>
@@ -271,6 +276,25 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ab45396f5e290ede681cb1639a9bf9060"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab45396f5e290ede681cb1639a9bf9060">&#9670;&nbsp;</a></span>OnError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ifm3d::FrameGrabber::OnError </td>
+          <td>(</td>
+          <td class="paramtype">ErrorCallback&#160;</td>
+          <td class="paramname"><em>callback</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The callback will be executed whenever an error condition occur while grabbing the data from device. </p>
+
+</div>
+</div>
 <a id="aad76d616c98cfde74adedb6de34d1793"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aad76d616c98cfde74adedb6de34d1793">&#9670;&nbsp;</a></span>OnNewFrame()</h2>
 
@@ -352,21 +376,22 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a64a5d1cfd4f5ce826b3fa7daa488c408"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64a5d1cfd4f5ce826b3fa7daa488c408">&#9670;&nbsp;</a></span>Stop()</h2>
+<a id="a6a12c26b81bd4cd01291f649ac7ce844"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a12c26b81bd4cd01291f649ac7ce844">&#9670;&nbsp;</a></span>Stop()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool ifm3d::FrameGrabber::Stop </td>
+          <td class="memname">std::shared_future&lt;void&gt; ifm3d::FrameGrabber::Stop </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Stops the worker thread for streaming in pixel data from the device </p>
+<p>Stops the worker thread for streaming in pixel data from the device</p>
+<p>Returns a future which will resolve when framegrabber stops. </p>
 
 </div>
 </div>

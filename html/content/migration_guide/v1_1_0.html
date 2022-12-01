@@ -92,6 +92,11 @@
 <p>This change has been made so the buffer_ids align with the buffer_ids reported by the device in <code class="docutils literal notranslate"><span class="pre">availablePCICOutput</span></code>.</p>
 <p>The old buffered_ids are marked as deprecated and will be removed in a future version.</p>
 </div>
+<div class="section" id="api-interface-changes">
+<h2>API Interface changes<a class="headerlink" href="#api-interface-changes" title="Permalink to this headline"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Framgrabber::Stop()</span></code> now returns a <code class="docutils literal notranslate"><span class="pre">std::future&lt;void&gt;</span></code> (<code class="docutils literal notranslate"><span class="pre">Awaitable</span></code> in python) which completes once the shutdown is complete.
+Note that when calling Stop() inside a callback function waiting for shutdown will result in a deadlock as the FrameGrabber cannot finish until the callback is completed.</p>
+</div>
 </div>
 
 
