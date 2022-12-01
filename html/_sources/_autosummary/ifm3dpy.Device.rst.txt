@@ -21,6 +21,7 @@ ifm3dpy.Device
       ~Device.check_minimum_firmware_version
       ~Device.device_parameter
       ~Device.device_type
+      ~Device.firmware_version
       ~Device.force_trigger
       ~Device.from_json
       ~Device.reboot

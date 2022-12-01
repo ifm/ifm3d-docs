@@ -53,6 +53,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">ifm3dpy.LegacyDevice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.O3R.html">ifm3dpy.O3R</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.SWUpdater.html">ifm3dpy.SWUpdater</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.SemVer.html">ifm3dpy.SemVer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.buffer_id.html">ifm3dpy.buffer_id</a></li>
 </ul>
 </li>
@@ -164,46 +165,49 @@ those changes. Defaults to ‘’ (no password).</p></li>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.factory_reset" title="ifm3dpy.LegacyDevice.factory_reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">factory_reset</span></code></a>(self)</p></td>
 <td><p>Sets the camera configuration back to the state in which it shipped from the ifm factory.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.force_trigger" title="ifm3dpy.LegacyDevice.force_trigger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">force_trigger</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.firmware_version" title="ifm3dpy.LegacyDevice.firmware_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">firmware_version</span></code></a>(self)</p></td>
+<td><p>Version of firmware installed on device</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.force_trigger" title="ifm3dpy.LegacyDevice.force_trigger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">force_trigger</span></code></a>(self)</p></td>
 <td><p>Sends a S/W trigger to the camera over XMLRPC.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.from_json" title="ifm3dpy.LegacyDevice.from_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json</span></code></a>(self, json)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.from_json" title="ifm3dpy.LegacyDevice.from_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json</span></code></a>(self, json)</p></td>
 <td><p>Configures the camera based on the parameter values of the passed in JSON.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.heartbeat" title="ifm3dpy.LegacyDevice.heartbeat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">heartbeat</span></code></a>(self, hb)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.heartbeat" title="ifm3dpy.LegacyDevice.heartbeat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">heartbeat</span></code></a>(self, hb)</p></td>
 <td><p>Sends a heartbeat message and sets the next heartbeat interval</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.imager_types" title="ifm3dpy.LegacyDevice.imager_types"><code class="xref py py-obj docutils literal notranslate"><span class="pre">imager_types</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.imager_types" title="ifm3dpy.LegacyDevice.imager_types"><code class="xref py py-obj docutils literal notranslate"><span class="pre">imager_types</span></code></a>(self)</p></td>
 <td><p>Lists the valid imager types supported by the sensor.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.import_ifm_app" title="ifm3dpy.LegacyDevice.import_ifm_app"><code class="xref py py-obj docutils literal notranslate"><span class="pre">import_ifm_app</span></code></a>(self, bytes)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.import_ifm_app" title="ifm3dpy.LegacyDevice.import_ifm_app"><code class="xref py py-obj docutils literal notranslate"><span class="pre">import_ifm_app</span></code></a>(self, bytes)</p></td>
 <td><p>Import the IFM-encoded application.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.import_ifm_config" title="ifm3dpy.LegacyDevice.import_ifm_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">import_ifm_config</span></code></a>(self, bytes[, flags])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.import_ifm_config" title="ifm3dpy.LegacyDevice.import_ifm_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">import_ifm_config</span></code></a>(self, bytes[, flags])</p></td>
 <td><p>Imports the entire camera configuration in a format compatible with Vision Assistant.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.reboot" title="ifm3dpy.LegacyDevice.reboot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reboot</span></code></a>(self, mode)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.reboot" title="ifm3dpy.LegacyDevice.reboot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reboot</span></code></a>(self, mode)</p></td>
 <td><p>Reboot the sensor</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.request_session" title="ifm3dpy.LegacyDevice.request_session"><code class="xref py py-obj docutils literal notranslate"><span class="pre">request_session</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.request_session" title="ifm3dpy.LegacyDevice.request_session"><code class="xref py py-obj docutils literal notranslate"><span class="pre">request_session</span></code></a>(self)</p></td>
 <td><p>Requests an edit-mode session with the camera.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.set_current_time" title="ifm3dpy.LegacyDevice.set_current_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_current_time</span></code></a>(self[, epoch_secs])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.set_current_time" title="ifm3dpy.LegacyDevice.set_current_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_current_time</span></code></a>(self[, epoch_secs])</p></td>
 <td><p>Sets the current time on the camera</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.set_temporary_application_parameters" title="ifm3dpy.LegacyDevice.set_temporary_application_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_temporary_application_parameters</span></code></a>(self, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.set_temporary_application_parameters" title="ifm3dpy.LegacyDevice.set_temporary_application_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_temporary_application_parameters</span></code></a>(self, ...)</p></td>
 <td><p>Sets temporary application parameters in run mode.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.to_json" title="ifm3dpy.LegacyDevice.to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.to_json" title="ifm3dpy.LegacyDevice.to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code></a>(self)</p></td>
 <td><p>A JSON object containing the state of the camera</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.trace_logs" title="ifm3dpy.LegacyDevice.trace_logs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trace_logs</span></code></a>(self, count)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.trace_logs" title="ifm3dpy.LegacyDevice.trace_logs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trace_logs</span></code></a>(self, count)</p></td>
 <td><p>Delivers the trace log from the camera</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.unit_vectors" title="ifm3dpy.LegacyDevice.unit_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unit_vectors</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.unit_vectors" title="ifm3dpy.LegacyDevice.unit_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unit_vectors</span></code></a>(self)</p></td>
 <td><p>For cameras that support fetching the Unit Vectors over XML-RPC, this function will return those data as a binary blob.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.who_am_i" title="ifm3dpy.LegacyDevice.who_am_i"><code class="xref py py-obj docutils literal notranslate"><span class="pre">who_am_i</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.LegacyDevice.who_am_i" title="ifm3dpy.LegacyDevice.who_am_i"><code class="xref py py-obj docutils literal notranslate"><span class="pre">who_am_i</span></code></a>(self)</p></td>
 <td><p>Retrieve the device family of the connected device</p></td>
 </tr>
 </tbody>
@@ -543,6 +547,20 @@ Vision Assistant.</p>
 <span class="sig-name descname"><span class="pre">factory_reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.LegacyDevice" title="ifm3dpy.LegacyDevice"><span class="pre">ifm3dpy.LegacyDevice</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.LegacyDevice.factory_reset" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the camera configuration back to the state in which it shipped from
 the ifm factory.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.LegacyDevice.firmware_version">
+<span class="sig-name descname"><span class="pre">firmware_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="ifm3dpy.Device.html#ifm3dpy.Device" title="ifm3dpy.Device"><span class="pre">ifm3dpy.Device</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ifm3dpy.SemVer.html#ifm3dpy.SemVer" title="ifm3dpy.SemVer"><span class="pre">ifm3dpy.SemVer</span></a></span></span><a class="headerlink" href="#ifm3dpy.LegacyDevice.firmware_version" title="Permalink to this definition"></a></dt>
+<dd><p>Version of firmware installed on device</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Firmware version</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="ifm3dpy.SemVer.html#ifm3dpy.SemVer" title="ifm3dpy.SemVer">SemVer</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">

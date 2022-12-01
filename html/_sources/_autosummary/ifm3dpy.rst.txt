@@ -34,6 +34,7 @@
       LegacyDevice
       O3R
       SWUpdater
+      SemVer
       buffer_id
    
    

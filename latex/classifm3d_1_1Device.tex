@@ -112,6 +112,8 @@ virtual void \mbox{\hyperlink{classifm3d_1_1Device_a3036b0cfbaae2ffd3ca8bd8eb697
 \item 
 bool \mbox{\hyperlink{classifm3d_1_1Device_ad0d20a261a0dd280884bc5c59b3ce9f6}{Check\+Minimum\+Firmware\+Version}} (unsigned int major, unsigned int minor, unsigned int patch)
 \item 
+\mbox{\hyperlink{structifm3d_1_1SemVer}{ifm3d\+::\+Sem\+Ver}} \mbox{\hyperlink{classifm3d_1_1Device_acb5512f28fd4ee88f1524dd2d07d0f09}{Firmware\+Version}} ()
+\item 
 virtual ifm3d\+::\+Device\+::swu\+\_\+version \mbox{\hyperlink{classifm3d_1_1Device_a4ac83b040c4ce4224a6d73c10155258c}{Sw\+Update\+Version}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
@@ -298,7 +300,13 @@ This is a convenience function for extracting out the device type of the connect
 \mbox{\texttt{ in}}  & {\em use\+\_\+cached} & If set to true, a cached lookup of the device type will be used as the return value. If false, it will make a network call to the device to get the \char`\"{}real\char`\"{} device type. The only reason for setting this to {\ttfamily false} would be if you expect over the lifetime of your camera instance that you will swap out (for example) an \mbox{\hyperlink{classifm3d_1_1O3D}{O3D}} for an \mbox{\hyperlink{classifm3d_1_1O3X}{O3X}} (or vice versa) -- literally, swapping out the network cables while an object instance is still alive. If that is not something you are worried about, leaving this set to true should result in a signficant performance increase. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classifm3d_1_1Device_a010b25d8c4f34075a57e30f1dbacc93b}\label{classifm3d_1_1Device_a010b25d8c4f34075a57e30f1dbacc93b}} 
+\mbox{\Hypertarget{classifm3d_1_1Device_acb5512f28fd4ee88f1524dd2d07d0f09}\label{classifm3d_1_1Device_acb5512f28fd4ee88f1524dd2d07d0f09}} 
+\index{ifm3d::Device@{ifm3d::Device}!FirmwareVersion@{FirmwareVersion}}
+\index{FirmwareVersion@{FirmwareVersion}!ifm3d::Device@{ifm3d::Device}}
+\doxysubsubsection{\texorpdfstring{FirmwareVersion()}{FirmwareVersion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structifm3d_1_1SemVer}{ifm3d\+::\+Sem\+Ver}} ifm3d\+::\+Device\+::\+Firmware\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get the firmware version of the device \mbox{\Hypertarget{classifm3d_1_1Device_a010b25d8c4f34075a57e30f1dbacc93b}\label{classifm3d_1_1Device_a010b25d8c4f34075a57e30f1dbacc93b}} 
 \index{ifm3d::Device@{ifm3d::Device}!ForceTrigger@{ForceTrigger}}
 \index{ForceTrigger@{ForceTrigger}!ifm3d::Device@{ifm3d::Device}}
 \doxysubsubsection{\texorpdfstring{ForceTrigger()}{ForceTrigger()}}

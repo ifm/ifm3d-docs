@@ -54,6 +54,7 @@ var classifm3d_1_1Device =
     [ "DeviceID", "classifm3d_1_1Device.html#a1196ce698af75209ab9b6696e7e1f592", null ],
     [ "DeviceParameter", "classifm3d_1_1Device.html#a0ffb1ea6486e77335e529517611df36d", null ],
     [ "DeviceType", "classifm3d_1_1Device.html#a8366130f550c90cf3abfb730d0d15c08", null ],
+    [ "FirmwareVersion", "classifm3d_1_1Device.html#acb5512f28fd4ee88f1524dd2d07d0f09", null ],
     [ "ForceTrigger", "classifm3d_1_1Device.html#a010b25d8c4f34075a57e30f1dbacc93b", null ],
     [ "FromJSON", "classifm3d_1_1Device.html#a4706acd5532e7a9fc520c98d6100eee0", null ],
     [ "FromJSONStr", "classifm3d_1_1Device.html#a3036b0cfbaae2ffd3ca8bd8eb697ab50", null ],

@@ -53,6 +53,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.LegacyDevice.html">ifm3dpy.LegacyDevice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.O3R.html">ifm3dpy.O3R</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.SWUpdater.html">ifm3dpy.SWUpdater</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.SemVer.html">ifm3dpy.SemVer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.buffer_id.html">ifm3dpy.buffer_id</a></li>
 </ul>
 </li>
@@ -134,22 +135,25 @@ those changes. Defaults to ‘’ (no password).</p></li>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.Device.device_type" title="ifm3dpy.Device.device_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">device_type</span></code></a>(self[, use_cached])</p></td>
 <td><p>Obtains the device type of the connected camera.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.Device.force_trigger" title="ifm3dpy.Device.force_trigger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">force_trigger</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.Device.firmware_version" title="ifm3dpy.Device.firmware_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">firmware_version</span></code></a>(self)</p></td>
+<td><p>Version of firmware installed on device</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.Device.force_trigger" title="ifm3dpy.Device.force_trigger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">force_trigger</span></code></a>(self)</p></td>
 <td><p>Sends a S/W trigger to the camera over XMLRPC.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.Device.from_json" title="ifm3dpy.Device.from_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json</span></code></a>(self, json)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.Device.from_json" title="ifm3dpy.Device.from_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json</span></code></a>(self, json)</p></td>
 <td><p>Configures the camera based on the parameter values of the passed in JSON.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.Device.reboot" title="ifm3dpy.Device.reboot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reboot</span></code></a>(self, mode)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.Device.reboot" title="ifm3dpy.Device.reboot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reboot</span></code></a>(self, mode)</p></td>
 <td><p>Reboot the sensor</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.Device.to_json" title="ifm3dpy.Device.to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.Device.to_json" title="ifm3dpy.Device.to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code></a>(self)</p></td>
 <td><p>A JSON object containing the state of the camera</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.Device.trace_logs" title="ifm3dpy.Device.trace_logs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trace_logs</span></code></a>(self, count)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.Device.trace_logs" title="ifm3dpy.Device.trace_logs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trace_logs</span></code></a>(self, count)</p></td>
 <td><p>Delivers the trace log from the camera</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.Device.who_am_i" title="ifm3dpy.Device.who_am_i"><code class="xref py py-obj docutils literal notranslate"><span class="pre">who_am_i</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.Device.who_am_i" title="ifm3dpy.Device.who_am_i"><code class="xref py py-obj docutils literal notranslate"><span class="pre">who_am_i</span></code></a>(self)</p></td>
 <td><p>Retrieve the device family of the connected device</p></td>
 </tr>
 </tbody>
@@ -292,6 +296,20 @@ performance increase.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.Device.firmware_version">
+<span class="sig-name descname"><span class="pre">firmware_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.Device" title="ifm3dpy.Device"><span class="pre">ifm3dpy.Device</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ifm3dpy.SemVer.html#ifm3dpy.SemVer" title="ifm3dpy.SemVer"><span class="pre">ifm3dpy.SemVer</span></a></span></span><a class="headerlink" href="#ifm3dpy.Device.firmware_version" title="Permalink to this definition"></a></dt>
+<dd><p>Version of firmware installed on device</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Firmware version</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="ifm3dpy.SemVer.html#ifm3dpy.SemVer" title="ifm3dpy.SemVer">SemVer</a></p>
 </dd>
 </dl>
 </dd></dl>
