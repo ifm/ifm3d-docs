@@ -85,11 +85,11 @@
 
 <span class="n">o3r</span> <span class="o">=</span> <span class="n">O3R</span><span class="p">()</span>
 <span class="n">config</span> <span class="o">=</span> <span class="n">o3r</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-<span class="n">config</span><span class="p">[</span><span class="s1">&#39;ports&#39;</span><span class="p">][</span><span class="s1">&#39;port0&#39;</span><span class="p">][</span><span class="s1">&#39;state&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;RUN&quot;</span> <span class="c1">#Expecting a head on Port 0</span>
+<span class="n">config</span><span class="p">[</span><span class="s1">&#39;ports&#39;</span><span class="p">][</span><span class="s1">&#39;port2&#39;</span><span class="p">][</span><span class="s1">&#39;state&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;RUN&quot;</span> <span class="c1">#Expecting a head on Port 2</span>
 <span class="n">o3r</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Note: Depending where your imager is connected, <code class="docutils literal notranslate"><span class="pre">'port0'</span></code> might not work.</p>
+<p>Note: Depending where your imager is connected, <code class="docutils literal notranslate"><span class="pre">'port2'</span></code> might not work.</p>
 </div>
 <div class="section" id="receive-an-image">
 <h2>Receive an image<a class="headerlink" href="#receive-an-image" title="Permalink to this headline"></a></h2>
@@ -100,7 +100,7 @@
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 
 <span class="n">o3r</span> <span class="o">=</span> <span class="n">O3R</span><span class="p">()</span>
-<span class="n">fg</span> <span class="o">=</span> <span class="n">FrameGrabber</span><span class="p">(</span><span class="n">o3r</span><span class="p">,</span> <span class="n">pcic_port</span><span class="o">=</span><span class="mi">50010</span><span class="p">)</span> <span class="c1">#Expecting a head on Port 0 (Port 0 == 50010)</span>
+<span class="n">fg</span> <span class="o">=</span> <span class="n">FrameGrabber</span><span class="p">(</span><span class="n">o3r</span><span class="p">,</span> <span class="n">pcic_port</span><span class="o">=</span><span class="mi">50012</span><span class="p">)</span> <span class="c1">#Expecting a head on Port 2 (Port 2 == 50012)</span>
 
 <span class="c1"># Set schema and start Grabber</span>
 <span class="n">fg</span><span class="o">.</span><span class="n">start</span><span class="p">([</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">NORM_AMPLITUDE_IMAGE</span><span class="p">,</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">,</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">XYZ</span><span class="p">])</span>
