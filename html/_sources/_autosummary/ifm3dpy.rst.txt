@@ -33,6 +33,7 @@
       FrameGrabber
       LegacyDevice
       O3R
+      PortInfo
       SWUpdater
       SemVer
       buffer_id

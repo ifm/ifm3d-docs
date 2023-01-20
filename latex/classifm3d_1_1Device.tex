@@ -121,7 +121,7 @@ virtual ifm3d\+::\+Device\+::swu\+\_\+version \mbox{\hyperlink{classifm3d_1_1Dev
 \item 
 static std\+::vector$<$ \mbox{\hyperlink{classifm3d_1_1IFMNetworkDevice}{ifm3d\+::\+I\+F\+M\+Network\+Device}} $>$ \mbox{\hyperlink{classifm3d_1_1Device_aec07219a144d418e528585ec74c4b959}{Device\+Discovery}} ()
 \begin{DoxyCompactList}\small\item\em This function Provides a convinent way to find all ifm devices on the network. \end{DoxyCompactList}\item 
-static Ptr \mbox{\hyperlink{classifm3d_1_1Device_a83a01f67e444007eab4218de1ea165d8}{Make\+Shared}} (const std\+::string \&ip=ifm3d\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+IP, const std\+::uint16\+\_\+t xmlrpc\+\_\+port=ifm3d\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+X\+M\+L\+R\+P\+C\+\_\+\+P\+O\+RT, const std\+::string \&password=ifm3d\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+S\+S\+W\+O\+RD)
+static Ptr \mbox{\hyperlink{classifm3d_1_1Device_a28aac849be727299ab6eb780acb5b120}{Make\+Shared}} (const std\+::string \&ip=ifm3d\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+IP, const std\+::uint16\+\_\+t xmlrpc\+\_\+port=ifm3d\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+X\+M\+L\+R\+P\+C\+\_\+\+P\+O\+RT, const std\+::string \&password=ifm3d\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+S\+S\+W\+O\+RD, bool throw\+If\+Unavailable=true)
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -364,11 +364,11 @@ Accepts a string with properly formatted/escaped J\+S\+ON text, converts it to a
 \doxysubsubsection{\texorpdfstring{IP()}{IP()}}
 {\footnotesize\ttfamily virtual std\+::string ifm3d\+::\+Device\+::\+IP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-The IP address associated with this \mbox{\hyperlink{classifm3d_1_1Device}{Device}} instance \mbox{\Hypertarget{classifm3d_1_1Device_a83a01f67e444007eab4218de1ea165d8}\label{classifm3d_1_1Device_a83a01f67e444007eab4218de1ea165d8}} 
+The IP address associated with this \mbox{\hyperlink{classifm3d_1_1Device}{Device}} instance \mbox{\Hypertarget{classifm3d_1_1Device_a28aac849be727299ab6eb780acb5b120}\label{classifm3d_1_1Device_a28aac849be727299ab6eb780acb5b120}} 
 \index{ifm3d::Device@{ifm3d::Device}!MakeShared@{MakeShared}}
 \index{MakeShared@{MakeShared}!ifm3d::Device@{ifm3d::Device}}
 \doxysubsubsection{\texorpdfstring{MakeShared()}{MakeShared()}}
-{\footnotesize\ttfamily static Ptr ifm3d\+::\+Device\+::\+Make\+Shared (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ip = {\ttfamily ifm3d\+:\+:DEFAULT\+\_\+IP},  }\item[{const std\+::uint16\+\_\+t}]{xmlrpc\+\_\+port = {\ttfamily ifm3d\+:\+:DEFAULT\+\_\+XMLRPC\+\_\+PORT},  }\item[{const std\+::string \&}]{password = {\ttfamily ifm3d\+:\+:DEFAULT\+\_\+PASSWORD} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static Ptr ifm3d\+::\+Device\+::\+Make\+Shared (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ip = {\ttfamily ifm3d\+:\+:DEFAULT\+\_\+IP},  }\item[{const std\+::uint16\+\_\+t}]{xmlrpc\+\_\+port = {\ttfamily ifm3d\+:\+:DEFAULT\+\_\+XMLRPC\+\_\+PORT},  }\item[{const std\+::string \&}]{password = {\ttfamily ifm3d\+:\+:DEFAULT\+\_\+PASSWORD},  }\item[{bool}]{throw\+If\+Unavailable = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 Factory function for instantiating the proper subclass based on h/w probing.
 

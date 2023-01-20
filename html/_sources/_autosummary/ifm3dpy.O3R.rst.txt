@@ -33,7 +33,10 @@ ifm3dpy.O3R
       ~O3R.get_init_status
       ~O3R.get_schema
       ~O3R.lock
+      ~O3R.port
+      ~O3R.ports
       ~O3R.reboot
+      ~O3R.reboot_to_recovery
       ~O3R.remove
       ~O3R.reset
       ~O3R.save_init

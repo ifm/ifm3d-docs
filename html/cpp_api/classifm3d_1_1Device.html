@@ -208,8 +208,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aec07219a144d418e528585ec74c4b959"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="classifm3d_1_1IFMNetworkDevice.html">ifm3d::IFMNetworkDevice</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Device.html#aec07219a144d418e528585ec74c4b959">DeviceDiscovery</a> ()</td></tr>
 <tr class="memdesc:aec07219a144d418e528585ec74c4b959"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function Provides a convinent way to find all ifm devices on the network.  <a href="classifm3d_1_1Device.html#aec07219a144d418e528585ec74c4b959">More...</a><br /></td></tr>
 <tr class="separator:aec07219a144d418e528585ec74c4b959"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83a01f67e444007eab4218de1ea165d8"><td class="memItemLeft" align="right" valign="top">static Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Device.html#a83a01f67e444007eab4218de1ea165d8">MakeShared</a> (const std::string &amp;ip=ifm3d::DEFAULT_IP, const std::uint16_t xmlrpc_port=ifm3d::DEFAULT_XMLRPC_PORT, const std::string &amp;password=ifm3d::DEFAULT_PASSWORD)</td></tr>
-<tr class="separator:a83a01f67e444007eab4218de1ea165d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28aac849be727299ab6eb780acb5b120"><td class="memItemLeft" align="right" valign="top">static Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Device.html#a28aac849be727299ab6eb780acb5b120">MakeShared</a> (const std::string &amp;ip=ifm3d::DEFAULT_IP, const std::uint16_t xmlrpc_port=ifm3d::DEFAULT_XMLRPC_PORT, const std::string &amp;password=ifm3d::DEFAULT_PASSWORD, bool throwIfUnavailable=true)</td></tr>
+<tr class="separator:a28aac849be727299ab6eb780acb5b120"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -803,8 +803,8 @@ std::unique_ptr&lt; Impl &gt;&#160;</td><td class="memItemRight" valign="bottom"
 
 </div>
 </div>
-<a id="a83a01f67e444007eab4218de1ea165d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83a01f67e444007eab4218de1ea165d8">&#9670;&nbsp;</a></span>MakeShared()</h2>
+<a id="a28aac849be727299ab6eb780acb5b120"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28aac849be727299ab6eb780acb5b120">&#9670;&nbsp;</a></span>MakeShared()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -828,7 +828,13 @@ std::unique_ptr&lt; Impl &gt;&#160;</td><td class="memItemRight" valign="bottom"
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>password</em> = <code>ifm3d::DEFAULT_PASSWORD</code>&#160;</td>
+          <td class="paramname"><em>password</em> = <code>ifm3d::DEFAULT_PASSWORD</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>throwIfUnavailable</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
