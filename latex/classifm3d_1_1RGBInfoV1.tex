@@ -1,0 +1,52 @@
+\hypertarget{classifm3d_1_1RGBInfoV1}{}\doxysection{ifm3d\+::R\+G\+B\+Info\+V1 Class Reference}
+\label{classifm3d_1_1RGBInfoV1}\index{ifm3d::RGBInfoV1@{ifm3d::RGBInfoV1}}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classifm3d_1_1RGBInfoV1_adf1974e1f37ff8f96f885ff95d096030}\label{classifm3d_1_1RGBInfoV1_adf1974e1f37ff8f96f885ff95d096030}} 
+using {\bfseries Ptr} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classifm3d_1_1RGBInfoV1}{R\+G\+B\+Info\+V1}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classifm3d_1_1RGBInfoV1_a24c908fccf8999b34bd116e38863a04f}\label{classifm3d_1_1RGBInfoV1_a24c908fccf8999b34bd116e38863a04f}} 
+void {\bfseries Read} (const uint8\+\_\+t $\ast$data, size\+\_\+t size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classifm3d_1_1RGBInfoV1_ad5801ac89ebb2e4d60664d802ba4f3ed}\label{classifm3d_1_1RGBInfoV1_ad5801ac89ebb2e4d60664d802ba4f3ed}} 
+static \mbox{\hyperlink{classifm3d_1_1RGBInfoV1}{R\+G\+B\+Info\+V1}} {\bfseries Deserialize} (const \mbox{\hyperlink{classifm3d_1_1Buffer}{Buffer}} \&rgb\+\_\+info\+\_\+buffer)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classifm3d_1_1RGBInfoV1_a0f83961cae0af73bb83b4fba4a470f15}\label{classifm3d_1_1RGBInfoV1_a0f83961cae0af73bb83b4fba4a470f15}} 
+std\+::uint32\+\_\+t {\bfseries version}
+\item 
+\mbox{\Hypertarget{classifm3d_1_1RGBInfoV1_a9c0642b76358ee8ae290ba6c09ddba3b}\label{classifm3d_1_1RGBInfoV1_a9c0642b76358ee8ae290ba6c09ddba3b}} 
+std\+::uint32\+\_\+t {\bfseries frame\+\_\+counter}
+\item 
+\mbox{\Hypertarget{classifm3d_1_1RGBInfoV1_a5f347edb80ac17612de21bf153720c6f}\label{classifm3d_1_1RGBInfoV1_a5f347edb80ac17612de21bf153720c6f}} 
+std\+::uint64\+\_\+t {\bfseries timestamp\+\_\+ns}
+\item 
+\mbox{\Hypertarget{classifm3d_1_1RGBInfoV1_ababcdd06c54e1aa64c923080c222d602}\label{classifm3d_1_1RGBInfoV1_ababcdd06c54e1aa64c923080c222d602}} 
+float {\bfseries exposure\+\_\+time}
+\item 
+\mbox{\Hypertarget{classifm3d_1_1RGBInfoV1_a7d5fe87881563fae2fd5c699b631e37a}\label{classifm3d_1_1RGBInfoV1_a7d5fe87881563fae2fd5c699b631e37a}} 
+\mbox{\hyperlink{structifm3d_1_1calibration_1_1ExtrinsicOpticToUser}{calibration\+::\+Extrinsic\+Optic\+To\+User}} {\bfseries extrisic\+\_\+optic\+\_\+to\+\_\+user}
+\item 
+\mbox{\Hypertarget{classifm3d_1_1RGBInfoV1_a8f428e6bccf3d159b3ffb13ff3810aae}\label{classifm3d_1_1RGBInfoV1_a8f428e6bccf3d159b3ffb13ff3810aae}} 
+\mbox{\hyperlink{structifm3d_1_1calibration_1_1Calibration}{calibration\+::\+Intrinsic\+Calibration}} {\bfseries intrinsic\+\_\+calibration}
+\item 
+\mbox{\Hypertarget{classifm3d_1_1RGBInfoV1_a3374be6d666da869dbf11e23c7dfc6b5}\label{classifm3d_1_1RGBInfoV1_a3374be6d666da869dbf11e23c7dfc6b5}} 
+\mbox{\hyperlink{structifm3d_1_1calibration_1_1Calibration}{calibration\+::\+Inverse\+Intrinsic\+Calibration}} {\bfseries inverse\+\_\+intrinsic\+\_\+calibration}
+\item 
+\mbox{\Hypertarget{classifm3d_1_1RGBInfoV1_a55de51518605aafad15aaa5656500970}\label{classifm3d_1_1RGBInfoV1_a55de51518605aafad15aaa5656500970}} 
+const size\+\_\+t {\bfseries rgb\+\_\+info\+\_\+v1\+\_\+size} = 308
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/ifm3d/modules/deserialize/include/ifm3d/deserialize/struct\+\_\+rgb\+\_\+info\+\_\+v1.\+hpp\end{DoxyCompactItemize}

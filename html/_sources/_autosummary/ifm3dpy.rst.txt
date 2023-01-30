@@ -27,15 +27,22 @@
       :template: class.rst               
    
       Awaitable
+      Calibration
       Device
+      ExtrinsicOpticToUser
       Frame
       FrameAwaitable
       FrameGrabber
       LegacyDevice
       O3R
+      ODSInfoV1
+      ODSOccupancyGridV1
       PortInfo
+      RGBInfoV1
       SWUpdater
       SemVer
+      TOFInfoV3
+      TOFInfoV4
       buffer_id
    
    

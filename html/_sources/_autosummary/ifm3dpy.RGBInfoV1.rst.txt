@@ -1,0 +1,38 @@
+ifm3dpy.RGBInfoV1
+=================
+
+.. currentmodule:: ifm3dpy
+
+.. autoclass:: RGBInfoV1
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RGBInfoV1.__init__
+      ~RGBInfoV1.deserialize
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RGBInfoV1.exposure_time
+      ~RGBInfoV1.extrisic_optic_to_user
+      ~RGBInfoV1.frame_counter
+      ~RGBInfoV1.intrinsic_calibration
+      ~RGBInfoV1.inverse_intrinsic_calibration
+      ~RGBInfoV1.timestamp_ns
+      ~RGBInfoV1.version
+   
+   

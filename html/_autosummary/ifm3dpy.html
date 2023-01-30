@@ -49,15 +49,22 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">ifm3dpy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.run.html">ifm3dpy.run</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.Awaitable.html">ifm3dpy.Awaitable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.Calibration.html">ifm3dpy.Calibration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.Device.html">ifm3dpy.Device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.ExtrinsicOpticToUser.html">ifm3dpy.ExtrinsicOpticToUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.Frame.html">ifm3dpy.Frame</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.FrameAwaitable.html">ifm3dpy.FrameAwaitable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.FrameGrabber.html">ifm3dpy.FrameGrabber</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.LegacyDevice.html">ifm3dpy.LegacyDevice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.O3R.html">ifm3dpy.O3R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.ODSInfoV1.html">ifm3dpy.ODSInfoV1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.ODSOccupancyGridV1.html">ifm3dpy.ODSOccupancyGridV1</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.PortInfo.html">ifm3dpy.PortInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.RGBInfoV1.html">ifm3dpy.RGBInfoV1</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.SWUpdater.html">ifm3dpy.SWUpdater</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.SemVer.html">ifm3dpy.SemVer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.TOFInfoV3.html">ifm3dpy.TOFInfoV3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.TOFInfoV4.html">ifm3dpy.TOFInfoV4</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.buffer_id.html">ifm3dpy.buffer_id</a></li>
 </ul>
 </li>
@@ -178,8 +185,14 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.Awaitable.html#ifm3dpy.Awaitable" title="ifm3dpy.Awaitable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Awaitable</span></code></a></p></td>
 <td><p>Provides a mechanism to wait for completion of a task</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.Device.html#ifm3dpy.Device" title="ifm3dpy.Device"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Device</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.Calibration.html#ifm3dpy.Calibration" title="ifm3dpy.Calibration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Calibration</span></code></a></p></td>
+<td><p>Class for managing an instance calibration parameters</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.Device.html#ifm3dpy.Device" title="ifm3dpy.Device"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Device</span></code></a></p></td>
 <td><p>Base class for managing an instance of an all cameras</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.ExtrinsicOpticToUser.html#ifm3dpy.ExtrinsicOpticToUser" title="ifm3dpy.ExtrinsicOpticToUser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExtrinsicOpticToUser</span></code></a></p></td>
+<td><p>Class for managing an instance Extrinsic parameters</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.Frame.html#ifm3dpy.Frame" title="ifm3dpy.Frame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Frame</span></code></a></p></td>
 <td><p>Represent a frame of data received from the the device.</p></td>
@@ -196,16 +209,31 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.O3R.html#ifm3dpy.O3R" title="ifm3dpy.O3R"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R</span></code></a></p></td>
 <td><p>Class for managing an instance of an O3R Camera</p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.ODSInfoV1.html#ifm3dpy.ODSInfoV1" title="ifm3dpy.ODSInfoV1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ODSInfoV1</span></code></a></p></td>
+<td><p>Class for managing an instance of an struct ODSInfoV1</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.ODSOccupancyGridV1.html#ifm3dpy.ODSOccupancyGridV1" title="ifm3dpy.ODSOccupancyGridV1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ODSOccupancyGridV1</span></code></a></p></td>
+<td><p>Class for managing an instance of an struct ODSOccupancyGridV1</p></td>
+</tr>
 <tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.PortInfo.html#ifm3dpy.PortInfo" title="ifm3dpy.PortInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PortInfo</span></code></a></p></td>
 <td><p>Provides information about a connected Port</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.SWUpdater.html#ifm3dpy.SWUpdater" title="ifm3dpy.SWUpdater"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SWUpdater</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.RGBInfoV1.html#ifm3dpy.RGBInfoV1" title="ifm3dpy.RGBInfoV1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RGBInfoV1</span></code></a></p></td>
+<td><p>Class for managing an instance of an struct RGBInfoV1</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.SWUpdater.html#ifm3dpy.SWUpdater" title="ifm3dpy.SWUpdater"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SWUpdater</span></code></a></p></td>
 <td><p>Class for managing an instance of an swupdater</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.SemVer.html#ifm3dpy.SemVer" title="ifm3dpy.SemVer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SemVer</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.SemVer.html#ifm3dpy.SemVer" title="ifm3dpy.SemVer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SemVer</span></code></a></p></td>
 <td><p>struct for holding the version information</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.buffer_id.html#ifm3dpy.buffer_id" title="ifm3dpy.buffer_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">buffer_id</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.TOFInfoV3.html#ifm3dpy.TOFInfoV3" title="ifm3dpy.TOFInfoV3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TOFInfoV3</span></code></a></p></td>
+<td><p>Class for managing an instance of an struct TofInfoV3</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.TOFInfoV4.html#ifm3dpy.TOFInfoV4" title="ifm3dpy.TOFInfoV4"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TOFInfoV4</span></code></a></p></td>
+<td><p>Class for managing an instance of an struct TofInfoV4</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.buffer_id.html#ifm3dpy.buffer_id" title="ifm3dpy.buffer_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">buffer_id</span></code></a></p></td>
 <td><p>Enum: buffer_id available for use with the default Organizer.</p></td>
 </tr>
 </tbody>
