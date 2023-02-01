@@ -1,0 +1,43 @@
+ifm3dpy.Device
+==============
+
+.. currentmodule:: ifm3dpy
+
+.. autoclass:: Device
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Device.__init__
+      ~Device.am_i
+      ~Device.check_minimum_firmware_version
+      ~Device.device_parameter
+      ~Device.device_type
+      ~Device.firmware_version
+      ~Device.force_trigger
+      ~Device.from_json
+      ~Device.reboot
+      ~Device.to_json
+      ~Device.trace_logs
+      ~Device.who_am_i
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Device.ip
+      ~Device.xmlrpc_port
+   
+   

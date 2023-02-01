@@ -1,0 +1,47 @@
+﻿ifm3dpy
+=======
+
+.. automodule:: ifm3dpy
+  
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:                                          
+   
+      run
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:                                          
+      :template: class.rst               
+   
+      Awaitable
+      Device
+      Frame
+      FrameAwaitable
+      FrameGrabber
+      LegacyDevice
+      O3R
+      SWUpdater
+      SemVer
+      buffer_id
+   
+   
+
+   
+   
+   
+
+
+

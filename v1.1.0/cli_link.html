@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ifm3d - Command Line Tool &mdash; ifm3d  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/tabs.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ifm3d::Buffer- Basic C++ STL container for ifm3d" href="content/stlimage.html" />
+    <link rel="prev" title="Main changes" href="content/migration_guide/v1_0_0.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> ifm3d
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="content/installation_instructions/index.html">Installation instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/migration_guide/index.html">Migration Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Command Line tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/stlimage.html">Manipulating images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_api.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cpp_api/annotated.html">C++ API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ifm3d</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>ifm3d - Command Line Tool</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/cli_link.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="tex2jax_ignore mathjax_ignore section" id="ifm3d-command-line-tool">
+<h1>ifm3d - Command Line Tool<a class="headerlink" href="#ifm3d-command-line-tool" title="Permalink to this headline"></a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> ships with a command line tool of the same name. The <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> command
+line tool is used to both introspect the state of a camera as well as mutate
+parameters. To carry out a particular task, you evoke one of the <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code>
+<em>subcommands</em>. To get a listing of available subcommands, you can pass the
+<code class="docutils literal notranslate"><span class="pre">--help</span></code> option.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d --help
+ifm3d: version=0.20.0
+
+
+Usage:
+  ifm3d [&lt;global options&gt;] &lt;command&gt; [&lt;args&gt;]
+
+ global options:
+  -h, --help             Produce this help message and exit
+      --ip arg           IP address of the sensor (default: 192.168.0.69)
+      --xmlrpc-port arg  XMLRPC port of the sensor (default: 80)
+      --password arg     Password for establishing an edit-session with the
+                         sensor (default: )
+
+These are common commands used in various situations:
+
+    app-types     List the application types supported by the sensor.
+
+    config        Configure sensor settings from a JSON description of
+                  the desired sensor state. See also `dump&#39;.
+
+    cp            Create a new application on the sensor,
+                  bootstrapped from a copy of an existing one.
+
+    discover      Discover ifm devices on the network.
+
+    dump          Serialize the sensor state to JSON.
+
+    export        Export an application or whole sensor configuration
+                  into a format compatible with ifm Vision Assistant.
+
+    hz            Compute the actual frequency at which the FrameGrabber
+                  is running.
+
+    imager-types  List the imager types supported by the sensor.
+
+    import        Import an application or whole sensor configuration
+                  that is compatible with ifm Vision Assistant&#39;s export
+                  format.
+
+    jitter        Collects statistics on framegrabber (and optionally, image
+                  construction) jitter.
+
+    ls            Lists the applications currently installed on
+                  the sensor.
+
+    passwd        Sets the password on the sensor.
+
+    reboot        Reboot the sensor, potentially into recovery
+                  mode (no recovery mode for O3R).
+                  Recovery mode is useful for putting the
+                  sensor into a state where it can be flashed
+                  with new firmware.
+
+    reset         Reset the sensor to factory defaults.
+
+    rm            Deletes an application from the sensor.
+
+    schema        Construct and analyze image acquisition schema masks.
+
+    swupdate      Perform a firmware update on the camera. Please ensure
+                  that the camera is booted to recovery beforehand.
+
+    time          Get/set the current time on the camera.
+
+    trace         Get trace messages from the internal camera trace buffer.
+
+For bug reports, please see:
+https://github.com/ifm/ifm3d/issues
+
+</pre></div>
+</div>
+<p>As it is reported in the help output above, the <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> command line program
+accepts 1) a set of <em>global arguments</em> which control the particular platform you
+wish to communicate with; 2) a subcommand; and 3) arguments to the
+subcommand. To get a listing of the particular arguments accepted by a
+subcommand, you can pass the <code class="docutils literal notranslate"><span class="pre">--help</span></code> option to the subcommand. For exemplary
+purposes, let’s list the options accepted by the <code class="docutils literal notranslate"><span class="pre">cp</span></code> subcommand.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d cp --help
+Usage:
+  ifm3d [&lt;global options&gt;] cp [&lt;cp options&gt;]
+
+ global options:
+  -h, --help             Produce this help message and exit
+      --ip arg           IP address of the sensor (default: 192.168.0.69)
+      --xmlrpc-port arg  XMLRPC port of the sensor (default: 80)
+      --password arg     Password for establishing an edit-session with the
+                         sensor (default: )
+
+ cp options:
+      --index arg  Index of source application to copy (default: -1)
+</pre></div>
+</div>
+<p>As is shown above, <code class="docutils literal notranslate"><span class="pre">cp</span></code> takes a source application index to copy from. Note that the concept of applications is deprecated for the O3R platform.</p>
+<p>We now walk through a couple of simple examples of using <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code>. This is not an
+exhaustive tutorial on <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> but rather intended to give a sense of how to
+use the tool. The concepts apply broadly to all of the subcommands.</p>
+</div>
+<div class="section" id="camera-and-imager-configuration">
+<h2>Camera and Imager Configuration<a class="headerlink" href="#camera-and-imager-configuration" title="Permalink to this headline"></a></h2>
+<p>Configuring the parameters of an ifm 3D camera is accomplished in ifm3d in one
+of two ways: 1) via the <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> command line tool; 2) via the <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code>
+library’s <code class="docutils literal notranslate"><span class="pre">camera</span></code> module API. We show below how to do so with the command line tool.
+Please refer to <span class="xref myst">this doc</span> for instructions on configuring the camera through <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> library.</p>
+<p>The primary mechanism for using the <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> command line tool to configure an
+ifm 3D camera is to utilize the <code class="docutils literal notranslate"><span class="pre">dump</span></code> and <code class="docutils literal notranslate"><span class="pre">config</span></code> subcommands to <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code>. The
+<code class="docutils literal notranslate"><span class="pre">dump</span></code> command serializes the camera state to JSON and prints it to <code class="docutils literal notranslate"><span class="pre">stdout</span></code>,
+while the <code class="docutils literal notranslate"><span class="pre">config</span></code> subcommand consumes (either from a file or <code class="docutils literal notranslate"><span class="pre">stdin</span></code>) the same
+JSON serialization but interprets that JSON as a desired state for the
+camera. Said another way, <code class="docutils literal notranslate"><span class="pre">ifm3d</span> <span class="pre">config</span></code> will make a best effort attempt to
+have the actual camera hardware reflect the camera state encoded in the JSON
+stream passed to it.</p>
+<p>The remainder of this document will contain a set of examples and associated
+narrative in hopes of demonstrating how to leverage <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> to configure your
+3D camera. For purposes of this document, an ifm O3D303 will be
+utilized. However, the techniques shown here apply to any supported <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code>
+camera (e.g., O3X). Additionally, since the camera state is serialized via
+JSON, some of the examples below will utilize the
+<a class="reference external" href="https://stedolan.github.io/jq/">jq</a> command line JSON processor to build up
+Linux pipelines to carry out a specific task. The usage of <code class="docutils literal notranslate"><span class="pre">jq</span></code> is <em>not</em>
+required. Standard Linux tools (<code class="docutils literal notranslate"><span class="pre">grep</span></code>, <code class="docutils literal notranslate"><span class="pre">sed</span></code>, <code class="docutils literal notranslate"><span class="pre">awk</span></code>, <code class="docutils literal notranslate"><span class="pre">perl</span></code>, <code class="docutils literal notranslate"><span class="pre">python</span></code>, etc.)
+could also be used or a single pipeline can be decomposed into multiple
+commands whereby data are serialized to a file, edited, then I/O redirected
+into <code class="docutils literal notranslate"><span class="pre">ifm3d</span> <span class="pre">config</span></code> in discrete steps. Again, the remainder of this document
+will assume <code class="docutils literal notranslate"><span class="pre">jq</span></code> is available. (To install <code class="docutils literal notranslate"><span class="pre">jq</span></code> on Ubuntu:
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">jq</span></code>).</p>
+<div class="section" id="dump">
+<h3>Dump<a class="headerlink" href="#dump" title="Permalink to this headline"></a></h3>
+<p>Serializing the current state of the camera is accomplished through the <code class="docutils literal notranslate"><span class="pre">ifm3d</span> <span class="pre">dump</span></code> command. Exemplary output is shown below:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-TzNEIGV4YW1wbGU=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TzNEIGV4YW1wbGU=" name="TzNEIGV4YW1wbGU=" role="tab" tabindex="0">O3D example</button><button aria-controls="panel-0-TzNSIGV4YW1wbGU=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-TzNSIGV4YW1wbGU=" name="TzNSIGV4YW1wbGU=" role="tab" tabindex="-1">O3R example</button></div><div aria-labelledby="tab-0-TzNEIGV4YW1wbGU=" class="sphinx-tabs-panel group-tab" id="panel-0-TzNEIGV4YW1wbGU=" name="TzNEIGV4YW1wbGU=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ifm3d<span class="w"> </span>dump
+<span class="o">{</span>
+<span class="w">  </span><span class="s2">&quot;ifm3d&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;Apps&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">      </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;Description&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;Id&quot;</span>:<span class="w"> </span><span class="s2">&quot;476707713&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;Imager&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">          </span><span class="s2">&quot;AutoExposureMaxExposureTime&quot;</span>:<span class="w"> </span><span class="s2">&quot;10000&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;AutoExposureReferencePointX&quot;</span>:<span class="w"> </span><span class="s2">&quot;88&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;AutoExposureReferencePointY&quot;</span>:<span class="w"> </span><span class="s2">&quot;66&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;AutoExposureReferenceROI&quot;</span>:<span class="w"> </span><span class="s2">&quot;{\&quot;ROIs\&quot;:[{\&quot;id\&quot;:0,\&quot;group\&quot;:0,\&quot;type\&quot;:\&quot;Rect\&quot;,\&quot;width\&quot;:130,\&quot;height\&quot;:100,\&quot;angle\&quot;:0,\&quot;center_x\&quot;:88,\&quot;center_y\&quot;:66}]}&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;AutoExposureReferenceType&quot;</span>:<span class="w"> </span><span class="s2">&quot;0&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;Channel&quot;</span>:<span class="w"> </span><span class="s2">&quot;0&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;ClippingBottom&quot;</span>:<span class="w"> </span><span class="s2">&quot;131&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;ClippingCuboid&quot;</span>:<span class="w"> </span><span class="s2">&quot;{\&quot;XMin\&quot;: -3.402823e+38, \&quot;XMax\&quot;: 3.402823e+38, \&quot;YMin\&quot;: -3.402823e+38, \&quot;YMax\&quot;: 3.402823e+38, \&quot;ZMin\&quot;: -3.402823e+38, \&quot;ZMax\&quot;: 3.402823e+38}&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;ClippingLeft&quot;</span>:<span class="w"> </span><span class="s2">&quot;0&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;ClippingRight&quot;</span>:<span class="w"> </span><span class="s2">&quot;175&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;ClippingTop&quot;</span>:<span class="w"> </span><span class="s2">&quot;0&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;ContinuousAutoExposure&quot;</span>:<span class="w"> </span><span class="s2">&quot;false&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;EnableAmplitudeCorrection&quot;</span>:<span class="w"> </span><span class="s2">&quot;true&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;EnableFastFrequency&quot;</span>:<span class="w"> </span><span class="s2">&quot;false&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;EnableFilterAmplitudeImage&quot;</span>:<span class="w"> </span><span class="s2">&quot;true&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;EnableFilterDistanceImage&quot;</span>:<span class="w"> </span><span class="s2">&quot;true&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;EnableRectificationAmplitudeImage&quot;</span>:<span class="w"> </span><span class="s2">&quot;false&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;EnableRectificationDistanceImage&quot;</span>:<span class="w"> </span><span class="s2">&quot;false&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;ExposureTime&quot;</span>:<span class="w"> </span><span class="s2">&quot;5000&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;ExposureTimeList&quot;</span>:<span class="w"> </span><span class="s2">&quot;125;5000&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;ExposureTimeRatio&quot;</span>:<span class="w"> </span><span class="s2">&quot;40&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;FrameRate&quot;</span>:<span class="w"> </span><span class="s2">&quot;5&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;MaxAllowedLEDFrameRate&quot;</span>:<span class="w"> </span><span class="s2">&quot;23.2&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;MinimumAmplitude&quot;</span>:<span class="w"> </span><span class="s2">&quot;42&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;Resolution&quot;</span>:<span class="w"> </span><span class="s2">&quot;0&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;SpatialFilter&quot;</span>:<span class="w"> </span><span class="o">{}</span>,
+<span class="w">          </span><span class="s2">&quot;SpatialFilterType&quot;</span>:<span class="w"> </span><span class="s2">&quot;0&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;SymmetryThreshold&quot;</span>:<span class="w"> </span><span class="s2">&quot;0.4&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;TemporalFilter&quot;</span>:<span class="w"> </span><span class="o">{}</span>,
+<span class="w">          </span><span class="s2">&quot;TemporalFilterType&quot;</span>:<span class="w"> </span><span class="s2">&quot;0&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;ThreeFreqMax2FLineDistPercentage&quot;</span>:<span class="w"> </span><span class="s2">&quot;80&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;ThreeFreqMax3FLineDistPercentage&quot;</span>:<span class="w"> </span><span class="s2">&quot;80&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;TwoFreqMaxLineDistPercentage&quot;</span>:<span class="w"> </span><span class="s2">&quot;80&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;Type&quot;</span>:<span class="w"> </span><span class="s2">&quot;under5m_moderate&quot;</span>,
+<span class="w">          </span><span class="s2">&quot;UseSimpleBinning&quot;</span>:<span class="w"> </span><span class="s2">&quot;false&quot;</span>
+<span class="w">        </span><span class="o">}</span>,
+<span class="w">        </span><span class="s2">&quot;Index&quot;</span>:<span class="w"> </span><span class="s2">&quot;1&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;LogicGraph&quot;</span>:<span class="w"> </span><span class="s2">&quot;{\&quot;IOMap\&quot;: {\&quot;OUT1\&quot;: \&quot;RFT\&quot;,\&quot;OUT2\&quot;: \&quot;AQUFIN\&quot;},\&quot;blocks\&quot;: {\&quot;B00001\&quot;: {\&quot;pos\&quot;: {\&quot;x\&quot;: 200,\&quot;y\&quot;: 200},\&quot;properties\&quot;: {},\&quot;type\&quot;: \&quot;PIN_EVENT_IMAGE_ACQUISITION_FINISHED\&quot;},\&quot;B00002\&quot;: {\&quot;pos\&quot;: {\&quot;x\&quot;: 200,\&quot;y\&quot;: 75},\&quot;properties\&quot;: {},\&quot;type\&quot;: \&quot;PIN_EVENT_READY_FOR_TRIGGER\&quot;},\&quot;B00003\&quot;: {\&quot;pos\&quot;: {\&quot;x\&quot;: 600,\&quot;y\&quot;: 75},\&quot;properties\&quot;: {\&quot;pulse_duration\&quot;: 0},\&quot;type\&quot;: \&quot;DIGITAL_OUT1\&quot;},\&quot;B00005\&quot;: {\&quot;pos\&quot;: {\&quot;x\&quot;: 600,\&quot;y\&quot;: 200},\&quot;properties\&quot;: {\&quot;pulse_duration\&quot;: 0},\&quot;type\&quot;: \&quot;DIGITAL_OUT2\&quot;}},\&quot;connectors\&quot;: {\&quot;C00000\&quot;: {\&quot;dst\&quot;: \&quot;B00003\&quot;,\&quot;dstEP\&quot;: 0,\&quot;src\&quot;: \&quot;B00002\&quot;,\&quot;srcEP\&quot;: 0},\&quot;C00001\&quot;: {\&quot;dst\&quot;: \&quot;B00005\&quot;,\&quot;dstEP\&quot;: 0,\&quot;src\&quot;: \&quot;B00001\&quot;,\&quot;srcEP\&quot;: 0}}}&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;Name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Sample Application&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;PcicEipResultSchema&quot;</span>:<span class="w"> </span><span class="s2">&quot;{ \&quot;layouter\&quot;: \&quot;flexible\&quot;, \&quot;format\&quot;: { \&quot;dataencoding\&quot;: \&quot;binary\&quot;, \&quot;order\&quot;: \&quot;big\&quot; }, \&quot;elements\&quot; : [ { \&quot;type\&quot;: \&quot;string\&quot;, \&quot;value\&quot;: \&quot;star\&quot;, \&quot;id\&quot;: \&quot;start_string\&quot; }, { \&quot;type\&quot;: \&quot;records\&quot;, \&quot;id\&quot;: \&quot;models\&quot;, \&quot;elements\&quot;: [ { \&quot;type\&quot;: \&quot;int16\&quot;, \&quot;id\&quot;: \&quot;boxFound\&quot; }, { \&quot;type\&quot;: \&quot;int16\&quot;, \&quot;id\&quot;: \&quot;width\&quot;, \&quot;format\&quot;: { \&quot;scale\&quot;: 1000 } }, { \&quot;type\&quot;: \&quot;int16\&quot;, \&quot;id\&quot;: \&quot;height\&quot;, \&quot;format\&quot;: { \&quot;scale\&quot;: 1000 } }, { \&quot;type\&quot;: \&quot;int16\&quot;, \&quot;id\&quot;: \&quot;length\&quot;, \&quot;format\&quot;: { \&quot;scale\&quot;: 1000 } }, { \&quot;type\&quot;: \&quot;int16\&quot;, \&quot;id\&quot;: \&quot;xMidTop\&quot;, \&quot;format\&quot;: { \&quot;scale\&quot;: 1000 } }, { \&quot;type\&quot;: \&quot;int16\&quot;, \&quot;id\&quot;: \&quot;yMidTop\&quot;, \&quot;format\&quot;: { \&quot;scale\&quot;: 1000 } }, { \&quot;type\&quot;: \&quot;int16\&quot;, \&quot;id\&quot;: \&quot;zMidTop\&quot;, \&quot;format\&quot;: { \&quot;scale\&quot;: 1000 } }, { \&quot;type\&quot;: \&quot;int16\&quot;, \&quot;id\&quot;: \&quot;yawAngle\&quot; }, { \&quot;type\&quot;: \&quot;int16\&quot;, \&quot;id\&quot;: \&quot;qualityLength\&quot; }, { \&quot;type\&quot;: \&quot;int16\&quot;, \&quot;id\&quot;: \&quot;qualityWidth\&quot; }, { \&quot;type\&quot;: \&quot;int16\&quot;, \&quot;id\&quot;: \&quot;qualityHeight\&quot; } ] }, { \&quot;type\&quot;: \&quot;string\&quot;, \&quot;value\&quot;: \&quot;stop\&quot;, \&quot;id\&quot;: \&quot;end_string\&quot; } ] }&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;PcicPnioResultSchema&quot;</span>:<span class="w"> </span><span class="s2">&quot;{\&quot;layouter\&quot; : \&quot;flexible\&quot;, \&quot;format\&quot;: { \&quot;dataencoding\&quot;: \&quot;binary\&quot;, \&quot;order\&quot;: \&quot;big\&quot; }, \&quot;elements\&quot; : [ { \&quot;type\&quot;: \&quot;string\&quot;, \&quot;value\&quot;: \&quot;star\&quot;, \&quot;id\&quot;: \&quot;start_string\&quot; }, { \&quot;type\&quot;: \&quot;records\&quot;, \&quot;id\&quot;: \&quot;models\&quot;, \&quot;elements\&quot;: [ { \&quot;type\&quot;: \&quot;int16\&quot;, \&quot;id\&quot;: \&quot;boxFound\&quot; }, { \&quot;type\&quot;: \&quot;int16\&quot;, \&quot;id\&quot;: \&quot;width\&quot;, \&quot;format\&quot;: { \&quot;scale\&quot;: 1000 } }, { \&quot;type\&quot;: \&quot;int16\&quot;, \&quot;id\&quot;: \&quot;height\&quot;, \&quot;format\&quot;: { \&quot;scale\&quot;: 1000 } }, { \&quot;type\&quot;: \&quot;int16\&quot;, \&quot;id\&quot;: \&quot;length\&quot;, \&quot;format\&quot;: { \&quot;scale\&quot;: 1000 } }, { \&quot;type\&quot;: \&quot;int16\&quot;, \&quot;id\&quot;: \&quot;xMidTop\&quot;, \&quot;format\&quot;: { \&quot;scale\&quot;: 1000 } }, { \&quot;type\&quot;: \&quot;int16\&quot;, \&quot;id\&quot;: \&quot;yMidTop\&quot;, \&quot;format\&quot;: { \&quot;scale\&quot;: 1000 } }, { \&quot;type\&quot;: \&quot;int16\&quot;, \&quot;id\&quot;: \&quot;zMidTop\&quot;, \&quot;format\&quot;: { \&quot;scale\&quot;: 1000 } }, { \&quot;type\&quot;: \&quot;int16\&quot;, \&quot;id\&quot;: \&quot;yawAngle\&quot; }, { \&quot;type\&quot;: \&quot;int16\&quot;, \&quot;id\&quot;: \&quot;qualityLength\&quot; }, { \&quot;type\&quot;: \&quot;int16\&quot;, \&quot;id\&quot;: \&quot;qualityWidth\&quot; }, { \&quot;type\&quot;: \&quot;int16\&quot;, \&quot;id\&quot;: \&quot;qualityHeight\&quot; } ] }, { \&quot;type\&quot;: \&quot;string\&quot;, \&quot;value\&quot;: \&quot;stop\&quot;, \&quot;id\&quot;: \&quot;end_string\&quot; } ] }&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;PcicTcpResultSchema&quot;</span>:<span class="w"> </span><span class="s2">&quot;{ \&quot;layouter\&quot;: \&quot;flexible\&quot;, \&quot;format\&quot;: { \&quot;dataencoding\&quot;: \&quot;ascii\&quot; }, \&quot;elements\&quot;: [ { \&quot;type\&quot;: \&quot;string\&quot;, \&quot;value\&quot;: \&quot;star\&quot;, \&quot;id\&quot;: \&quot;start_string\&quot; }, { \&quot;type\&quot;: \&quot;blob\&quot;, \&quot;id\&quot;: \&quot;normalized_amplitude_image\&quot; }, { \&quot;type\&quot;: \&quot;blob\&quot;, \&quot;id\&quot;: \&quot;distance_image\&quot; }, { \&quot;type\&quot;: \&quot;blob\&quot;, \&quot;id\&quot;: \&quot;x_image\&quot; }, { \&quot;type\&quot;: \&quot;blob\&quot;, \&quot;id\&quot;: \&quot;y_image\&quot; }, { \&quot;type\&quot;: \&quot;blob\&quot;, \&quot;id\&quot;: \&quot;z_image\&quot; }, { \&quot;type\&quot;: \&quot;blob\&quot;, \&quot;id\&quot;: \&quot;confidence_image\&quot; }, { \&quot;type\&quot;: \&quot;blob\&quot;, \&quot;id\&quot;: \&quot;diagnostic_data\&quot; }, { \&quot;type\&quot;: \&quot;string\&quot;, \&quot;value\&quot;: \&quot;stop\&quot;, \&quot;id\&quot;: \&quot;end_string\&quot; } ] }&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;TemplateInfo&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;TriggerMode&quot;</span>:<span class="w"> </span><span class="s2">&quot;1&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;Type&quot;</span>:<span class="w"> </span><span class="s2">&quot;Camera&quot;</span>
+<span class="w">      </span><span class="o">}</span>
+<span class="w">    </span><span class="o">]</span>,
+<span class="w">    </span><span class="s2">&quot;Device&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">      </span><span class="s2">&quot;ActiveApplication&quot;</span>:<span class="w"> </span><span class="s2">&quot;1&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;ArticleNumber&quot;</span>:<span class="w"> </span><span class="s2">&quot;O3D303&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;ArticleStatus&quot;</span>:<span class="w"> </span><span class="s2">&quot;AD&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;Description&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;DeviceType&quot;</span>:<span class="w"> </span><span class="s2">&quot;1:2&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;EnableAcquisitionFinishedPCIC&quot;</span>:<span class="w"> </span><span class="s2">&quot;false&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;EthernetFieldBus&quot;</span>:<span class="w"> </span><span class="s2">&quot;0&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;EthernetFieldBusEndianness&quot;</span>:<span class="w"> </span><span class="s2">&quot;0&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;EvaluationFinishedMinHoldTime&quot;</span>:<span class="w"> </span><span class="s2">&quot;10&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;ExtrinsicCalibRotX&quot;</span>:<span class="w"> </span><span class="s2">&quot;0&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;ExtrinsicCalibRotY&quot;</span>:<span class="w"> </span><span class="s2">&quot;0&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;ExtrinsicCalibRotZ&quot;</span>:<span class="w"> </span><span class="s2">&quot;0&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;ExtrinsicCalibTransX&quot;</span>:<span class="w"> </span><span class="s2">&quot;0&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;ExtrinsicCalibTransY&quot;</span>:<span class="w"> </span><span class="s2">&quot;0&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;ExtrinsicCalibTransZ&quot;</span>:<span class="w"> </span><span class="s2">&quot;0&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;IODebouncing&quot;</span>:<span class="w"> </span><span class="s2">&quot;true&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;IOExternApplicationSwitch&quot;</span>:<span class="w"> </span><span class="s2">&quot;0&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;IOLogicType&quot;</span>:<span class="w"> </span><span class="s2">&quot;1&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;IPAddressConfig&quot;</span>:<span class="w"> </span><span class="s2">&quot;0&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;ImageTimestampReference&quot;</span>:<span class="w"> </span><span class="s2">&quot;1520963818&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;Name&quot;</span>:<span class="w"> </span><span class="s2">&quot;New sensor&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;OperatingMode&quot;</span>:<span class="w"> </span><span class="s2">&quot;0&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;PNIODeviceName&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;PasswordActivated&quot;</span>:<span class="w"> </span><span class="s2">&quot;false&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;PcicProtocolVersion&quot;</span>:<span class="w"> </span><span class="s2">&quot;3&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;PcicTcpPort&quot;</span>:<span class="w"> </span><span class="s2">&quot;50010&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;SaveRestoreStatsOnApplSwitch&quot;</span>:<span class="w"> </span><span class="s2">&quot;true&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;ServiceReportFailedBuffer&quot;</span>:<span class="w"> </span><span class="s2">&quot;15&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;ServiceReportPassedBuffer&quot;</span>:<span class="w"> </span><span class="s2">&quot;15&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;SessionTimeout&quot;</span>:<span class="w"> </span><span class="s2">&quot;30&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;TemperatureFront1&quot;</span>:<span class="w"> </span><span class="s2">&quot;3276.7&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;TemperatureFront2&quot;</span>:<span class="w"> </span><span class="s2">&quot;3276.7&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;TemperatureIMX6&quot;</span>:<span class="w"> </span><span class="s2">&quot;40.7179985046387&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;TemperatureIllu&quot;</span>:<span class="w"> </span><span class="s2">&quot;47.5&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;UpTime&quot;</span>:<span class="w"> </span><span class="s2">&quot;1.61972222222222&quot;</span>
+<span class="w">    </span><span class="o">}</span>,
+<span class="w">    </span><span class="s2">&quot;Net&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">      </span><span class="s2">&quot;MACAddress&quot;</span>:<span class="w"> </span><span class="s2">&quot;00:02:01:40:7D:96&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;NetworkSpeed&quot;</span>:<span class="w"> </span><span class="s2">&quot;0&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;StaticIPv4Address&quot;</span>:<span class="w"> </span><span class="s2">&quot;192.168.0.69&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;StaticIPv4Gateway&quot;</span>:<span class="w"> </span><span class="s2">&quot;192.168.0.201&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;StaticIPv4SubNetMask&quot;</span>:<span class="w"> </span><span class="s2">&quot;255.255.255.0&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;UseDHCP&quot;</span>:<span class="w"> </span><span class="s2">&quot;false&quot;</span>
+<span class="w">    </span><span class="o">}</span>,
+<span class="w">    </span><span class="s2">&quot;Time&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">      </span><span class="s2">&quot;CurrentTime&quot;</span>:<span class="w"> </span><span class="s2">&quot;1520963816&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;NTPServers&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;StartingSynchronization&quot;</span>:<span class="w"> </span><span class="s2">&quot;false&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;Stats&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;SynchronizationActivated&quot;</span>:<span class="w"> </span><span class="s2">&quot;false&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;Syncing&quot;</span>:<span class="w"> </span><span class="s2">&quot;false&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;WaitSyncTries&quot;</span>:<span class="w"> </span><span class="s2">&quot;2&quot;</span>
+<span class="w">    </span><span class="o">}</span>,
+<span class="w">    </span><span class="s2">&quot;_&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">      </span><span class="s2">&quot;Date&quot;</span>:<span class="w"> </span><span class="s2">&quot;Mon May  7 11:55:08 2018&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;HWInfo&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;Connector&quot;</span>:<span class="w"> </span><span class="s2">&quot;#!02_A300_C40_02452814_008023176&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;Diagnose&quot;</span>:<span class="w"> </span><span class="s2">&quot;#!02_D322_C32_03038544_008023267&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;Frontend&quot;</span>:<span class="w"> </span><span class="s2">&quot;#!02_F342_C34_17_00049_008023607&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;Illumination&quot;</span>:<span class="w"> </span><span class="s2">&quot;#!02_I300_001_03106810_008001175&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;MACAddress&quot;</span>:<span class="w"> </span><span class="s2">&quot;00:02:01:40:7D:96&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;Mainboard&quot;</span>:<span class="w"> </span><span class="s2">&quot;#!02_M381_003_03181504_008022954&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;MiraSerial&quot;</span>:<span class="w"> </span><span class="s2">&quot;0e30-59af-0ef7-0244&quot;</span>
+<span class="w">      </span><span class="o">}</span>,
+<span class="w">      </span><span class="s2">&quot;SWVersion&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;Algorithm_Version&quot;</span>:<span class="w"> </span><span class="s2">&quot;2.0.45&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;Calibration_Device&quot;</span>:<span class="w"> </span><span class="s2">&quot;00:02:01:40:7d:96&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;Calibration_Version&quot;</span>:<span class="w"> </span><span class="s2">&quot;0.9.0&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;Diagnostic_Controller&quot;</span>:<span class="w"> </span><span class="s2">&quot;v1.0.69-9dbc4ca5ef-dirty&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;ELDK&quot;</span>:<span class="w"> </span><span class="s2">&quot;GOLDENEYE_YOCTO/releases%2FO3D%2FRB_1.20.x-7-06d9c894636352a6c93711c7284d02b0c794a527&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;IFM_Recovery&quot;</span>:<span class="w"> </span><span class="s2">&quot;unversioned&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;IFM_Software&quot;</span>:<span class="w"> </span><span class="s2">&quot;1.20.1138&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;Linux&quot;</span>:<span class="w"> </span><span class="s2">&quot;Linux version 3.14.34-rt31-yocto-standard-00009-ge4ab4d94f288-dirty (jenkins@dettlx190) (gcc version 4.9.2 (GCC) ) #1 SMP PREEMPT RT Tue Mar 13 16:06:07 CET 2018&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;Main_Application&quot;</span>:<span class="w"> </span><span class="s2">&quot;unknown&quot;</span>
+<span class="w">      </span><span class="o">}</span>,
+<span class="w">      </span><span class="s2">&quot;ifm3d_version&quot;</span>:<span class="w"> </span><span class="m">900</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">  </span><span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-TzNSIGV4YW1wbGU=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-TzNSIGV4YW1wbGU=" name="TzNSIGV4YW1wbGU=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ifm3d<span class="w"> </span>dump
+<span class="o">{</span>
+<span class="w">  </span><span class="s2">&quot;device&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;clock&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">      </span><span class="s2">&quot;currentTime&quot;</span>:<span class="w"> </span><span class="m">1581108383428570624</span>
+<span class="w">    </span><span class="o">}</span>,
+<span class="w">    </span><span class="s2">&quot;diagnostic&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">      </span><span class="s2">&quot;temperatures&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">      </span><span class="s2">&quot;upTime&quot;</span>:<span class="w"> </span><span class="m">17739000000000</span>
+<span class="w">    </span><span class="o">}</span>,
+<span class="w">    </span><span class="s2">&quot;info&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">      </span><span class="s2">&quot;device&quot;</span>:<span class="w"> </span><span class="s2">&quot;0301&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;deviceTreeBinaryBlob&quot;</span>:<span class="w"> </span><span class="s2">&quot;tegra186-quill-p3310-1000-c03-00-base.dtb&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;features&quot;</span>:<span class="w"> </span><span class="o">{}</span>,
+<span class="w">      </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;partNumber&quot;</span>:<span class="w"> </span><span class="s2">&quot;M03975&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;productionState&quot;</span>:<span class="w"> </span><span class="s2">&quot;AA&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;serialNumber&quot;</span>:<span class="w"> </span><span class="s2">&quot;000201234159&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;vendor&quot;</span>:<span class="w"> </span><span class="s2">&quot;0001&quot;</span>
+<span class="w">    </span><span class="o">}</span>,
+<span class="w">    </span><span class="s2">&quot;network&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">      </span><span class="s2">&quot;authorized_keys&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;ipAddressConfig&quot;</span>:<span class="w"> </span><span class="m">0</span>,
+<span class="w">      </span><span class="s2">&quot;macEth0&quot;</span>:<span class="w"> </span><span class="s2">&quot;00:04:4B:EA:9F:35&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;macEth1&quot;</span>:<span class="w"> </span><span class="s2">&quot;00:02:01:23:41:59&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;networkSpeed&quot;</span>:<span class="w"> </span><span class="m">1000</span>,
+<span class="w">      </span><span class="s2">&quot;staticIPv4Address&quot;</span>:<span class="w"> </span><span class="s2">&quot;192.168.0.69&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;staticIPv4Gateway&quot;</span>:<span class="w"> </span><span class="s2">&quot;192.168.0.201&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;staticIPv4SubNetMask&quot;</span>:<span class="w"> </span><span class="s2">&quot;255.255.255.0&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;useDHCP&quot;</span>:<span class="w"> </span><span class="nb">false</span>
+<span class="w">    </span><span class="o">}</span>,
+<span class="w">    </span><span class="s2">&quot;state&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">      </span><span class="s2">&quot;errorMessage&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;errorNumber&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">    </span><span class="o">}</span>,
+<span class="w">    </span><span class="s2">&quot;swVersion&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">      </span><span class="s2">&quot;kernel&quot;</span>:<span class="w"> </span><span class="s2">&quot;4.9.140-l4t-r32.4+gc35f5eb9d1d9&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;l4t&quot;</span>:<span class="w"> </span><span class="s2">&quot;r32.4.3&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;os&quot;</span>:<span class="w"> </span><span class="s2">&quot;0.13.13-221&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;schema&quot;</span>:<span class="w"> </span><span class="s2">&quot;v0.1.0&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;swu&quot;</span>:<span class="w"> </span><span class="s2">&quot;0.15.12&quot;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">  </span><span class="o">}</span>,
+<span class="w">  </span><span class="s2">&quot;ports&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;port0&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">      </span><span class="s2">&quot;acquisition&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;framerate&quot;</span>:<span class="w"> </span><span class="m">10</span>.0,
+<span class="w">        </span><span class="s2">&quot;version&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">          </span><span class="s2">&quot;major&quot;</span>:<span class="w"> </span><span class="m">0</span>,
+<span class="w">          </span><span class="s2">&quot;minor&quot;</span>:<span class="w"> </span><span class="m">0</span>,
+<span class="w">          </span><span class="s2">&quot;patch&quot;</span>:<span class="w"> </span><span class="m">0</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">      </span><span class="o">}</span>,
+<span class="w">      </span><span class="s2">&quot;data&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;algoDebugConfig&quot;</span>:<span class="w"> </span><span class="o">{}</span>,
+<span class="w">        </span><span class="s2">&quot;availablePCICOutput&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">        </span><span class="s2">&quot;pcicTCPPort&quot;</span>:<span class="w"> </span><span class="m">50010</span>
+<span class="w">      </span><span class="o">}</span>,
+<span class="w">      </span><span class="s2">&quot;info&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;device&quot;</span>:<span class="w"> </span><span class="s2">&quot;2301&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;deviceTreeBinaryBlobOverlay&quot;</span>:<span class="w"> </span><span class="s2">&quot;001-ov9782.dtbo&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;features&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">          </span><span class="s2">&quot;fov&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;horizontal&quot;</span>:<span class="w"> </span><span class="m">127</span>,
+<span class="w">            </span><span class="s2">&quot;vertical&quot;</span>:<span class="w"> </span><span class="m">80</span>
+<span class="w">          </span><span class="o">}</span>,
+<span class="w">          </span><span class="s2">&quot;resolution&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;height&quot;</span>:<span class="w"> </span><span class="m">800</span>,
+<span class="w">            </span><span class="s2">&quot;width&quot;</span>:<span class="w"> </span><span class="m">1280</span>
+<span class="w">          </span><span class="o">}</span>,
+<span class="w">          </span><span class="s2">&quot;type&quot;</span>:<span class="w"> </span><span class="s2">&quot;2D&quot;</span>
+<span class="w">        </span><span class="o">}</span>,
+<span class="w">        </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;partNumber&quot;</span>:<span class="w"> </span><span class="s2">&quot;M03933&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;productionState&quot;</span>:<span class="w"> </span><span class="s2">&quot;AA&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;sensor&quot;</span>:<span class="w"> </span><span class="s2">&quot;OV9782&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;sensorID&quot;</span>:<span class="w"> </span><span class="s2">&quot;OV9782_127x80_noIllu_Csample&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;serialNumber&quot;</span>:<span class="w"> </span><span class="s2">&quot;000000000280&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;vendor&quot;</span>:<span class="w"> </span><span class="s2">&quot;0001&quot;</span>
+<span class="w">      </span><span class="o">}</span>,
+<span class="w">      </span><span class="s2">&quot;mode&quot;</span>:<span class="w"> </span><span class="s2">&quot;experimental_autoexposure2D&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;processing&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;extrinsicHeadToUser&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">          </span><span class="s2">&quot;rotX&quot;</span>:<span class="w"> </span><span class="m">0</span>.0,
+<span class="w">          </span><span class="s2">&quot;rotY&quot;</span>:<span class="w"> </span><span class="m">0</span>.0,
+<span class="w">          </span><span class="s2">&quot;rotZ&quot;</span>:<span class="w"> </span><span class="m">0</span>.0,
+<span class="w">          </span><span class="s2">&quot;transX&quot;</span>:<span class="w"> </span><span class="m">0</span>.0,
+<span class="w">          </span><span class="s2">&quot;transY&quot;</span>:<span class="w"> </span><span class="m">0</span>.0,
+<span class="w">          </span><span class="s2">&quot;transZ&quot;</span>:<span class="w"> </span><span class="m">0</span>.0
+<span class="w">        </span><span class="o">}</span>,
+<span class="w">        </span><span class="s2">&quot;version&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">          </span><span class="s2">&quot;major&quot;</span>:<span class="w"> </span><span class="m">0</span>,
+<span class="w">          </span><span class="s2">&quot;minor&quot;</span>:<span class="w"> </span><span class="m">0</span>,
+<span class="w">          </span><span class="s2">&quot;patch&quot;</span>:<span class="w"> </span><span class="m">0</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">      </span><span class="o">}</span>,
+<span class="w">      </span><span class="s2">&quot;state&quot;</span>:<span class="w"> </span><span class="s2">&quot;RUN&quot;</span>
+<span class="w">    </span><span class="o">}</span>,
+<span class="w">    </span><span class="s2">&quot;port2&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">      </span><span class="s2">&quot;acquisition&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;exposureLong&quot;</span>:<span class="w"> </span><span class="m">5000</span>,
+<span class="w">        </span><span class="s2">&quot;exposureShort&quot;</span>:<span class="w"> </span><span class="m">400</span>,
+<span class="w">        </span><span class="s2">&quot;framerate&quot;</span>:<span class="w"> </span><span class="m">10</span>.0,
+<span class="w">        </span><span class="s2">&quot;offset&quot;</span>:<span class="w"> </span><span class="m">0</span>.0,
+<span class="w">        </span><span class="s2">&quot;version&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">          </span><span class="s2">&quot;major&quot;</span>:<span class="w"> </span><span class="m">0</span>,
+<span class="w">          </span><span class="s2">&quot;minor&quot;</span>:<span class="w"> </span><span class="m">0</span>,
+<span class="w">          </span><span class="s2">&quot;patch&quot;</span>:<span class="w"> </span><span class="m">0</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">      </span><span class="o">}</span>,
+<span class="w">      </span><span class="s2">&quot;data&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;algoDebugConfig&quot;</span>:<span class="w"> </span><span class="o">{}</span>,
+<span class="w">        </span><span class="s2">&quot;availablePCICOutput&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">        </span><span class="s2">&quot;pcicTCPPort&quot;</span>:<span class="w"> </span><span class="m">50012</span>
+<span class="w">      </span><span class="o">}</span>,
+<span class="w">      </span><span class="s2">&quot;info&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;device&quot;</span>:<span class="w"> </span><span class="s2">&quot;3101&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;deviceTreeBinaryBlobOverlay&quot;</span>:<span class="w"> </span><span class="s2">&quot;001-irs2381c.dtbo&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;features&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">          </span><span class="s2">&quot;fov&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;horizontal&quot;</span>:<span class="w"> </span><span class="m">60</span>,
+<span class="w">            </span><span class="s2">&quot;vertical&quot;</span>:<span class="w"> </span><span class="m">45</span>
+<span class="w">          </span><span class="o">}</span>,
+<span class="w">          </span><span class="s2">&quot;resolution&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;height&quot;</span>:<span class="w"> </span><span class="m">172</span>,
+<span class="w">            </span><span class="s2">&quot;width&quot;</span>:<span class="w"> </span><span class="m">224</span>
+<span class="w">          </span><span class="o">}</span>,
+<span class="w">          </span><span class="s2">&quot;type&quot;</span>:<span class="w"> </span><span class="s2">&quot;3D&quot;</span>
+<span class="w">        </span><span class="o">}</span>,
+<span class="w">        </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;partNumber&quot;</span>:<span class="w"> </span><span class="s2">&quot;M03933&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;productionState&quot;</span>:<span class="w"> </span><span class="s2">&quot;AA&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;sensor&quot;</span>:<span class="w"> </span><span class="s2">&quot;IRS2381C&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;sensorID&quot;</span>:<span class="w"> </span><span class="s2">&quot;IRS2381C_60x45_4x2W_60x45_C2&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;serialNumber&quot;</span>:<span class="w"> </span><span class="s2">&quot;000000000280&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;vendor&quot;</span>:<span class="w"> </span><span class="s2">&quot;0001&quot;</span>
+<span class="w">      </span><span class="o">}</span>,
+<span class="w">      </span><span class="s2">&quot;mode&quot;</span>:<span class="w"> </span><span class="s2">&quot;standard_range4m&quot;</span>,
+<span class="w">      </span><span class="s2">&quot;processing&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;diParam&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">          </span><span class="s2">&quot;anfFilterSizeDiv2&quot;</span>:<span class="w"> </span><span class="m">2</span>,
+<span class="w">          </span><span class="s2">&quot;enableDynamicSymmetry&quot;</span>:<span class="w"> </span>true,
+<span class="w">          </span><span class="s2">&quot;enableStraylight&quot;</span>:<span class="w"> </span>true,
+<span class="w">          </span><span class="s2">&quot;enableTemporalFilter&quot;</span>:<span class="w"> </span>true,
+<span class="w">          </span><span class="s2">&quot;excessiveCorrectionThreshAmp&quot;</span>:<span class="w"> </span><span class="m">0</span>.3,
+<span class="w">          </span><span class="s2">&quot;excessiveCorrectionThreshDist&quot;</span>:<span class="w"> </span><span class="m">0</span>.08,
+<span class="w">          </span><span class="s2">&quot;maxDistNoise&quot;</span>:<span class="w"> </span><span class="m">0</span>.02,
+<span class="w">          </span><span class="s2">&quot;maxSymmetry&quot;</span>:<span class="w"> </span><span class="m">0</span>.4,
+<span class="w">          </span><span class="s2">&quot;medianSizeDiv2&quot;</span>:<span class="w"> </span><span class="m">0</span>,
+<span class="w">          </span><span class="s2">&quot;minAmplitude&quot;</span>:<span class="w"> </span><span class="m">20</span>.0,
+<span class="w">          </span><span class="s2">&quot;minReflectivity&quot;</span>:<span class="w"> </span><span class="m">0</span>.0,
+<span class="w">          </span><span class="s2">&quot;mixedPixelFilterMode&quot;</span>:<span class="w"> </span><span class="m">1</span>,
+<span class="w">          </span><span class="s2">&quot;mixedPixelThresholdRad&quot;</span>:<span class="w"> </span><span class="m">0</span>.15
+<span class="w">        </span><span class="o">}</span>,
+<span class="w">        </span><span class="s2">&quot;extrinsicHeadToUser&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">          </span><span class="s2">&quot;rotX&quot;</span>:<span class="w"> </span><span class="m">0</span>.0,
+<span class="w">          </span><span class="s2">&quot;rotY&quot;</span>:<span class="w"> </span><span class="m">0</span>.0,
+<span class="w">          </span><span class="s2">&quot;rotZ&quot;</span>:<span class="w"> </span><span class="m">0</span>.0,
+<span class="w">          </span><span class="s2">&quot;transX&quot;</span>:<span class="w"> </span><span class="m">0</span>.0,
+<span class="w">          </span><span class="s2">&quot;transY&quot;</span>:<span class="w"> </span><span class="m">0</span>.0,
+<span class="w">          </span><span class="s2">&quot;transZ&quot;</span>:<span class="w"> </span><span class="m">0</span>.0
+<span class="w">        </span><span class="o">}</span>,
+<span class="w">        </span><span class="s2">&quot;version&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">          </span><span class="s2">&quot;major&quot;</span>:<span class="w"> </span><span class="m">0</span>,
+<span class="w">          </span><span class="s2">&quot;minor&quot;</span>:<span class="w"> </span><span class="m">0</span>,
+<span class="w">          </span><span class="s2">&quot;patch&quot;</span>:<span class="w"> </span><span class="m">0</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">      </span><span class="o">}</span>,
+<span class="w">      </span><span class="s2">&quot;state&quot;</span>:<span class="w"> </span><span class="s2">&quot;RUN&quot;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">  </span><span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div></div>
+<p>In the example above, we serialize the entire state of the camera. This is
+useful to, for example, save to a file, edit, and push out to one or more
+cameras. However, sometimes we need to look at the camera configuration to
+simply answer a question we may have. For example, if we wanted to see which
+version of the firmware the camera is running we could issue the following
+command.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-1-TzNE" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-TzNE" name="TzNE" role="tab" tabindex="0">O3D</button><button aria-controls="panel-1-TzNS" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-TzNS" name="TzNS" role="tab" tabindex="-1">O3R</button></div><div aria-labelledby="tab-1-TzNE" class="sphinx-tabs-panel group-tab" id="panel-1-TzNE" name="TzNE" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ifm3d<span class="w"> </span>dump<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>.ifm3d._.SWVersion.IFM_Software
+<span class="s2">&quot;1.20.1138&quot;</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-1-TzNS" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-TzNS" name="TzNS" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ifm3d<span class="w"> </span>dump<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>.device.swVersion.firmware
+<span class="s2">&quot;0.14.23-493&quot;</span>
+</pre></div>
+</div>
+</div></div>
+<p>It follows that the entire JSON serialized configuration may be further
+processed either programmatically or manually via a text editor.</p>
+</div>
+<div class="section" id="config">
+<h3>Config<a class="headerlink" href="#config" title="Permalink to this headline"></a></h3>
+<div class="section" id="setting-single-parameters-with-ifm3d-config">
+<h4>Setting single parameters with <code class="docutils literal notranslate"><span class="pre">ifm3d</span> <span class="pre">config</span></code><a class="headerlink" href="#setting-single-parameters-with-ifm3d-config" title="Permalink to this headline"></a></h4>
+<p>Mutating parameters on the camera is done by creating a <em>desired</em> camera state
+encoded in JSON compliant to the output produced by <code class="docutils literal notranslate"><span class="pre">ifm3d</span> <span class="pre">dump</span></code>.
+For example, if we wanted to change the framerate on the camera
+we could do the following.</p>
+<ol class="simple">
+<li><p>Before changing the framerate, let’s see what it is currently set to:</p></li>
+</ol>
+<blockquote>
+<div><p>NOTE: This step is not necessary. We do this to illustrate the state of the
+camera prior to mutating the parameter.</p>
+</div></blockquote>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-2-TzNE" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-TzNE" name="TzNE" role="tab" tabindex="0">O3D</button><button aria-controls="panel-2-TzNS" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-TzNS" name="TzNS" role="tab" tabindex="-1">O3R</button></div><div aria-labelledby="tab-2-TzNE" class="sphinx-tabs-panel group-tab" id="panel-2-TzNE" name="TzNE" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ifm3d<span class="w"> </span>dump<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>.ifm3d.Apps<span class="o">[</span><span class="m">0</span><span class="o">]</span>.Imager.FrameRate
+<span class="s2">&quot;5&quot;</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-2-TzNS" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-TzNS" name="TzNS" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ifm3d<span class="w"> </span>dump<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>.ports.port2.acquisition.framerate
+<span class="m">5</span>
+</pre></div>
+</div>
+</div></div>
+<blockquote>
+<div><p>Note: This example shows how to view and change the framerate for the <em>first</em> application instantiated on the O3D camera, and for the camera head connected on <em>port 2</em> for the O3R platform.</p>
+</div></blockquote>
+<p>We see the current framerate is 5 fps.</p>
+<ol class="simple">
+<li><p>Let’s set it to 10 fps:</p></li>
+</ol>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-3-TzNE" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-TzNE" name="TzNE" role="tab" tabindex="0">O3D</button><button aria-controls="panel-3-TzNS" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-TzNS" name="TzNS" role="tab" tabindex="-1">O3R</button></div><div aria-labelledby="tab-3-TzNE" class="sphinx-tabs-panel group-tab" id="panel-3-TzNE" name="TzNE" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span><span class="s1">&#39;.ifm3d.Apps[0].Imager.FrameRate=&quot;10&quot;&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>ifm3d<span class="w"> </span>config
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-3-TzNS" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-3-TzNS" name="TzNS" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span><span class="s1">&#39;.ports.port2.acquisition.framerate=10&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>ifm3d<span class="w"> </span>config
+</pre></div>
+</div>
+</div></div>
+<ol class="simple">
+<li><p>Let’s check to make sure that our configuration has persisted.</p></li>
+</ol>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-4-TzNE" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-4-TzNE" name="TzNE" role="tab" tabindex="0">O3D</button><button aria-controls="panel-4-TzNS" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-TzNS" name="TzNS" role="tab" tabindex="-1">O3R</button></div><div aria-labelledby="tab-4-TzNE" class="sphinx-tabs-panel group-tab" id="panel-4-TzNE" name="TzNE" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ifm3d<span class="w"> </span>dump<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>.ifm3d.Apps<span class="o">[</span><span class="m">0</span><span class="o">]</span>.Imager.FrameRate
+<span class="s2">&quot;10&quot;</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-4-TzNS" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-4-TzNS" name="TzNS" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ifm3d<span class="w"> </span>dump<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>.ports.port2.acquisition.framerate
+<span class="m">10</span>
+</pre></div>
+</div>
+</div></div>
+<p>Let’s now break down what we did in this single Linux pipeline.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-5-TzNE" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-5-TzNE" name="TzNE" role="tab" tabindex="0">O3D</button><button aria-controls="panel-5-TzNS" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-TzNS" name="TzNS" role="tab" tabindex="-1">O3R</button></div><div aria-labelledby="tab-5-TzNE" class="sphinx-tabs-panel group-tab" id="panel-5-TzNE" name="TzNE" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span><span class="s1">&#39;.ifm3d.Apps[0].Imager.FrameRate=&quot;10&quot;&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>ifm3d<span class="w"> </span>config
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-5-TzNS" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-5-TzNS" name="TzNS" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span><span class="s1">&#39;.ports.port2.acquisition.framerate=10&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>ifm3d<span class="w"> </span>config
+</pre></div>
+</div>
+</div></div>
+<p>First, we start with an empty string which we fill with the JSON string processed
+via <code class="docutils literal notranslate"><span class="pre">jq</span></code> to set the FrameRate to 10 fps. We then pipe the resulting output to
+<code class="docutils literal notranslate"><span class="pre">ifm3d</span> <span class="pre">config</span></code> which accepts the new JSON stream on <code class="docutils literal notranslate"><span class="pre">stdin</span></code> and
+carries out the necessary network calls to mutate the camera settings and
+persist them.</p>
+<p>This is the basic paradigm that can be followed to tune just about any
+parameter on the camera.</p>
+</div>
+<div class="section" id="setting-multiple-parameters">
+<h4>Setting multiple parameters<a class="headerlink" href="#setting-multiple-parameters" title="Permalink to this headline"></a></h4>
+<p>To carry out more complex configuration tasks (e.g.,
+changing several parameters at once), the dump can be saved to a file, edited
+via a text editor, then fed into <code class="docutils literal notranslate"><span class="pre">ifm3d</span> <span class="pre">config</span></code> to perform the
+configuration.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ifm3d<span class="w"> </span>dump<span class="w"> </span>&gt;<span class="w"> </span>settings.json
+<span class="c1"># Edit the settings.json file</span>
+<span class="c1"># Save the new settings in new_settings.json</span>
+$<span class="w"> </span>ifm3d<span class="w"> </span>config<span class="w"> </span>&lt;<span class="w"> </span>new_settings.json
+</pre></div>
+</div>
+<p>One can also take advantage of <code class="docutils literal notranslate"><span class="pre">jq</span></code>’s powerful features to mutate multiple parameters at once. For instance, to copy the configuration from one port to another for the O3R platform, use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ifm3d<span class="w"> </span>dump<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span><span class="s1">&#39;.ports.port1=.ports.port0&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>ifm3d<span class="w"> </span>config
+</pre></div>
+</div>
+<p>Another example for the O3R platforms: set all the 2D ports to <code class="docutils literal notranslate"><span class="pre">RUN</span></code> mode:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ifm3d<span class="w"> </span>dump<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span><span class="s1">&#39;(.ports[] | select(.info.features.type == &quot;2D&quot;) | .state ) = &quot;RUN&quot;&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>ifm3d<span class="w"> </span>config
+</pre></div>
+</div>
+<p>In summary, the primary concept in configuring your camera via <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> is that
+the <code class="docutils literal notranslate"><span class="pre">dump</span></code> subcommand can be used to access the current camera state while the
+<code class="docutils literal notranslate"><span class="pre">config</span></code> subcommand is used to declare and mutate the camera into a desired
+state – assuming the desired state is valid.</p>
+</div>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+<div class="section" id="creating-new-applications">
+<h3>Creating new applications<a class="headerlink" href="#creating-new-applications" title="Permalink to this headline"></a></h3>
+<p><span class="xref myst"><img alt="O3R" src="https://img.shields.io/badge/O3R-lightgrey.svg" /></span>
+<span class="xref myst"><img alt="O3D" src="https://img.shields.io/badge/O3D-green.svg" /></span>
+<span class="xref myst"><img alt="O3X" src="https://img.shields.io/badge/O3X-green.svg" /></span></p>
+<p>Let’s first list the applications on the camera.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ls
+[
+  {
+    &quot;Active&quot;: true,
+    &quot;Description&quot;: &quot;&quot;,
+    &quot;Id&quot;: 476707713,
+    &quot;Index&quot;: 1,
+    &quot;Name&quot;: &quot;Sample Application&quot;
+  }
+]
+</pre></div>
+</div>
+<p>Now, let’s create a new application whose settings will be bootstrapped from
+the application at index <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d cp --index=1
+$ ifm3d ls
+[
+  {
+    &quot;Active&quot;: true,
+    &quot;Description&quot;: &quot;&quot;,
+    &quot;Id&quot;: 476707713,
+    &quot;Index&quot;: 1,
+    &quot;Name&quot;: &quot;Sample Application&quot;
+  },
+  {
+    &quot;Active&quot;: false,
+    &quot;Description&quot;: &quot;&quot;,
+    &quot;Id&quot;: 476707714,
+    &quot;Index&quot;: 2,
+    &quot;Name&quot;: &quot;Sample Application&quot;
+  }
+]
+</pre></div>
+</div>
+<p>Now, let’s create a new application from scratch (bootstrapped with
+camera-default settings).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ echo &#39;{&quot;Apps&quot;:[{}]}&#39; | ifm3d config
+$ ifm3d ls
+[
+  {
+    &quot;Active&quot;: true,
+    &quot;Description&quot;: &quot;&quot;,
+    &quot;Id&quot;: 476707713,
+    &quot;Index&quot;: 1,
+    &quot;Name&quot;: &quot;Sample Application&quot;
+  },
+  {
+    &quot;Active&quot;: false,
+    &quot;Description&quot;: &quot;&quot;,
+    &quot;Id&quot;: 476707714,
+    &quot;Index&quot;: 2,
+    &quot;Name&quot;: &quot;Sample Application&quot;
+  },
+  {
+    &quot;Active&quot;: false,
+    &quot;Description&quot;: &quot;&quot;,
+    &quot;Id&quot;: 1755226334,
+    &quot;Index&quot;: 3,
+    &quot;Name&quot;: &quot;New application&quot;
+  }
+]
+</pre></div>
+</div>
+<p>Now, let’s set the application at index <code class="docutils literal notranslate"><span class="pre">3</span></code> to be the current active
+application.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d dump | jq &#39;.ifm3d.Device.ActiveApplication=&quot;3&quot;&#39; | ifm3d config
+$ $ ifm3d ls
+[
+  {
+    &quot;Active&quot;: false,
+    &quot;Description&quot;: &quot;&quot;,
+    &quot;Id&quot;: 476707713,
+    &quot;Index&quot;: 1,
+    &quot;Name&quot;: &quot;Sample Application&quot;
+  },
+  {
+    &quot;Active&quot;: false,
+    &quot;Description&quot;: &quot;&quot;,
+    &quot;Id&quot;: 476707714,
+    &quot;Index&quot;: 2,
+    &quot;Name&quot;: &quot;Sample Application&quot;
+  },
+  {
+    &quot;Active&quot;: true,
+    &quot;Description&quot;: &quot;&quot;,
+    &quot;Id&quot;: 1755226334,
+    &quot;Index&quot;: 3,
+    &quot;Name&quot;: &quot;New application&quot;
+  }
+]
+</pre></div>
+</div>
+<p>Now, let’s delete applications <code class="docutils literal notranslate"><span class="pre">2</span></code> and <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d rm --index=2
+$ ifm3d rm --index=3
+$ ifm3d ls
+[
+  {
+    &quot;Active&quot;: false,
+    &quot;Description&quot;: &quot;&quot;,
+    &quot;Id&quot;: 476707713,
+    &quot;Index&quot;: 1,
+    &quot;Name&quot;: &quot;Sample Application&quot;
+  }
+]
+</pre></div>
+</div>
+<p>We note that based on the sequence of steps we took in this example, we are
+currently left with a camera with only a single application but it is not
+marked as active. So, let’s set that application as “active” and validate it.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d dump | jq &#39;.ifm3d.Device.ActiveApplication=&quot;1&quot;&#39; | ifm3d config
+$ ifm3d ls
+[
+  {
+    &quot;Active&quot;: true,
+    &quot;Description&quot;: &quot;&quot;,
+    &quot;Id&quot;: 476707713,
+    &quot;Index&quot;: 1,
+    &quot;Name&quot;: &quot;Sample Application&quot;
+  }
+]
+</pre></div>
+</div>
+</div>
+<div class="section" id="setting-ntp-server-connection-on-the-camera">
+<h3>Setting NTP-Server connection on the camera<a class="headerlink" href="#setting-ntp-server-connection-on-the-camera" title="Permalink to this headline"></a></h3>
+<p><span class="xref myst"><img alt="O3R" src="https://img.shields.io/badge/O3R-lightgrey.svg" /></span>
+<span class="xref myst"><img alt="O3D" src="https://img.shields.io/badge/O3D-green.svg" /></span>
+<span class="xref myst"><img alt="O3X" src="https://img.shields.io/badge/O3X-green.svg" /></span></p>
+<p>Using <code class="docutils literal notranslate"><span class="pre">jq</span></code>, you can set easily the NTP-Server on a camera. You just need to provide the
+right IP address. In this case, the IP: 192.168.0.100 is the NTP server.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ifm3d</span> <span class="n">dump</span> <span class="o">|</span> <span class="n">jq</span> <span class="s1">&#39;.ifm3d.Time.NTPServers=&quot;192.168.0.100&quot;&#39;</span> <span class="o">|</span> <span class="n">ifm3d</span> <span class="n">config</span>
+
+</pre></div>
+</div>
+<p>After that, we need to activate the usage of the NTP server too.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ifm3d</span> <span class="n">dump</span> <span class="o">|</span> <span class="n">jq</span> <span class="s1">&#39;.ifm3d.Time.SynchronizationActivated=&quot;True&quot;&#39;</span> <span class="o">|</span> <span class="n">ifm3d</span> <span class="n">config</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="setting-the-time-on-the-camera">
+<h3>Setting the time on the camera<a class="headerlink" href="#setting-the-time-on-the-camera" title="Permalink to this headline"></a></h3>
+<p><span class="xref myst"><img alt="O3R" src="https://img.shields.io/badge/O3R-lightgrey.svg" /></span>
+<span class="xref myst"><img alt="O3D" src="https://img.shields.io/badge/O3D-green.svg" /></span>
+<span class="xref myst"><img alt="O3X" src="https://img.shields.io/badge/O3X-green.svg" /></span></p>
+<p>To set the time on the camera we use the <code class="docutils literal notranslate"><span class="pre">time</span></code> subcommand. Let’s look at its
+usage.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d time --help
+Usage:
+  ifm3d [&lt;global options&gt;] time [&lt;time options&gt;]
+
+ global options:
+  -h, --help             Produce this help message and exit
+      --ip arg           IP address of the sensor (default: 192.168.0.69)
+      --xmlrpc-port arg  XMLRPC port of the sensor (default: 80)
+      --password arg     Password for establishing an edit-session with the
+                         sensor (default: )
+
+ time options:
+      --epoch arg  Secs since Unix epoch encoding time to be set on camera
+                   (-1 == now)
+</pre></div>
+</div>
+<p>To simply see the current time on the camera, we can issue the <code class="docutils literal notranslate"><span class="pre">time</span></code>
+subcommand with no arguments.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d time
+Local time on camera is: Tue Mar 13 18:22:16 2018
+</pre></div>
+</div>
+<p>Let’s now look at our local Unix time:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ date
+Mon May  7 16:20:49 EDT 2018
+</pre></div>
+</div>
+<p>To synchronize the camera to our local time we can issue the following command.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d time --epoch=-1
+Local time on camera is: Mon May  7 16:21:44 2018
+</pre></div>
+</div>
+<p>And, double checking…</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d time
+Local time on camera is: Mon May  7 16:22:09 2018
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="content/migration_guide/v1_0_0.html" class="btn btn-neutral float-left" title="Main changes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="content/stlimage.html" class="btn btn-neutral float-right" title="ifm3d::Buffer- Basic C++ STL container for ifm3d" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, ifm electronic.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

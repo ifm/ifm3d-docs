@@ -1,0 +1,6 @@
+ifm3dpy.run
+===========
+
+.. currentmodule:: ifm3dpy
+
+.. autofunction:: run
