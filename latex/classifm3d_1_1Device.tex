@@ -2,7 +2,7 @@
 \label{classifm3d_1_1Device}\index{ifm3d::Device@{ifm3d::Device}}
 
 
-{\ttfamily \#include $<$device.\+h$>$}
+{\ttfamily \#include $<$ifm3d/device/device.\+h$>$}
 
 
 
@@ -102,11 +102,11 @@ virtual std\+::string \mbox{\hyperlink{classifm3d_1_1Device_a0ffb1ea6486e77335e5
 \item 
 virtual std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classifm3d_1_1Device_a649d525094c8e266bc84decc4618f26d}{Trace\+Logs}} (int count)
 \item 
-virtual json \mbox{\hyperlink{classifm3d_1_1Device_ae28a22aa0cdc1ec1365b165f053570a4}{To\+J\+S\+ON}} ()
+virtual \mbox{\hyperlink{classifm3d_1_1json}{json}} \mbox{\hyperlink{classifm3d_1_1Device_ae28a22aa0cdc1ec1365b165f053570a4}{To\+J\+S\+ON}} ()
 \item 
 virtual std\+::string \mbox{\hyperlink{classifm3d_1_1Device_ae6a009493ff158fc3f18d86544aedad8}{To\+J\+S\+O\+N\+Str}} ()
 \item 
-virtual void \mbox{\hyperlink{classifm3d_1_1Device_a4706acd5532e7a9fc520c98d6100eee0}{From\+J\+S\+ON}} (const json \&j)
+virtual void \mbox{\hyperlink{classifm3d_1_1Device_a4706acd5532e7a9fc520c98d6100eee0}{From\+J\+S\+ON}} (const \mbox{\hyperlink{classifm3d_1_1json}{json}} \&j)
 \item 
 virtual void \mbox{\hyperlink{classifm3d_1_1Device_a3036b0cfbaae2ffd3ca8bd8eb697ab50}{From\+J\+S\+O\+N\+Str}} (const std\+::string \&jstr)
 \item 
@@ -322,7 +322,7 @@ Reimplemented in \mbox{\hyperlink{classifm3d_1_1LegacyDevice_afd25834449cf1bc4d7
 \index{ifm3d::Device@{ifm3d::Device}!FromJSON@{FromJSON}}
 \index{FromJSON@{FromJSON}!ifm3d::Device@{ifm3d::Device}}
 \doxysubsubsection{\texorpdfstring{FromJSON()}{FromJSON()}}
-{\footnotesize\ttfamily virtual void ifm3d\+::\+Device\+::\+From\+J\+S\+ON (\begin{DoxyParamCaption}\item[{const json \&}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual void ifm3d\+::\+Device\+::\+From\+J\+S\+ON (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classifm3d_1_1json}{json}} \&}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 Configures the device based on the parameter values of the passed in J\+S\+ON. This function is {\itshape the} way to tune the device/application/imager/etc. parameters.
 
@@ -424,7 +424,7 @@ Reimplemented in \mbox{\hyperlink{classifm3d_1_1O3R_af30eaa6348c6f06bef31f2082ab
 \index{ifm3d::Device@{ifm3d::Device}!ToJSON@{ToJSON}}
 \index{ToJSON@{ToJSON}!ifm3d::Device@{ifm3d::Device}}
 \doxysubsubsection{\texorpdfstring{ToJSON()}{ToJSON()}}
-{\footnotesize\ttfamily virtual json ifm3d\+::\+Device\+::\+To\+J\+S\+ON (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classifm3d_1_1json}{json}} ifm3d\+::\+Device\+::\+To\+J\+S\+ON (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 Serializes the state of the device to J\+S\+ON.
 
@@ -508,4 +508,4 @@ The cached device type of the connected device
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/ifm3d/modules/device/include/ifm3d/device/device.\+h\end{DoxyCompactItemize}
+ifm3d/device/device.\+h\end{DoxyCompactItemize}

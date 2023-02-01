@@ -2,7 +2,7 @@
 \label{classifm3d_1_1O3R}\index{ifm3d::O3R@{ifm3d::O3R}}
 
 
-{\ttfamily \#include $<$o3r.\+h$>$}
+{\ttfamily \#include $<$ifm3d/device/o3r.\+h$>$}
 
 
 
@@ -50,19 +50,19 @@ using {\bfseries Ptr} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classifm3d_1_
 \item 
 virtual void \mbox{\hyperlink{classifm3d_1_1O3R_a51c399c7672a1be536e6b1b81b5a0ddc}{Factory\+Reset}} (bool keep\+Network\+Settings)
 \item 
-json \mbox{\hyperlink{classifm3d_1_1O3R_a1352ba9088aaea3cafd09d1c1a5d270c}{Get\+Schema}} ()
+\mbox{\hyperlink{classifm3d_1_1json}{json}} \mbox{\hyperlink{classifm3d_1_1O3R_a1352ba9088aaea3cafd09d1c1a5d270c}{Get\+Schema}} ()
 \item 
-json \mbox{\hyperlink{classifm3d_1_1O3R_a4aac4d3ceda92e3143ab4626d843189b}{Get}} (const std\+::vector$<$ std\+::string $>$ \&path=std\+::vector$<$ std\+::string $>$())
+\mbox{\hyperlink{classifm3d_1_1json}{json}} \mbox{\hyperlink{classifm3d_1_1O3R_a4aac4d3ceda92e3143ab4626d843189b}{Get}} (const std\+::vector$<$ std\+::string $>$ \&path=std\+::vector$<$ std\+::string $>$())
 \item 
-json \mbox{\hyperlink{classifm3d_1_1O3R_a3a829eb053ef1ca8e14c3e14284f5aec}{Resolve\+Config}} (const json\+::json\+\_\+pointer \&ptr)
+\mbox{\hyperlink{classifm3d_1_1json}{json}} \mbox{\hyperlink{classifm3d_1_1O3R_a3a829eb053ef1ca8e14c3e14284f5aec}{Resolve\+Config}} (const json\+::json\+\_\+pointer \&ptr)
 \item 
-void \mbox{\hyperlink{classifm3d_1_1O3R_a0952daae6643332cbdd48d7c8d282e75}{Set}} (const json \&j)
+void \mbox{\hyperlink{classifm3d_1_1O3R_a0952daae6643332cbdd48d7c8d282e75}{Set}} (const \mbox{\hyperlink{classifm3d_1_1json}{json}} \&j)
 \item 
 void \mbox{\hyperlink{classifm3d_1_1O3R_aac922d3a9400e4724228091a429fc396}{Remove}} (const std\+::string \&json\+Pointer)
 \item 
 void \mbox{\hyperlink{classifm3d_1_1O3R_ab426c636e257766f0caa35b09ea97fea}{Reset}} (const std\+::string \&json\+Pointer)
 \item 
-json \mbox{\hyperlink{classifm3d_1_1O3R_a0d703bc04a0d893733cbb1f5c6983d82}{Get\+Init}} ()
+\mbox{\hyperlink{classifm3d_1_1json}{json}} \mbox{\hyperlink{classifm3d_1_1O3R_a0d703bc04a0d893733cbb1f5c6983d82}{Get\+Init}} ()
 \item 
 void \mbox{\hyperlink{classifm3d_1_1O3R_a7316e073bf5625c08d7c11a70e5ce07a}{Save\+Init}} ()
 \item 
@@ -76,11 +76,11 @@ std\+::vector$<$ \mbox{\hyperlink{structifm3d_1_1PortInfo}{Port\+Info}} $>$ \mbo
 \item 
 \mbox{\hyperlink{structifm3d_1_1PortInfo}{Port\+Info}} \mbox{\hyperlink{classifm3d_1_1O3R_ace851644d8586ad20a68865f80860f89}{Port}} (const std\+::string \&port)
 \item 
-json \mbox{\hyperlink{classifm3d_1_1O3R_ae4065b662a3fdc743bcceab1c2d984aa}{Get\+Diagnostic}} ()
+\mbox{\hyperlink{classifm3d_1_1json}{json}} \mbox{\hyperlink{classifm3d_1_1O3R_ae4065b662a3fdc743bcceab1c2d984aa}{Get\+Diagnostic}} ()
 \begin{DoxyCompactList}\small\item\em Returns the content of the diagnostic memory formatted in J\+S\+ON. \end{DoxyCompactList}\item 
-json \mbox{\hyperlink{classifm3d_1_1O3R_a11fca069af27c5a8eea3deea8d330d76}{Get\+Diagnostic\+Filter\+Schema}} ()
+\mbox{\hyperlink{classifm3d_1_1json}{json}} \mbox{\hyperlink{classifm3d_1_1O3R_a11fca069af27c5a8eea3deea8d330d76}{Get\+Diagnostic\+Filter\+Schema}} ()
 \begin{DoxyCompactList}\small\item\em Returns the J\+S\+ON schema for the filter expression provided to the get\+Filtered() method. \end{DoxyCompactList}\item 
-json \mbox{\hyperlink{classifm3d_1_1O3R_acbb1030fab198f9a9e9f9e4cdc3140c9}{Get\+Diagnostic\+Filtered}} (json filter)
+\mbox{\hyperlink{classifm3d_1_1json}{json}} \mbox{\hyperlink{classifm3d_1_1O3R_acbb1030fab198f9a9e9f9e4cdc3140c9}{Get\+Diagnostic\+Filtered}} (\mbox{\hyperlink{classifm3d_1_1json}{json}} filter)
 \begin{DoxyCompactList}\small\item\em Returns the content of the diagnostic memory formatted in J\+S\+ON and filtered according to the J\+S\+ON filter expression. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classifm3d_1_1O3R_ab50df498165624f643ff73c9cd9a0d9d}{Reboot}} (const \mbox{\hyperlink{classifm3d_1_1Device_a752c3ebe308ebac6b2fe987cd0d53775}{boot\+\_\+mode}} \&mode=ifm3d\+::\+Device\+::boot\+\_\+mode\+::\+P\+R\+O\+D\+U\+C\+T\+I\+VE) override
 \item 
@@ -90,9 +90,9 @@ device\+\_\+family \mbox{\hyperlink{classifm3d_1_1O3R_a047049bbce215aeee7f0f8ee1
 \item 
 ifm3d\+::\+Device\+::swu\+\_\+version \mbox{\hyperlink{classifm3d_1_1O3R_af30eaa6348c6f06bef31f2082abfa275}{Sw\+Update\+Version}} () override
 \item 
-json \mbox{\hyperlink{classifm3d_1_1O3R_a9e9ae86629b8119af831aceaaa1c786c}{To\+J\+S\+ON}} () override
+\mbox{\hyperlink{classifm3d_1_1json}{json}} \mbox{\hyperlink{classifm3d_1_1O3R_a9e9ae86629b8119af831aceaaa1c786c}{To\+J\+S\+ON}} () override
 \item 
-void \mbox{\hyperlink{classifm3d_1_1O3R_aa81663e1ae0cc862a6b196dbf634617d}{From\+J\+S\+ON}} (const json \&j) override
+void \mbox{\hyperlink{classifm3d_1_1O3R_aa81663e1ae0cc862a6b196dbf634617d}{From\+J\+S\+ON}} (const \mbox{\hyperlink{classifm3d_1_1json}{json}} \&j) override
 \end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
@@ -118,7 +118,7 @@ Sets the device configuration back to the state in which it shipped from the ifm
 \index{ifm3d::O3R@{ifm3d::O3R}!FromJSON@{FromJSON}}
 \index{FromJSON@{FromJSON}!ifm3d::O3R@{ifm3d::O3R}}
 \doxysubsubsection{\texorpdfstring{FromJSON()}{FromJSON()}}
-{\footnotesize\ttfamily void ifm3d\+::\+O3\+R\+::\+From\+J\+S\+ON (\begin{DoxyParamCaption}\item[{const json \&}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void ifm3d\+::\+O3\+R\+::\+From\+J\+S\+ON (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classifm3d_1_1json}{json}} \&}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -151,7 +151,7 @@ Reimplemented from \mbox{\hyperlink{classifm3d_1_1Device_a4706acd5532e7a9fc520c9
 \index{ifm3d::O3R@{ifm3d::O3R}!Get@{Get}}
 \index{Get@{Get}!ifm3d::O3R@{ifm3d::O3R}}
 \doxysubsubsection{\texorpdfstring{Get()}{Get()}}
-{\footnotesize\ttfamily json ifm3d\+::\+O3\+R\+::\+Get (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{path = {\ttfamily std\+:\+:vector$<$~std\+:\+:string~$>$()} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classifm3d_1_1json}{json}} ifm3d\+::\+O3\+R\+::\+Get (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{path = {\ttfamily std\+:\+:vector$<$~std\+:\+:string~$>$()} }\end{DoxyParamCaption})}
 
 Returns the configuration formatted as J\+S\+ON based on a path. If the path is empty, returns the whole configuration.
 
@@ -167,7 +167,7 @@ The J\+S\+ON configuration for the list of object path fragments
 \index{ifm3d::O3R@{ifm3d::O3R}!GetDiagnostic@{GetDiagnostic}}
 \index{GetDiagnostic@{GetDiagnostic}!ifm3d::O3R@{ifm3d::O3R}}
 \doxysubsubsection{\texorpdfstring{GetDiagnostic()}{GetDiagnostic()}}
-{\footnotesize\ttfamily json ifm3d\+::\+O3\+R\+::\+Get\+Diagnostic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classifm3d_1_1json}{json}} ifm3d\+::\+O3\+R\+::\+Get\+Diagnostic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -180,7 +180,7 @@ The J\+S\+ON containing all known diagnostic events
 \index{ifm3d::O3R@{ifm3d::O3R}!GetDiagnosticFiltered@{GetDiagnosticFiltered}}
 \index{GetDiagnosticFiltered@{GetDiagnosticFiltered}!ifm3d::O3R@{ifm3d::O3R}}
 \doxysubsubsection{\texorpdfstring{GetDiagnosticFiltered()}{GetDiagnosticFiltered()}}
-{\footnotesize\ttfamily json ifm3d\+::\+O3\+R\+::\+Get\+Diagnostic\+Filtered (\begin{DoxyParamCaption}\item[{json}]{filter }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classifm3d_1_1json}{json}} ifm3d\+::\+O3\+R\+::\+Get\+Diagnostic\+Filtered (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classifm3d_1_1json}{json}}}]{filter }\end{DoxyParamCaption})}
 
 
 
@@ -198,7 +198,7 @@ json
 \index{ifm3d::O3R@{ifm3d::O3R}!GetDiagnosticFilterSchema@{GetDiagnosticFilterSchema}}
 \index{GetDiagnosticFilterSchema@{GetDiagnosticFilterSchema}!ifm3d::O3R@{ifm3d::O3R}}
 \doxysubsubsection{\texorpdfstring{GetDiagnosticFilterSchema()}{GetDiagnosticFilterSchema()}}
-{\footnotesize\ttfamily json ifm3d\+::\+O3\+R\+::\+Get\+Diagnostic\+Filter\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classifm3d_1_1json}{json}} ifm3d\+::\+O3\+R\+::\+Get\+Diagnostic\+Filter\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -211,7 +211,7 @@ The J\+S\+ON schema
 \index{ifm3d::O3R@{ifm3d::O3R}!GetInit@{GetInit}}
 \index{GetInit@{GetInit}!ifm3d::O3R@{ifm3d::O3R}}
 \doxysubsubsection{\texorpdfstring{GetInit()}{GetInit()}}
-{\footnotesize\ttfamily json ifm3d\+::\+O3\+R\+::\+Get\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classifm3d_1_1json}{json}} ifm3d\+::\+O3\+R\+::\+Get\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Return the initial J\+S\+ON configuration.
 
@@ -233,7 +233,7 @@ The init status of the device
 \index{ifm3d::O3R@{ifm3d::O3R}!GetSchema@{GetSchema}}
 \index{GetSchema@{GetSchema}!ifm3d::O3R@{ifm3d::O3R}}
 \doxysubsubsection{\texorpdfstring{GetSchema()}{GetSchema()}}
-{\footnotesize\ttfamily json ifm3d\+::\+O3\+R\+::\+Get\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classifm3d_1_1json}{json}} ifm3d\+::\+O3\+R\+::\+Get\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Return the current J\+S\+ON schema configuration
 
@@ -344,7 +344,7 @@ Sets the default value of an object inside the J\+S\+ON. The object is addressed
 \index{ifm3d::O3R@{ifm3d::O3R}!ResolveConfig@{ResolveConfig}}
 \index{ResolveConfig@{ResolveConfig}!ifm3d::O3R@{ifm3d::O3R}}
 \doxysubsubsection{\texorpdfstring{ResolveConfig()}{ResolveConfig()}}
-{\footnotesize\ttfamily json ifm3d\+::\+O3\+R\+::\+Resolve\+Config (\begin{DoxyParamCaption}\item[{const json\+::json\+\_\+pointer \&}]{ptr }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classifm3d_1_1json}{json}} ifm3d\+::\+O3\+R\+::\+Resolve\+Config (\begin{DoxyParamCaption}\item[{const json\+::json\+\_\+pointer \&}]{ptr }\end{DoxyParamCaption})}
 
 Returns a part of the configuration formatted as J\+S\+ON based on a J\+S\+ON pointer.
 
@@ -366,7 +366,7 @@ Save to current temporary J\+S\+ON configuration as initial J\+S\+ON configurati
 \index{ifm3d::O3R@{ifm3d::O3R}!Set@{Set}}
 \index{Set@{Set}!ifm3d::O3R@{ifm3d::O3R}}
 \doxysubsubsection{\texorpdfstring{Set()}{Set()}}
-{\footnotesize\ttfamily void ifm3d\+::\+O3\+R\+::\+Set (\begin{DoxyParamCaption}\item[{const json \&}]{j }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void ifm3d\+::\+O3\+R\+::\+Set (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classifm3d_1_1json}{json}} \&}]{j }\end{DoxyParamCaption})}
 
 Overwrites parts of the temporary J\+S\+ON configuration which is achieved by merging the provided J\+S\+ON fragment with the current temporary J\+S\+ON.
 
@@ -394,7 +394,7 @@ Reimplemented from \mbox{\hyperlink{classifm3d_1_1Device_a4ac83b040c4ce4224a6d73
 \index{ifm3d::O3R@{ifm3d::O3R}!ToJSON@{ToJSON}}
 \index{ToJSON@{ToJSON}!ifm3d::O3R@{ifm3d::O3R}}
 \doxysubsubsection{\texorpdfstring{ToJSON()}{ToJSON()}}
-{\footnotesize\ttfamily json ifm3d\+::\+O3\+R\+::\+To\+J\+S\+ON (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classifm3d_1_1json}{json}} ifm3d\+::\+O3\+R\+::\+To\+J\+S\+ON (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -450,4 +450,4 @@ Reimplemented from \mbox{\hyperlink{classifm3d_1_1Device_ae79b64c03d1a11a84cfa10
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/ifm3d/modules/device/include/ifm3d/device/o3r.\+h\end{DoxyCompactItemize}
+ifm3d/device/o3r.\+h\end{DoxyCompactItemize}

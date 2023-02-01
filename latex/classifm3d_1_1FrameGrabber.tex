@@ -2,7 +2,7 @@
 \label{classifm3d_1_1FrameGrabber}\index{ifm3d::FrameGrabber@{ifm3d::FrameGrabber}}
 
 
-{\ttfamily \#include $<$frame\+\_\+grabber.\+h$>$}
+{\ttfamily \#include $<$ifm3d/fg/frame\+\_\+grabber.\+h$>$}
 
 \doxysubsection*{Public Types}
 \begin{DoxyCompactItemize}
@@ -48,7 +48,7 @@ std\+::shared\+\_\+future$<$ void $>$ \mbox{\hyperlink{classifm3d_1_1FrameGrabbe
 \item 
 void \mbox{\hyperlink{classifm3d_1_1FrameGrabber_aad76d616c98cfde74adedb6de34d1793}{On\+New\+Frame}} (New\+Frame\+Callback callback=nullptr)
 \item 
-bool \mbox{\hyperlink{classifm3d_1_1FrameGrabber_adffefb711cacd2730991af483de3cc73}{Start}} (const Buffer\+List \&buffers, const std\+::optional$<$ json $>$ \&pcic\+Format=std\+::nullopt)
+bool \mbox{\hyperlink{classifm3d_1_1FrameGrabber_adffefb711cacd2730991af483de3cc73}{Start}} (const Buffer\+List \&buffers, const std\+::optional$<$ \mbox{\hyperlink{classifm3d_1_1json}{json}} $>$ \&pcic\+Format=std\+::nullopt)
 \item 
 std\+::shared\+\_\+future$<$ void $>$ \mbox{\hyperlink{classifm3d_1_1FrameGrabber_a6a12c26b81bd4cd01291f649ac7ce844}{Stop}} ()
 \item 
@@ -141,7 +141,7 @@ This allows to override the \mbox{\hyperlink{classifm3d_1_1Organizer}{Organizer}
 \index{ifm3d::FrameGrabber@{ifm3d::FrameGrabber}!Start@{Start}}
 \index{Start@{Start}!ifm3d::FrameGrabber@{ifm3d::FrameGrabber}}
 \doxysubsubsection{\texorpdfstring{Start()}{Start()}}
-{\footnotesize\ttfamily bool ifm3d\+::\+Frame\+Grabber\+::\+Start (\begin{DoxyParamCaption}\item[{const Buffer\+List \&}]{buffers,  }\item[{const std\+::optional$<$ json $>$ \&}]{pcic\+Format = {\ttfamily std\+:\+:nullopt} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool ifm3d\+::\+Frame\+Grabber\+::\+Start (\begin{DoxyParamCaption}\item[{const Buffer\+List \&}]{buffers,  }\item[{const std\+::optional$<$ \mbox{\hyperlink{classifm3d_1_1json}{json}} $>$ \&}]{pcic\+Format = {\ttfamily std\+:\+:nullopt} }\end{DoxyParamCaption})}
 
 Starts the worker thread for streaming in pixel data from the device
 
@@ -180,4 +180,4 @@ Returns a future that will resolve when a new frame is available
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/ifm3d/modules/framegrabber/include/ifm3d/fg/frame\+\_\+grabber.\+h\end{DoxyCompactItemize}
+ifm3d/fg/frame\+\_\+grabber.\+h\end{DoxyCompactItemize}

@@ -1,14 +1,7 @@
 var searchData=
 [
-  ['o3d_80',['O3D',['../classifm3d_1_1O3D.html',1,'ifm3d']]],
-  ['o3r_81',['O3R',['../classifm3d_1_1O3R.html',1,'ifm3d']]],
-  ['o3x_82',['O3X',['../classifm3d_1_1O3X.html',1,'ifm3d']]],
-  ['odsinfov1_83',['ODSInfoV1',['../classifm3d_1_1ODSInfoV1.html',1,'ifm3d']]],
-  ['odsoccupancygridv1_84',['ODSOccupancyGridV1',['../classifm3d_1_1ODSOccupancyGridV1.html',1,'ifm3d']]],
-  ['onasyncerror_85',['OnAsyncError',['../classifm3d_1_1FrameGrabber.html#a420ba8b039d15d68e09650b9531a75e1',1,'ifm3d::FrameGrabber']]],
-  ['onasyncnotification_86',['OnAsyncNotification',['../classifm3d_1_1FrameGrabber.html#aa05b4b418fed47a19e63af35eff3fd37',1,'ifm3d::FrameGrabber']]],
-  ['onerror_87',['OnError',['../classifm3d_1_1FrameGrabber.html#ab45396f5e290ede681cb1639a9bf9060',1,'ifm3d::FrameGrabber']]],
-  ['onnewframe_88',['OnNewFrame',['../classifm3d_1_1FrameGrabber.html#aad76d616c98cfde74adedb6de34d1793',1,'ifm3d::FrameGrabber']]],
-  ['operating_5fmode_89',['operating_mode',['../classifm3d_1_1Device.html#ad490f12fe50608c0d93a926271e9e7ea',1,'ifm3d::Device']]],
-  ['organizer_90',['Organizer',['../classifm3d_1_1Organizer.html',1,'ifm3d']]]
+  ['makeshared_77',['MakeShared',['../classifm3d_1_1Device.html#a28aac849be727299ab6eb780acb5b120',1,'ifm3d::Device::MakeShared()'],['../classifm3d_1_1LegacyDevice.html#a1745e665a699e5ab47ca88f0cbfbcb70',1,'ifm3d::LegacyDevice::MakeShared()']]],
+  ['measurement_5fblock_5findex_78',['measurement_block_index',['../classifm3d_1_1TOFInfoV4.html#ab56a590751f8230292193ddc9c87c9b5',1,'ifm3d::TOFInfoV4']]],
+  ['message_79',['message',['../classifm3d_1_1Error.html#aa1c693d09de6ccf38b576b58f11e5c54',1,'ifm3d::Error']]],
+  ['mfilt_5fmask_5fsize_80',['mfilt_mask_size',['../classifm3d_1_1Device.html#acafe3c37a98a3c47c8cbaaf07452bc31',1,'ifm3d::Device']]]
 ];

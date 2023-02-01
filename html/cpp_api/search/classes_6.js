@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['legacydevice_157',['LegacyDevice',['../classifm3d_1_1LegacyDevice.html',1,'ifm3d']]]
+  ['json_158',['json',['../classifm3d_1_1json.html',1,'ifm3d']]]
 ];

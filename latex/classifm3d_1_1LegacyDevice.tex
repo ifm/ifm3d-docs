@@ -79,7 +79,7 @@ virtual void \mbox{\hyperlink{classifm3d_1_1LegacyDevice_a25e6db8d8361111d223458
 \item 
 virtual int \mbox{\hyperlink{classifm3d_1_1LegacyDevice_a91de1a198af94a4d83d43951c7696a59}{Active\+Application}} ()
 \item 
-virtual json \mbox{\hyperlink{classifm3d_1_1LegacyDevice_af1670594651bf115788e3d60ce1e733b}{Application\+List}} ()
+virtual \mbox{\hyperlink{classifm3d_1_1json}{json}} \mbox{\hyperlink{classifm3d_1_1LegacyDevice_af1670594651bf115788e3d60ce1e733b}{Application\+List}} ()
 \item 
 virtual std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classifm3d_1_1LegacyDevice_a925eaac36090795f0da30c74c33b6813}{Application\+Types}} ()
 \item 
@@ -105,9 +105,9 @@ virtual int \mbox{\hyperlink{classifm3d_1_1LegacyDevice_a74e60894869c422947bea1a
 \item 
 virtual void \mbox{\hyperlink{classifm3d_1_1LegacyDevice_ada75d3d3eca9494c656b874ff3f3d606}{Set\+Password}} (std\+::string password=\char`\"{}\char`\"{})
 \item 
-json \mbox{\hyperlink{classifm3d_1_1LegacyDevice_a745e7ce575f78fb4940e910ed588ce2c}{To\+J\+S\+ON}} () override
+\mbox{\hyperlink{classifm3d_1_1json}{json}} \mbox{\hyperlink{classifm3d_1_1LegacyDevice_a745e7ce575f78fb4940e910ed588ce2c}{To\+J\+S\+ON}} () override
 \item 
-void \mbox{\hyperlink{classifm3d_1_1LegacyDevice_aa93fe38faec10e6fb5079ced5a3818ca}{From\+J\+S\+ON}} (const json \&j) override
+void \mbox{\hyperlink{classifm3d_1_1LegacyDevice_aa93fe38faec10e6fb5079ced5a3818ca}{From\+J\+S\+ON}} (const \mbox{\hyperlink{classifm3d_1_1json}{json}} \&j) override
 \item 
 void \mbox{\hyperlink{classifm3d_1_1LegacyDevice_afd25834449cf1bc4d78d09fda75b83e5}{Force\+Trigger}} () override
 \end{DoxyCompactItemize}
@@ -119,18 +119,18 @@ static Ptr \mbox{\hyperlink{classifm3d_1_1LegacyDevice_a1745e665a699e5ab47ca88f0
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classifm3d_1_1LegacyDevice_a86d74810263ea21e5f3a3d3516a52ba9}{From\+J\+S\+O\+N\+\_\+}} (const json \&j\+\_\+curr, const json \&j\+\_\+new, std\+::function$<$ void(const std\+::string \&, const std\+::string \&)$>$ Set\+Func, std\+::function$<$ void()$>$ Save\+Func, const std\+::string \&name, int idx=-\/1)
+void \mbox{\hyperlink{classifm3d_1_1LegacyDevice_a86d74810263ea21e5f3a3d3516a52ba9}{From\+J\+S\+O\+N\+\_\+}} (const \mbox{\hyperlink{classifm3d_1_1json}{json}} \&j\+\_\+curr, const \mbox{\hyperlink{classifm3d_1_1json}{json}} \&j\+\_\+new, std\+::function$<$ void(const std\+::string \&, const std\+::string \&)$>$ Set\+Func, std\+::function$<$ void()$>$ Save\+Func, const std\+::string \&name, int idx=-\/1)
 \item 
 \mbox{\Hypertarget{classifm3d_1_1LegacyDevice_ab51d5d705b30ba731936bc57c79a0f05}\label{classifm3d_1_1LegacyDevice_ab51d5d705b30ba731936bc57c79a0f05}} 
-json {\bfseries To\+J\+S\+O\+N\+\_\+} (const bool open\+\_\+session=true)
+\mbox{\hyperlink{classifm3d_1_1json}{json}} {\bfseries To\+J\+S\+O\+N\+\_\+} (const bool open\+\_\+session=true)
 \item 
 \mbox{\Hypertarget{classifm3d_1_1LegacyDevice_ad12989af534513037ca5fd2fd3299b28}\label{classifm3d_1_1LegacyDevice_ad12989af534513037ca5fd2fd3299b28}} 
-json {\bfseries get\+Application\+Infos\+To\+J\+S\+ON} ()
+\mbox{\hyperlink{classifm3d_1_1json}{json}} {\bfseries get\+Application\+Infos\+To\+J\+S\+ON} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static bool \mbox{\hyperlink{classifm3d_1_1LegacyDevice_a2c80440a57e9ac63907af619ee84f642}{get\+App\+J\+S\+ON}} (int index, const json \&j, json \&app)
+static bool \mbox{\hyperlink{classifm3d_1_1LegacyDevice_a2c80440a57e9ac63907af619ee84f642}{get\+App\+J\+S\+ON}} (int index, const \mbox{\hyperlink{classifm3d_1_1json}{json}} \&j, \mbox{\hyperlink{classifm3d_1_1json}{json}} \&app)
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -171,7 +171,7 @@ Returns the integer index of the active application. A negative number indicates
 \index{ifm3d::LegacyDevice@{ifm3d::LegacyDevice}!ApplicationList@{ApplicationList}}
 \index{ApplicationList@{ApplicationList}!ifm3d::LegacyDevice@{ifm3d::LegacyDevice}}
 \doxysubsubsection{\texorpdfstring{ApplicationList()}{ApplicationList()}}
-{\footnotesize\ttfamily virtual json ifm3d\+::\+Legacy\+Device\+::\+Application\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classifm3d_1_1json}{json}} ifm3d\+::\+Legacy\+Device\+::\+Application\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 Delivers basic information about all applications stored on the device. A call to this function does not require establishing a session with the device.
 
@@ -330,7 +330,7 @@ Reimplemented from \mbox{\hyperlink{classifm3d_1_1Device_a010b25d8c4f34075a57e30
 \index{ifm3d::LegacyDevice@{ifm3d::LegacyDevice}!FromJSON@{FromJSON}}
 \index{FromJSON@{FromJSON}!ifm3d::LegacyDevice@{ifm3d::LegacyDevice}}
 \doxysubsubsection{\texorpdfstring{FromJSON()}{FromJSON()}}
-{\footnotesize\ttfamily void ifm3d\+::\+Legacy\+Device\+::\+From\+J\+S\+ON (\begin{DoxyParamCaption}\item[{const json \&}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void ifm3d\+::\+Legacy\+Device\+::\+From\+J\+S\+ON (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classifm3d_1_1json}{json}} \&}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 Configures the device based on the parameter values of the passed in J\+S\+ON. This function is {\itshape the} way to tune the device/application/imager/etc. parameters.
 
@@ -359,7 +359,7 @@ Reimplemented from \mbox{\hyperlink{classifm3d_1_1Device_a4706acd5532e7a9fc520c9
 \index{ifm3d::LegacyDevice@{ifm3d::LegacyDevice}!FromJSON\_@{FromJSON\_}}
 \index{FromJSON\_@{FromJSON\_}!ifm3d::LegacyDevice@{ifm3d::LegacyDevice}}
 \doxysubsubsection{\texorpdfstring{FromJSON\_()}{FromJSON\_()}}
-{\footnotesize\ttfamily void ifm3d\+::\+Legacy\+Device\+::\+From\+J\+S\+O\+N\+\_\+ (\begin{DoxyParamCaption}\item[{const json \&}]{j\+\_\+curr,  }\item[{const json \&}]{j\+\_\+new,  }\item[{std\+::function$<$ void(const std\+::string \&, const std\+::string \&)$>$}]{Set\+Func,  }\item[{std\+::function$<$ void()$>$}]{Save\+Func,  }\item[{const std\+::string \&}]{name,  }\item[{int}]{idx = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily void ifm3d\+::\+Legacy\+Device\+::\+From\+J\+S\+O\+N\+\_\+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classifm3d_1_1json}{json}} \&}]{j\+\_\+curr,  }\item[{const \mbox{\hyperlink{classifm3d_1_1json}{json}} \&}]{j\+\_\+new,  }\item[{std\+::function$<$ void(const std\+::string \&, const std\+::string \&)$>$}]{Set\+Func,  }\item[{std\+::function$<$ void()$>$}]{Save\+Func,  }\item[{const std\+::string \&}]{name,  }\item[{int}]{idx = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 Handles parsing a selected sub-\/tree of a potential input J\+S\+ON file, setting the parameters as appropriate on the device, and saving them persistently.
 
@@ -382,7 +382,7 @@ Handles parsing a selected sub-\/tree of a potential input J\+S\+ON file, settin
 \index{ifm3d::LegacyDevice@{ifm3d::LegacyDevice}!getAppJSON@{getAppJSON}}
 \index{getAppJSON@{getAppJSON}!ifm3d::LegacyDevice@{ifm3d::LegacyDevice}}
 \doxysubsubsection{\texorpdfstring{getAppJSON()}{getAppJSON()}}
-{\footnotesize\ttfamily static bool ifm3d\+::\+Legacy\+Device\+::get\+App\+J\+S\+ON (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{const json \&}]{j,  }\item[{json \&}]{app }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+{\footnotesize\ttfamily static bool ifm3d\+::\+Legacy\+Device\+::get\+App\+J\+S\+ON (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{const \mbox{\hyperlink{classifm3d_1_1json}{json}} \&}]{j,  }\item[{\mbox{\hyperlink{classifm3d_1_1json}{json}} \&}]{app }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
 
 Return json of an app with given index from device configuration json.
 
@@ -567,7 +567,7 @@ The changes are not persistent and are lost when entering edit mode or turning t
 \index{ifm3d::LegacyDevice@{ifm3d::LegacyDevice}!ToJSON@{ToJSON}}
 \index{ToJSON@{ToJSON}!ifm3d::LegacyDevice@{ifm3d::LegacyDevice}}
 \doxysubsubsection{\texorpdfstring{ToJSON()}{ToJSON()}}
-{\footnotesize\ttfamily json ifm3d\+::\+Legacy\+Device\+::\+To\+J\+S\+ON (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classifm3d_1_1json}{json}} ifm3d\+::\+Legacy\+Device\+::\+To\+J\+S\+ON (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 Serializes the state of the device to J\+S\+ON.
 
@@ -597,4 +597,4 @@ For devices that support fetching the Unit Vectors over X\+M\+L-\/\+R\+PC, this 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/ifm3d/modules/device/include/ifm3d/device/legacy\+\_\+device.\+h\end{DoxyCompactItemize}
+ifm3d/device/legacy\+\_\+device.\+h\end{DoxyCompactItemize}

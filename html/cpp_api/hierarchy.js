@@ -22,6 +22,7 @@ var hierarchy =
     [ "ifm3d::IntrinsicCalibration", "structifm3d_1_1IntrinsicCalibration.html", null ],
     [ "ifm3d::Buffer::Iterator< T >", "structifm3d_1_1Buffer_1_1Iterator.html", null ],
     [ "ifm3d::IteratorAdapter< T >", "classifm3d_1_1IteratorAdapter.html", null ],
+    [ "ifm3d::json", "classifm3d_1_1json.html", null ],
     [ "ifm3d::ODSInfoV1", "classifm3d_1_1ODSInfoV1.html", null ],
     [ "ifm3d::ODSOccupancyGridV1", "classifm3d_1_1ODSOccupancyGridV1.html", null ],
     [ "ifm3d::Organizer", "classifm3d_1_1Organizer.html", null ],

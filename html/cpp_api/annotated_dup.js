@@ -15,6 +15,7 @@ var annotated_dup =
       [ "IFMNetworkDevice", "classifm3d_1_1IFMNetworkDevice.html", "classifm3d_1_1IFMNetworkDevice" ],
       [ "IntrinsicCalibration", "structifm3d_1_1IntrinsicCalibration.html", "structifm3d_1_1IntrinsicCalibration" ],
       [ "IteratorAdapter", "classifm3d_1_1IteratorAdapter.html", "classifm3d_1_1IteratorAdapter" ],
+      [ "json", "classifm3d_1_1json.html", null ],
       [ "LegacyDevice", "classifm3d_1_1LegacyDevice.html", "classifm3d_1_1LegacyDevice" ],
       [ "O3D", "classifm3d_1_1O3D.html", "classifm3d_1_1O3D" ],
       [ "O3R", "classifm3d_1_1O3R.html", "classifm3d_1_1O3R" ],

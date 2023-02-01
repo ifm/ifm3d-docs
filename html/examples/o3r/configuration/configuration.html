@@ -178,7 +178,7 @@
 <span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;ifm3d/device/o3r.h&gt;</span><span class="cp"></span>
-<span class="k">using</span> <span class="n">json</span> <span class="o">=</span> <span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">json</span> <span class="o">=</span> <span class="n">ifm3d</span><span class="o">::</span><span class="n">json</span><span class="p">;</span>
 
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
@@ -193,7 +193,7 @@
     <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">setw</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">conf</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
     
     <span class="c1">// Configure the device from a json string</span>
-    <span class="n">cam</span><span class="o">-&gt;</span><span class="n">Set</span><span class="p">(</span><span class="n">json</span><span class="o">::</span><span class="n">parse</span><span class="p">(</span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">{&quot;device&quot;:{&quot;info&quot;:{&quot;name&quot;: &quot;my_new_o3r&quot;}}}</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">));</span> 
+    <span class="n">cam</span><span class="o">-&gt;</span><span class="n">Set</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">json</span><span class="o">::</span><span class="n">parse</span><span class="p">(</span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">{&quot;device&quot;:{&quot;info&quot;:{&quot;name&quot;: &quot;my_new_o3r&quot;}}}</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">));</span> 
     <span class="c1">// Make the configuration persistent</span>
     <span class="n">cam</span><span class="o">-&gt;</span><span class="n">SaveInit</span><span class="p">();</span>
 

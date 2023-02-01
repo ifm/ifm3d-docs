@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['tofinfov3_171',['TOFInfoV3',['../classifm3d_1_1TOFInfoV3.html',1,'ifm3d']]],
-  ['tofinfov4_172',['TOFInfoV4',['../classifm3d_1_1TOFInfoV4.html',1,'ifm3d']]]
+  ['semver_171',['SemVer',['../structifm3d_1_1SemVer.html',1,'ifm3d']]],
+  ['swupdater_172',['SWUpdater',['../classifm3d_1_1SWUpdater.html',1,'ifm3d']]]
 ];
