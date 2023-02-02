@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Main changes &mdash; ifm3d  documentation</title>
+  <title>Migration Guide V1.0.0 &mdash; ifm3d  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -19,8 +20,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ifm3d - Command Line Tool" href="../../cli_link.html" />
-    <link rel="prev" title="Main changes" href="v1_1_0.html" /> 
+    <link rel="next" title="Basic Library Usage" href="../../examples/index.html" />
+    <link rel="prev" title="Migration Guide V1.1.0" href="v1_1_0.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -39,16 +40,21 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../README.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../installation_instructions/index.html">Installation instructions</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Migration Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="v1_2_0.html">v1.2.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1_1_0.html">v1.1.0</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">v1.0.0</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/index.html">Basic library usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cli_link.html">Command Line tool</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../stlimage.html">Manipulating images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python_api.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp_api/annotated.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
 </ul>
 
         </div>
@@ -66,7 +72,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="index.html">Migrating guide</a> &raquo;</li>
-      <li>Main changes</li>
+      <li>Migration Guide V1.0.0</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/content/migration_guide/v1_0_0.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -76,8 +82,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="tex2jax_ignore mathjax_ignore section" id="main-changes">
-<h1>Main changes<a class="headerlink" href="#main-changes" title="Permalink to this headline"></a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="migration-guide-v1-0-0">
+<h1>Migration Guide V1.0.0<a class="headerlink" href="#migration-guide-v1-0-0" title="Permalink to this headline"></a></h1>
 <p>The main change in version 1.0.x of ifm3d is in the definition of the objects, the <code class="docutils literal notranslate"><span class="pre">Camera</span></code>, the <code class="docutils literal notranslate"><span class="pre">FrameGrabber</span></code> and the <code class="docutils literal notranslate"><span class="pre">STLImage</span></code> buffer and the way to receive data.</p>
 <div class="section" id="camera-now-device">
 <h2><code class="docutils literal notranslate"><span class="pre">Camera</span></code> (now <code class="docutils literal notranslate"><span class="pre">Device</span></code>)<a class="headerlink" href="#camera-now-device" title="Permalink to this headline"></a></h2>
@@ -114,8 +120,8 @@ The image buffers (<code class="docutils literal notranslate"><span class="pre">
 <p>We detail below the new functions available for receiving and processing data.
 For each of these, we assume you have defined a <code class="docutils literal notranslate"><span class="pre">Device</span></code> (here the <code class="docutils literal notranslate"><span class="pre">O3R</span></code>) and a <code class="docutils literal notranslate"><span class="pre">FrameGrabber</span></code> object:</p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-0-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-0-Qysr" class="sphinx-tabs-panel group-tab" id="panel-0-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">o3r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3R</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">fg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FrameGrabber</span><span class="o">&gt;</span><span class="p">(</span><span class="n">o3r</span><span class="p">,</span><span class="w"> </span><span class="n">DEFAULT_PCIC_PORT</span><span class="p">);</span><span class="w"></span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-0-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-0-Qysr" class="sphinx-tabs-panel group-tab" id="panel-0-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span> <span class="n">o3r</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3R</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="k">auto</span> <span class="n">fg</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FrameGrabber</span><span class="o">&gt;</span><span class="p">(</span><span class="n">o3r</span><span class="p">,</span> <span class="n">DEFAULT_PCIC_PORT</span><span class="p">);</span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-0-UHl0aG9u" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">o3r</span> <span class="o">=</span> <span class="n">O3R</span><span class="p">()</span>
@@ -127,7 +133,7 @@ For each of these, we assume you have defined a <code class="docutils literal no
 <h3>Start streaming data with <code class="docutils literal notranslate"><span class="pre">Start</span></code><a class="headerlink" href="#start-streaming-data-with-start" title="Permalink to this headline"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">Start</span></code> function starts the streaming process. The framegrabber will receive every frame, and a callback function, if defined, is called upon reception of the frame (see below).</p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-1-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-1-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-1-Qysr" class="sphinx-tabs-panel group-tab" id="panel-1-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Start</span><span class="p">();</span><span class="w"></span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-1-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-1-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-1-Qysr" class="sphinx-tabs-panel group-tab" id="panel-1-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Start</span><span class="p">();</span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-1-UHl0aG9u" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fg</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
@@ -136,10 +142,10 @@ For each of these, we assume you have defined a <code class="docutils literal no
 </div></div>
 <p>To limit the bandwidth, one can choose to only receive a specific subset of images. This is specified in the call to the <code class="docutils literal notranslate"><span class="pre">Start</span></code> function. For instance, to receive only the distance and the amplitude image, use:</p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-2-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-2-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-2-Qysr" class="sphinx-tabs-panel group-tab" id="panel-2-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Start</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">RADIAL_DISTANCE</span><span class="p">,</span><span class="w"> </span>
-<span class="w">    </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">AMPLITUDE</span><span class="w"></span>
-<span class="w">    </span><span class="p">);</span><span class="w"></span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-2-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-2-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-2-Qysr" class="sphinx-tabs-panel group-tab" id="panel-2-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Start</span><span class="p">(</span>
+    <span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">RADIAL_DISTANCE</span><span class="p">,</span> 
+    <span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">AMPLITUDE</span>
+    <span class="p">);</span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-2-UHl0aG9u" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fg</span><span class="o">.</span><span class="n">start</span><span class="p">([</span>
@@ -155,11 +161,11 @@ For each of these, we assume you have defined a <code class="docutils literal no
 <h3>Register a callback with <code class="docutils literal notranslate"><span class="pre">OnNewFrame</span></code><a class="headerlink" href="#register-a-callback-with-onnewframe" title="Permalink to this headline"></a></h3>
 <p>The new function <code class="docutils literal notranslate"><span class="pre">OnNewFrame</span></code> allows you to register an action that will be performed every time a frame is received.</p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-3-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-3-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-3-Qysr" class="sphinx-tabs-panel group-tab" id="panel-3-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">Callback</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Frame</span><span class="o">::</span><span class="n">Ptr</span><span class="w"> </span><span class="n">frame</span><span class="p">){</span><span class="w"></span>
-<span class="w">  </span><span class="c1">//Do something with the data</span>
-<span class="p">}</span><span class="w"></span>
-<span class="p">...</span><span class="w"></span>
-<span class="n">fg</span><span class="o">-&gt;</span><span class="n">OnNewFrame</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Callback</span><span class="p">);</span><span class="w"></span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-3-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-3-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-3-Qysr" class="sphinx-tabs-panel group-tab" id="panel-3-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">Callback</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Frame</span><span class="o">::</span><span class="n">Ptr</span> <span class="n">frame</span><span class="p">){</span>
+  <span class="c1">//Do something with the data</span>
+<span class="p">}</span>
+<span class="p">...</span>
+<span class="n">fg</span><span class="o">-&gt;</span><span class="n">OnNewFrame</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Callback</span><span class="p">);</span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-3-UHl0aG9u" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-3-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="n">frame</span><span class="p">):</span>
@@ -182,22 +188,22 @@ It is intended to be called punctually to receive the first frame available, esp
 <div><p>Note: For performance reasons, we do not recommend using this function in an endless loop. Use the <code class="docutils literal notranslate"><span class="pre">OnNewFrame</span></code> function to register a callback that will be performed on every frame.</p>
 </div></blockquote>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-4-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-4-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-4-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-4-Qysr" class="sphinx-tabs-panel group-tab" id="panel-4-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">WaitForFrame</span><span class="p">().</span><span class="n">get</span><span class="p">();</span><span class="w"></span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-4-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-4-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-4-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-4-Qysr" class="sphinx-tabs-panel group-tab" id="panel-4-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">fg</span><span class="o">-&gt;</span><span class="n">WaitForFrame</span><span class="p">().</span><span class="n">get</span><span class="p">();</span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-4-UHl0aG9u" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-4-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">frame</span> <span class="o">=</span> <span class="n">fg</span><span class="o">.</span><span class="n">wait_for_frame</span><span class="p">()</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span> <span class="c1"># wait without timeout</span>
 <span class="c1"># OR</span>
 <span class="p">[</span><span class="n">ok</span><span class="p">,</span> <span class="n">frame</span><span class="p">]</span> <span class="o">=</span> <span class="n">fg</span><span class="o">.</span><span class="n">wait_for_frame</span><span class="p">()</span><span class="o">.</span><span class="n">wait_for</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span> <span class="c1"># wait with 500ms timeout</span>
 <span class="c1"># OR</span>
-<span class="n">frame</span> <span class="o">=</span> <span class="k">await</span> <span class="n">fg</span><span class="o">.</span><span class="n">wait_for_frame</span><span class="p">()</span> <span class="c1"># using asyncio</span>
+<span class="n">frame</span> <span class="o">=</span> <span class="n">await</span> <span class="n">fg</span><span class="o">.</span><span class="n">wait_for_frame</span><span class="p">()</span> <span class="c1"># using asyncio</span>
 </pre></div>
 </div>
 </div></div>
 <blockquote>
 <div><p>Note that to use coroutines in python, you need to use the <code class="docutils literal notranslate"><span class="pre">asyncio</span></code> library (see <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html">here</a>). For instance, use:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
-<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-   <span class="n">frame</span> <span class="o">=</span> <span class="k">await</span> <span class="n">fg</span><span class="o">.</span><span class="n">wait_for_frame</span><span class="p">()</span>
+<span class="n">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+   <span class="n">frame</span> <span class="o">=</span> <span class="n">await</span> <span class="n">fg</span><span class="o">.</span><span class="n">wait_for_frame</span><span class="p">()</span>
    <span class="c1"># do something with frame</span>
 <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </pre></div>
@@ -213,8 +219,8 @@ To specify which images to receive when using the <code class="docutils literal 
 Instead of providing specific functions for each type of data, we use <code class="docutils literal notranslate"><span class="pre">frames</span></code> and the <code class="docutils literal notranslate"><span class="pre">GetBuffer</span></code> function, along with the <code class="docutils literal notranslate"><span class="pre">ifm3d::buffer_id</span></code> corresponding to the desired image.
 For instance, to get the distance and the point cloud, use:</p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-5-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-5-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-5-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-5-Qysr" class="sphinx-tabs-panel group-tab" id="panel-5-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">frame</span><span class="o">-&gt;</span><span class="n">GetBuffer</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">RADIAL_DISTANCE</span><span class="p">);</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">xyz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">frame</span><span class="o">-&gt;</span><span class="n">GetBuffer</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">XYZ</span><span class="p">);</span><span class="w"></span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-5-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-5-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-5-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-5-Qysr" class="sphinx-tabs-panel group-tab" id="panel-5-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span> <span class="n">distance</span> <span class="o">=</span> <span class="n">frame</span><span class="o">-&gt;</span><span class="n">GetBuffer</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">RADIAL_DISTANCE</span><span class="p">);</span>
+<span class="k">auto</span> <span class="n">xyz</span> <span class="o">=</span> <span class="n">frame</span><span class="o">-&gt;</span><span class="n">GetBuffer</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">XYZ</span><span class="p">);</span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-5-UHl0aG9u" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-5-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">distance</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">get_buffer</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">.</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">RADIAL_DISTANCE</span><span class="p">)</span>
@@ -224,7 +230,7 @@ For instance, to get the distance and the point cloud, use:</p>
 </div></div>
 <p>For the 2D RGB image in compressed JPEG format, you can use:</p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-6-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-6-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-6-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-6-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-6-Qysr" class="sphinx-tabs-panel group-tab" id="panel-6-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">jpeg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">frame</span><span class="o">-&gt;</span><span class="n">GetBuffer</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">JPEG</span><span class="p">);</span><span class="w"></span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-6-Qysr" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-6-Qysr" name="Qysr" role="tab" tabindex="0">C++</button><button aria-controls="panel-6-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-6-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><div aria-labelledby="tab-6-Qysr" class="sphinx-tabs-panel group-tab" id="panel-6-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span> <span class="n">jpeg</span> <span class="o">=</span> <span class="n">frame</span><span class="o">-&gt;</span><span class="n">GetBuffer</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">JPEG</span><span class="p">);</span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-6-UHl0aG9u" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-6-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">jpeg</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">get_buffer</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">.</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">JPEG</span><span class="p">)</span>
@@ -239,8 +245,8 @@ For instance, to get the distance and the point cloud, use:</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="v1_1_0.html" class="btn btn-neutral float-left" title="Main changes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../../cli_link.html" class="btn btn-neutral float-right" title="ifm3d - Command Line Tool" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="v1_1_0.html" class="btn btn-neutral float-left" title="Migration Guide V1.1.0" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../examples/index.html" class="btn btn-neutral float-right" title="Basic Library Usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

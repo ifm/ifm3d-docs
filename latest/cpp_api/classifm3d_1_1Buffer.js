@@ -24,5 +24,6 @@ var classifm3d_1_1Buffer =
     [ "ptr", "classifm3d_1_1Buffer.html#a0baa405cc9e2ac36f1392d42be0e828e", null ],
     [ "ptr", "classifm3d_1_1Buffer.html#ae9320387e3a0a4bda97c582c49a692cc", null ],
     [ "setTo", "classifm3d_1_1Buffer.html#aad82a320a233d086b8996455f80e35f1", null ],
+    [ "size", "classifm3d_1_1Buffer.html#a493b0f824117d5c0ef06dd4d5c9b3d17", null ],
     [ "width", "classifm3d_1_1Buffer.html#a96e2c5f2a05fa612dec751a608037c60", null ]
 ];

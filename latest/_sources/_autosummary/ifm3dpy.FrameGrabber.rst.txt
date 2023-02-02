@@ -20,6 +20,7 @@ ifm3dpy.FrameGrabber
       ~FrameGrabber.is_running
       ~FrameGrabber.on_async_error
       ~FrameGrabber.on_async_notification
+      ~FrameGrabber.on_error
       ~FrameGrabber.on_new_frame
       ~FrameGrabber.start
       ~FrameGrabber.stop

@@ -7,6 +7,7 @@
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -18,7 +19,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Migrating guide" href="../migrating_guide.html" />
+    <link rel="next" title="Migrating guide" href="../migration_guide/index.html" />
     <link rel="prev" title="Python installation" href="install_py.html" /> 
 </head>
 
@@ -38,17 +39,22 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../README.html">Overview</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Installation instructions</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Install_source_package_index.html">Install from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install_binary_package_index.html">Install binary package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install_source_package_index.html">Install from source</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install_py.html">ifm3dpy</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Docker</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../migrating_guide.html">**Migrating to v1.x**</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../migration_guide/index.html">Migration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/index.html">Basic library usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cli_link.html">Command Line tool</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../stlimage.html">Manipulating images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python_api.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp_api/annotated.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
 </ul>
 
         </div>
@@ -84,14 +90,14 @@
 </div>
 <p>The following tags are available:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">stable</span></code>: this is the {{ ‘<span class="xref myst">latest released version</span>’.format(ifm3d_latest_tag_url) }}.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">latest</span></code>: this is a nightly build with the latest version of ifm3d available on the {{ ifm3d_main_branch }} branch. This typically contains work in progress.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stable</span></code>: this is the <a class="reference external" href="https://github.com/ifm/ifm3d/tags">latest released version</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">latest</span></code>: this is a nightly build with the latest version of ifm3d available on the main branch. This typically contains work in progress.</p></li>
 <li><p>VERSION: you can specify a specific version of ifm3d, for instance, use:</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ docker pull ghcr.io/ifm/ifm3d:v0.93.0
 </pre></div>
 </div>
-<p>The full list of available container versions is available {{ ‘<span class="xref myst">here</span>’.format(ifm3d_containers_list_url) }}.</p>
+<p>The full list of available container versions is available <a class="reference external" href="https://github.com/ifm/ifm3d/pkgs/container/ifm3d">here</a>.</p>
 <p>For each tag, several suffixes are available:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ubuntu</span></code>: an Ubuntu-based build, available both for amd64 and aarch64.</p></li>
@@ -112,7 +118,7 @@ When no suffix is added to the tag, the default build is used, which is Ubuntu b
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="install_py.html" class="btn btn-neutral float-left" title="Python installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../migrating_guide.html" class="btn btn-neutral float-right" title="Migrating guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../migration_guide/index.html" class="btn btn-neutral float-right" title="Migrating guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

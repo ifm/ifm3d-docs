@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['reboot_85',['Reboot',['../classifm3d_1_1Device.html#ac00f90b5349f30da07a448c6469ec2c0',1,'ifm3d::Device::Reboot()'],['../classifm3d_1_1O3R.html#ab50df498165624f643ff73c9cd9a0d9d',1,'ifm3d::O3R::Reboot()']]],
-  ['reboottoproductive_86',['RebootToProductive',['../classifm3d_1_1SWUpdater.html#a5ed7d927b9ff35a6808394345bdced8e',1,'ifm3d::SWUpdater']]],
-  ['reboottorecovery_87',['RebootToRecovery',['../classifm3d_1_1SWUpdater.html#a1f56ac0283802c2c1ec9c94fa39d3437',1,'ifm3d::SWUpdater']]],
-  ['remove_88',['Remove',['../classifm3d_1_1O3R.html#aac922d3a9400e4724228091a429fc396',1,'ifm3d::O3R']]],
-  ['requestsession_89',['RequestSession',['../classifm3d_1_1LegacyDevice.html#ad9b77b797052f7e41ef12dced1d579aa',1,'ifm3d::LegacyDevice']]],
-  ['reset_90',['Reset',['../classifm3d_1_1O3R.html#ab426c636e257766f0caa35b09ea97fea',1,'ifm3d::O3R']]],
-  ['resolveconfig_91',['ResolveConfig',['../classifm3d_1_1O3R.html#a3a829eb053ef1ca8e14c3e14284f5aec',1,'ifm3d::O3R']]],
-  ['result_92',['Result',['../structifm3d_1_1Organizer_1_1Result.html',1,'ifm3d::Organizer']]]
+  ['password_92',['Password',['../classifm3d_1_1LegacyDevice.html#a680389e40a79887778f8aaf3ece24a24',1,'ifm3d::LegacyDevice']]],
+  ['pcicclient_93',['PCICClient',['../classifm3d_1_1PCICClient.html',1,'ifm3d::PCICClient'],['../classifm3d_1_1PCICClient.html#a216862c9f37385ec769d848d8a0283ec',1,'ifm3d::PCICClient::PCICClient()']]],
+  ['point_94',['Point',['../structifm3d_1_1Point.html',1,'ifm3d']]],
+  ['port_95',['Port',['../classifm3d_1_1O3R.html#ace851644d8586ad20a68865f80860f89',1,'ifm3d::O3R']]],
+  ['portinfo_96',['PortInfo',['../structifm3d_1_1PortInfo.html',1,'ifm3d']]],
+  ['ports_97',['Ports',['../classifm3d_1_1O3R.html#ab82367443890c0526f2da7c79147e6b5',1,'ifm3d::O3R']]],
+  ['ptr_98',['ptr',['../classifm3d_1_1Buffer.html#ad7f0a9f097ceeb380b1adfe1162bd3cc',1,'ifm3d::Buffer::ptr(const std::uint32_t row)'],['../classifm3d_1_1Buffer.html#a0b1d0237b10625682e81414d2062a364',1,'ifm3d::Buffer::ptr(const std::uint32_t row) const'],['../classifm3d_1_1Buffer.html#a0baa405cc9e2ac36f1392d42be0e828e',1,'ifm3d::Buffer::ptr(const std::uint32_t row, const std::uint32_t col)'],['../classifm3d_1_1Buffer.html#ae9320387e3a0a4bda97c582c49a692cc',1,'ifm3d::Buffer::ptr(const std::uint32_t row, const std::uint32_t col) const'],['../classifm3d_1_1Buffer__.html#afa4cf73f3d6270731897617f352a996a',1,'ifm3d::Buffer_::ptr(const std::uint32_t row)'],['../classifm3d_1_1Buffer__.html#aa2b557e127bffd413fbef15e8d14cfa3',1,'ifm3d::Buffer_::ptr(const std::uint32_t row, const std::uint32_t col)']]]
 ];

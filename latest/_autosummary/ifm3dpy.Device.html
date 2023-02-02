@@ -7,6 +7,7 @@
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -18,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ifm3dpy.Frame" href="ifm3dpy.Frame.html" />
-    <link rel="prev" title="ifm3dpy.Awaitable" href="ifm3dpy.Awaitable.html" /> 
+    <link rel="next" title="ifm3dpy.ExtrinsicOpticToUser" href="ifm3dpy.ExtrinsicOpticToUser.html" />
+    <link rel="prev" title="ifm3dpy.Calibration" href="ifm3dpy.Calibration.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,27 +39,40 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../content/README.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../content/installation_instructions/index.html">Installation instructions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../content/migrating_guide.html">**Migrating to v1.x**</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/migration_guide/index.html">Migration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Basic library usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cli_link.html">Command Line tool</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../content/stlimage.html">Manipulating images</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../python_api.html">Python API</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="ifm3dpy.html">ifm3dpy</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.run.html">ifm3dpy.run</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.Awaitable.html">ifm3dpy.Awaitable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.Calibration.html">ifm3dpy.Calibration</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">ifm3dpy.Device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.ExtrinsicOpticToUser.html">ifm3dpy.ExtrinsicOpticToUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.Frame.html">ifm3dpy.Frame</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.FrameAwaitable.html">ifm3dpy.FrameAwaitable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.FrameGrabber.html">ifm3dpy.FrameGrabber</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.LegacyDevice.html">ifm3dpy.LegacyDevice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.O3R.html">ifm3dpy.O3R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.ODSInfoV1.html">ifm3dpy.ODSInfoV1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.ODSOccupancyGridV1.html">ifm3dpy.ODSOccupancyGridV1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.PortInfo.html">ifm3dpy.PortInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.RGBInfoV1.html">ifm3dpy.RGBInfoV1</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.SWUpdater.html">ifm3dpy.SWUpdater</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.SemVer.html">ifm3dpy.SemVer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.TOFInfoV3.html">ifm3dpy.TOFInfoV3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.TOFInfoV4.html">ifm3dpy.TOFInfoV4</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.buffer_id.html">ifm3dpy.buffer_id</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../cpp_api/annotated.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
 </ul>
 
         </div>
@@ -96,7 +110,7 @@
 <p>Base class for managing an instance of an all cameras</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.Device.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.Device" title="ifm3dpy.Device"><span class="pre">ifm3dpy.Device</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'192.168.0.69'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xmlrpc_port</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">80</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.Device.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.Device" title="ifm3dpy.Device"><span class="pre">ifm3dpy.Device</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'192.168.0.69'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xmlrpc_port</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">80</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">throw_if_unavailable</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.Device.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -119,7 +133,7 @@ those changes. Defaults to ‘’ (no password).</p></li>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.Device.__init__" title="ifm3dpy.Device.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self[, ip, xmlrpc_port, password])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.Device.__init__" title="ifm3dpy.Device.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self[, ip, xmlrpc_port, password, ...])</p></td>
 <td><p>Constructor</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.Device.am_i" title="ifm3dpy.Device.am_i"><code class="xref py py-obj docutils literal notranslate"><span class="pre">am_i</span></code></a>(self, family)</p></td>
@@ -134,22 +148,25 @@ those changes. Defaults to ‘’ (no password).</p></li>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.Device.device_type" title="ifm3dpy.Device.device_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">device_type</span></code></a>(self[, use_cached])</p></td>
 <td><p>Obtains the device type of the connected camera.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.Device.force_trigger" title="ifm3dpy.Device.force_trigger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">force_trigger</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.Device.firmware_version" title="ifm3dpy.Device.firmware_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">firmware_version</span></code></a>(self)</p></td>
+<td><p>Version of firmware installed on device</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.Device.force_trigger" title="ifm3dpy.Device.force_trigger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">force_trigger</span></code></a>(self)</p></td>
 <td><p>Sends a S/W trigger to the camera over XMLRPC.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.Device.from_json" title="ifm3dpy.Device.from_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json</span></code></a>(self, json)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.Device.from_json" title="ifm3dpy.Device.from_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json</span></code></a>(self, json)</p></td>
 <td><p>Configures the camera based on the parameter values of the passed in JSON.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.Device.reboot" title="ifm3dpy.Device.reboot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reboot</span></code></a>(self, mode)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.Device.reboot" title="ifm3dpy.Device.reboot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reboot</span></code></a>(self, mode)</p></td>
 <td><p>Reboot the sensor</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.Device.to_json" title="ifm3dpy.Device.to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.Device.to_json" title="ifm3dpy.Device.to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code></a>(self)</p></td>
 <td><p>A JSON object containing the state of the camera</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.Device.trace_logs" title="ifm3dpy.Device.trace_logs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trace_logs</span></code></a>(self, count)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.Device.trace_logs" title="ifm3dpy.Device.trace_logs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trace_logs</span></code></a>(self, count)</p></td>
 <td><p>Delivers the trace log from the camera</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.Device.who_am_i" title="ifm3dpy.Device.who_am_i"><code class="xref py py-obj docutils literal notranslate"><span class="pre">who_am_i</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.Device.who_am_i" title="ifm3dpy.Device.who_am_i"><code class="xref py py-obj docutils literal notranslate"><span class="pre">who_am_i</span></code></a>(self)</p></td>
 <td><p>Retrieve the device family of the connected device</p></td>
 </tr>
 </tbody>
@@ -292,6 +309,20 @@ performance increase.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.Device.firmware_version">
+<span class="sig-name descname"><span class="pre">firmware_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#ifm3dpy.Device" title="ifm3dpy.Device"><span class="pre">ifm3dpy.Device</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ifm3dpy.SemVer.html#ifm3dpy.SemVer" title="ifm3dpy.SemVer"><span class="pre">ifm3dpy.SemVer</span></a></span></span><a class="headerlink" href="#ifm3dpy.Device.firmware_version" title="Permalink to this definition"></a></dt>
+<dd><p>Version of firmware installed on device</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Firmware version</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="ifm3dpy.SemVer.html#ifm3dpy.SemVer" title="ifm3dpy.SemVer">SemVer</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -513,8 +544,8 @@ to the hardware.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="ifm3dpy.Awaitable.html" class="btn btn-neutral float-left" title="ifm3dpy.Awaitable" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ifm3dpy.Frame.html" class="btn btn-neutral float-right" title="ifm3dpy.Frame" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ifm3dpy.Calibration.html" class="btn btn-neutral float-left" title="ifm3dpy.Calibration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ifm3dpy.ExtrinsicOpticToUser.html" class="btn btn-neutral float-right" title="ifm3dpy.ExtrinsicOpticToUser" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

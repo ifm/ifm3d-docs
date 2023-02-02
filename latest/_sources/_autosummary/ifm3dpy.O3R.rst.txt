@@ -22,14 +22,21 @@ ifm3dpy.O3R
       ~O3R.device_parameter
       ~O3R.device_type
       ~O3R.factory_reset
+      ~O3R.firmware_version
       ~O3R.force_trigger
       ~O3R.from_json
       ~O3R.get
+      ~O3R.get_diagnostic
+      ~O3R.get_diagnostic_filter_schema
+      ~O3R.get_diagnostic_filtered
       ~O3R.get_init
       ~O3R.get_init_status
       ~O3R.get_schema
       ~O3R.lock
+      ~O3R.port
+      ~O3R.ports
       ~O3R.reboot
+      ~O3R.reboot_to_recovery
       ~O3R.remove
       ~O3R.reset
       ~O3R.save_init

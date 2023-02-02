@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['semver_142',['SemVer',['../structifm3d_1_1SemVer.html',1,'ifm3d']]],
-  ['swupdater_143',['SWUpdater',['../classifm3d_1_1SWUpdater.html',1,'ifm3d']]]
+  ['pcicclient_166',['PCICClient',['../classifm3d_1_1PCICClient.html',1,'ifm3d']]],
+  ['point_167',['Point',['../structifm3d_1_1Point.html',1,'ifm3d']]],
+  ['portinfo_168',['PortInfo',['../structifm3d_1_1PortInfo.html',1,'ifm3d']]]
 ];

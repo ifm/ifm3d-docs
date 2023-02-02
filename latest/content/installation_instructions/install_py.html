@@ -7,6 +7,7 @@
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -38,17 +39,22 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../README.html">Overview</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Installation instructions</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Install_source_package_index.html">Install from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install_binary_package_index.html">Install binary package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install_source_package_index.html">Install from source</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">ifm3dpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install_docker.html">Docker</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../migrating_guide.html">**Migrating to v1.x**</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../migration_guide/index.html">Migration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/index.html">Basic library usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cli_link.html">Command Line tool</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../stlimage.html">Manipulating images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python_api.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp_api/annotated.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
 </ul>
 
         </div>
@@ -102,8 +108,8 @@
 </div>
 <p>Then try importing the package:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ifm3dpy</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ifm3dpy</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span><span class="mf">1.0.1</span>
+<span class="k">print</span><span class="p">(</span><span class="n">ifm3dpy</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">1</span>
 </pre></div>
 </div>
 <p>You can test the connection from VPU to camera head with following lines:</p>
@@ -114,7 +120,7 @@
 </div>
 <p>Using the package <code class="docutils literal notranslate"><span class="pre">json</span></code> provides an easier tool for displaying JSON-Strings. The configuration from the VPU is always a JSON-String (output below shortened for display purposes).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
 <span class="o">&gt;&gt;&gt;</span><span class="p">{</span>
     <span class="s2">&quot;device&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">&quot;clock&quot;</span><span class="p">:</span> <span class="p">{</span>

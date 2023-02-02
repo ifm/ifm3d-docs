@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['device_125',['Device',['../classifm3d_1_1Device.html',1,'ifm3d']]],
-  ['distanceimageinfo_126',['DistanceImageInfo',['../classifm3d_1_1DistanceImageInfo.html',1,'ifm3d']]]
+  ['calibration_147',['Calibration',['../structifm3d_1_1calibration_1_1Calibration.html',1,'ifm3d::calibration']]]
 ];
