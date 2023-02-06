@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -48,6 +50,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../python_api.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cpp_api/annotated.html">C++ API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ChangeLog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
 </ul>
 
@@ -64,8 +67,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>ifm3d Overview</li>
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">ifm3d Overview</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/content/README.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -75,8 +78,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="tex2jax_ignore mathjax_ignore section" id="ifm3d-overview">
-<h1>ifm3d Overview<a class="headerlink" href="#ifm3d-overview" title="Permalink to this headline"></a></h1>
+  <div class="section" id="ifm3d-overview">
+<h1>ifm3d Overview<a class="headerlink" href="#ifm3d-overview" title="Permalink to this heading"></a></h1>
 <p>Library and utilities for working with ifm pmd-based 3D ToF Perception devices. Compatible with the O3R, O3D and O3X platforms.
 This library is available in python, c++, and has wrappers for ROS and ROS2.<br />
 <a class="reference external" href="https://ifm.github.io/ifm3d-docs/html/cpp_api/annotated.html">C++ API Reference</a><br />
@@ -99,12 +102,12 @@ Comprehensive documentation is available on <a class="reference external" href="
 </tbody>
 </table>
 <div class="section" id="released-versions">
-<h2>Released Versions<a class="headerlink" href="#released-versions" title="Permalink to this headline"></a></h2>
+<h2>Released Versions<a class="headerlink" href="#released-versions" title="Permalink to this heading"></a></h2>
 <p>⚠️ Note that the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch is generally in a work in progress state and you probably want to use a
 tagged <a class="reference external" href="https://github.com/ifm/ifm3d/releases">release version</a> for production.</p>
 <p>⚠️ Branch <code class="docutils literal notranslate"><span class="pre">o3r/main-next</span></code> is an O3R early adopters version which contains the latest changes to the interface. It may contain braking changes.</p>
 <div class="section" id="current-revision">
-<h3>Current Revision<a class="headerlink" href="#current-revision" title="Permalink to this headline"></a></h3>
+<h3>Current Revision<a class="headerlink" href="#current-revision" title="Permalink to this heading"></a></h3>
 <p>The table below show the compatibility between the current ifm3d version and the firmware versions for the O3X, O3D and O3R devices. Other combinations than the ones listed below might work but have not been thoroughly tested.</p>
 <table class="colwidths-auto docutils align-default">
 <thead>
@@ -132,7 +135,7 @@ tagged <a class="reference external" href="https://github.com/ifm/ifm3d/releases
 </div>
 </div>
 <div class="section" id="organization-of-the-software">
-<h2>Organization of the Software<a class="headerlink" href="#organization-of-the-software" title="Permalink to this headline"></a></h2>
+<h2>Organization of the Software<a class="headerlink" href="#organization-of-the-software" title="Permalink to this heading"></a></h2>
 <p>The ifm3d software is organized into modules, they are:</p>
 <table class="colwidths-auto docutils align-default">
 <thead>
@@ -163,18 +166,18 @@ tagged <a class="reference external" href="https://github.com/ifm/ifm3d/releases
 </table>
 </div>
 <div class="section" id="installation-instructions">
-<h2>Installation instructions<a class="headerlink" href="#installation-instructions" title="Permalink to this headline"></a></h2>
+<h2>Installation instructions<a class="headerlink" href="#installation-instructions" title="Permalink to this heading"></a></h2>
 <p>Please refer to the corresponding section on <a class="reference external" href="https://ifm3d.com/">ifm3d.com</a>.</p>
 </div>
 <div class="section" id="supported-docker-containers">
-<h2>Supported docker containers<a class="headerlink" href="#supported-docker-containers" title="Permalink to this headline"></a></h2>
+<h2>Supported docker containers<a class="headerlink" href="#supported-docker-containers" title="Permalink to this heading"></a></h2>
 <p>Docker containers are available for the ifm3d library, both on <a class="reference external" href="https://github.com/orgs/ifm/packages?repo_name=ifm3d">ghcr</a> and on the <a class="reference external" href="https://hub.docker.com/r/ifmrobotics/ifm3d">dockerhub</a>.
 You can pull them with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker pull ghcr.io/ifm/ifm3d:stable
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>ghcr.io/ifm/ifm3d:stable
 </pre></div>
 </div>
 <p>OR</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker pull ifmrobotics/ifm3d:stable
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>ifmrobotics/ifm3d:stable
 </pre></div>
 </div>
 <p>Note that we provide 2 tags, <em>stable</em> always points to the latest tagged version, and <em>latest</em> is built nightly with the latest changes on the o3r/main-next branch. The <em>latest</em> tag is typically a work in progress.<br />
@@ -182,11 +185,11 @@ For more details on the available containers, see <span class="xref myst">here</
 For more details on docker and the O3R platform see <span class="xref myst">here</span>.</p>
 </div>
 <div class="section" id="report-a-bug-and-check-the-known-issues">
-<h2>Report a bug and check the known issues<a class="headerlink" href="#report-a-bug-and-check-the-known-issues" title="Permalink to this headline"></a></h2>
+<h2>Report a bug and check the known issues<a class="headerlink" href="#report-a-bug-and-check-the-known-issues" title="Permalink to this heading"></a></h2>
 <p>Please see the <a class="reference external" href="https://github.com/ifm/ifm3d/issues">Github Issue Tracker</a>, or contact <code class="docutils literal notranslate"><span class="pre">support.robotics&#64;ifm.com</span></code>.</p>
 </div>
 <div class="section" id="license">
-<h2>LICENSE<a class="headerlink" href="#license" title="Permalink to this headline"></a></h2>
+<h2>LICENSE<a class="headerlink" href="#license" title="Permalink to this heading"></a></h2>
 <p>Please see the <span class="xref myst">LICENSE</span> file.</p>
 </div>
 </div>

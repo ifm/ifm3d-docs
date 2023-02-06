@@ -15,7 +15,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -53,6 +55,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../python_api.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp_api/annotated.html">C++ API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../examples/examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ChangeLog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
 </ul>
 
@@ -69,9 +72,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html">Migrating guide</a> &raquo;</li>
-      <li>Migration Guide V1.2.0</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Migrating guide</a></li>
+      <li class="breadcrumb-item active">Migration Guide V1.2.0</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/content/migration_guide/v1_2_0.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -81,29 +84,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="tex2jax_ignore mathjax_ignore section" id="migration-guide-v1-2-0">
-<h1>Migration Guide V1.2.0<a class="headerlink" href="#migration-guide-v1-2-0" title="Permalink to this headline"></a></h1>
+  <div class="section" id="migration-guide-v1-2-0">
+<h1>Migration Guide V1.2.0<a class="headerlink" href="#migration-guide-v1-2-0" title="Permalink to this heading"></a></h1>
 <div class="section" id="changes-to-ifm3d-json">
-<h2>Changes to ifm3d::json<a class="headerlink" href="#changes-to-ifm3d-json" title="Permalink to this headline"></a></h2>
+<h2>Changes to ifm3d::json<a class="headerlink" href="#changes-to-ifm3d-json" title="Permalink to this heading"></a></h2>
 <p>Note: The following only applies to the C++ interface, for python no changes are needed.</p>
 <p>We have been delivering a copy of <a class="reference external" href="https://github.com/nlohmann/json">nlohmann::json</a> with ifm3d as part of the <code class="docutils literal notranslate"><span class="pre">device</span></code> module, this allowed users to easily and conveniently access the json formatted data without having to worry about parsing the output manually.</p>
 <p>However this approach lead to problems when users already were using <code class="docutils literal notranslate"><span class="pre">nlohmann::json</span></code> in their codebases and tried to integrate ifm3d.</p>
 <p>To solve this problem we completely moved the implementation to the ifm3d namespace so our version doesn’t interfere with any user supplied json library.</p>
 <p>Migration should be fairly easy, just fully qually the namespace, e.g.:</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">json</span> <span class="n">j</span> <span class="o">=</span> <span class="n">o3r</span><span class="o">-&gt;</span><span class="n">Get</span><span class="p">();</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">json</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">o3r</span><span class="o">-&gt;</span><span class="n">Get</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>becomes:</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">ifm3d</span><span class="o">::</span><span class="n">json</span> <span class="n">j</span> <span class="o">=</span> <span class="n">o3r</span><span class="o">-&gt;</span><span class="n">Get</span><span class="p">();</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">ifm3d</span><span class="o">::</span><span class="n">json</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">o3r</span><span class="o">-&gt;</span><span class="n">Get</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>Additionally to use the user-defined string literals <code class="docutils literal notranslate"><span class="pre">operator&quot;&quot;_json</span></code> and <code class="docutils literal notranslate"><span class="pre">operator&quot;&quot;_json_pointer</span></code> they have to be imported from the namespace</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">ifm3d</span><span class="o">::</span><span class="n">literals</span><span class="p">;</span>
-<span class="n">ifm3d</span><span class="o">::</span><span class="n">json</span> <span class="n">j</span> <span class="o">=</span> <span class="s">&quot;[1,2,3]&quot;</span><span class="n">_json</span><span class="p">;</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">ifm3d</span><span class="o">::</span><span class="nn">literals</span><span class="p">;</span>
+<span class="n">ifm3d</span><span class="o">::</span><span class="n">json</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;[1,2,3]&quot;</span><span class="n">_json</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Note: By default nlohmann::json currently places it’s <code class="docutils literal notranslate"><span class="pre">operator&quot;&quot;_json</span></code> and <code class="docutils literal notranslate"><span class="pre">operator&quot;&quot;_json_pointer</span></code> into the global namespace, so this would lead to ambiguity errors, to solve this nlohman can be configured to place them into the nlohmann namespace by defining <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">JSON_USE_GLOBAL_UDLS</span> <span class="pre">0</span></code> before including it (see the <a class="reference external" href="https://json.nlohmann.me/api/macros/json_use_global_udls/">nlohmann::json doc</a> for more details).</p>
-<p>For details on using ifm3d::json and nlohmann::json together please take a look at the C++ documentation for ifm3d::json.</p>
+<p>For details on using ifm3d::json and nlohmann::json together please take a look at the <a class="reference external" href="../../cpp_api/classifm3d_1_1json.html">C++ documentation for ifm3d::json</a>.</p>
 </div>
 </div>
 

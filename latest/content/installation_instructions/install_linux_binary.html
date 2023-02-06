@@ -15,7 +15,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -58,6 +60,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../python_api.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp_api/annotated.html">C++ API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../examples/examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ChangeLog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
 </ul>
 
@@ -74,10 +77,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html">Installing the software</a> &raquo;</li>
-          <li><a href="install_binary_package_index.html">Install binary package</a> &raquo;</li>
-      <li>Installing ifm3d from .deb file</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Installing the software</a></li>
+          <li class="breadcrumb-item"><a href="install_binary_package_index.html">Install binary package</a></li>
+      <li class="breadcrumb-item active">Installing ifm3d from .deb file</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/content/installation_instructions/install_linux_binary.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -88,15 +91,15 @@
            <div itemprop="articleBody">
              
   <div class="section" id="installing-ifm3d-from-deb-file">
-<h1>Installing ifm3d from .deb file<a class="headerlink" href="#installing-ifm3d-from-deb-file" title="Permalink to this headline"></a></h1>
+<h1>Installing ifm3d from .deb file<a class="headerlink" href="#installing-ifm3d-from-deb-file" title="Permalink to this heading"></a></h1>
 <p><strong>Note</strong>: If you are using O3D/O3X device please use ifm3d-v0.20.3 release and use these <a class="reference external" href="https://github.com/ifm/ifm3d/blob/v0.20.3/doc/source_build.md">instructions</a></p>
 <div class="section" id="download-ifm3d-deb-files">
-<h2>Download ifm3d .deb files<a class="headerlink" href="#download-ifm3d-deb-files" title="Permalink to this headline"></a></h2>
+<h2>Download ifm3d .deb files<a class="headerlink" href="#download-ifm3d-deb-files" title="Permalink to this heading"></a></h2>
 <p>Download the ifm3d .deb files for your OS ifm3d-ubuntu-&lt;ubuntu_version&gt;_<arch>_debs.xz.tar from <a class="reference external" href="https://github.com/ifm/ifm3d/releases">ifm3d Release page</a>.
 This .deb files are of ifm3d modules without their dependencies.</p>
 </div>
 <div class="section" id="install-ifm3d-third-party-dependencies">
-<h2>Install ifm3d third-party dependencies<a class="headerlink" href="#install-ifm3d-third-party-dependencies" title="Permalink to this headline"></a></h2>
+<h2>Install ifm3d third-party dependencies<a class="headerlink" href="#install-ifm3d-third-party-dependencies" title="Permalink to this heading"></a></h2>
 <p>Use the following steps to install all the library dependencies on Debian based systems</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get update &amp;&amp; sudo apt-get -y upgrade
 $ sudo apt-get update &amp;&amp; sudo apt-get install -y
@@ -115,7 +118,7 @@ $ sudo apt-get update &amp;&amp; sudo apt-get install -y
 Above apt-get commands are specific to Debian based systems</p>
 </div>
 <div class="section" id="install-ifm3d-debs-files">
-<h2>Install ifm3d .debs files<a class="headerlink" href="#install-ifm3d-debs-files" title="Permalink to this headline"></a></h2>
+<h2>Install ifm3d .debs files<a class="headerlink" href="#install-ifm3d-debs-files" title="Permalink to this heading"></a></h2>
 <p>unzip the .tar file and use following command to install ifm3d from deps</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo dpkg -i ifm3d_1.0.1_amd64-device.deb
 $ sudo dpkg -i ifm3d_1.0.1_amd64-swupdater.deb

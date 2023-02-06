@@ -15,7 +15,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -54,6 +56,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../python_api.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp_api/annotated.html">C++ API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../examples/examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ChangeLog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
 </ul>
 
@@ -70,9 +73,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html">Installing the software</a> &raquo;</li>
-      <li>Python installation</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Installing the software</a></li>
+      <li class="breadcrumb-item active">Python installation</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/content/installation_instructions/install_py.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -83,7 +86,7 @@
            <div itemprop="articleBody">
              
   <div class="section" id="python-installation">
-<h1>Python installation<a class="headerlink" href="#python-installation" title="Permalink to this headline"></a></h1>
+<h1>Python installation<a class="headerlink" href="#python-installation" title="Permalink to this heading"></a></h1>
 <blockquote>
 <div><p>Note: We recommend for testing purposes to install the ifm3dpy package in an clean python environment first. You can use <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">venv</span> <span class="pre">&quot;venv-name&quot;</span></code> to create a new virtual environment.</p>
 </div></blockquote>
@@ -93,7 +96,7 @@
 </div>
 <p>Now, you can check your installation.</p>
 <div class="section" id="check-the-ifm3dpy-installation">
-<h2>Check the ifm3dpy installation<a class="headerlink" href="#check-the-ifm3dpy-installation" title="Permalink to this headline"></a></h2>
+<h2>Check the ifm3dpy installation<a class="headerlink" href="#check-the-ifm3dpy-installation" title="Permalink to this heading"></a></h2>
 <p>Let’s verify quickly that the installation worked! This command should display the list of packages installed in your environment:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">freeze</span>
 </pre></div>
@@ -108,8 +111,8 @@
 </div>
 <p>Then try importing the package:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ifm3dpy</span>
-<span class="k">print</span><span class="p">(</span><span class="n">ifm3dpy</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ifm3dpy</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="mf">1.0.1</span>
 </pre></div>
 </div>
 <p>You can test the connection from VPU to camera head with following lines:</p>
@@ -120,7 +123,7 @@
 </div>
 <p>Using the package <code class="docutils literal notranslate"><span class="pre">json</span></code> provides an easier tool for displaying JSON-Strings. The configuration from the VPU is always a JSON-String (output below shortened for display purposes).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="k">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
 <span class="o">&gt;&gt;&gt;</span><span class="p">{</span>
     <span class="s2">&quot;device&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">&quot;clock&quot;</span><span class="p">:</span> <span class="p">{</span>

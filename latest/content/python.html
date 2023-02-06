@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -46,6 +48,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../python_api.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cpp_api/annotated.html">C++ API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ChangeLog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
 </ul>
 
@@ -62,8 +65,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Python bindings for ifm3d</li>
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Python bindings for ifm3d</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/content/python.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -74,7 +77,7 @@
            <div itemprop="articleBody">
              
   <div class="section" id="python-bindings-for-ifm3d">
-<h1>Python bindings for ifm3d<a class="headerlink" href="#python-bindings-for-ifm3d" title="Permalink to this headline"></a></h1>
+<h1>Python bindings for ifm3d<a class="headerlink" href="#python-bindings-for-ifm3d" title="Permalink to this heading"></a></h1>
 <p>The <code class="docutils literal notranslate"><span class="pre">pybind11</span></code> module provides a direct Python binding to the <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> C++ APIs,
 built with the <a class="reference external" href="https://github.com/pybind/pybind11">pybind11</a> library.</p>
 <p>All generic functionality from the <code class="docutils literal notranslate"><span class="pre">camera</span></code> and <code class="docutils literal notranslate"><span class="pre">framegrabber</span></code> modules
@@ -87,7 +90,7 @@ are not officially supported or tested.</p>
 </div></blockquote>
 </div>
 <div class="section" id="python-dependencies">
-<h1>Python Dependencies<a class="headerlink" href="#python-dependencies" title="Permalink to this headline"></a></h1>
+<h1>Python Dependencies<a class="headerlink" href="#python-dependencies" title="Permalink to this heading"></a></h1>
 <p>The <code class="docutils literal notranslate"><span class="pre">pybind11</span></code> module leverages <code class="docutils literal notranslate"><span class="pre">numpy</span></code> as an image container. Ensure <code class="docutils literal notranslate"><span class="pre">numpy</span></code>
 has been installed in your python environment:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m pip install numpy
@@ -95,7 +98,7 @@ has been installed in your python environment:</p>
 </div>
 </div>
 <div class="section" id="linux-installation">
-<h1>Linux Installation<a class="headerlink" href="#linux-installation" title="Permalink to this headline"></a></h1>
+<h1>Linux Installation<a class="headerlink" href="#linux-installation" title="Permalink to this heading"></a></h1>
 <p>The <code class="docutils literal notranslate"><span class="pre">pybind11</span></code> module can be built in several ways depending on your python
 workflow.</p>
 <ul class="simple">
@@ -107,7 +110,7 @@ especially sandboxed environments.</p></li>
 libraries are desired.</p></li>
 </ul>
 <div class="section" id="from-apt">
-<h2>From apt<a class="headerlink" href="#from-apt" title="Permalink to this headline"></a></h2>
+<h2>From apt<a class="headerlink" href="#from-apt" title="Permalink to this heading"></a></h2>
 <p>The ifm apt server for Ubuntu LTS releases includes packages for the
 distribution provided version of python3 via the <code class="docutils literal notranslate"><span class="pre">ifm3d-python3</span></code> package.</p>
 <p>Follow the instructions on the <span class="xref myst">README</span> to configure the
@@ -115,12 +118,12 @@ appropriate apt repository for your environment, and then install the packages
 of choice.</p>
 </div>
 <div class="section" id="building-from-source-cmake-or-setuptools">
-<h2>Building from source (CMake or setuptools)<a class="headerlink" href="#building-from-source-cmake-or-setuptools" title="Permalink to this headline"></a></h2>
+<h2>Building from source (CMake or setuptools)<a class="headerlink" href="#building-from-source-cmake-or-setuptools" title="Permalink to this heading"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">pybind11</span></code> module can be built and managed as a standard shared library
 (recommended for installations targeting system-level python interpreters) or
 as a standalone setuptools project (recommended for virtualenv, conda, etc).</p>
 <div class="section" id="build-dependencies-same-for-cmake-and-setuptools">
-<h3>Build Dependencies (same for CMake and setuptools)<a class="headerlink" href="#build-dependencies-same-for-cmake-and-setuptools" title="Permalink to this headline"></a></h3>
+<h3>Build Dependencies (same for CMake and setuptools)<a class="headerlink" href="#build-dependencies-same-for-cmake-and-setuptools" title="Permalink to this heading"></a></h3>
 <p>First, satisfy all dependencies for the <code class="docutils literal notranslate"><span class="pre">ifm3d-camera</span></code> and
 <code class="docutils literal notranslate"><span class="pre">ifm3d-framegrabber</span></code> modules according to the instructions on <span class="xref myst">Installing
 ifm3d from source</span>.</p>
@@ -145,7 +148,7 @@ interpreter of choice. For example, to target the Ubuntu python interpreter:</p>
 </div>
 </div>
 <div class="section" id="compiling-and-installing-with-setuptools">
-<h3>Compiling and Installing with setuptools<a class="headerlink" href="#compiling-and-installing-with-setuptools" title="Permalink to this headline"></a></h3>
+<h3>Compiling and Installing with setuptools<a class="headerlink" href="#compiling-and-installing-with-setuptools" title="Permalink to this heading"></a></h3>
 <p>For users where the apt repository does not apply, or users of sandboxed
 python installations (including virtualenv, conda, etc) we provide
 a setuptools compliant <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> in the top level of the ifm3d project.</p>
@@ -167,29 +170,29 @@ pip, etc.</p>
 </div>
 <p>And <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">show</span> <span class="pre">-f</span> <span class="pre">ifm3dpy</span></code> produces the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Name</span><span class="p">:</span> <span class="n">ifm3dpy</span>
-<span class="n">Version</span><span class="p">:</span> <span class="mf">0.18</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">Version</span><span class="p">:</span> <span class="mf">0.18.0</span>
 <span class="n">Summary</span><span class="p">:</span> <span class="n">Library</span> <span class="k">for</span> <span class="n">working</span> <span class="k">with</span> <span class="n">ifm</span> <span class="n">pmd</span><span class="o">-</span><span class="n">based</span> <span class="mi">3</span><span class="n">D</span> <span class="n">ToF</span> <span class="n">Cameras</span>
 <span class="n">Home</span><span class="o">-</span><span class="n">page</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ifm</span><span class="o">/</span><span class="n">ifm3d</span>
 <span class="n">Author</span><span class="p">:</span> <span class="n">Sean</span> <span class="n">Kelly</span>
 <span class="n">Author</span><span class="o">-</span><span class="n">email</span><span class="p">:</span> <span class="n">Sean</span><span class="o">.</span><span class="n">Kelly</span><span class="nd">@ifm</span><span class="o">.</span><span class="n">com</span>
 <span class="n">License</span><span class="p">:</span> <span class="n">Apache</span> <span class="mf">2.0</span>
-<span class="n">Location</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">&gt;/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span>
+<span class="n">Location</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">&gt;/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span>
 <span class="n">Requires</span><span class="p">:</span>
 <span class="n">Required</span><span class="o">-</span><span class="n">by</span><span class="p">:</span>
 <span class="n">Files</span><span class="p">:</span>
-  <span class="n">ifm3dpy</span><span class="o">-</span><span class="mf">0.18</span><span class="o">.</span><span class="mf">0.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span><span class="o">/</span><span class="n">INSTALLER</span>
-  <span class="n">ifm3dpy</span><span class="o">-</span><span class="mf">0.18</span><span class="o">.</span><span class="mf">0.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span><span class="o">/</span><span class="n">LICENSE</span>
-  <span class="n">ifm3dpy</span><span class="o">-</span><span class="mf">0.18</span><span class="o">.</span><span class="mf">0.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span><span class="o">/</span><span class="n">LICENSE</span><span class="o">.</span><span class="n">MIT</span>
-  <span class="n">ifm3dpy</span><span class="o">-</span><span class="mf">0.18</span><span class="o">.</span><span class="mf">0.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span><span class="o">/</span><span class="n">METADATA</span>
-  <span class="n">ifm3dpy</span><span class="o">-</span><span class="mf">0.18</span><span class="o">.</span><span class="mf">0.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span><span class="o">/</span><span class="n">RECORD</span>
-  <span class="n">ifm3dpy</span><span class="o">-</span><span class="mf">0.18</span><span class="o">.</span><span class="mf">0.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span><span class="o">/</span><span class="n">WHEEL</span>
-  <span class="n">ifm3dpy</span><span class="o">-</span><span class="mf">0.18</span><span class="o">.</span><span class="mf">0.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span><span class="o">/</span><span class="n">top_level</span><span class="o">.</span><span class="n">txt</span>
+  <span class="n">ifm3dpy</span><span class="o">-</span><span class="mf">0.18.0</span><span class="o">.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span><span class="o">/</span><span class="n">INSTALLER</span>
+  <span class="n">ifm3dpy</span><span class="o">-</span><span class="mf">0.18.0</span><span class="o">.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span><span class="o">/</span><span class="n">LICENSE</span>
+  <span class="n">ifm3dpy</span><span class="o">-</span><span class="mf">0.18.0</span><span class="o">.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span><span class="o">/</span><span class="n">LICENSE</span><span class="o">.</span><span class="n">MIT</span>
+  <span class="n">ifm3dpy</span><span class="o">-</span><span class="mf">0.18.0</span><span class="o">.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span><span class="o">/</span><span class="n">METADATA</span>
+  <span class="n">ifm3dpy</span><span class="o">-</span><span class="mf">0.18.0</span><span class="o">.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span><span class="o">/</span><span class="n">RECORD</span>
+  <span class="n">ifm3dpy</span><span class="o">-</span><span class="mf">0.18.0</span><span class="o">.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span><span class="o">/</span><span class="n">WHEEL</span>
+  <span class="n">ifm3dpy</span><span class="o">-</span><span class="mf">0.18.0</span><span class="o">.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span><span class="o">/</span><span class="n">top_level</span><span class="o">.</span><span class="n">txt</span>
   <span class="n">ifm3dpy</span><span class="o">.</span><span class="n">cpython</span><span class="o">-</span><span class="mi">37</span><span class="n">m</span><span class="o">-</span><span class="n">x86_64</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">gnu</span><span class="o">.</span><span class="n">so</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="compiling-and-installing-with-cmake">
-<h3>Compiling and Installing with CMake<a class="headerlink" href="#compiling-and-installing-with-cmake" title="Permalink to this headline"></a></h3>
+<h3>Compiling and Installing with CMake<a class="headerlink" href="#compiling-and-installing-with-cmake" title="Permalink to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">pybind11</span></code> module may be compiled and installed from source via CMake
 (same semantics as the rest of the ifm3d modules) by specifying
 <code class="docutils literal notranslate"><span class="pre">-DBUILD_MODULE_PYBIND11=ON</span></code> on your CMake command.</p>
@@ -229,11 +232,11 @@ Alternatively, the python installation directory can be overridden by adding
 </div>
 </div>
 <div class="section" id="windows-installation">
-<h1>Windows Installation<a class="headerlink" href="#windows-installation" title="Permalink to this headline"></a></h1>
+<h1>Windows Installation<a class="headerlink" href="#windows-installation" title="Permalink to this heading"></a></h1>
 <p>For Windows installations, as there is no default system-wide python out of the
 box, we recommend using <code class="docutils literal notranslate"><span class="pre">pip</span></code> and <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> to minimize complexity.</p>
 <div class="section" id="build-dependences">
-<h2>Build Dependences<a class="headerlink" href="#build-dependences" title="Permalink to this headline"></a></h2>
+<h2>Build Dependences<a class="headerlink" href="#build-dependences" title="Permalink to this heading"></a></h2>
 <p>First, follow all the setup and dependency installation steps found in the
 <span class="xref myst">Windows Installation</span> documentation. For bare minimum python
 requirements, follow the guidance for the <code class="docutils literal notranslate"><span class="pre">OpenCV</span></code> image container instead of
@@ -242,12 +245,12 @@ are <code class="docutils literal notranslate"><span class="pre">boost</span></c
 dependencies; do not continue on to installing ifm3d.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">pybind11</span></code> module takes one additional dependency:</p>
 <div class="section" id="pybind11">
-<h3><a class="reference external" href="https://github.com/pybind/pybind11">Pybind11</a><a class="headerlink" href="#pybind11" title="Permalink to this headline"></a></h3>
+<h3><a class="reference external" href="https://github.com/pybind/pybind11">Pybind11</a><a class="headerlink" href="#pybind11" title="Permalink to this heading"></a></h3>
 <p>Download:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>
 <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pybind</span><span class="o">/</span><span class="n">pybind11</span><span class="o">.</span><span class="n">git</span>
 <span class="n">cd</span> <span class="n">pybind11</span>
-<span class="n">git</span> <span class="n">checkout</span> <span class="n">tags</span><span class="o">/</span><span class="n">v2</span><span class="o">.</span><span class="mf">3.0</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">tags</span><span class="o">/</span><span class="n">v2</span><span class="mf">.3.0</span>
 </pre></div>
 </div>
 <p>Build:</p>
@@ -260,7 +263,7 @@ dependencies; do not continue on to installing ifm3d.</p>
 </div>
 </div>
 <div class="section" id="building">
-<h2>Building<a class="headerlink" href="#building" title="Permalink to this headline"></a></h2>
+<h2>Building<a class="headerlink" href="#building" title="Permalink to this heading"></a></h2>
 <p>First, clone the ifm3d repo:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">%</span><span class="n">IFM3D_BUILD_DIR</span><span class="o">%</span>
 <span class="n">git</span> <span class="n">clone</span>  <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ifm</span><span class="o">/</span><span class="n">ifm3d</span><span class="o">.</span><span class="n">git</span>
@@ -282,7 +285,7 @@ to let <code class="docutils literal notranslate"><span class="pre">setup.py</sp
 </div>
 </div>
 <div class="section" id="running-tests">
-<h1>Running Tests<a class="headerlink" href="#running-tests" title="Permalink to this headline"></a></h1>
+<h1>Running Tests<a class="headerlink" href="#running-tests" title="Permalink to this heading"></a></h1>
 <p>The <code class="docutils literal notranslate"><span class="pre">pybind11</span></code> module ships with pytest unit tests, so ensure pytest is
 installed:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m pip install pytest
@@ -295,7 +298,7 @@ $ python -m pytest .
 </div>
 </div>
 <div class="section" id="usage">
-<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline"></a></h1>
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h1>
 <p>The semantics of the python library are intentionally a 1:1 mapping with the
 C++ API, so all samples and existing code can port directly. Here is a python
 translation of the C++ sample found in the <span class="xref myst">ifm3d Basic Library
@@ -309,9 +312,9 @@ Usage</span> document.</p>
     <span class="n">fg</span> <span class="o">=</span> <span class="n">ifm3dpy</span><span class="o">.</span><span class="n">FrameGrabber</span><span class="p">(</span><span class="n">cam</span><span class="p">)</span>
     <span class="n">im</span> <span class="o">=</span> <span class="n">ifm3dpy</span><span class="o">.</span><span class="n">ImageBuffer</span><span class="p">()</span>
 
-    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">fg</span><span class="o">.</span><span class="n">wait_for_frame</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="mi">1000</span><span class="p">):</span>
-            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Timeout waiting for camera!&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Timeout waiting for camera!&quot;</span><span class="p">)</span>
             <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
 
         <span class="n">amp</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">amplitude_image</span><span class="p">()</span>
@@ -326,7 +329,7 @@ Usage</span> document.</p>
 </div>
 <p>There are a couple aspects of the python bindings that are worth highlighting.</p>
 <div class="section" id="memory-ownership">
-<h2>Memory Ownership<a class="headerlink" href="#memory-ownership" title="Permalink to this headline"></a></h2>
+<h2>Memory Ownership<a class="headerlink" href="#memory-ownership" title="Permalink to this heading"></a></h2>
 <p>In order to maximize performance, memory is allocated and owned in the C++
 layer that backs the python library. Pixel data is <em>not</em> copied across. So
 while <code class="docutils literal notranslate"><span class="pre">amp</span></code> and <code class="docutils literal notranslate"><span class="pre">xyz</span></code> are <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> objects in the above sample, they do
@@ -347,7 +350,7 @@ data will remain valid as long as a referencing python object remains in
 scope.</p>
 </div>
 <div class="section" id="multithreading-and-multiprocessing">
-<h2>Multithreading and Multiprocessing<a class="headerlink" href="#multithreading-and-multiprocessing" title="Permalink to this headline"></a></h2>
+<h2>Multithreading and Multiprocessing<a class="headerlink" href="#multithreading-and-multiprocessing" title="Permalink to this heading"></a></h2>
 <p>Due to the single ASIO event loop under the hood, <em>multiprocessing</em> is not
 supported by this library and will lead to unwanted behavior.</p>
 <p>The C++ bindings do support true multithreading and release the python GIL for
@@ -355,7 +358,7 @@ long running operations. This is most useful for scenarios where one thread is
 blocking on <code class="docutils literal notranslate"><span class="pre">wait_for_frame</span></code> and another thread is software triggering.</p>
 </div>
 <div class="section" id="ifm3dpy-framegrabber-reset-method">
-<h2>ifm3dpy.FrameGrabber.reset() Method<a class="headerlink" href="#ifm3dpy-framegrabber-reset-method" title="Permalink to this headline"></a></h2>
+<h2>ifm3dpy.FrameGrabber.reset() Method<a class="headerlink" href="#ifm3dpy-framegrabber-reset-method" title="Permalink to this heading"></a></h2>
 <p>One usage pattern of the ifm3d C++ API is to use the
 <code class="docutils literal notranslate"><span class="pre">std::shared_ptr&lt;ifm3d::FrameGrabber&gt;::reset()</span></code> method in order to change
 associated cameras or imager mask settings. Since this happens directly at the

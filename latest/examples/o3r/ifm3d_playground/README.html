@@ -15,7 +15,9 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -46,6 +48,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../python_api.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../cpp_api/annotated.html">C++ API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../content/ChangeLog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
 </ul>
 
@@ -62,8 +65,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>ifm3d playground project</li>
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">ifm3d playground project</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../_sources/examples/o3r/ifm3d_playground/README.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -73,16 +76,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="tex2jax_ignore mathjax_ignore section" id="ifm3d-playground-project">
-<h1>ifm3d playground project<a class="headerlink" href="#ifm3d-playground-project" title="Permalink to this headline"></a></h1>
+  <div class="section" id="ifm3d-playground-project">
+<h1>ifm3d playground project<a class="headerlink" href="#ifm3d-playground-project" title="Permalink to this heading"></a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">ifm3d_playground</span></code> provides the out of ifm3d source example with cmake configurations.
 User can copy ifm3d_playground folder out of the ifm3d source and can use following instructions
 to build the example and develop it further.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ifm3d_playground
-$ mkdir build 
-$ <span class="nb">cd</span> build 
-$ cmake -DCMAKE_PREFIX_PATH<span class="o">=</span>&lt;ifm3d install path&gt; ..
-$ cmake --build . --config Release --target ALL_BUILD
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>ifm3d_playground
+$<span class="w"> </span>mkdir<span class="w"> </span>build<span class="w"> </span>
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build<span class="w"> </span>
+$<span class="w"> </span>cmake<span class="w"> </span>-DCMAKE_PREFIX_PATH<span class="o">=</span>&lt;ifm3d<span class="w"> </span>install<span class="w"> </span>path&gt;<span class="w"> </span>..
+$<span class="w"> </span>cmake<span class="w"> </span>--build<span class="w"> </span>.<span class="w"> </span>--config<span class="w"> </span>Release<span class="w"> </span>--target<span class="w"> </span>ALL_BUILD
 </pre></div>
 </div>
 </div>

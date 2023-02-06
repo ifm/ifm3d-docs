@@ -15,7 +15,9 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -46,6 +48,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../python_api.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../cpp_api/annotated.html">C++ API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../examples/examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ChangeLog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
 </ul>
 
@@ -62,8 +65,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>First steps with ifm3d/ifm3dpy</li>
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">First steps with ifm3d/ifm3dpy</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../_sources/content/examples/basic_lib_usage/first_steps_ifm3dpy.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -73,11 +76,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="tex2jax_ignore mathjax_ignore section" id="first-steps-with-ifm3d-ifm3dpy">
-<h1>First steps with ifm3d/ifm3dpy<a class="headerlink" href="#first-steps-with-ifm3d-ifm3dpy" title="Permalink to this headline"></a></h1>
+  <div class="section" id="first-steps-with-ifm3d-ifm3dpy">
+<h1>First steps with ifm3d/ifm3dpy<a class="headerlink" href="#first-steps-with-ifm3d-ifm3dpy" title="Permalink to this heading"></a></h1>
 <p>After installing the ifm3d/ifm3dpy library, you most likely want to receive an image as fast and possible. The next steps will guide you through the process. You will find more information in the <span class="xref myst">ifm3d API documentation</span>.</p>
 <div class="section" id="run-conf-idle">
-<h2>RUN/CONF/IDLE<a class="headerlink" href="#run-conf-idle" title="Permalink to this headline"></a></h2>
+<h2>RUN/CONF/IDLE<a class="headerlink" href="#run-conf-idle" title="Permalink to this heading"></a></h2>
 <p><strong><font color="red"> The default configuration of all heads is “CONF”. You cannot receive any images before changing to “RUN”.</font></strong></p>
 <p>To set a head into <code class="docutils literal notranslate"><span class="pre">&quot;RUN&quot;</span></code>, the configuration of the <code class="docutils literal notranslate"><span class="pre">VPU</span></code> needs to be changed. This change needs to be uploaded to the VPU afterwards.</p>
 <p>Please refer to the <span class="xref myst">this section</span> for more information.</p>
@@ -93,12 +96,12 @@
 <p>Note: Depending where your imager is connected, <code class="docutils literal notranslate"><span class="pre">'port2'</span></code> might not work.</p>
 </div>
 <div class="section" id="receive-an-image">
-<h2>Receive an image<a class="headerlink" href="#receive-an-image" title="Permalink to this headline"></a></h2>
+<h2>Receive an image<a class="headerlink" href="#receive-an-image" title="Permalink to this heading"></a></h2>
 <p>If the head is in <code class="docutils literal notranslate"><span class="pre">&quot;RUN&quot;</span></code>, it is possible to receive images.</p>
 <p>Please refer to <span class="xref myst">this section</span> for more information.</p>
 <p>To display the image directly, we use <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ifm3dpy</span> <span class="kn">import</span> <span class="n">O3R</span><span class="p">,</span> <span class="n">FrameGrabber</span><span class="p">,</span> <span class="n">buffer_id</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="n">o3r</span> <span class="o">=</span> <span class="n">O3R</span><span class="p">()</span>
 <span class="n">fg</span> <span class="o">=</span> <span class="n">FrameGrabber</span><span class="p">(</span><span class="n">o3r</span><span class="p">,</span> <span class="n">pcic_port</span><span class="o">=</span><span class="mi">50012</span><span class="p">)</span> <span class="c1">#Expecting a head on Port 2 (Port 2 == 50012)</span>

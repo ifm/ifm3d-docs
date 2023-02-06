@@ -15,7 +15,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -58,6 +60,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../python_api.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp_api/annotated.html">C++ API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../examples/examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ChangeLog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
 </ul>
 
@@ -74,10 +77,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html">Installing the software</a> &raquo;</li>
-          <li><a href="install_source_package_index.html">Install binary package</a> &raquo;</li>
-      <li>Installing ifm3d from source</li>
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Installing the software</a></li>
+          <li class="breadcrumb-item"><a href="install_source_package_index.html">Install binary package</a></li>
+      <li class="breadcrumb-item active">Installing ifm3d from source</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/content/installation_instructions/install_from_source_linux.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -88,11 +91,11 @@
            <div itemprop="articleBody">
              
   <div class="section" id="installing-ifm3d-from-source">
-<h1>Installing ifm3d from source<a class="headerlink" href="#installing-ifm3d-from-source" title="Permalink to this headline"></a></h1>
+<h1>Installing ifm3d from source<a class="headerlink" href="#installing-ifm3d-from-source" title="Permalink to this heading"></a></h1>
 <p><strong>Note</strong>: Following Instruction are for ifm3d-v1.0.0 and above which provide full support for O3R devices. if you are using O3D/O3X device please use ifm3d-v0.20.3
 and follow these <a class="reference external" href="https://github.com/ifm/ifm3d/blob/v0.20.3/doc/source_build.md">instructions</a></p>
 <div class="section" id="overview-of-the-available-build-flags">
-<h2>Overview of the available build flags<a class="headerlink" href="#overview-of-the-available-build-flags" title="Permalink to this headline"></a></h2>
+<h2>Overview of the available build flags<a class="headerlink" href="#overview-of-the-available-build-flags" title="Permalink to this heading"></a></h2>
 <table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Flag name</p></th>
@@ -153,7 +156,7 @@ and follow these <a class="reference external" href="https://github.com/ifm/ifm3
 </table>
 </div>
 <div class="section" id="build-dependencies">
-<h2>Build Dependencies<a class="headerlink" href="#build-dependencies" title="Permalink to this headline"></a></h2>
+<h2>Build Dependencies<a class="headerlink" href="#build-dependencies" title="Permalink to this heading"></a></h2>
 <table>
   <tr>
     <th>Dependency</th>
@@ -194,12 +197,12 @@ and follow these <a class="reference external" href="https://github.com/ifm/ifm3
 </table>
 </div>
 <div class="section" id="building-from-source">
-<h2>Building From Source<a class="headerlink" href="#building-from-source" title="Permalink to this headline"></a></h2>
+<h2>Building From Source<a class="headerlink" href="#building-from-source" title="Permalink to this heading"></a></h2>
 <p>Start with cloning the code from the ifm3d github repository <a class="reference external" href="https://github.com/ifm/ifm3d">here</a>.</p>
 <p>⚠ The code on the branch main is updated nightly and contains the latest changes to the library. It is typically a work in progress.<br />
 ⚠ We recommend using tagged versions for your builds, to ensure consistency between builds. The latest tagged version can be found <a class="reference external" href="https://github.com/ifm/ifm3d/tags">here</a>.</p>
 <div class="section" id="the-default-build">
-<h3>The default build<a class="headerlink" href="#the-default-build" title="Permalink to this headline"></a></h3>
+<h3>The default build<a class="headerlink" href="#the-default-build" title="Permalink to this heading"></a></h3>
 <p>By default, the <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> build enables the <code class="docutils literal notranslate"><span class="pre">device</span></code>, <code class="docutils literal notranslate"><span class="pre">framegrabber</span></code>, <code class="docutils literal notranslate"><span class="pre">swupdater</span></code>,
 and <code class="docutils literal notranslate"><span class="pre">tools</span></code> modules. Building the software follows the usual cmake idiom of:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mkdir build
@@ -215,7 +218,7 @@ $ sudo cmake --build . --target install
 </div></blockquote>
 </div>
 <div class="section" id="building-the-examples">
-<h3>Building the examples<a class="headerlink" href="#building-the-examples" title="Permalink to this headline"></a></h3>
+<h3>Building the examples<a class="headerlink" href="#building-the-examples" title="Permalink to this heading"></a></h3>
 <p>The examples can be built along with the rest of the library by switching the DBUILD_EXAMPLES flag on. Assuming you are in the /build folder:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cmake -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_EXAMPLES=ON ..
 $ cmake --build . --target ALL_BUILD
@@ -224,11 +227,11 @@ $ cmake --build . --target ALL_BUILD
 </div>
 </div>
 <div class="section" id="build-debian-packages-from-source">
-<h2>Build debian packages from source<a class="headerlink" href="#build-debian-packages-from-source" title="Permalink to this headline"></a></h2>
+<h2>Build debian packages from source<a class="headerlink" href="#build-debian-packages-from-source" title="Permalink to this heading"></a></h2>
 <p>This additional section provides instructions to build Debian packages from ifm3d source.<br />
 To install the existing ifm3d Debian packages please refer to <span class="xref myst">this</span> section.</p>
 <div class="section" id="install-dependencies-for-ifm3d-debian-packages">
-<h3>Install dependencies for ifm3d debian packages<a class="headerlink" href="#install-dependencies-for-ifm3d-debian-packages" title="Permalink to this headline"></a></h3>
+<h3>Install dependencies for ifm3d debian packages<a class="headerlink" href="#install-dependencies-for-ifm3d-debian-packages" title="Permalink to this heading"></a></h3>
 <p>If you plan to build the debian packages and have the
 dependencies computed for you dynamically (see the note below on the
 <code class="docutils literal notranslate"><span class="pre">repackage</span></code> target), you will also need:</p>
@@ -263,7 +266,7 @@ $ sudo apt-get update &amp;&amp; sudo apt-get install pybind11-dev
 Above apt-get commands are specific to Debian based systems</p>
 </div>
 <div class="section" id="building-debian-packages">
-<h3>Building debian packages<a class="headerlink" href="#building-debian-packages" title="Permalink to this headline"></a></h3>
+<h3>Building debian packages<a class="headerlink" href="#building-debian-packages" title="Permalink to this heading"></a></h3>
 <p>Alternatively, to build <em>debs</em> to be distributed to multiple runtime machines, you can use the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mkdir build
 $ cd build

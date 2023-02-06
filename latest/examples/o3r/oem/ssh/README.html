@@ -15,7 +15,9 @@
         <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
         <script src="../../../../_static/jquery.js"></script>
         <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" /> 
@@ -46,6 +48,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../python_api.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../cpp_api/annotated.html">C++ API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../content/ChangeLog.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
 </ul>
 
@@ -62,8 +65,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Generating and uploading ssh keys</li>
+      <li><a href="../../../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Generating and uploading ssh keys</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../../_sources/examples/o3r/oem/ssh/README.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -73,17 +76,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="tex2jax_ignore mathjax_ignore section" id="generating-and-uploading-ssh-keys">
-<h1>Generating and uploading ssh keys<a class="headerlink" href="#generating-and-uploading-ssh-keys" title="Permalink to this headline"></a></h1>
+  <div class="section" id="generating-and-uploading-ssh-keys">
+<h1>Generating and uploading ssh keys<a class="headerlink" href="#generating-and-uploading-ssh-keys" title="Permalink to this heading"></a></h1>
 <p>It is possible to connect via <code class="docutils literal notranslate"><span class="pre">ssh</span></code> to the VPU, using the user <code class="docutils literal notranslate"><span class="pre">oem</span></code>. The <code class="docutils literal notranslate"><span class="pre">oem</span></code> user has however no default password. To still access the VPU a ssh key is needed. Fur further information look into the official documentation [here](<em>insert link</em>). The python script <code class="docutils literal notranslate"><span class="pre">uploadSSHKey.py</span></code> is a sample python script generating ssh keys and using <code class="docutils literal notranslate"><span class="pre">ifm3dpy</span></code> for the deployment on the VPU.</p>
 <p><code class="docutils literal notranslate"><span class="pre">uploadSSHKey.py</span></code> also consists of an CLI. Use <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">uploadSSHKey.py</span> <span class="pre">--help</span></code> for further information.</p>
 <div class="section" id="using-the-cli">
-<h2>Using the CLI<a class="headerlink" href="#using-the-cli" title="Permalink to this headline"></a></h2>
+<h2>Using the CLI<a class="headerlink" href="#using-the-cli" title="Permalink to this heading"></a></h2>
 <p>The easiest way to generate, save and upload the keys is using the CLI.</p>
 <p>On posix systems, you can add the executable flag to the python script and
 run it directly:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>devoegse@Ubuntu:~/Git/ifm3d/examples/o3r/oem/ssh$ chmod +x uploadSSHKey.py
-devoegse@Ubuntu:~/Git/ifm3d/examples/o3r/oem/ssh$ ./uploadSSHKey.py --help
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>devoegse@Ubuntu:~/Git/ifm3d/examples/o3r/oem/ssh$<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>uploadSSHKey.py
+devoegse@Ubuntu:~/Git/ifm3d/examples/o3r/oem/ssh$<span class="w"> </span>./uploadSSHKey.py<span class="w"> </span>--help
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python3 -m uploadSSHKeys.py [key name] [passphrase] --savekeys --uploadkey</span>
@@ -96,7 +99,7 @@ devoegse@Ubuntu:~/Git/ifm3d/examples/o3r/oem/ssh$ ./uploadSSHKey.py --help
 <p>Use <code class="docutils literal notranslate"><span class="pre">--uploadkeys</span></code> as option to upload the public key to the O3R. Default: False</p>
 </div>
 <div class="section" id="generating-ssh-keys">
-<h2>Generating ssh keys<a class="headerlink" href="#generating-ssh-keys" title="Permalink to this headline"></a></h2>
+<h2>Generating ssh keys<a class="headerlink" href="#generating-ssh-keys" title="Permalink to this heading"></a></h2>
 <p>Use <code class="docutils literal notranslate"><span class="pre">generateKeys</span></code> to generate the ssh keys:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Generate ssh keys with key size 4096 bytes.</span>
@@ -110,7 +113,7 @@ devoegse@Ubuntu:~/Git/ifm3d/examples/o3r/oem/ssh$ ./uploadSSHKey.py --help
 </div>
 </div>
 <div class="section" id="save-the-keys">
-<h2>Save the keys<a class="headerlink" href="#save-the-keys" title="Permalink to this headline"></a></h2>
+<h2>Save the keys<a class="headerlink" href="#save-the-keys" title="Permalink to this heading"></a></h2>
 <p>Use <code class="docutils literal notranslate"><span class="pre">saveKeys</span></code> to save the keys within the ssh directory:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Save the keys on the system.</span>
@@ -122,7 +125,7 @@ devoegse@Ubuntu:~/Git/ifm3d/examples/o3r/oem/ssh$ ./uploadSSHKey.py --help
 </div>
 </div>
 <div class="section" id="uploading-keys">
-<h2>Uploading keys<a class="headerlink" href="#uploading-keys" title="Permalink to this headline"></a></h2>
+<h2>Uploading keys<a class="headerlink" href="#uploading-keys" title="Permalink to this heading"></a></h2>
 <p>Use <code class="docutils literal notranslate"><span class="pre">upload</span></code> to upload the public key:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Add the new key to the config and upload the configuration back to the</span>
