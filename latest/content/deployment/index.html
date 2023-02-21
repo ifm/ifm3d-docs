@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>&lt;no title&gt; &mdash; ifm3d  documentation</title>
+  <title>Configuring ifm3d for deployment &mdash; ifm3d  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
@@ -20,7 +20,9 @@
         <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Logging in ifm3d" href="logging.html" />
+    <link rel="prev" title="ifm3d::Buffer- Basic C++ STL container for ifm3d" href="../stlimage.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,14 +40,17 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../README.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../installation_instructions/index.html">Installation instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../migration_guide/index.html">Migration Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../examples/index.html">Basic library usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cli_link.html">Command Line tool</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../stlimage.html">Manipulating images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../deployment/index.html">Deployment</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Deployment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../python_api.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp_api/annotated.html">C++ API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../examples/examples_list.html">Examples</a></li>
@@ -67,9 +72,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">&lt;no title&gt;</li>
+      <li class="breadcrumb-item active">Configuring ifm3d for deployment</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/content/news/news_release.md.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/content/deployment/index.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -77,16 +82,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="admonition-news admonition">
-<p class="admonition-title">News</p>
-<p>The latest release of ifm3d is version 1.2.0. Please take a look at the <span class="xref myst">migration guide</span> for breaking changes.</p>
-<p>A detailed list of all changes is available under <span class="xref myst">Changelog</span>.</p>
+  <div class="section" id="configuring-ifm3d-for-deployment">
+<h1>Configuring ifm3d for deployment<a class="headerlink" href="#configuring-ifm3d-for-deployment" title="Permalink to this heading"></a></h1>
+<p>The ifm3d API is designed as a software package to be used for development purposes as well as to be deployment ready.</p>
+<p>For testing purposes our recommendation is to use the supplied API (C++ and Python) as documented in the examples section.
+For deployment purposes the same API can be used, but the user is required to follow certain process to ensure robustness during runtime on embedded systems / IPCs.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
+</ul>
+</div>
 </div>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../stlimage.html" class="btn btn-neutral float-left" title="ifm3d::Buffer- Basic C++ STL container for ifm3d" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="logging.html" class="btn btn-neutral float-right" title="Logging in ifm3d" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
