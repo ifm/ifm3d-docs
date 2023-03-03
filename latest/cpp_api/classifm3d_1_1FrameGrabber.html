@@ -137,8 +137,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0bcaaf3a21897fadbcd4fe267aa139d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad76d616c98cfde74adedb6de34d1793"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#aad76d616c98cfde74adedb6de34d1793">OnNewFrame</a> (NewFrameCallback callback=nullptr)</td></tr>
 <tr class="separator:aad76d616c98cfde74adedb6de34d1793"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adffefb711cacd2730991af483de3cc73"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#adffefb711cacd2730991af483de3cc73">Start</a> (const BufferList &amp;buffers, const std::optional&lt; <a class="el" href="classifm3d_1_1json.html">json</a> &gt; &amp;pcicFormat=std::nullopt)</td></tr>
-<tr class="separator:adffefb711cacd2730991af483de3cc73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a207a67d3b3a8affa46dd0aaf2ed36c04"><td class="memItemLeft" align="right" valign="top">std::shared_future&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a207a67d3b3a8affa46dd0aaf2ed36c04">Start</a> (const BufferList &amp;buffers, const std::optional&lt; <a class="el" href="classifm3d_1_1json.html">json</a> &gt; &amp;pcicFormat=std::nullopt)</td></tr>
+<tr class="separator:a207a67d3b3a8affa46dd0aaf2ed36c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a12c26b81bd4cd01291f649ac7ce844"><td class="memItemLeft" align="right" valign="top">std::shared_future&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a6a12c26b81bd4cd01291f649ac7ce844">Stop</a> ()</td></tr>
 <tr class="separator:a6a12c26b81bd4cd01291f649ac7ce844"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41863acd226d087671594f47af3b0e32"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a41863acd226d087671594f47af3b0e32">IsRunning</a> ()</td></tr>
@@ -339,14 +339,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="adffefb711cacd2730991af483de3cc73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adffefb711cacd2730991af483de3cc73">&#9670;&nbsp;</a></span>Start()</h2>
+<a id="a207a67d3b3a8affa46dd0aaf2ed36c04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a207a67d3b3a8affa46dd0aaf2ed36c04">&#9670;&nbsp;</a></span>Start()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool ifm3d::FrameGrabber::Start </td>
+          <td class="memname">std::shared_future&lt;void&gt; ifm3d::FrameGrabber::Start </td>
           <td>(</td>
           <td class="paramtype">const BufferList &amp;&#160;</td>
           <td class="paramname"><em>buffers</em>, </td>
@@ -365,6 +365,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Starts the worker thread for streaming in pixel data from the device</p>
+<p>Returns a future that will resolve when the <a class="el" href="classifm3d_1_1FrameGrabber.html">FrameGrabber</a> is ready to receive frames.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">buffers</td><td>set of buffer_ids for receiving, passing in an empty set will received all available images. The buffer_ids are specific to the current <a class="el" href="classifm3d_1_1Organizer.html">Organizer</a>. See buffer_id for a list of buffer_ids available with the default <a class="el" href="classifm3d_1_1Organizer.html">Organizer</a></td></tr>
