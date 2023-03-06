@@ -39,6 +39,7 @@ ifm3dpy.device.O3R
       ~O3R.reboot_to_recovery
       ~O3R.remove
       ~O3R.reset
+      ~O3R.resolve_config
       ~O3R.save_init
       ~O3R.set
       ~O3R.to_json

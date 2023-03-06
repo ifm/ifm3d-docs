@@ -136,7 +136,7 @@ $(document).ready(function(){initNavTree('struct__o3r__ods__occupancy__grid__v1_
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        mkval&lt;std::uint32_t&gt;(start_ptr + ODS_OCCUPANCY_GRID_HEIGHT_INDEX);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      mkarray&lt;float, 6&gt;(</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        start_ptr + ODS_OCCUPANCY_GRID_TRANSFORM_CELL_CENTER_TO_USER_INDEX,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        transfor_cell_center_to_user);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        transform_cell_center_to_user);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      ods_occupancy_grid_v1_size =</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        ods_occupancy_grid_v1_minimum_size + width * height;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keywordflow">if</span> (size &lt; ods_occupancy_grid_v1_size)</div>
@@ -160,7 +160,7 @@ $(document).ready(function(){initNavTree('struct__o3r__ods__occupancy__grid__v1_
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">     * e.g, multiplying the matrix with [0,0,1] gives the user cordinate</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">     * of the center of upper left cell</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    std::array&lt;float, 6&gt; transfor_cell_center_to_user;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    std::array&lt;float, 6&gt; transform_cell_center_to_user;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">/*@brief Buffer of width* height of type uint8_t */</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="classifm3d_1_1Buffer.html">ifm3d::Buffer</a> image;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">/*@brief size of ODS_OCCUPANCY_GRID in bytes*/</span></div>

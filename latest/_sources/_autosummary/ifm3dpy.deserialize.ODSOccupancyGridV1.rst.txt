@@ -30,7 +30,7 @@ ifm3dpy.deserialize.ODSOccupancyGridV1
       ~ODSOccupancyGridV1.height
       ~ODSOccupancyGridV1.image
       ~ODSOccupancyGridV1.timestamp_ns
-      ~ODSOccupancyGridV1.transfor_cell_center_to_user
+      ~ODSOccupancyGridV1.transform_cell_center_to_user
       ~ODSOccupancyGridV1.width
    
    
