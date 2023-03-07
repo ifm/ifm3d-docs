@@ -153,39 +153,42 @@ $(document).ready(function(){initNavTree('frame_8h_source.html',''); initResizab
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">using</span> Ptr = std::shared_ptr&lt;Frame&gt;;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>(<span class="keyword">const</span> std::map&lt;buffer_id, Buffer&gt;&amp; images,</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;          <span class="keyword">const</span> std::vector&lt;TimePointT&gt; timestamps);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    ~<a class="code" href="classifm3d_1_1Frame.html">Frame</a>();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; t);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; t);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>(<a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp;&amp; t);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; operator=(<a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp;&amp; t);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    std::vector&lt;TimePointT&gt; TimeStamps();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">bool</span> HasBuffer(buffer_id <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="classifm3d_1_1Buffer.html">Buffer</a>&amp; GetBuffer(buffer_id <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    std::vector&lt;buffer_id&gt; GetBuffers();</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    decltype(std::declval&lt;std::map&lt;buffer_id, Buffer&gt;&gt;().begin())</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    begin() noexcept;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    decltype(std::declval&lt;<span class="keyword">const</span> std::map&lt;buffer_id, Buffer&gt;&gt;().begin()) begin()</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    decltype(std::declval&lt;std::map&lt;buffer_id, Buffer&gt;&gt;().end()) end() noexcept;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    decltype(std::declval&lt;<span class="keyword">const</span> std::map&lt;buffer_id, Buffer&gt;&gt;().end()) end()</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">class </span>Impl;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    std::unique_ptr&lt;Impl&gt; pImpl;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  }; <span class="comment">// end: class Organizer</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#endif // IFM3D_FG_FRAME_H</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;          <span class="keyword">const</span> std::vector&lt;TimePointT&gt; timestamps,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;          uint64_t frame_count);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    ~<a class="code" href="classifm3d_1_1Frame.html">Frame</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; t);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; t);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>(<a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp;&amp; t);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp; operator=(<a class="code" href="classifm3d_1_1Frame.html">Frame</a>&amp;&amp; t);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    std::vector&lt;TimePointT&gt; TimeStamps();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">bool</span> HasBuffer(buffer_id <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="classifm3d_1_1Buffer.html">Buffer</a>&amp; GetBuffer(buffer_id <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    uint32_t FrameCount();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    std::vector&lt;buffer_id&gt; GetBuffers();</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    decltype(std::declval&lt;std::map&lt;buffer_id, Buffer&gt;&gt;().begin())</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    begin() noexcept;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    decltype(std::declval&lt;<span class="keyword">const</span> std::map&lt;buffer_id, Buffer&gt;&gt;().begin()) begin()</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    decltype(std::declval&lt;std::map&lt;buffer_id, Buffer&gt;&gt;().end()) end() noexcept;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    decltype(std::declval&lt;<span class="keyword">const</span> std::map&lt;buffer_id, Buffer&gt;&gt;().end()) end()</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keyword">class </span>Impl;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    std::unique_ptr&lt;Impl&gt; pImpl;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  }; <span class="comment">// end: class Organizer</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="preprocessor">#endif // IFM3D_FG_FRAME_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassifm3d_1_1Buffer_html"><div class="ttname"><a href="classifm3d_1_1Buffer.html">ifm3d::Buffer</a></div><div class="ttdoc">The class Buffer represent a STL conatiner to store data from the ifm devices in 2 dimension and supp...</div><div class="ttdef"><b>Definition:</b> buffer.h:96</div></div>

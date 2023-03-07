@@ -102,9 +102,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>Ptr</b> = std::share
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aeed8378702c490cace185950792e5007"><td class="memItemLeft" align="right" valign="top"><a id="aeed8378702c490cace185950792e5007"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const std::map&lt; buffer_id, <a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &gt; &amp;images, const std::vector&lt; TimePointT &gt; timestamps)</td></tr>
-<tr class="separator:aeed8378702c490cace185950792e5007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e9c4b9774277fa3590d7b9cc2596c78"><td class="memItemLeft" align="right" valign="top"><a id="a4e9c4b9774277fa3590d7b9cc2596c78"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const std::map&lt; buffer_id, <a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &gt; &amp;images, const std::vector&lt; TimePointT &gt; timestamps, uint64_t frame_count)</td></tr>
+<tr class="separator:a4e9c4b9774277fa3590d7b9cc2596c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17377a20079de03dbfd53ef1d49034a2"><td class="memItemLeft" align="right" valign="top"><a id="a17377a20079de03dbfd53ef1d49034a2"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const <a class="el" href="classifm3d_1_1Frame.html">Frame</a> &amp;t)</td></tr>
 <tr class="separator:a17377a20079de03dbfd53ef1d49034a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,6 +126,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4514940165e6a990c82bd4554da05f0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Frame.html#a4514940165e6a990c82bd4554da05f0b">GetBuffer</a> (buffer_id id)</td></tr>
 <tr class="memdesc:a4514940165e6a990c82bd4554da05f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the image with the given id.  <a href="classifm3d_1_1Frame.html#a4514940165e6a990c82bd4554da05f0b">More...</a><br /></td></tr>
 <tr class="separator:a4514940165e6a990c82bd4554da05f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a607a1ba146ae7d78cbe93d43c3639a02"><td class="memItemLeft" align="right" valign="top"><a id="a607a1ba146ae7d78cbe93d43c3639a02"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Frame.html#a607a1ba146ae7d78cbe93d43c3639a02">FrameCount</a> ()</td></tr>
+<tr class="memdesc:a607a1ba146ae7d78cbe93d43c3639a02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the frame count according to algorithm output. <br /></td></tr>
+<tr class="separator:a607a1ba146ae7d78cbe93d43c3639a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d26762e4adcbf7bb61a445b435623af"><td class="memItemLeft" align="right" valign="top">std::vector&lt; buffer_id &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Frame.html#a4d26762e4adcbf7bb61a445b435623af">GetBuffers</a> ()</td></tr>
 <tr class="memdesc:a4d26762e4adcbf7bb61a445b435623af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of available buffers.  <a href="classifm3d_1_1Frame.html#a4d26762e4adcbf7bb61a445b435623af">More...</a><br /></td></tr>
 <tr class="separator:a4d26762e4adcbf7bb61a445b435623af"><td class="memSeparator" colspan="2">&#160;</td></tr>

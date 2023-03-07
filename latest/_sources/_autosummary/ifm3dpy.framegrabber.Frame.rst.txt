@@ -17,6 +17,7 @@ ifm3dpy.framegrabber.Frame
    .. autosummary::
    
       ~Frame.__init__
+      ~Frame.frame_count
       ~Frame.get_buffer
       ~Frame.get_buffers
       ~Frame.has_buffer

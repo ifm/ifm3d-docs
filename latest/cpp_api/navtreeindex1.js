@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"classifm3d_1_1O3R.html#a0d703bc04a0d893733cbb1f5c6983d82":[1,0,0,14,11],
 "classifm3d_1_1O3R.html#a11fca069af27c5a8eea3deea8d330d76":[1,0,0,14,10],
 "classifm3d_1_1O3R.html#a1352ba9088aaea3cafd09d1c1a5d270c":[1,0,0,14,13],
 "classifm3d_1_1O3R.html#a2c7a7f0a8cd315c014c2b5d8b6c1347b":[1,0,0,14,28],
@@ -189,8 +190,9 @@ var NAVTREEINDEX1 =
 "structifm3d_1_1IntrinsicCalibration.html#a651a0622a80881e8262ca4fcf821637b":[1,0,0,9,0],
 "structifm3d_1_1IntrinsicCalibration.html#a9ba2a24527796430dfe73d1d8ab75e05":[1,0,0,9,1],
 "structifm3d_1_1Organizer_1_1Result.html":[1,0,0,18,0],
-"structifm3d_1_1Organizer_1_1Result.html#a17dc147c186cecd4f89ee9091fa72d1e":[1,0,0,18,0,1],
-"structifm3d_1_1Organizer_1_1Result.html#a9b9779acc84ff27056a6c086ee2e3896":[1,0,0,18,0,0],
+"structifm3d_1_1Organizer_1_1Result.html#a17dc147c186cecd4f89ee9091fa72d1e":[1,0,0,18,0,2],
+"structifm3d_1_1Organizer_1_1Result.html#a4c342dc511b0cf686a24d343941cb78c":[1,0,0,18,0,0],
+"structifm3d_1_1Organizer_1_1Result.html#a9b9779acc84ff27056a6c086ee2e3896":[1,0,0,18,0,1],
 "structifm3d_1_1Point.html":[1,0,0,20],
 "structifm3d_1_1Point.html#a30e21ca467d3656cd6eb2af25fe21a73":[1,0,0,20,0],
 "structifm3d_1_1Point.html#a82f104fd54d63c2a6a6b1c1b68ff0730":[1,0,0,20,1],
