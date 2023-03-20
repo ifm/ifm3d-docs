@@ -17,11 +17,13 @@ ifm3dpy.framegrabber.FrameGrabber
    .. autosummary::
    
       ~FrameGrabber.__init__
+      ~FrameGrabber.is_masking
       ~FrameGrabber.is_running
       ~FrameGrabber.on_async_error
       ~FrameGrabber.on_async_notification
       ~FrameGrabber.on_error
       ~FrameGrabber.on_new_frame
+      ~FrameGrabber.set_masking
       ~FrameGrabber.start
       ~FrameGrabber.stop
       ~FrameGrabber.sw_trigger

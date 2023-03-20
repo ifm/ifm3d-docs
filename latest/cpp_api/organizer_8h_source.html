@@ -118,12 +118,13 @@ $(document).ready(function(){initNavTree('organizer_8h_source.html',''); initRes
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classifm3d_1_1Organizer.html">Organizer</a>() {}</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">virtual</span> Result Organize(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; data,</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                            <span class="keyword">const</span> std::set&lt;buffer_id&gt;&amp; requestedImages) = 0;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  }; <span class="comment">// end: class Organizer</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif // IFM3D_FG_ORGANIZER_H</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                            <span class="keyword">const</span> std::set&lt;buffer_id&gt;&amp; requestedImages,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                            <span class="keyword">const</span> <span class="keywordtype">bool</span> masking) = 0;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  }; <span class="comment">// end: class Organizer</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif // IFM3D_FG_ORGANIZER_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassifm3d_1_1Organizer_html"><div class="ttname"><a href="classifm3d_1_1Organizer.html">ifm3d::Organizer</a></div><div class="ttdef"><b>Definition:</b> organizer.h:22</div></div>

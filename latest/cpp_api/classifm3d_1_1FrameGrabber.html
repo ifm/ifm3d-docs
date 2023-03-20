@@ -153,6 +153,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa05b4b418fed47a19e63af35eff3fd37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab45396f5e290ede681cb1639a9bf9060"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#ab45396f5e290ede681cb1639a9bf9060">OnError</a> (ErrorCallback callback=nullptr)</td></tr>
 <tr class="separator:ab45396f5e290ede681cb1639a9bf9060"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36eb733d63fe4d7d9bb356cb6e008d04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a36eb733d63fe4d7d9bb356cb6e008d04">SetMasking</a> (const bool mask)</td></tr>
+<tr class="separator:a36eb733d63fe4d7d9bb356cb6e008d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e003c3fa03666dfd385d44974e10d37"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a0e003c3fa03666dfd385d44974e10d37">IsMasking</a> ()</td></tr>
+<tr class="separator:a0e003c3fa03666dfd385d44974e10d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implements a TCP <a class="el" href="classifm3d_1_1FrameGrabber.html">FrameGrabber</a> connected to the device passed to its ctor </p>
@@ -220,6 +224,24 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0e003c3fa03666dfd385d44974e10d37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e003c3fa03666dfd385d44974e10d37">&#9670;&nbsp;</a></span>IsMasking()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ifm3d::FrameGrabber::IsMasking </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return masking flag </p>
+
+</div>
+</div>
 <a id="a41863acd226d087671594f47af3b0e32"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a41863acd226d087671594f47af3b0e32">&#9670;&nbsp;</a></span>IsRunning()</h2>
 
@@ -311,6 +333,30 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>The callback will be executed whenever a new frame is available. It receives a Frame::Ptr to the received frame as an argument. </p>
+
+</div>
+</div>
+<a id="a36eb733d63fe4d7d9bb356cb6e008d04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36eb733d63fe4d7d9bb356cb6e008d04">&#9670;&nbsp;</a></span>SetMasking()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ifm3d::FrameGrabber::SetMasking </td>
+          <td>(</td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>mask</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>enable/disable masking on supported buffer </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>flag to enable/disable masking Note: ifm3d::buffer_id::CONFIDENCE_IMAGE should be in schema set passed to <a class="el" href="classifm3d_1_1FrameGrabber.html#a207a67d3b3a8affa46dd0aaf2ed36c04">ifm3d::FrameGrabber::Start</a> method </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

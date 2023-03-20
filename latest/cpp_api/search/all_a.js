@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['legacydevice_76',['LegacyDevice',['../classifm3d_1_1LegacyDevice.html',1,'ifm3d::LegacyDevice'],['../classifm3d_1_1LegacyDevice.html#aa1ec31065d18ba99af459a4f23cf1dc3',1,'ifm3d::LegacyDevice::LegacyDevice()']]],
-  ['lock_77',['Lock',['../classifm3d_1_1O3R.html#a6508ed039407644c820296cf6564b887',1,'ifm3d::O3R']]]
+  ['legacydevice_77',['LegacyDevice',['../classifm3d_1_1LegacyDevice.html',1,'ifm3d::LegacyDevice'],['../classifm3d_1_1LegacyDevice.html#aa1ec31065d18ba99af459a4f23cf1dc3',1,'ifm3d::LegacyDevice::LegacyDevice()']]],
+  ['lock_78',['Lock',['../classifm3d_1_1O3R.html#a6508ed039407644c820296cf6564b887',1,'ifm3d::O3R']]]
 ];
