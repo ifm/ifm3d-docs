@@ -88,11 +88,17 @@
 and this project adheres to <a class="reference external" href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
 <div class="section" id="unreleased">
 <h2>[Unreleased]<a class="headerlink" href="#unreleased" title="Permalink to this heading"></a></h2>
+<div class="section" id="fixes">
+<h3>Fixes<a class="headerlink" href="#fixes" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Fixed typo in RGBInfoV1, TOFInfoV4 and TOFInfoV3: extrisic_optic_to_user -&gt; extrinsic_optic_to_user</p></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id1">
 <h2>1.2.3 - 2023-03-17<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
-<div class="section" id="fixes">
-<h3>Fixes<a class="headerlink" href="#fixes" title="Permalink to this heading"></a></h3>
+<div class="section" id="id2">
+<h3>Fixes<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fixed Segmentation fault when assigning a AsyncNotification or AsyncError Handler while the FrameGrabber is not running</p></li>
 <li><p>Added Missing alias for ifm3dpy.Error to ifm3dpy.device.Error</p></li>
@@ -106,10 +112,10 @@ and this project adheres to <a class="reference external" href="https://semver.o
 </ul>
 </div>
 </div>
-<div class="section" id="id2">
-<h2>1.2.2 - 2023-03-06<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
 <div class="section" id="id3">
-<h3>Added<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<h2>1.2.2 - 2023-03-06<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<div class="section" id="id4">
+<h3>Added<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Added Frame::FrameCount to access the frame counter value</p></li>
 <li><p>Added API to enable disable masking in FrameGrabber</p></li>
@@ -123,8 +129,8 @@ and this project adheres to <a class="reference external" href="https://semver.o
 <li><p><code class="docutils literal notranslate"><span class="pre">FrameGrabber::Start</span></code> now returns a future resolving once the FrameGrabber is ready to receive Frames</p></li>
 </ul>
 </div>
-<div class="section" id="id4">
-<h3>Fixes<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<div class="section" id="id5">
+<h3>Fixes<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fix a bug that could cause the update process to fail with a hash mismatch error on certain network configurations</p></li>
 <li><p>Fix a bug preventing the FrameGrabber from being <code class="docutils literal notranslate"><span class="pre">Start</span></code>ed after it was previously <code class="docutils literal notranslate"><span class="pre">Stop</span></code>ped</p></li>
@@ -134,34 +140,34 @@ and this project adheres to <a class="reference external" href="https://semver.o
 </ul>
 </div>
 </div>
-<div class="section" id="id5">
-<h2>1.2.1 - 2023-02-09<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
 <div class="section" id="id6">
-<h3>Fixes<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+<h2>1.2.1 - 2023-02-09<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h2>
+<div class="section" id="id7">
+<h3>Fixes<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fix a bug that could result in an endless loop when receiving PCIC tickets</p></li>
 <li><p>Fix a crash when receiving pcic data without any chunks</p></li>
 </ul>
 </div>
 </div>
-<div class="section" id="id7">
-<h2>1.2.0 - 2023-02-03<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h2>
 <div class="section" id="id8">
-<h3>Changed<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
+<h2>1.2.0 - 2023-02-03<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h2>
+<div class="section" id="id9">
+<h3>Changed<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Upgraded nlohmann::json to version 3.11.2</p></li>
 <li><p>Removed json from the global namespace and moved nlohmann::json to the ifm3d::json namespace</p></li>
 </ul>
 </div>
-<div class="section" id="id9">
-<h3>Fixes<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
+<div class="section" id="id10">
+<h3>Fixes<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Missing python bindings for <code class="docutils literal notranslate"><span class="pre">O3R::Port</span></code> and <code class="docutils literal notranslate"><span class="pre">O3R::Ports</span></code></p></li>
 <li><p>CONFIDENCE_IMAGE image is not requested automatically anymore unless it’s required for generating the requested chunks</p></li>
 </ul>
 </div>
-<div class="section" id="id10">
-<h3>Added<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h3>
+<div class="section" id="id11">
+<h3>Added<a class="headerlink" href="#id11" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">O3R::RebootToRecovery</span></code> to reboot supported O3R devices into recovery mode</p></li>
 <li><p>Support for O3R recovery based updates</p></li>
@@ -178,19 +184,19 @@ and this project adheres to <a class="reference external" href="https://semver.o
 </ul>
 </div>
 </div>
-<div class="section" id="id11">
-<h2>1.1.1 - 2022-12-09<a class="headerlink" href="#id11" title="Permalink to this heading"></a></h2>
 <div class="section" id="id12">
-<h3>Fixes<a class="headerlink" href="#id12" title="Permalink to this heading"></a></h3>
+<h2>1.1.1 - 2022-12-09<a class="headerlink" href="#id12" title="Permalink to this heading"></a></h2>
+<div class="section" id="id13">
+<h3>Fixes<a class="headerlink" href="#id13" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Data grabbing <a class="reference external" href="https://github.com/ifm/ifm3d/issues/377">issue</a> with ifm3dpy-v1.1.0</p></li>
 </ul>
 </div>
 </div>
-<div class="section" id="id13">
-<h2>1.1.0 - 2022-12-02<a class="headerlink" href="#id13" title="Permalink to this heading"></a></h2>
 <div class="section" id="id14">
-<h3>Added<a class="headerlink" href="#id14" title="Permalink to this heading"></a></h3>
+<h2>1.1.0 - 2022-12-02<a class="headerlink" href="#id14" title="Permalink to this heading"></a></h2>
+<div class="section" id="id15">
+<h3>Added<a class="headerlink" href="#id15" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Change <code class="docutils literal notranslate"><span class="pre">FrameGrabber::Stop</span></code> to non blocking call and now returns <code class="docutils literal notranslate"><span class="pre">std::future&lt;void&gt;</span></code></p></li>
 <li><p>Add onError callback for error reporting in streaming mode of Framegrabber</p></li>
@@ -200,25 +206,25 @@ and this project adheres to <a class="reference external" href="https://semver.o
 <li><p>Python binding: FrameGrabber.sw_trigger()</p></li>
 </ul>
 </div>
-<div class="section" id="id15">
-<h3>Fixes<a class="headerlink" href="#id15" title="Permalink to this heading"></a></h3>
+<div class="section" id="id16">
+<h3>Fixes<a class="headerlink" href="#id16" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>XYZ_IMAGE coordinates were actually ZXY instead of XYZ, this has been corrected.</p></li>
 </ul>
 </div>
 </div>
-<div class="section" id="id16">
-<h2>1.0.1 - 2022-10-14<a class="headerlink" href="#id16" title="Permalink to this heading"></a></h2>
 <div class="section" id="id17">
-<h3>Added<a class="headerlink" href="#id17" title="Permalink to this heading"></a></h3>
+<h2>1.0.1 - 2022-10-14<a class="headerlink" href="#id17" title="Permalink to this heading"></a></h2>
+<div class="section" id="id18">
+<h3>Added<a class="headerlink" href="#id18" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Auto closure of stale issue on GitHub</p></li>
 <li><p>Support for ODS schema</p></li>
 <li><p>Asynchronous notification support</p></li>
 </ul>
 </div>
-<div class="section" id="id18">
-<h3>Fixes<a class="headerlink" href="#id18" title="Permalink to this heading"></a></h3>
+<div class="section" id="id19">
+<h3>Fixes<a class="headerlink" href="#id19" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>ifm3d and ifm3dpy documentation update</p></li>
 <li><p>Confidence buffer available for user</p></li>
@@ -230,10 +236,10 @@ and this project adheres to <a class="reference external" href="https://semver.o
 </ul>
 </div>
 </div>
-<div class="section" id="id19">
-<h2>1.0.0 - 2022-09-08<a class="headerlink" href="#id19" title="Permalink to this heading"></a></h2>
 <div class="section" id="id20">
-<h3>Added<a class="headerlink" href="#id20" title="Permalink to this heading"></a></h3>
+<h2>1.0.0 - 2022-09-08<a class="headerlink" href="#id20" title="Permalink to this heading"></a></h2>
+<div class="section" id="id21">
+<h3>Added<a class="headerlink" href="#id21" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Example update showing usage of fg API</p></li>
 <li><p>Visibility attribute added for ifm3d API</p></li>
@@ -270,10 +276,10 @@ and this project adheres to <a class="reference external" href="https://semver.o
 </ul>
 </div>
 </div>
-<div class="section" id="id21">
-<h2>0.93.0 - 2022-02-17<a class="headerlink" href="#id21" title="Permalink to this heading"></a></h2>
 <div class="section" id="id22">
-<h3>Added<a class="headerlink" href="#id22" title="Permalink to this heading"></a></h3>
+<h2>0.93.0 - 2022-02-17<a class="headerlink" href="#id22" title="Permalink to this heading"></a></h2>
+<div class="section" id="id23">
+<h3>Added<a class="headerlink" href="#id23" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Document for schema</p></li>
 <li><p>Document for O3X parameters</p></li>
@@ -289,14 +295,14 @@ CompensateAmbientLightDrift, DistNoiseThreshold, EnableNoiseEstimation, RelAmpSt
 <li><p>Added timeout option in swupdate command of tools</p></li>
 </ul>
 </div>
-<div class="section" id="id23">
-<h3>Fixed<a class="headerlink" href="#id23" title="Permalink to this heading"></a></h3>
+<div class="section" id="id24">
+<h3>Fixed<a class="headerlink" href="#id24" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>O3R FW detection</p></li>
 </ul>
 </div>
-<div class="section" id="id24">
-<h3>Changed<a class="headerlink" href="#id24" title="Permalink to this heading"></a></h3>
+<div class="section" id="id25">
+<h3>Changed<a class="headerlink" href="#id25" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>The conversion of the camera frame is now a compile time option (Use <code class="docutils literal notranslate"><span class="pre">-DUSE_LEGACY_COORDINATES=ON</span></code> to keep the old behaviour)</p></li>
 <li><p>O3RCamera::Port &amp; O3RCamera::Ports methods to get information (pcic port &amp; type) of connected ports</p></li>
@@ -304,10 +310,10 @@ CompensateAmbientLightDrift, DistNoiseThreshold, EnableNoiseEstimation, RelAmpSt
 </ul>
 </div>
 </div>
-<div class="section" id="id25">
-<h2>0.92.0 - 2021-10-22<a class="headerlink" href="#id25" title="Permalink to this heading"></a></h2>
 <div class="section" id="id26">
-<h3>Added<a class="headerlink" href="#id26" title="Permalink to this heading"></a></h3>
+<h2>0.92.0 - 2021-10-22<a class="headerlink" href="#id26" title="Permalink to this heading"></a></h2>
+<div class="section" id="id27">
+<h3>Added<a class="headerlink" href="#id27" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>HTTP 407 Proxy authentication required error detection</p></li>
 <li><p>Python 3.10 builds</p></li>
@@ -316,42 +322,42 @@ CompensateAmbientLightDrift, DistNoiseThreshold, EnableNoiseEstimation, RelAmpSt
 <li><p>Basic usage tutorials</p></li>
 </ul>
 </div>
-<div class="section" id="id27">
-<h3>Fixed<a class="headerlink" href="#id27" title="Permalink to this heading"></a></h3>
+<div class="section" id="id28">
+<h3>Fixed<a class="headerlink" href="#id28" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>O3R broken XYZImage</p></li>
 <li><p>O3R getInit() method</p></li>
 <li><p>Use the correct base image for arm64 based containers</p></li>
 </ul>
 </div>
-<div class="section" id="id28">
-<h3>Changed<a class="headerlink" href="#id28" title="Permalink to this heading"></a></h3>
+<div class="section" id="id29">
+<h3>Changed<a class="headerlink" href="#id29" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Docker images now build ifm3d in Release mode</p></li>
 </ul>
 </div>
 </div>
-<div class="section" id="id29">
-<h2>0.91.0 - 2021-10-05<a class="headerlink" href="#id29" title="Permalink to this heading"></a></h2>
 <div class="section" id="id30">
-<h3>Added<a class="headerlink" href="#id30" title="Permalink to this heading"></a></h3>
+<h2>0.91.0 - 2021-10-05<a class="headerlink" href="#id30" title="Permalink to this heading"></a></h2>
+<div class="section" id="id31">
+<h3>Added<a class="headerlink" href="#id31" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>O3R specific methods</p></li>
 </ul>
 </div>
 </div>
-<div class="section" id="id31">
-<h2>0.90.2 - 2021-09-16<a class="headerlink" href="#id31" title="Permalink to this heading"></a></h2>
+<div class="section" id="id32">
+<h2>0.90.2 - 2021-09-16<a class="headerlink" href="#id32" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>stlImage module (Image container based on STL)</p></li>
 <li><p>Removed copying of the tools header</p></li>
 <li><p>Example to upload docker container to O3R</p></li>
 </ul>
 </div>
-<div class="section" id="id32">
-<h2>0.90.1 - 2021-08-17<a class="headerlink" href="#id32" title="Permalink to this heading"></a></h2>
 <div class="section" id="id33">
-<h3>Added<a class="headerlink" href="#id33" title="Permalink to this heading"></a></h3>
+<h2>0.90.1 - 2021-08-17<a class="headerlink" href="#id33" title="Permalink to this heading"></a></h2>
+<div class="section" id="id34">
+<h3>Added<a class="headerlink" href="#id34" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Basic c++ tutorials</p></li>
 <li><p>Support for the new JSON based XML-RPC interface</p></li>
@@ -360,18 +366,18 @@ CompensateAmbientLightDrift, DistNoiseThreshold, EnableNoiseEstimation, RelAmpSt
 <li><p>Generate version based on last tag and commits since</p></li>
 </ul>
 </div>
-<div class="section" id="id34">
-<h3>Changed<a class="headerlink" href="#id34" title="Permalink to this heading"></a></h3>
+<div class="section" id="id35">
+<h3>Changed<a class="headerlink" href="#id35" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Split Camera implementation into multiple classes</p></li>
 <li><p>IsO3D/IsO3X/IsO3R replaced by WhoAmI/AmI functions</p></li>
 </ul>
 </div>
 </div>
-<div class="section" id="id35">
-<h2>0.90.0 - 2021-01-18<a class="headerlink" href="#id35" title="Permalink to this heading"></a></h2>
 <div class="section" id="id36">
-<h3>Added<a class="headerlink" href="#id36" title="Permalink to this heading"></a></h3>
+<h2>0.90.0 - 2021-01-18<a class="headerlink" href="#id36" title="Permalink to this heading"></a></h2>
+<div class="section" id="id37">
+<h3>Added<a class="headerlink" href="#id37" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Basic O3R support</p></li>
 <li><p>Support for the compressed image format introduced for O3R</p></li>

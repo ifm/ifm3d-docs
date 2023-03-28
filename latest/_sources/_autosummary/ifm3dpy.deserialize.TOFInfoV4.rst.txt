@@ -32,7 +32,7 @@ ifm3dpy.deserialize.TOFInfoV4
       ~TOFInfoV4.distance_resolution
       ~TOFInfoV4.exposure_times_s
       ~TOFInfoV4.exposure_timestamps_ns
-      ~TOFInfoV4.extrisic_optic_to_user
+      ~TOFInfoV4.extrinsic_optic_to_user
       ~TOFInfoV4.illu_temperature
       ~TOFInfoV4.imager
       ~TOFInfoV4.intrinsic_calibration

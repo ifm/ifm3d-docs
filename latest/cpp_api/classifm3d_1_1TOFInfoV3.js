@@ -7,7 +7,7 @@ var classifm3d_1_1TOFInfoV3 =
     [ "distance_resolution", "classifm3d_1_1TOFInfoV3.html#acbf27f71e814ae0d3d2da98d850b904c", null ],
     [ "exposure_times_s", "classifm3d_1_1TOFInfoV3.html#af81782250b47f52265979602e442766f", null ],
     [ "exposure_timestamps_ns", "classifm3d_1_1TOFInfoV3.html#a8070f066a8635873bcdafec1955adadb", null ],
-    [ "extrisic_optic_to_user", "classifm3d_1_1TOFInfoV3.html#a0bb4598a1573a1cb6859ef56f268f05b", null ],
+    [ "extrinsic_optic_to_user", "classifm3d_1_1TOFInfoV3.html#ab1ef07fc36ef764b12273339963eb7d6", null ],
     [ "illu_temperature", "classifm3d_1_1TOFInfoV3.html#aec2a8949cf6987a48aad2547f1abe653", null ],
     [ "imager", "classifm3d_1_1TOFInfoV3.html#ac6a754750601afa6a12fc98c56f88c7f", null ],
     [ "intrinsic_calibration", "classifm3d_1_1TOFInfoV3.html#a5a8ee9de09b08ebee7ab5f3192ada9db", null ],

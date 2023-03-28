@@ -138,8 +138,8 @@ $(document).ready(function(){initNavTree('struct__rgb__info__v1_8hpp_source.html
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      timestamp_ns =</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        mkval&lt;std::uint64_t&gt;(start_ptr + RGB_INFO_TIMESTAMPS_INDEX);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      exposure_time = mkval&lt;float&gt;(start_ptr + RGB_INFO_EXPOSURE_TIMES_INDEX);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      extrisic_optic_to_user.Read(start_ptr +</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                                  RGB_INFO_EXTRINSIC_OPTICAL_TO_USER_INDEX);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      extrinsic_optic_to_user.Read(start_ptr +</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                                   RGB_INFO_EXTRINSIC_OPTICAL_TO_USER_INDEX);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      intrinsic_calibration.Read(start_ptr +</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                 RGB_INFO_INTRINSIC_CALIBRATION_INDEX);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      inverse_intrinsic_calibration.Read(</div>
@@ -155,7 +155,7 @@ $(document).ready(function(){initNavTree('struct__rgb__info__v1_8hpp_source.html
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">/*@brief Actual exposure time of the 2D image*/</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">float</span> exposure_time;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">/*@brief Extrinsic optic paramter of the 2D head*/</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="structifm3d_1_1calibration_1_1ExtrinsicOpticToUser.html">calibration::ExtrinsicOpticToUser</a> extrisic_optic_to_user;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="structifm3d_1_1calibration_1_1ExtrinsicOpticToUser.html">calibration::ExtrinsicOpticToUser</a> extrinsic_optic_to_user;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">/*@brief Intrinsic Calibration parameters*/</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="structifm3d_1_1calibration_1_1Calibration.html">calibration::IntrinsicCalibration</a> intrinsic_calibration;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">/*@brief Inverse intrinsic Calibration parameters*/</span></div>

@@ -102,6 +102,11 @@
 <dt class="sig sig-object py" id="ifm3dpy.run">
 <span class="sig-prename descclassname"><span class="pre">ifm3dpy.</span></span><span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ifm3dpy.run" title="Permalink to this definition"></a></dt>
 <dd><p>This function provides python application interface to run command line tool</p>
+<p>Note: It is not recommended to use this for scripting as there is no way to
+monitor progress or handle errors, instead please directly use the functions
+provided by the corresponding modules.
+This function is mainly intended to be used to integrate the ifm3d CLI into
+existing console based applications.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>argv</strong> (<em>py::list</em>) – command line parameter in the list. e.g. to call a ‘ls’ command
