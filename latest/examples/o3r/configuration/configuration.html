@@ -139,20 +139,11 @@
 </div>
 </div></div>
 <p>Note: we use <a class="reference external" href="https://en.cppreference.com/w/cpp/language/string_literal">string literals</a> for easier readability.</p>
-<p>To make the configuration persistent over reboots, you need to use the following function:</p>
-<div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-4-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-4-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-4-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-4-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-4-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">o3r</span><span class="o">.</span><span class="n">save_init</span><span class="p">()</span>
-</pre></div>
-</div>
-</div><div aria-labelledby="tab-4-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-4-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">cam</span><span class="o">-&gt;</span><span class="n">SaveInit</span><span class="p">();</span>
-</pre></div>
-</div>
-</div></div>
 </div>
 <div class="section" id="the-full-example">
 <h2>The full example<a class="headerlink" href="#the-full-example" title="Permalink to this heading"></a></h2>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-5-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-5-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-5-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-5-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-5-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-4-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-4-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-4-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-4-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-4-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
 
 <span class="c1"># Define the ifm3d objects for the communication</span>
 <span class="kn">from</span> <span class="nn">ifm3dpy.device</span> <span class="kn">import</span> <span class="n">O3R</span>
@@ -168,14 +159,13 @@
 
 <span class="c1"># Let&#39;s change the name of the device</span>
 <span class="n">o3r</span><span class="o">.</span><span class="n">set</span><span class="p">({</span><span class="s1">&#39;device&#39;</span><span class="p">:{</span><span class="s1">&#39;info&#39;</span><span class="p">:{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;great_o3r&#39;</span><span class="p">}}})</span>
-<span class="n">o3r</span><span class="o">.</span><span class="n">save_init</span><span class="p">()</span>
 
 <span class="c1"># Double check the configuration</span>
 <span class="n">config</span> <span class="o">=</span> <span class="n">o3r</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;device&#39;</span><span class="p">][</span><span class="s1">&#39;info&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-5-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-5-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+</div><div aria-labelledby="tab-4-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-4-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm"> * Copyright 2021-present ifm electronic, gmbh</span>
 <span class="cm"> * SPDX-License-Identifier: Apache-2.0</span>
 <span class="cm"> */</span>
@@ -201,14 +191,24 @@
 <span class="w">    </span>
 <span class="w">    </span><span class="c1">// Configure the device from a json string</span>
 <span class="w">    </span><span class="n">cam</span><span class="o">-&gt;</span><span class="n">Set</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">json</span><span class="o">::</span><span class="n">parse</span><span class="p">(</span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">{&quot;device&quot;:{&quot;info&quot;:{&quot;name&quot;: &quot;my_new_o3r&quot;}}}</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">));</span><span class="w"> </span>
-<span class="w">    </span><span class="c1">// Make the configuration persistent</span>
-<span class="w">    </span><span class="n">cam</span><span class="o">-&gt;</span><span class="n">SaveInit</span><span class="p">();</span>
 
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </div></div>
+</div>
+<div class="section" id="configuration-after-replacing-changing-hardware">
+<h2>Configuration after replacing / changing hardware<a class="headerlink" href="#configuration-after-replacing-changing-hardware" title="Permalink to this heading"></a></h2>
+<p>If the user utilized a <code class="docutils literal notranslate"><span class="pre">save_init()</span></code>-function to make the configuration persistent over reboots in the past they may face a situation when replacing hardware / changing camera head connectivity to the VPU:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">save_init()</span></code>-function saves a <code class="docutils literal notranslate"><span class="pre">ConfInitJSON</span></code> file on the VPU which gets applied at every reboot. During the boot-up process the VPU compares the saved configuration to the incoming configuration. If there is any mismatch the respective port(s) will be put to ERROR state and the PORT LED flashes in RED color.</p>
+<p>In diagnostics, <code class="docutils literal notranslate"><span class="pre">ERROR_BOOT_SEQUENCE_HEAD_INVALID_SERIALNUMBER</span></code> corresponding to the PORT will be displayed if the extrinsic calibration is applied to the respective port but the camera head connected to that port has a different serial number as in the saved configuration file.</p>
+<p>This issue can be fixed and the system can be recovered from this stage in the following way:</p>
+<ol class="arabic simple">
+<li><p>Via Factory Reset: This resets all the settings including the extrinsic calibration values onto the VPU.</p></li>
+<li><p>Edit the extrinsic calibration parameters: either default extrinsic calibration values or update to any different set of extrinsic calibration values.</p></li>
+</ol>
+<p>If the heads with a saved non-default extrinsic calibration are swapped out, this is considered an error until the extrinsic calibration has been updated and the VPU is rebooted.</p>
 </div>
 </div>
 
