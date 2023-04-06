@@ -29,6 +29,14 @@
 
    
    
+   .. rubric:: Exceptions
+
+   .. autosummary::
+      :toctree:                                 
+      :template: class.rst                                        
+   
+      Error
+   
    
 
 
