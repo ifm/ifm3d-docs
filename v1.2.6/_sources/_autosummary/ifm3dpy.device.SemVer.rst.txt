@@ -1,0 +1,26 @@
+ifm3dpy.device.SemVer
+=====================
+
+.. currentmodule:: ifm3dpy.device
+
+.. autoclass:: SemVer
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SemVer.Parse
+      ~SemVer.__init__
+   
+   
+
+   
+   
+   

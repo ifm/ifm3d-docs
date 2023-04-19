@@ -1,0 +1,43 @@
+﻿ifm3dpy.device
+==============
+
+.. automodule:: ifm3dpy.device
+  
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:                                          
+      :template: class.rst               
+   
+      Device
+      LegacyDevice
+      O3R
+      PortInfo
+      SemVer
+   
+   
+
+   
+   
+   .. rubric:: Exceptions
+
+   .. autosummary::
+      :toctree:                                 
+      :template: class.rst                                        
+   
+      Error
+   
+   
+
+
+
