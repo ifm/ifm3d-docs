@@ -23,6 +23,18 @@ var hierarchy =
     [ "ifm3d::Buffer::Iterator< T >", "structifm3d_1_1Buffer_1_1Iterator.html", null ],
     [ "ifm3d::IteratorAdapter< T >", "classifm3d_1_1IteratorAdapter.html", null ],
     [ "ifm3d::json", "classifm3d_1_1json.html", null ],
+    [ "ifm3d::LogEntry", "classifm3d_1_1LogEntry.html", null ],
+    [ "ifm3d::LogFormatterJson", "classifm3d_1_1LogFormatterJson.html", null ],
+    [ "ifm3d::LogFormatterText", "classifm3d_1_1LogFormatterText.html", null ],
+    [ "ifm3d::Logger", "classifm3d_1_1Logger.html", null ],
+    [ "ifm3d::LogWriter", "classifm3d_1_1LogWriter.html", [
+      [ "ifm3d::LogWriterComposite", "classifm3d_1_1LogWriterComposite.html", null ],
+      [ "ifm3d::LogWriterConsole< Formatter, >", "classifm3d_1_1LogWriterConsole.html", null ],
+      [ "ifm3d::LogWriterFile< Formatter >", "classifm3d_1_1LogWriterFile.html", null ],
+      [ "ifm3d::LogWriterConsole< Formatter >", "classifm3d_1_1LogWriterConsole.html", [
+        [ "ifm3d::LogWriterConsoleColored< Formatter, >", "classifm3d_1_1LogWriterConsoleColored.html", null ]
+      ] ]
+    ] ],
     [ "ifm3d::ODSInfoV1", "classifm3d_1_1ODSInfoV1.html", null ],
     [ "ifm3d::ODSOccupancyGridV1", "classifm3d_1_1ODSOccupancyGridV1.html", null ],
     [ "ifm3d::Organizer", "classifm3d_1_1Organizer.html", null ],
