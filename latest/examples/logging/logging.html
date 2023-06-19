@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ifm3d::Logger - Logger for the ifm3d library &mdash; ifm3d v1.2.6 documentation</title>
+  <title>ifm3d::Logger - Logger for the ifm3d library &mdash; ifm3d v1.3.2 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
@@ -33,7 +33,7 @@
             <a href="../../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v1.2.6
+                v1.3.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -59,7 +59,6 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../cli_link.html">Command Line tool</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/stlimage.html">Manipulating images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../content/deployment/index.html">Deployment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python_api.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp_api/annotated.html">C++ API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples_list.html">Examples</a></li>
@@ -167,9 +166,7 @@
 <span class="w">  </span><span class="c1">// Get the logging instance</span>
 <span class="w">  </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Logger</span><span class="o">::</span><span class="n">Get</span><span class="p">();</span>
 <span class="w">  </span><span class="c1">// Set the log level</span>
-<span class="w">  </span><span class="n">logger</span><span class="p">.</span><span class="n">SetLogLevel</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">LogLevel</span>
-
-<span class="o">::</span><span class="n">Verbose</span><span class="p">);</span>
+<span class="w">  </span><span class="n">logger</span><span class="p">.</span><span class="n">SetLogLevel</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">LogLevel</span><span class="o">::</span><span class="n">Verbose</span><span class="p">);</span>
 
 <span class="w">  </span><span class="c1">// Declare the device object (one object only, corresponding to the VPU)</span>
 <span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">dev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3R</span><span class="o">&gt;</span><span class="p">();</span>
@@ -190,7 +187,7 @@
 <span class="w">  </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">OnNewFrame</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Frame</span><span class="o">::</span><span class="n">Ptr</span><span class="w"> </span><span class="n">frame</span><span class="p">)</span>
 <span class="w">  </span><span class="p">{</span>
 <span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">distance_image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">frame</span><span class="o">-&gt;</span><span class="n">GetBuffer</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">CONFIDENCE_IMAGE</span><span class="p">);</span>
-<span class="w">    </span><span class="n">LOG_VERBOSE</span><span class="p">(</span><span class="n">distance_image</span><span class="p">.</span><span class="n">width</span><span class="p">());</span>
+<span class="w">    </span><span class="n">LOG_VERBOSE</span><span class="p">(</span><span class="s">&quot;Width: {}, Height: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">distance_image</span><span class="p">.</span><span class="n">width</span><span class="p">(),</span><span class="w"> </span><span class="n">distance_image</span><span class="p">.</span><span class="n">height</span><span class="p">());</span>
 <span class="w">  </span><span class="p">});</span>
 
 <span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">this_thread</span><span class="o">::</span><span class="n">sleep_for</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">seconds</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span>
