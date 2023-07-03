@@ -1,0 +1,27 @@
+ifm3dpy.Awaitable
+=================
+
+.. currentmodule:: ifm3dpy
+
+.. autoclass:: Awaitable
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Awaitable.__init__
+      ~Awaitable.wait
+      ~Awaitable.wait_for
+   
+   
+
+   
+   
+   

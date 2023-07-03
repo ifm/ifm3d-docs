@@ -1,0 +1,30 @@
+ifm3dpy.swupdater.SWUpdater
+===========================
+
+.. currentmodule:: ifm3dpy.swupdater
+
+.. autoclass:: SWUpdater
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SWUpdater.__init__
+      ~SWUpdater.flash_firmware
+      ~SWUpdater.reboot_to_productive
+      ~SWUpdater.reboot_to_recovery
+      ~SWUpdater.wait_for_productive
+      ~SWUpdater.wait_for_recovery
+   
+   
+
+   
+   
+   

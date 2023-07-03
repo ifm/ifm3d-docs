@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ifm3dpy.deserialize.TOFInfoV3 &mdash; ifm3d v1.3.3 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ifm3dpy.deserialize.TOFInfoV4" href="ifm3dpy.deserialize.TOFInfoV4.html" />
+    <link rel="prev" title="ifm3dpy.deserialize.RGBInfoV1" href="ifm3dpy.deserialize.RGBInfoV1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> ifm3d
+          </a>
+              <div class="version">
+                v1.3.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../content/README.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/installation_instructions/index.html">Installation instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/migration_guide/index.html">Migration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Basic library usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cli_link.html">Command Line tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/stlimage.html">Manipulating images</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../python_api.html">Python API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.html">ifm3dpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.device.html">ifm3dpy.device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.framegrabber.html">ifm3dpy.framegrabber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.swupdater.html">ifm3dpy.swupdater</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="ifm3dpy.deserialize.html">ifm3dpy.deserialize</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.Calibration.html">ifm3dpy.deserialize.Calibration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.ExtrinsicOpticToUser.html">ifm3dpy.deserialize.ExtrinsicOpticToUser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.ODSInfoV1.html">ifm3dpy.deserialize.ODSInfoV1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.ODSOccupancyGridV1.html">ifm3dpy.deserialize.ODSOccupancyGridV1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.RGBInfoV1.html">ifm3dpy.deserialize.RGBInfoV1</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ifm3dpy.deserialize.TOFInfoV3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.TOFInfoV4.html">ifm3dpy.deserialize.TOFInfoV4</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/annotated.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/ChangeLog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ifm3d</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../python_api.html">Python API Reference</a></li>
+          <li class="breadcrumb-item"><a href="ifm3dpy.deserialize.html">ifm3dpy.deserialize</a></li>
+      <li class="breadcrumb-item active">ifm3dpy.deserialize.TOFInfoV3</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_autosummary/ifm3dpy.deserialize.TOFInfoV3.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="ifm3dpy-deserialize-tofinfov3">
+<h1>ifm3dpy.deserialize.TOFInfoV3<a class="headerlink" href="#ifm3dpy-deserialize-tofinfov3" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.TOFInfoV3">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ifm3dpy.deserialize.</span></span><span class="sig-name descname"><span class="pre">TOFInfoV3</span></span><a class="headerlink" href="#ifm3dpy.deserialize.TOFInfoV3" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+<p>Class for managing an instance of an struct TofInfoV3</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.TOFInfoV3.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV3" title="ifm3dpy.deserialize.TOFInfoV3"><span class="pre">ifm3dpy.deserialize.TOFInfoV3</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.deserialize.TOFInfoV3.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructor</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV3.__init__" title="ifm3dpy.deserialize.TOFInfoV3.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self)</p></td>
+<td><p>Constructor</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV3.deserialize" title="ifm3dpy.deserialize.TOFInfoV3.deserialize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deserialize</span></code></a>(arg0)</p></td>
+<td><p>Deserialize TOF_INFO Buffer to ToFInfoV3 struct.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV3.amp_normalization_factors" title="ifm3dpy.deserialize.TOFInfoV3.amp_normalization_factors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">amp_normalization_factors</span></code></a></p></td>
+<td><p>Amplitude normalization factors for the individual exposure times</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV3.amplitude_resolution" title="ifm3dpy.deserialize.TOFInfoV3.amplitude_resolution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">amplitude_resolution</span></code></a></p></td>
+<td><p>Resolution of the amplitude buffer</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV3.distance_resolution" title="ifm3dpy.deserialize.TOFInfoV3.distance_resolution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">distance_resolution</span></code></a></p></td>
+<td><p>Resolution of distance buffer per digit[m]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV3.exposure_times_s" title="ifm3dpy.deserialize.TOFInfoV3.exposure_times_s"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exposure_times_s</span></code></a></p></td>
+<td><p>Actual exposure times of a single phase image [seconds]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV3.exposure_timestamps_ns" title="ifm3dpy.deserialize.TOFInfoV3.exposure_timestamps_ns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exposure_timestamps_ns</span></code></a></p></td>
+<td><p>The timestamp of the individual exposure time [nano seconds]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV3.extrinsic_optic_to_user" title="ifm3dpy.deserialize.TOFInfoV3.extrinsic_optic_to_user"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extrinsic_optic_to_user</span></code></a></p></td>
+<td><p>Extrinsic optic parameter to user</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV3.illu_temperature" title="ifm3dpy.deserialize.TOFInfoV3.illu_temperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">illu_temperature</span></code></a></p></td>
+<td><p>Illumination temperature</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV3.imager" title="ifm3dpy.deserialize.TOFInfoV3.imager"><code class="xref py py-obj docutils literal notranslate"><span class="pre">imager</span></code></a></p></td>
+<td><p>Imager type</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV3.intrinsic_calibration" title="ifm3dpy.deserialize.TOFInfoV3.intrinsic_calibration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intrinsic_calibration</span></code></a></p></td>
+<td><p>Intrinsic calibration parameters</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV3.inverse_intrinsic_calibration" title="ifm3dpy.deserialize.TOFInfoV3.inverse_intrinsic_calibration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inverse_intrinsic_calibration</span></code></a></p></td>
+<td><p>Inverse intrinsic calibration parameters</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV3.mode" title="ifm3dpy.deserialize.TOFInfoV3.mode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mode</span></code></a></p></td>
+<td><p>Mode of the head</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV3.version" title="ifm3dpy.deserialize.TOFInfoV3.version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">version</span></code></a></p></td>
+<td><p>Version of the TOF_INFO data</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.TOFInfoV3.amp_normalization_factors">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">amp_normalization_factors</span></span><a class="headerlink" href="#ifm3dpy.deserialize.TOFInfoV3.amp_normalization_factors" title="Permalink to this definition"></a></dt>
+<dd><p>Amplitude normalization factors for the individual exposure times</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.TOFInfoV3.amplitude_resolution">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">amplitude_resolution</span></span><a class="headerlink" href="#ifm3dpy.deserialize.TOFInfoV3.amplitude_resolution" title="Permalink to this definition"></a></dt>
+<dd><p>Resolution of the amplitude buffer</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.TOFInfoV3.deserialize">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.uint8</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV3" title="ifm3dpy.deserialize.TOFInfoV3"><span class="pre">ifm3dpy.deserialize.TOFInfoV3</span></a></span></span><a class="headerlink" href="#ifm3dpy.deserialize.TOFInfoV3.deserialize" title="Permalink to this definition"></a></dt>
+<dd><p>Deserialize TOF_INFO Buffer to ToFInfoV3 struct.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.TOFInfoV3.distance_resolution">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">distance_resolution</span></span><a class="headerlink" href="#ifm3dpy.deserialize.TOFInfoV3.distance_resolution" title="Permalink to this definition"></a></dt>
+<dd><p>Resolution of distance buffer per digit[m]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.TOFInfoV3.exposure_times_s">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">exposure_times_s</span></span><a class="headerlink" href="#ifm3dpy.deserialize.TOFInfoV3.exposure_times_s" title="Permalink to this definition"></a></dt>
+<dd><p>Actual exposure times of a single phase image [seconds]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.TOFInfoV3.exposure_timestamps_ns">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">exposure_timestamps_ns</span></span><a class="headerlink" href="#ifm3dpy.deserialize.TOFInfoV3.exposure_timestamps_ns" title="Permalink to this definition"></a></dt>
+<dd><p>The timestamp of the individual exposure time [nano seconds]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.TOFInfoV3.extrinsic_optic_to_user">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extrinsic_optic_to_user</span></span><a class="headerlink" href="#ifm3dpy.deserialize.TOFInfoV3.extrinsic_optic_to_user" title="Permalink to this definition"></a></dt>
+<dd><p>Extrinsic optic parameter to user</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.TOFInfoV3.illu_temperature">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">illu_temperature</span></span><a class="headerlink" href="#ifm3dpy.deserialize.TOFInfoV3.illu_temperature" title="Permalink to this definition"></a></dt>
+<dd><p>Illumination temperature</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.TOFInfoV3.imager">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">imager</span></span><a class="headerlink" href="#ifm3dpy.deserialize.TOFInfoV3.imager" title="Permalink to this definition"></a></dt>
+<dd><p>Imager type</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.TOFInfoV3.intrinsic_calibration">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intrinsic_calibration</span></span><a class="headerlink" href="#ifm3dpy.deserialize.TOFInfoV3.intrinsic_calibration" title="Permalink to this definition"></a></dt>
+<dd><p>Intrinsic calibration parameters</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.TOFInfoV3.inverse_intrinsic_calibration">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">inverse_intrinsic_calibration</span></span><a class="headerlink" href="#ifm3dpy.deserialize.TOFInfoV3.inverse_intrinsic_calibration" title="Permalink to this definition"></a></dt>
+<dd><p>Inverse intrinsic calibration parameters</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.TOFInfoV3.mode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mode</span></span><a class="headerlink" href="#ifm3dpy.deserialize.TOFInfoV3.mode" title="Permalink to this definition"></a></dt>
+<dd><p>Mode of the head</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.TOFInfoV3.version">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">version</span></span><a class="headerlink" href="#ifm3dpy.deserialize.TOFInfoV3.version" title="Permalink to this definition"></a></dt>
+<dd><p>Version of the TOF_INFO data</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ifm3dpy.deserialize.RGBInfoV1.html" class="btn btn-neutral float-left" title="ifm3dpy.deserialize.RGBInfoV1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ifm3dpy.deserialize.TOFInfoV4.html" class="btn btn-neutral float-right" title="ifm3dpy.deserialize.TOFInfoV4" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, ifm electronic.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

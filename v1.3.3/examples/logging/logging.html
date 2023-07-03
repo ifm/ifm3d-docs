@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ifm3d::Logger - Logger for the ifm3d library &mdash; ifm3d v1.3.3 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="ifm3d - Command Line Tool" href="../../cli_link.html" />
+    <link rel="prev" title="How to: deserialize O3R data" href="../o3r/deserialize/deserialize.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> ifm3d
+          </a>
+              <div class="version">
+                v1.3.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../content/README.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/installation_instructions/index.html">Installation instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/migration_guide/index.html">Migration Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Basic library usage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../o3r/configuration/configuration.html">How to: configure the camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../o3r/getting_data/getting_data.html">How to: receive an image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../o3r/multi_head/multi_head.html">How to: receive data from multiple heads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../o3r/viewer/README.html">How to: view the images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../o3r/2d_data/2d_data.html">How to: handle rgb data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../o3r/deserialize/deserialize.html">How to: use the deserializer module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">How to: configure the logging</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cli_link.html">Command Line tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/stlimage.html">Manipulating images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python_api.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp_api/annotated.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/ChangeLog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">ifm3d</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Basic Library Usage</a></li>
+      <li class="breadcrumb-item active">ifm3d::Logger - Logger for the ifm3d library</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/examples/logging/logging.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="ifm3d-logger-logger-for-the-ifm3d-library">
+<h1>ifm3d::Logger - Logger for the ifm3d library<a class="headerlink" href="#ifm3d-logger-logger-for-the-ifm3d-library" title="Permalink to this heading"></a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">ifm3d::Logger</span></code> is a powerful logging utility designed to facilitate effective logging within the ifm3d library and applications. It allows users to control log levels and define custom log writers (sinks) for handling log messages.</p>
+<div class="section" id="log-levels">
+<h2>Log Levels<a class="headerlink" href="#log-levels" title="Permalink to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">ifm3d::Logger</span></code> library supports the following log levels:</p>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">LogLevel</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">None</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="n">Critical</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="n">Error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="n">Warning</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">  </span><span class="n">Info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">  </span><span class="n">Debug</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">  </span><span class="n">Verbose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>None: No logging is done.</p></li>
+<li><p>Critical: Indicates a critical error that may cause the application to terminate.</p></li>
+<li><p>Error: Indicates an error that caused the application to fail to perform a specific function or operation.</p></li>
+<li><p>Warning: Indicates potential issues that do not prevent the application from functioning.</p></li>
+<li><p>Info: General information about the application’s operation.</p></li>
+<li><p>Debug: Detailed information for debugging purposes.</p></li>
+<li><p>Verbose: Logs with internal values for debugging purposes.</p></li>
+</ul>
+<p>By default, the log level is set to Warning, which means all log messages of Warning, Error, and Critical will be recorded. However, users can configure the log level to control which messages are logged.</p>
+</div>
+<div class="section" id="accessing-the-logger-instance">
+<h2>Accessing the Logger Instance<a class="headerlink" href="#accessing-the-logger-instance" title="Permalink to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">ifm3d::Logger</span></code> class follows the Singleton design pattern, which ensures that only one instance of the logger exists throughout the library. The <code class="docutils literal notranslate"><span class="pre">ifm3d::Logger::Get</span></code> method is responsible for creating the instance and returning a reference to the instance.</p>
+<div class="highlight-CPP notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Logger</span><span class="o">::</span><span class="n">Get</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="setting-the-log-level">
+<h2>Setting the Log Level<a class="headerlink" href="#setting-the-log-level" title="Permalink to this heading"></a></h2>
+<p>Users can set the log level using the <code class="docutils literal notranslate"><span class="pre">SetLogLevel</span></code> method in the <code class="docutils literal notranslate"><span class="pre">Logger</span></code> class.</p>
+<div class="highlight-CPP notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Logger</span><span class="o">::</span><span class="n">Get</span><span class="p">();</span>
+<span class="n">logger</span><span class="p">.</span><span class="n">SetLogLevel</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">LogLevel</span><span class="o">::</span><span class="n">Verbose</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>By setting the log level, only log messages with an equal or lower level will be recorded. For example, if the log level is set to Info, messages with levels Debug and Verbose will be ignored.</p>
+</div>
+<div class="section" id="logging-inside-the-ifm3d-library">
+<h2>Logging inside the ifm3d library<a class="headerlink" href="#logging-inside-the-ifm3d-library" title="Permalink to this heading"></a></h2>
+<p>The ifm3d library uses the following macros for logging inside the library:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">LOG_DEBUG</span><span class="p">(</span><span class="s">&quot;This is a debug message.&quot;</span><span class="p">)</span>
+<span class="n">LOG_INFO</span><span class="p">(</span><span class="s">&quot;This is an info message.&quot;</span><span class="p">)</span>
+<span class="n">LOG_WARNING</span><span class="p">(</span><span class="s">&quot;This is a warning message.&quot;</span><span class="p">)</span>
+<span class="n">LOG_ERROR</span><span class="p">(</span><span class="s">&quot;This is an error message.&quot;</span><span class="p">)</span>
+<span class="n">LOG_CRITICAL</span><span class="p">(</span><span class="s">&quot;This is a critical message.&quot;</span><span class="p">)</span>
+<span class="n">LOG_VERBOSE</span><span class="p">(</span><span class="s">&quot;This is a verbose message.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Logs will be printed according to the configured log level.</p>
+</div>
+<div class="section" id="using-the-logger-in-user-applications">
+<h2>Using the Logger in User Applications<a class="headerlink" href="#using-the-logger-in-user-applications" title="Permalink to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">ifm3d::Logger</span></code> can be used in applications that use ifm3d. The <code class="docutils literal notranslate"><span class="pre">ifm3d::Logger</span></code> uses the <a class="reference external" href="https://github.com/fmtlib/fmt">fmt</a> library for formatting log entries. Users must link their applications with the fmt library to use the <code class="docutils literal notranslate"><span class="pre">ifm3d::Logger</span></code>. Logging in an application can be done by including the header <code class="docutils literal notranslate"><span class="pre">&quot;ifm3d/common/logging/log.h&quot;</span></code>, and logging can be performed using the macros provided by <code class="docutils literal notranslate"><span class="pre">ifm3d::Logger</span></code>.</p>
+<div class="highlight-CPP notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;thread&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/device/o3r.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/fg.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/common/logging/log.h&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">ifm3d</span><span class="o">::</span><span class="nn">literals</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">// Get the logging instance</span>
+<span class="w">  </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Logger</span><span class="o">::</span><span class="n">Get</span><span class="p">();</span>
+<span class="w">  </span><span class="c1">// Set the log level</span>
+<span class="w">  </span><span class="n">logger</span><span class="p">.</span><span class="n">SetLogLevel</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">LogLevel</span><span class="o">::</span><span class="n">Verbose</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Declare the device object (one object only, corresponding to the VPU)</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">dev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3R</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">  </span><span class="n">LOG_INFO</span><span class="p">(</span><span class="s">&quot;Device creation done&quot;</span><span class="p">)</span>
+
+<span class="w">  </span><span class="c1">// Declare the FrameGrabber</span>
+<span class="w">  </span><span class="c1">// One FrameGrabber per camera head (define the port number).</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">FG_PCIC_PORT</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="n">dev</span><span class="o">-&gt;</span><span class="n">Get</span><span class="p">()[</span><span class="s">&quot;/ports/port2/data/pcicTCPPort&quot;</span><span class="n">_json_pointer</span><span class="p">];</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">fg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FrameGrabber</span><span class="o">&gt;</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span><span class="w"> </span><span class="n">FG_PCIC_PORT</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">LOG_DEBUG</span><span class="p">(</span><span class="s">&quot;Setting Schema&quot;</span><span class="p">)</span>
+
+<span class="w">  </span><span class="c1">// Set Schema and start the grabber</span>
+<span class="w">  </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Start</span><span class="p">({</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">NORM_AMPLITUDE_IMAGE</span><span class="p">,</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">,</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">XYZ</span><span class="p">,</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">CONFIDENCE_IMAGE</span><span class="w"> </span><span class="p">});</span>
+
+<span class="w">  </span><span class="c1">// Use the framegrabber in streaming mode</span>
+<span class="w">  </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">OnNewFrame</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Frame</span><span class="o">::</span><span class="n">Ptr</span><span class="w"> </span><span class="n">frame</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">distance_image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">frame</span><span class="o">-&gt;</span><span class="n">GetBuffer</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">CONFIDENCE_IMAGE</span><span class="p">);</span>
+<span class="w">    </span><span class="n">LOG_VERBOSE</span><span class="p">(</span><span class="s">&quot;Width: {}, Height: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">distance_image</span><span class="p">.</span><span class="n">width</span><span class="p">(),</span><span class="w"> </span><span class="n">distance_image</span><span class="p">.</span><span class="n">height</span><span class="p">());</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">this_thread</span><span class="o">::</span><span class="n">sleep_for</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">seconds</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span>
+<span class="w">  </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Stop</span><span class="p">();</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="log-writer-sink">
+<h2>Log Writer (Sink)<a class="headerlink" href="#log-writer-sink" title="Permalink to this heading"></a></h2>
+<p>A log writer is responsible for handling log messages. The <code class="docutils literal notranslate"><span class="pre">ifm3d::Logger</span></code> library provides a default log writer that writes log messages to the console. However, you can define your own custom log sinks to redirect log messages to different destinations, such as files, databases, or third-party loggers.</p>
+<div class="section" id="defining-a-custom-log-writer">
+<h3>Defining a Custom Log Writer<a class="headerlink" href="#defining-a-custom-log-writer" title="Permalink to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">ifm3d::Logger</span></code> provides an abstract interface, <code class="docutils literal notranslate"><span class="pre">ifm3d::LogWriter</span></code>, which custom log writers can implement to work with <code class="docutils literal notranslate"><span class="pre">ifm3d::Logger</span></code>. The <code class="docutils literal notranslate"><span class="pre">ifm3d::Logger</span></code> provides the <code class="docutils literal notranslate"><span class="pre">SetLogWriter</span></code> method, which is used to set the custom logger with <code class="docutils literal notranslate"><span class="pre">ifm3d::Logger</span></code>.</p>
+<p>The following example shows a custom logger implementation with the third-party library SPDLOG.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">LogWriterSpdLog</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">LogWriter</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="n">LogWriterSpdLog</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">Write</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">LogEntry</span><span class="o">&amp;</span><span class="w"> </span><span class="n">entry</span><span class="p">)</span><span class="w"> </span><span class="k">override</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">spdlog</span><span class="o">::</span><span class="n">level</span><span class="o">::</span><span class="n">level_enum</span><span class="w"> </span><span class="n">spdlog_level</span><span class="p">;</span>
+<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">entry</span><span class="p">.</span><span class="n">GetLogLevel</span><span class="p">())</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="no">LogLevel</span><span class="o">::</span><span class="no">Critical</span><span class="p">:</span>
+<span class="w">        </span><span class="n">spdlog_level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spdlog</span><span class="o">::</span><span class="n">level</span><span class="o">::</span><span class="n">critical</span><span class="p">;</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="no">LogLevel</span><span class="o">::</span><span class="no">Error</span><span class="p">:</span>
+<span class="w">        </span><span class="n">spdlog_level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spdlog</span><span class="o">::</span><span class="n">level</span><span class="o">::</span><span class="n">err</span><span class="p">;</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="no">LogLevel</span><span class="o">::</span><span class="no">Warning</span><span class="p">:</span>
+<span class="w">        </span><span class="n">spdlog_level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spdlog</span><span class="o">::</span><span class="n">level</span><span class="o">::</span><span class="n">warn</span><span class="p">;</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="no">LogLevel</span><span class="o">::</span><span class="no">Info</span><span class="p">:</span>
+<span class="w">        </span><span class="n">spdlog_level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spdlog</span><span class="o">::</span><span class="n">level</span><span class="o">::</span><span class="n">info</span><span class="p">;</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="no">LogLevel</span><span class="o">::</span><span class="no">Debug</span><span class="p">:</span>
+<span class="w">        </span><span class="n">spdlog_level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spdlog</span><span class="o">::</span><span class="n">level</span><span class="o">::</span><span class="n">debug</span><span class="p">;</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="no">LogLevel</span><span class="o">::</span><span class="no">Verbose</span><span class="p">:</span>
+<span class="w">        </span><span class="n">spdlog_level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spdlog</span><span class="o">::</span><span class="n">level</span><span class="o">::</span><span class="n">trace</span><span class="p">;</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">      </span><span class="k">default</span><span class="o">:</span>
+<span class="w">        </span><span class="n">spdlog_level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spdlog</span><span class="o">::</span><span class="n">level</span><span class="o">::</span><span class="n">off</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">spdlog</span><span class="o">::</span><span class="n">log</span><span class="p">(</span>
+<span class="w">      </span><span class="n">spdlog</span><span class="o">::</span><span class="n">source_loc</span><span class="p">(</span><span class="n">entry</span><span class="p">.</span><span class="n">GetFile</span><span class="p">(),</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="n">GetLine</span><span class="p">(),</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="n">GetFunc</span><span class="p">()),</span>
+<span class="w">      </span><span class="n">spdlog_level</span><span class="p">,</span>
+<span class="w">      </span><span class="n">entry</span><span class="p">.</span><span class="n">GetMessage</span><span class="p">()</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../o3r/deserialize/deserialize.html" class="btn btn-neutral float-left" title="How to: deserialize O3R data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../cli_link.html" class="btn btn-neutral float-right" title="ifm3d - Command Line Tool" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, ifm electronic.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
