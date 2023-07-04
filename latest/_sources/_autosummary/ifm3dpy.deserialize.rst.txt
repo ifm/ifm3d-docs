@@ -21,6 +21,11 @@
    
       Calibration
       ExtrinsicOpticToUser
+      O3DExposureTimes
+      O3DExtrinsicCalibration
+      O3DILLUTemperature
+      O3DInstrinsicCalibration
+      O3DInverseInstrinsicCalibration
       ODSInfoV1
       ODSOccupancyGridV1
       RGBInfoV1

@@ -5,6 +5,7 @@ var annotated_dup =
         [ "Calibration", "structifm3d_1_1calibration_1_1Calibration.html", "structifm3d_1_1calibration_1_1Calibration" ],
         [ "ExtrinsicOpticToUser", "structifm3d_1_1calibration_1_1ExtrinsicOpticToUser.html", "structifm3d_1_1calibration_1_1ExtrinsicOpticToUser" ]
       ] ],
+      [ "ArrayDeserialize", "classifm3d_1_1ArrayDeserialize.html", "classifm3d_1_1ArrayDeserialize" ],
       [ "Buffer", "classifm3d_1_1Buffer.html", "classifm3d_1_1Buffer" ],
       [ "Buffer_", "classifm3d_1_1Buffer__.html", "classifm3d_1_1Buffer__" ],
       [ "Device", "classifm3d_1_1Device.html", "classifm3d_1_1Device" ],

@@ -1,0 +1,63 @@
+ifm3dpy.device.O3X
+==================
+
+.. currentmodule:: ifm3dpy.device
+
+.. autoclass:: O3X
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~O3X.__init__
+      ~O3X.active_application
+      ~O3X.am_i
+      ~O3X.application_list
+      ~O3X.application_types
+      ~O3X.cancel_session
+      ~O3X.check_minimum_firmware_version
+      ~O3X.copy_application
+      ~O3X.create_application
+      ~O3X.delete_application
+      ~O3X.device_parameter
+      ~O3X.device_type
+      ~O3X.export_ifm_app
+      ~O3X.export_ifm_config
+      ~O3X.factory_reset
+      ~O3X.firmware_version
+      ~O3X.force_trigger
+      ~O3X.from_json
+      ~O3X.heartbeat
+      ~O3X.imager_types
+      ~O3X.import_ifm_app
+      ~O3X.import_ifm_config
+      ~O3X.reboot
+      ~O3X.request_session
+      ~O3X.set_current_time
+      ~O3X.set_temporary_application_parameters
+      ~O3X.to_json
+      ~O3X.trace_logs
+      ~O3X.unit_vectors
+      ~O3X.who_am_i
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~O3X.ip
+      ~O3X.password
+      ~O3X.session_id
+      ~O3X.xmlrpc_port
+   
+   

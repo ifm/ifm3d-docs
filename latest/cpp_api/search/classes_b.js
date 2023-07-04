@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['semver_194',['SemVer',['../structifm3d_1_1SemVer.html',1,'ifm3d']]],
-  ['swupdater_195',['SWUpdater',['../classifm3d_1_1SWUpdater.html',1,'ifm3d']]]
+  ['result_195',['Result',['../structifm3d_1_1Organizer_1_1Result.html',1,'ifm3d::Organizer']]],
+  ['rgbinfov1_196',['RGBInfoV1',['../classifm3d_1_1RGBInfoV1.html',1,'ifm3d']]]
 ];

@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "ifm3d::ArrayDeserialize< T, num_of_parameter >", "classifm3d_1_1ArrayDeserialize.html", null ],
     [ "ifm3d::Buffer", "classifm3d_1_1Buffer.html", [
       [ "ifm3d::Buffer_< Tp >", "classifm3d_1_1Buffer__.html", null ]
     ] ],
