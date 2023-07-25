@@ -202,10 +202,7 @@ those changes. Defaults to ‘’ (no password).</p></li>
 <td><p>Sets the default value of an object inside the JSON.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3R.resolve_config" title="ifm3dpy.device.O3R.resolve_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_config</span></code></a>(self, json_pointer)</p></td>
-<td><p><ul class="simple">
-<li><p>Returns a part of the configuration formatted as JSON based on a</p></li>
-</ul>
-</p></td>
+<td><p>Returns a part of the configuration formatted as JSON based on a</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3R.save_init" title="ifm3dpy.device.O3R.save_init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_init</span></code></a>(self)</p></td>
 <td><p>Save to current temporary JSON configuration as initial JSON configuration</p></td>
@@ -683,16 +680,18 @@ defined in the JSON schema.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.device.O3R.resolve_config">
 <span class="sig-name descname"><span class="pre">resolve_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.device.O3R" title="ifm3dpy.device.O3R"><span class="pre">ifm3dpy.device.O3R</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_pointer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#ifm3dpy.device.O3R.resolve_config" title="Permalink to this definition"></a></dt>
-<dd><ul class="simple">
-<li><p>Returns a part of the configuration formatted as JSON based on a</p></li>
-<li><p>JSON pointer.</p></li>
-</ul>
-<blockquote>
-<div><dl class="simple">
-<dt>dict</dt><dd><p>The partial JSON configuration for the given JSON pointer</p>
+<dd><blockquote>
+<div><p>Returns a part of the configuration formatted as JSON based on a
+JSON pointer.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The partial JSON configuration for the given JSON pointer</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
 </dd>
 </dl>
-</div></blockquote>
 </dd></dl>
 
 <dl class="py method">
