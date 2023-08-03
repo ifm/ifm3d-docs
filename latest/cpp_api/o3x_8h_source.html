@@ -99,27 +99,27 @@ $(document).ready(function(){initNavTree('o3x_8h_source.html',''); initResizable
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>ifm3d</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classifm3d_1_1O3X.html">   16</a></span>&#160;  <span class="keyword">class </span>IFM3D_DEVICE_EXPORT <a class="code" href="classifm3d_1_1O3X.html">O3X</a> : <span class="keyword">public</span> <a class="code" href="classifm3d_1_1LegacyDevice.html">LegacyDevice</a></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">using</span> Ptr = std::shared_ptr&lt;O3X&gt;;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classifm3d_1_1O3X.html">O3X</a>(<span class="keyword">const</span> std::string&amp; ip = ifm3d::DEFAULT_IP,</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">const</span> std::uint16_t xmlrpc_port = ifm3d::DEFAULT_XMLRPC_PORT,</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">const</span> std::string&amp; password = ifm3d::DEFAULT_PASSWORD);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classifm3d_1_1O3X.html">O3X</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classifm3d_1_1O3X.html">O3X</a>(<a class="code" href="classifm3d_1_1O3X.html">O3X</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classifm3d_1_1O3X.html">O3X</a>&amp; operator=(<a class="code" href="classifm3d_1_1O3X.html">O3X</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classifm3d_1_1O3X.html">O3X</a>(<a class="code" href="classifm3d_1_1O3X.html">O3X</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classifm3d_1_1O3X.html">O3X</a>&amp; operator=(<a class="code" href="classifm3d_1_1O3X.html">O3X</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    device_family WhoAmI() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  }; <span class="comment">// end: class O3X</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif // IFM3D_DEVICE_O3X_H</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classifm3d_1_1O3X.html">   18</a></span>&#160;  <span class="keyword">class </span>IFM3D_DEVICE_EXPORT <a class="code" href="classifm3d_1_1O3X.html">O3X</a> : <span class="keyword">public</span> <a class="code" href="classifm3d_1_1LegacyDevice.html">LegacyDevice</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">using</span> Ptr = std::shared_ptr&lt;O3X&gt;;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classifm3d_1_1O3X.html">O3X</a>(<span class="keyword">const</span> std::string&amp; ip = ifm3d::DEFAULT_IP,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">const</span> std::uint16_t xmlrpc_port = ifm3d::DEFAULT_XMLRPC_PORT,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">const</span> std::string&amp; password = ifm3d::DEFAULT_PASSWORD);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classifm3d_1_1O3X.html">O3X</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classifm3d_1_1O3X.html">O3X</a>(<a class="code" href="classifm3d_1_1O3X.html">O3X</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classifm3d_1_1O3X.html">O3X</a>&amp; operator=(<a class="code" href="classifm3d_1_1O3X.html">O3X</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classifm3d_1_1O3X.html">O3X</a>(<a class="code" href="classifm3d_1_1O3X.html">O3X</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classifm3d_1_1O3X.html">O3X</a>&amp; operator=(<a class="code" href="classifm3d_1_1O3X.html">O3X</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    device_family WhoAmI() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  }; <span class="comment">// end: class O3X</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif // IFM3D_DEVICE_O3X_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassifm3d_1_1O3X_html"><div class="ttname"><a href="classifm3d_1_1O3X.html">ifm3d::O3X</a></div><div class="ttdef"><b>Definition:</b> o3x.h:16</div></div>
+<div class="ttc" id="aclassifm3d_1_1O3X_html"><div class="ttname"><a href="classifm3d_1_1O3X.html">ifm3d::O3X</a></div><div class="ttdef"><b>Definition:</b> o3x.h:18</div></div>
 <div class="ttc" id="aclassifm3d_1_1LegacyDevice_html"><div class="ttname"><a href="classifm3d_1_1LegacyDevice.html">ifm3d::LegacyDevice</a></div><div class="ttdef"><b>Definition:</b> legacy_device.h:13</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
