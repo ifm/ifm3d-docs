@@ -386,8 +386,7 @@ std::unique_ptr&lt; Impl &gt;&#160;</td><td class="memItemRight" valign="bottom"
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the configuration formatted as JSON based on a path. If the path is empty, returns the whole configuration.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Returns the configuration formatted as JSON based on a path. If the path is empty, returns the whole configuration. This function is blocking for firmware versions above 1.1.0. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>A List of JSON path fragments to retrieve the information for</td></tr>
   </table>
@@ -763,7 +762,7 @@ std::unique_ptr&lt; Impl &gt;&#160;</td><td class="memItemRight" valign="bottom"
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Overwrites parts of the temporary JSON configuration which is achieved by merging the provided JSON fragment with the current temporary JSON.</p>
+<p>Overwrites parts of the temporary JSON configuration which is achieved by merging the provided JSON fragment with the current temporary JSON. This function is blocking for firmware versions above 1.1.0.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">j</td><td>The new temporay JSON configuration of the device. </td></tr>

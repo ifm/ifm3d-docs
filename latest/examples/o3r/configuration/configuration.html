@@ -94,7 +94,7 @@
              
   <div class="section" id="how-to-configure-the-camera">
 <h1>How to: configure the camera<a class="headerlink" href="#how-to-configure-the-camera" title="Permalink to this heading"></a></h1>
-<p>The O3R has multiple parameters that have an influence on the point cloud. Some of them affect the raw measurement and others modify how the data is converted into x,y,z, etc values. These parameters can be changed to better fit your applications and we are going to see how here. You can refer to <span class="xref myst">this page</span> for a detailed description of each parameter.</p>
+<p>The O3R has multiple parameters that have an influence on the point cloud. Some of them affect the raw measurement and others modify how the data is converted into x,y,z, etc values. These parameters can be changed to better fit your applications and we are going to see how here. You can refer to <a class="reference external" href="https://ifm3d.com/documentation/Technology/3D/index_3d.html">this page</a> for a detailed description of each parameter.</p>
 <p>There are multiple functions available to read the current configuration of the device and to set a new one. We are using JSON formatting.</p>
 <p>For this process, we have to initialize the camera object (please have a look at the code example provided for full details of the imported libraries).</p>
 <div class="sphinx-tabs docutils container">
@@ -198,18 +198,6 @@
 </pre></div>
 </div>
 </div></div>
-</div>
-<div class="section" id="configuration-after-replacing-changing-hardware">
-<h2>Configuration after replacing / changing hardware<a class="headerlink" href="#configuration-after-replacing-changing-hardware" title="Permalink to this heading"></a></h2>
-<p>If the user utilized a <code class="docutils literal notranslate"><span class="pre">save_init()</span></code>-function to make the configuration persistent over reboots in the past they may face a situation when replacing hardware / changing camera head connectivity to the VPU:</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">save_init()</span></code>-function saves a <code class="docutils literal notranslate"><span class="pre">ConfInitJSON</span></code> file on the VPU which gets applied at every reboot. During the boot-up process the VPU compares the saved configuration to the incoming configuration. If there is any mismatch the respective port(s) will be put to ERROR state and the PORT LED flashes in RED color.</p>
-<p>In diagnostics, <code class="docutils literal notranslate"><span class="pre">ERROR_BOOT_SEQUENCE_HEAD_INVALID_SERIALNUMBER</span></code> corresponding to the PORT will be displayed if the extrinsic calibration is applied to the respective port but the camera head connected to that port has a different serial number as in the saved configuration file.</p>
-<p>This issue can be fixed and the system can be recovered from this stage in the following way:</p>
-<ol class="arabic simple">
-<li><p>Via Factory Reset: This resets all the settings including the extrinsic calibration values onto the VPU.</p></li>
-<li><p>Edit the extrinsic calibration parameters: either default extrinsic calibration values or update to any different set of extrinsic calibration values.</p></li>
-</ol>
-<p>If the heads with a saved non-default extrinsic calibration are swapped out, this is considered an error until the extrinsic calibration has been updated and the VPU is rebooted.</p>
 </div>
 </div>
 
