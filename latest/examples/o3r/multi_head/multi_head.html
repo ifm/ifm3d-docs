@@ -102,8 +102,7 @@
 <span class="cm"> One feature of the O3R platform is to enable the use of multiple camera heads</span>
 <span class="cm"> of different types (2D, 3D, various resolutions, etc). In this example, we</span>
 <span class="cm"> show how to retrieve the pcic port number for each head connected to the VPU</span>
-<span class="cm"> along with its type and create `FrameGrabber` and `ImageBuffer` objects for</span>
-<span class="cm"> each.</span>
+<span class="cm"> along with its type, create `FrameGrabber` objects and get a frame for each.</span>
 <span class="cm">*/</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/device/o3r.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span>
@@ -139,9 +138,9 @@
 <span class="p">{</span>
 
 <span class="w">  </span><span class="c1">// Declare the camera object</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">cam</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3R</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">o3r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3R</span><span class="o">&gt;</span><span class="p">();</span>
 <span class="w">  </span><span class="c1">// Retreive ports configuration</span>
-<span class="w">  </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">json</span><span class="w"> </span><span class="n">conf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cam</span><span class="o">-&gt;</span><span class="n">Get</span><span class="p">();</span>
+<span class="w">  </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">json</span><span class="w"> </span><span class="n">conf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">o3r</span><span class="o">-&gt;</span><span class="n">Get</span><span class="p">();</span>
 <span class="w">  </span><span class="c1">// Initialize the structures</span>
 <span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FrameGrabber</span><span class="o">::</span><span class="n">Ptr</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fgs</span><span class="p">;</span>
 
@@ -161,7 +160,7 @@
 <span class="w">                </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\t</span><span class="s"> Type: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 <span class="w">      </span><span class="c1">// Create list of FrameGrabber and ImageBuffer objects for connected</span>
 <span class="w">      </span><span class="c1">// ports</span>
-<span class="w">      </span><span class="k">auto</span><span class="w"> </span><span class="n">fg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FrameGrabber</span><span class="o">&gt;</span><span class="p">(</span><span class="n">cam</span><span class="p">,</span><span class="w"> </span><span class="n">pcic</span><span class="p">);</span>
+<span class="w">      </span><span class="k">auto</span><span class="w"> </span><span class="n">fg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FrameGrabber</span><span class="o">&gt;</span><span class="p">(</span><span class="n">o3r</span><span class="p">,</span><span class="w"> </span><span class="n">pcic</span><span class="p">);</span>
 
 <span class="w">      </span><span class="c1">// Start the framegrabber</span>
 <span class="w">      </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Start</span><span class="p">({</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">XYZ</span><span class="p">,</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">JPEG_IMAGE</span><span class="p">});</span>

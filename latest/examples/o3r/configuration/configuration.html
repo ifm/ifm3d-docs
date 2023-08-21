@@ -94,48 +94,62 @@
              
   <div class="section" id="how-to-configure-the-camera">
 <h1>How to: configure the camera<a class="headerlink" href="#how-to-configure-the-camera" title="Permalink to this heading"></a></h1>
-<p>The O3R has multiple parameters that have an influence on the point cloud. Some of them affect the raw measurement and others modify how the data is converted into x,y,z, etc values. These parameters can be changed to better fit your applications and we are going to see how here. You can refer to <a class="reference external" href="https://ifm3d.com/documentation/Technology/3D/index_3d.html">this page</a> for a detailed description of each parameter.</p>
-<p>There are multiple functions available to read the current configuration of the device and to set a new one. We are using JSON formatting.</p>
-<p>For this process, we have to initialize the camera object (please have a look at the code example provided for full details of the imported libraries).</p>
+<p>The O3R has multiple parameters that have an influence on the point cloud. Some of them affect the raw measurement and others modify how the data is converted into x,y,z, etc values. These parameters can be changed to better fit your applications and this document presents how. You can refer to <a class="reference external" href="https://ifm3d.com/documentation/Technology/3D/index_3d.html">this page</a> for a detailed description of each parameter.</p>
+<p>The ifm3d API provides functions to read and set the configuration of the device. Note that JSON formatting is used for all the configurations.</p>
+<p>For this process, an O3R object has to be initialized to establish a connection with the device (please have a look at the code example provided for full details of the imported libraries).</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-0-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-0-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-0-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">o3r</span> <span class="o">=</span> <span class="n">O3R</span><span class="p">()</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-0-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">cam</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3R</span><span class="o">&gt;</span><span class="p">();</span>
+</div><div aria-labelledby="tab-0-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">o3r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3R</span><span class="o">&gt;</span><span class="p">();</span>
 </pre></div>
 </div>
 </div></div>
 <p>Note: if you are using multiple ifm devices (O3D, O3X, O3R), you can use the <code class="docutils literal notranslate"><span class="pre">Device</span></code> class.</p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-1-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-1-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-1-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-1-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cam</span> <span class="o">=</span> <span class="n">Device</span><span class="p">()</span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-1-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-1-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-1-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-1-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dev</span> <span class="o">=</span> <span class="n">Device</span><span class="p">()</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-1-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-Qysr" name="Qysr" role="tabpanel" tabindex="0"><p>If you need to use Device specific functions at a later point you can cast the pointer to the relevant class:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">cam</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Device</span><span class="o">::</span><span class="n">MakeShared</span><span class="p">();</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">cam_O3R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">static_pointer_cast</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3R</span><span class="o">&gt;</span><span class="p">(</span><span class="n">cam</span><span class="p">);</span>
+</div><div aria-labelledby="tab-1-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-Qysr" name="Qysr" role="tabpanel" tabindex="0"><p>If you need to use functions specific to the concrete <code class="docutils literal notranslate"><span class="pre">Device</span></code> subclass, you can cast the pointer to the relevant class:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">dev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Device</span><span class="o">::</span><span class="n">MakeShared</span><span class="p">();</span>
+<span class="c1">// Only do this if you&#39;re sure the `Device` is an instance of `O3R`:</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">dev_O3R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">static_pointer_cast</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3R</span><span class="o">&gt;</span><span class="p">(</span><span class="n">dev</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">init_status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dev_O3R</span><span class="o">-&gt;</span><span class="n">GetInitStatus</span><span class="p">();</span>
+
+
+<span class="c1">// Otherwise use dynamic_pointer_cast and check the value for nullptr:</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">dev_O3R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">dynamic_pointer_cast</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3R</span><span class="o">&gt;</span><span class="p">(</span><span class="n">dev</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dev_O3R</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">   </span><span class="k">auto</span><span class="w"> </span><span class="n">ports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dev_O3R</span><span class="o">-&gt;</span><span class="n">Ports</span><span class="p">();</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">GetInitStatus</span></code> returns the status of the device’s initialization process. Use it to ensure the device is properly booted up before querying for data.</p>
+</div>
 <div class="section" id="read-the-current-configuration">
 <h2>Read the current configuration<a class="headerlink" href="#read-the-current-configuration" title="Permalink to this heading"></a></h2>
 <p>The first provided function outputs the current configuration of the device (the VPU and each head currently attached). This function outputs the full configuration, including the parameters set for each camera head, but also other aspects like MAC and IP addresses, etc.</p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-2-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-2-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-2-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-2-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">conf</span> <span class="o">=</span> <span class="n">cam</span><span class="o">.</span><span class="n">get</span><span class="p">();</span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-2-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-2-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-2-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-2-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">conf</span> <span class="o">=</span> <span class="n">o3r</span><span class="o">.</span><span class="n">get</span><span class="p">();</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-2-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">json</span><span class="w"> </span><span class="n">conf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cam</span><span class="o">-&gt;</span><span class="n">Get</span><span class="p">();</span>
+</div><div aria-labelledby="tab-2-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">json</span><span class="w"> </span><span class="n">conf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">o3r</span><span class="o">-&gt;</span><span class="n">Get</span><span class="p">();</span>
 </pre></div>
 </div>
 </div></div>
 </div>
 <div class="section" id="write-a-new-configuration">
 <h2>Write a new configuration<a class="headerlink" href="#write-a-new-configuration" title="Permalink to this heading"></a></h2>
-<p>To write a new configuration to the device, you need to provide said configuration in json formatting. The provided configuration can be a subset or the full configuration.</p>
+<p>To set a new configuration, you need to provide said configuration in JSON formatting. The provided configuration can be a subset or the full configuration, as long as it follows the proper JSON hierarchy.</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-3-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-3-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-3-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-3-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">o3r</span><span class="o">.</span><span class="n">set</span><span class="p">({</span><span class="s1">&#39;device&#39;</span><span class="p">:{</span><span class="s1">&#39;info&#39;</span><span class="p">:{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;great_o3r&#39;</span><span class="p">}}})</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-3-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-3-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">cam</span><span class="o">-&gt;</span><span class="n">Set</span><span class="p">(</span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">{&quot;device&quot;:{&quot;info&quot;: {&quot;name&quot;: &quot;my_o3r&quot;}}}</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">);</span>
+</div><div aria-labelledby="tab-3-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-3-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">o3r</span><span class="o">-&gt;</span><span class="n">Set</span><span class="p">(</span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">{&quot;device&quot;:{&quot;info&quot;: {&quot;name&quot;: &quot;my_o3r&quot;}}}</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div></div>
@@ -148,22 +162,23 @@
 
 <span class="c1"># Define the ifm3d objects for the communication</span>
 <span class="kn">from</span> <span class="nn">ifm3dpy.device</span> <span class="kn">import</span> <span class="n">O3R</span>
+
 <span class="n">o3r</span> <span class="o">=</span> <span class="n">O3R</span><span class="p">()</span>
 
 <span class="c1"># Get the current configuration</span>
 <span class="n">config</span> <span class="o">=</span> <span class="n">o3r</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
 
 <span class="c1"># Print a little part from the config to verify the configuration</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;device&#39;</span><span class="p">][</span><span class="s1">&#39;swVersion&#39;</span><span class="p">],</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;device&quot;</span><span class="p">][</span><span class="s2">&quot;swVersion&quot;</span><span class="p">],</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
 <span class="c1"># Note: this assumes that a camera is plugged into port 1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;ports&#39;</span><span class="p">][</span><span class="s1">&#39;port1&#39;</span><span class="p">][</span><span class="s1">&#39;state&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;ports&quot;</span><span class="p">][</span><span class="s2">&quot;port1&quot;</span><span class="p">][</span><span class="s2">&quot;state&quot;</span><span class="p">])</span>
 
 <span class="c1"># Let&#39;s change the name of the device</span>
-<span class="n">o3r</span><span class="o">.</span><span class="n">set</span><span class="p">({</span><span class="s1">&#39;device&#39;</span><span class="p">:{</span><span class="s1">&#39;info&#39;</span><span class="p">:{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;great_o3r&#39;</span><span class="p">}}})</span>
+<span class="n">o3r</span><span class="o">.</span><span class="n">set</span><span class="p">({</span><span class="s2">&quot;device&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;great_o3r&quot;</span><span class="p">}}})</span>
 
 <span class="c1"># Double check the configuration</span>
 <span class="n">config</span> <span class="o">=</span> <span class="n">o3r</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;device&#39;</span><span class="p">][</span><span class="s1">&#39;info&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;device&quot;</span><span class="p">][</span><span class="s2">&quot;info&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-4-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-4-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
@@ -176,22 +191,21 @@
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fstream&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/device/o3r.h&gt;</span>
-<span class="k">using</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">json</span><span class="p">;</span>
-
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">ifm3d</span><span class="o">::</span><span class="nn">literals</span><span class="p">;</span>
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
 
 <span class="w">    </span><span class="c1">// Create the camera object</span>
-<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">cam</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3R</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">o3r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3R</span><span class="o">&gt;</span><span class="p">();</span>
 
 <span class="w">    </span><span class="c1">// Get the current configuration of the camera in JSON format</span>
-<span class="w">    </span><span class="n">json</span><span class="w"> </span><span class="n">conf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cam</span><span class="o">-&gt;</span><span class="n">Get</span><span class="p">();</span>
+<span class="w">    </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">json</span><span class="w"> </span><span class="n">conf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">o3r</span><span class="o">-&gt;</span><span class="n">Get</span><span class="p">();</span>
 
 <span class="w">    </span><span class="c1">// Display the current configuration</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">setw</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">conf</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 <span class="w">    </span>
 <span class="w">    </span><span class="c1">// Configure the device from a json string</span>
-<span class="w">    </span><span class="n">cam</span><span class="o">-&gt;</span><span class="n">Set</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">json</span><span class="o">::</span><span class="n">parse</span><span class="p">(</span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">{&quot;device&quot;:{&quot;info&quot;:{&quot;name&quot;: &quot;my_new_o3r&quot;}}}</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">));</span><span class="w"> </span>
+<span class="w">    </span><span class="n">o3r</span><span class="o">-&gt;</span><span class="n">Set</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">json</span><span class="o">::</span><span class="n">parse</span><span class="p">(</span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s">{&quot;device&quot;:{&quot;info&quot;:{&quot;name&quot;: &quot;my_new_o3r&quot;}}}</span><span class="dl">)</span><span class="s">&quot;</span><span class="p">));</span><span class="w"> </span>
 
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
