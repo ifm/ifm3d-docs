@@ -1,8 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"structifm3d_1_1Buffer_1_1Iterator.html#ac54798a42d818df0b6544642eb353ff9":[1,0,0,2,0,8],
-"structifm3d_1_1Buffer_1_1Iterator.html#acb9aded936b8ea070b48d7fb4d906c06":[1,0,0,2,0,3],
-"structifm3d_1_1Buffer_1_1Iterator.html#adf9a9358b475317bd816d7b47a0f5cd1":[1,0,0,2,0,12],
 "structifm3d_1_1Buffer_1_1Iterator.html#ae26afca4c6a135361a2f06cc46be4432":[1,0,0,2,0,2],
 "structifm3d_1_1Buffer_1_1Iterator.html#aea982227be0ae087ce135d1246b3034b":[1,0,0,2,0,10],
 "structifm3d_1_1Buffer_1_1Iterator.html#aefd586f6fa4fb8db06c026ec1cc0dda0":[1,0,0,2,0,5],

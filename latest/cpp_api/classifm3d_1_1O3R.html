@@ -192,14 +192,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab426c636e257766f0caa35b09ea97fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d703bc04a0d893733cbb1f5c6983d82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classifm3d_1_1json.html">json</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3R.html#a0d703bc04a0d893733cbb1f5c6983d82">GetInit</a> ()</td></tr>
 <tr class="separator:a0d703bc04a0d893733cbb1f5c6983d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7316e073bf5625c08d7c11a70e5ce07a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3R.html#a7316e073bf5625c08d7c11a70e5ce07a">SaveInit</a> ()</td></tr>
-<tr class="separator:a7316e073bf5625c08d7c11a70e5ce07a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30dd23d4ba5b9919c75107bf9b2c3569"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3R.html#a30dd23d4ba5b9919c75107bf9b2c3569">GetInitStatus</a> ()</td></tr>
-<tr class="separator:a30dd23d4ba5b9919c75107bf9b2c3569"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6508ed039407644c820296cf6564b887"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3R.html#a6508ed039407644c820296cf6564b887">Lock</a> (const std::string &amp;password)</td></tr>
-<tr class="separator:a6508ed039407644c820296cf6564b887"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c7a7f0a8cd315c014c2b5d8b6c1347b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3R.html#a2c7a7f0a8cd315c014c2b5d8b6c1347b">Unlock</a> (const std::string &amp;password)</td></tr>
-<tr class="separator:a2c7a7f0a8cd315c014c2b5d8b6c1347b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a314f79eb3f3d0fffe469fb276376cf91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3R.html#a314f79eb3f3d0fffe469fb276376cf91">SaveInit</a> (const std::vector&lt; std::string &gt; &amp;pointers={})</td></tr>
+<tr class="separator:a314f79eb3f3d0fffe469fb276376cf91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab82367443890c0526f2da7c79147e6b5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structifm3d_1_1PortInfo.html">PortInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3R.html#ab82367443890c0526f2da7c79147e6b5">Ports</a> ()</td></tr>
 <tr class="separator:ab82367443890c0526f2da7c79147e6b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace851644d8586ad20a68865f80860f89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structifm3d_1_1PortInfo.html">PortInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1O3R.html#ace851644d8586ad20a68865f80860f89">Port</a> (const std::string &amp;port)</td></tr>
@@ -362,7 +356,7 @@ std::unique_ptr&lt; Impl &gt;&#160;</td><td class="memItemRight" valign="bottom"
 </ul>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classifm3d_1_1Error.html">ifm3d::Error</a></td><td>upon error - if this throws an exception, you are encouraged to check the log file as a best effort is made to be as descriptive as possible as to the specific error that has occured. Equivalent to <a class="el" href="classifm3d_1_1O3R.html#a0952daae6643332cbdd48d7c8d282e75">Set()</a> followed by <a class="el" href="classifm3d_1_1O3R.html#a7316e073bf5625c08d7c11a70e5ce07a">SaveInit()</a> </td></tr>
+    <tr><td class="paramname"><a class="el" href="classifm3d_1_1Error.html">ifm3d::Error</a></td><td>upon error - if this throws an exception, you are encouraged to check the log file as a best effort is made to be as descriptive as possible as to the specific error that has occured. Equivalent to <a class="el" href="classifm3d_1_1O3R.html#a0952daae6643332cbdd48d7c8d282e75">Set()</a> followed by <a class="el" href="classifm3d_1_1O3R.html#a314f79eb3f3d0fffe469fb276376cf91">SaveInit()</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -482,25 +476,6 @@ std::unique_ptr&lt; Impl &gt;&#160;</td><td class="memItemRight" valign="bottom"
 
 </div>
 </div>
-<a id="a30dd23d4ba5b9919c75107bf9b2c3569"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30dd23d4ba5b9919c75107bf9b2c3569">&#9670;&nbsp;</a></span>GetInitStatus()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string ifm3d::O3R::GetInitStatus </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Returns the init status of the device</p>
-<dl class="section return"><dt>Returns</dt><dd>The init status of the device </dd></dl>
-
-</div>
-</div>
 <a id="a1352ba9088aaea3cafd09d1c1a5d270c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1352ba9088aaea3cafd09d1c1a5d270c">&#9670;&nbsp;</a></span>GetSchema()</h2>
 
@@ -517,31 +492,6 @@ std::unique_ptr&lt; Impl &gt;&#160;</td><td class="memItemRight" valign="bottom"
 </div><div class="memdoc">
 <p>Return the current JSON schema configuration</p>
 <dl class="section return"><dt>Returns</dt><dd>The current JSON schema configuration </dd></dl>
-
-</div>
-</div>
-<a id="a6508ed039407644c820296cf6564b887"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6508ed039407644c820296cf6564b887">&#9670;&nbsp;</a></span>Lock()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ifm3d::O3R::Lock </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>password</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Release the lock from the <a class="el" href="classifm3d_1_1Device.html">Device</a></p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">password</td><td>the password used to unlock the device </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -729,8 +679,8 @@ std::unique_ptr&lt; Impl &gt;&#160;</td><td class="memItemRight" valign="bottom"
 
 </div>
 </div>
-<a id="a7316e073bf5625c08d7c11a70e5ce07a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7316e073bf5625c08d7c11a70e5ce07a">&#9670;&nbsp;</a></span>SaveInit()</h2>
+<a id="a314f79eb3f3d0fffe469fb276376cf91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a314f79eb3f3d0fffe469fb276376cf91">&#9670;&nbsp;</a></span>SaveInit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -738,12 +688,19 @@ std::unique_ptr&lt; Impl &gt;&#160;</td><td class="memItemRight" valign="bottom"
         <tr>
           <td class="memname">void ifm3d::O3R::SaveInit </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pointers</em> = <code>{}</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Save to current temporary JSON configuration as initial JSON configuration </p>
+<p>Save to current temporary JSON configuration as initial JSON configuration, so it will be applied with the next transition to the INIT state (system boot up)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pointers</td><td>A List of JSON pointers specifying which parts of the configuration should be saved as initial JSON. If no list is provided the whole config will be saved </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -837,31 +794,6 @@ std::unique_ptr&lt; Impl &gt;&#160;</td><td class="memItemRight" valign="bottom"
 </dl>
 
 <p>Reimplemented from <a class="el" href="classifm3d_1_1Device.html#ae28a22aa0cdc1ec1365b165f053570a4">ifm3d::Device</a>.</p>
-
-</div>
-</div>
-<a id="a2c7a7f0a8cd315c014c2b5d8b6c1347b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c7a7f0a8cd315c014c2b5d8b6c1347b">&#9670;&nbsp;</a></span>Unlock()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ifm3d::O3R::Unlock </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>password</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Locks the device until it is unlocked. If the device is unlocked and an empty password is provided the password protection is removed.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">password</td><td>the password used to lock the device </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

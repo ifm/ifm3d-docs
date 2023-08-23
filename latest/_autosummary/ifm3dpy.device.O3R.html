@@ -174,14 +174,8 @@ those changes. Defaults to ‘’ (no password).</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3R.get_init" title="ifm3dpy.device.O3R.get_init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_init</span></code></a>(self)</p></td>
 <td><p>Return the initial JSON configuration.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3R.get_init_status" title="ifm3dpy.device.O3R.get_init_status"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_init_status</span></code></a>(self)</p></td>
-<td><p>Returns the init status of the device</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3R.get_schema" title="ifm3dpy.device.O3R.get_schema"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_schema</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3R.get_schema" title="ifm3dpy.device.O3R.get_schema"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_schema</span></code></a>(self)</p></td>
 <td><p>Returns the current JSON schema configuration</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3R.lock" title="ifm3dpy.device.O3R.lock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lock</span></code></a>(self, password)</p></td>
-<td><p>Release the lock from the Device</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3R.port" title="ifm3dpy.device.O3R.port"><code class="xref py py-obj docutils literal notranslate"><span class="pre">port</span></code></a>(self, port)</p></td>
 <td><p>Returns information about a given physical port</p></td>
@@ -204,8 +198,8 @@ those changes. Defaults to ‘’ (no password).</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3R.resolve_config" title="ifm3dpy.device.O3R.resolve_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_config</span></code></a>(self, json_pointer)</p></td>
 <td><p>Returns a part of the configuration formatted as JSON based on a</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3R.save_init" title="ifm3dpy.device.O3R.save_init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_init</span></code></a>(self)</p></td>
-<td><p>Save to current temporary JSON configuration as initial JSON configuration</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3R.save_init" title="ifm3dpy.device.O3R.save_init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_init</span></code></a>(self[, pointers])</p></td>
+<td><p>Save to current temporary JSON configuration as initial JSON configuration, so it will be applied with the next transition to the INIT state (system boot up)</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3R.set" title="ifm3dpy.device.O3R.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set</span></code></a>(self, json)</p></td>
 <td><p>Overwrites parts of the temporary JSON configuration which is achieved by merging the provided JSON fragment with the current temporary JSON.</p></td>
@@ -216,10 +210,7 @@ those changes. Defaults to ‘’ (no password).</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3R.trace_logs" title="ifm3dpy.device.O3R.trace_logs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trace_logs</span></code></a>(self, count)</p></td>
 <td><p>Delivers the trace log from the camera</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3R.unlock" title="ifm3dpy.device.O3R.unlock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unlock</span></code></a>(self, password)</p></td>
-<td><p>Locks the device until it is unlocked.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3R.who_am_i" title="ifm3dpy.device.O3R.who_am_i"><code class="xref py py-obj docutils literal notranslate"><span class="pre">who_am_i</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3R.who_am_i" title="ifm3dpy.device.O3R.who_am_i"><code class="xref py py-obj docutils literal notranslate"><span class="pre">who_am_i</span></code></a>(self)</p></td>
 <td><p>Retrieve the device family of the connected device</p></td>
 </tr>
 </tbody>
@@ -491,20 +482,6 @@ and filtered according to the JSON filter expression</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ifm3dpy.device.O3R.get_init_status">
-<span class="sig-name descname"><span class="pre">get_init_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.device.O3R" title="ifm3dpy.device.O3R"><span class="pre">ifm3dpy.device.O3R</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#ifm3dpy.device.O3R.get_init_status" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the init status of the device</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The init status of the device</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>dict</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.device.O3R.get_schema">
 <span class="sig-name descname"><span class="pre">get_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.device.O3R" title="ifm3dpy.device.O3R"><span class="pre">ifm3dpy.device.O3R</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#ifm3dpy.device.O3R.get_schema" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the current JSON schema configuration</p>
@@ -540,20 +517,6 @@ and filtered according to the JSON filter expression</p>
 <dt class="sig sig-object py" id="ifm3dpy.device.O3R.ip">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ip</span></span><a class="headerlink" href="#ifm3dpy.device.O3R.ip" title="Permalink to this definition"></a></dt>
 <dd><p>The IP address associated with this Camera instance</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="ifm3dpy.device.O3R.lock">
-<span class="sig-name descname"><span class="pre">lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.device.O3R" title="ifm3dpy.device.O3R"><span class="pre">ifm3dpy.device.O3R</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.device.O3R.lock" title="Permalink to this definition"></a></dt>
-<dd><p>Release the lock from the Device</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The password used to unlock the device</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py class">
@@ -696,9 +659,17 @@ JSON pointer.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.device.O3R.save_init">
-<span class="sig-name descname"><span class="pre">save_init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.device.O3R" title="ifm3dpy.device.O3R"><span class="pre">ifm3dpy.device.O3R</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.device.O3R.save_init" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">save_init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.device.O3R" title="ifm3dpy.device.O3R"><span class="pre">ifm3dpy.device.O3R</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.device.O3R.save_init" title="Permalink to this definition"></a></dt>
 <dd><p>Save to current temporary JSON configuration as initial JSON
-configuration</p>
+configuration, so it will be applied with the next transition to the
+INIT state (system boot up)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pointers</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – A List of JSON pointers specifying which parts of
+the configuration should be saved as initial JSON. If no list is
+provided the whole config will be saved</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -800,22 +771,6 @@ by merging the provided JSON fragment with the current temporary JSON.</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#ifm3dpy.device.O3R.trigger_mode.name" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="ifm3dpy.device.O3R.unlock">
-<span class="sig-name descname"><span class="pre">unlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.device.O3R" title="ifm3dpy.device.O3R"><span class="pre">ifm3dpy.device.O3R</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.device.O3R.unlock" title="Permalink to this definition"></a></dt>
-<dd><p>Locks the device until it is unlocked.
-If the device is unlocked and an empty password is provided the password
-protection is removed.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The password used to lock the device</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">

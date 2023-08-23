@@ -30,9 +30,7 @@ ifm3dpy.device.O3R
       ~O3R.get_diagnostic_filter_schema
       ~O3R.get_diagnostic_filtered
       ~O3R.get_init
-      ~O3R.get_init_status
       ~O3R.get_schema
-      ~O3R.lock
       ~O3R.port
       ~O3R.ports
       ~O3R.reboot
@@ -44,7 +42,6 @@ ifm3dpy.device.O3R
       ~O3R.set
       ~O3R.to_json
       ~O3R.trace_logs
-      ~O3R.unlock
       ~O3R.who_am_i
    
    
