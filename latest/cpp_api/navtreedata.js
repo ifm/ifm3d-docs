@@ -24,6 +24,7 @@ var NAVTREE =
 [
   [ "ifm3d", "index.html", [
     [ "Python API", "../python_api.html", null ],
+    [ "Modules", "modules.html", "modules" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -46,7 +47,7 @@ var NAVTREEINDEX =
 [
 "../python_api.html",
 "classifm3d_1_1LogFormatterJson.html",
-"structifm3d_1_1Buffer_1_1Iterator.html#ae26afca4c6a135361a2f06cc46be4432"
+"log__formatter__json_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

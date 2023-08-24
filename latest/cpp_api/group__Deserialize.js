@@ -1,0 +1,74 @@
+var group__Deserialize =
+[
+    [ "ExtrinsicOpticToUser", "structifm3d_1_1calibration_1_1ExtrinsicOpticToUser.html", [
+      [ "Ptr", "structifm3d_1_1calibration_1_1ExtrinsicOpticToUser.html#a6550d37816cecd6219566968220d5081", null ],
+      [ "Read", "structifm3d_1_1calibration_1_1ExtrinsicOpticToUser.html#a2cff7a574ab7db58ddd64d8b6c252de6", null ],
+      [ "rot_x", "structifm3d_1_1calibration_1_1ExtrinsicOpticToUser.html#ac31e2044c036fd71a7b787b2ec0266cd", null ],
+      [ "rot_y", "structifm3d_1_1calibration_1_1ExtrinsicOpticToUser.html#ab19c530ee29e5b22ddad9547cdcfcc8e", null ],
+      [ "rot_z", "structifm3d_1_1calibration_1_1ExtrinsicOpticToUser.html#a5a13ed368a60519e2663ef200e46986a", null ],
+      [ "trans_x", "structifm3d_1_1calibration_1_1ExtrinsicOpticToUser.html#a45c3f9baf939d9896d954545857e9e60", null ],
+      [ "trans_y", "structifm3d_1_1calibration_1_1ExtrinsicOpticToUser.html#a702e937f22f744d246584191038eace2", null ],
+      [ "trans_z", "structifm3d_1_1calibration_1_1ExtrinsicOpticToUser.html#aad2c9b461956806efbbb925a2d6ba882", null ]
+    ] ],
+    [ "Calibration", "structifm3d_1_1calibration_1_1Calibration.html", [
+      [ "Ptr", "structifm3d_1_1calibration_1_1Calibration.html#a43947ffd103997a76649a052b69621bf", null ],
+      [ "Read", "structifm3d_1_1calibration_1_1Calibration.html#a5e7f07e5faea2f7bac98a2a49577c9dc", null ],
+      [ "model_id", "structifm3d_1_1calibration_1_1Calibration.html#a7b7600fa111e0da40f0994ac4e24a567", null ],
+      [ "model_parameters", "structifm3d_1_1calibration_1_1Calibration.html#ad8d3b059db477473f493195ca2938a37", null ]
+    ] ],
+    [ "ODSInfoV1", "classifm3d_1_1ODSInfoV1.html", [
+      [ "Ptr", "classifm3d_1_1ODSInfoV1.html#a834ee48d3a744da5882b79fdded6a4de", null ],
+      [ "Read", "classifm3d_1_1ODSInfoV1.html#ae2dae6a1891bfa4b5fac8dd3cb303d48", null ],
+      [ "ods_info_v1_size", "classifm3d_1_1ODSInfoV1.html#a82cf537964a653313669f7c6ea5e47b9", null ],
+      [ "timestamp_ns", "classifm3d_1_1ODSInfoV1.html#ad111e845e130e938c65eea412102af99", null ],
+      [ "zone_config_id", "classifm3d_1_1ODSInfoV1.html#af33a0e5f4b2a36db994a38aeeb11a4bc", null ],
+      [ "zone_occupied", "classifm3d_1_1ODSInfoV1.html#a464f14e449b46db07f63c9e7fa3f7661", null ]
+    ] ],
+    [ "ODSOccupancyGridV1", "classifm3d_1_1ODSOccupancyGridV1.html", [
+      [ "Ptr", "classifm3d_1_1ODSOccupancyGridV1.html#a5a0916645b6e6afbbd194c8cea771286", null ],
+      [ "Read", "classifm3d_1_1ODSOccupancyGridV1.html#a8e178fdb921681594ed4b7e069e95c59", null ],
+      [ "height", "classifm3d_1_1ODSOccupancyGridV1.html#a4ad2cf906a4e43b657ff80a1d26c9a09", null ],
+      [ "image", "classifm3d_1_1ODSOccupancyGridV1.html#a1f1b5be7c236e82b87fd8863d41af6d1", null ],
+      [ "ods_occupancy_grid_v1_size", "classifm3d_1_1ODSOccupancyGridV1.html#a9c65cab732ac9d572e467c207e6777e6", null ],
+      [ "timestamp_ns", "classifm3d_1_1ODSOccupancyGridV1.html#aa938e929499758ce52ab918a2784167c", null ],
+      [ "transform_cell_center_to_user", "classifm3d_1_1ODSOccupancyGridV1.html#ac05515e8832c59ed83ed1313565e66df", null ],
+      [ "width", "classifm3d_1_1ODSOccupancyGridV1.html#adb4586cf789d8a1540a7aa4bc31eefd4", null ]
+    ] ],
+    [ "RGBInfoV1", "classifm3d_1_1RGBInfoV1.html", [
+      [ "Ptr", "classifm3d_1_1RGBInfoV1.html#adf1974e1f37ff8f96f885ff95d096030", null ],
+      [ "Read", "classifm3d_1_1RGBInfoV1.html#a24c908fccf8999b34bd116e38863a04f", null ],
+      [ "exposure_time", "classifm3d_1_1RGBInfoV1.html#ababcdd06c54e1aa64c923080c222d602", null ],
+      [ "extrinsic_optic_to_user", "classifm3d_1_1RGBInfoV1.html#a492a4fcf1f4561b3556ad40bda328c18", null ],
+      [ "frame_counter", "classifm3d_1_1RGBInfoV1.html#a9c0642b76358ee8ae290ba6c09ddba3b", null ],
+      [ "intrinsic_calibration", "classifm3d_1_1RGBInfoV1.html#a8f428e6bccf3d159b3ffb13ff3810aae", null ],
+      [ "inverse_intrinsic_calibration", "classifm3d_1_1RGBInfoV1.html#a3374be6d666da869dbf11e23c7dfc6b5", null ],
+      [ "rgb_info_v1_size", "classifm3d_1_1RGBInfoV1.html#a55de51518605aafad15aaa5656500970", null ],
+      [ "timestamp_ns", "classifm3d_1_1RGBInfoV1.html#a5f347edb80ac17612de21bf153720c6f", null ],
+      [ "version", "classifm3d_1_1RGBInfoV1.html#a0f83961cae0af73bb83b4fba4a470f15", null ]
+    ] ],
+    [ "TOFInfoV3", "classifm3d_1_1TOFInfoV3.html", [
+      [ "Ptr", "classifm3d_1_1TOFInfoV3.html#a5abc4c84dbf6653a4eb161694b24d88f", null ],
+      [ "Read", "classifm3d_1_1TOFInfoV3.html#adbe596d081d8911ab209aedb3a86e219", null ],
+      [ "amp_normalization_factors", "classifm3d_1_1TOFInfoV3.html#a914089ac8929392f5457d6840f005ab8", null ],
+      [ "amplitude_resolution", "classifm3d_1_1TOFInfoV3.html#a90bedf61a0df60274148caa19ea9fc57", null ],
+      [ "distance_resolution", "classifm3d_1_1TOFInfoV3.html#acbf27f71e814ae0d3d2da98d850b904c", null ],
+      [ "exposure_times_s", "classifm3d_1_1TOFInfoV3.html#af81782250b47f52265979602e442766f", null ],
+      [ "exposure_timestamps_ns", "classifm3d_1_1TOFInfoV3.html#a8070f066a8635873bcdafec1955adadb", null ],
+      [ "extrinsic_optic_to_user", "classifm3d_1_1TOFInfoV3.html#ab1ef07fc36ef764b12273339963eb7d6", null ],
+      [ "illu_temperature", "classifm3d_1_1TOFInfoV3.html#aec2a8949cf6987a48aad2547f1abe653", null ],
+      [ "imager", "classifm3d_1_1TOFInfoV3.html#ac6a754750601afa6a12fc98c56f88c7f", null ],
+      [ "intrinsic_calibration", "classifm3d_1_1TOFInfoV3.html#a5a8ee9de09b08ebee7ab5f3192ada9db", null ],
+      [ "inverse_intrinsic_calibration", "classifm3d_1_1TOFInfoV3.html#a596681c726e612c76b1a671ec1196e3b", null ],
+      [ "mode", "classifm3d_1_1TOFInfoV3.html#a6dec3d01be3fc7d0c4a00876ad079f32", null ],
+      [ "tof_info_v3_size", "classifm3d_1_1TOFInfoV3.html#a778ac89086f4f44b3f91a78e9127de3f", null ],
+      [ "version", "classifm3d_1_1TOFInfoV3.html#a7f329a8c4c85745b4a789d9febe425b4", null ]
+    ] ],
+    [ "TOFInfoV4", "classifm3d_1_1TOFInfoV4.html", [
+      [ "Ptr", "classifm3d_1_1TOFInfoV4.html#a03f185cbc5660c56aa3dd9f404b8d441", null ],
+      [ "Read", "classifm3d_1_1TOFInfoV4.html#a2132fef6a6e6f03a2f2802508ddaa7ae", null ],
+      [ "measurement_block_index", "classifm3d_1_1TOFInfoV4.html#ab56a590751f8230292193ddc9c87c9b5", null ],
+      [ "measurement_range_max", "classifm3d_1_1TOFInfoV4.html#a3a8f2612bf27a2aef7a4568131695e0e", null ],
+      [ "measurement_range_min", "classifm3d_1_1TOFInfoV4.html#ab5823fd32a62b71423b3cc5bb21ce4f8", null ],
+      [ "tof_info_v4_size", "classifm3d_1_1TOFInfoV4.html#a3aede90e3cfe885f9379d4cb2decab3b", null ]
+    ] ]
+];

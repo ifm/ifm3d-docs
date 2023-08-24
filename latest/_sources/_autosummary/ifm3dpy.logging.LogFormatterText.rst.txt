@@ -1,0 +1,26 @@
+ifm3dpy.logging.LogFormatterText
+================================
+
+.. currentmodule:: ifm3dpy.logging
+
+.. autoclass:: LogFormatterText
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~LogFormatterText.__init__
+      ~LogFormatterText.format
+   
+   
+
+   
+   
+   

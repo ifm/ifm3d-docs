@@ -88,7 +88,7 @@ $(document).ready(function(){initNavTree('classifm3d_1_1PCICClient.html',''); in
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classifm3d_1_1PCICClient-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ifm3d::PCICClient Class Reference</div>  </div>
+<div class="title">ifm3d::PCICClient Class Reference<div class="ingroups"><a class="el" href="group__PCICClient.html">PCICClient Module</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -103,8 +103,11 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>Ptr</b> = std::share
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a216862c9f37385ec769d848d8a0283ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1PCICClient.html#a216862c9f37385ec769d848d8a0283ec">PCICClient</a> (ifm3d::LegacyDevice::Ptr cam, const std::uint16_t pcic_port=ifm3d::PCIC_PORT)</td></tr>
+<tr class="memdesc:a216862c9f37385ec769d848d8a0283ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores reference to the passed in camera and starts connect/receive thread.  <a href="classifm3d_1_1PCICClient.html#a216862c9f37385ec769d848d8a0283ec">More...</a><br /></td></tr>
 <tr class="separator:a216862c9f37385ec769d848d8a0283ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23868be539bfc42602863864ac7c05e0"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1PCICClient.html#a23868be539bfc42602863864ac7c05e0">~PCICClient</a> ()</td></tr>
+<tr class="memitem:a23868be539bfc42602863864ac7c05e0"><td class="memItemLeft" align="right" valign="top"><a id="a23868be539bfc42602863864ac7c05e0"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1PCICClient.html#a23868be539bfc42602863864ac7c05e0">~PCICClient</a> ()</td></tr>
+<tr class="memdesc:a23868be539bfc42602863864ac7c05e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleans up any resources held by the receive thread object and blocks until the operating system thread stops. <br /></td></tr>
 <tr class="separator:a23868be539bfc42602863864ac7c05e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab306f8ba4593e065f8cf7c2711d5cafd"><td class="memItemLeft" align="right" valign="top"><a id="ab306f8ba4593e065f8cf7c2711d5cafd"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>PCICClient</b> (<a class="el" href="classifm3d_1_1PCICClient.html">PCICClient</a> &amp;&amp;)=delete</td></tr>
@@ -119,18 +122,25 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="classifm3d_1_1PCICClient.html">PCICClient</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classifm3d_1_1PCICClient.html">PCICClient</a> &amp;)=delete</td></tr>
 <tr class="separator:a423323a9909b3190cfed26d513cf5512"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae76ab7d6821e6c46b65f788045385de4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1PCICClient.html#ae76ab7d6821e6c46b65f788045385de4">Stop</a> ()</td></tr>
+<tr class="memdesc:ae76ab7d6821e6c46b65f788045385de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupts the running thread by throwing an ifm3d::error_t with code IFM3D_THREAD_INTERRUPTED.  <a href="classifm3d_1_1PCICClient.html#ae76ab7d6821e6c46b65f788045385de4">More...</a><br /></td></tr>
 <tr class="separator:ae76ab7d6821e6c46b65f788045385de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b33d371605d558fbfa6c90fd69f36bb"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1PCICClient.html#a5b33d371605d558fbfa6c90fd69f36bb">Call</a> (const std::string &amp;request, std::function&lt; void(const std::string &amp;response)&gt; callback)</td></tr>
+<tr class="memdesc:a5b33d371605d558fbfa6c90fd69f36bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a PCIC command to the camera and returns the response asynchronously through a callback (, which is automatically removed internally after the callback returns).  <a href="classifm3d_1_1PCICClient.html#a5b33d371605d558fbfa6c90fd69f36bb">More...</a><br /></td></tr>
 <tr class="separator:a5b33d371605d558fbfa6c90fd69f36bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c55134f22d23542449344bcf898e9e0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1PCICClient.html#a0c55134f22d23542449344bcf898e9e0">Call</a> (const std::string &amp;request)</td></tr>
+<tr class="memdesc:a0c55134f22d23542449344bcf898e9e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a PCIC command to the camera and returns the response as soon as it has been received.  <a href="classifm3d_1_1PCICClient.html#a0c55134f22d23542449344bcf898e9e0">More...</a><br /></td></tr>
 <tr class="separator:a0c55134f22d23542449344bcf898e9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f6cfe3e11f0e73c95d0ce34d98fb027"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1PCICClient.html#a0f6cfe3e11f0e73c95d0ce34d98fb027">Call</a> (const std::string &amp;request, std::string &amp;response, long timeout_millis)</td></tr>
+<tr class="memdesc:a0f6cfe3e11f0e73c95d0ce34d98fb027"><td class="mdescLeft">&#160;</td><td class="mdescRight">Similar to the Call function above.  <a href="classifm3d_1_1PCICClient.html#a0f6cfe3e11f0e73c95d0ce34d98fb027">More...</a><br /></td></tr>
 <tr class="separator:a0f6cfe3e11f0e73c95d0ce34d98fb027"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e003c59cae62678410aadeb06967ee7"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1PCICClient.html#a6e003c59cae62678410aadeb06967ee7">SetErrorCallback</a> (std::function&lt; void(const std::string &amp;error)&gt; callback)</td></tr>
+<tr class="memdesc:a6e003c59cae62678410aadeb06967ee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the specified callback for receiving asynchronous error messages until it is replaced by a new callback or canceled via.  <a href="classifm3d_1_1PCICClient.html#a6e003c59cae62678410aadeb06967ee7">More...</a><br /></td></tr>
 <tr class="separator:a6e003c59cae62678410aadeb06967ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a600017cd6a147eab52e8422e8cf82788"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1PCICClient.html#a600017cd6a147eab52e8422e8cf82788">SetNotificationCallback</a> (std::function&lt; void(const std::string &amp;notification)&gt; callback)</td></tr>
+<tr class="memdesc:a600017cd6a147eab52e8422e8cf82788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the specified callback for receiving asynchronous notification messages until it is replaced by a new callback or canceled via.  <a href="classifm3d_1_1PCICClient.html#a600017cd6a147eab52e8422e8cf82788">More...</a><br /></td></tr>
 <tr class="separator:a600017cd6a147eab52e8422e8cf82788"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55ab9adeb7a46dfa5ec55a28327bceaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1PCICClient.html#a55ab9adeb7a46dfa5ec55a28327bceaf">CancelCallback</a> (long callback_id)</td></tr>
+<tr class="memdesc:a55ab9adeb7a46dfa5ec55a28327bceaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancels registered callbacks.  <a href="classifm3d_1_1PCICClient.html#a55ab9adeb7a46dfa5ec55a28327bceaf">More...</a><br /></td></tr>
 <tr class="separator:a55ab9adeb7a46dfa5ec55a28327bceaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -161,7 +171,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Stores reference to the passed in camera and starts connect/receive thread</p>
+
+<p>Stores reference to the passed in camera and starts connect/receive thread. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">cam</td><td>The <a class="el" href="classifm3d_1_1Device.html">Device</a> instance to grab frames from </td></tr>
@@ -169,32 +180,6 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a23868be539bfc42602863864ac7c05e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23868be539bfc42602863864ac7c05e0">&#9670;&nbsp;</a></span>~PCICClient()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual ifm3d::PCICClient::~PCICClient </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Cleans up any resources held by the receive thread object and blocks until the operating system thread stops. </p>
 
 </div>
 </div>
@@ -214,7 +199,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sends a PCIC command to the camera and returns the response as soon as it has been received. In the meanwhile, this call is blocked.</p>
+
+<p>Sends a PCIC command to the camera and returns the response as soon as it has been received. </p>
+<p>In the meanwhile, this call is blocked.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">request</td><td>String containing the plain command (without any header infomration, like ticket, length, etc.)</td></tr>
@@ -251,7 +238,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sends a PCIC command to the camera and returns the response asynchronously through a callback (, which is automatically removed internally after the callback returns).</p>
+
+<p>Sends a PCIC command to the camera and returns the response asynchronously through a callback (, which is automatically removed internally after the callback returns). </p>
 <p>Note: Since the <a class="el" href="classifm3d_1_1PCICClient.html">PCICClient</a> is unbuffered, the calling thread will be blocked while the request is not completely sent. Also, the receiving thread will be blocked while the response callback has not returned.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -295,7 +283,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Similar to the Call function above.</p>
+
+<p>Similar to the Call function above. </p>
 <p>Sends a PCIC command to the camera and returns the response as soon as it has been received. In the meanwhile, this call is blocked.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -325,7 +314,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Cancels registered callbacks. Must be called in case references/pointers provided through callbacks get invalid. If callback id isn't present internally anymore, i.e. if callback was replaced, already canceled or automatically removed (in case of the Call method), it is simply ignored.</p>
+
+<p>Cancels registered callbacks. </p>
+<p>Must be called in case references/pointers provided through callbacks get invalid. If callback id isn't present internally anymore, i.e. if callback was replaced, already canceled or automatically removed (in case of the Call method), it is simply ignored.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">callback_id</td><td>Callback id, returned by methods which take a callback as parameter. </td></tr>
@@ -350,7 +341,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the specified callback for receiving asynchronous error messages until it is replaced by a new callback or canceled via </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classifm3d_1_1PCICClient.html#a55ab9adeb7a46dfa5ec55a28327bceaf">CancelCallback</a>.</dd></dl>
+
+<p>Sets the specified callback for receiving asynchronous error messages until it is replaced by a new callback or canceled via. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classifm3d_1_1PCICClient.html#a55ab9adeb7a46dfa5ec55a28327bceaf" title="Cancels registered callbacks.">CancelCallback</a>.</dd></dl>
 <p>Note: Since the <a class="el" href="classifm3d_1_1PCICClient.html">PCICClient</a> is unbuffered, the receiving thread will be blocked while the error callback has not returned.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -377,7 +370,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the specified callback for receiving asynchronous notification messages until it is replaced by a new callback or canceled via </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classifm3d_1_1PCICClient.html#a55ab9adeb7a46dfa5ec55a28327bceaf">CancelCallback</a>.</dd></dl>
+
+<p>Sets the specified callback for receiving asynchronous notification messages until it is replaced by a new callback or canceled via. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classifm3d_1_1PCICClient.html#a55ab9adeb7a46dfa5ec55a28327bceaf" title="Cancels registered callbacks.">CancelCallback</a>.</dd></dl>
 <p>Note: Since the <a class="el" href="classifm3d_1_1PCICClient.html">PCICClient</a> is unbuffered, the receiving thread will be blocked while the notification callback has not returned.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -403,7 +398,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Interrupts the running thread by throwing an ifm3d::error_t with code IFM3D_THREAD_INTERRUPTED.</p>
+
+<p>Interrupts the running thread by throwing an ifm3d::error_t with code IFM3D_THREAD_INTERRUPTED. </p>
 <p>While this is (currently) part of the public interface, clients should be aware that there is really no way to restart a stopped <a class="el" href="classifm3d_1_1PCICClient.html">PCICClient</a> instance. To do that, you would need to instantiate a new <a class="el" href="classifm3d_1_1PCICClient.html">PCICClient</a>. </p>
 
 </div>

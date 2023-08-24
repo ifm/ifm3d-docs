@@ -88,7 +88,7 @@ $(document).ready(function(){initNavTree('classifm3d_1_1Frame.html',''); initRes
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classifm3d_1_1Frame-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ifm3d::Frame Class Reference</div>  </div>
+<div class="title">ifm3d::Frame Class Reference<div class="ingroups"><a class="el" href="group__FrameGrabber.html">FrameGrabber Module</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -103,7 +103,7 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>Ptr</b> = std::share
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4e9c4b9774277fa3590d7b9cc2596c78"><td class="memItemLeft" align="right" valign="top"><a id="a4e9c4b9774277fa3590d7b9cc2596c78"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const std::map&lt; buffer_id, <a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &gt; &amp;images, const std::vector&lt; TimePointT &gt; timestamps, uint64_t frame_count)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const std::map&lt; <a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">buffer_id</a>, <a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &gt; &amp;images, const std::vector&lt; TimePointT &gt; timestamps, uint64_t frame_count)</td></tr>
 <tr class="separator:a4e9c4b9774277fa3590d7b9cc2596c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17377a20079de03dbfd53ef1d49034a2"><td class="memItemLeft" align="right" valign="top"><a id="a17377a20079de03dbfd53ef1d49034a2"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const <a class="el" href="classifm3d_1_1Frame.html">Frame</a> &amp;t)</td></tr>
@@ -120,30 +120,30 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af6501c61f1d9b47003cbac1119477e6e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; TimePointT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Frame.html#af6501c61f1d9b47003cbac1119477e6e">TimeStamps</a> ()</td></tr>
 <tr class="memdesc:af6501c61f1d9b47003cbac1119477e6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the timestamps of the frame.  <a href="classifm3d_1_1Frame.html#af6501c61f1d9b47003cbac1119477e6e">More...</a><br /></td></tr>
 <tr class="separator:af6501c61f1d9b47003cbac1119477e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13e840f03bc27a443be8ac1e44cefa90"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Frame.html#a13e840f03bc27a443be8ac1e44cefa90">HasBuffer</a> (buffer_id id)</td></tr>
+<tr class="memitem:a13e840f03bc27a443be8ac1e44cefa90"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Frame.html#a13e840f03bc27a443be8ac1e44cefa90">HasBuffer</a> (<a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">buffer_id</a> id)</td></tr>
 <tr class="memdesc:a13e840f03bc27a443be8ac1e44cefa90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a image with the given id is available in this frame.  <a href="classifm3d_1_1Frame.html#a13e840f03bc27a443be8ac1e44cefa90">More...</a><br /></td></tr>
 <tr class="separator:a13e840f03bc27a443be8ac1e44cefa90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4514940165e6a990c82bd4554da05f0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Frame.html#a4514940165e6a990c82bd4554da05f0b">GetBuffer</a> (buffer_id id)</td></tr>
+<tr class="memitem:a4514940165e6a990c82bd4554da05f0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Frame.html#a4514940165e6a990c82bd4554da05f0b">GetBuffer</a> (<a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">buffer_id</a> id)</td></tr>
 <tr class="memdesc:a4514940165e6a990c82bd4554da05f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the image with the given id.  <a href="classifm3d_1_1Frame.html#a4514940165e6a990c82bd4554da05f0b">More...</a><br /></td></tr>
 <tr class="separator:a4514940165e6a990c82bd4554da05f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a607a1ba146ae7d78cbe93d43c3639a02"><td class="memItemLeft" align="right" valign="top"><a id="a607a1ba146ae7d78cbe93d43c3639a02"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Frame.html#a607a1ba146ae7d78cbe93d43c3639a02">FrameCount</a> ()</td></tr>
 <tr class="memdesc:a607a1ba146ae7d78cbe93d43c3639a02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the frame count according to algorithm output. <br /></td></tr>
 <tr class="separator:a607a1ba146ae7d78cbe93d43c3639a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d26762e4adcbf7bb61a445b435623af"><td class="memItemLeft" align="right" valign="top">std::vector&lt; buffer_id &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Frame.html#a4d26762e4adcbf7bb61a445b435623af">GetBuffers</a> ()</td></tr>
+<tr class="memitem:a4d26762e4adcbf7bb61a445b435623af"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">buffer_id</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Frame.html#a4d26762e4adcbf7bb61a445b435623af">GetBuffers</a> ()</td></tr>
 <tr class="memdesc:a4d26762e4adcbf7bb61a445b435623af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of available buffers.  <a href="classifm3d_1_1Frame.html#a4d26762e4adcbf7bb61a445b435623af">More...</a><br /></td></tr>
 <tr class="separator:a4d26762e4adcbf7bb61a445b435623af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39a555b9c37524e117eb06a421e15c5e"><td class="memItemLeft" align="right" valign="top"><a id="a39a555b9c37524e117eb06a421e15c5e"></a>
-decltype(std::declval&lt; std::map&lt; buffer_id, <a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &gt;&gt;().begin())&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () noexcept</td></tr>
+decltype(std::declval&lt; std::map&lt; <a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">buffer_id</a>, <a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &gt;&gt;().begin())&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () noexcept</td></tr>
 <tr class="separator:a39a555b9c37524e117eb06a421e15c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0761ead4d43f013b22f4665ce7225a90"><td class="memItemLeft" align="right" valign="top"><a id="a0761ead4d43f013b22f4665ce7225a90"></a>
-decltype(std::declval&lt; const std::map&lt; buffer_id, <a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &gt;&gt;().begin())&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () const noexcept</td></tr>
+decltype(std::declval&lt; const std::map&lt; <a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">buffer_id</a>, <a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &gt;&gt;().begin())&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () const noexcept</td></tr>
 <tr class="separator:a0761ead4d43f013b22f4665ce7225a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a4265107e9a61010a1c4486db3ab344"><td class="memItemLeft" align="right" valign="top"><a id="a5a4265107e9a61010a1c4486db3ab344"></a>
-decltype(std::declval&lt; std::map&lt; buffer_id, <a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &gt;&gt;().end())&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () noexcept</td></tr>
+decltype(std::declval&lt; std::map&lt; <a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">buffer_id</a>, <a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &gt;&gt;().end())&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () noexcept</td></tr>
 <tr class="separator:a5a4265107e9a61010a1c4486db3ab344"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77b932062af65df75ca8161eae857a88"><td class="memItemLeft" align="right" valign="top"><a id="a77b932062af65df75ca8161eae857a88"></a>
-decltype(std::declval&lt; const std::map&lt; buffer_id, <a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &gt;&gt;().end())&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const noexcept</td></tr>
+decltype(std::declval&lt; const std::map&lt; <a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">buffer_id</a>, <a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &gt;&gt;().end())&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const noexcept</td></tr>
 <tr class="separator:a77b932062af65df75ca8161eae857a88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -158,7 +158,7 @@ decltype(std::declval&lt; const std::map&lt; buffer_id, <a class="el" href="clas
         <tr>
           <td class="memname"><a class="el" href="classifm3d_1_1Buffer.html">Buffer</a>&amp; ifm3d::Frame::GetBuffer </td>
           <td>(</td>
-          <td class="paramtype">buffer_id&#160;</td>
+          <td class="paramtype"><a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">buffer_id</a>&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
           <td></td>
         </tr>
@@ -189,7 +189,7 @@ decltype(std::declval&lt; const std::map&lt; buffer_id, <a class="el" href="clas
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;buffer_id&gt; ifm3d::Frame::GetBuffers </td>
+          <td class="memname">std::vector&lt;<a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">buffer_id</a>&gt; ifm3d::Frame::GetBuffers </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -217,7 +217,7 @@ decltype(std::declval&lt; const std::map&lt; buffer_id, <a class="el" href="clas
         <tr>
           <td class="memname">bool ifm3d::Frame::HasBuffer </td>
           <td>(</td>
-          <td class="paramtype">buffer_id&#160;</td>
+          <td class="paramtype"><a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">buffer_id</a>&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
           <td></td>
         </tr>

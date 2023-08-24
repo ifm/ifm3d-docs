@@ -1,0 +1,26 @@
+ifm3dpy.logging.LogWriter
+=========================
+
+.. currentmodule:: ifm3dpy.logging
+
+.. autoclass:: LogWriter
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~LogWriter.__init__
+      ~LogWriter.write
+   
+   
+
+   
+   
+   
