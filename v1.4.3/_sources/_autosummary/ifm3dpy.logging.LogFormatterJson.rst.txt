@@ -1,0 +1,26 @@
+ifm3dpy.logging.LogFormatterJson
+================================
+
+.. currentmodule:: ifm3dpy.logging
+
+.. autoclass:: LogFormatterJson
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~LogFormatterJson.__init__
+      ~LogFormatterJson.format
+   
+   
+
+   
+   
+   

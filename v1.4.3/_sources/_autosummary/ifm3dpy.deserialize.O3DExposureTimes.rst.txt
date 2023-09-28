@@ -1,0 +1,32 @@
+ifm3dpy.deserialize.O3DExposureTimes
+====================================
+
+.. currentmodule:: ifm3dpy.deserialize
+
+.. autoclass:: O3DExposureTimes
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~O3DExposureTimes.__init__
+      ~O3DExposureTimes.deserialize
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~O3DExposureTimes.data
+   
+   

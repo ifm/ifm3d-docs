@@ -1,0 +1,63 @@
+ifm3dpy.device.LegacyDevice
+===========================
+
+.. currentmodule:: ifm3dpy.device
+
+.. autoclass:: LegacyDevice
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~LegacyDevice.__init__
+      ~LegacyDevice.active_application
+      ~LegacyDevice.am_i
+      ~LegacyDevice.application_list
+      ~LegacyDevice.application_types
+      ~LegacyDevice.cancel_session
+      ~LegacyDevice.check_minimum_firmware_version
+      ~LegacyDevice.copy_application
+      ~LegacyDevice.create_application
+      ~LegacyDevice.delete_application
+      ~LegacyDevice.device_parameter
+      ~LegacyDevice.device_type
+      ~LegacyDevice.export_ifm_app
+      ~LegacyDevice.export_ifm_config
+      ~LegacyDevice.factory_reset
+      ~LegacyDevice.firmware_version
+      ~LegacyDevice.force_trigger
+      ~LegacyDevice.from_json
+      ~LegacyDevice.heartbeat
+      ~LegacyDevice.imager_types
+      ~LegacyDevice.import_ifm_app
+      ~LegacyDevice.import_ifm_config
+      ~LegacyDevice.reboot
+      ~LegacyDevice.request_session
+      ~LegacyDevice.set_current_time
+      ~LegacyDevice.set_temporary_application_parameters
+      ~LegacyDevice.to_json
+      ~LegacyDevice.trace_logs
+      ~LegacyDevice.unit_vectors
+      ~LegacyDevice.who_am_i
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~LegacyDevice.ip
+      ~LegacyDevice.password
+      ~LegacyDevice.session_id
+      ~LegacyDevice.xmlrpc_port
+   
+   
