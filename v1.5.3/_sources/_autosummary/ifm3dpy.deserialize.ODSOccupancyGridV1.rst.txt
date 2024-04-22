@@ -1,0 +1,36 @@
+ifm3dpy.deserialize.ODSOccupancyGridV1
+======================================
+
+.. currentmodule:: ifm3dpy.deserialize
+
+.. autoclass:: ODSOccupancyGridV1
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ODSOccupancyGridV1.__init__
+      ~ODSOccupancyGridV1.deserialize
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ODSOccupancyGridV1.height
+      ~ODSOccupancyGridV1.image
+      ~ODSOccupancyGridV1.timestamp_ns
+      ~ODSOccupancyGridV1.transform_cell_center_to_user
+      ~ODSOccupancyGridV1.width
+   
+   

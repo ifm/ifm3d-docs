@@ -1,0 +1,32 @@
+ifm3dpy.deserialize.O3DInverseInstrinsicCalibration
+===================================================
+
+.. currentmodule:: ifm3dpy.deserialize
+
+.. autoclass:: O3DInverseInstrinsicCalibration
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~O3DInverseInstrinsicCalibration.__init__
+      ~O3DInverseInstrinsicCalibration.deserialize
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~O3DInverseInstrinsicCalibration.data
+   
+   
