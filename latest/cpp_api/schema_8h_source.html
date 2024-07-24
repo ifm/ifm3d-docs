@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('schema_8h_source.html',''); initResiza
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;ifm3d/fg/frame_grabber_export.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;ifm3d/fg/module_frame_grabber.h&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;ifm3d/device/device.h&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;ifm3d/fg/frame.h&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;ifm3d/device/semver.h&gt;</span></div>
@@ -108,23 +108,21 @@ $(document).ready(function(){initNavTree('schema_8h_source.html',''); initResiza
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span>ifm3d</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  IFM3D_FRAME_GRABBER_EXPORT json</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  make_schema(<span class="keyword">const</span> std::set&lt;ifm3d::buffer_id&gt;&amp; buffer_ids,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;              ifm3d::Device::device_family device_type);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  IFM3D_FRAME_GRABBER_EXPORT json</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  make_o3x_json_from_mask(<span class="keyword">const</span> std::set&lt;ifm3d::buffer_id&gt;&amp; chunk_ids);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  IFM3D_FRAME_GRABBER_EXPORT json</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  make_o3r_schema_compatible_with_firmware(<span class="keyword">const</span> json&amp; o3r_schema,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                                           <span class="keyword">const</span> <a class="code" href="structifm3d_1_1SemVer.html">ifm3d::SemVer</a>&amp; ver);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  IFM3D_FRAME_GRABBER_EXPORT std::uint32_t schema_mask_from_string(</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">const</span> std::string&amp; in);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  IFM3D_EXPORT json make_schema(<span class="keyword">const</span> std::set&lt;ifm3d::buffer_id&gt;&amp; buffer_ids,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                                ifm3d::Device::device_family device_type);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  IFM3D_EXPORT json</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  make_o3x_json_from_mask(<span class="keyword">const</span> std::set&lt;ifm3d::buffer_id&gt;&amp; chunk_ids);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  IFM3D_EXPORT json</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  make_o3r_schema_compatible_with_firmware(<span class="keyword">const</span> json&amp; o3r_schema,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                           <span class="keyword">const</span> <a class="code" href="structifm3d_1_1SemVer.html">ifm3d::SemVer</a>&amp; ver);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  IFM3D_EXPORT std::uint32_t schema_mask_from_string(<span class="keyword">const</span> std::string&amp; in);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif // IFM3D_FG_SCHEMA_H</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif // IFM3D_FG_SCHEMA_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="astructifm3d_1_1SemVer_html"><div class="ttname"><a href="structifm3d_1_1SemVer.html">ifm3d::SemVer</a></div><div class="ttdef"><b>Definition:</b> semver.h:19</div></div>

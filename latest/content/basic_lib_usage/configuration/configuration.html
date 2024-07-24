@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How to: configure the camera &mdash; ifm3d v1.5.3 documentation</title>
+  <title>How to: configure the camera &mdash; ifm3d v1.6.0 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
@@ -34,7 +34,7 @@
             <a href="../../../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v1.5.3
+                v1.6.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -58,7 +58,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../cli_link.html">Command Line tool</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../stlimage.html">Manipulating images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manip_images/index.html">Manipulating images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../python_api.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../cpp_api/annotated.html">C++ API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../examples_list.html">Examples</a></li>
@@ -113,7 +113,6 @@
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">dev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Device</span><span class="o">::</span><span class="n">MakeShared</span><span class="p">();</span>
 <span class="c1">// Only do this if you&#39;re sure the `Device` is an instance of `O3R`:</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">dev_O3R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">static_pointer_cast</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3R</span><span class="o">&gt;</span><span class="p">(</span><span class="n">dev</span><span class="p">);</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">init_status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dev_O3R</span><span class="o">-&gt;</span><span class="n">GetInitStatus</span><span class="p">();</span>
 
 
 <span class="c1">// Otherwise use dynamic_pointer_cast and check the value for nullptr:</span>
@@ -125,10 +124,6 @@
 </pre></div>
 </div>
 </div></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">GetInitStatus</span></code> returns the status of the device’s initialization process. Use it to ensure the device is properly booted up before querying for data.</p>
-</div>
 <div class="section" id="read-the-current-configuration">
 <h2>Read the current configuration<a class="headerlink" href="#read-the-current-configuration" title="Permalink to this heading"></a></h2>
 <p>The first provided function outputs the current configuration of the device (the VPU and each head currently attached). This function outputs the full configuration, including the parameters set for each camera head, but also other aspects like MAC and IP addresses, etc.</p>

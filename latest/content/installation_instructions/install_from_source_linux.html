@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installing ifm3d from source &mdash; ifm3d v1.5.3 documentation</title>
+  <title>Installing ifm3d from source &mdash; ifm3d v1.6.0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
@@ -33,7 +33,7 @@
             <a href="../../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v1.5.3
+                v1.6.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -59,7 +59,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../migration_guide/index.html">Migration Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../basic_lib_usage/index.html">Basic library usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cli_link.html">Command Line tool</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../stlimage.html">Manipulating images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manip_images/index.html">Manipulating images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python_api.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../cpp_api/annotated.html">C++ API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples_list.html">Examples</a></li>
@@ -95,8 +95,7 @@
              
   <div class="section" id="installing-ifm3d-from-source">
 <h1>Installing ifm3d from source<a class="headerlink" href="#installing-ifm3d-from-source" title="Permalink to this heading"></a></h1>
-<p><strong>Note</strong>: Following Instruction are for ifm3d-v1.0.0 and above which provide full support for O3R devices. if you are using O3D/O3X device please use ifm3d-v0.20.3
-and follow these <a class="reference external" href="https://github.com/ifm/ifm3d/blob/v0.20.3/doc/source_build.md">instructions</a></p>
+<p><strong>Note</strong>: Following Instruction are for ifm3d-v1.6.0 and above which provide full support for O3R, O3D and O3X devices.</p>
 <div class="section" id="overview-of-the-available-build-flags">
 <h2>Overview of the available build flags<a class="headerlink" href="#overview-of-the-available-build-flags" title="Permalink to this heading"></a></h2>
 <table class="colwidths-auto docutils align-default">
@@ -123,13 +122,13 @@ and follow these <a class="reference external" href="https://github.com/ifm/ifm3
 <td><p>Build the ifm3dpy Python package (it can also be installed directly through <code class="docutils literal notranslate"><span class="pre">pip</span></code>)</p></td>
 <td><p>OFF</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">USE_LEGACY_COORDINATES</span></code></p></td>
-<td><p>Use the legacy coordinates (ifm3d &lt;= 0.92.x) with swapped axis</p></td>
-<td><p>OFF</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">BUILD_MODULE_SWUPDATER</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">BUILD_MODULE_SWUPDATER</span></code></p></td>
 <td><p>Build the <code class="docutils literal notranslate"><span class="pre">swupdater</span></code> module</p></td>
 <td><p>ON</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">BUILD_MODULE_PCICCLIENT</span></code></p></td>
+<td><p>Build the <code class="docutils literal notranslate"><span class="pre">pcicclient</span></code> module</p></td>
+<td><p>OFF</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">BUILD_SDK_PKG</span></code></p></td>
 <td><p>Build install packages for development purposes</p></td>
@@ -146,14 +145,6 @@ and follow these <a class="reference external" href="https://github.com/ifm/ifm3
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">BUILD_DOC</span></code></p></td>
 <td><p>Build documentation</p></td>
 <td><p>OFF</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">BUILD_MODULE_PCICCLIENT</span></code></p></td>
-<td><p>Build the <code class="docutils literal notranslate"><span class="pre">pcicclient</span></code> module</p></td>
-<td><p>OFF</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">BUILD_IN_DEPS</span></code></p></td>
-<td><p>Download, build and install required dependencies with ifm3d (for ifm3d v0.93.0 and above)</p></td>
-<td><p>ON</p></td>
 </tr>
 </tbody>
 </table>
@@ -172,22 +163,6 @@ and follow these <a class="reference external" href="https://github.com/ifm/ifm3
 <tr class="row-even"><td class="text-left"><p>CMake</p></td>
 <td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">device</span></code>, <code class="docutils literal notranslate"><span class="pre">framegrabber</span></code>, <code class="docutils literal notranslate"><span class="pre">swupdater</span></code>, <code class="docutils literal notranslate"><span class="pre">pcicclient</span></code>, <code class="docutils literal notranslate"><span class="pre">tools</span></code>, <code class="docutils literal notranslate"><span class="pre">pybind11</span></code></p></td>
 <td class="text-left"><p>Meta-build framework</p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>curl</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">device</span></code>, <code class="docutils literal notranslate"><span class="pre">tools</span></code>, <code class="docutils literal notranslate"><span class="pre">swupdater</span></code></p></td>
-<td class="text-left"><p>Used to help enable command-line based firmware flashing.</p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>GoogleTest</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">device</span></code>, <code class="docutils literal notranslate"><span class="pre">framegrabber</span></code>, <code class="docutils literal notranslate"><span class="pre">swupdater</span></code>, <code class="docutils literal notranslate"><span class="pre">pcicclient</span></code>, <code class="docutils literal notranslate"><span class="pre">tools</span></code>, <code class="docutils literal notranslate"><span class="pre">pybind11</span></code></p></td>
-<td class="text-left"><p>Unit testing framework</p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>libxmlrpc</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">device</span></code>, pybind11</p></td>
-<td class="text-left"><p>XMLRPC client used call into the camera configuration interface</p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>pybind11</p></td>
-<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">pybind11</span></code></p></td>
-<td class="text-left"><p>A header-only library that exposes C++ types in Python and vice versa,  mainly to create Python bindings of existing C++ code.</p></td>
 </tr>
 </tbody>
 </table>
@@ -216,50 +191,18 @@ $ sudo cmake --build . --target install
 </div>
 <div class="section" id="build-debian-packages-from-source">
 <h2>Build Debian packages from source<a class="headerlink" href="#build-debian-packages-from-source" title="Permalink to this heading"></a></h2>
-<div class="section" id="dependencies">
-<h3>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this heading"></a></h3>
-<p>If you plan to build the Debian packages and have the
-dependencies computed for you dynamically (see the note below on the
-<code class="docutils literal notranslate"><span class="pre">repackage</span></code> target), you will also need:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.gnu.org/software/binutils/">readelf</a> (Part of the <code class="docutils literal notranslate"><span class="pre">binutils</span></code> package)</p></li>
-<li><p><a class="reference external" href="http://man7.org/linux/man-pages/man1/ldd.1.html">ldd</a> (Part of the <code class="docutils literal notranslate"><span class="pre">libc-bin</span></code> package)</p></li>
-<li><p><a class="reference external" href="https://help.ubuntu.com/lts/serverguide/dpkg.html">dpkg</a></p></li>
-</ul>
-<p>We note that, if you are running on a supported Linux, all of these packages
-are available through the official Debian repositories and should be a simple
-<code class="docutils literal notranslate"><span class="pre">apt-get</span></code> away from being installed on your machine.</p>
-<p>This additional section provides instructions to build Debian packages from ifm3d source.<br />
-To install the existing ifm3d Debian packages please refer to <span class="xref myst">this</span> section.</p>
-</div>
-<div class="section" id="building-debian-packages">
-<h3>Building Debian packages<a class="headerlink" href="#building-debian-packages" title="Permalink to this heading"></a></h3>
-<p>Alternatively, to build <em>debs</em> to be distributed to multiple runtime machines, you can use the following:</p>
+<p>To build <em>debs</em> to be distributed to multiple runtime machines, you can use the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mkdir build
 $ cd build
 $ cmake -DCMAKE_INSTALL_PREFIX=/usr ..
 $ cmake --build .
 $ cmake --build . --target package
-$ cmake --build . --target repackage
 
-$ sudo dpkg -i ifm3d_*_amd64-common.deb
-$ sudo dpkg -i ifm3d_*_amd64-deserialize.deb
-$ sudo dpkg -i ifm3d_*_amd64-device.deb
-$ sudo dpkg -i ifm3d_*_amd64-framegrabber.deb
-$ sudo dpkg -i ifm3d_*_amd64-swupdater.deb
-$ sudo dpkg -i ifm3d_*_amd64-tools.deb
+$ sudo dpkg -i ifm3d_*_amd64.deb
 </pre></div>
 </div>
 <p>(The version number embedded in the deb file will be dependent upon which
 version of the <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> software you are building)</p>
-<blockquote>
-<div><p>Note: Experienced users may be puzzled by the <code class="docutils literal notranslate"><span class="pre">repackage</span></code> step.
-This step is used to dynamically compute the Debian dependencies for the particular module.
-Due to how we are partitioning out the software, this approach is necessary vs. the more traditional <code class="docutils literal notranslate"><span class="pre">CPACK_DEBIAN_PACKAGE_SHLIBDEPS</span></code> wrapper around <code class="docutils literal notranslate"><span class="pre">dpkg-shlibdeps</span></code>.
-We basically created <span class="xref myst">a version of that tool</span> that exploits <em>a-priori</em> information about the <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> environment to properly compute the Debian dependencies.
-If you are building debs on a build machine to be distributed out to various runtime computers, you will certainly want to execute the <code class="docutils literal notranslate"><span class="pre">repackage</span></code> target so that you are ensured the runtime machines have the proper dependency chain in place.</p>
-</div></blockquote>
-</div>
 </div>
 </div>
 

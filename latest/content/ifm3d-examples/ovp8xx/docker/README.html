@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Docker examples &mdash; ifm3d v1.5.3 documentation</title>
+  <title>Docker examples &mdash; ifm3d v1.6.0 documentation</title>
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/tabs.css" type="text/css" />
@@ -31,7 +31,7 @@
             <a href="../../../../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v1.5.3
+                v1.6.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
@@ -47,7 +47,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../migration_guide/index.html">Migration Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../basic_lib_usage/index.html">Basic library usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../cli_link.html">Command Line tool</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../stlimage.html">Manipulating images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manip_images/index.html">Manipulating images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../python_api.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../cpp_api/annotated.html">C++ API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../examples_list.html">Examples</a></li>
@@ -87,6 +87,7 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">o3r-l4t-base</span></code> provides a base Dockerfile to build an image based on Ubuntu 18.04 containing the necessary libraries to enable GPU acceleration with CUDA. The <code class="docutils literal notranslate"><span class="pre">o3r-l4t-base</span></code> container is intended to be run on board the OVP8xx.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">o3r-l4t-tensorrt</span></code> builds on top of the base L4T image and includes the TensorRT examples provided by NVIDIA ready to be run. The <code class="docutils literal notranslate"><span class="pre">o3r-l4t-tensorrt</span></code> container is intended to be run on board the OVP8xx.</p></li>
+<li><p>Under the <code class="docutils literal notranslate"><span class="pre">can</span></code> directory, there is a Dockerfile with a Python example demonstrating how to deploy a Python script on the VPU using the CAN interface of the VPU. Another Dockerfile can be found in the subfolder <code class="docutils literal notranslate"><span class="pre">sample-point</span></code>, where the example showcases how to change the CAN bitrate and sample point of the CAN interface on the VPU.</p></li>
 </ul>
 </div>
 <div class="section" id="exclusion-of-liability">

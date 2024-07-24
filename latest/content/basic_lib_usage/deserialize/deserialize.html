@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How to: deserialize O3R data &mdash; ifm3d v1.5.3 documentation</title>
+  <title>How to: deserialize O3R data &mdash; ifm3d v1.6.0 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
@@ -34,7 +34,7 @@
             <a href="../../../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v1.5.3
+                v1.6.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -58,7 +58,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../cli_link.html">Command Line tool</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../stlimage.html">Manipulating images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manip_images/index.html">Manipulating images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../python_api.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../cpp_api/annotated.html">C++ API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../examples_list.html">Examples</a></li>
@@ -104,104 +104,7 @@
 <p>For more information on the data structures of each buffer please refer to the <a class="reference external" href="https://api.ifm3d.com/latest/_autosummary/ifm3dpy.deserialize.html">Python API documentation</a> or the [C++ API documentation].</p>
 <p>The usage of the deserializer is the same for all the buffers mentioned above: create the object, and call the deserialize function. Follow the example below for an example on deserializing the <code class="docutils literal notranslate"><span class="pre">RGBInfoV1</span></code> buffer.</p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-0-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-0-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-0-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"></div><div aria-labelledby="tab-0-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
-<span class="cm"> * Copyright 2021-present ifm electronic, gmbh</span>
-<span class="cm"> * SPDX-License-Identifier: Apache-2.0</span>
-<span class="cm"> */</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/deserialize.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/device/o3r.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/fg.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;thread&gt;</span>
-<span class="c1">// Namespace used for writing time &quot;3s&quot;</span>
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono_literals</span><span class="p">;</span>
-<span class="c1">// Namespace used for json pointers</span>
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">ifm3d</span><span class="o">::</span><span class="nn">literals</span><span class="p">;</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="c1">//////////////////////////</span>
-<span class="w">  </span><span class="c1">// Create the O3R object</span>
-<span class="w">  </span><span class="c1">//////////////////////////</span>
-<span class="w">  </span><span class="c1">// Get the IP from the environment if defined</span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">IP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">getenv</span><span class="p">(</span><span class="s">&quot;IFM3D_IP&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">getenv</span><span class="p">(</span><span class="s">&quot;IFM3D_IP&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">DEFAULT_IP</span><span class="p">.</span><span class="n">c_str</span><span class="p">();</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">clog</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;IP: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">IP</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">o3r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3R</span><span class="o">&gt;</span><span class="p">(</span><span class="n">IP</span><span class="p">);</span>
-
-<span class="w">  </span><span class="c1">//////////////////////////</span>
-<span class="w">  </span><span class="c1">// Select the first available</span>
-<span class="w">  </span><span class="c1">// 2D port from the configuration</span>
-<span class="w">  </span><span class="c1">//////////////////////////</span>
-<span class="w">  </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">pcic_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">port</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">o3r</span><span class="o">-&gt;</span><span class="n">Ports</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">port</span><span class="p">.</span><span class="n">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;2D&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Using first available 2D port: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">port</span><span class="p">.</span><span class="n">port</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">      </span><span class="n">pcic_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">port</span><span class="p">.</span><span class="n">pcic_port</span><span class="p">;</span>
-<span class="w">      </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="c1">/////////////////////////////////////////////////////////</span>
-<span class="w">  </span><span class="c1">// Alternatively, manually pick the port corresponding</span>
-<span class="w">  </span><span class="c1">// to your 2D camera (uncomment the line below and comment</span>
-<span class="w">  </span><span class="c1">// the block above)</span>
-<span class="w">  </span><span class="c1">/////////////////////////////////////////////////////////</span>
-<span class="w">  </span><span class="c1">// std::string port_nb = &quot;port0&quot;;</span>
-<span class="w">  </span><span class="c1">// if (o3r-&gt;Port(port_nb).type != &quot;2D&quot;) {</span>
-<span class="w">  </span><span class="c1">//   std::cerr &lt;&lt; &quot;Please provide a 2D port number.&quot; &lt;&lt; std::endl;</span>
-<span class="w">  </span><span class="c1">//   return -1;</span>
-<span class="w">  </span><span class="c1">// }</span>
-<span class="w">  </span><span class="c1">// uint16_t pcic_port = o3r-&gt;Port(port_nb).pcic_port;</span>
-<span class="w">  </span><span class="c1">// std::cout &lt;&lt; &quot;Using 2D port: &quot; &lt;&lt; port_nb &lt;&lt; std::endl;</span>
-
-<span class="w">  </span><span class="c1">//////////////////////////////////////////////////</span>
-<span class="w">  </span><span class="c1">// Verify that a correct port number was provided</span>
-<span class="w">  </span><span class="c1">// and create the framegrabber object</span>
-<span class="w">  </span><span class="c1">//////////////////////////////////////////////////</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pcic_port</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;No 2D port found in the configuration,&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="c1">////////////////////////////</span>
-<span class="w">  </span><span class="c1">// Create the FrameGrabber object</span>
-<span class="w">  </span><span class="c1">////////////////////////////</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">fg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FrameGrabber</span><span class="o">&gt;</span><span class="p">(</span><span class="n">o3r</span><span class="p">,</span><span class="w"> </span><span class="n">pcic_port</span><span class="p">);</span>
-
-<span class="w">  </span><span class="c1">// Define which buffer to retrieve and start the data stream</span>
-<span class="w">  </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Start</span><span class="p">({</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">RGB_INFO</span><span class="p">});</span>
-
-<span class="w">  </span><span class="c1">//////////////////////////</span>
-<span class="w">  </span><span class="c1">// Receive a frame:</span>
-<span class="w">  </span><span class="c1">//////////////////////////</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">future</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">WaitForFrame</span><span class="p">();</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">future</span><span class="p">.</span><span class="n">wait_for</span><span class="p">(</span><span class="mi">3</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">future_status</span><span class="o">::</span><span class="n">ready</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Timeout waiting for camera!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">future</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
-<span class="w">  </span><span class="c1">// Get the data from the relevant buffer</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">rgb_info_buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">frame</span><span class="o">-&gt;</span><span class="n">GetBuffer</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">RGB_INFO</span><span class="p">);</span>
-<span class="w">  </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Stop</span><span class="p">();</span>
-
-<span class="w">  </span><span class="c1">//////////////////////////</span>
-<span class="w">  </span><span class="c1">// Extract data from the buffer</span>
-<span class="w">  </span><span class="c1">// Using the deserializer module</span>
-<span class="w">  </span><span class="c1">//////////////////////////</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">rgb_info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">RGBInfoV1</span><span class="o">::</span><span class="n">Deserialize</span><span class="p">(</span><span class="n">rgb_info_buffer</span><span class="p">);</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Sample of data available in the RGBInfoV1 buffer:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;RGB info timestamp: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">rgb_info</span><span class="p">.</span><span class="n">timestamp_ns</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Exposure time: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">rgb_info</span><span class="p">.</span><span class="n">exposure_time</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Intrinsic calibration model id: &quot;</span>
-<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">rgb_info</span><span class="p">.</span><span class="n">intrinsic_calibration</span><span class="p">.</span><span class="n">model_id</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Intrinsic calibration parameter [0]: &quot;</span>
-<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">rgb_info</span><span class="p">.</span><span class="n">intrinsic_calibration</span><span class="p">.</span><span class="n">model_parameters</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div></div>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-0-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-0-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-0-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"></div><div aria-labelledby="tab-0-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-Qysr" name="Qysr" role="tabpanel" tabindex="0"></div></div>
 </div>
 
 

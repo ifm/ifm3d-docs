@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ifm3d::Buffer- Basic C++ STL container for ifm3d &mdash; ifm3d v1.6.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Python API Reference" href="../../python_api.html" />
+    <link rel="prev" title="Buffer types" href="buffer_ids.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> ifm3d
+          </a>
+              <div class="version">
+                v1.6.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../README.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation_instructions/index.html">Installation instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../migration_guide/index.html">Migration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic_lib_usage/index.html">Basic library usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cli_link.html">Command Line tool</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Manipulating images</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="buffer_ids.html">Buffer types</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Accessing pixel values</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../python_api.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp_api/annotated.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ChangeLog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">ifm3d</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Images and buffers manipulation</a></li>
+      <li class="breadcrumb-item active">ifm3d::Buffer- Basic C++ STL container for ifm3d</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/content/manip_images/stlimage.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="ifm3d-buffer-basic-c-stl-container-for-ifm3d">
+<h1>ifm3d::Buffer- Basic C++ STL container for ifm3d<a class="headerlink" href="#ifm3d-buffer-basic-c-stl-container-for-ifm3d" title="Permalink to this heading"></a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer</span></code> is designed to provide a C++ STL container that can hold
+buffer data of different types provided by ifm3d vision devices. Data is stored
+in sequential memory layout and <code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer</span></code> provides a function template to access
+the pixel. The pixel data type is defined in an enumeration <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">ifm3d::pixel_format</span></code></span>.
+<code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer</span></code> class does memory management and the user is free from the memory allocation
+and deallocation. The assignment operator and the copy constructor
+only copy the attributes and data is shared across the object.</p>
+<div class="section" id="creating-buffer-object">
+<h2>Creating Buffer Object:<a class="headerlink" href="#creating-buffer-object" title="Permalink to this heading"></a></h2>
+<p>This can be done by calling <code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer()</span></code> and <code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer(rows,</span> <span class="pre">cols,</span> <span class="pre">nchannel,</span> <span class="pre">ifm3d::pixel_format)</span></code>.
+The default Constructor only creates the attributes and the allocation of memory is
+done on <code class="docutils literal notranslate"><span class="pre">create(rows,</span> <span class="pre">cols,</span> <span class="pre">nchannel,</span> <span class="pre">ifm3d::pixel_format)</span></code> call.
+<code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer::create(rows,</span> <span class="pre">cols,</span> <span class="pre">nchannel,</span> <span class="pre">ifm3d::pixel_format)</span></code> will allocate the required memory
+only if the previous memory is not sufficient to store the buffer data.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//a 100 x 100 Buffer of type 8U</span>
+
+<span class="n">ifm3d</span><span class="o">::</span><span class="n">Buffer</span><span class="w"> </span><span class="n">buffer</span><span class="p">;</span>
+<span class="n">buffer</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FORMAT_8U</span><span class="p">)</span>
+
+<span class="c1">//OR</span>
+<span class="c1">//can also be created  with parameter construction</span>
+
+<span class="n">ifm3d</span><span class="o">::</span><span class="n">Buffer</span><span class="w"> </span><span class="n">buffer</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FORMAT_8U</span><span class="p">);</span>
+<span class="w"> </span>
+<span class="c1">//and now turn buffer to a 10 x10 3-channel 8-bit matrix.</span>
+<span class="c1">// The old content will be deallocated</span>
+<span class="n">buffer</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FORMAT_8U</span><span class="p">);</span>
+<span class="w">	  </span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="accessing-the-pixel">
+<h2>Accessing the Pixel<a class="headerlink" href="#accessing-the-pixel" title="Permalink to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer</span></code> provides a template function to access data.
+Use <code class="docutils literal notranslate"><span class="pre">at&lt;T&gt;(index)</span></code> or <code class="docutils literal notranslate"><span class="pre">at&lt;T&gt;(i,j)</span></code> to access the pixel. This functions returns the reference
+to the pixel. A pixel is defined as a structure of n-channel values of type T at a given
+index or position in 2D array.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// To access a pixel in ifm3d::Buffer I ( 100,100,1,ifm3d::FORMAT_8U) at  50,50</span>
+<span class="c1">// position</span>
+
+<span class="k">auto</span><span class="w"> </span><span class="n">pixel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span>
+<span class="c1">// if working as Index array then</span>
+
+<span class="k">auto</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="o">*</span><span class="mi">100</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="p">;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">pixel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">index</span><span class="p">);</span>
+
+<span class="c1">// Changing the pixel value can be done as follow :</span>
+<span class="c1">// Writing 255 at pixel postion 50,50</span>
+
+<span class="n">I</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span>
+<span class="n">I</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">index</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>To access a pixel in n-channel <code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer</span> <span class="pre">I</span> <span class="pre">(</span> <span class="pre">100,100,3,ifm3d::FORMAT_8U)</span></code> at
+<code class="docutils literal notranslate"><span class="pre">(50,50)</span></code> position, follow the example below (for a 3 channel Buffer),
+as the pixel is a structure of the values of n-channel at a given position.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// User define struct </span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">pixel</span><span class="p">{</span>
+<span class="kt">uint8_t</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="kt">uint8_t</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="kt">uint8_t</span><span class="w"> </span><span class="n">z</span><span class="p">;</span>
+<span class="p">}</span><span class="n">pixel_t</span><span class="p">;</span>
+
+<span class="c1">// Accessing the value at 50, 50 position can be done as </span>
+
+<span class="k">auto</span><span class="w"> </span><span class="n">pixel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="n">pixel_t</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pixel</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pixel</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pixel</span><span class="p">.</span><span class="n">z</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="buffer-templates">
+<h2>Buffer Templates<a class="headerlink" href="#buffer-templates" title="Permalink to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer_&lt;T&gt;</span></code> extends <code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer</span></code> where T defines the data type in which the user wants to access the pixel.
+This removes the need for providing the template type T while using the Buffer functionality
+and working with std::algorithms.</p>
+</div>
+<div class="section" id="compatibility-with-c-stl-algorithms">
+<h2>Compatibility with C++ STL Algorithms<a class="headerlink" href="#compatibility-with-c-stl-algorithms" title="Permalink to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer</span></code> provides templated iterator to access data and to work with <code class="docutils literal notranslate"><span class="pre">std::algorithms</span></code>.
+The user can use <code class="docutils literal notranslate"><span class="pre">ifm3d::IteratorAdapter&lt;T&gt;(ifm3d::Buffer)</span></code> which forwards type T to templated
+iterators of the <code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer</span></code>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Buffer</span><span class="w"> </span><span class="nf">buffer</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FORMAT_16U</span><span class="p">);</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">IteratorAdapter</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="kt">uint16_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+<span class="p">{</span>
+<span class="c1">// use value </span>
+<span class="p">}</span>
+
+<span class="c1">// For multi channel buffer </span>
+<span class="n">ifm3d</span><span class="o">::</span><span class="n">Buffer</span><span class="w"> </span><span class="n">buffer</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FORMAT_16U</span><span class="p">);</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">IteratorAdapter</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Point3D</span><span class="o">&lt;</span><span class="kt">uint16_t</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;(&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value</span><span class="p">.</span><span class="n">val</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w">  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;,  &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value</span><span class="p">.</span><span class="n">val</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value</span><span class="p">.</span><span class="n">val</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="w"> </span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span>
+</pre></div>
+</div>
+<p>The user can convert <code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer</span></code> to <code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer_&lt;T&gt;</span></code>, where T will define
+the type in which the user wants to access the pixel. For <code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer_&lt;T&gt;</span></code>
+containers, the <span class="xref myst">ifm3d::pixel_format</span>
+is deduced internally.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Buffer</span><span class="w"> </span><span class="nf">buffer</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FORMAT_16U</span><span class="p">);</span>
+<span class="n">ifm3d</span><span class="o">::</span><span class="n">Buffer_</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="kt">uint16_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">buffer_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buffer</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">:</span><span class="n">buffer_</span><span class="w"> </span><span class="p">)</span>
+<span class="p">{</span>
+<span class="c1">// use value </span>
+<span class="p">}</span>
+<span class="c1">// For multi channel buffer </span>
+<span class="n">ifm3d</span><span class="o">::</span><span class="n">Buffer</span><span class="w"> </span><span class="n">buffer</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FORMAT_16U</span><span class="p">);</span>
+<span class="n">ifm3d</span><span class="o">::</span><span class="n">Buffer_</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Point3D</span><span class="o">&lt;</span><span class="kt">uint16_t</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">buffer_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buffer</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">buffer_</span><span class="w"> </span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">     </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;(&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value</span><span class="p">.</span><span class="n">val</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w">  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;,  &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value</span><span class="p">.</span><span class="n">val</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value</span><span class="p">.</span><span class="n">val</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="w"> </span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>This way, <code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer</span></code> container can be used with any of the <code class="docutils literal notranslate"><span class="pre">std::algorithm</span></code></p>
+</div>
+<div class="section" id="example-grabbing-distance-and-amplitude-in-ifm3d-buffer">
+<h2>Example grabbing distance and amplitude in ifm3d::Buffer<a class="headerlink" href="#example-grabbing-distance-and-amplitude-in-ifm3d-buffer" title="Permalink to this heading"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/device.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/fg.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/fg/buffer.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">**</span><span class="w"> </span><span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>
+
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">dev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Device</span><span class="o">::</span><span class="n">MakeShared</span><span class="p">();</span>
+
+<span class="w">  </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">pcic_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">dev</span><span class="o">-&gt;</span><span class="n">WhoAmI</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Device</span><span class="o">::</span><span class="n">device_family</span><span class="o">::</span><span class="n">O3R</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">50012</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">50010</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">fg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FrameGrabber</span><span class="o">&gt;</span><span class="p">(</span>
+<span class="w">    </span><span class="n">dev</span><span class="p">,</span><span class="w"> </span><span class="n">pcic_port</span><span class="p">);</span><span class="w"> </span><span class="c1">// 50012 for O3R use default value for other devices</span>
+
+<span class="w">  </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Start</span><span class="p">({</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">AMPLITUDE</span><span class="p">,</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">XYZ</span><span class="p">,</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">RADIAL_DISTANCE</span><span class="w"> </span><span class="p">});</span>
+
+<span class="w">  </span><span class="c1">//polling the device </span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">WaitForFrame</span><span class="p">().</span><span class="n">get</span><span class="p">();</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Buffer</span><span class="w"> </span><span class="n">amp_buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">frame</span><span class="o">-&gt;</span><span class="n">GetBuffer</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">AMPLITUDE</span><span class="p">);</span>
+<span class="w">  </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Buffer</span><span class="w"> </span><span class="n">dist_buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">frame</span><span class="o">-&gt;</span><span class="n">GetBuffer</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">RADIAL_DISTANCE</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Accessing the pixels from ifm3d::Buffer </span>
+<span class="w">  </span><span class="c1">// Query the data format and channel.</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">amp_buffer</span><span class="p">.</span><span class="n">nchannels</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">amp_buffer</span><span class="p">.</span><span class="n">dataFormat</span><span class="p">())</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// For O3D devices Amplitude and Distance data is `ifm3d::FORMAT_16U`</span>
+<span class="w">  </span><span class="c1">// whereas for O3X and O3R Device, the Amplitude buffer type is `ifm3d::FORMAT_32F`</span>
+<span class="w">  </span><span class="c1">// Refer to the section below for the full list of data types. </span>
+
+<span class="w">  </span><span class="c1">// With a 1 channel and float type buffer, </span>
+<span class="w">  </span><span class="c1">// the user can access data:</span>
+<span class="w">  </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Buffer_</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">amp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">amp_buffer</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">amp</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">//do something with val value</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-grabbing-xyz-or-n-channel-ifm3d-buffer">
+<h2>Example grabbing XYZ or n-channel ifm3d::Buffer<a class="headerlink" href="#example-grabbing-xyz-or-n-channel-ifm3d-buffer" title="Permalink to this heading"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/device.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/fg.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/fg/buffer.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">**</span><span class="w"> </span><span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">dev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Device</span><span class="o">::</span><span class="n">MakeShared</span><span class="p">();</span>
+
+<span class="w">  </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">pcic_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">dev</span><span class="o">-&gt;</span><span class="n">WhoAmI</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Device</span><span class="o">::</span><span class="n">device_family</span><span class="o">::</span><span class="n">O3R</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">50012</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">50010</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">fg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FrameGrabber</span><span class="o">&gt;</span><span class="p">(</span>
+<span class="w">    </span><span class="n">dev</span><span class="p">,</span><span class="w"> </span><span class="n">pcic_port</span><span class="p">);</span><span class="w"> </span><span class="c1">// 50012 for O3R use default value for other devices</span>
+
+<span class="w">  </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Start</span><span class="p">({</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">AMPLITUDE</span><span class="p">,</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">XYZ</span><span class="p">,</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">RADIAL_DISTANCE</span><span class="w"> </span><span class="p">});</span>
+
+<span class="w">  </span><span class="c1">//polling the device </span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">WaitForFrame</span><span class="p">().</span><span class="n">get</span><span class="p">();</span>
+
+<span class="w">  </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Buffer</span><span class="w"> </span><span class="n">xyz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">frame</span><span class="o">-&gt;</span><span class="n">GetBuffer</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">XYZ</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Accessing the pixels from ifm3d::Buffer </span>
+<span class="w">  </span><span class="c1">// Query the data format and channel.</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">xyz</span><span class="p">.</span><span class="n">nchannels</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">xyz</span><span class="p">.</span><span class="n">dataFormat</span><span class="p">())</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// For O3D devices XYZ data is`ifm3d::FORMAT_16S`</span>
+<span class="w">  </span><span class="c1">// whereas for O3X,O3R device XYZ buffer type is `ifm3d::FORMAT_32F</span>
+<span class="w">  </span><span class="c1">// Refer to the section below for the full list of data types.</span>
+
+<span class="w">  </span><span class="c1">// With 3 channel and float type</span>
+<span class="w">  </span><span class="c1">// using point3D_32F</span>
+<span class="w">  </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Buffer_</span><span class="o">&lt;</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Point3D_32F</span><span class="o">&gt;</span><span class="w">  </span><span class="n">xyz_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xyz</span><span class="p">;</span><span class="w"> </span><span class="c1">// no copy of data </span>
+
+<span class="w">  </span><span class="c1">// With a range based `for` loop</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">point</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">xyz_data</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;(&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">point</span><span class="p">.</span><span class="n">val</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;,&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">point</span><span class="p">.</span><span class="n">val</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;,&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">point</span><span class="p">.</span><span class="n">val</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// With a pointer </span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">xyz</span><span class="p">.</span><span class="n">height</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">xyz</span><span class="p">.</span><span class="n">width</span><span class="p">();</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="k">auto</span><span class="w"> </span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xyz</span><span class="p">.</span><span class="n">ptr</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">);</span>
+<span class="w">      </span><span class="k">auto</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ptr</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">      </span><span class="k">auto</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ptr</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">      </span><span class="k">auto</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ptr</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;(&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;,&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;,&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          
+<html>
+<head>
+ 
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, address, phone, icons" />
+ 
+	<title>Footer With Address And Links</title>
+	
+	
+ 
+</head>
+ 
+	<body>
+		
+		<footer class="footer-distributed">
+ 
+		<div class="footer-left">
+ 
+ 
+		<p class="footer-company-name">ifm robotics &copy; 2023</p>
+		</div>
+ 
+		<div class="footer-right">
+ 
+		<div class="footer-icons">
+			<a href="mailto:support.efector.object-ident@ifm.com" target="_blank"><i class="fa fa-envelope"></i></a>
+			<a href="https://github.com/ifm" target="_blank"><i class="fa fa-github"></i></a>
+ 
+		</div>
+ 
+		</div>
+ 
+		</footer>
+ 
+	</body>
+ 
+</html>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
