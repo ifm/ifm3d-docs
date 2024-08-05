@@ -49,6 +49,7 @@ ifm3dpy.framegrabber.buffer\_id
       ~buffer_id.O3R_DISTANCE_IMAGE_INFO
       ~buffer_id.O3R_ODS_INFO
       ~buffer_id.O3R_ODS_OCCUPANCY_GRID
+      ~buffer_id.O3R_ODS_RENDERED_ZONES
       ~buffer_id.O3R_RESULT_ARRAY2D
       ~buffer_id.O3R_RESULT_IMU
       ~buffer_id.O3R_RESULT_JSON
