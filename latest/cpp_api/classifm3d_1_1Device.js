@@ -58,6 +58,7 @@ var classifm3d_1_1Device =
     [ "ForceTrigger", "classifm3d_1_1Device.html#a010b25d8c4f34075a57e30f1dbacc93b", null ],
     [ "FromJSON", "classifm3d_1_1Device.html#a4706acd5532e7a9fc520c98d6100eee0", null ],
     [ "FromJSONStr", "classifm3d_1_1Device.html#a3036b0cfbaae2ffd3ca8bd8eb697ab50", null ],
+    [ "GetSWVersion", "classifm3d_1_1Device.html#a01d2fb06d87b184c29ddb314615aa84a", null ],
     [ "IP", "classifm3d_1_1Device.html#a934743418fd4bd6605ef855501587b73", null ],
     [ "operator=", "classifm3d_1_1Device.html#acc65beaa8dfe2049b67d6f2ebbd16c64", null ],
     [ "operator=", "classifm3d_1_1Device.html#a1c5eff06853dbdc16681efcd4c30d7e9", null ],

@@ -5,6 +5,7 @@ var classifm3d_1_1O3R =
     [ "~O3R", "classifm3d_1_1O3R.html#ae7140845a60e43f06e0501c1aa948763", null ],
     [ "O3R", "classifm3d_1_1O3R.html#aef923678bc0034ed400b4cfce897f710", null ],
     [ "O3R", "classifm3d_1_1O3R.html#a2fe81174187192c40c8de3fe73c83462", null ],
+    [ "DownloadServiceReport", "classifm3d_1_1O3R.html#a6e444199e2833ac08326c9060ee3ac90", null ],
     [ "FactoryReset", "classifm3d_1_1O3R.html#a51c399c7672a1be536e6b1b81b5a0ddc", null ],
     [ "FromJSON", "classifm3d_1_1O3R.html#aa81663e1ae0cc862a6b196dbf634617d", null ],
     [ "Get", "classifm3d_1_1O3R.html#a4aac4d3ceda92e3143ab4626d843189b", null ],

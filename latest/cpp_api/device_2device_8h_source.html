@@ -330,27 +330,29 @@ $(document).ready(function(){initNavTree('device_2device_8h_source.html',''); in
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160; </div>
 <div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    <span class="keyword">virtual</span> ifm3d::Device::swu_version SwUpdateVersion();</div>
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160; </div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;  <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="keyword">class </span>Impl;</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    std::unique_ptr&lt;Impl&gt; pImpl;</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160; </div>
-<div class="line"><a name="l00451"></a><span class="lineno"><a class="line" href="classifm3d_1_1Device.html#a440e1b50f9fe85768f148c10c51c0c89">  451</a></span>&#160;    std::string <a class="code" href="classifm3d_1_1Device.html#a440e1b50f9fe85768f148c10c51c0c89">device_type_</a>;</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160; </div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <span class="keywordtype">int</span> DeviceID();</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    <span class="keywordtype">bool</span> checkDeviceID(<span class="keywordtype">int</span> deviceID, <span class="keywordtype">int</span> minID, <span class="keywordtype">int</span> maxID);</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160; </div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    std::shared_ptr&lt;XMLRPCWrapper&gt; XWrapper();</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    json GetSWVersion();</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160; </div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    <span class="keyword">class </span>Impl;</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    std::unique_ptr&lt;Impl&gt; pImpl;</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160; </div>
+<div class="line"><a name="l00453"></a><span class="lineno"><a class="line" href="classifm3d_1_1Device.html#a440e1b50f9fe85768f148c10c51c0c89">  453</a></span>&#160;    std::string <a class="code" href="classifm3d_1_1Device.html#a440e1b50f9fe85768f148c10c51c0c89">device_type_</a>;</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160; </div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    <span class="keywordtype">int</span> DeviceID();</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="keywordtype">bool</span> checkDeviceID(<span class="keywordtype">int</span> deviceID, <span class="keywordtype">int</span> minID, <span class="keywordtype">int</span> maxID);</div>
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160; </div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;  }; <span class="comment">// end: class Device</span></div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    std::shared_ptr&lt;XMLRPCWrapper&gt; XWrapper();</div>
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160; </div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;  }; <span class="comment">// end: class Device</span></div>
 <div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160; </div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;<span class="preprocessor">#endif // IFM3D_DEVICE_DEVICE_H</span></div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160; </div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;<span class="preprocessor">#endif // IFM3D_DEVICE_DEVICE_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassifm3d_1_1Device_html_affabf379ff6b7312fd7a79abdf55815e"><div class="ttname"><a href="classifm3d_1_1Device.html#affabf379ff6b7312fd7a79abdf55815e">ifm3d::Device::spatial_filter</a></div><div class="ttdeci">spatial_filter</div><div class="ttdoc">Convenience constants for spatial filter types.</div><div class="ttdef"><b>Definition:</b> device.h:179</div></div>
 <div class="ttc" id="aclassifm3d_1_1O3X_html"><div class="ttname"><a href="classifm3d_1_1O3X.html">ifm3d::O3X</a></div><div class="ttdef"><b>Definition:</b> o3x.h:19</div></div>
-<div class="ttc" id="aclassifm3d_1_1Device_html_a440e1b50f9fe85768f148c10c51c0c89"><div class="ttname"><a href="classifm3d_1_1Device.html#a440e1b50f9fe85768f148c10c51c0c89">ifm3d::Device::device_type_</a></div><div class="ttdeci">std::string device_type_</div><div class="ttdoc">The cached device type of the connected device.</div><div class="ttdef"><b>Definition:</b> device.h:451</div></div>
+<div class="ttc" id="aclassifm3d_1_1Device_html_a440e1b50f9fe85768f148c10c51c0c89"><div class="ttname"><a href="classifm3d_1_1Device.html#a440e1b50f9fe85768f148c10c51c0c89">ifm3d::Device::device_type_</a></div><div class="ttdeci">std::string device_type_</div><div class="ttdoc">The cached device type of the connected device.</div><div class="ttdef"><b>Definition:</b> device.h:453</div></div>
 <div class="ttc" id="aclassifm3d_1_1Device_html_afebad872139042f57c28b95df7a1d483"><div class="ttname"><a href="classifm3d_1_1Device.html#afebad872139042f57c28b95df7a1d483">ifm3d::Device::temporal_filter</a></div><div class="ttdeci">temporal_filter</div><div class="ttdoc">Convenience constants for temporal filter types.</div><div class="ttdef"><b>Definition:</b> device.h:190</div></div>
 <div class="ttc" id="aclassifm3d_1_1O3D_html"><div class="ttname"><a href="classifm3d_1_1O3D.html">ifm3d::O3D</a></div><div class="ttdef"><b>Definition:</b> o3d.h:19</div></div>
 <div class="ttc" id="aclassifm3d_1_1Device_html_acafe3c37a98a3c47c8cbaaf07452bc31"><div class="ttname"><a href="classifm3d_1_1Device.html#acafe3c37a98a3c47c8cbaaf07452bc31">ifm3d::Device::mfilt_mask_size</a></div><div class="ttdeci">mfilt_mask_size</div><div class="ttdoc">Convenient constants for median filter mask sizes.</div><div class="ttdef"><b>Definition:</b> device.h:200</div></div>
