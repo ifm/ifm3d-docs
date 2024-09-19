@@ -92,6 +92,8 @@ $(document).ready(function(){initNavTree('structifm3d_1_1calibration_1_1Calibrat
 <div class="title">ifm3d::calibration::Calibration Struct Reference<div class="ingroups"><a class="el" href="group__Deserialize.html">Deserialize Module</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="struct__calibration_8hpp_source.html">ifm3d/deserialize/struct_calibration.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -114,7 +116,15 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>model_id</b></td>
 std::array&lt; float, 32 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>model_parameters</b></td></tr>
 <tr class="separator:ad8d3b059db477473f493195ca2938a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">model_id</td><td>The model id identifies which model is used. 0: Bouguet (unprojection, intrinsic), 1: Bouguet (projection, inverse intrinsic) 2: Fish eye (unprojection, intrinsic), 3: Fish eye (projection, inverse intrinsic) </td></tr>
+    <tr><td class="paramname">model_parameters</td><td>The parameters of the model. For the Bouguet model: fx, fy, mx, my, alpha, k1, k2, k3, k4, k5, For the fish eye model: fx, fy, mx, my, alpha, k1, k2, k3, k4, theta*_max or theta_max </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>ifm3d/deserialize/<a class="el" href="struct__calibration_8hpp_source.html">struct_calibration.hpp</a></li>
 </ul>
 </div><!-- contents -->
