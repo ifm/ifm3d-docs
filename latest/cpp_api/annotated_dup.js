@@ -41,5 +41,10 @@ var annotated_dup =
       [ "SWUpdater", "classifm3d_1_1SWUpdater.html", "classifm3d_1_1SWUpdater" ],
       [ "TOFInfoV3", "classifm3d_1_1TOFInfoV3.html", "classifm3d_1_1TOFInfoV3" ],
       [ "TOFInfoV4", "classifm3d_1_1TOFInfoV4.html", "classifm3d_1_1TOFInfoV4" ]
-    ] ]
+    ] ],
+    [ "O3DExposureTimes", "classifm3d_1_1O3DExposureTimes.html", null ],
+    [ "O3DExtrinsicCalibration", "classifm3d_1_1O3DExtrinsicCalibration.html", null ],
+    [ "O3DILLUTemperature", "classifm3d_1_1O3DILLUTemperature.html", null ],
+    [ "O3DInstrinsicCalibration", "classifm3d_1_1O3DInstrinsicCalibration.html", null ],
+    [ "O3DInverseInstrinsicCalibration", "classifm3d_1_1O3DInverseInstrinsicCalibration.html", null ]
 ];

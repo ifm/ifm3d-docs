@@ -36,6 +36,11 @@ var hierarchy =
         [ "ifm3d::LogWriterConsoleColored< Formatter, >", "classifm3d_1_1LogWriterConsoleColored.html", null ]
       ] ]
     ] ],
+    [ "O3DExposureTimes", "classifm3d_1_1O3DExposureTimes.html", null ],
+    [ "O3DExtrinsicCalibration", "classifm3d_1_1O3DExtrinsicCalibration.html", null ],
+    [ "O3DILLUTemperature", "classifm3d_1_1O3DILLUTemperature.html", null ],
+    [ "O3DInstrinsicCalibration", "classifm3d_1_1O3DInstrinsicCalibration.html", null ],
+    [ "O3DInverseInstrinsicCalibration", "classifm3d_1_1O3DInverseInstrinsicCalibration.html", null ],
     [ "ifm3d::ODSInfoV1", "classifm3d_1_1ODSInfoV1.html", null ],
     [ "ifm3d::ODSOccupancyGridV1", "classifm3d_1_1ODSOccupancyGridV1.html", null ],
     [ "ifm3d::Organizer", "classifm3d_1_1Organizer.html", null ],

@@ -70,5 +70,10 @@ var group__Deserialize =
       [ "measurement_range_max", "classifm3d_1_1TOFInfoV4.html#a3a8f2612bf27a2aef7a4568131695e0e", null ],
       [ "measurement_range_min", "classifm3d_1_1TOFInfoV4.html#ab5823fd32a62b71423b3cc5bb21ce4f8", null ],
       [ "tof_info_v4_size", "classifm3d_1_1TOFInfoV4.html#a3aede90e3cfe885f9379d4cb2decab3b", null ]
-    ] ]
+    ] ],
+    [ "O3DInstrinsicCalibration", "classifm3d_1_1O3DInstrinsicCalibration.html", null ],
+    [ "O3DInverseInstrinsicCalibration", "classifm3d_1_1O3DInverseInstrinsicCalibration.html", null ],
+    [ "O3DExtrinsicCalibration", "classifm3d_1_1O3DExtrinsicCalibration.html", null ],
+    [ "O3DExposureTimes", "classifm3d_1_1O3DExposureTimes.html", null ],
+    [ "O3DILLUTemperature", "classifm3d_1_1O3DILLUTemperature.html", null ]
 ];
