@@ -235,6 +235,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aec07219a144d418e528585ec74c4b959"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="classifm3d_1_1IFMNetworkDevice.html">ifm3d::IFMNetworkDevice</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Device.html#aec07219a144d418e528585ec74c4b959">DeviceDiscovery</a> ()</td></tr>
 <tr class="memdesc:aec07219a144d418e528585ec74c4b959"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function Provides a convinent way to find all ifm devices on the network.  <a href="classifm3d_1_1Device.html#aec07219a144d418e528585ec74c4b959">More...</a><br /></td></tr>
 <tr class="separator:aec07219a144d418e528585ec74c4b959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75dc4a6444fadc4b2217ba0df9b316a7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Device.html#a75dc4a6444fadc4b2217ba0df9b316a7">SetTempIPAddress</a> (std::string mac, std::string temp_ip)</td></tr>
+<tr class="memdesc:a75dc4a6444fadc4b2217ba0df9b316a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function Provides a way to set temporary IP.  <a href="classifm3d_1_1Device.html#a75dc4a6444fadc4b2217ba0df9b316a7">More...</a><br /></td></tr>
+<tr class="separator:a75dc4a6444fadc4b2217ba0df9b316a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28aac849be727299ab6eb780acb5b120"><td class="memItemLeft" align="right" valign="top">static Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Device.html#a28aac849be727299ab6eb780acb5b120">MakeShared</a> (const std::string &amp;ip=ifm3d::DEFAULT_IP, const std::uint16_t xmlrpc_port=ifm3d::DEFAULT_XMLRPC_PORT, const std::string &amp;password=ifm3d::DEFAULT_PASSWORD, bool throwIfUnavailable=true)</td></tr>
 <tr class="memdesc:a28aac849be727299ab6eb780acb5b120"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory function for instantiating the proper subclass based on h/w probing.  <a href="classifm3d_1_1Device.html#a28aac849be727299ab6eb780acb5b120">More...</a><br /></td></tr>
 <tr class="separator:a28aac849be727299ab6eb780acb5b120"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -710,6 +713,51 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </dl>
 
 <p>Reimplemented in <a class="el" href="classifm3d_1_1O3R.html#ab50df498165624f643ff73c9cd9a0d9d">ifm3d::O3R</a>.</p>
+
+</div>
+</div>
+<a id="a75dc4a6444fadc4b2217ba0df9b316a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75dc4a6444fadc4b2217ba0df9b316a7">&#9670;&nbsp;</a></span>SetTempIPAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ifm3d::Device::SetTempIPAddress </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>mac</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>temp_ip</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This function Provides a way to set temporary IP. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mac</td><td>The MAC address of the device </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">temp_ip</td><td>The temporary IP to be set to device </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
