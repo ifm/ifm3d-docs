@@ -23,6 +23,7 @@ var NAVTREEINDEX1 =
 "classifm3d_1_1LogWriterConsoleColored.html#a0f9fc7525c6b04c1f9e2102529115243":[2,0,0,21,1],
 "classifm3d_1_1LogWriterConsoleColored.html#a554f1e352eb80089fb54262205424ac5":[2,0,0,21,3],
 "classifm3d_1_1LogWriterConsoleColored.html#a668248b6251f13b7a7282aabb08ddfc1":[2,0,0,21,0],
+"classifm3d_1_1LogWriterConsoleColored.html#a972b668a7bbaa856ae9cbe88ac07b76f":[2,0,0,21,4],
 "classifm3d_1_1LogWriterConsoleColored.html#aab7f75622eeb05d39a8d446e78f4fdba":[2,0,0,21,2],
 "classifm3d_1_1LogWriterFile.html":[2,0,0,22],
 "classifm3d_1_1LogWriterFile.html#a1e258ea0576a3876c58c5e074e5be06b":[2,0,0,22,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50ac62756ba0b2f1c424c2b06a83ceee0a1":[1,2,2,28],
 "group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50ad31d6b872b2cb01ed7c9c29b2d30afc3":[1,2,2,6],
 "group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50ad3c0dc5e986ccc58d445e1b4debe7565":[1,2,2,4],
-"group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50ad43d327a7e946f698be37700154341a9":[1,2,2,17],
-"group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50ae65075d550f9b5bf9992fa1d71a131be":[1,2,2,29]
+"group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50ad43d327a7e946f698be37700154341a9":[1,2,2,17]
 };

@@ -164,7 +164,7 @@ This also reduce the bandwidth required to get the data from the device.</p>
 <h3>Register a callback<a class="headerlink" href="#register-a-callback" title="Permalink to this heading"></a></h3>
 <p>The recommended way to receive a frame is to use the callback function. You can register a callback function that will be executed for every received frame, until the program exits.</p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-2-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-2-Yysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-Yysr" name="Yysr" role="tab" tabindex="-1">c++</button></div><div aria-labelledby="tab-2-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-2-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="n">frame</span><span class="p">):</span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-2-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-2-Yysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-Yysr" name="Yysr" role="tab" tabindex="-1">c++</button></div><div aria-labelledby="tab-2-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-2-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="n">frame</span><span class="p">):</span>
     <span class="c1"># Read the distance image and display a pixel in the center</span>
     <span class="n">dist</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">get_buffer</span><span class="p">(</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">)</span>
     <span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">shape</span>
@@ -241,18 +241,18 @@ Simply access the image by calling <code class="docutils literal notranslate"><s
 <span class="c1"># Copyright 2023-present ifm electronic, gmbh</span>
 <span class="c1"># SPDX-License-Identifier: Apache-2.0</span>
 <span class="c1">#############################################</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">from</span> <span class="nn">ifm3dpy.device</span> <span class="kn">import</span> <span class="n">O3R</span>
-<span class="kn">from</span> <span class="nn">ifm3dpy.framegrabber</span> <span class="kn">import</span> <span class="n">FrameGrabber</span><span class="p">,</span> <span class="n">buffer_id</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ifm3dpy.device</span><span class="w"> </span><span class="kn">import</span> <span class="n">O3R</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ifm3dpy.framegrabber</span><span class="w"> </span><span class="kn">import</span> <span class="n">FrameGrabber</span><span class="p">,</span> <span class="n">buffer_id</span>
 
 
-<span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="n">frame</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="n">frame</span><span class="p">):</span>
     <span class="c1"># Read the distance image and display a pixel in the center</span>
     <span class="n">dist</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">get_buffer</span><span class="p">(</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">)</span>
     <span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">shape</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">width</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">height</span> <span class="o">//</span> <span class="mi">2</span><span class="p">])</span>
 
-<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">ip</span><span class="p">,</span> <span class="n">port</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">ip</span><span class="p">,</span> <span class="n">port</span><span class="p">):</span>
     <span class="c1"># Initialize the objects</span>
     <span class="n">o3r</span> <span class="o">=</span> <span class="n">O3R</span><span class="p">(</span><span class="n">ip</span><span class="o">=</span><span class="n">ip</span><span class="p">)</span>
     <span class="n">pcic_port</span> <span class="o">=</span> <span class="n">o3r</span><span class="o">.</span><span class="n">port</span><span class="p">(</span><span class="n">port</span><span class="p">)</span><span class="o">.</span><span class="n">pcic_port</span>
@@ -273,7 +273,7 @@ Simply access the image by calling <code class="docutils literal notranslate"><s
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="c1"># If the example python package was build, import the configuration</span>
-        <span class="kn">from</span> <span class="nn">ovp8xxexamples</span> <span class="kn">import</span> <span class="n">config</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">ovp8xxexamples</span><span class="w"> </span><span class="kn">import</span> <span class="n">config</span>
 
         <span class="n">IP</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">IP</span>
         <span class="n">PORT</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">PORT_3D</span>
@@ -390,11 +390,11 @@ Simply access the image by calling <code class="docutils literal notranslate"><s
 <span class="c1"># Copyright 2023-present ifm electronic, gmbh</span>
 <span class="c1"># SPDX-License-Identifier: Apache-2.0</span>
 <span class="c1">#############################################</span>
-<span class="kn">from</span> <span class="nn">ifm3dpy.device</span> <span class="kn">import</span> <span class="n">O3R</span>
-<span class="kn">from</span> <span class="nn">ifm3dpy.framegrabber</span> <span class="kn">import</span> <span class="n">FrameGrabber</span><span class="p">,</span> <span class="n">buffer_id</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ifm3dpy.device</span><span class="w"> </span><span class="kn">import</span> <span class="n">O3R</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ifm3dpy.framegrabber</span><span class="w"> </span><span class="kn">import</span> <span class="n">FrameGrabber</span><span class="p">,</span> <span class="n">buffer_id</span>
 
 
-<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">ip</span><span class="p">,</span> <span class="n">port</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">ip</span><span class="p">,</span> <span class="n">port</span><span class="p">):</span>
     <span class="c1"># Initialize the objects</span>
     <span class="n">o3r</span> <span class="o">=</span> <span class="n">O3R</span><span class="p">(</span><span class="n">ip</span><span class="p">)</span>
     <span class="n">pcic_port</span> <span class="o">=</span> <span class="n">o3r</span><span class="o">.</span><span class="n">port</span><span class="p">(</span><span class="n">port</span><span class="p">)</span><span class="o">.</span><span class="n">pcic_port</span>
@@ -422,7 +422,7 @@ Simply access the image by calling <code class="docutils literal notranslate"><s
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="c1"># If the example python package was build, import the configuration</span>
-        <span class="kn">from</span> <span class="nn">ovp8xxexamples</span> <span class="kn">import</span> <span class="n">config</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">ovp8xxexamples</span><span class="w"> </span><span class="kn">import</span> <span class="n">config</span>
 
         <span class="n">IP</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">IP</span>
         <span class="n">PORT</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">PORT_3D</span>
