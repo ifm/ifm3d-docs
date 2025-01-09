@@ -26,6 +26,7 @@ ifm3dpy.device.O3D
       ~O3D.copy_application
       ~O3D.create_application
       ~O3D.delete_application
+      ~O3D.device_discovery
       ~O3D.device_parameter
       ~O3D.device_type
       ~O3D.export_ifm_app
@@ -41,6 +42,7 @@ ifm3dpy.device.O3D
       ~O3D.reboot
       ~O3D.request_session
       ~O3D.set_current_time
+      ~O3D.set_temp_ip_address
       ~O3D.set_temporary_application_parameters
       ~O3D.to_json
       ~O3D.trace_logs

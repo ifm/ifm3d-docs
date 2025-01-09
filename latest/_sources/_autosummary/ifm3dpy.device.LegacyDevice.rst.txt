@@ -26,6 +26,7 @@ ifm3dpy.device.LegacyDevice
       ~LegacyDevice.copy_application
       ~LegacyDevice.create_application
       ~LegacyDevice.delete_application
+      ~LegacyDevice.device_discovery
       ~LegacyDevice.device_parameter
       ~LegacyDevice.device_type
       ~LegacyDevice.export_ifm_app
@@ -41,6 +42,7 @@ ifm3dpy.device.LegacyDevice
       ~LegacyDevice.reboot
       ~LegacyDevice.request_session
       ~LegacyDevice.set_current_time
+      ~LegacyDevice.set_temp_ip_address
       ~LegacyDevice.set_temporary_application_parameters
       ~LegacyDevice.to_json
       ~LegacyDevice.trace_logs

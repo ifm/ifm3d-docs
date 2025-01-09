@@ -26,6 +26,7 @@ ifm3dpy.device.O3X
       ~O3X.copy_application
       ~O3X.create_application
       ~O3X.delete_application
+      ~O3X.device_discovery
       ~O3X.device_parameter
       ~O3X.device_type
       ~O3X.export_ifm_app
@@ -41,6 +42,7 @@ ifm3dpy.device.O3X
       ~O3X.reboot
       ~O3X.request_session
       ~O3X.set_current_time
+      ~O3X.set_temp_ip_address
       ~O3X.set_temporary_application_parameters
       ~O3X.to_json
       ~O3X.trace_logs

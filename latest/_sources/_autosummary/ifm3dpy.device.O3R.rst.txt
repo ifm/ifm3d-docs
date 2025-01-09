@@ -19,6 +19,7 @@ ifm3dpy.device.O3R
       ~O3R.__init__
       ~O3R.am_i
       ~O3R.check_minimum_firmware_version
+      ~O3R.device_discovery
       ~O3R.device_parameter
       ~O3R.device_type
       ~O3R.factory_reset
@@ -40,6 +41,7 @@ ifm3dpy.device.O3R
       ~O3R.resolve_config
       ~O3R.save_init
       ~O3R.set
+      ~O3R.set_temp_ip_address
       ~O3R.to_json
       ~O3R.trace_logs
       ~O3R.who_am_i

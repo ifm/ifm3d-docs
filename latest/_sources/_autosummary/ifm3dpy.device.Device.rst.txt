@@ -19,12 +19,14 @@ ifm3dpy.device.Device
       ~Device.__init__
       ~Device.am_i
       ~Device.check_minimum_firmware_version
+      ~Device.device_discovery
       ~Device.device_parameter
       ~Device.device_type
       ~Device.firmware_version
       ~Device.force_trigger
       ~Device.from_json
       ~Device.reboot
+      ~Device.set_temp_ip_address
       ~Device.to_json
       ~Device.trace_logs
       ~Device.who_am_i

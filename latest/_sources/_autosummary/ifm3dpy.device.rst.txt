@@ -20,6 +20,7 @@
       :template: class.rst               
    
       Device
+      IFMNetworkDevice
       LegacyDevice
       O3D
       O3R

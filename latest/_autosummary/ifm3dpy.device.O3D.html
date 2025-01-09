@@ -54,6 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.html">ifm3dpy</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="ifm3dpy.device.html">ifm3dpy.device</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.Device.html">ifm3dpy.device.Device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.IFMNetworkDevice.html">ifm3dpy.device.IFMNetworkDevice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.LegacyDevice.html">ifm3dpy.device.LegacyDevice</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">ifm3dpy.device.O3D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.O3R.html">ifm3dpy.device.O3R</a></li>
@@ -164,50 +165,56 @@ those changes. Defaults to ‘’ (no password).</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.delete_application" title="ifm3dpy.device.O3D.delete_application"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_application</span></code></a>(self, idx)</p></td>
 <td><p>Deletes the application at the specified index from the sensor.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.device_parameter" title="ifm3dpy.device.O3D.device_parameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">device_parameter</span></code></a>(self, key)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.device_discovery" title="ifm3dpy.device.O3D.device_discovery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">device_discovery</span></code></a>()</p></td>
+<td><p>Discover the list of devices in the network.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.device_parameter" title="ifm3dpy.device.O3D.device_parameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">device_parameter</span></code></a>(self, key)</p></td>
 <td><p>Convenience accessor for extracting a device parameter</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.device_type" title="ifm3dpy.device.O3D.device_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">device_type</span></code></a>(self[, use_cached])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.device_type" title="ifm3dpy.device.O3D.device_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">device_type</span></code></a>(self[, use_cached])</p></td>
 <td><p>Obtains the device type of the connected camera.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.export_ifm_app" title="ifm3dpy.device.O3D.export_ifm_app"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_ifm_app</span></code></a>(self, idx)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.export_ifm_app" title="ifm3dpy.device.O3D.export_ifm_app"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_ifm_app</span></code></a>(self, idx)</p></td>
 <td><p>Export the application at the specified index into a byte array suitable for writing to a file.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.export_ifm_config" title="ifm3dpy.device.O3D.export_ifm_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_ifm_config</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.export_ifm_config" title="ifm3dpy.device.O3D.export_ifm_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_ifm_config</span></code></a>(self)</p></td>
 <td><p>Exports the entire camera configuration in a format compatible with Vision Assistant.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.factory_reset" title="ifm3dpy.device.O3D.factory_reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">factory_reset</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.factory_reset" title="ifm3dpy.device.O3D.factory_reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">factory_reset</span></code></a>(self)</p></td>
 <td><p>Sets the camera configuration back to the state in which it shipped from the ifm factory.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.firmware_version" title="ifm3dpy.device.O3D.firmware_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">firmware_version</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.firmware_version" title="ifm3dpy.device.O3D.firmware_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">firmware_version</span></code></a>(self)</p></td>
 <td><p>Version of firmware installed on device</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.force_trigger" title="ifm3dpy.device.O3D.force_trigger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">force_trigger</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.force_trigger" title="ifm3dpy.device.O3D.force_trigger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">force_trigger</span></code></a>(self)</p></td>
 <td><p>Sends a S/W trigger to the camera over XMLRPC.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.from_json" title="ifm3dpy.device.O3D.from_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json</span></code></a>(self, json)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.from_json" title="ifm3dpy.device.O3D.from_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json</span></code></a>(self, json)</p></td>
 <td><p>Configures the camera based on the parameter values of the passed in JSON.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.heartbeat" title="ifm3dpy.device.O3D.heartbeat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">heartbeat</span></code></a>(self, hb)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.heartbeat" title="ifm3dpy.device.O3D.heartbeat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">heartbeat</span></code></a>(self, hb)</p></td>
 <td><p>Sends a heartbeat message and sets the next heartbeat interval</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.imager_types" title="ifm3dpy.device.O3D.imager_types"><code class="xref py py-obj docutils literal notranslate"><span class="pre">imager_types</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.imager_types" title="ifm3dpy.device.O3D.imager_types"><code class="xref py py-obj docutils literal notranslate"><span class="pre">imager_types</span></code></a>(self)</p></td>
 <td><p>Lists the valid imager types supported by the sensor.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.import_ifm_app" title="ifm3dpy.device.O3D.import_ifm_app"><code class="xref py py-obj docutils literal notranslate"><span class="pre">import_ifm_app</span></code></a>(self, bytes)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.import_ifm_app" title="ifm3dpy.device.O3D.import_ifm_app"><code class="xref py py-obj docutils literal notranslate"><span class="pre">import_ifm_app</span></code></a>(self, bytes)</p></td>
 <td><p>Import the IFM-encoded application.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.import_ifm_config" title="ifm3dpy.device.O3D.import_ifm_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">import_ifm_config</span></code></a>(self, bytes[, flags])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.import_ifm_config" title="ifm3dpy.device.O3D.import_ifm_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">import_ifm_config</span></code></a>(self, bytes[, flags])</p></td>
 <td><p>Imports the entire camera configuration in a format compatible with Vision Assistant.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.reboot" title="ifm3dpy.device.O3D.reboot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reboot</span></code></a>(self, mode)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.reboot" title="ifm3dpy.device.O3D.reboot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reboot</span></code></a>(self, mode)</p></td>
 <td><p>Reboot the sensor</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.request_session" title="ifm3dpy.device.O3D.request_session"><code class="xref py py-obj docutils literal notranslate"><span class="pre">request_session</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.request_session" title="ifm3dpy.device.O3D.request_session"><code class="xref py py-obj docutils literal notranslate"><span class="pre">request_session</span></code></a>(self)</p></td>
 <td><p>Requests an edit-mode session with the camera.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.set_current_time" title="ifm3dpy.device.O3D.set_current_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_current_time</span></code></a>(self[, epoch_secs])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.set_current_time" title="ifm3dpy.device.O3D.set_current_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_current_time</span></code></a>(self[, epoch_secs])</p></td>
 <td><p>Sets the current time on the camera</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.set_temp_ip_address" title="ifm3dpy.device.O3D.set_temp_ip_address"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_temp_ip_address</span></code></a>(self, arg0)</p></td>
+<td><p>Set temporary IP address</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.O3D.set_temporary_application_parameters" title="ifm3dpy.device.O3D.set_temporary_application_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_temporary_application_parameters</span></code></a>(self, ...)</p></td>
 <td><p>Sets temporary application parameters in run mode.</p></td>
@@ -441,6 +448,24 @@ it will create a new “Camera” application.</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>RuntimeError</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.device.O3D.device_discovery">
+<span class="sig-name descname"><span class="pre">device_discovery</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="ifm3dpy.device.IFMNetworkDevice.html#ifm3dpy.device.IFMNetworkDevice" title="ifm3dpy.device.IFMNetworkDevice"><span class="pre">ifm3dpy.device.IFMNetworkDevice</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ifm3dpy.device.O3D.device_discovery" title="Permalink to this definition"></a></dt>
+<dd><p>Discover the list of devices in the network.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>A list of dictionaries, each containing the device’s</dt><dd><p>IP address, MAC address and type.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list[dict]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -808,6 +833,20 @@ IFM3D_SESSION_ID environment variable)</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>epoch_secs</strong> (<em>int</em><em>, </em><em>optional</em>) – Time since the Unix epoch in seconds. A value less than 0 will
 implicity set the time to the current system time.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.device.O3D.set_temp_ip_address">
+<span class="sig-name descname"><span class="pre">set_temp_ip_address</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.device.O3D.set_temp_ip_address" title="Permalink to this definition"></a></dt>
+<dd><p>Set temporary IP address</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mac</strong> (<em>string</em>) – MAC address of the device</p></li>
+<li><p><strong>temp_ip</strong> (<em>string</em>) – Temporary IP addres of the device</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

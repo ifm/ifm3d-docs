@@ -1,0 +1,42 @@
+ifm3dpy.device.IFMNetworkDevice
+===============================
+
+.. currentmodule:: ifm3dpy.device
+
+.. autoclass:: IFMNetworkDevice
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~IFMNetworkDevice.__init__
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~IFMNetworkDevice.__doc__
+      ~IFMNetworkDevice.device_id
+      ~IFMNetworkDevice.device_name
+      ~IFMNetworkDevice.flag
+      ~IFMNetworkDevice.found_via
+      ~IFMNetworkDevice.gateway
+      ~IFMNetworkDevice.host_name
+      ~IFMNetworkDevice.ip_address
+      ~IFMNetworkDevice.mac_address
+      ~IFMNetworkDevice.netmask
+      ~IFMNetworkDevice.port
+      ~IFMNetworkDevice.vendor_id
+   
+   
