@@ -75,6 +75,7 @@ var group__FrameGrabber =
       [ "O3R_RESULT_JSON", "group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50a7ab6985b65c0750f36a98c46c2f91d3f", null ],
       [ "O3R_RESULT_ARRAY2D", "group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50a1ac5e0fde2740ec6f7b01e1a1f60519a", null ],
       [ "O3R_RESULT_IMU", "group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50ac62756ba0b2f1c424c2b06a83ceee0a1", null ],
+      [ "O3R_ODS_POLAR_OCC_GRID", "group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50a28229bc22d53e9c3a7455862b43e800e", null ],
       [ "XYZ", "group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50ae65075d550f9b5bf9992fa1d71a131be", null ],
       [ "EXPOSURE_TIME", "group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50a6e156f284c1233d1eeae83454bcb9463", null ],
       [ "ILLUMINATION_TEMP", "group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50a1c7e2d5411452253dd2742dacf3b1b54", null ]

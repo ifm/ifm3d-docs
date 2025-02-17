@@ -1,0 +1,33 @@
+ifm3dpy.deserialize.ODSPolarOccupancyGridV1
+===========================================
+
+.. currentmodule:: ifm3dpy.deserialize
+
+.. autoclass:: ODSPolarOccupancyGridV1
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ODSPolarOccupancyGridV1.__init__
+      ~ODSPolarOccupancyGridV1.deserialize
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ODSPolarOccupancyGridV1.polarOccGrid
+      ~ODSPolarOccupancyGridV1.version
+   
+   

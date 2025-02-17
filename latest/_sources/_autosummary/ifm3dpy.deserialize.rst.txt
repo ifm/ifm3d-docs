@@ -28,6 +28,7 @@
       O3DInverseInstrinsicCalibration
       ODSInfoV1
       ODSOccupancyGridV1
+      ODSPolarOccupancyGridV1
       RGBInfoV1
       TOFInfoV3
       TOFInfoV4

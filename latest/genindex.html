@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Index &mdash; ifm3d v1.6.3 documentation</title>
+  <title>Index &mdash; ifm3d v1.6.4 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
@@ -32,7 +32,7 @@
             <a href="index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v1.6.3
+                v1.6.4
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -129,6 +129,8 @@
         <li><a href="_autosummary/ifm3dpy.deserialize.ODSInfoV1.html#ifm3dpy.deserialize.ODSInfoV1.__init__">(ifm3dpy.deserialize.ODSInfoV1 method)</a>
 </li>
         <li><a href="_autosummary/ifm3dpy.deserialize.ODSOccupancyGridV1.html#ifm3dpy.deserialize.ODSOccupancyGridV1.__init__">(ifm3dpy.deserialize.ODSOccupancyGridV1 method)</a>
+</li>
+        <li><a href="_autosummary/ifm3dpy.deserialize.ODSPolarOccupancyGridV1.html#ifm3dpy.deserialize.ODSPolarOccupancyGridV1.__init__">(ifm3dpy.deserialize.ODSPolarOccupancyGridV1 method)</a>
 </li>
         <li><a href="_autosummary/ifm3dpy.deserialize.RGBInfoV1.html#ifm3dpy.deserialize.RGBInfoV1.__init__">(ifm3dpy.deserialize.RGBInfoV1 method)</a>
 </li>
@@ -328,6 +330,8 @@
 </li>
         <li><a href="_autosummary/ifm3dpy.deserialize.ODSOccupancyGridV1.html#ifm3dpy.deserialize.ODSOccupancyGridV1.deserialize">(ifm3dpy.deserialize.ODSOccupancyGridV1 static method)</a>
 </li>
+        <li><a href="_autosummary/ifm3dpy.deserialize.ODSPolarOccupancyGridV1.html#ifm3dpy.deserialize.ODSPolarOccupancyGridV1.deserialize">(ifm3dpy.deserialize.ODSPolarOccupancyGridV1 static method)</a>
+</li>
         <li><a href="_autosummary/ifm3dpy.deserialize.RGBInfoV1.html#ifm3dpy.deserialize.RGBInfoV1.deserialize">(ifm3dpy.deserialize.RGBInfoV1 static method)</a>
 </li>
         <li><a href="_autosummary/ifm3dpy.deserialize.TOFInfoV3.html#ifm3dpy.deserialize.TOFInfoV3.deserialize">(ifm3dpy.deserialize.TOFInfoV3 static method)</a>
@@ -343,10 +347,10 @@
 </li>
       <li><a href="_autosummary/ifm3dpy.device.Device.html#ifm3dpy.device.Device.import_flags">Device.import_flags (class in ifm3dpy.device)</a>
 </li>
-      <li><a href="_autosummary/ifm3dpy.device.Device.html#ifm3dpy.device.Device.mfilt_mask_size">Device.mfilt_mask_size (class in ifm3dpy.device)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/ifm3dpy.device.Device.html#ifm3dpy.device.Device.mfilt_mask_size">Device.mfilt_mask_size (class in ifm3dpy.device)</a>
+</li>
       <li><a href="_autosummary/ifm3dpy.device.Device.html#ifm3dpy.device.Device.operating_mode">Device.operating_mode (class in ifm3dpy.device)</a>
 </li>
       <li><a href="_autosummary/ifm3dpy.device.Device.html#ifm3dpy.device.Device.spatial_filter">Device.spatial_filter (class in ifm3dpy.device)</a>
@@ -938,6 +942,8 @@
 </li>
       <li><a href="_autosummary/ifm3dpy.deserialize.ODSOccupancyGridV1.html#ifm3dpy.deserialize.ODSOccupancyGridV1">ODSOccupancyGridV1 (class in ifm3dpy.deserialize)</a>
 </li>
+      <li><a href="_autosummary/ifm3dpy.deserialize.ODSPolarOccupancyGridV1.html#ifm3dpy.deserialize.ODSPolarOccupancyGridV1">ODSPolarOccupancyGridV1 (class in ifm3dpy.deserialize)</a>
+</li>
       <li><a href="_autosummary/ifm3dpy.framegrabber.FrameGrabber.html#ifm3dpy.framegrabber.FrameGrabber.on_async_error">on_async_error() (ifm3dpy.framegrabber.FrameGrabber method)</a>
 </li>
       <li><a href="_autosummary/ifm3dpy.framegrabber.FrameGrabber.html#ifm3dpy.framegrabber.FrameGrabber.on_async_notification">on_async_notification() (ifm3dpy.framegrabber.FrameGrabber method)</a>
@@ -967,6 +973,8 @@
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="_autosummary/ifm3dpy.device.PortInfo.html#ifm3dpy.device.PortInfo.pcic_port">pcic_port (ifm3dpy.device.PortInfo property)</a>
+</li>
+      <li><a href="_autosummary/ifm3dpy.deserialize.ODSPolarOccupancyGridV1.html#ifm3dpy.deserialize.ODSPolarOccupancyGridV1.polarOccGrid">polarOccGrid (ifm3dpy.deserialize.ODSPolarOccupancyGridV1 property)</a>
 </li>
       <li><a href="_autosummary/ifm3dpy.device.PortInfo.html#ifm3dpy.device.PortInfo.port">port (ifm3dpy.device.PortInfo property)</a>
 </li>
@@ -1166,9 +1174,11 @@
 <h2 id="V">V</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="_autosummary/ifm3dpy.deserialize.RGBInfoV1.html#ifm3dpy.deserialize.RGBInfoV1.version">version (ifm3dpy.deserialize.RGBInfoV1 property)</a>
+      <li><a href="_autosummary/ifm3dpy.deserialize.ODSPolarOccupancyGridV1.html#ifm3dpy.deserialize.ODSPolarOccupancyGridV1.version">version (ifm3dpy.deserialize.ODSPolarOccupancyGridV1 property)</a>
 
       <ul>
+        <li><a href="_autosummary/ifm3dpy.deserialize.RGBInfoV1.html#ifm3dpy.deserialize.RGBInfoV1.version">(ifm3dpy.deserialize.RGBInfoV1 property)</a>
+</li>
         <li><a href="_autosummary/ifm3dpy.deserialize.TOFInfoV3.html#ifm3dpy.deserialize.TOFInfoV3.version">(ifm3dpy.deserialize.TOFInfoV3 property)</a>
 </li>
         <li><a href="_autosummary/ifm3dpy.deserialize.TOFInfoV4.html#ifm3dpy.deserialize.TOFInfoV4.version">(ifm3dpy.deserialize.TOFInfoV4 property)</a>

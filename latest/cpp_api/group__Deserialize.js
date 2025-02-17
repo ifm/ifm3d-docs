@@ -34,6 +34,12 @@ var group__Deserialize =
       [ "transform_cell_center_to_user", "classifm3d_1_1ODSOccupancyGridV1.html#ac05515e8832c59ed83ed1313565e66df", null ],
       [ "width", "classifm3d_1_1ODSOccupancyGridV1.html#adb4586cf789d8a1540a7aa4bc31eefd4", null ]
     ] ],
+    [ "ODSPolarOccupancyGridV1", "classifm3d_1_1ODSPolarOccupancyGridV1.html", [
+      [ "Ptr", "classifm3d_1_1ODSPolarOccupancyGridV1.html#a18fce253ac67308ad71f32fc3dfc5132", null ],
+      [ "Read", "classifm3d_1_1ODSPolarOccupancyGridV1.html#a92d05f63fccf065ab72d98efc1f3e906", null ],
+      [ "polarOccGrid", "classifm3d_1_1ODSPolarOccupancyGridV1.html#a1212bf7815c116584e478385000cd8d5", null ],
+      [ "version", "classifm3d_1_1ODSPolarOccupancyGridV1.html#a39a5db6eaf8cf3759e0de96610ab784f", null ]
+    ] ],
     [ "RGBInfoV1", "classifm3d_1_1RGBInfoV1.html", [
       [ "Ptr", "classifm3d_1_1RGBInfoV1.html#adf1974e1f37ff8f96f885ff95d096030", null ],
       [ "Read", "classifm3d_1_1RGBInfoV1.html#a24c908fccf8999b34bd116e38863a04f", null ],

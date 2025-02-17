@@ -43,6 +43,7 @@ var hierarchy =
     [ "O3DInverseInstrinsicCalibration", "classifm3d_1_1O3DInverseInstrinsicCalibration.html", null ],
     [ "ifm3d::ODSInfoV1", "classifm3d_1_1ODSInfoV1.html", null ],
     [ "ifm3d::ODSOccupancyGridV1", "classifm3d_1_1ODSOccupancyGridV1.html", null ],
+    [ "ifm3d::ODSPolarOccupancyGridV1", "classifm3d_1_1ODSPolarOccupancyGridV1.html", null ],
     [ "ifm3d::Organizer", "classifm3d_1_1Organizer.html", null ],
     [ "ifm3d::PCICClient", "classifm3d_1_1PCICClient.html", null ],
     [ "ifm3d::Point< T, n >", "structifm3d_1_1Point.html", null ],
