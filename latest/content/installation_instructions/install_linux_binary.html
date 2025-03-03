@@ -95,7 +95,6 @@
              
   <div class="section" id="installing-ifm3d-from-deb-file">
 <h1>Installing ifm3d from .deb file<a class="headerlink" href="#installing-ifm3d-from-deb-file" title="Permalink to this heading"></a></h1>
-<p><strong>Note</strong>: If you are using O3D/O3X device please use ifm3d-v0.20.3 release and use these <a class="reference external" href="https://github.com/ifm/ifm3d/blob/v0.20.3/doc/source_build.md">instructions</a></p>
 <div class="section" id="download-ifm3d-deb-files">
 <h2>Download ifm3d .deb files<a class="headerlink" href="#download-ifm3d-deb-files" title="Permalink to this heading"></a></h2>
 <p>Download the ifm3d .deb files for your OS ifm3d-ubuntu-&lt;ubuntu_version&gt;_<arch>_debs.xz.tar from <a class="reference external" href="https://github.com/ifm/ifm3d/releases">ifm3d Release page</a>.
@@ -105,12 +104,7 @@ This .deb files are of ifm3d modules without their dependencies.</p>
 <h2>Install ifm3d third-party dependencies<a class="headerlink" href="#install-ifm3d-third-party-dependencies" title="Permalink to this heading"></a></h2>
 <p>Use the following steps to install all the library dependencies on Debian based systems</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get update &amp;&amp; sudo apt-get -y upgrade
-$ sudo apt-get update &amp;&amp; sudo apt-get install -y
-      jq \ 
-      libssl-dev \
-      build-essential \
-      coreutils \
-      cmake                         
+$ sudo apt-get update &amp;&amp; sudo apt-get install -y cmake                         
 </pre></div>
 </div>
 <p>Note: The package name may differ in different flavours of Linux.
@@ -119,13 +113,6 @@ Above apt-get commands are specific to Debian based systems</p>
 <div class="section" id="install-ifm3d-deb-files">
 <h2>Install ifm3d .deb files<a class="headerlink" href="#install-ifm3d-deb-files" title="Permalink to this heading"></a></h2>
 <p>Unzip the .tar file and use following command to install ifm3d from .deb:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo dpkg -i ifm3d_1.0.1_amd64-device.deb
-$ sudo dpkg -i ifm3d_1.0.1_amd64-swupdater.deb
-$ sudo dpkg -i ifm3d_1.0.1_amd64-framegrabber.deb
-$ sudo dpkg -i ifm3d_1.0.1_amd64-tools.deb
-</pre></div>
-</div>
-<p>One can install all the debs will following command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd &lt;folder containing all the debs&gt;
 $ sudo dpkg -R -i .
 </pre></div>
