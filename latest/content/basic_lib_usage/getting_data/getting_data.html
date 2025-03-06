@@ -249,7 +249,7 @@ Simply access the image by calling <code class="docutils literal notranslate"><s
 <span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="n">frame</span><span class="p">):</span>
     <span class="c1"># Read the distance image and display a pixel in the center</span>
     <span class="n">dist</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">get_buffer</span><span class="p">(</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">)</span>
-    <span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">shape</span>
+    <span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">)</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">shape</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">width</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">height</span> <span class="o">//</span> <span class="mi">2</span><span class="p">])</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">ip</span><span class="p">,</span> <span class="n">port</span><span class="p">):</span>
@@ -414,7 +414,7 @@ Simply access the image by calling <code class="docutils literal notranslate"><s
 
     <span class="c1"># Read the distance image and display a pixel in the center</span>
     <span class="n">dist</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">get_buffer</span><span class="p">(</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">)</span>
-    <span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">shape</span>
+    <span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">)</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">shape</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">width</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">height</span> <span class="o">//</span> <span class="mi">2</span><span class="p">])</span>
     <span class="n">fg</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
 
