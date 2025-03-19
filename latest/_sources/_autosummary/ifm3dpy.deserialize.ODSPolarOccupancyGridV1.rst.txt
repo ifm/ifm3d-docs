@@ -28,6 +28,7 @@ ifm3dpy.deserialize.ODSPolarOccupancyGridV1
    .. autosummary::
    
       ~ODSPolarOccupancyGridV1.polarOccGrid
+      ~ODSPolarOccupancyGridV1.timestamp_ns
       ~ODSPolarOccupancyGridV1.version
    
    

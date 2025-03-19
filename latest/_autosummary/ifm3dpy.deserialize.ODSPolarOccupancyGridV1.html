@@ -144,7 +144,10 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.ODSPolarOccupancyGridV1.polarOccGrid" title="ifm3dpy.deserialize.ODSPolarOccupancyGridV1.polarOccGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">polarOccGrid</span></code></a></p></td>
 <td><p>A compressed version of the grid using polar coordinates.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.ODSPolarOccupancyGridV1.version" title="ifm3dpy.deserialize.ODSPolarOccupancyGridV1.version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">version</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.ODSPolarOccupancyGridV1.timestamp_ns" title="ifm3dpy.deserialize.ODSPolarOccupancyGridV1.timestamp_ns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timestamp_ns</span></code></a></p></td>
+<td><p>timestamp of the grid</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.ODSPolarOccupancyGridV1.version" title="ifm3dpy.deserialize.ODSPolarOccupancyGridV1.version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">version</span></code></a></p></td>
 <td><p>version of the grid</p></td>
 </tr>
 </tbody>
@@ -164,6 +167,12 @@ The index corresponds to the angle
 which is defined by atan2(ry, rx). The ray direction is given by (rx, ry).
 The value is the distance to nearest occupied cell on the ray from the vehicle origin,
 given in [mm]. In case there are no occupied cells on the ray, the value 65535 is set.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.ODSPolarOccupancyGridV1.timestamp_ns">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">timestamp_ns</span></span><a class="headerlink" href="#ifm3dpy.deserialize.ODSPolarOccupancyGridV1.timestamp_ns" title="Permalink to this definition"></a></dt>
+<dd><p>timestamp of the grid</p>
 </dd></dl>
 
 <dl class="py property">
