@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ifm3d - Command Line Tool &mdash; ifm3d v1.6.6 documentation</title>
+  <title>ifm3d command line tool &mdash; ifm3d v1.6.6 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -20,7 +20,9 @@
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Images and buffers manipulation" href="manip_images/index.html" />
+    <link rel="prev" title="ifm3d::Logger - Logger for the ifm3d library" href="basic_lib_usage/logging/logging.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,12 +43,12 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="README.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation_instructions/index.html">Installation instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="migration_guide/index.html">Migration Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic_lib_usage/index.html">Basic library usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cli_link.html">Command Line tool</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Command Line tool</a></li>
 <li class="toctree-l1"><a class="reference internal" href="manip_images/index.html">Manipulating images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python_api.html">Python API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cpp_api/annotated.html">C++ API</a></li>
@@ -69,7 +71,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">ifm3d - Command Line Tool</li>
+      <li class="breadcrumb-item active">ifm3d command line tool</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/content/cmdline_overview.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -80,111 +82,239 @@
            <div itemprop="articleBody">
              
   <div class="section" id="ifm3d-command-line-tool">
-<h1>ifm3d - Command Line Tool<a class="headerlink" href="#ifm3d-command-line-tool" title="Permalink to this heading"></a></h1>
+<h1>ifm3d command line tool<a class="headerlink" href="#ifm3d-command-line-tool" title="Permalink to this heading"></a></h1>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> ships with a command line tool of the same name. The <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> command
 line tool is used to both introspect the state of a camera as well as mutate
-parameters. To carry out a particular task, you evoke one of the <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code>
+parameters.
+To carry out a particular task, you evoke one of the <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code>
 <em>subcommands</em>. To get a listing of available subcommands, you can pass the
 <code class="docutils literal notranslate"><span class="pre">--help</span></code> option.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d --help
-ifm3d: version=0.20.0
+ifm3d Command Line Interface (CLI)
+Usage: ifm3d [OPTIONS] SUBCOMMAND
 
+Options:
+  -h,--help                   Print this help message and exit
+  -v,--version                Print version information
+  --ip TEXT:IPV4 [192.168.0.69] 
+                              IP address of the sensor
+  --xmlrpc-port UINT [80]     XMLRPC port of the sensor
+  --password TEXT             Password for establishing an edit-session with the sensor
+  --log-level TEXT:{CRITICAL,ERROR,WARN,INFO,DEBUG,VERBOSE,NONE} [WARN] 
+                              The minimum severity of messages that will be logged, possible values are in descending order
+  --log-file TEXT             Log to a file instead of stderr
 
-Usage:
-  ifm3d [&lt;global options&gt;] &lt;command&gt; [&lt;args&gt;]
+Subcommands:
+  o3x1xx                      Interact with the O3X1xx devices
+  o3d3xx                      Interact with the O3D3xx devices
+  ovp8xx                      Interact with the OVP8xx video processing units
+  discover                    Discover ifm devices on the network.
+</pre></div>
+</div>
+<p>Each of the supported family of cameras, O3X1xx, O3D3xx and OVP8xx, provides specific subcommands that cater to their specific features.
+To access these, the name of the camera family will be used as the first subcommand, potentially followed by additional commands.</p>
+<p>For example, to read out the current configuration on a connected OVP8xx, one would use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovp8xx config get
+{
+  &quot;applications&quot;: {
+    &quot;classes&quot;: {
+      &quot;mcc&quot;: {
+        &quot;instanceSchema&quot;: {
+          &quot;$schema&quot;: &quot;http://json-schema.org/draft-07/schema#&quot;,
+          &quot;additionalProperties&quot;: false,
+          &quot;properties&quot;: {
+            &quot;class&quot;: {},
+            &quot;configuration&quot;: {},
+            &quot;data&quot;: {},
+...
+</pre></div>
+</div>
+<p>When accessing a device using non-default parameters, one can add global arguments to the command.
+For example, to read out the current configuration of a connected OVP, at IP 192.168.0.70, one would use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovp8xx config get --ip=192.168.0.70
+{
+  &quot;applications&quot;: {
+    &quot;classes&quot;: {
+      &quot;mcc&quot;: {
+        &quot;instanceSchema&quot;: {
+          &quot;$schema&quot;: &quot;http://json-schema.org/draft-07/schema#&quot;,
+          &quot;additionalProperties&quot;: false,
+          &quot;properties&quot;: {
+            &quot;class&quot;: {},
+            &quot;configuration&quot;: {},
+            &quot;data&quot;: {},
+...
+</pre></div>
+</div>
+<p>The documentation for each command and subcommand is available using the <code class="docutils literal notranslate"><span class="pre">--help</span></code> argument.
+For example, to display the documentation for the O3D3xx:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d o3d3xx --help
+Interact with the O3D3xx devices
+Usage: ifm3d o3d3xx [OPTIONS] SUBCOMMAND
 
- global options:
-  -h, --help             Produce this help message and exit
-      --ip arg           IP address of the sensor (default: 192.168.0.69)
-      --xmlrpc-port arg  XMLRPC port of the sensor (default: 80)
-      --password arg     Password for establishing an edit-session with the
-                         sensor (default: )
+Options:
+  -h,--help                   Print this help message and exit
 
-These are common commands used in various situations:
-
-    app-types     List the application types supported by the sensor.
-
-    config        Configure sensor settings from a JSON description of
-                  the desired sensor state. See also `dump&#39;.
-
-    cp            Create a new application on the sensor,
-                  bootstrapped from a copy of an existing one.
-
-    discover      Discover ifm devices on the network.
-
-    dump          Serialize the sensor state to JSON.
-
-    export        Export an application or whole sensor configuration
-                  into a format compatible with ifm Vision Assistant.
-
-    hz            Compute the actual frequency at which the FrameGrabber
-                  is running.
-
-    imager-types  List the imager types supported by the sensor.
-
-    import        Import an application or whole sensor configuration
-                  that is compatible with ifm Vision Assistant&#39;s export
-                  format.
-
-    jitter        Collects statistics on framegrabber (and optionally, image
-                  construction) jitter.
-
-    ls            Lists the applications currently installed on
-                  the sensor.
-
-    passwd        Sets the password on the sensor.
-
-    reboot        Reboot the sensor, potentially into recovery
-                  mode (no recovery mode for O3R).
-                  Recovery mode is useful for putting the
-                  sensor into a state where it can be flashed
-                  with new firmware.
-
-    reset         Reset the sensor to factory defaults.
-
-    rm            Deletes an application from the sensor.
-
-    schema        Construct and analyze image acquisition schema masks.
-
-    swupdate      Perform a firmware update on the camera. Please ensure
-                  that the camera is booted to recovery beforehand.
-
-    time          Get/set the current time on the camera.
-
-    trace         Get trace messages from the internal camera trace buffer.
-
-For bug reports, please see:
-https://github.com/ifm/ifm3d/issues
+Subcommands:
+  app-types                   List the application types supported by the sensor.
+  config                      Configure sensor settings from a JSON description of the desired sensor state. See also &#39;dump&#39;.
+  cp                          Create a new application on the sensor, bootstrapped from a copy of an existing one.
+  discover                    Discover ifm devices on the network.
+  dump                        Serialize the sensor state to JSON.
+  export                      Export an application or whole sensor configuration into a format compatible with ifm Vision Assistant.
+  hz                          Compute the actual frequency at which the FrameGrabber is running.
+  imager-types                List the imager types supported by the sensor.
+  import                      Import an application or whole sensor configuration that is compatible with ifm Vision Assistant&#39;s export format (*.o3d3xxapp).
+  jitter                      Collects statistics on framegrabber (and optionally, image construction) jitter.
+  ls                          Lists the applications currently installed on the sensor.
+  passwd                      Sets the password on the sensor.
+  reboot                      Reboot the sensor
+  reset                       Reset the sensor to factory defaults.
+  rm                          Deletes an application from the sensor.
+  swupdate                    Perform a firmware update on the camera. 
+  time                        Get/set the current time on the camera.
+  trace                       Get trace messages from the internal camera trace buffer.
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuring">
+<h2>Configuring<a class="headerlink" href="#configuring" title="Permalink to this heading"></a></h2>
+<p>Using the ifm3d CLI can be a quick way to configure or read out parts of the device configuration.
+It can be used in conjunction with the tool <a class="reference external" href="https://jqlang.org/">jq</a> to set portions of the configuration, or alternatively a configuration file in JSON format can be used.</p>
+<p>For example, to change the name of an OVP8xx device, one can use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ echo {} | jq &#39;.device.info.name=&quot;My favorite O3R&quot;&#39; | ifm3d ovp8xx config set
+</pre></div>
+</div>
+<p>Alternatively, a configuration file can be used, by providing its path in the <code class="docutils literal notranslate"><span class="pre">--file</span></code> argument.
+For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovp8xx config set --file=config.json
+</pre></div>
+</div>
+<p>To read out a specific subset of the configuration, one can use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovp8xx config get --path &quot;/device/info/name&quot;
+{
+  &quot;device&quot;: {
+    &quot;info&quot;: {
+      &quot;name&quot;: &quot;My favorite O3R&quot;
+    }
+  }
+}
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The configuration uses the JSON format, which means that the command-line JSON processor <code class="docutils literal notranslate"><span class="pre">jq</span></code> can be used to further process the results.</p>
+</div>
+</div>
+<div class="section" id="diagnostic">
+<h2>Diagnostic<a class="headerlink" href="#diagnostic" title="Permalink to this heading"></a></h2>
+<p><span class="xref myst"><img alt="O3R" src="https://img.shields.io/badge/O3R-green.svg" /></span>
+<span class="xref myst"><img alt="O3D" src="https://img.shields.io/badge/O3D-red.svg" /></span>
+<span class="xref myst"><img alt="O3X" src="https://img.shields.io/badge/O3X-red.svg" /></span></p>
+<div class="section" id="device-diagnostic">
+<h3>Device diagnostic<a class="headerlink" href="#device-diagnostic" title="Permalink to this heading"></a></h3>
+<p>The O3R platforms provides diagnostic to help monitor the health of the system at runtime, and to provide debug information in case troubleshooting help is needed.</p>
+<p>To retrieve the currently active diagnostic, one can use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovp8xx diagnostic get
+{
+  &quot;bootid&quot;: &quot;2e49ea23-2f03-4965-8d48-fe08e72c23dd&quot;,
+  &quot;events&quot;: [],
+  &quot;timestamp&quot;: &quot;1651170509113082016&quot;,
+  &quot;version&quot;: {
+    &quot;diagnostics&quot;: &quot;1.0.1&quot;,
+    &quot;euphrates&quot;: &quot;1.42.9&quot;,
+    &quot;firmware&quot;: &quot;1.20.11.6034&quot;
+  }
+}
+</pre></div>
+</div>
+<p>In the example above, there is no active diagnostics.</p>
+<p>By default, only the active diagnostic is displayed. To filter the diagnostic messages, for example to retrieve all active diagnostics from the “/applications/instances/app0/type” source, use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovp8xx diagnostic get --filter &#39;{&quot;source&quot;: &quot;/applications/instances/app0/type&quot;, &quot;state&quot;: &quot;active&quot;}&#39;
+{
+  &quot;bootid&quot;: &quot;7a4ea1e6-1869-4500-bd2d-c32aad956ca9&quot;,
+  &quot;events&quot;: [
+    {
+      &quot;description&quot;: &quot;Short term unstable framerate of ODS input streams. This may happen sporadically (especially after changing the activePorts parameter). This might be caused by an overloaded system (please consider the potential influence of OEM Docker containers).&quot;,
+      &quot;id&quot;: 105006,
+      &quot;name&quot;: &quot;ERROR_ODSAPP_UNSTABLE_FRAMERATES&quot;,
+      &quot;severity&quot;: &quot;minor&quot;,
+      &quot;source&quot;: &quot;/applications/instances/app0/type&quot;,
+      &quot;state&quot;: &quot;active&quot;,
+      &quot;stats&quot;: {
+        &quot;count&quot;: 1,
+        &quot;lastActivated&quot;: {
+          &quot;bootid&quot;: &quot;7a4ea1e6-1869-4500-bd2d-c32aad956ca9&quot;,
+          &quot;timestamp&quot;: &quot;1703415152874733952&quot;
+        },
+        &quot;lastDeactivated&quot;: {
+          &quot;bootid&quot;: &quot;&quot;,
+          &quot;timestamp&quot;: &quot;0&quot;
+        }
+      },
+      &quot;targets&quot;: [
+        {
+          &quot;description&quot;: &quot;Targets one application&quot;,
+          &quot;name&quot;: &quot;app&quot;,
+          &quot;node&quot;: &quot;/applications/instances/app0&quot;
+        }
+      ]
+    },
+  ],
+  &quot;groups&quot;: {
+    &quot;app0&quot;: &quot;minor&quot;,
+    &quot;app1&quot;: &quot;not_available&quot;,
+    &quot;app10&quot;: &quot;not_available&quot;,
+    &quot;app11&quot;: &quot;not_available&quot;,
+    &quot;app12&quot;: &quot;not_available&quot;,
+    &quot;app13&quot;: &quot;not_available&quot;,
+    &quot;app14&quot;: &quot;not_available&quot;,
+    &quot;app15&quot;: &quot;not_available&quot;,
+    &quot;app16&quot;: &quot;not_available&quot;,
+    &quot;app17&quot;: &quot;not_available&quot;,
+    &quot;app18&quot;: &quot;not_available&quot;,
+    &quot;app19&quot;: &quot;not_available&quot;,
+    &quot;app2&quot;: &quot;not_available&quot;,
+    &quot;app3&quot;: &quot;not_available&quot;,
+    &quot;app4&quot;: &quot;not_available&quot;,
+    &quot;app5&quot;: &quot;not_available&quot;,
+    &quot;app6&quot;: &quot;not_available&quot;,
+    &quot;app7&quot;: &quot;not_available&quot;,
+    &quot;app8&quot;: &quot;not_available&quot;,
+    &quot;app9&quot;: &quot;not_available&quot;,
+    &quot;port0&quot;: &quot;no_incident&quot;,
+    &quot;port1&quot;: &quot;no_incident&quot;,
+    &quot;port2&quot;: &quot;no_incident&quot;,
+    &quot;port3&quot;: &quot;no_incident&quot;,
+    &quot;port4&quot;: &quot;not_available&quot;,
+    &quot;port5&quot;: &quot;not_available&quot;,
+    &quot;port6&quot;: &quot;no_incident&quot;
+  },
+  &quot;timestamp&quot;: &quot;1703415367567905984&quot;,
+  &quot;version&quot;: {
+    &quot;diagnostics&quot;: &quot;1.0.4&quot;,
+    &quot;euphrates&quot;: &quot;1.42.16&quot;,
+    &quot;firmware&quot;: &quot;1.20.19.6210&quot;
+  }
+}
 
 </pre></div>
 </div>
-<p>As it is reported in the help output above, the <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> command line program
-accepts 1) a set of <em>global arguments</em> which control the particular platform you
-wish to communicate with; 2) a subcommand; and 3) arguments to the
-subcommand. To get a listing of the particular arguments accepted by a
-subcommand, you can pass the <code class="docutils literal notranslate"><span class="pre">--help</span></code> option to the subcommand. For exemplary
-purposes, let’s list the options accepted by the <code class="docutils literal notranslate"><span class="pre">cp</span></code> subcommand.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d cp --help
-Usage:
-  ifm3d [&lt;global options&gt;] cp [&lt;cp options&gt;]
-
- global options:
-  -h, --help             Produce this help message and exit
-      --ip arg           IP address of the sensor (default: 192.168.0.69)
-      --xmlrpc-port arg  XMLRPC port of the sensor (default: 80)
-      --password arg     Password for establishing an edit-session with the
-                         sensor (default: )
-
- cp options:
-      --index arg  Index of source application to copy (default: -1)
+</div>
+<div class="section" id="service-report">
+<h3>Service report<a class="headerlink" href="#service-report" title="Permalink to this heading"></a></h3>
+<p>In addition to the diagnostic, a service report can be downloaded.
+The generated ZIP file should be shared with ifm support team when requesting troubleshooting help, as it contains detailed information about the state and configuration of the system.</p>
+<p>To download it, use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovp8xx getServiceReport &gt; service_report.zip
+$ unzip service_report.zip
+$ ls
+configuration.json  deserializer_info.json  diagnostics.json  emmc_devices_health.json  filesystem_info.txt  journalctl.log  manifest.json  schema.json  service_report.zip
 </pre></div>
 </div>
-<p>As is shown above, <code class="docutils literal notranslate"><span class="pre">cp</span></code> takes a source application index to copy from. Note that the concept of applications is deprecated for the O3R platform.</p>
-<p>We now walk through a couple of simple examples of using <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code>. This is not an
-exhaustive tutorial on <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> but rather intended to give a sense of how to
-use the tool. The concepts apply broadly to all of the subcommands.</p>
+</div>
 </div>
 </div>
 
