@@ -281,7 +281,7 @@ sensor.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.device.O3X.application_list">
-<span class="sig-name descname"><span class="pre">application_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ifm3dpy.device.LegacyDevice.html#ifm3dpy.device.LegacyDevice" title="ifm3dpy.device.LegacyDevice"><span class="pre">ifm3dpy.device.LegacyDevice</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#ifm3dpy.device.O3X.application_list" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">application_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ifm3dpy.device.LegacyDevice.html#ifm3dpy.device.LegacyDevice" title="ifm3dpy.device.LegacyDevice"><span class="pre">ifm3dpy.device.LegacyDevice</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#ifm3dpy.device.O3X.application_list" title="Permalink to this definition"></a></dt>
 <dd><p>Delivers basic information about all applications stored on the device.
 A call to this function does not require establishing a session with the
 camera.</p>
@@ -290,10 +290,10 @@ Each object in the array is basically a dictionary with the following
 keys: ‘index’, ‘id’, ‘name’, ‘description’, ‘active’</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>A JSON encoding of the application information</p>
+<dd class="field-odd"><p>A list of dictionaries representing JSON encoding of the application information</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>dict</p>
+<dd class="field-even"><p>list</p>
 </dd>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError</strong> – </p>
