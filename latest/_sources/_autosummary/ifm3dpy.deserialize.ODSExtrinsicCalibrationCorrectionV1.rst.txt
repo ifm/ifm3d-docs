@@ -1,0 +1,36 @@
+ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1
+=======================================================
+
+.. currentmodule:: ifm3dpy.deserialize
+
+.. autoclass:: ODSExtrinsicCalibrationCorrectionV1
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ODSExtrinsicCalibrationCorrectionV1.__init__
+      ~ODSExtrinsicCalibrationCorrectionV1.deserialize
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ODSExtrinsicCalibrationCorrectionV1.completion_rate
+      ~ODSExtrinsicCalibrationCorrectionV1.rot_delta_valid
+      ~ODSExtrinsicCalibrationCorrectionV1.rot_delta_value
+      ~ODSExtrinsicCalibrationCorrectionV1.rot_head_to_user
+      ~ODSExtrinsicCalibrationCorrectionV1.version
+   
+   

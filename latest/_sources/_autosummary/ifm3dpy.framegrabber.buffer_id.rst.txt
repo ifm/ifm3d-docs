@@ -47,6 +47,7 @@ ifm3dpy.framegrabber.buffer\_id
       ~buffer_id.MONOCHROM_2D_12BIT
       ~buffer_id.NORM_AMPLITUDE_IMAGE
       ~buffer_id.O3R_DISTANCE_IMAGE_INFO
+      ~buffer_id.O3R_ODS_EXTRINSIC_CALIBRATION_CORRECTION
       ~buffer_id.O3R_ODS_INFO
       ~buffer_id.O3R_ODS_OCCUPANCY_GRID
       ~buffer_id.O3R_ODS_POLAR_OCC_GRID

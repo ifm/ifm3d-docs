@@ -26,6 +26,7 @@
       O3DILLUTemperature
       O3DInstrinsicCalibration
       O3DInverseInstrinsicCalibration
+      ODSExtrinsicCalibrationCorrectionV1
       ODSInfoV1
       ODSOccupancyGridV1
       ODSPolarOccupancyGridV1

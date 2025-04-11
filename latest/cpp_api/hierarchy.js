@@ -41,6 +41,7 @@ var hierarchy =
     [ "O3DILLUTemperature", "classifm3d_1_1O3DILLUTemperature.html", null ],
     [ "O3DInstrinsicCalibration", "classifm3d_1_1O3DInstrinsicCalibration.html", null ],
     [ "O3DInverseInstrinsicCalibration", "classifm3d_1_1O3DInverseInstrinsicCalibration.html", null ],
+    [ "ifm3d::ODSExtrinsicCalibrationCorrectionV1", "classifm3d_1_1ODSExtrinsicCalibrationCorrectionV1.html", null ],
     [ "ifm3d::ODSInfoV1", "classifm3d_1_1ODSInfoV1.html", null ],
     [ "ifm3d::ODSOccupancyGridV1", "classifm3d_1_1ODSOccupancyGridV1.html", null ],
     [ "ifm3d::ODSPolarOccupancyGridV1", "classifm3d_1_1ODSPolarOccupancyGridV1.html", null ],

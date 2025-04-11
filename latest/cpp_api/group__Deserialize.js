@@ -16,6 +16,15 @@ var group__Deserialize =
       [ "model_id", "structifm3d_1_1calibration_1_1Calibration.html#a7b7600fa111e0da40f0994ac4e24a567", null ],
       [ "model_parameters", "structifm3d_1_1calibration_1_1Calibration.html#ad8d3b059db477473f493195ca2938a37", null ]
     ] ],
+    [ "ODSExtrinsicCalibrationCorrectionV1", "classifm3d_1_1ODSExtrinsicCalibrationCorrectionV1.html", [
+      [ "Ptr", "classifm3d_1_1ODSExtrinsicCalibrationCorrectionV1.html#a832cc71611512a3212df1426a1341a72", null ],
+      [ "Read", "classifm3d_1_1ODSExtrinsicCalibrationCorrectionV1.html#a73d23b3f9806952e0ee6878c94e30535", null ],
+      [ "completion_rate", "classifm3d_1_1ODSExtrinsicCalibrationCorrectionV1.html#aea2302deb1007451750de55ec2f0fcc8", null ],
+      [ "rot_delta_valid", "classifm3d_1_1ODSExtrinsicCalibrationCorrectionV1.html#a2f1da5a4b5dd0a8dfae86ddef943ff61", null ],
+      [ "rot_delta_value", "classifm3d_1_1ODSExtrinsicCalibrationCorrectionV1.html#a98fa3d3c28e8758cf7bd452f33540b11", null ],
+      [ "rot_head_to_user", "classifm3d_1_1ODSExtrinsicCalibrationCorrectionV1.html#aa91fbcce0e23bbee09aab514a88d4910", null ],
+      [ "version", "classifm3d_1_1ODSExtrinsicCalibrationCorrectionV1.html#ab04e304289da619487e2e1dfb8fcb870", null ]
+    ] ],
     [ "ODSInfoV1", "classifm3d_1_1ODSInfoV1.html", [
       [ "Ptr", "classifm3d_1_1ODSInfoV1.html#a834ee48d3a744da5882b79fdded6a4de", null ],
       [ "Read", "classifm3d_1_1ODSInfoV1.html#ae2dae6a1891bfa4b5fac8dd3cb303d48", null ],
