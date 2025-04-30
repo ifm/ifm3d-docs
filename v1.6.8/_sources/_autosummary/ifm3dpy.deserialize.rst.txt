@@ -1,0 +1,44 @@
+﻿ifm3dpy.deserialize
+===================
+
+.. automodule:: ifm3dpy.deserialize
+  
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:                                          
+      :template: class.rst               
+   
+      Calibration
+      ExtrinsicOpticToUser
+      O3DExposureTimes
+      O3DExtrinsicCalibration
+      O3DILLUTemperature
+      O3DInstrinsicCalibration
+      O3DInverseInstrinsicCalibration
+      ODSExtrinsicCalibrationCorrectionV1
+      ODSInfoV1
+      ODSOccupancyGridV1
+      ODSPolarOccupancyGridV1
+      RGBInfoV1
+      TOFInfoV3
+      TOFInfoV4
+   
+   
+
+   
+   
+   
+
+
+

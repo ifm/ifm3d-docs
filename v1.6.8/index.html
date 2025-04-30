@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ifm3d library &mdash; ifm3d v1.6.8 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ifm3d Overview" href="content/README.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> ifm3d
+          </a>
+              <div class="version">
+                v1.6.8
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="content/README.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/installation_instructions/index.html">Installation instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/migration_guide/index.html">Migration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/basic_lib_usage/index.html">Basic library usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/cmdline_overview.html">Command Line tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/manip_images/index.html">Manipulating images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_api.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cpp_api/annotated.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/ChangeLog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">ifm3d</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">ifm3d library</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="ifm3d-library">
+<h1>ifm3d library<a class="headerlink" href="#ifm3d-library" title="Permalink to this heading"></a></h1>
+<div class="admonition-news admonition">
+<p class="admonition-title">News</p>
+<p>The latest release of ifm3d is version v1.6.8. Please take a look at the <a class="reference internal" href="content/migration_guide/index.html"><span class="doc std std-doc">migration guide</span></a> for breaking changes.</p>
+<p>A detailed list of all changes is available under <a class="reference internal" href="content/ChangeLog.html"><span class="doc std std-doc">Changelog</span></a>.</p>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="content/README.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/installation_instructions/index.html">Installation instructions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content/installation_instructions/install_binary_package_index.html">Install binary package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="content/installation_instructions/install_linux_binary.html">Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="content/installation_instructions/install_windows_binary.html">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="content/installation_instructions/install_source_package_index.html">Install from source</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="content/installation_instructions/install_from_source_linux.html">Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="content/installation_instructions/install_from_source_windows.html">Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="content/installation_instructions/install_py.html">ifm3dpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/installation_instructions/install_docker.html">Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="content/migration_guide/index.html">Migration Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content/migration_guide/v1_6_0.html">v1.6.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/migration_guide/v1_3_0.html">v1.3.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/migration_guide/v1_2_0.html">v1.2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/migration_guide/v1_1_0.html">v1.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/migration_guide/v1_0_0.html">v1.0.0</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="content/basic_lib_usage/index.html">Basic library usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content/basic_lib_usage/configuration/configuration.html">How to: configure the camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/basic_lib_usage/getting_data/getting_data.html">How to: receive an image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/basic_lib_usage/viewer/README.html">How to: view the images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/basic_lib_usage/2d_data/2d_data.html">How to: handle rgb data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/basic_lib_usage/deserialize/deserialize.html">How to: use the deserializer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/basic_lib_usage/logging/logging.html">How to: configure the logging</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="content/cmdline_overview.html">Command Line tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/manip_images/index.html">Manipulating images</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content/manip_images/buffer_ids.html">Buffer types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/manip_images/stlimage.html">Accessing pixel values</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python_api.html">Python API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ifm3dpy.html">ifm3dpy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.Awaitable.html">ifm3dpy.Awaitable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.FrameAwaitable.html">ifm3dpy.FrameAwaitable</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ifm3dpy.device.html">ifm3dpy.device</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.Device.html">ifm3dpy.device.Device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.IFMNetworkDevice.html">ifm3dpy.device.IFMNetworkDevice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.LegacyDevice.html">ifm3dpy.device.LegacyDevice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.O3D.html">ifm3dpy.device.O3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.O3R.html">ifm3dpy.device.O3R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.O3X.html">ifm3dpy.device.O3X</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.PortInfo.html">ifm3dpy.device.PortInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.SemVer.html">ifm3dpy.device.SemVer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.Error.html">ifm3dpy.device.Error</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ifm3dpy.framegrabber.html">ifm3dpy.framegrabber</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.framegrabber.Frame.html">ifm3dpy.framegrabber.Frame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.framegrabber.FrameGrabber.html">ifm3dpy.framegrabber.FrameGrabber</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.framegrabber.buffer_id.html">ifm3dpy.framegrabber.buffer_id</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ifm3dpy.swupdater.html">ifm3dpy.swupdater</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.swupdater.SWUpdater.html">ifm3dpy.swupdater.SWUpdater</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ifm3dpy.deserialize.html">ifm3dpy.deserialize</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.deserialize.Calibration.html">ifm3dpy.deserialize.Calibration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.deserialize.ExtrinsicOpticToUser.html">ifm3dpy.deserialize.ExtrinsicOpticToUser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.deserialize.O3DExposureTimes.html">ifm3dpy.deserialize.O3DExposureTimes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.deserialize.O3DExtrinsicCalibration.html">ifm3dpy.deserialize.O3DExtrinsicCalibration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.deserialize.O3DILLUTemperature.html">ifm3dpy.deserialize.O3DILLUTemperature</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.deserialize.O3DInstrinsicCalibration.html">ifm3dpy.deserialize.O3DInstrinsicCalibration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.deserialize.O3DInverseInstrinsicCalibration.html">ifm3dpy.deserialize.O3DInverseInstrinsicCalibration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.html">ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.deserialize.ODSInfoV1.html">ifm3dpy.deserialize.ODSInfoV1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.deserialize.ODSOccupancyGridV1.html">ifm3dpy.deserialize.ODSOccupancyGridV1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.deserialize.ODSPolarOccupancyGridV1.html">ifm3dpy.deserialize.ODSPolarOccupancyGridV1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.deserialize.RGBInfoV1.html">ifm3dpy.deserialize.RGBInfoV1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.deserialize.TOFInfoV3.html">ifm3dpy.deserialize.TOFInfoV3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.deserialize.TOFInfoV4.html">ifm3dpy.deserialize.TOFInfoV4</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ifm3dpy.logging.html">ifm3dpy.logging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.logging.LogEntry.html">ifm3dpy.logging.LogEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.logging.LogFormatterJson.html">ifm3dpy.logging.LogFormatterJson</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.logging.LogFormatterText.html">ifm3dpy.logging.LogFormatterText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.logging.LogLevel.html">ifm3dpy.logging.LogLevel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.logging.LogWriter.html">ifm3dpy.logging.LogWriter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.logging.Logger.html">ifm3dpy.logging.Logger</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cpp_api/annotated.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/ChangeLog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          
+<html>
+<head>
+ 
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, address, phone, icons" />
+ 
+	<title>Footer With Address And Links</title>
+	
+	
+ 
+</head>
+ 
+	<body>
+		
+		<footer class="footer-distributed">
+ 
+		<div class="footer-left">
+ 
+ 
+		<p class="footer-company-name">ifm robotics &copy; 2023</p>
+		</div>
+ 
+		<div class="footer-right">
+ 
+		<div class="footer-icons">
+			<a href="mailto:support.efector.object-ident@ifm.com" target="_blank"><i class="fa fa-envelope"></i></a>
+			<a href="https://github.com/ifm" target="_blank"><i class="fa fa-github"></i></a>
+ 
+		</div>
+ 
+		</div>
+ 
+		</footer>
+ 
+	</body>
+ 
+</html>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

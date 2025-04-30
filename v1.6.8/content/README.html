@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ifm3d Overview &mdash; ifm3d v1.6.8 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Installing the software" href="installation_instructions/index.html" />
+    <link rel="prev" title="ifm3d library" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> ifm3d
+          </a>
+              <div class="version">
+                v1.6.8
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation_instructions/index.html">Installation instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="migration_guide/index.html">Migration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_lib_usage/index.html">Basic library usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cmdline_overview.html">Command Line tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manip_images/index.html">Manipulating images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_api.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/annotated.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ChangeLog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ifm3d</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">ifm3d Overview</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/content/README.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="ifm3d-overview">
+<h1>ifm3d Overview<a class="headerlink" href="#ifm3d-overview" title="Permalink to this heading"></a></h1>
+<p>Library and utilities for working with ifm pmd-based 3D ToF Perception devices. Compatible with the O3R, O3D and O3X platforms.
+This library is available in Python, C++, and has wrappers for ROS and ROS2.<br />
+<a class="reference external" href="https://ifm.github.io/ifm3d-docs/html/cpp_api/annotated.html">C++ API Reference</a><br />
+<a class="reference external" href="https://ifm.github.io/ifm3d-docs/html/_autosummary/ifm3dpy.html#module-ifm3dpy">Python API Reference</a><br />
+Comprehensive documentation is available on <a class="reference external" href="https://ifm3d.com/">ifm3d.com</a>.</p>
+<p><img alt="Build (Ubuntu)" src="https://github.com/ifm/ifm3d/workflows/Build%20(Ubuntu)/badge.svg?branch=master" />
+<img alt="Build (Windows)" src="https://github.com/ifm/ifm3d/workflows/Build%20(Windows)/badge.svg?branch=master" /></p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>3D cloud</p></th>
+<th class="head"><p>Distance</p></th>
+<th class="head"><p>RGB</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="3D cloud of a stack of boxes" src="../_images/xyz.png" /></p></td>
+<td><p><img alt="Distance image of a stack of boxes" src="../_images/distance.png" /></p></td>
+<td><p><img alt="RGB image of a stack of boxes" src="../_images/jpeg.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="released-versions">
+<h2>Released Versions<a class="headerlink" href="#released-versions" title="Permalink to this heading"></a></h2>
+<p>⚠️ Note that the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch is generally in a work in progress state and you probably want to use a
+tagged <a class="reference external" href="https://github.com/ifm/ifm3d/releases">release version</a> for production.</p>
+<p>⚠️ Note that O3D and O3X support is currently experimental- Use at your own risk!.</p>
+<p>For a full compatibility matrix between the ifm3d library, the O3R firmware and the Vision Assistant GUI, please refer to <a class="reference external" href="https://ifm3d.com/latest/CompatibilityMatrix/compatibility_matrix.html">the compatibility matrix on ifm3d.com</a>.</p>
+</div>
+<div class="section" id="supported-languages">
+<h2>Supported languages<a class="headerlink" href="#supported-languages" title="Permalink to this heading"></a></h2>
+<p>ifm3d is a C++ based library, with a Python wrapper mirroring the available features. We support the following versions of these two languages:</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Versions</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Python</p></td>
+<td><p>3.9, 3.10, 3.11, 3.12, 3.13</p></td>
+</tr>
+<tr class="row-odd"><td><p>C++</p></td>
+<td><p>GCC 7.5+, MSVC 2019+</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="supported-operating-systems">
+<h2>Supported operating systems<a class="headerlink" href="#supported-operating-systems" title="Permalink to this heading"></a></h2>
+<p>ifm3d currently support the following OS:</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Versions</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Ubuntu</p></td>
+<td><p>20.04, 22.04, 24.04</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Windows</p></td>
+<td><p>Windows server 2019</p></td>
+<td><p>ifm3d is known to work for other Windows distributions but is not explicitly tested.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="organization-of-the-software">
+<h2>Organization of the Software<a class="headerlink" href="#organization-of-the-software" title="Permalink to this heading"></a></h2>
+<p>The ifm3d software is organized into modules, they are:</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Module name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">device</span></code></p></td>
+<td><p>Provides an implementation of the XMLRPC protocol for configuring the camera and pmd imager settings.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">framegrabber</span></code></p></td>
+<td><p>Provides an implementation of the PCIC protocol for streaming pixel data and triggered image acquisition.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">swupdater</span></code></p></td>
+<td><p>Provides utilities for managing the <code class="docutils literal notranslate"><span class="pre">SWUpdate</span></code> subsystem of the camera.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pcicclient</span></code></p></td>
+<td><p>Direct access to PCIC to, for example, actuate digital IO.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tools</span></code></p></td>
+<td><p>Provides the ifm3d command line tool for manipulating and introspecting the hardware interactively. It is also suitable for usage within shell scripts to, for example, manage fleets of cameras.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pybind11</span></code></p></td>
+<td><p>Provides Python bindings through <a href="https://github.com/pybind/pybind11">pybind11</a> to the native C++ API. Supports all general camera functionality as well as a zero-copy interface to image data, exposed as NumPy arrays.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">deserialize</span></code></p></td>
+<td><p>Provides definitions and functions for deserializing structs sent over PCIC.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="installation-instructions">
+<h2>Installation instructions<a class="headerlink" href="#installation-instructions" title="Permalink to this heading"></a></h2>
+<p>Please refer to the corresponding section on <a class="reference external" href="https://ifm3d.com/">ifm3d.com</a>.</p>
+</div>
+<div class="section" id="supported-docker-containers">
+<h2>Supported docker containers<a class="headerlink" href="#supported-docker-containers" title="Permalink to this heading"></a></h2>
+<p>Docker containers are available for the ifm3d library, both on <a class="reference external" href="https://github.com/orgs/ifm/packages?repo_name=ifm3d">GHCR</a> and on the <a class="reference external" href="https://hub.docker.com/r/ifmrobotics/ifm3d">dockerhub</a>.
+You can pull them with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>ghcr.io/ifm/ifm3d:stable
+</pre></div>
+</div>
+<p>OR</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>ifmrobotics/ifm3d:stable
+</pre></div>
+</div>
+<p>Note that we provide 2 tags, <em>stable</em> always points to the latest tagged version, and <em>latest</em> is built nightly with the latest changes on the main branch. The <em>latest</em> tag is typically a work in progress.<br />
+For more details on the available containers, see <span class="xref myst">here</span>.<br />
+For more details on docker and the O3R platform see <span class="xref myst">here</span>.</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
+<p>Examples for the ifm3d library can be found in the <a class="reference external" href="https://github.com/ifm/ifm3d-examples">ifm3d-examples</a> repository.</p>
+</div>
+<div class="section" id="report-a-bug-and-check-the-known-issues">
+<h2>Report a bug and check the known issues<a class="headerlink" href="#report-a-bug-and-check-the-known-issues" title="Permalink to this heading"></a></h2>
+<p>Please see the <a class="reference external" href="https://github.com/ifm/ifm3d/issues">GitHub Issue Tracker</a>, or contact <code class="docutils literal notranslate"><span class="pre">support.robotics&#64;ifm.com</span></code>.</p>
+</div>
+<div class="section" id="license">
+<h2>LICENSE<a class="headerlink" href="#license" title="Permalink to this heading"></a></h2>
+<p>Please see the <span class="xref myst">LICENSE</span> file.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          
+<html>
+<head>
+ 
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, address, phone, icons" />
+ 
+	<title>Footer With Address And Links</title>
+	
+	
+ 
+</head>
+ 
+	<body>
+		
+		<footer class="footer-distributed">
+ 
+		<div class="footer-left">
+ 
+ 
+		<p class="footer-company-name">ifm robotics &copy; 2023</p>
+		</div>
+ 
+		<div class="footer-right">
+ 
+		<div class="footer-icons">
+			<a href="mailto:support.efector.object-ident@ifm.com" target="_blank"><i class="fa fa-envelope"></i></a>
+			<a href="https://github.com/ifm" target="_blank"><i class="fa fa-github"></i></a>
+ 
+		</div>
+ 
+		</div>
+ 
+		</footer>
+ 
+	</body>
+ 
+</html>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

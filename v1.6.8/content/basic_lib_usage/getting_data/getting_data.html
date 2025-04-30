@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to: receive an image &mdash; ifm3d v1.6.8 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/tabs.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="ifm3dpy Viewer" href="../viewer/README.html" />
+    <link rel="prev" title="How to: configure the camera" href="../configuration/configuration.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> ifm3d
+          </a>
+              <div class="version">
+                v1.6.8
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../README.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation_instructions/index.html">Installation instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../migration_guide/index.html">Migration Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Basic library usage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../configuration/configuration.html">How to: configure the camera</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">How to: receive an image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../viewer/README.html">How to: view the images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2d_data/2d_data.html">How to: handle rgb data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deserialize/deserialize.html">How to: use the deserializer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logging/logging.html">How to: configure the logging</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cmdline_overview.html">Command Line tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manip_images/index.html">Manipulating images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python_api.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cpp_api/annotated.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ChangeLog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">ifm3d</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Basic Library Usage</a></li>
+      <li class="breadcrumb-item active">How to: receive an image</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/content/basic_lib_usage/getting_data/getting_data.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="how-to-receive-an-image">
+<h1>How to: receive an image<a class="headerlink" href="#how-to-receive-an-image" title="Permalink to this heading"></a></h1>
+<p>The primary objective of <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> is to make it as simple and performant as possible to acquire pixel data from an ifm 3D camera of the O3xxxx series.
+Additionally, the data should be encoded in a useful format for performing computer vision and/or robotics perception tasks.
+A typical <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> client program follows the structure of a control loop whereby images are continuously acquired from the camera and acted upon in some application-specific way.</p>
+<p>At the end of this ‘how to’, you should be able to receive images and know the basic usage of the <code class="docutils literal notranslate"><span class="pre">O3R</span></code>, <code class="docutils literal notranslate"><span class="pre">FrameGrabber</span></code> and <code class="docutils literal notranslate"><span class="pre">Frame</span></code> classes.</p>
+<blockquote>
+<div><p>Note: for O3D or O3X devices, simply use the <code class="docutils literal notranslate"><span class="pre">O3D</span></code>/<code class="docutils literal notranslate"><span class="pre">O3X</span></code> class in place of the <code class="docutils literal notranslate"><span class="pre">O3R</span></code> in the following code.</p>
+</div></blockquote>
+<div class="section" id="o3r-framegrabber-and-frame">
+<h2>O3R, FrameGrabber and Frame<a class="headerlink" href="#o3r-framegrabber-and-frame" title="Permalink to this heading"></a></h2>
+<p>ifm3d provides three main classes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">O3R</span></code> holds the configuration of the camera heads, handles the connection, etc;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FrameGrabber</span></code> receives frames (images);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Frame</span></code> stores the image buffers.</p></li>
+</ul>
+<p>Instantiating these objects is as follows:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-0-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-0-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-0-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">o3r</span> <span class="o">=</span> <span class="n">O3R</span><span class="p">()</span>
+<span class="n">fg</span> <span class="o">=</span> <span class="n">FrameGrabber</span><span class="p">(</span><span class="n">o3r</span><span class="p">,</span> <span class="n">pcic_port</span><span class="o">=</span><span class="mi">50012</span><span class="p">)</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">o3r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3R</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">fg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FrameGrabber</span><span class="o">&gt;</span><span class="p">(</span><span class="n">o3r</span><span class="p">,</span><span class="w"> </span><span class="mi">50012</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></div>
+<blockquote>
+<div><p>Note: The example above assumes that an O3R camera head is connected to the VPU at the physical port 2, which has the PCIC TCP port 50012. The PCIC TCP port number can be retrieved via <code class="docutils literal notranslate"><span class="pre">o3r.get([f&quot;/ports/portX/data/pcicTCPPort&quot;])</span></code> with <code class="docutils literal notranslate"><span class="pre">portX</span></code> being a valid port (for example <code class="docutils literal notranslate"><span class="pre">port0</span></code>, <code class="docutils literal notranslate"><span class="pre">port1</span></code>, etc).</p>
+</div></blockquote>
+<p>The <code class="docutils literal notranslate"><span class="pre">O3R</span></code> class, counter-intuitively, refers to the computing unit (the VPU). It inherits its name from previous ifm 3D devices that only used one camera, with no distinction between sensing and computing units.
+You can input:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ip</span></code>: the IP address of the device;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xmlrpc_port</span></code>: the XML_RPC port (it is fixed at the moment);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code>: the password to connect to the device (unused for the O3R).</p></li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">FrameGrabber</span></code> stores a reference to the passed in camera shared pointer and starts a worker thread to stream in pixel data from the device.
+Its inputs:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">o3r</span></code>: The O3R instance (the image processing platform) that handles the connection to the camera heads;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code>: PCIC port number of the camera head to grab data from (not the physical port number);</p></li>
+</ul>
+<blockquote>
+<div><p>Note: instantiating the objects is done the same way for any imager type (2D, 3D, different resolutions, etc).</p>
+</div></blockquote>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> encourages the use of <code class="docutils literal notranslate"><span class="pre">std::shared_ptr</span></code> as a means to manage the ownership and lifetimes of the core actors in an <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> program.
+Indeed, you will notice that there is no need to explicitly allocate and deallocate memory.
+To instantiate the <code class="docutils literal notranslate"><span class="pre">ifm3d::O3R</span></code> object (or <code class="docutils literal notranslate"><span class="pre">ifm3d::O3D</span></code>/<code class="docutils literal notranslate"><span class="pre">ifm3d::O3X</span></code>), a call to <code class="docutils literal notranslate"><span class="pre">ifm3d::Device::MakeShared()</span></code> is made, rather than calling <code class="docutils literal notranslate"><span class="pre">std::make_shared</span></code> directly.
+This wrapper function is used to handle direct hardware probing to determine the type of camera that is connected.
+For example, this may be an O3R, O3D303, O3X, or something else. Regardless, a <code class="docutils literal notranslate"><span class="pre">std::shared_ptr</span></code> is returned from this call.</p>
+</div>
+<div class="section" id="set-the-schema-and-start-the-framegrabber">
+<h2>Set the schema and start the FrameGrabber<a class="headerlink" href="#set-the-schema-and-start-the-framegrabber" title="Permalink to this heading"></a></h2>
+<p>To start the data stream, the <code class="docutils literal notranslate"><span class="pre">Start</span></code> function must be used. This <code class="docutils literal notranslate"><span class="pre">Start</span></code> needs a schema which is a <code class="docutils literal notranslate"><span class="pre">std::vector&lt;ifm3d::buffer_id&gt;</span></code> and contains the <code class="docutils literal notranslate"><span class="pre">buffer_id</span></code> of the data needed for the application:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-1-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-1-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-1-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-1-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fg</span><span class="o">.</span><span class="n">start</span><span class="p">([</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">NORM_AMPLITUDE_IMAGE</span><span class="p">,</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">,</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">XYZ</span><span class="p">])</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-1-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Start</span><span class="p">({</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">AMPLITUDE_IMAGE</span><span class="p">,</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">,</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">XYZ</span><span class="p">});</span>
+</pre></div>
+</div>
+</div></div>
+<p>The device provides many types of buffers. All the buffers might not be required for application. Setting the schema provides a way to enable only <code class="docutils literal notranslate"><span class="pre">buffer_id</span></code>s required for the application.
+This also reduce the bandwidth required to get the data from the device.</p>
+</div>
+<div class="section" id="receive-an-image">
+<h2>Receive an image<a class="headerlink" href="#receive-an-image" title="Permalink to this heading"></a></h2>
+<div class="section" id="register-a-callback">
+<h3>Register a callback<a class="headerlink" href="#register-a-callback" title="Permalink to this heading"></a></h3>
+<p>The recommended way to receive a frame is to use the callback function. You can register a callback function that will be executed for every received frame, until the program exits.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-2-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-2-Yysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-Yysr" name="Yysr" role="tab" tabindex="-1">c++</button></div><div aria-labelledby="tab-2-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-2-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="n">frame</span><span class="p">):</span>
+    <span class="c1"># Read the distance image and display a pixel in the center</span>
+    <span class="n">dist</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">get_buffer</span><span class="p">(</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">shape</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">width</span><span class="o">//</span><span class="mi">2</span><span class="p">,</span><span class="n">height</span><span class="o">//</span><span class="mi">2</span><span class="p">])</span>
+    <span class="k">pass</span>
+
+<span class="o">...</span>
+<span class="n">fg</span><span class="o">.</span><span class="n">start</span><span class="p">([</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">])</span>
+<span class="n">fg</span><span class="o">.</span><span class="n">on_new_frame</span><span class="p">(</span><span class="n">callback</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">fg</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-2-Yysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-Yysr" name="Yysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">Callback</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Frame</span><span class="o">::</span><span class="n">Ptr</span><span class="w"> </span><span class="n">frame</span><span class="p">){</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">dist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">frame</span><span class="o">-&gt;</span><span class="n">GetBuffer</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">);</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">dist</span><span class="p">.</span><span class="n">height</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">dist</span><span class="p">.</span><span class="n">width</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span>
+<span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="w">  </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Start</span><span class="p">({</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">});</span>
+<span class="w">  </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">OnNewFrame</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Callback</span><span class="p">);</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="w">  </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Stop</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></div>
+</div>
+<div class="section" id="alternatively-wait-for-a-frame">
+<h3>Alternatively: wait for a frame<a class="headerlink" href="#alternatively-wait-for-a-frame" title="Permalink to this heading"></a></h3>
+<p>You just need to call the <code class="docutils literal notranslate"><span class="pre">WaitForFrame</span></code> function. This <code class="docutils literal notranslate"><span class="pre">Framegrabber</span></code> method returns <code class="docutils literal notranslate"><span class="pre">std::Future&lt;ifm3d::Frame&gt;</span></code>. The <code class="docutils literal notranslate"><span class="pre">Frame</span></code> class stores all the received data. Make sure the camera head is in “RUN” mode.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-3-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-3-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-3-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-3-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span>frame = fg.wait_for_frame().wait() # wait without timeout
+&lt;!-- # OR --&gt;
+[ok, frame] = fg.wait_for_frame().wait_for(500) # wait with 500ms timeout
+&lt;!-- # OR --&gt;
+frame = await fg.wait_for_frame() # using asyncio
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-3-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-3-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">WaitForFrame</span><span class="p">().</span><span class="n">get</span><span class="p">();</span>
+</pre></div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="section" id="access-the-data">
+<h2>Access the data<a class="headerlink" href="#access-the-data" title="Permalink to this heading"></a></h2>
+<p>Accessing the received data is done through the <code class="docutils literal notranslate"><span class="pre">Frame</span></code>. Different data types are available depending on whether the camera is a 2D or a 3D camera.
+Simply access the image by calling <code class="docutils literal notranslate"><span class="pre">get_buffer</span></code> passing the <code class="docutils literal notranslate"><span class="pre">buffer_id</span></code> of the required image as a parameter.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-4-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-4-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-4-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-4-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-4-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-4-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># For 3D data:</span>
+<span class="n">dist</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">get_buffer</span><span class="p">(</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">)</span>
+<span class="c1"># For 2D data:</span>
+<span class="n">rgb</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">get_buffer</span><span class="p">(</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">JPEG_IMAGE</span><span class="p">)</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-4-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-4-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// For 3D data:</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">dist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">frame</span><span class="o">-&gt;</span><span class="n">get_buffer</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">);</span>
+<span class="c1">// For 2D data:</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">rgb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">frame</span><span class="o">-&gt;</span><span class="n">get_buffer</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">JPEG_IMAGE</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></div>
+</div>
+<div class="section" id="the-full-example">
+<h2>The full example<a class="headerlink" href="#the-full-example" title="Permalink to this heading"></a></h2>
+<div class="section" id="using-a-callback">
+<h3>Using a callback<a class="headerlink" href="#using-a-callback" title="Permalink to this heading"></a></h3>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-5-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-5-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-5-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-5-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-5-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#############################################</span>
+<span class="c1"># Copyright 2023-present ifm electronic, gmbh</span>
+<span class="c1"># SPDX-License-Identifier: Apache-2.0</span>
+<span class="c1">#############################################</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ifm3dpy.device</span><span class="w"> </span><span class="kn">import</span> <span class="n">O3R</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ifm3dpy.framegrabber</span><span class="w"> </span><span class="kn">import</span> <span class="n">FrameGrabber</span><span class="p">,</span> <span class="n">buffer_id</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="n">frame</span><span class="p">):</span>
+    <span class="c1"># Read the distance image and display a pixel in the center</span>
+    <span class="n">dist</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">get_buffer</span><span class="p">(</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">)</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">shape</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">width</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">height</span> <span class="o">//</span> <span class="mi">2</span><span class="p">])</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">ip</span><span class="p">,</span> <span class="n">port</span><span class="p">):</span>
+    <span class="c1"># Initialize the objects</span>
+    <span class="n">o3r</span> <span class="o">=</span> <span class="n">O3R</span><span class="p">(</span><span class="n">ip</span><span class="o">=</span><span class="n">ip</span><span class="p">)</span>
+    <span class="n">pcic_port</span> <span class="o">=</span> <span class="n">o3r</span><span class="o">.</span><span class="n">port</span><span class="p">(</span><span class="n">port</span><span class="p">)</span><span class="o">.</span><span class="n">pcic_port</span>
+    <span class="n">fg</span> <span class="o">=</span> <span class="n">FrameGrabber</span><span class="p">(</span><span class="n">o3r</span><span class="p">,</span> <span class="n">pcic_port</span><span class="o">=</span><span class="n">pcic_port</span><span class="p">)</span>
+
+    <span class="c1"># set schema and start Grabber</span>
+    <span class="n">fg</span><span class="o">.</span><span class="n">start</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">NORM_AMPLITUDE_IMAGE</span><span class="p">,</span> <span class="n">buffer_id</span><span class="o">.</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">,</span> <span class="n">buffer_id</span><span class="o">.</span><span class="n">XYZ</span><span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="n">fg</span><span class="o">.</span><span class="n">on_new_frame</span><span class="p">(</span><span class="n">callback</span><span class="p">)</span>
+
+    <span class="c1"># Sleep to avoid exiting the program too soon</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">fg</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># If the example python package was build, import the configuration</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">ovp8xxexamples</span><span class="w"> </span><span class="kn">import</span> <span class="n">config</span>
+
+        <span class="n">IP</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">IP</span>
+        <span class="n">PORT</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">PORT_3D</span>
+
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="c1"># Otherwise, use default values</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="s2">&quot;Unable to import the configuration.</span><span class="se">\n</span><span class="s2">Please run &#39;pip install -e .&#39; from the python root directory&quot;</span>
+        <span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Defaulting to the default configuration.&quot;</span><span class="p">)</span>
+        <span class="n">IP</span> <span class="o">=</span> <span class="s2">&quot;192.168.0.69&quot;</span>
+        <span class="n">PORT</span> <span class="o">=</span> <span class="s2">&quot;port2&quot;</span>
+    
+    <span class="n">main</span><span class="p">(</span><span class="n">IP</span><span class="p">,</span> <span class="n">PORT</span><span class="p">)</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-5-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-5-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> * Copyright 2021-present ifm electronic, gmbh</span>
+<span class="cm"> * SPDX-License-Identifier: Apache-2.0</span>
+<span class="cm"> */</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/common/json_impl.hpp&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/device/err.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/device/o3r.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/fg.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;thread&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono_literals</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">ifm3d</span><span class="o">::</span><span class="nn">literals</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">Callback</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">Frame</span><span class="o">::</span><span class="n">Ptr</span><span class="w"> </span><span class="n">frame</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">dist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">frame</span><span class="o">-&gt;</span><span class="n">GetBuffer</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">);</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Distance image dimensions:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">dist</span><span class="p">.</span><span class="n">height</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">dist</span><span class="p">.</span><span class="n">width</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Get the IP from the environment if defined</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">IP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">getenv</span><span class="p">(</span><span class="s">&quot;IFM3D_IP&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">getenv</span><span class="p">(</span><span class="s">&quot;IFM3D_IP&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">DEFAULT_IP</span><span class="p">.</span><span class="n">c_str</span><span class="p">();</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">clog</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;IP: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">IP</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span>
+<span class="w">  </span><span class="c1">//////////////////////////</span>
+<span class="w">  </span><span class="c1">// Declare the objects</span>
+<span class="w">  </span><span class="c1">//////////////////////////</span>
+<span class="w">  </span><span class="c1">// Declare the device object (one object only, corresponding to the VPU)</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">o3r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3R</span><span class="o">&gt;</span><span class="p">(</span><span class="n">IP</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">//////////////////////////</span>
+<span class="w">  </span><span class="c1">// Select the first available</span>
+<span class="w">  </span><span class="c1">// 3D port from the configuration</span>
+<span class="w">  </span><span class="c1">//////////////////////////</span>
+<span class="w">  </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">pcic_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">port</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">o3r</span><span class="o">-&gt;</span><span class="n">Ports</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">port</span><span class="p">.</span><span class="n">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;3D&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Using first available 3D port: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">port</span><span class="p">.</span><span class="n">port</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">      </span><span class="n">pcic_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">port</span><span class="p">.</span><span class="n">pcic_port</span><span class="p">;</span>
+<span class="w">      </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">/////////////////////////////////////////////////////////</span>
+<span class="w">  </span><span class="c1">// Alternatively, manually pick the port corresponding</span>
+<span class="w">  </span><span class="c1">// to your 3D camera (uncomment the line below and comment</span>
+<span class="w">  </span><span class="c1">// the block above)</span>
+<span class="w">  </span><span class="c1">/////////////////////////////////////////////////////////</span>
+<span class="w">  </span><span class="c1">// std::string port_nb = &quot;port2&quot;;</span>
+<span class="w">  </span><span class="c1">// if (o3r-&gt;Port(port_nb).type != &quot;3D&quot;) {</span>
+<span class="w">  </span><span class="c1">//   std::cerr &lt;&lt; &quot;Please provide a 3D port number.&quot; &lt;&lt; std::endl;</span>
+<span class="w">  </span><span class="c1">//   return -1;</span>
+<span class="w">  </span><span class="c1">// }</span>
+<span class="w">  </span><span class="c1">// uint16_t pcic_port = o3r-&gt;Port(port_nb).pcic_port;</span>
+<span class="w">  </span><span class="c1">// std::cout &lt;&lt; &quot;Using 3D port: &quot; &lt;&lt; port_nb &lt;&lt; std::endl;</span>
+
+<span class="w">  </span><span class="c1">//////////////////////////////////////////////////</span>
+<span class="w">  </span><span class="c1">// Verify that a correct port number was provided</span>
+<span class="w">  </span><span class="c1">// and create the framegrabber object</span>
+<span class="w">  </span><span class="c1">//////////////////////////////////////////////////</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pcic_port</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;No 3D port found in the configuration,&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">fg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FrameGrabber</span><span class="o">&gt;</span><span class="p">(</span><span class="n">o3r</span><span class="p">,</span><span class="w"> </span><span class="n">pcic_port</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">//////////////////////////</span>
+<span class="w">  </span><span class="c1">// Start the framegrabber</span>
+<span class="w">  </span><span class="c1">// and register the callback</span>
+<span class="w">  </span><span class="c1">//////////////////////////</span>
+
+<span class="w">  </span><span class="c1">// Set Schema and start the grabber</span>
+<span class="w">  </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Start</span><span class="p">({</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">AMPLITUDE_IMAGE</span><span class="p">,</span>
+<span class="w">             </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">,</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">XYZ</span><span class="p">});</span>
+
+<span class="w">  </span><span class="c1">// Register callback function</span>
+<span class="w">  </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">OnNewFrame</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Callback</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// This sleep is to prevent the program from before the</span>
+<span class="w">  </span><span class="c1">// callback has time to execute.</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">this_thread</span><span class="o">::</span><span class="n">sleep_for</span><span class="p">(</span><span class="mi">1</span><span class="n">s</span><span class="p">);</span>
+<span class="w">  </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Stop</span><span class="p">();</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></div>
+</div>
+<div class="section" id="using-the-polling-mode">
+<h3>Using the polling mode<a class="headerlink" href="#using-the-polling-mode" title="Permalink to this heading"></a></h3>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-6-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-6-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-6-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-6-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-6-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-6-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#############################################</span>
+<span class="c1"># Copyright 2023-present ifm electronic, gmbh</span>
+<span class="c1"># SPDX-License-Identifier: Apache-2.0</span>
+<span class="c1">#############################################</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ifm3dpy.device</span><span class="w"> </span><span class="kn">import</span> <span class="n">O3R</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ifm3dpy.framegrabber</span><span class="w"> </span><span class="kn">import</span> <span class="n">FrameGrabber</span><span class="p">,</span> <span class="n">buffer_id</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">ip</span><span class="p">,</span> <span class="n">port</span><span class="p">):</span>
+    <span class="c1"># Initialize the objects</span>
+    <span class="n">o3r</span> <span class="o">=</span> <span class="n">O3R</span><span class="p">(</span><span class="n">ip</span><span class="p">)</span>
+    <span class="n">pcic_port</span> <span class="o">=</span> <span class="n">o3r</span><span class="o">.</span><span class="n">port</span><span class="p">(</span><span class="n">port</span><span class="p">)</span><span class="o">.</span><span class="n">pcic_port</span>
+    <span class="n">fg</span> <span class="o">=</span> <span class="n">FrameGrabber</span><span class="p">(</span><span class="n">o3r</span><span class="p">,</span> <span class="n">pcic_port</span><span class="p">)</span>
+
+    <span class="c1"># Set schema and start Grabber</span>
+    <span class="n">fg</span><span class="o">.</span><span class="n">start</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">NORM_AMPLITUDE_IMAGE</span><span class="p">,</span> <span class="n">buffer_id</span><span class="o">.</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">,</span> <span class="n">buffer_id</span><span class="o">.</span><span class="n">XYZ</span><span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Get a frame</span>
+    <span class="p">[</span><span class="n">ok</span><span class="p">,</span> <span class="n">frame</span><span class="p">]</span> <span class="o">=</span> <span class="n">fg</span><span class="o">.</span><span class="n">wait_for_frame</span><span class="p">()</span><span class="o">.</span><span class="n">wait_for</span><span class="p">(</span><span class="mi">1500</span><span class="p">)</span>  <span class="c1"># wait with 1500ms timeout</span>
+
+    <span class="c1"># Check that a frame was received</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">ok</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Timeout while waiting for a frame.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Read the distance image and display a pixel in the center</span>
+    <span class="n">dist</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">get_buffer</span><span class="p">(</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">)</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">shape</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">width</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">height</span> <span class="o">//</span> <span class="mi">2</span><span class="p">])</span>
+    <span class="n">fg</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># If the example python package was build, import the configuration</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">ovp8xxexamples</span><span class="w"> </span><span class="kn">import</span> <span class="n">config</span>
+
+        <span class="n">IP</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">IP</span>
+        <span class="n">PORT</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">PORT_3D</span>
+
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="c1"># Otherwise, use default values</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="s2">&quot;Unable to import the configuration.</span><span class="se">\n</span><span class="s2">Please run &#39;pip install -e .&#39; from the python root directory&quot;</span>
+        <span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Defaulting to the default configuration.&quot;</span><span class="p">)</span>
+        <span class="n">IP</span> <span class="o">=</span> <span class="s2">&quot;192.168.0.69&quot;</span>
+        <span class="n">PORT</span> <span class="o">=</span> <span class="s2">&quot;port2&quot;</span>
+
+    <span class="n">main</span><span class="p">(</span><span class="n">ip</span><span class="o">=</span><span class="n">IP</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">PORT</span><span class="p">)</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-6-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-6-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> * Copyright 2021-present ifm electronic, gmbh</span>
+<span class="cm"> * SPDX-License-Identifier: Apache-2.0</span>
+<span class="cm"> */</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/device/o3r.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/fg.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono_literals</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">ifm3d</span><span class="o">::</span><span class="nn">literals</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="c1">//////////////////////////</span>
+<span class="w">  </span><span class="c1">// Declare the objects</span>
+<span class="w">  </span><span class="c1">//////////////////////////</span>
+<span class="w">  </span><span class="c1">// Declare the device object (one object only, corresponding to the VPU)</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">o3r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3R</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="w">  </span><span class="c1">//////////////////////////</span>
+<span class="w">  </span><span class="c1">// Select the first available</span>
+<span class="w">  </span><span class="c1">// 3D port from the configuration</span>
+<span class="w">  </span><span class="c1">//////////////////////////</span>
+<span class="w">  </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">pcic_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">port</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">o3r</span><span class="o">-&gt;</span><span class="n">Ports</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">port</span><span class="p">.</span><span class="n">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;3D&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Using first available 3D port: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">port</span><span class="p">.</span><span class="n">port</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">      </span><span class="n">pcic_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">port</span><span class="p">.</span><span class="n">pcic_port</span><span class="p">;</span>
+<span class="w">      </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">/////////////////////////////////////////////////////////</span>
+<span class="w">  </span><span class="c1">// Alternatively, manually pick the port corresponding</span>
+<span class="w">  </span><span class="c1">// to your 3D camera (uncomment the line below and comment</span>
+<span class="w">  </span><span class="c1">// the block above)</span>
+<span class="w">  </span><span class="c1">/////////////////////////////////////////////////////////</span>
+<span class="w">  </span><span class="c1">// std::string port_nb = &quot;port2&quot;;</span>
+<span class="w">  </span><span class="c1">// if (o3r-&gt;Port(port_nb).type != &quot;3D&quot;) {</span>
+<span class="w">  </span><span class="c1">//   std::cerr &lt;&lt; &quot;Please provide a 3D port number.&quot; &lt;&lt; std::endl;</span>
+<span class="w">  </span><span class="c1">//   return -1;</span>
+<span class="w">  </span><span class="c1">// }</span>
+<span class="w">  </span><span class="c1">// uint16_t pcic_port = o3r-&gt;Port(port_nb).pcic_port;</span>
+<span class="w">  </span><span class="c1">// std::cout &lt;&lt; &quot;Using 3D port: &quot; &lt;&lt; port_nb &lt;&lt; std::endl;</span>
+
+<span class="w">  </span><span class="c1">//////////////////////////////////////////////////</span>
+<span class="w">  </span><span class="c1">// Verify that a correct port number was provided</span>
+<span class="w">  </span><span class="c1">// and create the framegrabber object</span>
+<span class="w">  </span><span class="c1">//////////////////////////////////////////////////</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pcic_port</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;No 3D port found in the configuration,&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">fg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FrameGrabber</span><span class="o">&gt;</span><span class="p">(</span><span class="n">o3r</span><span class="p">,</span><span class="w"> </span><span class="n">pcic_port</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">//////////////////////////</span>
+<span class="w">  </span><span class="c1">// Start the framegrabber</span>
+<span class="w">  </span><span class="c1">// and run the callback</span>
+<span class="w">  </span><span class="c1">//////////////////////////</span>
+
+<span class="w">  </span><span class="c1">// Set Schema and start the grabber</span>
+<span class="w">  </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Start</span><span class="p">({</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">AMPLITUDE_IMAGE</span><span class="p">,</span>
+<span class="w">             </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">,</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">XYZ</span><span class="p">});</span>
+
+<span class="w">  </span><span class="c1">//////////////////////////</span>
+<span class="w">  </span><span class="c1">// Get a frame:</span>
+<span class="w">  </span><span class="c1">//////////////////////////</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">future</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">WaitForFrame</span><span class="p">();</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">future</span><span class="p">.</span><span class="n">wait_for</span><span class="p">(</span><span class="mi">3</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">future_status</span><span class="o">::</span><span class="n">ready</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Timeout waiting for camera!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">future</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
+
+<span class="w">  </span><span class="c1">//////////////////////////</span>
+<span class="w">  </span><span class="c1">// Example for 3D data:</span>
+<span class="w">  </span><span class="c1">//////////////////////////</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">dist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">frame</span><span class="o">-&gt;</span><span class="n">GetBuffer</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">dist</span><span class="p">.</span><span class="n">height</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">dist</span><span class="p">.</span><span class="n">width</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Stop</span><span class="p">();</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          
+<html>
+<head>
+ 
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, address, phone, icons" />
+ 
+	<title>Footer With Address And Links</title>
+	
+	
+ 
+</head>
+ 
+	<body>
+		
+		<footer class="footer-distributed">
+ 
+		<div class="footer-left">
+ 
+ 
+		<p class="footer-company-name">ifm robotics &copy; 2023</p>
+		</div>
+ 
+		<div class="footer-right">
+ 
+		<div class="footer-icons">
+			<a href="mailto:support.efector.object-ident@ifm.com" target="_blank"><i class="fa fa-envelope"></i></a>
+			<a href="https://github.com/ifm" target="_blank"><i class="fa fa-github"></i></a>
+ 
+		</div>
+ 
+		</div>
+ 
+		</footer>
+ 
+	</body>
+ 
+</html>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

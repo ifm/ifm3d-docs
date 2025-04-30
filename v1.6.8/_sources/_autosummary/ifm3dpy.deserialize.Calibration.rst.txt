@@ -1,0 +1,32 @@
+ifm3dpy.deserialize.Calibration
+===============================
+
+.. currentmodule:: ifm3dpy.deserialize
+
+.. autoclass:: Calibration
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Calibration.__init__
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Calibration.model_id
+      ~Calibration.parameters
+   
+   

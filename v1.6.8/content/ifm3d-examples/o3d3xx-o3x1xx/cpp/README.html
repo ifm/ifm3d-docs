@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ifm3d C++ examples &mdash; ifm3d v1.6.8 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> ifm3d
+          </a>
+              <div class="version">
+                v1.6.8
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../README.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation_instructions/index.html">Installation instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../migration_guide/index.html">Migration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic_lib_usage/index.html">Basic library usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../cmdline_overview.html">Command Line tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../manip_images/index.html">Manipulating images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../python_api.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../cpp_api/annotated.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ChangeLog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">ifm3d</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">ifm3d C++ examples</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/content/ifm3d-examples/o3d3xx-o3x1xx/cpp/README.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="ifm3d-c-examples">
+<h1>ifm3d C++ examples<a class="headerlink" href="#ifm3d-c-examples" title="Permalink to this heading"></a></h1>
+<p>Beyond providing concrete code examples for interfacing to <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code>, this project also
+shows how to integrate <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> into an external project via <code class="docutils literal notranslate"><span class="pre">cmake</span></code>. This
+project relies upon <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> version 1.4.3 or better.</p>
+<p>This directory contains example programs that utilize <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code>. The
+intention is to create standalone programs that illustrate one very specific
+concept in order to serve the purpose of letting developers ramp up quickly
+with using the library. The build infrastructure in this directory is minimal
+and the programs are intended to be run in place. Additionally, unless
+specifically stated otherwise, things like performance and robust error
+handling are not demonstrated. The purpose is to clearly illustrate the task
+without clouding it with the details of real-world software engineering –
+unless, of course, that was the point of the example.</p>
+<p>It is expected that this library of examples will grow over time in response to
+common themes we see on the issue tracker.</p>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/fmtlib/fmt.git">fmt</a></p></li>
+<li><p><a class="reference external" href="https://opencv.org/releases/">openCV</a></p></li>
+</ul>
+</div>
+<div class="section" id="building-the-examples">
+<h2>Building the examples<a class="headerlink" href="#building-the-examples" title="Permalink to this heading"></a></h2>
+<p>Assuming you are starting from the <code class="docutils literal notranslate"><span class="pre">cpp</span></code> directory of this source
+distribution:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ mkdir build
+$ cd build
+$ cmake ..
+$ cmake --build .
+</pre></div>
+</div>
+<div class="section" id="windows-examples">
+<h3>Windows examples<a class="headerlink" href="#windows-examples" title="Permalink to this heading"></a></h3>
+<p>For Windows-based target, with Visual Studio 2017, assuming you are starting from the top-level directory of this source
+distribution:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ set IFM3D_CMAKE_GENERATOR=&quot;Visual Studio 17 2022&quot;
+$ cd ifm3d-examples/o3d3xx-o3x1xx
+$ mkdir build
+$ cd build
+# Note: To show images Opencv is used,hence build path to opencv is added into -DCMAKE_PREFIX_PATH
+$ cmake -G %IFM3D_CMAKE_GENERATOR% -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=ON -DCMAKE_PREFIX_PATH=F:\windows\ifm3d_deps\install;F:\opencv-4.9.0-windows\opencv\build  ..
+$ cmake --build . --config Release --target ALL_BUILD
+</pre></div>
+</div>
+<p>At this stage, projects are built and you will find <em>IFM3D_EXAMPLES.sln</em> in build folder.
+Use Release / RelWithDebInfo configuration to run and investigate application examples.
+Please add PATH variable to projects :</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>PATH=%IFM3D_BUILD_DIR%\install\bin;%IFM3D_BUILD_DIR%\install\x64\vc%MSVC_MAJOR_VERSION%.%MSVC_MINOR_VERSION%\bin;%PATH%
+</pre></div>
+</div>
+<p>For instance, you can fill directly in VS <em>Project Properties</em> / <em>Debugging</em> / <em>Environment</em> with                   <code class="docutils literal notranslate"><span class="pre">PATH=C:\ifm3d\install\bin;C:\ifm3d\install\x64\vc14.1\bin;%PATH%</span></code></p>
+</div>
+</div>
+<div class="section" id="what-is-included">
+<h2>What is included?<a class="headerlink" href="#what-is-included" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/7707ac2262962dbc7c3a2f8bb7bd6595/o3d_deserialize.cpp"><span class="xref download myst">deserialize</span></a> shows how to extract data from a selected number of buffers, for the O3D camera.</p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/19b2cbc0dd9fe56e6ad29e2c389a1484/o3d_diagnostic.cpp"><span class="xref download myst">diagnostic</span></a> shows how ro receive and unpack diagnostic data, for the O3D camera.</p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/6853e9f347fa42495bfd67759e99d80a/ex-exposure_times.cpp"><span class="xref download myst">exposure_time</span></a> shows how to change imager exposure times on the fly while streaming in pixel data and validating the setting of the exposure times registered to the frame data.</p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/3c3bf8ea0019f76f050057febc5c9c62/ex-fast_app_switch.cpp"><span class="xref download myst">fast_app_switch</span></a> shows how to switch between two applications on the camera using PCIC.</p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/95529d143c667cfaf4bdfdfea0d90650/ex-file_io.cpp"><span class="xref download myst">file_io</span></a> shows how to capture data from the camera and write the images to disk. In this example, the amplitude image is written out as PNG files.</p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/0d1659474a43781454aeac7d4de274e3/get_data_callback.cpp"><span class="xref download myst">get_data_callback</span></a> and <span class="xref myst">get_data_trigger</span> show how to receive data from the device, either continuously using a callback or a single frame using he software trigger.</p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/695a6b2d6e217ed0bcd13698ca57db81/ex-get_json_model.cpp"><span class="xref download myst">get_json_model</span></a> shows how to retrieve the JSON model for the device configuration.</p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/b4f96f1cd83f4fe4703a452362f1c45f/ex-getmac.cpp"><span class="xref download myst">getmac</span></a> request the MAC address from the camera. The MAC address can be used as a unique identifier.</p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/cbcf516b1ad2b859f173a8cb7e9abacb/ex-multi_camera_grabber.cpp"><span class="xref download myst">multi_camera_grabber</span></a> demonstrates how to acquire frames from multiple ifm 3D camera’s, see the example <span class="xref myst">documentation</span> for more details.</p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/37b4354724e2db6850fc9c442861ec5e/ex-pcicclient_async_messages.cpp"><span class="xref download myst">pcicclient_async_messages</span></a> shows how to use the PCICClient module to receive asynchronous notification (and error) messages from the camera.</p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/bfd1b3e2580454f273746ad188d9dfbf/ex-pcicclient_set_io.cpp"><span class="xref download myst">pcicclient_set_io</span></a> shows how to mutate the digital IO pins on the O3D camera by the PCIC interface.</p></li>
+<li><p><span class="xref myst">simpleImage_ppm_io</span> shows how to write your own image container which does not depend on PCL nor OpenCV.</p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/4270a42dc902d3ad3aaabf542dfffb75/ex-timestamp.cpp"><span class="xref download myst">timestamp</span></a> requests some frames from the camera and write the timestamps to stdout.</p></li>
+</ul>
+<div class="section" id="note-use-of-device-and-legacydevice-class">
+<h3>Note: Use of <code class="docutils literal notranslate"><span class="pre">Device</span></code> and <code class="docutils literal notranslate"><span class="pre">LegacyDevice</span></code> class<a class="headerlink" href="#note-use-of-device-and-legacydevice-class" title="Permalink to this heading"></a></h3>
+<p>Please note <code class="docutils literal notranslate"><span class="pre">Device</span></code> is the base class and <code class="docutils literal notranslate"><span class="pre">LegacyDevice</span></code> inherits from the <code class="docutils literal notranslate"><span class="pre">Device</span></code> class. Object from <code class="docutils literal notranslate"><span class="pre">ifm3d::Device</span></code> can be created while accessing the device functionalities and <code class="docutils literal notranslate"><span class="pre">ifm3d::LegacyDevice</span></code> object can be created while using the application specific methods of legacy devices like <code class="docutils literal notranslate"><span class="pre">O3D/O3X</span></code>.</p>
+</div>
+</div>
+<div class="section" id="license">
+<h2>LICENSE<a class="headerlink" href="#license" title="Permalink to this heading"></a></h2>
+<p>Please see the file called <span class="xref myst">LICENSE</span>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          
+<html>
+<head>
+ 
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, address, phone, icons" />
+ 
+	<title>Footer With Address And Links</title>
+	
+	
+ 
+</head>
+ 
+	<body>
+		
+		<footer class="footer-distributed">
+ 
+		<div class="footer-left">
+ 
+ 
+		<p class="footer-company-name">ifm robotics &copy; 2023</p>
+		</div>
+ 
+		<div class="footer-right">
+ 
+		<div class="footer-icons">
+			<a href="mailto:support.efector.object-ident@ifm.com" target="_blank"><i class="fa fa-envelope"></i></a>
+			<a href="https://github.com/ifm" target="_blank"><i class="fa fa-github"></i></a>
+ 
+		</div>
+ 
+		</div>
+ 
+		</footer>
+ 
+	</body>
+ 
+</html>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

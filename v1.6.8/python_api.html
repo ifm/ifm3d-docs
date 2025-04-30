@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python API Reference &mdash; ifm3d v1.6.8 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ifm3dpy" href="_autosummary/ifm3dpy.html" />
+    <link rel="prev" title="ifm3d::Buffer- Basic C++ STL container for ifm3d" href="content/manip_images/stlimage.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> ifm3d
+          </a>
+              <div class="version">
+                v1.6.8
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="content/README.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/installation_instructions/index.html">Installation instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/migration_guide/index.html">Migration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/basic_lib_usage/index.html">Basic library usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/cmdline_overview.html">Command Line tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/manip_images/index.html">Manipulating images</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ifm3dpy.html">ifm3dpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ifm3dpy.device.html">ifm3dpy.device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ifm3dpy.framegrabber.html">ifm3dpy.framegrabber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ifm3dpy.swupdater.html">ifm3dpy.swupdater</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ifm3dpy.deserialize.html">ifm3dpy.deserialize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ifm3dpy.logging.html">ifm3dpy.logging</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cpp_api/annotated.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/ChangeLog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ifm3d</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Python API Reference</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/python_api.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="python-api-reference">
+<h1>Python API Reference<a class="headerlink" href="#python-api-reference" title="Permalink to this heading"></a></h1>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ifm3dpy.html#module-ifm3dpy" title="ifm3dpy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ifm3dpy</span></code></a></p></td>
+<td><p>Bindings for the ifm3d Library</p></td>
+</tr>
+</tbody>
+</table>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ifm3dpy.device.html#module-ifm3dpy.device" title="ifm3dpy.device"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ifm3dpy.device</span></code></a></p></td>
+<td><p>Provides an implementation of the XMLRPC protocol for configuring the camera and pmd imager settings.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ifm3dpy.framegrabber.html#module-ifm3dpy.framegrabber" title="ifm3dpy.framegrabber"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ifm3dpy.framegrabber</span></code></a></p></td>
+<td><p>Provides an implementation of the PCIC protocol for streaming pixel data and triggered image acquisition.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ifm3dpy.swupdater.html#module-ifm3dpy.swupdater" title="ifm3dpy.swupdater"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ifm3dpy.swupdater</span></code></a></p></td>
+<td><p>Provides utilities for managing the SWUpdate subsystem of the camera.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ifm3dpy.deserialize.html#module-ifm3dpy.deserialize" title="ifm3dpy.deserialize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ifm3dpy.deserialize</span></code></a></p></td>
+<td><p>Provides definitions and functions for deserializing structs sent over PCIC</p></td>
+</tr>
+</tbody>
+</table>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ifm3dpy.logging.html#module-ifm3dpy.logging" title="ifm3dpy.logging"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ifm3dpy.logging</span></code></a></p></td>
+<td><p>Provides access for configuring the logging facilities of ifm3d.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+          </div>
+          
+<html>
+<head>
+ 
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, address, phone, icons" />
+ 
+	<title>Footer With Address And Links</title>
+	
+	
+ 
+</head>
+ 
+	<body>
+		
+		<footer class="footer-distributed">
+ 
+		<div class="footer-left">
+ 
+ 
+		<p class="footer-company-name">ifm robotics &copy; 2023</p>
+		</div>
+ 
+		<div class="footer-right">
+ 
+		<div class="footer-icons">
+			<a href="mailto:support.efector.object-ident@ifm.com" target="_blank"><i class="fa fa-envelope"></i></a>
+			<a href="https://github.com/ifm" target="_blank"><i class="fa fa-github"></i></a>
+ 
+		</div>
+ 
+		</div>
+ 
+		</footer>
+ 
+	</body>
+ 
+</html>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

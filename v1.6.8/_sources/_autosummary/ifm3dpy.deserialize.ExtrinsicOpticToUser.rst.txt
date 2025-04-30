@@ -1,0 +1,36 @@
+ifm3dpy.deserialize.ExtrinsicOpticToUser
+========================================
+
+.. currentmodule:: ifm3dpy.deserialize
+
+.. autoclass:: ExtrinsicOpticToUser
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ExtrinsicOpticToUser.__init__
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ExtrinsicOpticToUser.rot_x
+      ~ExtrinsicOpticToUser.rot_y
+      ~ExtrinsicOpticToUser.rot_z
+      ~ExtrinsicOpticToUser.trans_x
+      ~ExtrinsicOpticToUser.trans_y
+      ~ExtrinsicOpticToUser.trans_z
+   
+   

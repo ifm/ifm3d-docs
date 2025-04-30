@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ifm3dpy.logging &mdash; ifm3d v1.6.8 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ifm3dpy.logging.LogEntry" href="ifm3dpy.logging.LogEntry.html" />
+    <link rel="prev" title="ifm3dpy.deserialize.TOFInfoV4" href="ifm3dpy.deserialize.TOFInfoV4.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> ifm3d
+          </a>
+              <div class="version">
+                v1.6.8
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../content/README.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/installation_instructions/index.html">Installation instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/migration_guide/index.html">Migration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/basic_lib_usage/index.html">Basic library usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/cmdline_overview.html">Command Line tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/manip_images/index.html">Manipulating images</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../python_api.html">Python API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.html">ifm3dpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.device.html">ifm3dpy.device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.framegrabber.html">ifm3dpy.framegrabber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.swupdater.html">ifm3dpy.swupdater</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.deserialize.html">ifm3dpy.deserialize</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ifm3dpy.logging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.logging.LogEntry.html">ifm3dpy.logging.LogEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.logging.LogFormatterJson.html">ifm3dpy.logging.LogFormatterJson</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.logging.LogFormatterText.html">ifm3dpy.logging.LogFormatterText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.logging.LogLevel.html">ifm3dpy.logging.LogLevel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.logging.LogWriter.html">ifm3dpy.logging.LogWriter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.logging.Logger.html">ifm3dpy.logging.Logger</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/annotated.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/ChangeLog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ifm3d</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../python_api.html">Python API Reference</a></li>
+      <li class="breadcrumb-item active">ifm3dpy.logging</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_autosummary/ifm3dpy.logging.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="module-ifm3dpy.logging">
+<span id="ifm3dpy-logging"></span><h1>ifm3dpy.logging<a class="headerlink" href="#module-ifm3dpy.logging" title="Permalink to this heading"></a></h1>
+<p>Provides access for configuring the logging facilities of ifm3d.</p>
+<p class="rubric">Classes</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.logging.LogEntry.html#ifm3dpy.logging.LogEntry" title="ifm3dpy.logging.LogEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogEntry</span></code></a></p></td>
+<td><p>Represent a single log entry.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.logging.LogFormatterJson.html#ifm3dpy.logging.LogFormatterJson" title="ifm3dpy.logging.LogFormatterJson"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogFormatterJson</span></code></a></p></td>
+<td><p>Formats a give LogEntry as a json object</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.logging.LogFormatterText.html#ifm3dpy.logging.LogFormatterText" title="ifm3dpy.logging.LogFormatterText"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogFormatterText</span></code></a></p></td>
+<td><p>Formats a give LogEntry as a human readable text line</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.logging.LogLevel.html#ifm3dpy.logging.LogLevel" title="ifm3dpy.logging.LogLevel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogLevel</span></code></a></p></td>
+<td><p>Enum: The log level.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.logging.LogWriter.html#ifm3dpy.logging.LogWriter" title="ifm3dpy.logging.LogWriter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogWriter</span></code></a></p></td>
+<td><p>Base class for creating custom log writers.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.logging.Logger.html#ifm3dpy.logging.Logger" title="ifm3dpy.logging.Logger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Logger</span></code></a></p></td>
+<td><p>Provides access for configuring the logging facilities of ifm3d</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+          </div>
+          
+<html>
+<head>
+ 
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, address, phone, icons" />
+ 
+	<title>Footer With Address And Links</title>
+	
+	
+ 
+</head>
+ 
+	<body>
+		
+		<footer class="footer-distributed">
+ 
+		<div class="footer-left">
+ 
+ 
+		<p class="footer-company-name">ifm robotics &copy; 2023</p>
+		</div>
+ 
+		<div class="footer-right">
+ 
+		<div class="footer-icons">
+			<a href="mailto:support.efector.object-ident@ifm.com" target="_blank"><i class="fa fa-envelope"></i></a>
+			<a href="https://github.com/ifm" target="_blank"><i class="fa fa-github"></i></a>
+ 
+		</div>
+ 
+		</div>
+ 
+		</footer>
+ 
+	</body>
+ 
+</html>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

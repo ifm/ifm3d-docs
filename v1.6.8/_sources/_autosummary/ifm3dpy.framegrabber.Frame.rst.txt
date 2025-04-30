@@ -1,0 +1,31 @@
+ifm3dpy.framegrabber.Frame
+==========================
+
+.. currentmodule:: ifm3dpy.framegrabber
+
+.. autoclass:: Frame
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Frame.__init__
+      ~Frame.frame_count
+      ~Frame.get_buffer
+      ~Frame.get_buffer_count
+      ~Frame.get_buffers
+      ~Frame.has_buffer
+      ~Frame.timestamps
+   
+   
+
+   
+   
+   
