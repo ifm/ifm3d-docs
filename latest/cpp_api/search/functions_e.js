@@ -15,6 +15,6 @@ var searchData=
   ['start_346',['Start',['../classifm3d_1_1FrameGrabber.html#a207a67d3b3a8affa46dd0aaf2ed36c04',1,'ifm3d::FrameGrabber']]],
   ['stop_347',['Stop',['../classifm3d_1_1FrameGrabber.html#a6a12c26b81bd4cd01291f649ac7ce844',1,'ifm3d::FrameGrabber::Stop()'],['../classifm3d_1_1PCICClient.html#ae76ab7d6821e6c46b65f788045385de4',1,'ifm3d::PCICClient::Stop()']]],
   ['swtrigger_348',['SWTrigger',['../classifm3d_1_1FrameGrabber.html#a0bcaaf3a21897fadbcd4fe267aa139d9',1,'ifm3d::FrameGrabber']]],
-  ['swupdater_349',['SWUpdater',['../classifm3d_1_1SWUpdater.html#a930023e5e858f0680888d2b20f267330',1,'ifm3d::SWUpdater']]],
+  ['swupdater_349',['SWUpdater',['../classifm3d_1_1SWUpdater.html#a92e0cb12e5fdf459a9d2131e01d027ea',1,'ifm3d::SWUpdater']]],
   ['swupdateversion_350',['SwUpdateVersion',['../classifm3d_1_1Device.html#a4ac83b040c4ce4224a6d73c10155258c',1,'ifm3d::Device::SwUpdateVersion()'],['../classifm3d_1_1O3R.html#af30eaa6348c6f06bef31f2082abfa275',1,'ifm3d::O3R::SwUpdateVersion()']]]
 ];
