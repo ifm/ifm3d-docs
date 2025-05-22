@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ifm3dpy.device &mdash; ifm3d v1.6.8 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -58,6 +59,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.LegacyDevice.html">ifm3dpy.device.LegacyDevice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.O3D.html">ifm3dpy.device.O3D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.O3R.html">ifm3dpy.device.O3R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.O3RSealedBox.html">ifm3dpy.device.O3RSealedBox</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.O3X.html">ifm3dpy.device.O3X</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.PortInfo.html">ifm3dpy.device.PortInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.SemVer.html">ifm3dpy.device.SemVer</a></li>
@@ -101,15 +103,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="module-ifm3dpy.device">
+  <section id="module-ifm3dpy.device">
 <span id="ifm3dpy-device"></span><h1>ifm3dpy.device<a class="headerlink" href="#module-ifm3dpy.device" title="Permalink to this heading"></a></h1>
 <p>Provides an implementation of the XMLRPC protocol for configuring the camera and pmd imager settings.</p>
 <p class="rubric">Classes</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.device.Device.html#ifm3dpy.device.Device" title="ifm3dpy.device.Device"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Device</span></code></a></p></td>
 <td><p>Base class for managing an instance of an all cameras</p></td>
@@ -126,30 +124,29 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.device.O3R.html#ifm3dpy.device.O3R" title="ifm3dpy.device.O3R"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R</span></code></a></p></td>
 <td><p>Class for managing an instance of an O3R Camera</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.device.O3X.html#ifm3dpy.device.O3X" title="ifm3dpy.device.O3X"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3X</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.device.O3RSealedBox.html#ifm3dpy.device.O3RSealedBox" title="ifm3dpy.device.O3RSealedBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3RSealedBox</span></code></a></p></td>
+<td><p>The O3RSealedBox class provides access to the SealedBox.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.device.O3X.html#ifm3dpy.device.O3X" title="ifm3dpy.device.O3X"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3X</span></code></a></p></td>
 <td><p>Class for managing an instance of an O3X Camera</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.device.PortInfo.html#ifm3dpy.device.PortInfo" title="ifm3dpy.device.PortInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PortInfo</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.device.PortInfo.html#ifm3dpy.device.PortInfo" title="ifm3dpy.device.PortInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PortInfo</span></code></a></p></td>
 <td><p>Provides information about a connected Port</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.device.SemVer.html#ifm3dpy.device.SemVer" title="ifm3dpy.device.SemVer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SemVer</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.device.SemVer.html#ifm3dpy.device.SemVer" title="ifm3dpy.device.SemVer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SemVer</span></code></a></p></td>
 <td><p>struct for holding the version information</p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Exceptions</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.device.Error.html#ifm3dpy.device.Error" title="ifm3dpy.device.Error"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Error</span></code></a></p></td>
 <td><p>Exception wrapper for library and system errors encountered by the library.</p></td>
 </tr>
 </tbody>
 </table>
-</div>
+</section>
 
 
            </div>

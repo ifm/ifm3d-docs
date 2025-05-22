@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ifm3dpy.swupdater.SWUpdater &mdash; ifm3d v1.6.8 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -94,7 +95,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="ifm3dpy-swupdater-swupdater">
+  <section id="ifm3dpy-swupdater-swupdater">
 <h1>ifm3dpy.swupdater.SWUpdater<a class="headerlink" href="#ifm3dpy-swupdater-swupdater" title="Permalink to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ifm3dpy.swupdater.SWUpdater">
@@ -106,7 +107,7 @@
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater" title="ifm3dpy.swupdater.SWUpdater"><span class="pre">ifm3dpy.swupdater.SWUpdater</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">cam</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ifm3dpy.device.Device.html#ifm3dpy.device.Device" title="ifm3dpy.device.Device"><span class="pre">ifm3dpy.device.Device</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swupdate_recovery_port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">8080</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.swupdater.SWUpdater.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cam</strong> (<em>ifm3dpy.Camera</em>) – The camera instance to grab frames from</p></li>
 <li><p><strong>cb</strong> (<em>callback function  with parameters</em><em> (</em><em>float</em><em>, </em><em>string</em><em>)</em>) – A  function for progress of the update</p></li>
@@ -118,10 +119,6 @@
 
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater.__init__" title="ifm3dpy.swupdater.SWUpdater.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self, cam[, cb, swupdate_recovery_port])</p></td>
 <td><p>Constructor</p></td>
@@ -147,7 +144,7 @@
 <dt class="sig sig-object py" id="ifm3dpy.swupdater.SWUpdater.flash_firmware">
 <span class="sig-name descname"><span class="pre">flash_firmware</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater" title="ifm3dpy.swupdater.SWUpdater"><span class="pre">ifm3dpy.swupdater.SWUpdater</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">swu_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_millis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ifm3dpy.swupdater.SWUpdater.flash_firmware" title="Permalink to this definition"></a></dt>
 <dd><p>Flash the firmware .swu file to the device</p>
-<div class="section" id="parameter">
+<section id="parameter">
 <h2>Parameter<a class="headerlink" href="#parameter" title="Permalink to this heading"></a></h2>
 <dl class="simple">
 <dt>swu_file<span class="classifier">string</span></dt><dd><p>A .swu file to flash on the device</p>
@@ -156,14 +153,14 @@
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">returns</dt>
+<dt class="field-odd">returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if firmware upload is successful</p>
 </dd>
-<dt class="field-even">rtype</dt>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
 <dd class="field-even"><p>bool</p>
 </dd>
 </dl>
-</div>
+</section>
 </dd></dl>
 
 <dl class="py method">
@@ -183,21 +180,21 @@
 <span class="sig-name descname"><span class="pre">wait_for_productive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater" title="ifm3dpy.swupdater.SWUpdater"><span class="pre">ifm3dpy.swupdater.SWUpdater</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_millis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ifm3dpy.swupdater.SWUpdater.wait_for_productive" title="Permalink to this definition"></a></dt>
 <dd><p>Waits and check for device in productive mode
 till timeout</p>
-<div class="section" id="id1">
+<section id="id1">
 <h2>Parameter<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
 <dl class="simple">
 <dt>timeout_millis<span class="classifier">long</span></dt><dd><p>A timeout value in milliseconds</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">returns</dt>
+<dt class="field-odd">returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if device in the productive mode</p>
 </dd>
-<dt class="field-even">rtype</dt>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
 <dd class="field-even"><p>bool</p>
 </dd>
 </dl>
-</div>
+</section>
 </dd></dl>
 
 <dl class="py method">
@@ -205,26 +202,26 @@ till timeout</p>
 <span class="sig-name descname"><span class="pre">wait_for_recovery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater" title="ifm3dpy.swupdater.SWUpdater"><span class="pre">ifm3dpy.swupdater.SWUpdater</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_millis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ifm3dpy.swupdater.SWUpdater.wait_for_recovery" title="Permalink to this definition"></a></dt>
 <dd><p>Waits and check for device in recovery mode
 till timeout</p>
-<div class="section" id="id2">
+<section id="id2">
 <h2>Parameter<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
 <dl class="simple">
 <dt>timeout_millis<span class="classifier">long</span></dt><dd><p>A timeout value in milliseconds</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">returns</dt>
+<dt class="field-odd">returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if device in the recovery mode</p>
 </dd>
-<dt class="field-even">rtype</dt>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
 <dd class="field-even"><p>bool</p>
 </dd>
 </dl>
-</div>
+</section>
 </dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>

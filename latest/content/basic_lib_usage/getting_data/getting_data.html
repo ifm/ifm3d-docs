@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>How to: receive an image &mdash; ifm3d v1.6.8 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -91,7 +92,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="how-to-receive-an-image">
+  <section id="how-to-receive-an-image">
 <h1>How to: receive an image<a class="headerlink" href="#how-to-receive-an-image" title="Permalink to this heading"></a></h1>
 <p>The primary objective of <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> is to make it as simple and performant as possible to acquire pixel data from an ifm 3D camera of the O3xxxx series.
 Additionally, the data should be encoded in a useful format for performing computer vision and/or robotics perception tasks.
@@ -100,7 +101,7 @@ A typical <code class="docutils literal notranslate"><span class="pre">ifm3d</sp
 <blockquote>
 <div><p>Note: for O3D or O3X devices, simply use the <code class="docutils literal notranslate"><span class="pre">O3D</span></code>/<code class="docutils literal notranslate"><span class="pre">O3X</span></code> class in place of the <code class="docutils literal notranslate"><span class="pre">O3R</span></code> in the following code.</p>
 </div></blockquote>
-<div class="section" id="o3r-framegrabber-and-frame">
+<section id="o3r-framegrabber-and-frame">
 <h2>O3R, FrameGrabber and Frame<a class="headerlink" href="#o3r-framegrabber-and-frame" title="Permalink to this heading"></a></h2>
 <p>ifm3d provides three main classes:</p>
 <ul class="simple">
@@ -143,8 +144,8 @@ Indeed, you will notice that there is no need to explicitly allocate and dealloc
 To instantiate the <code class="docutils literal notranslate"><span class="pre">ifm3d::O3R</span></code> object (or <code class="docutils literal notranslate"><span class="pre">ifm3d::O3D</span></code>/<code class="docutils literal notranslate"><span class="pre">ifm3d::O3X</span></code>), a call to <code class="docutils literal notranslate"><span class="pre">ifm3d::Device::MakeShared()</span></code> is made, rather than calling <code class="docutils literal notranslate"><span class="pre">std::make_shared</span></code> directly.
 This wrapper function is used to handle direct hardware probing to determine the type of camera that is connected.
 For example, this may be an O3R, O3D303, O3X, or something else. Regardless, a <code class="docutils literal notranslate"><span class="pre">std::shared_ptr</span></code> is returned from this call.</p>
-</div>
-<div class="section" id="set-the-schema-and-start-the-framegrabber">
+</section>
+<section id="set-the-schema-and-start-the-framegrabber">
 <h2>Set the schema and start the FrameGrabber<a class="headerlink" href="#set-the-schema-and-start-the-framegrabber" title="Permalink to this heading"></a></h2>
 <p>To start the data stream, the <code class="docutils literal notranslate"><span class="pre">Start</span></code> function must be used. This <code class="docutils literal notranslate"><span class="pre">Start</span></code> needs a schema which is a <code class="docutils literal notranslate"><span class="pre">std::vector&lt;ifm3d::buffer_id&gt;</span></code> and contains the <code class="docutils literal notranslate"><span class="pre">buffer_id</span></code> of the data needed for the application:</p>
 <div class="sphinx-tabs docutils container">
@@ -157,10 +158,10 @@ For example, this may be an O3R, O3D303, O3X, or something else. Regardless, a <
 </div></div>
 <p>The device provides many types of buffers. All the buffers might not be required for application. Setting the schema provides a way to enable only <code class="docutils literal notranslate"><span class="pre">buffer_id</span></code>s required for the application.
 This also reduce the bandwidth required to get the data from the device.</p>
-</div>
-<div class="section" id="receive-an-image">
+</section>
+<section id="receive-an-image">
 <h2>Receive an image<a class="headerlink" href="#receive-an-image" title="Permalink to this heading"></a></h2>
-<div class="section" id="register-a-callback">
+<section id="register-a-callback">
 <h3>Register a callback<a class="headerlink" href="#register-a-callback" title="Permalink to this heading"></a></h3>
 <p>The recommended way to receive a frame is to use the callback function. You can register a callback function that will be executed for every received frame, until the program exits.</p>
 <div class="sphinx-tabs docutils container">
@@ -195,8 +196,8 @@ This also reduce the bandwidth required to get the data from the device.</p>
 </pre></div>
 </div>
 </div></div>
-</div>
-<div class="section" id="alternatively-wait-for-a-frame">
+</section>
+<section id="alternatively-wait-for-a-frame">
 <h3>Alternatively: wait for a frame<a class="headerlink" href="#alternatively-wait-for-a-frame" title="Permalink to this heading"></a></h3>
 <p>You just need to call the <code class="docutils literal notranslate"><span class="pre">WaitForFrame</span></code> function. This <code class="docutils literal notranslate"><span class="pre">Framegrabber</span></code> method returns <code class="docutils literal notranslate"><span class="pre">std::Future&lt;ifm3d::Frame&gt;</span></code>. The <code class="docutils literal notranslate"><span class="pre">Frame</span></code> class stores all the received data. Make sure the camera head is in “RUN” mode.</p>
 <div class="sphinx-tabs docutils container">
@@ -211,9 +212,9 @@ frame = await fg.wait_for_frame() # using asyncio
 </pre></div>
 </div>
 </div></div>
-</div>
-</div>
-<div class="section" id="access-the-data">
+</section>
+</section>
+<section id="access-the-data">
 <h2>Access the data<a class="headerlink" href="#access-the-data" title="Permalink to this heading"></a></h2>
 <p>Accessing the received data is done through the <code class="docutils literal notranslate"><span class="pre">Frame</span></code>. Different data types are available depending on whether the camera is a 2D or a 3D camera.
 Simply access the image by calling <code class="docutils literal notranslate"><span class="pre">get_buffer</span></code> passing the <code class="docutils literal notranslate"><span class="pre">buffer_id</span></code> of the required image as a parameter.</p>
@@ -231,10 +232,10 @@ Simply access the image by calling <code class="docutils literal notranslate"><s
 </pre></div>
 </div>
 </div></div>
-</div>
-<div class="section" id="the-full-example">
+</section>
+<section id="the-full-example">
 <h2>The full example<a class="headerlink" href="#the-full-example" title="Permalink to this heading"></a></h2>
-<div class="section" id="using-a-callback">
+<section id="using-a-callback">
 <h3>Using a callback<a class="headerlink" href="#using-a-callback" title="Permalink to this heading"></a></h3>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-5-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-5-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-5-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-5-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-5-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#############################################</span>
@@ -382,8 +383,8 @@ Simply access the image by calling <code class="docutils literal notranslate"><s
 </pre></div>
 </div>
 </div></div>
-</div>
-<div class="section" id="using-the-polling-mode">
+</section>
+<section id="using-the-polling-mode">
 <h3>Using the polling mode<a class="headerlink" href="#using-the-polling-mode" title="Permalink to this heading"></a></h3>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-6-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-6-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-6-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-6-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-6-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-6-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#############################################</span>
@@ -528,9 +529,9 @@ Simply access the image by calling <code class="docutils literal notranslate"><s
 </pre></div>
 </div>
 </div></div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>

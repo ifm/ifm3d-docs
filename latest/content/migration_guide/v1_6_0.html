@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Migration Guide V1.6.0 &mdash; ifm3d v1.6.8 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -89,15 +90,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="migration-guide-v1-6-0">
+  <section id="migration-guide-v1-6-0">
 <h1>Migration Guide V1.6.0<a class="headerlink" href="#migration-guide-v1-6-0" title="Permalink to this heading"></a></h1>
-<div class="section" id="unification-of-shared-libraries-into-libifm3d">
+<section id="unification-of-shared-libraries-into-libifm3d">
 <h2>Unification of shared libraries into “libifm3d”<a class="headerlink" href="#unification-of-shared-libraries-into-libifm3d" title="Permalink to this heading"></a></h2>
 <p>ifm3d has historically been split into modules with the ability do disable certain modules if needed, the main reason for this were some heavy dependencies on things like OpenCV and PCL. In the meantime most of the heavy dependencies have been removed but the split into multiple modules still persists, this has lead to various problems and an increased complexity both in development of ifm3d as well as for code depending on it while offering little benefit. Therefore ifm3d will from now on provide a single library <code class="docutils literal notranslate"><span class="pre">libifm3d.so</span></code>/<code class="docutils literal notranslate"><span class="pre">ifm3d.dll</span></code> as opposed to <code class="docutils literal notranslate"><span class="pre">ifm3d_common</span></code>/<code class="docutils literal notranslate"><span class="pre">ifm3d_device</span></code>/<code class="docutils literal notranslate"><span class="pre">ifm3d_framegrabber</span></code> e.t.c.</p>
 <p><strong>There are no code changes required for customer code, however the default for logging changed, log messages will now be printed by default on the command line instead of a log file.</strong></p>
-<div class="section" id="change-when-linking-against-libifm3d">
+<section id="change-when-linking-against-libifm3d">
 <h3>Change when linking against libifm3d<a class="headerlink" href="#change-when-linking-against-libifm3d" title="Permalink to this heading"></a></h3>
-<div class="section" id="with-cmake">
+<section id="with-cmake">
 <h4>With CMake<a class="headerlink" href="#with-cmake" title="Permalink to this heading"></a></h4>
 <p>When calling <code class="docutils literal notranslate"><span class="pre">find_package</span></code>, no components should be specified</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">- find_package(ifm3d 1.4.3 CONFIG REQUIRED COMPONENTS device framegrabber deserialize)</span>
@@ -109,18 +110,18 @@
 <span class="gi">+ target_link_libraries(my_application ifm3d::ifm3d)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="without-cmake">
+</section>
+<section id="without-cmake">
 <h4>Without CMake<a class="headerlink" href="#without-cmake" title="Permalink to this heading"></a></h4>
 <p>Generally speaking instead of linking to ifm3d_common, ifm3d_device, ifm3d_framegrabber, e.t.c. it is now required to link to just ifm3d, e.g. using <code class="docutils literal notranslate"><span class="pre">gcc</span></code>:</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">- gcc my_application.cpp -lifm3d_common -lifm3d_device -lfm3d_framegrabber -o my_application</span>
 <span class="gi">+ gcc my_application.cpp -lifm3d -o my_application</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
+</section>
 
 
            </div>

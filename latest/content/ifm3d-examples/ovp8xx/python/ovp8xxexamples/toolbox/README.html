@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Toolbox &mdash; ifm3d v1.6.8 documentation</title>
       <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
@@ -79,7 +80,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="toolbox">
+  <section id="toolbox">
 <h1>Toolbox<a class="headerlink" href="#toolbox" title="Permalink to this heading"></a></h1>
 <p>Within the Toolbox, you find helper scripts, including:</p>
 <ul class="simple">
@@ -90,7 +91,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">extrinsic_calibration/static_camera_calibration/calib_cam.py</span></code>: this is a script to use to perform the static calibration process using a checkerboard. Make sure to closely follow the instructions in the accompanying README.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">update_settings_to_new_fw_schema.py</span></code>: this script can be used to update a configuration file from one firmware version to another, in the case where the schema was updated including breaking changes. The script will list out all the settings that were deleted and the user should check if these should be reapplied. This script expect a system with the same hardware configuration as the JSON configuration to be replicated.</p></li>
 </ul>
-<div class="section" id="registration-2d-3d-py">
+<section id="registration-2d-3d-py">
 <h2><code class="docutils literal notranslate"><span class="pre">registration_2d_3d.py</span></code><a class="headerlink" href="#registration-2d-3d-py" title="Permalink to this heading"></a></h2>
 <p>This example shows how to find the closest pixel in the RGB image corresponding to each pixel in the distance image, in order to generate a colored point cloud.</p>
 <p>The process is done in several steps:</p>
@@ -101,8 +102,8 @@
 </ol>
 <p><img alt="2D/3D registration concept: point cloud " src="../../../../../../_images/registration1.drawio.svg" /></p>
 <p>The same process would be used to associate an object identified in the 2D camera frame to specific points in the 3D point cloud. This is useful for example to associate a mask derived from human segmentation algorithms to the 3D point cloud for an accurate measure of proximity.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

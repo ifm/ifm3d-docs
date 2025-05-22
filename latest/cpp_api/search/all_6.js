@@ -20,8 +20,9 @@ var searchData=
   ['getmacaddress_73',['GetMACAddress',['../classifm3d_1_1IFMNetworkDevice.html#a7d43c55ace9605605ab78525975e82b8',1,'ifm3d::IFMNetworkDevice']]],
   ['getnetmask_74',['GetNetmask',['../classifm3d_1_1IFMNetworkDevice.html#acb57559c3e57978cebb23a56a1c1e01f',1,'ifm3d::IFMNetworkDevice']]],
   ['getport_75',['GetPort',['../classifm3d_1_1IFMNetworkDevice.html#a6d9f3582cb49ce92600b346cce99a9ce',1,'ifm3d::IFMNetworkDevice']]],
-  ['getschema_76',['GetSchema',['../classifm3d_1_1O3R.html#a1352ba9088aaea3cafd09d1c1a5d270c',1,'ifm3d::O3R']]],
-  ['gettimestamps_77',['getTimestamps',['../classifm3d_1_1DistanceImageInfo.html#af68ce9aa879ed3ab06de1ce7f1987288',1,'ifm3d::DistanceImageInfo']]],
-  ['getvendorid_78',['GetVendorId',['../classifm3d_1_1IFMNetworkDevice.html#af48559851c7db3001f4619cb0ae3897f',1,'ifm3d::IFMNetworkDevice']]],
-  ['grayscale_5fimage_79',['GRAYSCALE_IMAGE',['../group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50a68b3181ed8b67a24f4485138e8f51955',1,'ifm3d']]]
+  ['getpublickey_76',['GetPublicKey',['../classifm3d_1_1O3RSealedBox.html#a37d70db874ea2012c564812a2b6dcaf0',1,'ifm3d::O3RSealedBox']]],
+  ['getschema_77',['GetSchema',['../classifm3d_1_1O3R.html#a1352ba9088aaea3cafd09d1c1a5d270c',1,'ifm3d::O3R']]],
+  ['gettimestamps_78',['getTimestamps',['../classifm3d_1_1DistanceImageInfo.html#af68ce9aa879ed3ab06de1ce7f1987288',1,'ifm3d::DistanceImageInfo']]],
+  ['getvendorid_79',['GetVendorId',['../classifm3d_1_1IFMNetworkDevice.html#af48559851c7db3001f4619cb0ae3897f',1,'ifm3d::IFMNetworkDevice']]],
+  ['grayscale_5fimage_80',['GRAYSCALE_IMAGE',['../group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50a68b3181ed8b67a24f4485138e8f51955',1,'ifm3d']]]
 ];

@@ -24,6 +24,7 @@
       LegacyDevice
       O3D
       O3R
+      O3RSealedBox
       O3X
       PortInfo
       SemVer

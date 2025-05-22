@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PPM IO &mdash; ifm3d v1.6.8 documentation</title>
       <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
@@ -79,11 +80,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="ppm-io">
+  <section id="ppm-io">
 <h1>PPM IO<a class="headerlink" href="#ppm-io" title="Permalink to this heading"></a></h1>
 <p>This repository implements reading and writing of images in the <a class="reference external" href="http://netpbm.sourceforge.net/doc/ppm.html">PPM format</a>. The PPM image format is extremely simple, making it ideal for small exploratory projects. The major benefit of this simplicity is that is it possible to implement the PPM file format without using external dependencies, such as compression libraries. All production code in this repository is implemented in a single <a class="reference external" href="https://github.com/thinks/ppm-io/blob/master/include/thinks/ppm.hpp">header file</a>, making it very simple to add to any existing project without having to set up additional linker rules. Also, the implementation uses only standard types and holds no state, meaning it should be fairly straight-forward to use the read and write functions. Detailed documentation is available in the source code.</p>
 <p>All code in this repository is released under the <a class="reference external" href="https://en.wikipedia.org/wiki/MIT_License">MIT license</a>.</p>
-<div class="section" id="usage">
+<section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
 <p>The implementation supports both reading and writing of PPM images. We provide some brief usage examples here, also refer to the <a class="reference external" href="https://github.com/thinks/ppm-io/blob/master/test/include/thinks/testPpm.hpp">tests</a> for further examples.</p>
 <p>Reading an image is done as follows.</p>
@@ -128,12 +129,12 @@
 <span class="n">thinks</span><span class="o">::</span><span class="n">ppm</span><span class="o">::</span><span class="n">writeRgbImage</span><span class="p">(</span><span class="s">&quot;my_file.ppm&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">pixel_data</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="tests">
+</section>
+<section id="tests">
 <h2>Tests<a class="headerlink" href="#tests" title="Permalink to this heading"></a></h2>
 <p>This repository includes a simple <a class="reference external" href="https://github.com/thinks/ppm-io/blob/master/test/CMakeLists.txt">CMake project</a> for running a small test suite. The test can be found in <a class="reference external" href="https://github.com/thinks/ppm-io/blob/master/test/include/thinks/testPpm.hpp">this</a> header file. At present the test project builds and runs without errors.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

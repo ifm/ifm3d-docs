@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Buffer types &mdash; ifm3d v1.6.8 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -87,7 +88,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="buffer-types">
+  <section id="buffer-types">
 <h1>Buffer types<a class="headerlink" href="#buffer-types" title="Permalink to this heading"></a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> supports multiple device families (O3R, O3D3xx, O3X1xx).</p>
 <p>Each device natively provides different types of data, and the <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> library adds additional buffers for convenience.</p>
@@ -95,9 +96,9 @@
 We also specify if the data is provided directly by the device, meaning it is streamed from the embedded device, or calculated by <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> API on the receiver device.
 This is important information to be considered when trying to work around bandwidth limitations and delays.</p>
 <p>In this tables, the NA abbreviation stands for “Not Applicable.”</p>
-<div class="section" id="o3r-available-buffers">
+<section id="o3r-available-buffers">
 <h2>O3R Available buffers<a class="headerlink" href="#o3r-available-buffers" title="Permalink to this heading"></a></h2>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p><code class="docutils literal notranslate"><span class="pre">buffer_id</span></code></p></th>
 <th class="head"><p>Description</p></th>
@@ -179,10 +180,10 @@ This is important information to be considered when trying to work around bandwi
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="o3d-available-buffers">
+</section>
+<section id="o3d-available-buffers">
 <h2>O3D Available buffers<a class="headerlink" href="#o3d-available-buffers" title="Permalink to this heading"></a></h2>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p><code class="docutils literal notranslate"><span class="pre">buffer_id</span></code></p></th>
 <th class="head"><p>Description</p></th>
@@ -264,11 +265,11 @@ This is important information to be considered when trying to work around bandwi
 <p class="admonition-title">Note</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">CARTESIAN_ALL</span></code> buffer is deprecated, and the <code class="docutils literal notranslate"><span class="pre">XYZ</span></code> buffer should be used instead.</p>
 </div>
-<div class="section" id="diagnostic-buffer">
+<section id="diagnostic-buffer">
 <h3><code class="docutils literal notranslate"><span class="pre">DIAGNOSTIC</span></code> buffer<a class="headerlink" href="#diagnostic-buffer" title="Permalink to this heading"></a></h3>
 <p>This buffer provides diagnostic information such as temperature, frame duration and framerate.</p>
 <p>To unpack the information in the <code class="docutils literal notranslate"><span class="pre">DIAGNOSTIC</span></code> buffer, use the following structure:</p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Content</p></th>
 <th class="head"><p>Type</p></th>
@@ -332,11 +333,11 @@ Some temperatures are only measured for specific part numbers, which might be wh
 <span class="n">fg</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="o3x-available-buffers">
+</section>
+</section>
+<section id="o3x-available-buffers">
 <h2>O3X Available buffers<a class="headerlink" href="#o3x-available-buffers" title="Permalink to this heading"></a></h2>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p><code class="docutils literal notranslate"><span class="pre">buffer_id</span></code></p></th>
 <th class="head"><p>Description</p></th>
@@ -382,8 +383,8 @@ Some temperatures are only measured for specific part numbers, which might be wh
 <p class="admonition-title">Note</p>
 <p>Even though the <code class="docutils literal notranslate"><span class="pre">GRAYSCALE_IMAGE</span></code> buffer is shown to be available in the O3X JSON configuration, no acquisition mode currently provides this buffer, so we have not included it in the list.</p>
 </div>
-</div>
-<div class="section" id="data-formats">
+</section>
+<section id="data-formats">
 <h2>Data formats<a class="headerlink" href="#data-formats" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> supports multiple devices. These devices support multiple buffers and data types which can have different data formats on different devices.</p>
 <p>We recommend to retrieve the format of a specific <code class="docutils literal notranslate"><span class="pre">buffer_id</span></code> programmatically.
@@ -418,8 +419,8 @@ One can use the code below (adapt to the specific <code class="docutils literal 
 </div>
 <p>For instance, the format returned for <code class="docutils literal notranslate"><span class="pre">ifm3d::buffer_id::XYZ</span></code> is <code class="docutils literal notranslate"><span class="pre">2</span></code>, which corresponds to <code class="docutils literal notranslate"><span class="pre">FORMAT_32F</span></code> (32 bit float).</p>
 <p>See the full examples in the <code class="docutils literal notranslate"><span class="pre">ifm3d-examples</span></code> repository, <a class="reference external" href="https://github.com/ifm/ifm3d-examples/blob/main/common/python/get_data_format.py">in Python</a>, and <a class="reference external" href="https://github.com/ifm/ifm3d-examples/blob/main/common/cpp/get_data_format.cpp">in C++</a>.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

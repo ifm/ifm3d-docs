@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ifm3d::Buffer- Basic C++ STL container for ifm3d &mdash; ifm3d v1.6.8 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -86,7 +87,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="ifm3d-buffer-basic-c-stl-container-for-ifm3d">
+  <section id="ifm3d-buffer-basic-c-stl-container-for-ifm3d">
 <h1>ifm3d::Buffer- Basic C++ STL container for ifm3d<a class="headerlink" href="#ifm3d-buffer-basic-c-stl-container-for-ifm3d" title="Permalink to this heading"></a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer</span></code> is designed to provide a C++ STL container that can hold
 buffer data of different types provided by ifm3d vision devices. Data is stored
@@ -95,7 +96,7 @@ the pixel. The pixel data type is defined in an enumeration <span class="xref my
 <code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer</span></code> class does memory management and the user is free from the memory allocation
 and deallocation. The assignment operator and the copy constructor
 only copy the attributes and data is shared across the object.</p>
-<div class="section" id="creating-buffer-object">
+<section id="creating-buffer-object">
 <h2>Creating Buffer Object:<a class="headerlink" href="#creating-buffer-object" title="Permalink to this heading"></a></h2>
 <p>This can be done by calling <code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer()</span></code> and <code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer(rows,</span> <span class="pre">cols,</span> <span class="pre">nchannel,</span> <span class="pre">ifm3d::pixel_format)</span></code>.
 The default Constructor only creates the attributes and the allocation of memory is
@@ -118,8 +119,8 @@ only if the previous memory is not sufficient to store the buffer data.</p>
 <span class="w">	  </span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="accessing-the-pixel">
+</section>
+<section id="accessing-the-pixel">
 <h2>Accessing the Pixel<a class="headerlink" href="#accessing-the-pixel" title="Permalink to this heading"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer</span></code> provides a template function to access data.
 Use <code class="docutils literal notranslate"><span class="pre">at&lt;T&gt;(index)</span></code> or <code class="docutils literal notranslate"><span class="pre">at&lt;T&gt;(i,j)</span></code> to access the pixel. This functions returns the reference
@@ -159,14 +160,14 @@ as the pixel is a structure of the values of n-channel at a given position.</p>
 <span class="k">auto</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pixel</span><span class="p">.</span><span class="n">z</span><span class="p">;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="buffer-templates">
+</section>
+<section id="buffer-templates">
 <h2>Buffer Templates<a class="headerlink" href="#buffer-templates" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer_&lt;T&gt;</span></code> extends <code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer</span></code> where T defines the data type in which the user wants to access the pixel.
 This removes the need for providing the template type T while using the Buffer functionality
 and working with std::algorithms.</p>
-</div>
-<div class="section" id="compatibility-with-c-stl-algorithms">
+</section>
+<section id="compatibility-with-c-stl-algorithms">
 <h2>Compatibility with C++ STL Algorithms<a class="headerlink" href="#compatibility-with-c-stl-algorithms" title="Permalink to this heading"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer</span></code> provides templated iterator to access data and to work with <code class="docutils literal notranslate"><span class="pre">std::algorithms</span></code>.
 The user can use <code class="docutils literal notranslate"><span class="pre">ifm3d::IteratorAdapter&lt;T&gt;(ifm3d::Buffer)</span></code> which forwards type T to templated
@@ -208,8 +209,8 @@ is deduced internally.</p>
 </pre></div>
 </div>
 <p>This way, <code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer</span></code> container can be used with any of the <code class="docutils literal notranslate"><span class="pre">std::algorithm</span></code></p>
-</div>
-<div class="section" id="example-grabbing-distance-and-amplitude-in-ifm3d-buffer">
+</section>
+<section id="example-grabbing-distance-and-amplitude-in-ifm3d-buffer">
 <h2>Example grabbing distance and amplitude in ifm3d::Buffer<a class="headerlink" href="#example-grabbing-distance-and-amplitude-in-ifm3d-buffer" title="Permalink to this heading"></a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/device.h&gt;</span>
@@ -255,8 +256,8 @@ is deduced internally.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="example-grabbing-xyz-or-n-channel-ifm3d-buffer">
+</section>
+<section id="example-grabbing-xyz-or-n-channel-ifm3d-buffer">
 <h2>Example grabbing XYZ or n-channel ifm3d::Buffer<a class="headerlink" href="#example-grabbing-xyz-or-n-channel-ifm3d-buffer" title="Permalink to this heading"></a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/device.h&gt;</span>
@@ -316,8 +317,8 @@ is deduced internally.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ifm3dpy.device.Device &mdash; ifm3d v1.6.8 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -58,6 +59,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.LegacyDevice.html">ifm3dpy.device.LegacyDevice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.O3D.html">ifm3dpy.device.O3D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.O3R.html">ifm3dpy.device.O3R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.O3RSealedBox.html">ifm3dpy.device.O3RSealedBox</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.O3X.html">ifm3dpy.device.O3X</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.PortInfo.html">ifm3dpy.device.PortInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.SemVer.html">ifm3dpy.device.SemVer</a></li>
@@ -102,7 +104,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="ifm3dpy-device-device">
+  <section id="ifm3dpy-device-device">
 <h1>ifm3dpy.device.Device<a class="headerlink" href="#ifm3dpy-device-device" title="Permalink to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ifm3dpy.device.Device">
@@ -114,7 +116,7 @@
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.device.Device" title="ifm3dpy.device.Device"><span class="pre">ifm3dpy.device.Device</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'192.168.0.69'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xmlrpc_port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">80</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">throw_if_unavailable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.device.Device.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ip</strong> (<em>string</em><em>, </em><em>optional</em>) – The ip address of the camera. Defaults to 192.168.0.69.</p></li>
 <li><p><strong>xmlrpc_port</strong> (<em>uint</em><em>, </em><em>optional</em>) – The tcp port the sensor’s XMLRPC server is listening on. Defaults to
@@ -129,10 +131,6 @@ those changes. Defaults to ‘’ (no password).</p></li>
 
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.Device.__init__" title="ifm3dpy.device.Device.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self[, ip, xmlrpc_port, password, ...])</p></td>
 <td><p>Constructor</p></td>
@@ -180,10 +178,6 @@ those changes. Defaults to ‘’ (no password).</p></li>
 </table>
 <p class="rubric">Attributes</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.Device.ip" title="ifm3dpy.device.Device.ip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ip</span></code></a></p></td>
 <td><p>The IP address associated with this Camera instance</p></td>
@@ -198,13 +192,13 @@ those changes. Defaults to ‘’ (no password).</p></li>
 <span class="sig-name descname"><span class="pre">am_i</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.device.Device" title="ifm3dpy.device.Device"><span class="pre">ifm3dpy.device.Device</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">family</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.device.Device.device_family" title="ifm3dpy.device.Device.device_family"><span class="pre">ifm3dpy.device.Device.device_family</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ifm3dpy.device.Device.am_i" title="Permalink to this definition"></a></dt>
 <dd><p>Checking whether a device is one of the specified device family</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>family</strong> (<em>CameraBase.device_family</em>) – The family to check for</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if the device is of the specified family</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
@@ -232,18 +226,18 @@ those changes. Defaults to ‘’ (no password).</p></li>
 <span class="sig-name descname"><span class="pre">check_minimum_firmware_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.device.Device" title="ifm3dpy.device.Device"><span class="pre">ifm3dpy.device.Device</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">major</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ifm3dpy.device.Device.check_minimum_firmware_version" title="Permalink to this definition"></a></dt>
 <dd><p>Checks for a minimum ifm camera software version</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>major</strong> (<em>int</em>) – Major version of software</p></li>
 <li><p><strong>minor</strong> (<em>int</em>) – Minor Version of software</p></li>
 <li><p><strong>patch</strong> (<em>int</em>) – Patch Number of software</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if current software version is greater
 or equal to the value passed</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
@@ -254,14 +248,14 @@ or equal to the value passed</p>
 <span class="sig-name descname"><span class="pre">device_discovery</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="ifm3dpy.device.IFMNetworkDevice.html#ifm3dpy.device.IFMNetworkDevice" title="ifm3dpy.device.IFMNetworkDevice"><span class="pre">ifm3dpy.device.IFMNetworkDevice</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ifm3dpy.device.Device.device_discovery" title="Permalink to this definition"></a></dt>
 <dd><p>Discover the list of devices in the network.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><dl class="simple">
 <dt>A list of dictionaries, each containing the device’s</dt><dd><p>IP address, MAC address and type.</p>
 </dd>
 </dl>
 </p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>list[dict]</p>
 </dd>
 </dl>
@@ -292,16 +286,16 @@ or equal to the value passed</p>
 <dd><p>Convenience accessor for extracting a device parameter</p>
 <p>No edit session is created on the camera</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>key</strong> (<em>str</em>) – Name of the parameter to extract</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Value of the requested parameter</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>str</p>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>RuntimeError</strong> – </p>
 </dd>
 </dl>
@@ -318,7 +312,7 @@ we are talking to) however, it will likely be useful in
 application-level logic as well, so, it is available in the public
 interface.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>use_cached</strong> (<em>bool</em>) – If set to true, a cached lookup of the device type will be used as
 the return value. If false, it will make a network call to the camera
 to get the “real” device type. The only reason for setting this to
@@ -329,10 +323,10 @@ object instance is still alive. If that is not something you are
 worried about, leaving this set to true should result in a signficant
 performance increase.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Type of device connected</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
@@ -343,10 +337,10 @@ performance increase.</p>
 <span class="sig-name descname"><span class="pre">firmware_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.device.Device" title="ifm3dpy.device.Device"><span class="pre">ifm3dpy.device.Device</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ifm3dpy.device.SemVer.html#ifm3dpy.device.SemVer" title="ifm3dpy.device.SemVer"><span class="pre">ifm3dpy.device.SemVer</span></a></span></span><a class="headerlink" href="#ifm3dpy.device.Device.firmware_version" title="Permalink to this definition"></a></dt>
 <dd><p>Version of firmware installed on device</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Firmware version</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="ifm3dpy.device.SemVer.html#ifm3dpy.device.SemVer" title="ifm3dpy.device.SemVer">SemVer</a></p>
 </dd>
 </dl>
@@ -367,11 +361,11 @@ has been developed specficially for it. For the O3D, this is a NOOP.</p>
 JSON. This function is _the_ way to tune the
 camera/application/imager/etc. parameters.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>json</strong> (<em>dict</em>) – A json object encoding a camera configuration to apply
 to the hardware.</p>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>RuntimeError</strong> – If this raises an exception, you are
     encouraged to check the log file as a best effort is made to be
     as descriptive as possible as to the specific error that has
@@ -443,10 +437,10 @@ to the hardware.</p>
 <span class="sig-name descname"><span class="pre">reboot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">ifm3dpy.device.Device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode:</span> <span class="pre">ifm3dpy.device.Device.boot_mode</span> <span class="pre">=</span> <span class="pre">&lt;boot_mode.PRODUCTIVE:</span> <span class="pre">0&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.device.Device.reboot" title="Permalink to this definition"></a></dt>
 <dd><p>Reboot the sensor</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>mode</strong> (<em>CameraBase.boot_mode</em>) – The system mode to boot into upon restart of the sensor</p>
 </dd>
-<dt class="field-even">Raises</dt>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>RuntimeError</strong> – </p>
 </dd>
 </dl>
@@ -457,7 +451,7 @@ to the hardware.</p>
 <span class="sig-name descname"><span class="pre">set_temp_ip_address</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.device.Device.set_temp_ip_address" title="Permalink to this definition"></a></dt>
 <dd><p>Set temporary IP address</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>mac</strong> (<em>string</em>) – MAC address of the device</p></li>
 <li><p><strong>temp_ip</strong> (<em>string</em>) – Temporary IP addres of the device</p></li>
@@ -508,13 +502,13 @@ to the hardware.</p>
 <span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.device.Device" title="ifm3dpy.device.Device"><span class="pre">ifm3dpy.device.Device</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#ifm3dpy.device.Device.to_json" title="Permalink to this definition"></a></dt>
 <dd><p>A JSON object containing the state of the camera</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Camera JSON, compatible with python’s json module</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>dict</p>
 </dd>
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>RuntimeError</strong> – </p>
 </dd>
 </dl>
@@ -526,13 +520,13 @@ to the hardware.</p>
 <dd><p>Delivers the trace log from the camera</p>
 <p>A session is not required to call this function.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>count</strong> (<em>int</em>) – Number of entries to retrieve</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>List of strings for each entry in the tracelog</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list[str]</p>
 </dd>
 </dl>
@@ -560,10 +554,10 @@ to the hardware.</p>
 <span class="sig-name descname"><span class="pre">who_am_i</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.device.Device" title="ifm3dpy.device.Device"><span class="pre">ifm3dpy.device.Device</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#ifm3dpy.device.Device.device_family" title="ifm3dpy.device.Device.device_family"><span class="pre">ifm3dpy.device.Device.device_family</span></a></span></span><a class="headerlink" href="#ifm3dpy.device.Device.who_am_i" title="Permalink to this definition"></a></dt>
 <dd><p>Retrieve the device family of the connected device</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The device family</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>CameraBase.device_family</p>
 </dd>
 </dl>
@@ -577,7 +571,7 @@ to the hardware.</p>
 
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>

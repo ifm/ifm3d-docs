@@ -40,6 +40,7 @@ ifm3dpy.device.O3R
       ~O3R.reset
       ~O3R.resolve_config
       ~O3R.save_init
+      ~O3R.sealed_box
       ~O3R.set
       ~O3R.set_temp_ip_address
       ~O3R.to_json

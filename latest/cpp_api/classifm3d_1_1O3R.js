@@ -24,8 +24,10 @@ var classifm3d_1_1O3R =
     [ "Reset", "classifm3d_1_1O3R.html#ab426c636e257766f0caa35b09ea97fea", null ],
     [ "ResolveConfig", "classifm3d_1_1O3R.html#a3a829eb053ef1ca8e14c3e14284f5aec", null ],
     [ "SaveInit", "classifm3d_1_1O3R.html#a314f79eb3f3d0fffe469fb276376cf91", null ],
+    [ "SealedBox", "classifm3d_1_1O3R.html#a6144891e9f8ba6554997646aaf81ef89", null ],
     [ "Set", "classifm3d_1_1O3R.html#a0952daae6643332cbdd48d7c8d282e75", null ],
     [ "SwUpdateVersion", "classifm3d_1_1O3R.html#af30eaa6348c6f06bef31f2082abfa275", null ],
     [ "ToJSON", "classifm3d_1_1O3R.html#a9e9ae86629b8119af831aceaaa1c786c", null ],
-    [ "WhoAmI", "classifm3d_1_1O3R.html#a047049bbce215aeee7f0f8ee1868831f", null ]
+    [ "WhoAmI", "classifm3d_1_1O3R.html#a047049bbce215aeee7f0f8ee1868831f", null ],
+    [ "O3RSealedBox", "classifm3d_1_1O3R.html#ae94af17e914711dbb3e137692204e720", null ]
 ];

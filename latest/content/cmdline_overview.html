@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ifm3d command line tool &mdash; ifm3d v1.6.8 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -81,9 +82,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="ifm3d-command-line-tool">
+  <section id="ifm3d-command-line-tool">
 <h1>ifm3d command line tool<a class="headerlink" href="#ifm3d-command-line-tool" title="Permalink to this heading"></a></h1>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> ships with a command line tool of the same name. The <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> command
 line tool is used to both introspect the state of a camera as well as mutate
@@ -178,8 +179,8 @@ Subcommands:
   trace                       Get trace messages from the internal camera trace buffer.
 </pre></div>
 </div>
-</div>
-<div class="section" id="configuring">
+</section>
+<section id="configuring">
 <h2>Configuring<a class="headerlink" href="#configuring" title="Permalink to this heading"></a></h2>
 <p>Using the ifm3d CLI can be a quick way to configure or read out parts of the device configuration.
 It can be used in conjunction with the tool <a class="reference external" href="https://jqlang.org/">jq</a> to set portions of the configuration, or alternatively a configuration file in JSON format can be used.</p>
@@ -207,13 +208,13 @@ For example:</p>
 <p class="admonition-title">Note</p>
 <p>The configuration uses the JSON format, which means that the command-line JSON processor <code class="docutils literal notranslate"><span class="pre">jq</span></code> can be used to further process the results.</p>
 </div>
-</div>
-<div class="section" id="diagnostic">
+</section>
+<section id="diagnostic">
 <h2>Diagnostic<a class="headerlink" href="#diagnostic" title="Permalink to this heading"></a></h2>
 <p><span class="xref myst"><img alt="O3R" src="https://img.shields.io/badge/O3R-green.svg" /></span>
 <span class="xref myst"><img alt="O3D" src="https://img.shields.io/badge/O3D-red.svg" /></span>
 <span class="xref myst"><img alt="O3X" src="https://img.shields.io/badge/O3X-red.svg" /></span></p>
-<div class="section" id="device-diagnostic">
+<section id="device-diagnostic">
 <h3>Device diagnostic<a class="headerlink" href="#device-diagnostic" title="Permalink to this heading"></a></h3>
 <p>The O3R platforms provides diagnostic to help monitor the health of the system at runtime, and to provide debug information in case troubleshooting help is needed.</p>
 <p>To retrieve the currently active diagnostic, one can use:</p>
@@ -302,8 +303,8 @@ For example:</p>
 
 </pre></div>
 </div>
-</div>
-<div class="section" id="service-report">
+</section>
+<section id="service-report">
 <h3>Service report<a class="headerlink" href="#service-report" title="Permalink to this heading"></a></h3>
 <p>In addition to the diagnostic, a service report can be downloaded.
 The generated ZIP file should be shared with ifm support team when requesting troubleshooting help, as it contains detailed information about the state and configuration of the system.</p>
@@ -314,9 +315,9 @@ $ ls
 configuration.json  deserializer_info.json  diagnostics.json  emmc_devices_health.json  filesystem_info.txt  journalctl.log  manifest.json  schema.json  service_report.zip
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>

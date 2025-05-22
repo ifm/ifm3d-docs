@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>How to: receive and use the 2D RGB image &mdash; ifm3d v1.6.8 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -91,11 +92,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="how-to-receive-and-use-the-2d-rgb-image">
+  <section id="how-to-receive-and-use-the-2d-rgb-image">
 <h1>How to: receive and use the 2D RGB image<a class="headerlink" href="#how-to-receive-and-use-the-2d-rgb-image" title="Permalink to this heading"></a></h1>
 <p>Receiving RGB data with ifm3d is done similarly as 3D data: the core objects have to be instantiated, and a frame has to be retrieved (see full code below).
 The important part is how to access the RGB image and how to decode it for further use.</p>
-<div class="section" id="access-the-data">
+<section id="access-the-data">
 <h2>Access the data<a class="headerlink" href="#access-the-data" title="Permalink to this heading"></a></h2>
 <p>The RGB image is stored in JPEG format and can be retrieved as follows:</p>
 <div class="sphinx-tabs docutils container">
@@ -106,8 +107,8 @@ The important part is how to access the RGB image and how to decode it for furth
 </pre></div>
 </div>
 </div></div>
-</div>
-<div class="section" id="decode-the-data">
+</section>
+<section id="decode-the-data">
 <h2>Decode the data<a class="headerlink" href="#decode-the-data" title="Permalink to this heading"></a></h2>
 <p>Once accessed, the RGB image has to be decoded. We use OpenCV in this example:</p>
 <div class="sphinx-tabs docutils container">
@@ -118,8 +119,8 @@ The important part is how to access the RGB image and how to decode it for furth
 </pre></div>
 </div>
 </div></div>
-</div>
-<div class="section" id="display-optional">
+</section>
+<section id="display-optional">
 <h2>Display (optional)<a class="headerlink" href="#display-optional" title="Permalink to this heading"></a></h2>
 <p>The decoded image can then be displayed, for instance with OpenCV.</p>
 <blockquote>
@@ -144,8 +145,8 @@ Follow the full example for the conversion to cv::Mat with or without copy.</p>
 </pre></div>
 </div>
 </div></div>
-</div>
-<div class="section" id="the-full-example">
+</section>
+<section id="the-full-example">
 <h2>The full example<a class="headerlink" href="#the-full-example" title="Permalink to this heading"></a></h2>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-3-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-3-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-3-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-3-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-3-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-3-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"></div><div aria-labelledby="tab-3-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-3-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
@@ -287,8 +288,8 @@ Follow the full example for the conversion to cv::Mat with or without copy.</p>
 </pre></div>
 </div>
 </div></div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

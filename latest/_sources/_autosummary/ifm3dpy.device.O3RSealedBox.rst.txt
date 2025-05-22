@@ -1,0 +1,30 @@
+ifm3dpy.device.O3RSealedBox
+===========================
+
+.. currentmodule:: ifm3dpy.device
+
+.. autoclass:: O3RSealedBox
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~O3RSealedBox.__init__
+      ~O3RSealedBox.get_public_key
+      ~O3RSealedBox.is_password_protected
+      ~O3RSealedBox.remove_password
+      ~O3RSealedBox.set
+      ~O3RSealedBox.set_password
+   
+   
+
+   
+   
+   

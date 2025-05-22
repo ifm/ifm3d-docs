@@ -29,6 +29,7 @@ var annotated_dup =
       [ "LogWriterFile", "classifm3d_1_1LogWriterFile.html", "classifm3d_1_1LogWriterFile" ],
       [ "O3D", "classifm3d_1_1O3D.html", "classifm3d_1_1O3D" ],
       [ "O3R", "classifm3d_1_1O3R.html", "classifm3d_1_1O3R" ],
+      [ "O3RSealedBox", "classifm3d_1_1O3RSealedBox.html", "classifm3d_1_1O3RSealedBox" ],
       [ "O3X", "classifm3d_1_1O3X.html", "classifm3d_1_1O3X" ],
       [ "ODSExtrinsicCalibrationCorrectionV1", "classifm3d_1_1ODSExtrinsicCalibrationCorrectionV1.html", "classifm3d_1_1ODSExtrinsicCalibrationCorrectionV1" ],
       [ "ODSInfoV1", "classifm3d_1_1ODSInfoV1.html", "classifm3d_1_1ODSInfoV1" ],

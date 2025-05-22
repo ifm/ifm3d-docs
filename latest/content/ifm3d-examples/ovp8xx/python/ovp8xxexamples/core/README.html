@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Core &mdash; ifm3d v1.6.8 documentation</title>
       <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
@@ -79,61 +80,61 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="core">
+  <section id="core">
 <h1>Core<a class="headerlink" href="#core" title="Permalink to this heading"></a></h1>
 <p>In this directory you find multiple general O3R scripts that are explained below.</p>
-<div class="section" id="d-data-py">
+<section id="d-data-py">
 <h2><code class="docutils literal notranslate"><span class="pre">2d_data.py</span></code><a class="headerlink" href="#d-data-py" title="Permalink to this heading"></a></h2>
 <p>Receiving RGB data with <code class="docutils literal notranslate"><span class="pre">ifm3dpy</span></code> is done similarly as 3D data: the core objects have to be instantiated, and a frame has to be retrieved.
 The important part is how to access the RGB image and how to decode it for further use.
 Once decoded, the image can be displayed using tools such as OpenCV. The example code in <code class="docutils literal notranslate"><span class="pre">2d_data.py</span></code> illustrates the explained process.</p>
-</div>
-<div class="section" id="bootup-monitor-py">
+</section>
+<section id="bootup-monitor-py">
 <h2><code class="docutils literal notranslate"><span class="pre">bootup_monitor.py</span></code><a class="headerlink" href="#bootup-monitor-py" title="Permalink to this heading"></a></h2>
 <p>The script <code class="docutils literal notranslate"><span class="pre">bootup_monitor.py</span></code> checks that the VPU completes it’s boot sequence before attempting to initialize an application.</p>
-</div>
-<div class="section" id="can-activate-py">
+</section>
+<section id="can-activate-py">
 <h2><code class="docutils literal notranslate"><span class="pre">can_activate.py</span></code><a class="headerlink" href="#can-activate-py" title="Permalink to this heading"></a></h2>
 <p>The CAN interface can only be activate through the JSON configuration with firmware version 1.4.X or higher.</p>
 <p>This examples shows how to activate or deactivate the <code class="docutils literal notranslate"><span class="pre">can0</span></code> interface.</p>
-</div>
-<div class="section" id="configuration-py">
+</section>
+<section id="configuration-py">
 <h2><code class="docutils literal notranslate"><span class="pre">configuration.py</span></code><a class="headerlink" href="#configuration-py" title="Permalink to this heading"></a></h2>
 <p>The O3R has multiple parameters that have an influence on the point cloud. Some of them affect the raw measurement and others modify how the data is converted into x,y,z, etc values. These parameters can be changed to better fit your applications and the script <code class="docutils literal notranslate"><span class="pre">configuration.py</span></code> presents how. You can refer to <a class="reference external" href="https://ifm3d.com/latest/Technology/3D/index_3d.html">this page</a> for a detailed description of each parameter.</p>
 <p>The ifm3d API provides functions to read and set the configuration of the device. Note that JSON formatting is used for all the configurations.</p>
-</div>
-<div class="section" id="deserialize-rgb-py">
+</section>
+<section id="deserialize-rgb-py">
 <h2><code class="docutils literal notranslate"><span class="pre">deserialize_rgb.py</span></code><a class="headerlink" href="#deserialize-rgb-py" title="Permalink to this heading"></a></h2>
 <p>Some of the data provided by the O3R platform needs to be deserialized to be used.
 For more information on the data structures of each buffer please refer to the <a class="reference external" href="https://api.ifm3d.com/latest/_autosummary/ifm3dpy.deserialize.html">Python API documentation</a>.</p>
 <p>The usage of the deserializer is the same for all the deserializable buffers: create the object, and call the deserialize function. Follow the example code, <code class="docutils literal notranslate"><span class="pre">deserialize_rgb.py</span></code> for an example on deserializing the <code class="docutils literal notranslate"><span class="pre">RGBInfoV1</span></code> buffer.</p>
-</div>
-<div class="section" id="deserialize-imu-py-and-imu-data-py">
+</section>
+<section id="deserialize-imu-py-and-imu-data-py">
 <h2><code class="docutils literal notranslate"><span class="pre">deserialize_imu.py</span></code> and <code class="docutils literal notranslate"><span class="pre">imu_data.py</span></code><a class="headerlink" href="#deserialize-imu-py-and-imu-data-py" title="Permalink to this heading"></a></h2>
 <p>The IMU data can only be accessed with firmware versions 1.4.X or higher, and ifm3d version 1.5.X or higher.</p>
 <p>These two examples show how to retrieve IMU data from the device and how to deserialize it.</p>
-</div>
-<div class="section" id="diagnostic-py">
+</section>
+<section id="diagnostic-py">
 <h2><code class="docutils literal notranslate"><span class="pre">diagnostic.py</span></code><a class="headerlink" href="#diagnostic-py" title="Permalink to this heading"></a></h2>
 <p>The script <code class="docutils literal notranslate"><span class="pre">diagnostic.py</span></code> contains helper functions for retrieving diagnostics when requested or asynchronously.</p>
-</div>
-<div class="section" id="fw-update-utils-py">
+</section>
+<section id="fw-update-utils-py">
 <h2><code class="docutils literal notranslate"><span class="pre">fw_update_utils.py</span></code><a class="headerlink" href="#fw-update-utils-py" title="Permalink to this heading"></a></h2>
 <p>The script <code class="docutils literal notranslate"><span class="pre">fw_update_utils.py</span></code> demonstrates how to perform a firmware update for your O3R system. Additionally, the script includes several utility functions that provide information, such as determining the current firmware version.</p>
-</div>
-<div class="section" id="getting-data-py">
+</section>
+<section id="getting-data-py">
 <h2><code class="docutils literal notranslate"><span class="pre">getting_data*.py</span></code><a class="headerlink" href="#getting-data-py" title="Permalink to this heading"></a></h2>
 <p>The recommended way to receive data is to use the callback function, as shown in the <code class="docutils literal notranslate"><span class="pre">getting_data_callback.py</span></code> script. You can register a callback function that will be executed for every received frame, until the program exits. Alternatively, wait for a frame: you just need to call the <code class="docutils literal notranslate"><span class="pre">WaitForFrame</span></code> function, as shown in the <code class="docutils literal notranslate"><span class="pre">getting_data.py</span></code> script.</p>
-</div>
-<div class="section" id="multi-head-py">
+</section>
+<section id="multi-head-py">
 <h2><code class="docutils literal notranslate"><span class="pre">multi_head.py</span></code><a class="headerlink" href="#multi-head-py" title="Permalink to this heading"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">multi_head.py</span></code> script demonstrates how to retrieve the list of camera heads connected to the VPU and their types.</p>
-</div>
-<div class="section" id="timestamps-py">
+</section>
+<section id="timestamps-py">
 <h2><code class="docutils literal notranslate"><span class="pre">timestamps.py</span></code><a class="headerlink" href="#timestamps-py" title="Permalink to this heading"></a></h2>
 <p>The script <code class="docutils literal notranslate"><span class="pre">timestamps.py</span></code> demonstrate how to get the timestamps and the effect of <code class="docutils literal notranslate"><span class="pre">sNTP</span></code> on the timestamps.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
