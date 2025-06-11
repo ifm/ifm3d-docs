@@ -122,22 +122,10 @@ var group__Device =
       [ "Reset", "classifm3d_1_1O3R.html#ab426c636e257766f0caa35b09ea97fea", null ],
       [ "ResolveConfig", "classifm3d_1_1O3R.html#a3a829eb053ef1ca8e14c3e14284f5aec", null ],
       [ "SaveInit", "classifm3d_1_1O3R.html#a314f79eb3f3d0fffe469fb276376cf91", null ],
-      [ "SealedBox", "classifm3d_1_1O3R.html#a6144891e9f8ba6554997646aaf81ef89", null ],
       [ "Set", "classifm3d_1_1O3R.html#a0952daae6643332cbdd48d7c8d282e75", null ],
       [ "SwUpdateVersion", "classifm3d_1_1O3R.html#af30eaa6348c6f06bef31f2082abfa275", null ],
       [ "ToJSON", "classifm3d_1_1O3R.html#a9e9ae86629b8119af831aceaaa1c786c", null ],
-      [ "WhoAmI", "classifm3d_1_1O3R.html#a047049bbce215aeee7f0f8ee1868831f", null ],
-      [ "O3RSealedBox", "classifm3d_1_1O3R.html#ae94af17e914711dbb3e137692204e720", null ]
-    ] ],
-    [ "O3RSealedBox", "classifm3d_1_1O3RSealedBox.html", [
-      [ "Ptr", "classifm3d_1_1O3RSealedBox.html#a373d7fa7055a4fc1a72b7a8ed4fbf6e0", null ],
-      [ "O3RSealedBox", "classifm3d_1_1O3RSealedBox.html#a8e53710710f318f2901a9315a5c75d78", null ],
-      [ "~O3RSealedBox", "classifm3d_1_1O3RSealedBox.html#a2871dfab94c332a9450d57746d9745de", null ],
-      [ "GetPublicKey", "classifm3d_1_1O3RSealedBox.html#a37d70db874ea2012c564812a2b6dcaf0", null ],
-      [ "IsPasswordProtected", "classifm3d_1_1O3RSealedBox.html#a2a80b67a6bca542d71970536e834d966", null ],
-      [ "RemovePassword", "classifm3d_1_1O3RSealedBox.html#a5eab976bba805c43c2751c6afad97966", null ],
-      [ "Set", "classifm3d_1_1O3RSealedBox.html#a806d676b8353eb63acfbc6659886314c", null ],
-      [ "SetPassword", "classifm3d_1_1O3RSealedBox.html#a54e2d9e0efa30fca8030e0ef02bae152", null ]
+      [ "WhoAmI", "classifm3d_1_1O3R.html#a047049bbce215aeee7f0f8ee1868831f", null ]
     ] ],
     [ "O3X", "classifm3d_1_1O3X.html", [
       [ "Ptr", "classifm3d_1_1O3X.html#a395a72e898e391bec89772992fad756f", null ],
