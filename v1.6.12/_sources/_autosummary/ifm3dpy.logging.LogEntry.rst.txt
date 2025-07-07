@@ -1,0 +1,31 @@
+ifm3dpy.logging.LogEntry
+========================
+
+.. currentmodule:: ifm3dpy.logging
+
+.. autoclass:: LogEntry
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~LogEntry.__init__
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~LogEntry.file
+   
+   

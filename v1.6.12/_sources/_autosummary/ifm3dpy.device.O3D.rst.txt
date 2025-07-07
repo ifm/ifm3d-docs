@@ -1,0 +1,65 @@
+ifm3dpy.device.O3D
+==================
+
+.. currentmodule:: ifm3dpy.device
+
+.. autoclass:: O3D
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~O3D.__init__
+      ~O3D.active_application
+      ~O3D.am_i
+      ~O3D.application_list
+      ~O3D.application_types
+      ~O3D.cancel_session
+      ~O3D.check_minimum_firmware_version
+      ~O3D.copy_application
+      ~O3D.create_application
+      ~O3D.delete_application
+      ~O3D.device_discovery
+      ~O3D.device_parameter
+      ~O3D.device_type
+      ~O3D.export_ifm_app
+      ~O3D.export_ifm_config
+      ~O3D.factory_reset
+      ~O3D.firmware_version
+      ~O3D.force_trigger
+      ~O3D.from_json
+      ~O3D.heartbeat
+      ~O3D.imager_types
+      ~O3D.import_ifm_app
+      ~O3D.import_ifm_config
+      ~O3D.reboot
+      ~O3D.request_session
+      ~O3D.set_current_time
+      ~O3D.set_temp_ip_address
+      ~O3D.set_temporary_application_parameters
+      ~O3D.to_json
+      ~O3D.trace_logs
+      ~O3D.unit_vectors
+      ~O3D.who_am_i
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~O3D.ip
+      ~O3D.password
+      ~O3D.session_id
+      ~O3D.xmlrpc_port
+   
+   

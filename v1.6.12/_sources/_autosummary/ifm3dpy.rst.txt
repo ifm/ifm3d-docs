@@ -1,0 +1,32 @@
+﻿ifm3dpy
+=======
+
+.. automodule:: ifm3dpy
+  
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:                                          
+      :template: class.rst               
+   
+      Awaitable
+      FrameAwaitable
+   
+   
+
+   
+   
+   
+
+
+

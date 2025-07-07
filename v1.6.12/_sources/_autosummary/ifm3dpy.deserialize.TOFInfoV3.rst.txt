@@ -1,0 +1,43 @@
+ifm3dpy.deserialize.TOFInfoV3
+=============================
+
+.. currentmodule:: ifm3dpy.deserialize
+
+.. autoclass:: TOFInfoV3
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TOFInfoV3.__init__
+      ~TOFInfoV3.deserialize
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TOFInfoV3.amp_normalization_factors
+      ~TOFInfoV3.amplitude_resolution
+      ~TOFInfoV3.distance_resolution
+      ~TOFInfoV3.exposure_times_s
+      ~TOFInfoV3.exposure_timestamps_ns
+      ~TOFInfoV3.extrinsic_optic_to_user
+      ~TOFInfoV3.illu_temperature
+      ~TOFInfoV3.imager
+      ~TOFInfoV3.intrinsic_calibration
+      ~TOFInfoV3.inverse_intrinsic_calibration
+      ~TOFInfoV3.mode
+      ~TOFInfoV3.version
+   
+   
