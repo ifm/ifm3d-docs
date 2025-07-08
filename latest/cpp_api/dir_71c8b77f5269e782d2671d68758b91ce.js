@@ -9,5 +9,5 @@ var dir_71c8b77f5269e782d2671d68758b91ce =
     [ "o3r.h", "o3r_8h_source.html", null ],
     [ "o3x.h", "o3x_8h_source.html", null ],
     [ "semver.h", "semver_8h_source.html", null ],
-    [ "util.h", "device_2include_2ifm3d_2device_2util_8h_source.html", null ]
+    [ "util.h", "util_8h_source.html", null ]
 ];

@@ -69,7 +69,7 @@ var classifm3d_1_1Device =
     [ "TraceLogs", "classifm3d_1_1Device.html#a649d525094c8e266bc84decc4618f26d", null ],
     [ "WhoAmI", "classifm3d_1_1Device.html#ae79b64c03d1a11a84cfa104c08ad1dc3", null ],
     [ "XMLRPCPort", "classifm3d_1_1Device.html#ad7a08318bdee78328f567dbc47f0f221", null ],
-    [ "XWrapper", "classifm3d_1_1Device.html#ac669a75eb13078bf4b0f41fd567936f4", null ],
+    [ "XWrapper", "classifm3d_1_1Device.html#af1623e17c3f61034a7a3d63e793a17f2", null ],
     [ "device_type_", "classifm3d_1_1Device.html#a440e1b50f9fe85768f148c10c51c0c89", null ],
     [ "pImpl", "classifm3d_1_1Device.html#a1282cc966ebdd376767c7b76adff021c", null ]
 ];

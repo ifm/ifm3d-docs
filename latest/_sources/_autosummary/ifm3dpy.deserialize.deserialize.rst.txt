@@ -1,0 +1,6 @@
+ifm3dpy.deserialize.deserialize
+===============================
+
+.. currentmodule:: ifm3dpy.deserialize
+
+.. autofunction:: deserialize

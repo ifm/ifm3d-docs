@@ -7,7 +7,6 @@ var classifm3d_1_1RGBInfoV1 =
     [ "frame_counter", "classifm3d_1_1RGBInfoV1.html#a9c0642b76358ee8ae290ba6c09ddba3b", null ],
     [ "intrinsic_calibration", "classifm3d_1_1RGBInfoV1.html#a8f428e6bccf3d159b3ffb13ff3810aae", null ],
     [ "inverse_intrinsic_calibration", "classifm3d_1_1RGBInfoV1.html#a3374be6d666da869dbf11e23c7dfc6b5", null ],
-    [ "rgb_info_v1_size", "classifm3d_1_1RGBInfoV1.html#a55de51518605aafad15aaa5656500970", null ],
     [ "timestamp_ns", "classifm3d_1_1RGBInfoV1.html#a5f347edb80ac17612de21bf153720c6f", null ],
     [ "version", "classifm3d_1_1RGBInfoV1.html#a0f83961cae0af73bb83b4fba4a470f15", null ]
 ];

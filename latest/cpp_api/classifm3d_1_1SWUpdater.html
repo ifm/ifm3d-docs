@@ -104,9 +104,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>Ptr</b> = std::share
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a930023e5e858f0680888d2b20f267330"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1SWUpdater.html#a930023e5e858f0680888d2b20f267330">SWUpdater</a> (ifm3d::Device::Ptr cam, const <a class="el" href="classifm3d_1_1SWUpdater.html#ab90463e11ba0306bc62e087ed00260b1">ifm3d::SWUpdater::FlashStatusCb</a> &amp;cb={}, const std::uint16_t swupdate_recovery_port=ifm3d::SWUPDATER_RECOVERY_PORT)</td></tr>
-<tr class="memdesc:a930023e5e858f0680888d2b20f267330"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ctor.  <a href="classifm3d_1_1SWUpdater.html#a930023e5e858f0680888d2b20f267330">More...</a><br /></td></tr>
-<tr class="separator:a930023e5e858f0680888d2b20f267330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92e0cb12e5fdf459a9d2131e01d027ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1SWUpdater.html#a92e0cb12e5fdf459a9d2131e01d027ea">SWUpdater</a> (ifm3d::Device::Ptr cam, const <a class="el" href="classifm3d_1_1SWUpdater.html#ab90463e11ba0306bc62e087ed00260b1">ifm3d::SWUpdater::FlashStatusCb</a> &amp;cb={}, std::uint16_t swupdate_recovery_port=ifm3d::SWUPDATER_RECOVERY_PORT, std::optional&lt; ifm3d::Device::swu_version &gt; force_swu_version=std::nullopt)</td></tr>
+<tr class="memdesc:a92e0cb12e5fdf459a9d2131e01d027ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ctor.  <a href="classifm3d_1_1SWUpdater.html#a92e0cb12e5fdf459a9d2131e01d027ea">More...</a><br /></td></tr>
+<tr class="separator:a92e0cb12e5fdf459a9d2131e01d027ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad894014e430bed353d30d8e9310ca050"><td class="memItemLeft" align="right" valign="top"><a id="ad894014e430bed353d30d8e9310ca050"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>SWUpdater</b> (<a class="el" href="classifm3d_1_1SWUpdater.html">SWUpdater</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:ad894014e430bed353d30d8e9310ca050"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,9 +137,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a52e3b4f2adb287ff53e71c118da4da7a"><td class="memItemLeft" align="right" valign="top"><a id="a52e3b4f2adb287ff53e71c118da4da7a"></a>
-class IFM3D_NO_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><b>Impl</b></td></tr>
-<tr class="separator:a52e3b4f2adb287ff53e71c118da4da7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad97db4a077434faaee7cee02c1372a6"><td class="memItemLeft" align="right" valign="top"><a id="aad97db4a077434faaee7cee02c1372a6"></a>
+class IFM3D_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><b>Impl</b></td></tr>
+<tr class="separator:aad97db4a077434faaee7cee02c1372a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ab90463e11ba0306bc62e087ed00260b1"></a>
@@ -161,8 +161,8 @@ class IFM3D_NO_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><b>Impl
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a930023e5e858f0680888d2b20f267330"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a930023e5e858f0680888d2b20f267330">&#9670;&nbsp;</a></span>SWUpdater()</h2>
+<a id="a92e0cb12e5fdf459a9d2131e01d027ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92e0cb12e5fdf459a9d2131e01d027ea">&#9670;&nbsp;</a></span>SWUpdater()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -182,8 +182,14 @@ class IFM3D_NO_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><b>Impl
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::uint16_t&#160;</td>
-          <td class="paramname"><em>swupdate_recovery_port</em> = <code>ifm3d::SWUPDATER_RECOVERY_PORT</code>&#160;</td>
+          <td class="paramtype">std::uint16_t&#160;</td>
+          <td class="paramname"><em>swupdate_recovery_port</em> = <code>ifm3d::SWUPDATER_RECOVERY_PORT</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; ifm3d::Device::swu_version &gt;&#160;</td>
+          <td class="paramname"><em>force_swu_version</em> = <code>std::nullopt</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
