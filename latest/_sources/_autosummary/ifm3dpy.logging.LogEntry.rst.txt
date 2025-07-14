@@ -27,5 +27,10 @@ ifm3dpy.logging.LogEntry
    .. autosummary::
    
       ~LogEntry.file
+      ~LogEntry.func
+      ~LogEntry.line
+      ~LogEntry.log_level
+      ~LogEntry.message
+      ~LogEntry.time
    
    
