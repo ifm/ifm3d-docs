@@ -238,60 +238,7 @@ Simply access the image by calling <code class="docutils literal notranslate"><s
 <section id="using-a-callback">
 <h3>Using a callback<a class="headerlink" href="#using-a-callback" title="Permalink to this heading"></a></h3>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-5-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-5-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-5-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-5-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-5-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#############################################</span>
-<span class="c1"># Copyright 2023-present ifm electronic, gmbh</span>
-<span class="c1"># SPDX-License-Identifier: Apache-2.0</span>
-<span class="c1">#############################################</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ifm3dpy.device</span><span class="w"> </span><span class="kn">import</span> <span class="n">O3R</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ifm3dpy.framegrabber</span><span class="w"> </span><span class="kn">import</span> <span class="n">FrameGrabber</span><span class="p">,</span> <span class="n">buffer_id</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="n">frame</span><span class="p">):</span>
-    <span class="c1"># Read the distance image and display a pixel in the center</span>
-    <span class="n">dist</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">get_buffer</span><span class="p">(</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">)</span>
-    <span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">)</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">shape</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">width</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">height</span> <span class="o">//</span> <span class="mi">2</span><span class="p">])</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">ip</span><span class="p">,</span> <span class="n">port</span><span class="p">):</span>
-    <span class="c1"># Initialize the objects</span>
-    <span class="n">o3r</span> <span class="o">=</span> <span class="n">O3R</span><span class="p">(</span><span class="n">ip</span><span class="o">=</span><span class="n">ip</span><span class="p">)</span>
-    <span class="n">pcic_port</span> <span class="o">=</span> <span class="n">o3r</span><span class="o">.</span><span class="n">port</span><span class="p">(</span><span class="n">port</span><span class="p">)</span><span class="o">.</span><span class="n">pcic_port</span>
-    <span class="n">fg</span> <span class="o">=</span> <span class="n">FrameGrabber</span><span class="p">(</span><span class="n">o3r</span><span class="p">,</span> <span class="n">pcic_port</span><span class="o">=</span><span class="n">pcic_port</span><span class="p">)</span>
-
-    <span class="c1"># set schema and start Grabber</span>
-    <span class="n">fg</span><span class="o">.</span><span class="n">start</span><span class="p">(</span>
-        <span class="p">[</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">NORM_AMPLITUDE_IMAGE</span><span class="p">,</span> <span class="n">buffer_id</span><span class="o">.</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">,</span> <span class="n">buffer_id</span><span class="o">.</span><span class="n">XYZ</span><span class="p">]</span>
-    <span class="p">)</span>
-
-    <span class="n">fg</span><span class="o">.</span><span class="n">on_new_frame</span><span class="p">(</span><span class="n">callback</span><span class="p">)</span>
-
-    <span class="c1"># Sleep to avoid exiting the program too soon</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-    <span class="n">fg</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="c1"># If the example python package was build, import the configuration</span>
-        <span class="kn">from</span><span class="w"> </span><span class="nn">ovp8xxexamples</span><span class="w"> </span><span class="kn">import</span> <span class="n">config</span>
-
-        <span class="n">IP</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">IP</span>
-        <span class="n">PORT</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">PORT_3D</span>
-
-    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-        <span class="c1"># Otherwise, use default values</span>
-        <span class="nb">print</span><span class="p">(</span>
-            <span class="s2">&quot;Unable to import the configuration.</span><span class="se">\n</span><span class="s2">Please run &#39;pip install -e .&#39; from the python root directory&quot;</span>
-        <span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Defaulting to the default configuration.&quot;</span><span class="p">)</span>
-        <span class="n">IP</span> <span class="o">=</span> <span class="s2">&quot;192.168.0.69&quot;</span>
-        <span class="n">PORT</span> <span class="o">=</span> <span class="s2">&quot;port2&quot;</span>
-    
-    <span class="n">main</span><span class="p">(</span><span class="n">IP</span><span class="p">,</span> <span class="n">PORT</span><span class="p">)</span>
-</pre></div>
-</div>
-</div><div aria-labelledby="tab-5-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-5-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-5-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-5-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-5-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-5-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-5-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-5-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"></div><div aria-labelledby="tab-5-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-5-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm"> * Copyright 2021-present ifm electronic, gmbh</span>
 <span class="cm"> * SPDX-License-Identifier: Apache-2.0</span>
 <span class="cm"> */</span>
@@ -315,9 +262,10 @@ Simply access the image by calling <code class="docutils literal notranslate"><s
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// Get the IP from the environment if defined</span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">IP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">getenv</span><span class="p">(</span><span class="s">&quot;IFM3D_IP&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">getenv</span><span class="p">(</span><span class="s">&quot;IFM3D_IP&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">DEFAULT_IP</span><span class="p">.</span><span class="n">c_str</span><span class="p">();</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">IP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">getenv</span><span class="p">(</span><span class="s">&quot;IFM3D_IP&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">getenv</span><span class="p">(</span><span class="s">&quot;IFM3D_IP&quot;</span><span class="p">)</span>
+<span class="w">                                           </span><span class="o">:</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">DEFAULT_IP</span><span class="p">.</span><span class="n">c_str</span><span class="p">();</span>
 <span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">clog</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;IP: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">IP</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">  </span>
+
 <span class="w">  </span><span class="c1">//////////////////////////</span>
 <span class="w">  </span><span class="c1">// Declare the objects</span>
 <span class="w">  </span><span class="c1">//////////////////////////</span>
@@ -367,7 +315,7 @@ Simply access the image by calling <code class="docutils literal notranslate"><s
 <span class="w">  </span><span class="c1">//////////////////////////</span>
 
 <span class="w">  </span><span class="c1">// Set Schema and start the grabber</span>
-<span class="w">  </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Start</span><span class="p">({</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">AMPLITUDE_IMAGE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Start</span><span class="p">({</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">NORM_AMPLITUDE_IMAGE</span><span class="p">,</span>
 <span class="w">             </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">,</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">XYZ</span><span class="p">});</span>
 
 <span class="w">  </span><span class="c1">// Register callback function</span>
@@ -387,60 +335,7 @@ Simply access the image by calling <code class="docutils literal notranslate"><s
 <section id="using-the-polling-mode">
 <h3>Using the polling mode<a class="headerlink" href="#using-the-polling-mode" title="Permalink to this heading"></a></h3>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-6-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-6-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-6-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-6-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-6-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-6-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#############################################</span>
-<span class="c1"># Copyright 2023-present ifm electronic, gmbh</span>
-<span class="c1"># SPDX-License-Identifier: Apache-2.0</span>
-<span class="c1">#############################################</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ifm3dpy.device</span><span class="w"> </span><span class="kn">import</span> <span class="n">O3R</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">ifm3dpy.framegrabber</span><span class="w"> </span><span class="kn">import</span> <span class="n">FrameGrabber</span><span class="p">,</span> <span class="n">buffer_id</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">ip</span><span class="p">,</span> <span class="n">port</span><span class="p">):</span>
-    <span class="c1"># Initialize the objects</span>
-    <span class="n">o3r</span> <span class="o">=</span> <span class="n">O3R</span><span class="p">(</span><span class="n">ip</span><span class="p">)</span>
-    <span class="n">pcic_port</span> <span class="o">=</span> <span class="n">o3r</span><span class="o">.</span><span class="n">port</span><span class="p">(</span><span class="n">port</span><span class="p">)</span><span class="o">.</span><span class="n">pcic_port</span>
-    <span class="n">fg</span> <span class="o">=</span> <span class="n">FrameGrabber</span><span class="p">(</span><span class="n">o3r</span><span class="p">,</span> <span class="n">pcic_port</span><span class="p">)</span>
-
-    <span class="c1"># Set schema and start Grabber</span>
-    <span class="n">fg</span><span class="o">.</span><span class="n">start</span><span class="p">(</span>
-        <span class="p">[</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">NORM_AMPLITUDE_IMAGE</span><span class="p">,</span> <span class="n">buffer_id</span><span class="o">.</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">,</span> <span class="n">buffer_id</span><span class="o">.</span><span class="n">XYZ</span><span class="p">]</span>
-    <span class="p">)</span>
-
-    <span class="c1"># Get a frame</span>
-    <span class="p">[</span><span class="n">ok</span><span class="p">,</span> <span class="n">frame</span><span class="p">]</span> <span class="o">=</span> <span class="n">fg</span><span class="o">.</span><span class="n">wait_for_frame</span><span class="p">()</span><span class="o">.</span><span class="n">wait_for</span><span class="p">(</span><span class="mi">1500</span><span class="p">)</span>  <span class="c1"># wait with 1500ms timeout</span>
-
-    <span class="c1"># Check that a frame was received</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">ok</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Timeout while waiting for a frame.&quot;</span><span class="p">)</span>
-
-    <span class="c1"># Read the distance image and display a pixel in the center</span>
-    <span class="n">dist</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">get_buffer</span><span class="p">(</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">)</span>
-    <span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">)</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">shape</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">width</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">height</span> <span class="o">//</span> <span class="mi">2</span><span class="p">])</span>
-    <span class="n">fg</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="c1"># If the example python package was build, import the configuration</span>
-        <span class="kn">from</span><span class="w"> </span><span class="nn">ovp8xxexamples</span><span class="w"> </span><span class="kn">import</span> <span class="n">config</span>
-
-        <span class="n">IP</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">IP</span>
-        <span class="n">PORT</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">PORT_3D</span>
-
-    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-        <span class="c1"># Otherwise, use default values</span>
-        <span class="nb">print</span><span class="p">(</span>
-            <span class="s2">&quot;Unable to import the configuration.</span><span class="se">\n</span><span class="s2">Please run &#39;pip install -e .&#39; from the python root directory&quot;</span>
-        <span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Defaulting to the default configuration.&quot;</span><span class="p">)</span>
-        <span class="n">IP</span> <span class="o">=</span> <span class="s2">&quot;192.168.0.69&quot;</span>
-        <span class="n">PORT</span> <span class="o">=</span> <span class="s2">&quot;port2&quot;</span>
-
-    <span class="n">main</span><span class="p">(</span><span class="n">ip</span><span class="o">=</span><span class="n">IP</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">PORT</span><span class="p">)</span>
-</pre></div>
-</div>
-</div><div aria-labelledby="tab-6-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-6-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-6-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-6-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-6-Qysr" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-6-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-6-UHl0aG9u" class="sphinx-tabs-panel group-tab" id="panel-6-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"></div><div aria-labelledby="tab-6-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-6-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm"> * Copyright 2021-present ifm electronic, gmbh</span>
 <span class="cm"> * SPDX-License-Identifier: Apache-2.0</span>
 <span class="cm"> */</span>
@@ -503,7 +398,7 @@ Simply access the image by calling <code class="docutils literal notranslate"><s
 <span class="w">  </span><span class="c1">//////////////////////////</span>
 
 <span class="w">  </span><span class="c1">// Set Schema and start the grabber</span>
-<span class="w">  </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Start</span><span class="p">({</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">AMPLITUDE_IMAGE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Start</span><span class="p">({</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">NORM_AMPLITUDE_IMAGE</span><span class="p">,</span>
 <span class="w">             </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">RADIAL_DISTANCE_IMAGE</span><span class="p">,</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">XYZ</span><span class="p">});</span>
 
 <span class="w">  </span><span class="c1">//////////////////////////</span>
