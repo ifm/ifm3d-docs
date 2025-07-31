@@ -51,6 +51,7 @@ var hierarchy =
     [ "ifm3d::PortInfo", "structifm3d_1_1PortInfo.html", null ],
     [ "ifm3d::Organizer::Result", "structifm3d_1_1Organizer_1_1Result.html", null ],
     [ "ifm3d::RGBInfoV1", "classifm3d_1_1RGBInfoV1.html", null ],
+    [ "ifm3d::SealedBox", "classifm3d_1_1SealedBox.html", null ],
     [ "ifm3d::SemVer", "structifm3d_1_1SemVer.html", null ],
     [ "ifm3d::SWUpdater", "classifm3d_1_1SWUpdater.html", null ],
     [ "ifm3d::TOFInfoV3", "classifm3d_1_1TOFInfoV3.html", [

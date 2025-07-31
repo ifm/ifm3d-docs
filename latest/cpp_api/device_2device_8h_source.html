@@ -283,7 +283,7 @@ $(document).ready(function(){initNavTree('device_2device_8h_source.html',''); in
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      <span class="keyword">const</span> std::string&amp; ip = ifm3d::DEFAULT_IP,</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;      <span class="keyword">const</span> std::uint16_t xmlrpc_port = ifm3d::DEFAULT_XMLRPC_PORT,</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      <span class="keyword">const</span> std::string&amp; password = ifm3d::DEFAULT_PASSWORD,</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;      <span class="keywordtype">bool</span> throwIfUnavailable = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;      <span class="keywordtype">bool</span> throw_if_unavailable = <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    Device(<span class="keyword">const</span> std::string&amp; ip = ifm3d::DEFAULT_IP,</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;           <span class="keyword">const</span> std::uint16_t xmlrpc_port = ifm3d::DEFAULT_XMLRPC_PORT);</div>
@@ -343,7 +343,7 @@ $(document).ready(function(){initNavTree('device_2device_8h_source.html',''); in
 <div class="line"><a name="l00462"></a><span class="lineno"><a class="line" href="classifm3d_1_1Device.html#a440e1b50f9fe85768f148c10c51c0c89">  462</a></span>&#160;    std::string <a class="code" href="classifm3d_1_1Device.html#a440e1b50f9fe85768f148c10c51c0c89">device_type_</a>;</div>
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160; </div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    <span class="keywordtype">int</span> DeviceID();</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <span class="keywordtype">bool</span> checkDeviceID(<span class="keywordtype">int</span> deviceID, <span class="keywordtype">int</span> minID, <span class="keywordtype">int</span> maxID);</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <span class="keywordtype">bool</span> checkDeviceID(<span class="keywordtype">int</span> device_id, <span class="keywordtype">int</span> min_id, <span class="keywordtype">int</span> max_id);</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160; </div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    std::shared_ptr&lt;XMLRPC&gt; XWrapper();</div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160; </div>
@@ -363,7 +363,7 @@ $(document).ready(function(){initNavTree('device_2device_8h_source.html',''); in
 <div class="ttc" id="aclassifm3d_1_1Device_html_a752c3ebe308ebac6b2fe987cd0d53775"><div class="ttname"><a href="classifm3d_1_1Device.html#a752c3ebe308ebac6b2fe987cd0d53775">ifm3d::Device::boot_mode</a></div><div class="ttdeci">boot_mode</div><div class="ttdoc">Device boot up modes:</div><div class="ttdef"><b>Definition:</b> device.h:143</div></div>
 <div class="ttc" id="aclassifm3d_1_1Device_html"><div class="ttname"><a href="classifm3d_1_1Device.html">ifm3d::Device</a></div><div class="ttdef"><b>Definition:</b> device.h:132</div></div>
 <div class="ttc" id="aclassifm3d_1_1Device_html_ad490f12fe50608c0d93a926271e9e7ea"><div class="ttname"><a href="classifm3d_1_1Device.html#ad490f12fe50608c0d93a926271e9e7ea">ifm3d::Device::operating_mode</a></div><div class="ttdeci">operating_mode</div><div class="ttdoc">Device operating modes: run (streaming pixel data), edit (configuring the device/applications).</div><div class="ttdef"><b>Definition:</b> device.h:153</div></div>
-<div class="ttc" id="astructifm3d_1_1SemVer_html"><div class="ttname"><a href="structifm3d_1_1SemVer.html">ifm3d::SemVer</a></div><div class="ttdef"><b>Definition:</b> semver.h:19</div></div>
+<div class="ttc" id="astructifm3d_1_1SemVer_html"><div class="ttname"><a href="structifm3d_1_1SemVer.html">ifm3d::SemVer</a></div><div class="ttdef"><b>Definition:</b> semver.h:18</div></div>
 <div class="ttc" id="aclassifm3d_1_1Device_html_ae98a6e123c250bfde6dea15214f4356f"><div class="ttname"><a href="classifm3d_1_1Device.html#ae98a6e123c250bfde6dea15214f4356f">ifm3d::Device::trigger_mode</a></div><div class="ttdeci">trigger_mode</div><div class="ttdoc">Image acquisition trigger modes.</div><div class="ttdef"><b>Definition:</b> device.h:162</div></div>
 <div class="ttc" id="aclassifm3d_1_1Device_html_a26d401dffabd97a0cd0675211cb80f65"><div class="ttname"><a href="classifm3d_1_1Device.html#a26d401dffabd97a0cd0675211cb80f65">ifm3d::Device::import_flags</a></div><div class="ttdeci">import_flags</div><div class="ttdoc">Import flags used when importing a Vision Assistant configuration.</div><div class="ttdef"><b>Definition:</b> device.h:171</div></div>
 <div class="ttc" id="aclassifm3d_1_1O3R_html"><div class="ttname"><a href="classifm3d_1_1O3R.html">ifm3d::O3R</a></div><div class="ttdef"><b>Definition:</b> o3r.h:38</div></div>

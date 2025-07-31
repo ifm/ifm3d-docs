@@ -112,27 +112,27 @@ $(document).ready(function(){initNavTree('buffer_8h_source.html',''); initResiza
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  {</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">/* @ brief raw pointer to the data*/</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    uint8_t* data_;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    uint8_t* data_{};</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment">/*@brief number of columns in Buffer (width)*/</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    std::uint32_t cols_;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    std::uint32_t cols_{};</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="comment">/*@brief number of rows in Buffer (height)*/</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    std::uint32_t rows_;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    std::uint32_t rows_{};</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">/*@brief number of channel in Buffer*/</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    std::uint32_t nchannel_;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    std::uint32_t nchannel_{};</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">/* @brief data format or type*/</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    ifm3d::pixel_format data_format_;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    ifm3d::pixel_format data_format_{};</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="comment">/* @brief number of pixel to store one value of data*/</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    std::size_t data_size_in_bytes_;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    std::size_t data_size_in_bytes_{};</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">/* @brief size of the memory allocated*/</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">size_t</span> size_;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">size_t</span> size_{};</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="comment">/* @brief bytes to store pixel */</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">size_t</span> bytes_per_pixel;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">size_t</span> bytes_per_pixel{};</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="comment">/* @brief bytes per row */</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">size_t</span> bytes_per_row;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">size_t</span> bytes_per_row{};</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="comment">/* @brief json formatted metadata of the chunk obtain from device*/</span></div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <a class="code" href="classifm3d_1_1json.html">json</a> metadata_;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment">/* @brief buffer id of Buffer */</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a> bufferId_;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a> bufferId_{};</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">class </span>BufferAllocator;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    std::shared_ptr&lt;BufferAllocator&gt; buffer_allocator_;</div>
@@ -153,8 +153,8 @@ $(document).ready(function(){initNavTree('buffer_8h_source.html',''); initResiza
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;           <span class="keyword">const</span> std::uint32_t rows,</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;           <span class="keyword">const</span> std::uint32_t nchannel,</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;           ifm3d::pixel_format format,</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;           std::optional&lt;ifm3d::json&gt; metadata = std::nullopt,</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;           <a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a> bufferId_ = <span class="keyword">static_cast&lt;</span><a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a><span class="keyword">&gt;</span>(0));</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;           <span class="keyword">const</span> std::optional&lt;ifm3d::json&gt;&amp; metadata = std::nullopt,</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;           <a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a> <a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">buffer_id</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a><span class="keyword">&gt;</span>(0));</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classifm3d_1_1Buffer.html">Buffer</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
@@ -178,7 +178,7 @@ $(document).ready(function(){initNavTree('buffer_8h_source.html',''); initResiza
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                <span class="keyword">const</span> std::uint32_t rows,</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                <span class="keyword">const</span> std::uint32_t nchannel,</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                ifm3d::pixel_format format,</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                <a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a> bufferId);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                <a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a> <a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">buffer_id</a>);</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="code" href="classifm3d_1_1Buffer.html">Buffer</a> clone() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
@@ -336,75 +336,77 @@ $(document).ready(function(){initNavTree('buffer_8h_source.html',''); initResiza
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <a class="code" href="classifm3d_1_1Buffer__.html">Buffer_</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1Buffer.html">Buffer</a>&amp;);</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="comment">/* Similar to Buffer::create(cols,rows,ifm3d::formatType&lt;Tp&gt;::nchannel,</span></div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="comment">     * ifm3d::formatType&lt;Tp&gt;::format ) */</span></div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordtype">void</span> create(<span class="keyword">const</span> std::uint32_t cols, <span class="keyword">const</span> std::uint32_t rows);</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160; </div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <a class="code" href="classifm3d_1_1Buffer__.html">Buffer_</a> <a class="code" href="classifm3d_1_1Buffer__.html#a0a3bda2954d4f7b81d18852b6c5a4c9b">clone</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="comment">/* getters*/</span></div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    std::uint32_t height() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    std::uint32_t width() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    std::uint32_t nchannels() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    ifm3d::pixel_format dataFormat() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <a class="code" href="classifm3d_1_1json.html">ifm3d::json</a> metadata() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    Tp* <a class="code" href="classifm3d_1_1Buffer__.html#afa4cf73f3d6270731897617f352a996a">ptr</a>(<span class="keyword">const</span> std::uint32_t row);</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    Tp* <a class="code" href="classifm3d_1_1Buffer__.html#afa4cf73f3d6270731897617f352a996a">ptr</a>(<span class="keyword">const</span> std::uint32_t row, <span class="keyword">const</span> std::uint32_t col);</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160; </div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="comment">/*@brief access to the pixel for read  and write</span></div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="comment">      @param Index of the pixel considering image as 1D array</span></div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="comment">      @return refernce of the value at the index</span></div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    Tp&amp; at(<span class="keyword">const</span> std::size_t index);</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="comment">/*@overload considering image as 2D</span></div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="comment">      @param row 1st dimension index</span></div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="comment">      @param col 2nd dimension index</span></div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    Tp&amp; at(<span class="keyword">const</span> std::uint32_t row, <span class="keyword">const</span> std::uint32_t col);</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="comment">/*@brief set the value where mask value is 1</span></div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="comment">      @param val  value to be set</span></div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="comment">      @param mask  Binary mask</span></div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="comment">      @Note mask size must be same as this</span></div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordtype">void</span> setTo(<span class="keyword">const</span> Tp val, <a class="code" href="classifm3d_1_1Buffer.html">ifm3d::Buffer</a>&amp; mask);</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <span class="comment">/*@brief Return the Iterator pointing to start of data*/</span></div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <a class="code" href="structifm3d_1_1Buffer_1_1Iterator.html">Iterator&lt;Tp&gt;</a> begin();</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="comment">/*@brief Return the Iterator pointing to end of data*/</span></div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <a class="code" href="structifm3d_1_1Buffer_1_1Iterator.html">Iterator&lt;Tp&gt;</a> end();</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160; </div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;  }; <span class="comment">// end Buffer_&lt;Tp&gt;</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="comment">     * ifm3d::formatType&lt;Tp&gt;::format, ifm3d::buffer_id buffer_id ) */</span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordtype">void</span> create(<span class="keyword">const</span> std::uint32_t cols,</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                <span class="keyword">const</span> std::uint32_t rows,</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                <a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a> <a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">buffer_id</a>);</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160; </div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <a class="code" href="classifm3d_1_1Buffer__.html">Buffer_</a> <a class="code" href="classifm3d_1_1Buffer__.html#a0a3bda2954d4f7b81d18852b6c5a4c9b">clone</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="comment">/* getters*/</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    std::uint32_t height() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    std::uint32_t width() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    std::uint32_t nchannels() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    ifm3d::pixel_format dataFormat() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <a class="code" href="classifm3d_1_1json.html">ifm3d::json</a> metadata() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    Tp* <a class="code" href="classifm3d_1_1Buffer__.html#afa4cf73f3d6270731897617f352a996a">ptr</a>(<span class="keyword">const</span> std::uint32_t row);</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160; </div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    Tp* <a class="code" href="classifm3d_1_1Buffer__.html#afa4cf73f3d6270731897617f352a996a">ptr</a>(<span class="keyword">const</span> std::uint32_t row, <span class="keyword">const</span> std::uint32_t col);</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160; </div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="comment">/*@brief access to the pixel for read  and write</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="comment">      @param Index of the pixel considering image as 1D array</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="comment">      @return refernce of the value at the index</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    Tp&amp; at(<span class="keyword">const</span> std::size_t index);</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="comment">/*@overload considering image as 2D</span></div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="comment">      @param row 1st dimension index</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="comment">      @param col 2nd dimension index</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    Tp&amp; at(<span class="keyword">const</span> std::uint32_t row, <span class="keyword">const</span> std::uint32_t col);</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="comment">/*@brief set the value where mask value is 1</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;<span class="comment">      @param val  value to be set</span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="comment">      @param mask  Binary mask</span></div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;<span class="comment">      @Note mask size must be same as this</span></div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <span class="keywordtype">void</span> setTo(<span class="keyword">const</span> Tp val, <a class="code" href="classifm3d_1_1Buffer.html">ifm3d::Buffer</a>&amp; mask);</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160; </div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="comment">/*@brief Return the Iterator pointing to start of data*/</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <a class="code" href="structifm3d_1_1Buffer_1_1Iterator.html">Iterator&lt;Tp&gt;</a> begin();</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="comment">/*@brief Return the Iterator pointing to end of data*/</span></div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    <a class="code" href="structifm3d_1_1Buffer_1_1Iterator.html">Iterator&lt;Tp&gt;</a> end();</div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160; </div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">int</span> n&gt;</div>
-<div class="line"><a name="l00410"></a><span class="lineno"><a class="line" href="structifm3d_1_1Point.html">  410</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structifm3d_1_1Point.html">Point</a></div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  {</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    T val[n];</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keyword">using</span> value_type = T;</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  };</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160; </div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  <span class="keyword">using</span> <a class="code" href="structifm3d_1_1Point.html">Point3D</a> = <span class="keyword">struct </span><a class="code" href="structifm3d_1_1Point.html">Point</a>&lt;T, 3&gt;;</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160; </div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  <span class="keyword">using</span> <a class="code" href="structifm3d_1_1Point.html">Point4D</a> = <span class="keyword">struct </span><a class="code" href="structifm3d_1_1Point.html">Point</a>&lt;T, 4&gt;;</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160; </div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;  <span class="comment">// user helper types</span></div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;  <span class="keyword">using</span> <a class="code" href="structifm3d_1_1Point.html">Point3D_16U</a> = <a class="code" href="structifm3d_1_1Point.html">Point3D&lt;std::uint16_t&gt;</a>;</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;  <span class="keyword">using</span> <a class="code" href="structifm3d_1_1Point.html">Point3D_16S</a> = <a class="code" href="structifm3d_1_1Point.html">Point3D&lt;std::int16_t&gt;</a>;</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;  <span class="comment">// checking for 32 bit float support</span></div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;  static_assert(CHAR_BIT * <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>) == 32, <span class="stringliteral">&quot;32 bit float required&quot;</span>);</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;  <span class="keyword">using</span> <a class="code" href="structifm3d_1_1Point.html">Point3D_32F</a> = <a class="code" href="structifm3d_1_1Point.html">Point3D&lt;float&gt;</a>;</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160; </div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;  <span class="keyword">using</span> <a class="code" href="structifm3d_1_1Point.html">Point4D_16U</a> = <a class="code" href="structifm3d_1_1Point.html">Point4D&lt;std::uint16_t&gt;</a>;</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;  <span class="keyword">using</span> <a class="code" href="structifm3d_1_1Point.html">Point4D_16S</a> = <a class="code" href="structifm3d_1_1Point.html">Point4D&lt;std::int16_t&gt;</a>;</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;  <span class="keyword">using</span> <a class="code" href="structifm3d_1_1Point.html">Point4D_32F</a> = <a class="code" href="structifm3d_1_1Point.html">Point4D&lt;float&gt;</a>;</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160; </div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;  }; <span class="comment">// end Buffer_&lt;Tp&gt;</span></div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160; </div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">int</span> n&gt;</div>
+<div class="line"><a name="l00412"></a><span class="lineno"><a class="line" href="structifm3d_1_1Point.html">  412</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structifm3d_1_1Point.html">Point</a></div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  {</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    T val[n];</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="keyword">using</span> value_type = T;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;  };</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160; </div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;  <span class="keyword">using</span> <a class="code" href="structifm3d_1_1Point.html">Point3D</a> = <span class="keyword">struct </span><a class="code" href="structifm3d_1_1Point.html">Point</a>&lt;T, 3&gt;;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160; </div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;  <span class="keyword">using</span> <a class="code" href="structifm3d_1_1Point.html">Point4D</a> = <span class="keyword">struct </span><a class="code" href="structifm3d_1_1Point.html">Point</a>&lt;T, 4&gt;;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160; </div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;  <span class="comment">// user helper types</span></div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;  <span class="keyword">using</span> <a class="code" href="structifm3d_1_1Point.html">Point3D_16U</a> = <a class="code" href="structifm3d_1_1Point.html">Point3D&lt;std::uint16_t&gt;</a>;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;  <span class="keyword">using</span> <a class="code" href="structifm3d_1_1Point.html">Point3D_16S</a> = <a class="code" href="structifm3d_1_1Point.html">Point3D&lt;std::int16_t&gt;</a>;</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;  <span class="comment">// checking for 32 bit float support</span></div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;  static_assert(CHAR_BIT * <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>) == 32, <span class="stringliteral">&quot;32 bit float required&quot;</span>);</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;  <span class="keyword">using</span> <a class="code" href="structifm3d_1_1Point.html">Point3D_32F</a> = <a class="code" href="structifm3d_1_1Point.html">Point3D&lt;float&gt;</a>;</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160; </div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;  <span class="keyword">using</span> <a class="code" href="structifm3d_1_1Point.html">Point4D_16U</a> = <a class="code" href="structifm3d_1_1Point.html">Point4D&lt;std::uint16_t&gt;</a>;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  <span class="keyword">using</span> <a class="code" href="structifm3d_1_1Point.html">Point4D_16S</a> = <a class="code" href="structifm3d_1_1Point.html">Point4D&lt;std::int16_t&gt;</a>;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;  <span class="keyword">using</span> <a class="code" href="structifm3d_1_1Point.html">Point4D_32F</a> = <a class="code" href="structifm3d_1_1Point.html">Point4D&lt;float&gt;</a>;</div>
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160; </div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;<span class="preprocessor">#include &lt;ifm3d/fg/detail/buffer.hpp&gt;</span></div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="preprocessor">#endif // IFM3D_FG_Buffer_H</span></div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;} <span class="comment">// end: namespace ifm3d</span></div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160; </div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<span class="preprocessor">#include &lt;ifm3d/fg/detail/buffer.hpp&gt;</span></div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;<span class="preprocessor">#endif // IFM3D_FG_Buffer_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassifm3d_1_1json_html"><div class="ttname"><a href="classifm3d_1_1json.html">ifm3d::json</a></div><div class="ttdef"><b>Definition:</b> json.hpp:128</div></div>
@@ -413,7 +415,7 @@ $(document).ready(function(){initNavTree('buffer_8h_source.html',''); initResiza
 <div class="ttc" id="agroup__FrameGrabber_html_ga363ee802dc7953150dc23ba56d7e9c50"><div class="ttname"><a href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a></div><div class="ttdeci">buffer_id</div><div class="ttdef"><b>Definition:</b> buffer_id.h:17</div></div>
 <div class="ttc" id="astructifm3d_1_1Buffer_1_1Iterator_html"><div class="ttname"><a href="structifm3d_1_1Buffer_1_1Iterator.html">ifm3d::Buffer::Iterator</a></div><div class="ttdef"><b>Definition:</b> buffer.h:260</div></div>
 <div class="ttc" id="aclassifm3d_1_1IteratorAdapter_html"><div class="ttname"><a href="classifm3d_1_1IteratorAdapter.html">ifm3d::IteratorAdapter</a></div><div class="ttdef"><b>Definition:</b> buffer.h:315</div></div>
-<div class="ttc" id="astructifm3d_1_1Point_html"><div class="ttname"><a href="structifm3d_1_1Point.html">ifm3d::Point</a></div><div class="ttdoc">Struct for 3D space point.</div><div class="ttdef"><b>Definition:</b> buffer.h:410</div></div>
+<div class="ttc" id="astructifm3d_1_1Point_html"><div class="ttname"><a href="structifm3d_1_1Point.html">ifm3d::Point</a></div><div class="ttdoc">Struct for 3D space point.</div><div class="ttdef"><b>Definition:</b> buffer.h:412</div></div>
 <div class="ttc" id="aclassifm3d_1_1Buffer___html_afa4cf73f3d6270731897617f352a996a"><div class="ttname"><a href="classifm3d_1_1Buffer__.html#afa4cf73f3d6270731897617f352a996a">ifm3d::Buffer_::ptr</a></div><div class="ttdeci">Tp * ptr(const std::uint32_t row)</div><div class="ttdoc">returns a pointer to the specified Buffer row.</div></div>
 <div class="ttc" id="aclassifm3d_1_1Buffer___html"><div class="ttname"><a href="classifm3d_1_1Buffer__.html">ifm3d::Buffer_</a></div><div class="ttdef"><b>Definition:</b> buffer.h:329</div></div>
 <!-- start footer part -->

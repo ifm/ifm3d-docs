@@ -2,7 +2,7 @@ var classifm3d_1_1Buffer =
 [
     [ "Iterator", "structifm3d_1_1Buffer_1_1Iterator.html", "structifm3d_1_1Buffer_1_1Iterator" ],
     [ "Buffer", "classifm3d_1_1Buffer.html#aee0b8133eba77f2a26ff6f538079a9e0", null ],
-    [ "Buffer", "classifm3d_1_1Buffer.html#a3b4e2aa32a34eabc435f2ce9ee673682", null ],
+    [ "Buffer", "classifm3d_1_1Buffer.html#acf16f41f731893f13d955fa7fab81c52", null ],
     [ "~Buffer", "classifm3d_1_1Buffer.html#a89c7f2c844a46e1b57db727c1acd460d", null ],
     [ "Buffer", "classifm3d_1_1Buffer.html#af71f1c54f73d876b0e3b3e35a759fe1d", null ],
     [ "Buffer", "classifm3d_1_1Buffer.html#a32c75d7c73880adcbba8cc5b2a403c51", null ],
@@ -13,7 +13,7 @@ var classifm3d_1_1Buffer =
     [ "begin", "classifm3d_1_1Buffer.html#a41fe1fbaa99e09bbbc3e4eebd786bd93", null ],
     [ "bufferId", "classifm3d_1_1Buffer.html#a05a5d84b05e558112fb3eb546a3dddbc", null ],
     [ "clone", "classifm3d_1_1Buffer.html#af3013a0a21394815bc4901d42a316136", null ],
-    [ "create", "classifm3d_1_1Buffer.html#a547b2d3d17173fa71d41c8ae2b353219", null ],
+    [ "create", "classifm3d_1_1Buffer.html#a2414166ff35146d5989144f96e33c427", null ],
     [ "dataFormat", "classifm3d_1_1Buffer.html#a0aaacdb1e14867743cac502bf6873ab4", null ],
     [ "end", "classifm3d_1_1Buffer.html#a36c9f988843c4219f616f2b4f0a0d5da", null ],
     [ "height", "classifm3d_1_1Buffer.html#adb1506baf51e5ba7db9eaf132e66958e", null ],

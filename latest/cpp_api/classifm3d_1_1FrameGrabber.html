@@ -142,9 +142,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:aad76d616c98cfde74adedb6de34d1793"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#aad76d616c98cfde74adedb6de34d1793">OnNewFrame</a> (NewFrameCallback callback=nullptr)</td></tr>
 <tr class="memdesc:aad76d616c98cfde74adedb6de34d1793"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callback will be executed whenever a new frame is available.  <a href="classifm3d_1_1FrameGrabber.html#aad76d616c98cfde74adedb6de34d1793">More...</a><br /></td></tr>
 <tr class="separator:aad76d616c98cfde74adedb6de34d1793"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a207a67d3b3a8affa46dd0aaf2ed36c04"><td class="memItemLeft" align="right" valign="top">std::shared_future&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a207a67d3b3a8affa46dd0aaf2ed36c04">Start</a> (const BufferList &amp;buffers, const std::optional&lt; <a class="el" href="classifm3d_1_1json.html">json</a> &gt; &amp;pcicFormat=std::nullopt)</td></tr>
-<tr class="memdesc:a207a67d3b3a8affa46dd0aaf2ed36c04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the worker thread for streaming in pixel data from the device.  <a href="classifm3d_1_1FrameGrabber.html#a207a67d3b3a8affa46dd0aaf2ed36c04">More...</a><br /></td></tr>
-<tr class="separator:a207a67d3b3a8affa46dd0aaf2ed36c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c4942a1a0c5aedb6430b621fa9a3446"><td class="memItemLeft" align="right" valign="top">std::shared_future&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a1c4942a1a0c5aedb6430b621fa9a3446">Start</a> (const BufferList &amp;buffers, const std::optional&lt; <a class="el" href="classifm3d_1_1json.html">json</a> &gt; &amp;schema=std::nullopt)</td></tr>
+<tr class="memdesc:a1c4942a1a0c5aedb6430b621fa9a3446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the worker thread for streaming in pixel data from the device.  <a href="classifm3d_1_1FrameGrabber.html#a1c4942a1a0c5aedb6430b621fa9a3446">More...</a><br /></td></tr>
+<tr class="separator:a1c4942a1a0c5aedb6430b621fa9a3446"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a12c26b81bd4cd01291f649ac7ce844"><td class="memItemLeft" align="right" valign="top">std::shared_future&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a6a12c26b81bd4cd01291f649ac7ce844">Stop</a> ()</td></tr>
 <tr class="memdesc:a6a12c26b81bd4cd01291f649ac7ce844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the worker thread for streaming in pixel data from the device.  <a href="classifm3d_1_1FrameGrabber.html#a6a12c26b81bd4cd01291f649ac7ce844">More...</a><br /></td></tr>
 <tr class="separator:a6a12c26b81bd4cd01291f649ac7ce844"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -300,7 +300,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>enable/disable masking on supported buffer </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>flag to enable/disable masking Note: <a class="el" href="group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50ab45463507e02af5daf2bdc908cc217ad">ifm3d::buffer_id::CONFIDENCE_IMAGE</a> should be in schema set passed to <a class="el" href="classifm3d_1_1FrameGrabber.html#a207a67d3b3a8affa46dd0aaf2ed36c04" title="Starts the worker thread for streaming in pixel data from the device.">ifm3d::FrameGrabber::Start</a> method </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>flag to enable/disable masking Note: <a class="el" href="group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50ab45463507e02af5daf2bdc908cc217ad">ifm3d::buffer_id::CONFIDENCE_IMAGE</a> should be in schema set passed to <a class="el" href="classifm3d_1_1FrameGrabber.html#a1c4942a1a0c5aedb6430b621fa9a3446" title="Starts the worker thread for streaming in pixel data from the device.">ifm3d::FrameGrabber::Start</a> method </td></tr>
   </table>
   </dd>
 </dl>
@@ -333,8 +333,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a id="a207a67d3b3a8affa46dd0aaf2ed36c04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a207a67d3b3a8affa46dd0aaf2ed36c04">&#9670;&nbsp;</a></span>Start()</h2>
+<a id="a1c4942a1a0c5aedb6430b621fa9a3446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c4942a1a0c5aedb6430b621fa9a3446">&#9670;&nbsp;</a></span>Start()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -349,7 +349,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::optional&lt; <a class="el" href="classifm3d_1_1json.html">json</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>pcicFormat</em> = <code>std::nullopt</code>&#160;</td>
+          <td class="paramname"><em>schema</em> = <code>std::nullopt</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

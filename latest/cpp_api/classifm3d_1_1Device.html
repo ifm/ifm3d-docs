@@ -238,18 +238,18 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a75dc4a6444fadc4b2217ba0df9b316a7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Device.html#a75dc4a6444fadc4b2217ba0df9b316a7">SetTempIPAddress</a> (std::string mac, std::string temp_ip)</td></tr>
 <tr class="memdesc:a75dc4a6444fadc4b2217ba0df9b316a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function Provides a way to set temporary IP.  <a href="classifm3d_1_1Device.html#a75dc4a6444fadc4b2217ba0df9b316a7">More...</a><br /></td></tr>
 <tr class="separator:a75dc4a6444fadc4b2217ba0df9b316a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28aac849be727299ab6eb780acb5b120"><td class="memItemLeft" align="right" valign="top">static Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Device.html#a28aac849be727299ab6eb780acb5b120">MakeShared</a> (const std::string &amp;ip=ifm3d::DEFAULT_IP, const std::uint16_t xmlrpc_port=ifm3d::DEFAULT_XMLRPC_PORT, const std::string &amp;password=ifm3d::DEFAULT_PASSWORD, bool throwIfUnavailable=true)</td></tr>
-<tr class="memdesc:a28aac849be727299ab6eb780acb5b120"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory function for instantiating the proper subclass based on h/w probing.  <a href="classifm3d_1_1Device.html#a28aac849be727299ab6eb780acb5b120">More...</a><br /></td></tr>
-<tr class="separator:a28aac849be727299ab6eb780acb5b120"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a705dfdf969f2e0548710aaa3646ceb65"><td class="memItemLeft" align="right" valign="top">static Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Device.html#a705dfdf969f2e0548710aaa3646ceb65">MakeShared</a> (const std::string &amp;ip=ifm3d::DEFAULT_IP, const std::uint16_t xmlrpc_port=ifm3d::DEFAULT_XMLRPC_PORT, const std::string &amp;password=ifm3d::DEFAULT_PASSWORD, bool throw_if_unavailable=true)</td></tr>
+<tr class="memdesc:a705dfdf969f2e0548710aaa3646ceb65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory function for instantiating the proper subclass based on h/w probing.  <a href="classifm3d_1_1Device.html#a705dfdf969f2e0548710aaa3646ceb65">More...</a><br /></td></tr>
+<tr class="separator:a705dfdf969f2e0548710aaa3646ceb65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a1196ce698af75209ab9b6696e7e1f592"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Device.html#a1196ce698af75209ab9b6696e7e1f592">DeviceID</a> ()</td></tr>
 <tr class="memdesc:a1196ce698af75209ab9b6696e7e1f592"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the serialization of the device state to JSON.  <a href="classifm3d_1_1Device.html#a1196ce698af75209ab9b6696e7e1f592">More...</a><br /></td></tr>
 <tr class="separator:a1196ce698af75209ab9b6696e7e1f592"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b2681c3bfbc7b464a97fe44c3d8fb44"><td class="memItemLeft" align="right" valign="top"><a id="a8b2681c3bfbc7b464a97fe44c3d8fb44"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>checkDeviceID</b> (int deviceID, int minID, int maxID)</td></tr>
-<tr class="separator:a8b2681c3bfbc7b464a97fe44c3d8fb44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afec0b961a74bb00af20e8089c5a4d2cf"><td class="memItemLeft" align="right" valign="top"><a id="afec0b961a74bb00af20e8089c5a4d2cf"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>checkDeviceID</b> (int device_id, int min_id, int max_id)</td></tr>
+<tr class="separator:afec0b961a74bb00af20e8089c5a4d2cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1623e17c3f61034a7a3d63e793a17f2"><td class="memItemLeft" align="right" valign="top"><a id="af1623e17c3f61034a7a3d63e793a17f2"></a>
 std::shared_ptr&lt; XMLRPC &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>XWrapper</b> ()</td></tr>
 <tr class="separator:af1623e17c3f61034a7a3d63e793a17f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -615,8 +615,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
-<a id="a28aac849be727299ab6eb780acb5b120"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28aac849be727299ab6eb780acb5b120">&#9670;&nbsp;</a></span>MakeShared()</h2>
+<a id="a705dfdf969f2e0548710aaa3646ceb65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a705dfdf969f2e0548710aaa3646ceb65">&#9670;&nbsp;</a></span>MakeShared()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -646,7 +646,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>throwIfUnavailable</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>throw_if_unavailable</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

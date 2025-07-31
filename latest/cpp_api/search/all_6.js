@@ -2,7 +2,7 @@ var searchData=
 [
   ['get_56',['Get',['../classifm3d_1_1O3R.html#a4aac4d3ceda92e3143ab4626d843189b',1,'ifm3d::O3R']]],
   ['getappjson_57',['getAppJSON',['../classifm3d_1_1LegacyDevice.html#a2c80440a57e9ac63907af619ee84f642',1,'ifm3d::LegacyDevice']]],
-  ['getbuffer_58',['GetBuffer',['../classifm3d_1_1Frame.html#ac1e6a758645bff57c060fc7144677253',1,'ifm3d::Frame']]],
+  ['getbuffer_58',['GetBuffer',['../classifm3d_1_1Frame.html#a441271be3c83d34a0f910b7d062240c0',1,'ifm3d::Frame']]],
   ['getbuffercount_59',['GetBufferCount',['../classifm3d_1_1Frame.html#a8fe5995b75abe5df56efcfc487a9e294',1,'ifm3d::Frame']]],
   ['getbuffers_60',['GetBuffers',['../classifm3d_1_1Frame.html#a4d26762e4adcbf7bb61a445b435623af',1,'ifm3d::Frame']]],
   ['getdeviceid_61',['GetDeviceId',['../classifm3d_1_1IFMNetworkDevice.html#a15e74fd05c4f07b490f08bdf1ea44173',1,'ifm3d::IFMNetworkDevice']]],

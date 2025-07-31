@@ -49,7 +49,7 @@ var classifm3d_1_1Device =
     [ "Device", "classifm3d_1_1Device.html#a0c59974f612ad280f5e446e9fe7ceda9", null ],
     [ "Device", "classifm3d_1_1Device.html#adc8e0f41c23f02e020037ab28a9ac4d8", null ],
     [ "AmI", "classifm3d_1_1Device.html#a825db9a420e07ab247a664a58b320374", null ],
-    [ "checkDeviceID", "classifm3d_1_1Device.html#a8b2681c3bfbc7b464a97fe44c3d8fb44", null ],
+    [ "checkDeviceID", "classifm3d_1_1Device.html#afec0b961a74bb00af20e8089c5a4d2cf", null ],
     [ "CheckMinimumFirmwareVersion", "classifm3d_1_1Device.html#ad0d20a261a0dd280884bc5c59b3ce9f6", null ],
     [ "DeviceID", "classifm3d_1_1Device.html#a1196ce698af75209ab9b6696e7e1f592", null ],
     [ "DeviceParameter", "classifm3d_1_1Device.html#a0ffb1ea6486e77335e529517611df36d", null ],

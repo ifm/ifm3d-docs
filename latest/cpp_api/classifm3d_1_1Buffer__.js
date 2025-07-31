@@ -10,7 +10,7 @@ var classifm3d_1_1Buffer__ =
     [ "at", "classifm3d_1_1Buffer__.html#ac53f8c8b20f76e249bfaf9722868516b", null ],
     [ "begin", "classifm3d_1_1Buffer__.html#a1ee54852ec9c015568ff22b636c46dde", null ],
     [ "clone", "classifm3d_1_1Buffer__.html#a0a3bda2954d4f7b81d18852b6c5a4c9b", null ],
-    [ "create", "classifm3d_1_1Buffer__.html#a48f25596f229a87fb23e55cb29f5c418", null ],
+    [ "create", "classifm3d_1_1Buffer__.html#aeb121781b8d1fd4ca9f53330a3f333a4", null ],
     [ "dataFormat", "classifm3d_1_1Buffer__.html#a64a9f841d132dd7c2f65e5597a823378", null ],
     [ "end", "classifm3d_1_1Buffer__.html#a3c39d63f04a191ee9ed0476ac4d8addd", null ],
     [ "height", "classifm3d_1_1Buffer__.html#ad007f4343faeade4371a899368864146", null ],

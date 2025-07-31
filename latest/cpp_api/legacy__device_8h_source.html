@@ -172,7 +172,7 @@ $(document).ready(function(){initNavTree('legacy__device_8h_source.html',''); in
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> ImportIFMApp(<span class="keyword">const</span> std::vector&lt;std::uint8_t&gt;&amp; bytes);</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> SetPassword(std::string password = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> SetPassword(<span class="keyword">const</span> std::string&amp; password = <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <a class="code" href="classifm3d_1_1json.html">json</a> ToJSON() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordtype">void</span> FromJSON(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1json.html">json</a>&amp; j) <span class="keyword">override</span>;</div>
@@ -182,13 +182,13 @@ $(document).ready(function(){initNavTree('legacy__device_8h_source.html',''); in
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keyword">class </span>Impl;</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    std::unique_ptr&lt;Impl&gt; pImpl;</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordtype">void</span> FromJSON_(</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;      <span class="keyword">const</span> <a class="code" href="classifm3d_1_1json.html">json</a>&amp; j_curr,</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;      <span class="keyword">const</span> <a class="code" href="classifm3d_1_1json.html">json</a>&amp; j_new,</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;      std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::string&amp;, <span class="keyword">const</span> std::string&amp;)&gt; SetFunc,</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;      std::function&lt;<span class="keywordtype">void</span>()&gt; SaveFunc,</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;      <span class="keyword">const</span> std::string&amp; name,</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;      <span class="keywordtype">int</span> idx = -1);</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordtype">void</span> FromJSON_(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1json.html">json</a>&amp; j_curr,</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                   <span class="keyword">const</span> <a class="code" href="classifm3d_1_1json.html">json</a>&amp; j_new,</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                   <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::string&amp;,</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                                            <span class="keyword">const</span> std::string&amp;)&gt;&amp; set_func,</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                   <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp; save_func,</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                   <span class="keyword">const</span> std::string&amp; name,</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                   <span class="keywordtype">int</span> idx = -1);</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> getAppJSON(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code" href="classifm3d_1_1json.html">json</a>&amp; j, <a class="code" href="classifm3d_1_1json.html">json</a>&amp; app);</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>

@@ -39,6 +39,7 @@ var annotated_dup =
       [ "Point", "structifm3d_1_1Point.html", "structifm3d_1_1Point" ],
       [ "PortInfo", "structifm3d_1_1PortInfo.html", "structifm3d_1_1PortInfo" ],
       [ "RGBInfoV1", "classifm3d_1_1RGBInfoV1.html", "classifm3d_1_1RGBInfoV1" ],
+      [ "SealedBox", "classifm3d_1_1SealedBox.html", "classifm3d_1_1SealedBox" ],
       [ "SemVer", "structifm3d_1_1SemVer.html", "structifm3d_1_1SemVer" ],
       [ "SWUpdater", "classifm3d_1_1SWUpdater.html", "classifm3d_1_1SWUpdater" ],
       [ "TOFInfoV3", "classifm3d_1_1TOFInfoV3.html", "classifm3d_1_1TOFInfoV3" ],

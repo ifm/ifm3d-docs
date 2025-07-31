@@ -6,6 +6,6 @@ var searchData=
   ['amplitude_5fimage_3',['AMPLITUDE_IMAGE',['../group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50abc29137af5abe7e5e8f6f61ebf9397a4',1,'ifm3d']]],
   ['applicationlist_4',['ApplicationList',['../classifm3d_1_1LegacyDevice.html#af1670594651bf115788e3d60ce1e733b',1,'ifm3d::LegacyDevice']]],
   ['applicationtypes_5',['ApplicationTypes',['../classifm3d_1_1LegacyDevice.html#a925eaac36090795f0da30c74c33b6813',1,'ifm3d::LegacyDevice']]],
-  ['applydistanceresolution_6',['applyDistanceResolution',['../classifm3d_1_1DistanceImageInfo.html#aa31f6c991e3f0d64c6920126387b539e',1,'ifm3d::DistanceImageInfo']]],
+  ['applydistanceresolution_6',['applyDistanceResolution',['../classifm3d_1_1DistanceImageInfo.html#a36c99171a6b4e325302651ea4b8b30f5',1,'ifm3d::DistanceImageInfo']]],
   ['arraydeserialize_7',['ArrayDeserialize',['../classifm3d_1_1ArrayDeserialize.html',1,'ifm3d']]]
 ];

@@ -97,8 +97,8 @@ $(document).ready(function(){initNavTree('log__entry_8h_source.html',''); initRe
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define IFM3D_COMMON_LOGGING_LOG_ENTRY_H</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;cstdarg&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;thread&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;ifm3d/common/logging/log_level.h&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;ifm3d/common/logging/time.h&gt;</span></div>
@@ -113,57 +113,57 @@ $(document).ready(function(){initNavTree('log__entry_8h_source.html',''); initRe
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;             <span class="keyword">const</span> <span class="keywordtype">char</span>* file,</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;             <span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keyword">function</span>,</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;             <span class="keywordtype">size_t</span> line)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      : time_(logging_clock::now()),</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        log_level_(log_level),</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        message_(message),</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        line_(line),</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        func_(<span class="keyword">function</span>),</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        file_(file)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      : _time(logging_clock::now()),</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        _log_level(log_level),</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        _message(std::move(message)),</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        _line(line),</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        _func(<span class="keyword">function</span>),</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        _file(file)</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">const</span> logging_timepoint&amp;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    [[nodiscard]] <span class="keyword">const</span> logging_timepoint&amp;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    GetTime()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <span class="keywordflow">return</span> time_;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <span class="keywordflow">return</span> _time;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    LogLevel</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    [[nodiscard]] LogLevel</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    GetLogLevel()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keywordflow">return</span> log_level_;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keywordflow">return</span> _log_level;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">size_t</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    [[nodiscard]] <span class="keywordtype">size_t</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    GetLine()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="keywordflow">return</span> line_;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="keywordflow">return</span> _line;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>*</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    [[nodiscard]] <span class="keyword">const</span> <span class="keywordtype">char</span>*</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    GetMessage()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keywordflow">return</span> message_.c_str();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keywordflow">return</span> _message.c_str();</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>*</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    [[nodiscard]] <span class="keyword">const</span> <span class="keywordtype">char</span>*</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    GetFunc()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordflow">return</span> func_;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordflow">return</span> _func;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>*</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    [[nodiscard]] <span class="keyword">const</span> <span class="keywordtype">char</span>*</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    GetFile()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordflow">return</span> file_;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordflow">return</span> _file;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    logging_timepoint time_;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">const</span> LogLevel log_level_;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    std::string message_;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">size_t</span> line_;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keyword">const</span> func_;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keyword">const</span> file_;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    logging_timepoint _time;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    LogLevel _log_level;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    std::string _message;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">size_t</span> _line;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* _func;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* _file;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  };</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
