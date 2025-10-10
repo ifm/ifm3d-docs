@@ -113,7 +113,7 @@ $(document).ready(function(){initNavTree('log__entry_8h_source.html',''); initRe
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;             <span class="keyword">const</span> <span class="keywordtype">char</span>* file,</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;             <span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keyword">function</span>,</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;             <span class="keywordtype">size_t</span> line)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      : _time(logging_clock::now()),</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      : _time(LoggingClock::now()),</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        _log_level(log_level),</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        _message(std::move(message)),</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        _line(line),</div>
@@ -121,7 +121,7 @@ $(document).ready(function(){initNavTree('log__entry_8h_source.html',''); initRe
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        _file(file)</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    [[nodiscard]] <span class="keyword">const</span> logging_timepoint&amp;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    [[nodiscard]] <span class="keyword">const</span> LogginTimepoint&amp;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    GetTime()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <span class="keywordflow">return</span> _time;</div>
@@ -158,7 +158,7 @@ $(document).ready(function(){initNavTree('log__entry_8h_source.html',''); initRe
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    logging_timepoint _time;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    LogginTimepoint _time;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    LogLevel _log_level;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    std::string _message;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">size_t</span> _line;</div>

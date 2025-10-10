@@ -46,8 +46,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "../python_api.html",
-"classifm3d_1_1LogEntry.html#a6872ad525b081feadffb53b63c38d05a",
-"group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50a20855a9b93845b52154c3ba90ca83b29"
+"classifm3d_1_1LegacyDevice.html#aeaa01e2c1a7755ef255fcfc28dbfb180",
+"dir_f0428da8e32d1a9d73a449b75c0782b5.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

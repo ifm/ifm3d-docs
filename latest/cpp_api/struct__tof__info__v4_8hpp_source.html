@@ -96,12 +96,12 @@ $(document).ready(function(){initNavTree('struct__tof__info__v4_8hpp_source.html
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef IFM3D_DESERIALIZE_STRUCT_TOF_INFO_V4_HPP</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define IFM3D_DESERIALIZE_STRUCT_TOF_INFO_V4_HPP</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;ifm3d/device/device.h&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;ifm3d/device/err.h&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;ifm3d/fg/organizer_utils.h&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;ifm3d/fg/buffer.h&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;ifm3d/deserialize/deserialize_utils.hpp&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;ifm3d/deserialize/struct_tof_info_v3.hpp&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;ifm3d/deserialize/deserialize_utils.hpp&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;ifm3d/deserialize/struct_tof_info_v3.hpp&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;ifm3d/device/device.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;ifm3d/device/err.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;ifm3d/fg/buffer.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;ifm3d/fg/organizer_utils.h&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>ifm3d</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
@@ -120,70 +120,66 @@ $(document).ready(function(){initNavTree('struct__tof__info__v4_8hpp_source.html
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    IsValid(<span class="keyword">const</span> uint8_t* data, <span class="keywordtype">size_t</span> size)</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      uint32_t version = mkval&lt;std::uint32_t&gt;(data + TOF_INFO_VERSION_INDEX);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <span class="keyword">auto</span> version = mkval&lt;std::uint32_t&gt;(data + TOF_INFO_VERSION_INDEX);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <span class="keywordflow">if</span> (size &lt; <a class="code" href="classifm3d_1_1TOFInfoV4.html#a1c31f30b99a42269a63b3f841b8d1b37">tof_info_v4_size</a> || version &lt; 4)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    Read(<span class="keyword">const</span> uint8_t* data, <span class="keywordtype">size_t</span> size)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keywordflow">if</span> (!IsValid(data, size))</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;          <span class="keywordflow">throw</span> <a class="code" href="classifm3d_1_1Error.html">ifm3d::Error</a>(IFM3D_CORRUPTED_STRUCT);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      TOFInfoV3::Read(data, size);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keyword">const</span> uint8_t* start_ptr = data;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      <a class="code" href="classifm3d_1_1TOFInfoV4.html#ab56a590751f8230292193ddc9c87c9b5">measurement_block_index</a> =</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        mkval&lt;std::uint32_t&gt;(start_ptr + TOF_INFO_MEASUREMENT_BLOCK_INDEX);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      measurement_range_min =</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        mkval&lt;float&gt;(start_ptr + TOF_INFO_MEASUREMENT_RANGE_MIN_INDEX);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      measurement_range_max =</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        mkval&lt;float&gt;(start_ptr + TOF_INFO_MEASUREMENT_RANGE_MAX_INDEX);</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classifm3d_1_1TOFInfoV4.html#ab56a590751f8230292193ddc9c87c9b5">   60</a></span>&#160;    };</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    uint32_t <a class="code" href="classifm3d_1_1TOFInfoV4.html#ab56a590751f8230292193ddc9c87c9b5">measurement_block_index</a>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">     * @brief Current minimum measurement range [m].</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">     * The value is based on the camera-individual ToF calibration.</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">     * It is influenced by temperature.</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">     **/</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">float</span> measurement_range_min;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">     * @brief Current maximum measurement range [m].</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">     * The value is based on the camera-individual ToF calibration.</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">     * It is influenced by temperature.</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">     **/</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">float</span> measurement_range_max;</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classifm3d_1_1TOFInfoV4.html#a1c31f30b99a42269a63b3f841b8d1b37">   82</a></span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">size_t</span> <a class="code" href="classifm3d_1_1TOFInfoV4.html#a1c31f30b99a42269a63b3f841b8d1b37">tof_info_v4_size</a> = 428;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">static</span> <a class="code" href="classifm3d_1_1TOFInfoV4.html">TOFInfoV4</a></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    Deserialize(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1Buffer.html">Buffer</a>&amp; tof_info_buffer)</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <a class="code" href="classifm3d_1_1TOFInfoV4.html">TOFInfoV4</a> tof_info_v4;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      tof_info_v4.Read(tof_info_buffer.<a class="code" href="classifm3d_1_1Buffer.html#ad7f0a9f097ceeb380b1adfe1162bd3cc">ptr</a>&lt;uint8_t&gt;(0),</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                       tof_info_buffer.<a class="code" href="classifm3d_1_1Buffer.html#a493b0f824117d5c0ef06dd4d5c9b3d17">size</a>());</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <span class="keywordflow">return</span> tof_info_v4;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  };</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;} <span class="comment">// end namespace ifm3d</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif // IFM3D_DESERIALIZE_STRUCT_TOF_INFO_V3_HPP</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <span class="keywordflow">return</span> size &gt;= <a class="code" href="classifm3d_1_1TOFInfoV4.html#afc62226714815ebf4544cbaba255dc9f">TOF_INFO_V4_SIZE</a> &amp;&amp; version &gt;= 4;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    Read(<span class="keyword">const</span> uint8_t* data, <span class="keywordtype">size_t</span> size)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keywordflow">if</span> (!IsValid(data, size))</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;          <span class="keywordflow">throw</span> <a class="code" href="classifm3d_1_1Error.html">ifm3d::Error</a>(IFM3D_CORRUPTED_STRUCT);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      TOFInfoV3::Read(data, size);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keyword">const</span> uint8_t* start_ptr = data;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <a class="code" href="classifm3d_1_1TOFInfoV4.html#ab56a590751f8230292193ddc9c87c9b5">measurement_block_index</a> =</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        mkval&lt;std::uint32_t&gt;(start_ptr + TOF_INFO_MEASUREMENT_BLOCK_INDEX);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      measurement_range_min =</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        mkval&lt;float&gt;(start_ptr + TOF_INFO_MEASUREMENT_RANGE_MIN_INDEX);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      measurement_range_max =</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        mkval&lt;float&gt;(start_ptr + TOF_INFO_MEASUREMENT_RANGE_MAX_INDEX);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    };</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classifm3d_1_1TOFInfoV4.html#ab56a590751f8230292193ddc9c87c9b5">   62</a></span>&#160;    uint32_t <a class="code" href="classifm3d_1_1TOFInfoV4.html#ab56a590751f8230292193ddc9c87c9b5">measurement_block_index</a>{};</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">     * @brief Current minimum measurement range [m].</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">     * The value is based on the camera-individual ToF calibration.</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">     * It is influenced by temperature.</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">     **/</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">float</span> measurement_range_min{};</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">     * @brief Current maximum measurement range [m].</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">     * The value is based on the camera-individual ToF calibration.</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">     * It is influenced by temperature.</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">     **/</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">float</span> measurement_range_max{};</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classifm3d_1_1TOFInfoV4.html#afc62226714815ebf4544cbaba255dc9f">   78</a></span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">size_t</span> <a class="code" href="classifm3d_1_1TOFInfoV4.html#afc62226714815ebf4544cbaba255dc9f">TOF_INFO_V4_SIZE</a> = 428;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">static</span> <a class="code" href="classifm3d_1_1TOFInfoV4.html">TOFInfoV4</a></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    Deserialize(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1Buffer.html">Buffer</a>&amp; tof_info_buffer)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <a class="code" href="classifm3d_1_1TOFInfoV4.html">TOFInfoV4</a> tof_info_v4;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      tof_info_v4.Read(tof_info_buffer.<a class="code" href="classifm3d_1_1Buffer.html#a316c4df00f4080a8a5727c0b9993950a">Ptr</a>&lt;uint8_t&gt;(0),</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                       tof_info_buffer.<a class="code" href="classifm3d_1_1Buffer.html#aee43d2c438000f8fe4925e25566be23a">Size</a>());</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keywordflow">return</span> tof_info_v4;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  };</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;} <span class="comment">// end namespace ifm3d</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif // IFM3D_DESERIALIZE_STRUCT_TOF_INFO_V3_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassifm3d_1_1Buffer_html_a493b0f824117d5c0ef06dd4d5c9b3d17"><div class="ttname"><a href="classifm3d_1_1Buffer.html#a493b0f824117d5c0ef06dd4d5c9b3d17">ifm3d::Buffer::size</a></div><div class="ttdeci">size_t size() const</div><div class="ttdoc">Return the size of the buffer in bytes.</div></div>
-<div class="ttc" id="aclassifm3d_1_1TOFInfoV4_html_a1c31f30b99a42269a63b3f841b8d1b37"><div class="ttname"><a href="classifm3d_1_1TOFInfoV4.html#a1c31f30b99a42269a63b3f841b8d1b37">ifm3d::TOFInfoV4::tof_info_v4_size</a></div><div class="ttdeci">static constexpr size_t tof_info_v4_size</div><div class="ttdoc">size of ToFInfoV4 in bytes</div><div class="ttdef"><b>Definition:</b> struct_tof_info_v4.hpp:82</div></div>
-<div class="ttc" id="aclassifm3d_1_1Buffer_html"><div class="ttname"><a href="classifm3d_1_1Buffer.html">ifm3d::Buffer</a></div><div class="ttdoc">The class Buffer represent a STL container to store data from the ifm devices in 2 dimension and supp...</div><div class="ttdef"><b>Definition:</b> buffer.h:99</div></div>
-<div class="ttc" id="aclassifm3d_1_1Buffer_html_ad7f0a9f097ceeb380b1adfe1162bd3cc"><div class="ttname"><a href="classifm3d_1_1Buffer.html#ad7f0a9f097ceeb380b1adfe1162bd3cc">ifm3d::Buffer::ptr</a></div><div class="ttdeci">T * ptr(const std::uint32_t row)</div><div class="ttdoc">returns a pointer to the specified Buffer row.</div></div>
+<div class="ttc" id="aclassifm3d_1_1Buffer_html"><div class="ttname"><a href="classifm3d_1_1Buffer.html">ifm3d::Buffer</a></div><div class="ttdoc">The class Buffer represent a STL container to store data from the ifm devices in 2 dimension and supp...</div><div class="ttdef"><b>Definition:</b> buffer.h:98</div></div>
 <div class="ttc" id="aclassifm3d_1_1TOFInfoV3_html"><div class="ttname"><a href="classifm3d_1_1TOFInfoV3.html">ifm3d::TOFInfoV3</a></div><div class="ttdef"><b>Definition:</b> struct_tof_info_v3.hpp:38</div></div>
 <div class="ttc" id="aclassifm3d_1_1Error_html"><div class="ttname"><a href="classifm3d_1_1Error.html">ifm3d::Error</a></div><div class="ttdef"><b>Definition:</b> err.h:114</div></div>
+<div class="ttc" id="aclassifm3d_1_1TOFInfoV4_html_afc62226714815ebf4544cbaba255dc9f"><div class="ttname"><a href="classifm3d_1_1TOFInfoV4.html#afc62226714815ebf4544cbaba255dc9f">ifm3d::TOFInfoV4::TOF_INFO_V4_SIZE</a></div><div class="ttdeci">static constexpr size_t TOF_INFO_V4_SIZE</div><div class="ttdoc">size of ToFInfoV4 in bytes</div><div class="ttdef"><b>Definition:</b> struct_tof_info_v4.hpp:78</div></div>
 <div class="ttc" id="aclassifm3d_1_1TOFInfoV4_html"><div class="ttname"><a href="classifm3d_1_1TOFInfoV4.html">ifm3d::TOFInfoV4</a></div><div class="ttdef"><b>Definition:</b> struct_tof_info_v4.hpp:27</div></div>
-<div class="ttc" id="aclassifm3d_1_1TOFInfoV4_html_ab56a590751f8230292193ddc9c87c9b5"><div class="ttname"><a href="classifm3d_1_1TOFInfoV4.html#ab56a590751f8230292193ddc9c87c9b5">ifm3d::TOFInfoV4::measurement_block_index</a></div><div class="ttdeci">uint32_t measurement_block_index</div><div class="ttdoc">Current measurement block index (range 0 to N-1, where N is the number of sub-modes).</div><div class="ttdef"><b>Definition:</b> struct_tof_info_v4.hpp:60</div></div>
+<div class="ttc" id="aclassifm3d_1_1Buffer_html_aee43d2c438000f8fe4925e25566be23a"><div class="ttname"><a href="classifm3d_1_1Buffer.html#aee43d2c438000f8fe4925e25566be23a">ifm3d::Buffer::Size</a></div><div class="ttdeci">size_t Size() const</div><div class="ttdoc">Return the size of the buffer in bytes.</div></div>
+<div class="ttc" id="aclassifm3d_1_1Buffer_html_a316c4df00f4080a8a5727c0b9993950a"><div class="ttname"><a href="classifm3d_1_1Buffer.html#a316c4df00f4080a8a5727c0b9993950a">ifm3d::Buffer::Ptr</a></div><div class="ttdeci">T * Ptr(std::uint32_t row)</div><div class="ttdoc">returns a pointer to the specified Buffer row.</div></div>
+<div class="ttc" id="aclassifm3d_1_1TOFInfoV4_html_ab56a590751f8230292193ddc9c87c9b5"><div class="ttname"><a href="classifm3d_1_1TOFInfoV4.html#ab56a590751f8230292193ddc9c87c9b5">ifm3d::TOFInfoV4::measurement_block_index</a></div><div class="ttdeci">uint32_t measurement_block_index</div><div class="ttdoc">Current measurement block index (range 0 to N-1, where N is the number of sub-modes).</div><div class="ttdef"><b>Definition:</b> struct_tof_info_v4.hpp:62</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

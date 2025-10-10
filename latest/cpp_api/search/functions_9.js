@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['legacydevice_317',['LegacyDevice',['../classifm3d_1_1LegacyDevice.html#aa1ec31065d18ba99af459a4f23cf1dc3',1,'ifm3d::LegacyDevice']]]
+  ['legacydevice_317',['LegacyDevice',['../classifm3d_1_1LegacyDevice.html#aace04df75d93e3e3b5c62fac7eab483c',1,'ifm3d::LegacyDevice']]]
 ];

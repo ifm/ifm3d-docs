@@ -93,45 +93,57 @@ $(document).ready(function(){initNavTree('classifm3d_1_1DistanceImageInfo.html',
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7872ea06b2cb91b12d0dd2dace6f7c50"><td class="memItemLeft" align="right" valign="top"><a id="a7872ea06b2cb91b12d0dd2dace6f7c50"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DistanceImageInfo</b> (const float dist_res, const float ampl_res, const std::vector&lt; float &gt; &amp;amp_norm_fctrs, const std::vector&lt; float &gt; &amp;extr_opt_to_usr, const <a class="el" href="structifm3d_1_1IntrinsicCalibration.html">IntrinsicCalibration</a> &amp;intr_calib, const <a class="el" href="structifm3d_1_1IntrinsicCalibration.html">IntrinsicCalibration</a> &amp;inv_intr_calib, const std::vector&lt; std::uint16_t &gt; &amp;distance_buffer, const std::vector&lt; std::uint16_t &gt; &amp;amplitude_buffer, const std::vector&lt; uint64_t &gt; &amp;timestamps_nsec, const std::vector&lt; float &gt; &amp;exposure_times_sec, const std::uint32_t width, const std::uint32_t height)</td></tr>
-<tr class="separator:a7872ea06b2cb91b12d0dd2dace6f7c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71f2858f8d88ba7afd221e39c64b2481"><td class="memItemLeft" align="right" valign="top"><a id="a71f2858f8d88ba7afd221e39c64b2481"></a>
-std::vector&lt; std::uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getXYZDVector</b> ()</td></tr>
-<tr class="separator:a71f2858f8d88ba7afd221e39c64b2481"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0265e2e564650c8e86c6e01e13136480"><td class="memItemLeft" align="right" valign="top"><a id="a0265e2e564650c8e86c6e01e13136480"></a>
-std::vector&lt; std::uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getAmplitudeVector</b> ()</td></tr>
-<tr class="separator:a0265e2e564650c8e86c6e01e13136480"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5efa034a8928a21024dce44e27fe3c82"><td class="memItemLeft" align="right" valign="top"><a id="a5efa034a8928a21024dce44e27fe3c82"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>getExtrinsicOpticToUser</b> ()</td></tr>
-<tr class="separator:a5efa034a8928a21024dce44e27fe3c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae312f98ffd08d5fd81227b967e1c873c"><td class="memItemLeft" align="right" valign="top"><a id="ae312f98ffd08d5fd81227b967e1c873c"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>getIntrinsicCalibration</b> ()</td></tr>
-<tr class="separator:ae312f98ffd08d5fd81227b967e1c873c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ea37cd4a82d559efc22baeff1ab8467"><td class="memItemLeft" align="right" valign="top"><a id="a6ea37cd4a82d559efc22baeff1ab8467"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>getInverseIntrinsicCalibration</b> ()</td></tr>
-<tr class="separator:a6ea37cd4a82d559efc22baeff1ab8467"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12dd188547fcda83e76d2369175df2ce"><td class="memItemLeft" align="right" valign="top"><a id="a12dd188547fcda83e76d2369175df2ce"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>getNPTS</b> ()</td></tr>
-<tr class="separator:a12dd188547fcda83e76d2369175df2ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa9be2718cff592eb0909ad7b6483924"><td class="memItemLeft" align="right" valign="top"><a id="aaa9be2718cff592eb0909ad7b6483924"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>getWidth</b> ()</td></tr>
-<tr class="separator:aaa9be2718cff592eb0909ad7b6483924"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1395ff6e4c287cf85940d74cb56840e1"><td class="memItemLeft" align="right" valign="top"><a id="a1395ff6e4c287cf85940d74cb56840e1"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>getHeight</b> ()</td></tr>
-<tr class="separator:a1395ff6e4c287cf85940d74cb56840e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af68ce9aa879ed3ab06de1ce7f1987288"><td class="memItemLeft" align="right" valign="top"><a id="af68ce9aa879ed3ab06de1ce7f1987288"></a>
-std::vector&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1DistanceImageInfo.html#af68ce9aa879ed3ab06de1ce7f1987288">getTimestamps</a> ()</td></tr>
-<tr class="memdesc:af68ce9aa879ed3ab06de1ce7f1987288"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the timestamps in nano seconds <br /></td></tr>
-<tr class="separator:af68ce9aa879ed3ab06de1ce7f1987288"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d91486c29d6c5fe492ebb18a94b6807"><td class="memItemLeft" align="right" valign="top"><a id="a4d91486c29d6c5fe492ebb18a94b6807"></a>
-std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1DistanceImageInfo.html#a4d91486c29d6c5fe492ebb18a94b6807">getExposureTimes</a> ()</td></tr>
-<tr class="memdesc:a4d91486c29d6c5fe492ebb18a94b6807"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the exposure time for each phase data <br /></td></tr>
-<tr class="separator:a4d91486c29d6c5fe492ebb18a94b6807"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36c99171a6b4e325302651ea4b8b30f5"><td class="memItemLeft" align="right" valign="top"><a id="a36c99171a6b4e325302651ea4b8b30f5"></a>
-<a class="el" href="classifm3d_1_1Buffer.html">ifm3d::Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1DistanceImageInfo.html#a36c99171a6b4e325302651ea4b8b30f5">applyDistanceResolution</a> (const <a class="el" href="classifm3d_1_1Buffer.html">ifm3d::Buffer</a> &amp;ui16_distance_buffer) const</td></tr>
-<tr class="memdesc:a36c99171a6b4e325302651ea4b8b30f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">multiply distance noise image with distance resolution return <a class="el" href="classifm3d_1_1Buffer.html" title="The class Buffer represent a STL container to store data from the ifm devices in 2 dimension and supp...">Buffer</a> with float values <br /></td></tr>
-<tr class="separator:a36c99171a6b4e325302651ea4b8b30f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ad5f098cf37045d79d437dadae9a0ed"><td class="memItemLeft" align="right" valign="top"><a id="a8ad5f098cf37045d79d437dadae9a0ed"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DistanceImageInfo</b> (const <a class="el" href="classifm3d_1_1DistanceImageInfo.html">DistanceImageInfo</a> &amp;)=default</td></tr>
+<tr class="separator:a8ad5f098cf37045d79d437dadae9a0ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3324972479561897de6dc2747f5c6f24"><td class="memItemLeft" align="right" valign="top"><a id="a3324972479561897de6dc2747f5c6f24"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DistanceImageInfo</b> (<a class="el" href="classifm3d_1_1DistanceImageInfo.html">DistanceImageInfo</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a3324972479561897de6dc2747f5c6f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06e48be6cb66c0e3ca505a0c5ffd4064"><td class="memItemLeft" align="right" valign="top"><a id="a06e48be6cb66c0e3ca505a0c5ffd4064"></a>
+<a class="el" href="classifm3d_1_1DistanceImageInfo.html">DistanceImageInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classifm3d_1_1DistanceImageInfo.html">DistanceImageInfo</a> &amp;)=delete</td></tr>
+<tr class="separator:a06e48be6cb66c0e3ca505a0c5ffd4064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3a03d2e5ce5a14a40786cc85d7930e6"><td class="memItemLeft" align="right" valign="top"><a id="aa3a03d2e5ce5a14a40786cc85d7930e6"></a>
+<a class="el" href="classifm3d_1_1DistanceImageInfo.html">DistanceImageInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classifm3d_1_1DistanceImageInfo.html">DistanceImageInfo</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:aa3a03d2e5ce5a14a40786cc85d7930e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a432111af241149a4fc40d64436a6c2d2"><td class="memItemLeft" align="right" valign="top"><a id="a432111af241149a4fc40d64436a6c2d2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DistanceImageInfo</b> (float dist_res, float ampl_res, const std::vector&lt; float &gt; &amp;amp_norm_fctrs, const std::vector&lt; float &gt; &amp;extr_opt_to_usr, const <a class="el" href="structifm3d_1_1IntrinsicCalibration.html">IntrinsicCalibration</a> &amp;intr_calib, const <a class="el" href="structifm3d_1_1IntrinsicCalibration.html">IntrinsicCalibration</a> &amp;inv_intr_calib, const std::vector&lt; std::uint16_t &gt; &amp;distance_buffer, const std::vector&lt; std::uint16_t &gt; &amp;amplitude_buffer, const std::vector&lt; uint64_t &gt; &amp;timestamps_nsec, const std::vector&lt; float &gt; &amp;exposure_times_sec, std::uint32_t width, std::uint32_t height)</td></tr>
+<tr class="separator:a432111af241149a4fc40d64436a6c2d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4df198cc7ee047bfdd7a787079c91b1c"><td class="memItemLeft" align="right" valign="top"><a id="a4df198cc7ee047bfdd7a787079c91b1c"></a>
+std::vector&lt; std::uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetXyzdVector</b> ()</td></tr>
+<tr class="separator:a4df198cc7ee047bfdd7a787079c91b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10cd3fdfe77a111dd5cf32e686296c99"><td class="memItemLeft" align="right" valign="top"><a id="a10cd3fdfe77a111dd5cf32e686296c99"></a>
+std::vector&lt; std::uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetAmplitudeVector</b> ()</td></tr>
+<tr class="separator:a10cd3fdfe77a111dd5cf32e686296c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad688e9499a9a20ee55b2844fbba6e569"><td class="memItemLeft" align="right" valign="top"><a id="ad688e9499a9a20ee55b2844fbba6e569"></a>
+auto&#160;</td><td class="memItemRight" valign="bottom"><b>GetExtrinsicOpticToUser</b> ()</td></tr>
+<tr class="separator:ad688e9499a9a20ee55b2844fbba6e569"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d6408b2f112a884278b28c94dc6ebd4"><td class="memItemLeft" align="right" valign="top"><a id="a2d6408b2f112a884278b28c94dc6ebd4"></a>
+auto&#160;</td><td class="memItemRight" valign="bottom"><b>GetIntrinsicCalibration</b> ()</td></tr>
+<tr class="separator:a2d6408b2f112a884278b28c94dc6ebd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1c2bbaa62287217875b876180d9d919"><td class="memItemLeft" align="right" valign="top"><a id="ab1c2bbaa62287217875b876180d9d919"></a>
+auto&#160;</td><td class="memItemRight" valign="bottom"><b>GetInverseIntrinsicCalibration</b> ()</td></tr>
+<tr class="separator:ab1c2bbaa62287217875b876180d9d919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e276b38504183c65713e8bf2a5edf22"><td class="memItemLeft" align="right" valign="top"><a id="a4e276b38504183c65713e8bf2a5edf22"></a>
+auto&#160;</td><td class="memItemRight" valign="bottom"><b>GetNpts</b> () const</td></tr>
+<tr class="separator:a4e276b38504183c65713e8bf2a5edf22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0a8d75513816a5e02b0e6e8681091ad"><td class="memItemLeft" align="right" valign="top"><a id="aa0a8d75513816a5e02b0e6e8681091ad"></a>
+auto&#160;</td><td class="memItemRight" valign="bottom"><b>GetWidth</b> () const</td></tr>
+<tr class="separator:aa0a8d75513816a5e02b0e6e8681091ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30fce6052ad5a611ca5011f16e95405c"><td class="memItemLeft" align="right" valign="top"><a id="a30fce6052ad5a611ca5011f16e95405c"></a>
+auto&#160;</td><td class="memItemRight" valign="bottom"><b>GetHeight</b> () const</td></tr>
+<tr class="separator:a30fce6052ad5a611ca5011f16e95405c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a660d3a5e235df3f12dcb78ae8195606d"><td class="memItemLeft" align="right" valign="top"><a id="a660d3a5e235df3f12dcb78ae8195606d"></a>
+std::vector&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1DistanceImageInfo.html#a660d3a5e235df3f12dcb78ae8195606d">GetTimestamps</a> ()</td></tr>
+<tr class="memdesc:a660d3a5e235df3f12dcb78ae8195606d"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the timestamps in nano seconds <br /></td></tr>
+<tr class="separator:a660d3a5e235df3f12dcb78ae8195606d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabbb86c9a31d51b09c0d1d02ff3f43c4"><td class="memItemLeft" align="right" valign="top"><a id="aabbb86c9a31d51b09c0d1d02ff3f43c4"></a>
+std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1DistanceImageInfo.html#aabbb86c9a31d51b09c0d1d02ff3f43c4">GetExposureTimes</a> ()</td></tr>
+<tr class="memdesc:aabbb86c9a31d51b09c0d1d02ff3f43c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the exposure time for each phase data <br /></td></tr>
+<tr class="separator:aabbb86c9a31d51b09c0d1d02ff3f43c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f45e16de2738f7890a2e2dce8d6a6ac"><td class="memItemLeft" align="right" valign="top"><a id="a0f45e16de2738f7890a2e2dce8d6a6ac"></a>
+<a class="el" href="classifm3d_1_1Buffer.html">ifm3d::Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1DistanceImageInfo.html#a0f45e16de2738f7890a2e2dce8d6a6ac">ApplyDistanceResolution</a> (const <a class="el" href="classifm3d_1_1Buffer.html">ifm3d::Buffer</a> &amp;ui16_distance_buffer) const</td></tr>
+<tr class="memdesc:a0f45e16de2738f7890a2e2dce8d6a6ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">multiply distance noise image with distance resolution return <a class="el" href="classifm3d_1_1Buffer.html" title="The class Buffer represent a STL container to store data from the ifm devices in 2 dimension and supp...">Buffer</a> with float values <br /></td></tr>
+<tr class="separator:a0f45e16de2738f7890a2e2dce8d6a6ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>ifm3d/fg/<a class="el" href="distance__image__info_8h_source.html">distance_image_info.h</a></li>

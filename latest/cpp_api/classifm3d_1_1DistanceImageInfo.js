@@ -1,16 +1,20 @@
 var classifm3d_1_1DistanceImageInfo =
 [
-    [ "DistanceImageInfo", "classifm3d_1_1DistanceImageInfo.html#a7872ea06b2cb91b12d0dd2dace6f7c50", null ],
+    [ "DistanceImageInfo", "classifm3d_1_1DistanceImageInfo.html#a8ad5f098cf37045d79d437dadae9a0ed", null ],
+    [ "DistanceImageInfo", "classifm3d_1_1DistanceImageInfo.html#a3324972479561897de6dc2747f5c6f24", null ],
+    [ "DistanceImageInfo", "classifm3d_1_1DistanceImageInfo.html#a432111af241149a4fc40d64436a6c2d2", null ],
     [ "~DistanceImageInfo", "classifm3d_1_1DistanceImageInfo.html#aef79ca995bcfb1324e4323c35b162eaf", null ],
-    [ "applyDistanceResolution", "classifm3d_1_1DistanceImageInfo.html#a36c99171a6b4e325302651ea4b8b30f5", null ],
-    [ "getAmplitudeVector", "classifm3d_1_1DistanceImageInfo.html#a0265e2e564650c8e86c6e01e13136480", null ],
-    [ "getExposureTimes", "classifm3d_1_1DistanceImageInfo.html#a4d91486c29d6c5fe492ebb18a94b6807", null ],
-    [ "getExtrinsicOpticToUser", "classifm3d_1_1DistanceImageInfo.html#a5efa034a8928a21024dce44e27fe3c82", null ],
-    [ "getHeight", "classifm3d_1_1DistanceImageInfo.html#a1395ff6e4c287cf85940d74cb56840e1", null ],
-    [ "getIntrinsicCalibration", "classifm3d_1_1DistanceImageInfo.html#ae312f98ffd08d5fd81227b967e1c873c", null ],
-    [ "getInverseIntrinsicCalibration", "classifm3d_1_1DistanceImageInfo.html#a6ea37cd4a82d559efc22baeff1ab8467", null ],
-    [ "getNPTS", "classifm3d_1_1DistanceImageInfo.html#a12dd188547fcda83e76d2369175df2ce", null ],
-    [ "getTimestamps", "classifm3d_1_1DistanceImageInfo.html#af68ce9aa879ed3ab06de1ce7f1987288", null ],
-    [ "getWidth", "classifm3d_1_1DistanceImageInfo.html#aaa9be2718cff592eb0909ad7b6483924", null ],
-    [ "getXYZDVector", "classifm3d_1_1DistanceImageInfo.html#a71f2858f8d88ba7afd221e39c64b2481", null ]
+    [ "ApplyDistanceResolution", "classifm3d_1_1DistanceImageInfo.html#a0f45e16de2738f7890a2e2dce8d6a6ac", null ],
+    [ "GetAmplitudeVector", "classifm3d_1_1DistanceImageInfo.html#a10cd3fdfe77a111dd5cf32e686296c99", null ],
+    [ "GetExposureTimes", "classifm3d_1_1DistanceImageInfo.html#aabbb86c9a31d51b09c0d1d02ff3f43c4", null ],
+    [ "GetExtrinsicOpticToUser", "classifm3d_1_1DistanceImageInfo.html#ad688e9499a9a20ee55b2844fbba6e569", null ],
+    [ "GetHeight", "classifm3d_1_1DistanceImageInfo.html#a30fce6052ad5a611ca5011f16e95405c", null ],
+    [ "GetIntrinsicCalibration", "classifm3d_1_1DistanceImageInfo.html#a2d6408b2f112a884278b28c94dc6ebd4", null ],
+    [ "GetInverseIntrinsicCalibration", "classifm3d_1_1DistanceImageInfo.html#ab1c2bbaa62287217875b876180d9d919", null ],
+    [ "GetNpts", "classifm3d_1_1DistanceImageInfo.html#a4e276b38504183c65713e8bf2a5edf22", null ],
+    [ "GetTimestamps", "classifm3d_1_1DistanceImageInfo.html#a660d3a5e235df3f12dcb78ae8195606d", null ],
+    [ "GetWidth", "classifm3d_1_1DistanceImageInfo.html#aa0a8d75513816a5e02b0e6e8681091ad", null ],
+    [ "GetXyzdVector", "classifm3d_1_1DistanceImageInfo.html#a4df198cc7ee047bfdd7a787079c91b1c", null ],
+    [ "operator=", "classifm3d_1_1DistanceImageInfo.html#a06e48be6cb66c0e3ca505a0c5ffd4064", null ],
+    [ "operator=", "classifm3d_1_1DistanceImageInfo.html#aa3a03d2e5ce5a14a40786cc85d7930e6", null ]
 ];

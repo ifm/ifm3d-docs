@@ -1,8 +1,8 @@
 var hierarchy =
 [
-    [ "ifm3d::ArrayDeserialize< T, num_of_parameter >", "classifm3d_1_1ArrayDeserialize.html", null ],
+    [ "ifm3d::ArrayDeserialize< T, NUM_OF_PARAMETERS >", "classifm3d_1_1ArrayDeserialize.html", null ],
     [ "ifm3d::Buffer", "classifm3d_1_1Buffer.html", [
-      [ "ifm3d::Buffer_< Tp >", "classifm3d_1_1Buffer__.html", null ]
+      [ "ifm3d::Buffer_< TP >", "classifm3d_1_1Buffer__.html", null ]
     ] ],
     [ "ifm3d::calibration::Calibration", "structifm3d_1_1calibration_1_1Calibration.html", null ],
     [ "ifm3d::Device", "classifm3d_1_1Device.html", [
@@ -30,10 +30,10 @@ var hierarchy =
     [ "ifm3d::Logger", "classifm3d_1_1Logger.html", null ],
     [ "ifm3d::LogWriter", "classifm3d_1_1LogWriter.html", [
       [ "ifm3d::LogWriterComposite", "classifm3d_1_1LogWriterComposite.html", null ],
-      [ "ifm3d::LogWriterConsole< Formatter, >", "classifm3d_1_1LogWriterConsole.html", null ],
-      [ "ifm3d::LogWriterFile< Formatter >", "classifm3d_1_1LogWriterFile.html", null ],
-      [ "ifm3d::LogWriterConsole< Formatter >", "classifm3d_1_1LogWriterConsole.html", [
-        [ "ifm3d::LogWriterConsoleColored< Formatter, >", "classifm3d_1_1LogWriterConsoleColored.html", null ]
+      [ "ifm3d::LogWriterConsole< FORMATTER, >", "classifm3d_1_1LogWriterConsole.html", null ],
+      [ "ifm3d::LogWriterFile< FORMATTER >", "classifm3d_1_1LogWriterFile.html", null ],
+      [ "ifm3d::LogWriterConsole< FORMATTER >", "classifm3d_1_1LogWriterConsole.html", [
+        [ "ifm3d::LogWriterConsoleColored< FORMATTER, >", "classifm3d_1_1LogWriterConsoleColored.html", null ]
       ] ]
     ] ],
     [ "O3DExposureTimes", "classifm3d_1_1O3DExposureTimes.html", null ],
@@ -47,7 +47,7 @@ var hierarchy =
     [ "ifm3d::ODSPolarOccupancyGridV1", "classifm3d_1_1ODSPolarOccupancyGridV1.html", null ],
     [ "ifm3d::Organizer", "classifm3d_1_1Organizer.html", null ],
     [ "ifm3d::PCICClient", "classifm3d_1_1PCICClient.html", null ],
-    [ "ifm3d::Point< T, n >", "structifm3d_1_1Point.html", null ],
+    [ "ifm3d::Point< T, N >", "structifm3d_1_1Point.html", null ],
     [ "ifm3d::PortInfo", "structifm3d_1_1PortInfo.html", null ],
     [ "ifm3d::Organizer::Result", "structifm3d_1_1Organizer_1_1Result.html", null ],
     [ "ifm3d::RGBInfoV1", "classifm3d_1_1RGBInfoV1.html", null ],

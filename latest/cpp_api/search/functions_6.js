@@ -1,16 +1,16 @@
 var searchData=
 [
   ['get_286',['Get',['../classifm3d_1_1O3R.html#a4aac4d3ceda92e3143ab4626d843189b',1,'ifm3d::O3R']]],
-  ['getappjson_287',['getAppJSON',['../classifm3d_1_1LegacyDevice.html#a2c80440a57e9ac63907af619ee84f642',1,'ifm3d::LegacyDevice']]],
+  ['get_5fapp_5fjson_287',['get_app_json',['../classifm3d_1_1LegacyDevice.html#a7b3a660959afdab15bf677504709410f',1,'ifm3d::LegacyDevice']]],
   ['getbuffer_288',['GetBuffer',['../classifm3d_1_1Frame.html#a441271be3c83d34a0f910b7d062240c0',1,'ifm3d::Frame']]],
   ['getbuffercount_289',['GetBufferCount',['../classifm3d_1_1Frame.html#a8fe5995b75abe5df56efcfc487a9e294',1,'ifm3d::Frame']]],
   ['getbuffers_290',['GetBuffers',['../classifm3d_1_1Frame.html#a4d26762e4adcbf7bb61a445b435623af',1,'ifm3d::Frame']]],
   ['getdeviceid_291',['GetDeviceId',['../classifm3d_1_1IFMNetworkDevice.html#a15e74fd05c4f07b490f08bdf1ea44173',1,'ifm3d::IFMNetworkDevice']]],
   ['getdevicename_292',['GetDeviceName',['../classifm3d_1_1IFMNetworkDevice.html#a3603933cf3f1a183c0f596de12d0541f',1,'ifm3d::IFMNetworkDevice']]],
   ['getdiagnostic_293',['GetDiagnostic',['../classifm3d_1_1O3R.html#ae4065b662a3fdc743bcceab1c2d984aa',1,'ifm3d::O3R']]],
-  ['getdiagnosticfiltered_294',['GetDiagnosticFiltered',['../classifm3d_1_1O3R.html#acbb1030fab198f9a9e9f9e4cdc3140c9',1,'ifm3d::O3R']]],
+  ['getdiagnosticfiltered_294',['GetDiagnosticFiltered',['../classifm3d_1_1O3R.html#abc8f8ef81191ba19f91971ac0e2538d3',1,'ifm3d::O3R']]],
   ['getdiagnosticfilterschema_295',['GetDiagnosticFilterSchema',['../classifm3d_1_1O3R.html#a11fca069af27c5a8eea3deea8d330d76',1,'ifm3d::O3R']]],
-  ['getexposuretimes_296',['getExposureTimes',['../classifm3d_1_1DistanceImageInfo.html#a4d91486c29d6c5fe492ebb18a94b6807',1,'ifm3d::DistanceImageInfo']]],
+  ['getexposuretimes_296',['GetExposureTimes',['../classifm3d_1_1DistanceImageInfo.html#aabbb86c9a31d51b09c0d1d02ff3f43c4',1,'ifm3d::DistanceImageInfo']]],
   ['getflag_297',['GetFlag',['../classifm3d_1_1IFMNetworkDevice.html#a5d970c6ba3740a84d2f5f86572875a50',1,'ifm3d::IFMNetworkDevice']]],
   ['getfoundvia_298',['GetFoundVia',['../classifm3d_1_1IFMNetworkDevice.html#aedbacece95caa6c1f148fa16bbc66005',1,'ifm3d::IFMNetworkDevice']]],
   ['getgateway_299',['GetGateway',['../classifm3d_1_1IFMNetworkDevice.html#a992310b9244dc5273c8bd3cb349c177f',1,'ifm3d::IFMNetworkDevice']]],
@@ -21,6 +21,6 @@ var searchData=
   ['getnetmask_304',['GetNetmask',['../classifm3d_1_1IFMNetworkDevice.html#acb57559c3e57978cebb23a56a1c1e01f',1,'ifm3d::IFMNetworkDevice']]],
   ['getport_305',['GetPort',['../classifm3d_1_1IFMNetworkDevice.html#a6d9f3582cb49ce92600b346cce99a9ce',1,'ifm3d::IFMNetworkDevice']]],
   ['getschema_306',['GetSchema',['../classifm3d_1_1O3R.html#a1352ba9088aaea3cafd09d1c1a5d270c',1,'ifm3d::O3R']]],
-  ['gettimestamps_307',['getTimestamps',['../classifm3d_1_1DistanceImageInfo.html#af68ce9aa879ed3ab06de1ce7f1987288',1,'ifm3d::DistanceImageInfo']]],
+  ['gettimestamps_307',['GetTimestamps',['../classifm3d_1_1DistanceImageInfo.html#a660d3a5e235df3f12dcb78ae8195606d',1,'ifm3d::DistanceImageInfo']]],
   ['getvendorid_308',['GetVendorId',['../classifm3d_1_1IFMNetworkDevice.html#af48559851c7db3001f4619cb0ae3897f',1,'ifm3d::IFMNetworkDevice']]]
 ];

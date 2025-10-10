@@ -1,14 +1,18 @@
 var searchData=
 [
-  ['data_27',['data',['../classifm3d_1_1ArrayDeserialize.html#a2e6d34b5f4aff3bfe05f03dc6263f4a6',1,'ifm3d::ArrayDeserialize']]],
-  ['deleteapplication_28',['DeleteApplication',['../classifm3d_1_1LegacyDevice.html#acaacaae90f21a29cdb6d5307b7bcbfcd',1,'ifm3d::LegacyDevice']]],
-  ['deserialize_20module_29',['Deserialize Module',['../group__Deserialize.html',1,'']]],
-  ['device_30',['Device',['../classifm3d_1_1Device.html',1,'ifm3d::Device'],['../classifm3d_1_1Device.html#af3be74120a1e69954e9a14d2ead47dd8',1,'ifm3d::Device::Device()'],['../group__Device.html',1,'(Global Namespace)']]],
-  ['device_5ftype_5f_31',['device_type_',['../classifm3d_1_1Device.html#a440e1b50f9fe85768f148c10c51c0c89',1,'ifm3d::Device']]],
-  ['devicediscovery_32',['DeviceDiscovery',['../classifm3d_1_1Device.html#aec07219a144d418e528585ec74c4b959',1,'ifm3d::Device']]],
-  ['deviceid_33',['DeviceID',['../classifm3d_1_1Device.html#a1196ce698af75209ab9b6696e7e1f592',1,'ifm3d::Device']]],
-  ['deviceparameter_34',['DeviceParameter',['../classifm3d_1_1Device.html#a0ffb1ea6486e77335e529517611df36d',1,'ifm3d::Device']]],
-  ['devicetype_35',['DeviceType',['../classifm3d_1_1Device.html#a8366130f550c90cf3abfb730d0d15c08',1,'ifm3d::Device']]],
-  ['diagnostic_36',['DIAGNOSTIC',['../group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50a1ba95aa8d735cc8ab55d670b1c957bec',1,'ifm3d']]],
-  ['distanceimageinfo_37',['DistanceImageInfo',['../classifm3d_1_1DistanceImageInfo.html',1,'ifm3d']]]
+  ['calibration_13',['Calibration',['../structifm3d_1_1calibration_1_1Calibration.html',1,'ifm3d::calibration']]],
+  ['call_14',['Call',['../classifm3d_1_1PCICClient.html#a5b33d371605d558fbfa6c90fd69f36bb',1,'ifm3d::PCICClient::Call(const std::string &amp;request, std::function&lt; void(const std::string &amp;response)&gt; callback)'],['../classifm3d_1_1PCICClient.html#a0c55134f22d23542449344bcf898e9e0',1,'ifm3d::PCICClient::Call(const std::string &amp;request)'],['../classifm3d_1_1PCICClient.html#a0f6cfe3e11f0e73c95d0ce34d98fb027',1,'ifm3d::PCICClient::Call(const std::string &amp;request, std::string &amp;response, long timeout_millis)']]],
+  ['cancelcallback_15',['CancelCallback',['../classifm3d_1_1PCICClient.html#a55ab9adeb7a46dfa5ec55a28327bceaf',1,'ifm3d::PCICClient']]],
+  ['cancelsession_16',['CancelSession',['../classifm3d_1_1LegacyDevice.html#a45763257d8b1b319ef419f84d478d343',1,'ifm3d::LegacyDevice::CancelSession()'],['../classifm3d_1_1LegacyDevice.html#a1ef75fc8b7162a832df144ea1aa0ff55',1,'ifm3d::LegacyDevice::CancelSession(const std::string &amp;sid)']]],
+  ['cartesian_5fall_17',['CARTESIAN_ALL',['../group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50aea25786db129bd0c1325f5a207287477',1,'ifm3d']]],
+  ['cartesian_5fx_5fcomponent_18',['CARTESIAN_X_COMPONENT',['../group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50ad31d6b872b2cb01ed7c9c29b2d30afc3',1,'ifm3d']]],
+  ['cartesian_5fy_5fcomponent_19',['CARTESIAN_Y_COMPONENT',['../group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50a20855a9b93845b52154c3ba90ca83b29',1,'ifm3d']]],
+  ['cartesian_5fz_5fcomponent_20',['CARTESIAN_Z_COMPONENT',['../group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50a1561b8f6c501f773685e6b35a5b0c0df',1,'ifm3d']]],
+  ['checkminimumfirmwareversion_21',['CheckMinimumFirmwareVersion',['../classifm3d_1_1Device.html#ad0d20a261a0dd280884bc5c59b3ce9f6',1,'ifm3d::Device']]],
+  ['clone_22',['Clone',['../classifm3d_1_1Buffer.html#a77544a961444d4d1d85eb13bcb12cbbc',1,'ifm3d::Buffer::Clone()'],['../classifm3d_1_1Buffer__.html#ad00ca0e5a12af3f60ffd4edbac61702e',1,'ifm3d::Buffer_::Clone()']]],
+  ['code_23',['code',['../classifm3d_1_1Error.html#a55941c65ba566878c000075bed9533b6',1,'ifm3d::Error']]],
+  ['common_20module_24',['Common Module',['../group__Common.html',1,'']]],
+  ['confidence_5fimage_25',['CONFIDENCE_IMAGE',['../group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50ab45463507e02af5daf2bdc908cc217ad',1,'ifm3d']]],
+  ['copyapplication_26',['CopyApplication',['../classifm3d_1_1LegacyDevice.html#a58bfa891ae470a39fff0742514b7f1b0',1,'ifm3d::LegacyDevice']]],
+  ['createapplication_27',['CreateApplication',['../classifm3d_1_1LegacyDevice.html#a4217801bc184f1f8db8acfdc9c2092ca',1,'ifm3d::LegacyDevice']]]
 ];

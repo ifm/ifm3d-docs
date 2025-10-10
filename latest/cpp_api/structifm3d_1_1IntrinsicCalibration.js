@@ -1,5 +1,5 @@
 var structifm3d_1_1IntrinsicCalibration =
 [
-    [ "model_iD", "structifm3d_1_1IntrinsicCalibration.html#a651a0622a80881e8262ca4fcf821637b", null ],
-    [ "model_parameters", "structifm3d_1_1IntrinsicCalibration.html#a9ba2a24527796430dfe73d1d8ab75e05", null ]
+    [ "model_id", "structifm3d_1_1IntrinsicCalibration.html#ae2dbac1afe84d2102cf648df5a8fe2e0", null ],
+    [ "model_parameters", "structifm3d_1_1IntrinsicCalibration.html#a3e29eb11865a7e710d60bf3ea7e3b3ef", null ]
 ];

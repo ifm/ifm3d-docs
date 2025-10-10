@@ -8,7 +8,7 @@ var searchData=
   ['logwriter_225',['LogWriter',['../classifm3d_1_1LogWriter.html',1,'ifm3d']]],
   ['logwritercomposite_226',['LogWriterComposite',['../classifm3d_1_1LogWriterComposite.html',1,'ifm3d']]],
   ['logwriterconsole_227',['LogWriterConsole',['../classifm3d_1_1LogWriterConsole.html',1,'ifm3d']]],
-  ['logwriterconsole_3c_20formatter_20_3e_228',['LogWriterConsole&lt; Formatter &gt;',['../classifm3d_1_1LogWriterConsole.html',1,'ifm3d']]],
+  ['logwriterconsole_3c_20formatter_20_3e_228',['LogWriterConsole&lt; FORMATTER &gt;',['../classifm3d_1_1LogWriterConsole.html',1,'ifm3d']]],
   ['logwriterconsolecolored_229',['LogWriterConsoleColored',['../classifm3d_1_1LogWriterConsoleColored.html',1,'ifm3d']]],
   ['logwriterfile_230',['LogWriterFile',['../classifm3d_1_1LogWriterFile.html',1,'ifm3d']]]
 ];

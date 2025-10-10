@@ -103,11 +103,16 @@ $(document).ready(function(){initNavTree('log__writer_8h_source.html',''); initR
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classifm3d_1_1LogWriter.html">   14</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classifm3d_1_1LogWriter.html">LogWriter</a></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classifm3d_1_1LogWriter.html">LogWriter</a>() {}</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Write(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1LogEntry.html">LogEntry</a>&amp; entry) = 0;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  };</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif // IFM3D_COMMON_LOGGING_LOG_WRITER_H</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classifm3d_1_1LogWriter.html">LogWriter</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classifm3d_1_1LogWriter.html">LogWriter</a>(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1LogWriter.html">LogWriter</a>&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classifm3d_1_1LogWriter.html">LogWriter</a>(<a class="code" href="classifm3d_1_1LogWriter.html">LogWriter</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classifm3d_1_1LogWriter.html">LogWriter</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1LogWriter.html">LogWriter</a>&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classifm3d_1_1LogWriter.html">LogWriter</a>&amp; operator=(<a class="code" href="classifm3d_1_1LogWriter.html">LogWriter</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classifm3d_1_1LogWriter.html">LogWriter</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Write(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1LogEntry.html">LogEntry</a>&amp; entry) = 0;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  };</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif // IFM3D_COMMON_LOGGING_LOG_WRITER_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassifm3d_1_1LogWriter_html"><div class="ttname"><a href="classifm3d_1_1LogWriter.html">ifm3d::LogWriter</a></div><div class="ttdef"><b>Definition:</b> log_writer.h:14</div></div>

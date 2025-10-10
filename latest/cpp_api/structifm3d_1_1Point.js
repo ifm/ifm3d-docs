@@ -1,5 +1,5 @@
 var structifm3d_1_1Point =
 [
-    [ "value_type", "structifm3d_1_1Point.html#a30e21ca467d3656cd6eb2af25fe21a73", null ],
-    [ "val", "structifm3d_1_1Point.html#a82f104fd54d63c2a6a6b1c1b68ff0730", null ]
+    [ "ValueType", "structifm3d_1_1Point.html#ac01313b760748b3de7ee62b6bc4e8177", null ],
+    [ "val", "structifm3d_1_1Point.html#abc18ee3b6e297b0eeeff753dfee74b82", null ]
 ];

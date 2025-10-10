@@ -27,7 +27,7 @@ var group__Deserialize =
     ] ],
     [ "ODSInfoV1", "classifm3d_1_1ODSInfoV1.html", [
       [ "Ptr", "classifm3d_1_1ODSInfoV1.html#a834ee48d3a744da5882b79fdded6a4de", null ],
-      [ "IsValid", "classifm3d_1_1ODSInfoV1.html#a8a1f24250380fe2fc48b853cd7cf32ef", null ],
+      [ "IsValid", "classifm3d_1_1ODSInfoV1.html#af4674eecc7cf942d98a6ca28f1d87d2a", null ],
       [ "Read", "classifm3d_1_1ODSInfoV1.html#ae2dae6a1891bfa4b5fac8dd3cb303d48", null ],
       [ "timestamp_ns", "classifm3d_1_1ODSInfoV1.html#ad111e845e130e938c65eea412102af99", null ],
       [ "zone_config_id", "classifm3d_1_1ODSInfoV1.html#af33a0e5f4b2a36db994a38aeeb11a4bc", null ],
@@ -35,7 +35,7 @@ var group__Deserialize =
     ] ],
     [ "ODSOccupancyGridV1", "classifm3d_1_1ODSOccupancyGridV1.html", [
       [ "Ptr", "classifm3d_1_1ODSOccupancyGridV1.html#a5a0916645b6e6afbbd194c8cea771286", null ],
-      [ "IsValid", "classifm3d_1_1ODSOccupancyGridV1.html#a2a9358a7313fb1f505a7bff3319c80df", null ],
+      [ "IsValid", "classifm3d_1_1ODSOccupancyGridV1.html#a167e3b285d9810d0fdc8258b88c187c8", null ],
       [ "Read", "classifm3d_1_1ODSOccupancyGridV1.html#a8e178fdb921681594ed4b7e069e95c59", null ],
       [ "height", "classifm3d_1_1ODSOccupancyGridV1.html#a4ad2cf906a4e43b657ff80a1d26c9a09", null ],
       [ "image", "classifm3d_1_1ODSOccupancyGridV1.html#a1f1b5be7c236e82b87fd8863d41af6d1", null ],
@@ -47,7 +47,7 @@ var group__Deserialize =
     [ "ODSPolarOccupancyGridV1", "classifm3d_1_1ODSPolarOccupancyGridV1.html", [
       [ "Ptr", "classifm3d_1_1ODSPolarOccupancyGridV1.html#a18fce253ac67308ad71f32fc3dfc5132", null ],
       [ "Read", "classifm3d_1_1ODSPolarOccupancyGridV1.html#a92d05f63fccf065ab72d98efc1f3e906", null ],
-      [ "polarOccGrid", "classifm3d_1_1ODSPolarOccupancyGridV1.html#a1212bf7815c116584e478385000cd8d5", null ],
+      [ "polar_occ_grid", "classifm3d_1_1ODSPolarOccupancyGridV1.html#a4e03a9e84e0720c5ffea8b81b072ad02", null ],
       [ "timestamp_ns", "classifm3d_1_1ODSPolarOccupancyGridV1.html#ace482ca50b4f594726e206735c878af0", null ],
       [ "version", "classifm3d_1_1ODSPolarOccupancyGridV1.html#a39a5db6eaf8cf3759e0de96610ab784f", null ]
     ] ],

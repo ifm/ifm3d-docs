@@ -1,14 +1,7 @@
 var searchData=
 [
-  ['legacydevice_100',['LegacyDevice',['../classifm3d_1_1LegacyDevice.html',1,'ifm3d::LegacyDevice'],['../classifm3d_1_1LegacyDevice.html#aa1ec31065d18ba99af459a4f23cf1dc3',1,'ifm3d::LegacyDevice::LegacyDevice()']]],
-  ['logentry_101',['LogEntry',['../classifm3d_1_1LogEntry.html',1,'ifm3d']]],
-  ['logformatterjson_102',['LogFormatterJson',['../classifm3d_1_1LogFormatterJson.html',1,'ifm3d']]],
-  ['logformattertext_103',['LogFormatterText',['../classifm3d_1_1LogFormatterText.html',1,'ifm3d']]],
-  ['logger_104',['Logger',['../classifm3d_1_1Logger.html',1,'ifm3d']]],
-  ['logwriter_105',['LogWriter',['../classifm3d_1_1LogWriter.html',1,'ifm3d']]],
-  ['logwritercomposite_106',['LogWriterComposite',['../classifm3d_1_1LogWriterComposite.html',1,'ifm3d']]],
-  ['logwriterconsole_107',['LogWriterConsole',['../classifm3d_1_1LogWriterConsole.html',1,'ifm3d']]],
-  ['logwriterconsole_3c_20formatter_20_3e_108',['LogWriterConsole&lt; Formatter &gt;',['../classifm3d_1_1LogWriterConsole.html',1,'ifm3d']]],
-  ['logwriterconsolecolored_109',['LogWriterConsoleColored',['../classifm3d_1_1LogWriterConsoleColored.html',1,'ifm3d']]],
-  ['logwriterfile_110',['LogWriterFile',['../classifm3d_1_1LogWriterFile.html',1,'ifm3d']]]
+  ['jpeg_5fimage_96',['JPEG_IMAGE',['../group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50a90abed328e48c49f10301a427886088f',1,'ifm3d']]],
+  ['json_97',['json',['../classifm3d_1_1json.html',1,'ifm3d']]],
+  ['json_5fdiagnostic_98',['JSON_DIAGNOSTIC',['../group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50aa937d3b304be7635cd4e628ba3c91716',1,'ifm3d']]],
+  ['json_5fmodel_99',['JSON_MODEL',['../group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50a8fd094d0fe5fad8ce986111c55161f4b',1,'ifm3d']]]
 ];

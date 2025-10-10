@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['_7edevice_202',['~Device',['../classifm3d_1_1Device.html#a1c105df963ce7b23fee9dfa57091700c',1,'ifm3d::Device']]],
-  ['_7eframegrabber_203',['~FrameGrabber',['../classifm3d_1_1FrameGrabber.html#aad0462fed9a5fc30e35f100af2217826',1,'ifm3d::FrameGrabber']]],
-  ['_7epcicclient_204',['~PCICClient',['../classifm3d_1_1PCICClient.html#a23868be539bfc42602863864ac7c05e0',1,'ifm3d::PCICClient']]]
+  ['xmlrpcport_200',['XMLRPCPort',['../classifm3d_1_1Device.html#ad7a08318bdee78328f567dbc47f0f221',1,'ifm3d::Device']]],
+  ['xyz_201',['XYZ',['../group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50ae65075d550f9b5bf9992fa1d71a131be',1,'ifm3d']]]
 ];

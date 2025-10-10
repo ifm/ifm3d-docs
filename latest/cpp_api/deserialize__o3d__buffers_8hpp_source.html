@@ -96,68 +96,68 @@ $(document).ready(function(){initNavTree('deserialize__o3d__buffers_8hpp_source.
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef IFM3D_DESERIALIZE_O3D_BUFFERS_HPP</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define IFM3D_DESERIALIZE_O3D_BUFFERS_HPP</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;ifm3d/device/err.h&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;ifm3d/fg/organizer_utils.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;ifm3d/deserialize/deserialize_utils.hpp&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;ifm3d/device/err.h&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;ifm3d/fg/buffer.h&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;ifm3d/deserialize/deserialize_utils.hpp&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;ifm3d/fg/organizer_utils.h&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>ifm3d</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="comment">// intrinsic param key which cahn be used for indexing the vector of the</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="comment">// intrinsic parameter</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keyword">enum class</span> intrinsic_param : std::uint32_t</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    F_X = 0,   <span class="comment">// Focal length of the camera in the sensor&#39;s x axis direction.</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    F_Y = 1,   <span class="comment">// Focal length of the camera in the sensor&#39;s y axis direction.</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    M_X = 2,   <span class="comment">// Main point in the sensor&#39;s x direction</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    M_Y = 3,   <span class="comment">// Main point in the sensor&#39;s x direction</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    ALPHA = 4, <span class="comment">// Skew parameter</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    K1 = 5,    <span class="comment">// First radial distortion coefficient</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    K2 = 6,    <span class="comment">// Second radial distortion coefficient</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    K5 = 7,    <span class="comment">// Third radial distortion coefficient</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    K3 = 8,    <span class="comment">// First tangential distortion coefficient</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    K4 = 9,    <span class="comment">// Second tangential distortion coefficient</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    TRANS_X = 10, <span class="comment">// Translation along x-direction in meters.</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    TRANS_Y = 11, <span class="comment">// Translation along y-direction in meters.</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    TRANS_Z = 12, <span class="comment">// Translation along Z-direction in meters.</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    ROT_X = 13,   <span class="comment">// Rotation along x-axis in radians. Positive values indicate</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                  <span class="comment">// clockwise rotation.</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    ROT_Y = 14,   <span class="comment">// Rotation along y-axis in radians. Positive values indicate</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                  <span class="comment">// clockwise rotation.</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    ROT_Z = 15    <span class="comment">// Rotation along z-axis in radians. Positive values indicate</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                  <span class="comment">// clockwise rotation.</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  };</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">namespace</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    constexpr <span class="keyword">auto</span> O3D_NUMBER_OF_INTRINSIC_CALIBRATION_PARAM = 16;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    constexpr <span class="keyword">auto</span> O3D_NUMBER_OF_INVERSE_INTRINSIC_CALIBRATION_PARAM =</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      O3D_NUMBER_OF_INTRINSIC_CALIBRATION_PARAM;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    constexpr <span class="keyword">auto</span> O3D_NUMBER_OF_EXTRINSIC_PARAM = 6;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    constexpr <span class="keyword">auto</span> O3D_NUMBER_OF_EXPOSURE_TIMES = 3;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    constexpr <span class="keyword">auto</span> O3D_ILLU_TEMP_VALUES = 1;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keyword">using</span> <a class="code" href="classifm3d_1_1O3DInstrinsicCalibration.html">O3DInstrinsicCalibration</a> =</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    ArrayDeserialize&lt;float, O3D_NUMBER_OF_INTRINSIC_CALIBRATION_PARAM&gt;;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">using</span> <a class="code" href="classifm3d_1_1O3DInverseInstrinsicCalibration.html">O3DInverseInstrinsicCalibration</a> =</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    ArrayDeserialize&lt;float, O3D_NUMBER_OF_INVERSE_INTRINSIC_CALIBRATION_PARAM&gt;;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keyword">using</span> <a class="code" href="classifm3d_1_1O3DExtrinsicCalibration.html">O3DExtrinsicCalibration</a> =</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    ArrayDeserialize&lt;float, O3D_NUMBER_OF_EXTRINSIC_PARAM&gt;;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keyword">using</span> <a class="code" href="classifm3d_1_1O3DExposureTimes.html">O3DExposureTimes</a> =</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    ArrayDeserialize&lt;uint32_t, O3D_NUMBER_OF_EXPOSURE_TIMES&gt;;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keyword">using</span> <a class="code" href="classifm3d_1_1O3DILLUTemperature.html">O3DILLUTemperature</a> = ArrayDeserialize&lt;float, O3D_ILLU_TEMP_VALUES&gt;;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;} <span class="comment">// end namespace ifm3d</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif // IFM3D_DESERIALIZE_O3D_BUFFERS_HPP</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="comment">// NOLINTNEXTLINE(performance-enum-size)</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">enum class</span> IntrinsicParam : std::uint32_t</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    F_X = 0,   <span class="comment">// Focal length of the camera in the sensor&#39;s x axis direction.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    F_Y = 1,   <span class="comment">// Focal length of the camera in the sensor&#39;s y axis direction.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    M_X = 2,   <span class="comment">// Main point in the sensor&#39;s x direction</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    M_Y = 3,   <span class="comment">// Main point in the sensor&#39;s x direction</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    ALPHA = 4, <span class="comment">// Skew parameter</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    K1 = 5,    <span class="comment">// First radial distortion coefficient</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    K2 = 6,    <span class="comment">// Second radial distortion coefficient</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    K5 = 7,    <span class="comment">// Third radial distortion coefficient</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    K3 = 8,    <span class="comment">// First tangential distortion coefficient</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    K4 = 9,    <span class="comment">// Second tangential distortion coefficient</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    TRANS_X = 10, <span class="comment">// Translation along x-direction in meters.</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    TRANS_Y = 11, <span class="comment">// Translation along y-direction in meters.</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    TRANS_Z = 12, <span class="comment">// Translation along Z-direction in meters.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    ROT_X = 13,   <span class="comment">// Rotation along x-axis in radians. Positive values indicate</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                  <span class="comment">// clockwise rotation.</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    ROT_Y = 14,   <span class="comment">// Rotation along y-axis in radians. Positive values indicate</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                  <span class="comment">// clockwise rotation.</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    ROT_Z = 15    <span class="comment">// Rotation along z-axis in radians. Positive values indicate</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                  <span class="comment">// clockwise rotation.</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  };</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">namespace</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    constexpr <span class="keyword">auto</span> O3D_NUMBER_OF_INTRINSIC_CALIBRATION_PARAM = 16;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    constexpr <span class="keyword">auto</span> O3D_NUMBER_OF_INVERSE_INTRINSIC_CALIBRATION_PARAM =</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      O3D_NUMBER_OF_INTRINSIC_CALIBRATION_PARAM;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    constexpr <span class="keyword">auto</span> O3D_NUMBER_OF_EXTRINSIC_PARAM = 6;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    constexpr <span class="keyword">auto</span> O3D_NUMBER_OF_EXPOSURE_TIMES = 3;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    constexpr <span class="keyword">auto</span> O3D_ILLU_TEMP_VALUES = 1;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">using</span> <a class="code" href="classifm3d_1_1O3DInstrinsicCalibration.html">O3DInstrinsicCalibration</a> =</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    ArrayDeserialize&lt;float, O3D_NUMBER_OF_INTRINSIC_CALIBRATION_PARAM&gt;;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keyword">using</span> <a class="code" href="classifm3d_1_1O3DInverseInstrinsicCalibration.html">O3DInverseInstrinsicCalibration</a> =</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    ArrayDeserialize&lt;float, O3D_NUMBER_OF_INVERSE_INTRINSIC_CALIBRATION_PARAM&gt;;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">using</span> <a class="code" href="classifm3d_1_1O3DExtrinsicCalibration.html">O3DExtrinsicCalibration</a> =</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    ArrayDeserialize&lt;float, O3D_NUMBER_OF_EXTRINSIC_PARAM&gt;;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">using</span> <a class="code" href="classifm3d_1_1O3DExposureTimes.html">O3DExposureTimes</a> =</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    ArrayDeserialize&lt;uint32_t, O3D_NUMBER_OF_EXPOSURE_TIMES&gt;;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keyword">using</span> O3DIlluTemperature = ArrayDeserialize&lt;float, O3D_ILLU_TEMP_VALUES&gt;;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;} <span class="comment">// end namespace ifm3d</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif // IFM3D_DESERIALIZE_O3D_BUFFERS_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassifm3d_1_1O3DILLUTemperature_html"><div class="ttname"><a href="classifm3d_1_1O3DILLUTemperature.html">O3DILLUTemperature</a></div></div>
 <div class="ttc" id="aclassifm3d_1_1O3DExtrinsicCalibration_html"><div class="ttname"><a href="classifm3d_1_1O3DExtrinsicCalibration.html">O3DExtrinsicCalibration</a></div></div>
 <div class="ttc" id="aclassifm3d_1_1O3DInverseInstrinsicCalibration_html"><div class="ttname"><a href="classifm3d_1_1O3DInverseInstrinsicCalibration.html">O3DInverseInstrinsicCalibration</a></div></div>
 <div class="ttc" id="aclassifm3d_1_1O3DExposureTimes_html"><div class="ttname"><a href="classifm3d_1_1O3DExposureTimes.html">O3DExposureTimes</a></div></div>

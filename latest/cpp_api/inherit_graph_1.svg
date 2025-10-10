@@ -22,7 +22,7 @@
 <title>Node1</title>
 <g id="a_node2"><a xlink:href="classifm3d_1_1Buffer__.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="116,-0.5 116,-19.5 236,-19.5 236,-0.5 116,-0.5"/>
-<text text-anchor="middle" x="176" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ifm3d::Buffer_&lt; Tp &gt;</text>
+<text text-anchor="middle" x="176" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ifm3d::Buffer_&lt; TP &gt;</text>
 </a>
 </g>
 </g>

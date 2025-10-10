@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['temporal_5ffilter_378',['temporal_filter',['../classifm3d_1_1Device.html#afebad872139042f57c28b95df7a1d483',1,'ifm3d::Device']]],
-  ['trigger_5fmode_379',['trigger_mode',['../classifm3d_1_1Device.html#ae98a6e123c250bfde6dea15214f4356f',1,'ifm3d::Device']]]
+  ['temporalfilter_378',['TemporalFilter',['../classifm3d_1_1Device.html#afc196d65321ab88f8ba2e960015c5d42',1,'ifm3d::Device']]],
+  ['triggermode_379',['TriggerMode',['../classifm3d_1_1Device.html#a6dc1a80e8a36cf9ae0463a6f23767cb5',1,'ifm3d::Device']]]
 ];

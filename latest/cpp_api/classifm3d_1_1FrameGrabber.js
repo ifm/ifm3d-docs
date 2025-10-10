@@ -18,7 +18,7 @@ var classifm3d_1_1FrameGrabber =
     [ "OnNewFrame", "classifm3d_1_1FrameGrabber.html#aad76d616c98cfde74adedb6de34d1793", null ],
     [ "operator=", "classifm3d_1_1FrameGrabber.html#afa616a11d0998001183522e5df9db5a4", null ],
     [ "operator=", "classifm3d_1_1FrameGrabber.html#a37e8d692b7cb118b374cb98fad80f696", null ],
-    [ "SetMasking", "classifm3d_1_1FrameGrabber.html#a36eb733d63fe4d7d9bb356cb6e008d04", null ],
+    [ "SetMasking", "classifm3d_1_1FrameGrabber.html#abdf589eba265eba196e215cb9a7aa65f", null ],
     [ "SetOrganizer", "classifm3d_1_1FrameGrabber.html#ad9b7752f418e4f937e31808b4c20c226", null ],
     [ "Start", "classifm3d_1_1FrameGrabber.html#a1c4942a1a0c5aedb6430b621fa9a3446", null ],
     [ "Stop", "classifm3d_1_1FrameGrabber.html#a6a12c26b81bd4cd01291f649ac7ce844", null ],

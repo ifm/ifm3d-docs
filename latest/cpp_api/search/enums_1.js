@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['import_5fflags_374',['import_flags',['../classifm3d_1_1Device.html#a26d401dffabd97a0cd0675211cb80f65',1,'ifm3d::Device']]]
+  ['importflags_374',['ImportFlags',['../classifm3d_1_1Device.html#a06d288514d9e8f6601f65624b38928c8',1,'ifm3d::Device']]]
 ];

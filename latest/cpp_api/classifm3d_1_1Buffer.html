@@ -107,9 +107,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aee0b8133eba77f2a26ff6f538079a9e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Buffer.html#aee0b8133eba77f2a26ff6f538079a9e0">Buffer</a> ()</td></tr>
 <tr class="memdesc:aee0b8133eba77f2a26ff6f538079a9e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">These are various constructors that form a <a class="el" href="classifm3d_1_1Buffer.html" title="The class Buffer represent a STL container to store data from the ifm devices in 2 dimension and supp...">Buffer</a>.  <a href="classifm3d_1_1Buffer.html#aee0b8133eba77f2a26ff6f538079a9e0">More...</a><br /></td></tr>
 <tr class="separator:aee0b8133eba77f2a26ff6f538079a9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf16f41f731893f13d955fa7fab81c52"><td class="memItemLeft" align="right" valign="top"><a id="acf16f41f731893f13d955fa7fab81c52"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Buffer</b> (const std::uint32_t cols, const std::uint32_t rows, const std::uint32_t nchannel, ifm3d::pixel_format format, const std::optional&lt; <a class="el" href="classifm3d_1_1json.html">ifm3d::json</a> &gt; &amp;metadata=std::nullopt, <a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a> <a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">buffer_id</a>=static_cast&lt; <a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a> &gt;(0))</td></tr>
-<tr class="separator:acf16f41f731893f13d955fa7fab81c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19cc8e180ca9f476055ade2f7a420573"><td class="memItemLeft" align="right" valign="top"><a id="a19cc8e180ca9f476055ade2f7a420573"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Buffer</b> (std::uint32_t cols, std::uint32_t rows, std::uint32_t nchannel, ifm3d::PixelFormat format, const std::optional&lt; <a class="el" href="classifm3d_1_1json.html">ifm3d::json</a> &gt; &amp;metadata=std::nullopt, <a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a> <a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">buffer_id</a>=static_cast&lt; <a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a> &gt;(0))</td></tr>
+<tr class="separator:a19cc8e180ca9f476055ade2f7a420573"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af71f1c54f73d876b0e3b3e35a759fe1d"><td class="memItemLeft" align="right" valign="top"><a id="af71f1c54f73d876b0e3b3e35a759fe1d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Buffer</b> (<a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:af71f1c54f73d876b0e3b3e35a759fe1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,71 +122,71 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a39aa1576ca861016873435dbb82dc764"><td class="memItemLeft" align="right" valign="top"><a id="a39aa1576ca861016873435dbb82dc764"></a>
 <a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classifm3d_1_1Buffer.html">Buffer</a> &amp;)=default</td></tr>
 <tr class="separator:a39aa1576ca861016873435dbb82dc764"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2414166ff35146d5989144f96e33c427"><td class="memItemLeft" align="right" valign="top"><a id="a2414166ff35146d5989144f96e33c427"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>create</b> (const std::uint32_t cols, const std::uint32_t rows, const std::uint32_t nchannel, ifm3d::pixel_format format, <a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a> <a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">buffer_id</a>)</td></tr>
-<tr class="separator:a2414166ff35146d5989144f96e33c427"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3013a0a21394815bc4901d42a316136"><td class="memItemLeft" align="right" valign="top"><a id="af3013a0a21394815bc4901d42a316136"></a>
-<a class="el" href="classifm3d_1_1Buffer.html">Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Buffer.html#af3013a0a21394815bc4901d42a316136">clone</a> () const</td></tr>
-<tr class="memdesc:af3013a0a21394815bc4901d42a316136"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a full copy of the array and the underlying data. <br /></td></tr>
-<tr class="separator:af3013a0a21394815bc4901d42a316136"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb1506baf51e5ba7db9eaf132e66958e"><td class="memItemLeft" align="right" valign="top"><a id="adb1506baf51e5ba7db9eaf132e66958e"></a>
-std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>height</b> () const</td></tr>
-<tr class="separator:adb1506baf51e5ba7db9eaf132e66958e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96e2c5f2a05fa612dec751a608037c60"><td class="memItemLeft" align="right" valign="top"><a id="a96e2c5f2a05fa612dec751a608037c60"></a>
-std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>width</b> () const</td></tr>
-<tr class="separator:a96e2c5f2a05fa612dec751a608037c60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac6518d954393e69bce1409b9b73e6e8"><td class="memItemLeft" align="right" valign="top"><a id="aac6518d954393e69bce1409b9b73e6e8"></a>
-std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>nchannels</b> () const</td></tr>
-<tr class="separator:aac6518d954393e69bce1409b9b73e6e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0aaacdb1e14867743cac502bf6873ab4"><td class="memItemLeft" align="right" valign="top"><a id="a0aaacdb1e14867743cac502bf6873ab4"></a>
-ifm3d::pixel_format&#160;</td><td class="memItemRight" valign="bottom"><b>dataFormat</b> () const</td></tr>
-<tr class="separator:a0aaacdb1e14867743cac502bf6873ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0778ba6934a2bc74dcf8015e7befb6ff"><td class="memItemLeft" align="right" valign="top"><a id="a0778ba6934a2bc74dcf8015e7befb6ff"></a>
-<a class="el" href="classifm3d_1_1json.html">ifm3d::json</a>&#160;</td><td class="memItemRight" valign="bottom"><b>metadata</b> () const</td></tr>
-<tr class="separator:a0778ba6934a2bc74dcf8015e7befb6ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05a5d84b05e558112fb3eb546a3dddbc"><td class="memItemLeft" align="right" valign="top"><a id="a05a5d84b05e558112fb3eb546a3dddbc"></a>
-<a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bufferId</b> () const</td></tr>
-<tr class="separator:a05a5d84b05e558112fb3eb546a3dddbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a493b0f824117d5c0ef06dd4d5c9b3d17"><td class="memItemLeft" align="right" valign="top"><a id="a493b0f824117d5c0ef06dd4d5c9b3d17"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Buffer.html#a493b0f824117d5c0ef06dd4d5c9b3d17">size</a> () const</td></tr>
-<tr class="memdesc:a493b0f824117d5c0ef06dd4d5c9b3d17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size of the buffer in bytes. <br /></td></tr>
-<tr class="separator:a493b0f824117d5c0ef06dd4d5c9b3d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7f0a9f097ceeb380b1adfe1162bd3cc"><td class="memTemplParams" colspan="2">template&lt;typename T  = std::uint8_t&gt; </td></tr>
-<tr class="memitem:ad7f0a9f097ceeb380b1adfe1162bd3cc"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Buffer.html#ad7f0a9f097ceeb380b1adfe1162bd3cc">ptr</a> (const std::uint32_t row)</td></tr>
-<tr class="memdesc:ad7f0a9f097ceeb380b1adfe1162bd3cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a pointer to the specified <a class="el" href="classifm3d_1_1Buffer.html" title="The class Buffer represent a STL container to store data from the ifm devices in 2 dimension and supp...">Buffer</a> row.  <a href="classifm3d_1_1Buffer.html#ad7f0a9f097ceeb380b1adfe1162bd3cc">More...</a><br /></td></tr>
-<tr class="separator:ad7f0a9f097ceeb380b1adfe1162bd3cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b1d0237b10625682e81414d2062a364"><td class="memTemplParams" colspan="2">template&lt;typename T  = std::uint8_t&gt; </td></tr>
-<tr class="memitem:a0b1d0237b10625682e81414d2062a364"><td class="memTemplItemLeft" align="right" valign="top">T const  *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Buffer.html#a0b1d0237b10625682e81414d2062a364">ptr</a> (const std::uint32_t row) const</td></tr>
-<tr class="memdesc:a0b1d0237b10625682e81414d2062a364"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a pointer to the specified <a class="el" href="classifm3d_1_1Buffer.html" title="The class Buffer represent a STL container to store data from the ifm devices in 2 dimension and supp...">Buffer</a> row.  <a href="classifm3d_1_1Buffer.html#a0b1d0237b10625682e81414d2062a364">More...</a><br /></td></tr>
-<tr class="separator:a0b1d0237b10625682e81414d2062a364"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0baa405cc9e2ac36f1392d42be0e828e"><td class="memTemplParams" colspan="2">template&lt;typename T  = std::uint8_t&gt; </td></tr>
-<tr class="memitem:a0baa405cc9e2ac36f1392d42be0e828e"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Buffer.html#a0baa405cc9e2ac36f1392d42be0e828e">ptr</a> (const std::uint32_t row, const std::uint32_t col)</td></tr>
-<tr class="memdesc:a0baa405cc9e2ac36f1392d42be0e828e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the Pixel at row,col.  <a href="classifm3d_1_1Buffer.html#a0baa405cc9e2ac36f1392d42be0e828e">More...</a><br /></td></tr>
-<tr class="separator:a0baa405cc9e2ac36f1392d42be0e828e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9320387e3a0a4bda97c582c49a692cc"><td class="memTemplParams" colspan="2">template&lt;typename T  = std::uint8_t&gt; </td></tr>
-<tr class="memitem:ae9320387e3a0a4bda97c582c49a692cc"><td class="memTemplItemLeft" align="right" valign="top">T const  *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Buffer.html#ae9320387e3a0a4bda97c582c49a692cc">ptr</a> (const std::uint32_t row, const std::uint32_t col) const</td></tr>
-<tr class="memdesc:ae9320387e3a0a4bda97c582c49a692cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the Pixel at row,col.  <a href="classifm3d_1_1Buffer.html#ae9320387e3a0a4bda97c582c49a692cc">More...</a><br /></td></tr>
-<tr class="separator:ae9320387e3a0a4bda97c582c49a692cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc246df74f76b9397abb8bfd06f3af73"><td class="memTemplParams" colspan="2"><a id="acc246df74f76b9397abb8bfd06f3af73"></a>
+<tr class="memitem:a43256d743bb3636b080f6cd804e1381d"><td class="memItemLeft" align="right" valign="top"><a id="a43256d743bb3636b080f6cd804e1381d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Create</b> (std::uint32_t cols, std::uint32_t rows, std::uint32_t nchannel, ifm3d::PixelFormat format, <a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a> <a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">buffer_id</a>)</td></tr>
+<tr class="separator:a43256d743bb3636b080f6cd804e1381d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77544a961444d4d1d85eb13bcb12cbbc"><td class="memItemLeft" align="right" valign="top"><a id="a77544a961444d4d1d85eb13bcb12cbbc"></a>
+<a class="el" href="classifm3d_1_1Buffer.html">Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Buffer.html#a77544a961444d4d1d85eb13bcb12cbbc">Clone</a> () const</td></tr>
+<tr class="memdesc:a77544a961444d4d1d85eb13bcb12cbbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a full copy of the array and the underlying data. <br /></td></tr>
+<tr class="separator:a77544a961444d4d1d85eb13bcb12cbbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a228a736a2b2af299ddcf57fe9beb0502"><td class="memItemLeft" align="right" valign="top"><a id="a228a736a2b2af299ddcf57fe9beb0502"></a>
+std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>Height</b> () const</td></tr>
+<tr class="separator:a228a736a2b2af299ddcf57fe9beb0502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac25d0acaef96d9dd06fd6b170eb028ca"><td class="memItemLeft" align="right" valign="top"><a id="ac25d0acaef96d9dd06fd6b170eb028ca"></a>
+std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>Width</b> () const</td></tr>
+<tr class="separator:ac25d0acaef96d9dd06fd6b170eb028ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5fdced40e93f7a20e05471e579e30c2"><td class="memItemLeft" align="right" valign="top"><a id="ad5fdced40e93f7a20e05471e579e30c2"></a>
+std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>NumChannels</b> () const</td></tr>
+<tr class="separator:ad5fdced40e93f7a20e05471e579e30c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6ac76657736962a9d1481c0243c815d"><td class="memItemLeft" align="right" valign="top"><a id="ad6ac76657736962a9d1481c0243c815d"></a>
+ifm3d::PixelFormat&#160;</td><td class="memItemRight" valign="bottom"><b>DataFormat</b> () const</td></tr>
+<tr class="separator:ad6ac76657736962a9d1481c0243c815d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72fa9f71a8a9b29fb63c3e40bc957ad1"><td class="memItemLeft" align="right" valign="top"><a id="a72fa9f71a8a9b29fb63c3e40bc957ad1"></a>
+<a class="el" href="classifm3d_1_1json.html">ifm3d::json</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Metadata</b> () const</td></tr>
+<tr class="separator:a72fa9f71a8a9b29fb63c3e40bc957ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca22bb816f805f1f81eda8985f0ba467"><td class="memItemLeft" align="right" valign="top"><a id="aca22bb816f805f1f81eda8985f0ba467"></a>
+<a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a>&#160;</td><td class="memItemRight" valign="bottom"><b>BufferId</b> () const</td></tr>
+<tr class="separator:aca22bb816f805f1f81eda8985f0ba467"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee43d2c438000f8fe4925e25566be23a"><td class="memItemLeft" align="right" valign="top"><a id="aee43d2c438000f8fe4925e25566be23a"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Buffer.html#aee43d2c438000f8fe4925e25566be23a">Size</a> () const</td></tr>
+<tr class="memdesc:aee43d2c438000f8fe4925e25566be23a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size of the buffer in bytes. <br /></td></tr>
+<tr class="separator:aee43d2c438000f8fe4925e25566be23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a316c4df00f4080a8a5727c0b9993950a"><td class="memTemplParams" colspan="2">template&lt;typename T  = std::uint8_t&gt; </td></tr>
+<tr class="memitem:a316c4df00f4080a8a5727c0b9993950a"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Buffer.html#a316c4df00f4080a8a5727c0b9993950a">Ptr</a> (std::uint32_t row)</td></tr>
+<tr class="memdesc:a316c4df00f4080a8a5727c0b9993950a"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a pointer to the specified <a class="el" href="classifm3d_1_1Buffer.html" title="The class Buffer represent a STL container to store data from the ifm devices in 2 dimension and supp...">Buffer</a> row.  <a href="classifm3d_1_1Buffer.html#a316c4df00f4080a8a5727c0b9993950a">More...</a><br /></td></tr>
+<tr class="separator:a316c4df00f4080a8a5727c0b9993950a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f7ebcc95ac56ba4072e23352a281989"><td class="memTemplParams" colspan="2">template&lt;typename T  = std::uint8_t&gt; </td></tr>
+<tr class="memitem:a6f7ebcc95ac56ba4072e23352a281989"><td class="memTemplItemLeft" align="right" valign="top">T const  *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Buffer.html#a6f7ebcc95ac56ba4072e23352a281989">Ptr</a> (std::uint32_t row) const</td></tr>
+<tr class="memdesc:a6f7ebcc95ac56ba4072e23352a281989"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a pointer to the specified <a class="el" href="classifm3d_1_1Buffer.html" title="The class Buffer represent a STL container to store data from the ifm devices in 2 dimension and supp...">Buffer</a> row.  <a href="classifm3d_1_1Buffer.html#a6f7ebcc95ac56ba4072e23352a281989">More...</a><br /></td></tr>
+<tr class="separator:a6f7ebcc95ac56ba4072e23352a281989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab21715ba92a700ea4e2480272b2d576b"><td class="memTemplParams" colspan="2">template&lt;typename T  = std::uint8_t&gt; </td></tr>
+<tr class="memitem:ab21715ba92a700ea4e2480272b2d576b"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Buffer.html#ab21715ba92a700ea4e2480272b2d576b">Ptr</a> (std::uint32_t row, std::uint32_t col)</td></tr>
+<tr class="memdesc:ab21715ba92a700ea4e2480272b2d576b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the Pixel at row,col.  <a href="classifm3d_1_1Buffer.html#ab21715ba92a700ea4e2480272b2d576b">More...</a><br /></td></tr>
+<tr class="separator:ab21715ba92a700ea4e2480272b2d576b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88a41073a1a9b969341eb2c5e846d26b"><td class="memTemplParams" colspan="2">template&lt;typename T  = std::uint8_t&gt; </td></tr>
+<tr class="memitem:a88a41073a1a9b969341eb2c5e846d26b"><td class="memTemplItemLeft" align="right" valign="top">T const  *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classifm3d_1_1Buffer.html#a88a41073a1a9b969341eb2c5e846d26b">Ptr</a> (std::uint32_t row, std::uint32_t col) const</td></tr>
+<tr class="memdesc:a88a41073a1a9b969341eb2c5e846d26b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the Pixel at row,col.  <a href="classifm3d_1_1Buffer.html#a88a41073a1a9b969341eb2c5e846d26b">More...</a><br /></td></tr>
+<tr class="separator:a88a41073a1a9b969341eb2c5e846d26b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17c16bc0d6f304b5ae4f03cc2dc1ea9d"><td class="memTemplParams" colspan="2"><a id="a17c16bc0d6f304b5ae4f03cc2dc1ea9d"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:acc246df74f76b9397abb8bfd06f3af73"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>at</b> (const std::size_t index)</td></tr>
-<tr class="separator:acc246df74f76b9397abb8bfd06f3af73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e05febba1067fddd9599bb0e6481277"><td class="memTemplParams" colspan="2"><a id="a0e05febba1067fddd9599bb0e6481277"></a>
+<tr class="memitem:a17c16bc0d6f304b5ae4f03cc2dc1ea9d"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>At</b> (std::size_t index)</td></tr>
+<tr class="separator:a17c16bc0d6f304b5ae4f03cc2dc1ea9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0762aedef234a5199f527695b33148f"><td class="memTemplParams" colspan="2"><a id="af0762aedef234a5199f527695b33148f"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a0e05febba1067fddd9599bb0e6481277"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>at</b> (const std::uint32_t row, const std::uint32_t col)</td></tr>
-<tr class="separator:a0e05febba1067fddd9599bb0e6481277"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abab757b727b97899c1378a35990405d9"><td class="memTemplParams" colspan="2"><a id="abab757b727b97899c1378a35990405d9"></a>
+<tr class="memitem:af0762aedef234a5199f527695b33148f"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>At</b> (std::uint32_t row, std::uint32_t col)</td></tr>
+<tr class="separator:af0762aedef234a5199f527695b33148f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb5eaa0771bb85ba3081a8131c06b984"><td class="memTemplParams" colspan="2"><a id="adb5eaa0771bb85ba3081a8131c06b984"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:abab757b727b97899c1378a35990405d9"><td class="memTemplItemLeft" align="right" valign="top">T const  &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>at</b> (const std::size_t index) const</td></tr>
-<tr class="separator:abab757b727b97899c1378a35990405d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f6b0e12a2538a5f5350ac86329f1e83"><td class="memTemplParams" colspan="2"><a id="a8f6b0e12a2538a5f5350ac86329f1e83"></a>
+<tr class="memitem:adb5eaa0771bb85ba3081a8131c06b984"><td class="memTemplItemLeft" align="right" valign="top">T const  &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>At</b> (std::size_t index) const</td></tr>
+<tr class="separator:adb5eaa0771bb85ba3081a8131c06b984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a327d445cbdb266e04bf2d4f3e6b21839"><td class="memTemplParams" colspan="2"><a id="a327d445cbdb266e04bf2d4f3e6b21839"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a8f6b0e12a2538a5f5350ac86329f1e83"><td class="memTemplItemLeft" align="right" valign="top">T const  &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>at</b> (const std::uint32_t row, const std::uint32_t col) const</td></tr>
-<tr class="separator:a8f6b0e12a2538a5f5350ac86329f1e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad82a320a233d086b8996455f80e35f1"><td class="memTemplParams" colspan="2"><a id="aad82a320a233d086b8996455f80e35f1"></a>
+<tr class="memitem:a327d445cbdb266e04bf2d4f3e6b21839"><td class="memTemplItemLeft" align="right" valign="top">T const  &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>At</b> (std::uint32_t row, std::uint32_t col) const</td></tr>
+<tr class="separator:a327d445cbdb266e04bf2d4f3e6b21839"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af38a12cdd95fb2662af11441052b5c23"><td class="memTemplParams" colspan="2"><a id="af38a12cdd95fb2662af11441052b5c23"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:aad82a320a233d086b8996455f80e35f1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setTo</b> (const T val, const <a class="el" href="classifm3d_1_1Buffer.html">ifm3d::Buffer</a> &amp;mask)</td></tr>
-<tr class="separator:aad82a320a233d086b8996455f80e35f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af38a12cdd95fb2662af11441052b5c23"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>SetTo</b> (T val, const <a class="el" href="classifm3d_1_1Buffer.html">ifm3d::Buffer</a> &amp;mask)</td></tr>
+<tr class="separator:af38a12cdd95fb2662af11441052b5c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41fe1fbaa99e09bbbc3e4eebd786bd93"><td class="memTemplParams" colspan="2"><a id="a41fe1fbaa99e09bbbc3e4eebd786bd93"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a41fe1fbaa99e09bbbc3e4eebd786bd93"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structifm3d_1_1Buffer_1_1Iterator.html">Iterator</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>begin</b> ()</td></tr>
@@ -260,8 +260,8 @@ template&lt;typename T &gt; </td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad7f0a9f097ceeb380b1adfe1162bd3cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7f0a9f097ceeb380b1adfe1162bd3cc">&#9670;&nbsp;</a></span>ptr() <span class="overload">[1/4]</span></h2>
+<a id="a316c4df00f4080a8a5727c0b9993950a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a316c4df00f4080a8a5727c0b9993950a">&#9670;&nbsp;</a></span>Ptr() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -269,9 +269,9 @@ template&lt;typename T &gt; </td></tr>
 template&lt;typename T  = std::uint8_t&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">T* ifm3d::Buffer::ptr </td>
+          <td class="memname">T* ifm3d::Buffer::Ptr </td>
           <td>(</td>
-          <td class="paramtype">const std::uint32_t&#160;</td>
+          <td class="paramtype">std::uint32_t&#160;</td>
           <td class="paramname"><em>row</em></td><td>)</td>
           <td></td>
         </tr>
@@ -288,8 +288,8 @@ template&lt;typename T  = std::uint8_t&gt; </div>
 
 </div>
 </div>
-<a id="a0b1d0237b10625682e81414d2062a364"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b1d0237b10625682e81414d2062a364">&#9670;&nbsp;</a></span>ptr() <span class="overload">[2/4]</span></h2>
+<a id="a6f7ebcc95ac56ba4072e23352a281989"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f7ebcc95ac56ba4072e23352a281989">&#9670;&nbsp;</a></span>Ptr() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -297,9 +297,9 @@ template&lt;typename T  = std::uint8_t&gt; </div>
 template&lt;typename T  = std::uint8_t&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">T const* ifm3d::Buffer::ptr </td>
+          <td class="memname">T const* ifm3d::Buffer::Ptr </td>
           <td>(</td>
-          <td class="paramtype">const std::uint32_t&#160;</td>
+          <td class="paramtype">std::uint32_t&#160;</td>
           <td class="paramname"><em>row</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -316,8 +316,8 @@ template&lt;typename T  = std::uint8_t&gt; </div>
 
 </div>
 </div>
-<a id="a0baa405cc9e2ac36f1392d42be0e828e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0baa405cc9e2ac36f1392d42be0e828e">&#9670;&nbsp;</a></span>ptr() <span class="overload">[3/4]</span></h2>
+<a id="ab21715ba92a700ea4e2480272b2d576b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab21715ba92a700ea4e2480272b2d576b">&#9670;&nbsp;</a></span>Ptr() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -325,15 +325,15 @@ template&lt;typename T  = std::uint8_t&gt; </div>
 template&lt;typename T  = std::uint8_t&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">T* ifm3d::Buffer::ptr </td>
+          <td class="memname">T* ifm3d::Buffer::Ptr </td>
           <td>(</td>
-          <td class="paramtype">const std::uint32_t&#160;</td>
+          <td class="paramtype">std::uint32_t&#160;</td>
           <td class="paramname"><em>row</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::uint32_t&#160;</td>
+          <td class="paramtype">std::uint32_t&#160;</td>
           <td class="paramname"><em>col</em>&#160;</td>
         </tr>
         <tr>
@@ -355,8 +355,8 @@ template&lt;typename T  = std::uint8_t&gt; </div>
 
 </div>
 </div>
-<a id="ae9320387e3a0a4bda97c582c49a692cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9320387e3a0a4bda97c582c49a692cc">&#9670;&nbsp;</a></span>ptr() <span class="overload">[4/4]</span></h2>
+<a id="a88a41073a1a9b969341eb2c5e846d26b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88a41073a1a9b969341eb2c5e846d26b">&#9670;&nbsp;</a></span>Ptr() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -364,15 +364,15 @@ template&lt;typename T  = std::uint8_t&gt; </div>
 template&lt;typename T  = std::uint8_t&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">T const* ifm3d::Buffer::ptr </td>
+          <td class="memname">T const* ifm3d::Buffer::Ptr </td>
           <td>(</td>
-          <td class="paramtype">const std::uint32_t&#160;</td>
+          <td class="paramtype">std::uint32_t&#160;</td>
           <td class="paramname"><em>row</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::uint32_t&#160;</td>
+          <td class="paramtype">std::uint32_t&#160;</td>
           <td class="paramname"><em>col</em>&#160;</td>
         </tr>
         <tr>
@@ -399,7 +399,7 @@ template&lt;typename T  = std::uint8_t&gt; </div>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassifm3d_1_1Buffer_html"><div class="ttname"><a href="classifm3d_1_1Buffer.html">ifm3d::Buffer</a></div><div class="ttdoc">The class Buffer represent a STL container to store data from the ifm devices in 2 dimension and supp...</div><div class="ttdef"><b>Definition:</b> buffer.h:99</div></div>
+<div class="ttc" id="aclassifm3d_1_1Buffer_html"><div class="ttname"><a href="classifm3d_1_1Buffer.html">ifm3d::Buffer</a></div><div class="ttdoc">The class Buffer represent a STL container to store data from the ifm devices in 2 dimension and supp...</div><div class="ttdef"><b>Definition:</b> buffer.h:98</div></div>
 <div class="ttc" id="aclassifm3d_1_1Buffer_html_aee0b8133eba77f2a26ff6f538079a9e0"><div class="ttname"><a href="classifm3d_1_1Buffer.html#aee0b8133eba77f2a26ff6f538079a9e0">ifm3d::Buffer::Buffer</a></div><div class="ttdeci">Buffer()</div><div class="ttdoc">These are various constructors that form a Buffer.</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

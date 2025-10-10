@@ -104,113 +104,117 @@ $(document).ready(function(){initNavTree('legacy__device_8h_source.html',''); in
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">using</span> Ptr = std::shared_ptr&lt;LegacyDevice&gt;;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">using</span> <a class="code" href="classifm3d_1_1Device.html#a752c3ebe308ebac6b2fe987cd0d53775">boot_mode</a> = <a class="code" href="classifm3d_1_1Device.html#a752c3ebe308ebac6b2fe987cd0d53775">ifm3d::Device::boot_mode</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">using</span> <a class="code" href="classifm3d_1_1Device.html#ad490f12fe50608c0d93a926271e9e7ea">operating_mode</a> = <a class="code" href="classifm3d_1_1Device.html#ad490f12fe50608c0d93a926271e9e7ea">ifm3d::Device::operating_mode</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">using</span> <a class="code" href="classifm3d_1_1Device.html#ae98a6e123c250bfde6dea15214f4356f">trigger_mode</a> = <a class="code" href="classifm3d_1_1Device.html#ae98a6e123c250bfde6dea15214f4356f">ifm3d::Device::trigger_mode</a>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">using</span> <a class="code" href="classifm3d_1_1Device.html#a26d401dffabd97a0cd0675211cb80f65">import_flags</a> = <a class="code" href="classifm3d_1_1Device.html#a26d401dffabd97a0cd0675211cb80f65">ifm3d::Device::import_flags</a>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">using</span> <a class="code" href="classifm3d_1_1Device.html#affabf379ff6b7312fd7a79abdf55815e">spatial_filter</a> = <a class="code" href="classifm3d_1_1Device.html#affabf379ff6b7312fd7a79abdf55815e">ifm3d::Device::spatial_filter</a>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">using</span> <a class="code" href="classifm3d_1_1Device.html#afebad872139042f57c28b95df7a1d483">temporal_filter</a> = <a class="code" href="classifm3d_1_1Device.html#afebad872139042f57c28b95df7a1d483">ifm3d::Device::temporal_filter</a>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">using</span> <a class="code" href="classifm3d_1_1Device.html#acafe3c37a98a3c47c8cbaaf07452bc31">mfilt_mask_size</a> = <a class="code" href="classifm3d_1_1Device.html#acafe3c37a98a3c47c8cbaaf07452bc31">ifm3d::Device::mfilt_mask_size</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">using</span> device_family = ifm3d::Device::device_family;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">using</span> <a class="code" href="classifm3d_1_1Device.html#afade3d3470c3ce231c117a11e9f05976">boot_mode</a> = <a class="code" href="classifm3d_1_1Device.html#afade3d3470c3ce231c117a11e9f05976">ifm3d::Device::BootMode</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">using</span> <a class="code" href="classifm3d_1_1Device.html#ab7be020a231eb7fc7c0b3b441d645084">operating_mode</a> = <a class="code" href="classifm3d_1_1Device.html#ab7be020a231eb7fc7c0b3b441d645084">ifm3d::Device::OperatingMode</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">using</span> <a class="code" href="classifm3d_1_1Device.html#a6dc1a80e8a36cf9ae0463a6f23767cb5">trigger_mode</a> = <a class="code" href="classifm3d_1_1Device.html#a6dc1a80e8a36cf9ae0463a6f23767cb5">ifm3d::Device::TriggerMode</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">using</span> <a class="code" href="classifm3d_1_1Device.html#a06d288514d9e8f6601f65624b38928c8">import_flags</a> = <a class="code" href="classifm3d_1_1Device.html#a06d288514d9e8f6601f65624b38928c8">ifm3d::Device::ImportFlags</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">using</span> <a class="code" href="classifm3d_1_1Device.html#ab13593f7e27a64b17368f9cf76fc36a0">spatial_filter</a> = <a class="code" href="classifm3d_1_1Device.html#ab13593f7e27a64b17368f9cf76fc36a0">ifm3d::Device::SpatialFilter</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">using</span> <a class="code" href="classifm3d_1_1Device.html#afc196d65321ab88f8ba2e960015c5d42">temporal_filter</a> = <a class="code" href="classifm3d_1_1Device.html#afc196d65321ab88f8ba2e960015c5d42">ifm3d::Device::TemporalFilter</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">using</span> <a class="code" href="classifm3d_1_1Device.html#a8bc27b6e9deb1e926bf6b1b5c52bbf7f">mfilt_mask_size</a> = <a class="code" href="classifm3d_1_1Device.html#a8bc27b6e9deb1e926bf6b1b5c52bbf7f">ifm3d::Device::MedianfilterMaskSize</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">using</span> device_family = ifm3d::Device::DeviceFamily;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">static</span> Ptr MakeShared(</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <span class="keyword">const</span> std::string&amp; ip = ifm3d::DEFAULT_IP,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keyword">const</span> std::uint16_t xmlrpc_port = ifm3d::DEFAULT_XMLRPC_PORT,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      std::uint16_t xmlrpc_port = ifm3d::DEFAULT_XMLRPC_PORT,</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="keyword">const</span> std::string&amp; password = ifm3d::DEFAULT_PASSWORD);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classifm3d_1_1LegacyDevice.html">LegacyDevice</a>(<span class="keyword">const</span> std::string&amp; ip = ifm3d::DEFAULT_IP,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                 <span class="keyword">const</span> std::uint16_t xmlrpc_port = ifm3d::DEFAULT_XMLRPC_PORT,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                 std::uint16_t xmlrpc_port = ifm3d::DEFAULT_XMLRPC_PORT,</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                 <span class="keyword">const</span> std::string&amp; password = ifm3d::DEFAULT_PASSWORD);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classifm3d_1_1LegacyDevice.html">LegacyDevice</a>();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">virtual</span> std::string Password();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">virtual</span> std::string SessionID();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> FactoryReset();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keyword">virtual</span> std::string RequestSession();</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> CancelSession();</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> CancelSession(<span class="keyword">const</span> std::string&amp; sid);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> Heartbeat(<span class="keywordtype">int</span> hb);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keyword">virtual</span> std::unordered_map&lt;std::string, std::string&gt; NetInfo();</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keyword">virtual</span> std::unordered_map&lt;std::string, std::string&gt; TimeInfo();</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> SetTemporaryApplicationParameters(</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      <span class="keyword">const</span> std::unordered_map&lt;std::string, std::string&gt;&amp; params);</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> ActiveApplication();</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classifm3d_1_1json.html">json</a> ApplicationList();</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;std::string&gt; ApplicationTypes();</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;std::string&gt; ImagerTypes();</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> CopyApplication(<span class="keywordtype">int</span> idx);</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> CreateApplication(</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      <span class="keyword">const</span> std::string&amp; type = DEFAULT_APPLICATION_TYPE);</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> DeleteApplication(<span class="keywordtype">int</span> idx);</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> SetCurrentTime(<span class="keywordtype">int</span> epoch_secs = -1);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;std::uint8_t&gt; UnitVectors();</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;std::uint8_t&gt; ExportIFMConfig();</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;std::uint8_t&gt; ExportIFMApp(<span class="keywordtype">int</span> idx);</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> ImportIFMConfig(<span class="keyword">const</span> std::vector&lt;std::uint8_t&gt;&amp; bytes,</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                                 std::uint16_t flags = 0x0);</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> ImportIFMApp(<span class="keyword">const</span> std::vector&lt;std::uint8_t&gt;&amp; bytes);</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> SetPassword(<span class="keyword">const</span> std::string&amp; password = <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <a class="code" href="classifm3d_1_1json.html">json</a> ToJSON() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordtype">void</span> FromJSON(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1json.html">json</a>&amp; j) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordtype">void</span> ForceTrigger() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="classifm3d_1_1LegacyDevice.html">LegacyDevice</a>(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1LegacyDevice.html">LegacyDevice</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classifm3d_1_1LegacyDevice.html">LegacyDevice</a>(<a class="code" href="classifm3d_1_1LegacyDevice.html">LegacyDevice</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classifm3d_1_1LegacyDevice.html">LegacyDevice</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1LegacyDevice.html">LegacyDevice</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classifm3d_1_1LegacyDevice.html">LegacyDevice</a>&amp; operator=(<a class="code" href="classifm3d_1_1LegacyDevice.html">LegacyDevice</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    ~<a class="code" href="classifm3d_1_1LegacyDevice.html">LegacyDevice</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">virtual</span> std::string Password();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">virtual</span> std::string SessionID();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> FactoryReset();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">virtual</span> std::string RequestSession();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> CancelSession();</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> CancelSession(<span class="keyword">const</span> std::string&amp; sid);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> Heartbeat(<span class="keywordtype">int</span> hb);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keyword">virtual</span> std::unordered_map&lt;std::string, std::string&gt; NetInfo();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keyword">virtual</span> std::unordered_map&lt;std::string, std::string&gt; TimeInfo();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> SetTemporaryApplicationParameters(</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      <span class="keyword">const</span> std::unordered_map&lt;std::string, std::string&gt;&amp; params);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> ActiveApplication();</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classifm3d_1_1json.html">json</a> ApplicationList();</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;std::string&gt; ApplicationTypes();</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;std::string&gt; ImagerTypes();</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> CopyApplication(<span class="keywordtype">int</span> idx);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> CreateApplication(</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      <span class="keyword">const</span> std::string&amp; type = DEFAULT_APPLICATION_TYPE);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> DeleteApplication(<span class="keywordtype">int</span> idx);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> SetCurrentTime(<span class="keywordtype">int</span> epoch_secs = -1);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;std::uint8_t&gt; UnitVectors();</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;std::uint8_t&gt; ExportIFMConfig();</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;std::uint8_t&gt; ExportIFMApp(<span class="keywordtype">int</span> idx);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> ImportIFMConfig(<span class="keyword">const</span> std::vector&lt;std::uint8_t&gt;&amp; bytes,</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                                 std::uint16_t flags = 0x0);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> ImportIFMApp(<span class="keyword">const</span> std::vector&lt;std::uint8_t&gt;&amp; bytes);</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> SetPassword(<span class="keyword">const</span> std::string&amp; password = <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keyword">class </span>Impl;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    std::unique_ptr&lt;Impl&gt; pImpl;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <a class="code" href="classifm3d_1_1json.html">json</a> ToJSON() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordtype">void</span> FromJSON(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1json.html">json</a>&amp; j) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordtype">void</span> ForceTrigger() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordtype">void</span> FromJSON_(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1json.html">json</a>&amp; j_curr,</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                   <span class="keyword">const</span> <a class="code" href="classifm3d_1_1json.html">json</a>&amp; j_new,</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                   <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::string&amp;,</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                                            <span class="keyword">const</span> std::string&amp;)&gt;&amp; set_func,</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                   <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp; save_func,</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                   <span class="keyword">const</span> std::string&amp; name,</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                   <span class="keywordtype">int</span> idx = -1);</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> getAppJSON(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code" href="classifm3d_1_1json.html">json</a>&amp; j, <a class="code" href="classifm3d_1_1json.html">json</a>&amp; app);</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <a class="code" href="classifm3d_1_1json.html">json</a> ToJSON_(<span class="keyword">const</span> <span class="keywordtype">bool</span> open_session = <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160; </div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <a class="code" href="classifm3d_1_1json.html">json</a> getApplicationInfosToJSON();</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;  };</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;}</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keyword">class </span>Impl;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    std::unique_ptr&lt;Impl&gt; _impl;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordtype">void</span> from_json(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1json.html">json</a>&amp; j_curr,</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                   <span class="keyword">const</span> <a class="code" href="classifm3d_1_1json.html">json</a>&amp; j_new,</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                   <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(<span class="keyword">const</span> std::string&amp;,</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                                            <span class="keyword">const</span> std::string&amp;)&gt;&amp; set_func,</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                   <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp; save_func,</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                   <span class="keyword">const</span> std::string&amp; name,</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                   <span class="keywordtype">int</span> idx = -1);</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160; </div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> get_app_json(<span class="keywordtype">int</span> index, <span class="keyword">const</span> <a class="code" href="classifm3d_1_1json.html">json</a>&amp; j, <a class="code" href="classifm3d_1_1json.html">json</a>&amp; app);</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160; </div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <a class="code" href="classifm3d_1_1json.html">json</a> to_json(<span class="keywordtype">bool</span> open_session = <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160; </div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="preprocessor">#endif // IFM3D_DEVICE_LEGACY_DEVICE_H</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <a class="code" href="classifm3d_1_1json.html">json</a> get_application_infos_to_json();</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;  };</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;}</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="preprocessor">#endif // IFM3D_DEVICE_LEGACY_DEVICE_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassifm3d_1_1Device_html_affabf379ff6b7312fd7a79abdf55815e"><div class="ttname"><a href="classifm3d_1_1Device.html#affabf379ff6b7312fd7a79abdf55815e">ifm3d::Device::spatial_filter</a></div><div class="ttdeci">spatial_filter</div><div class="ttdoc">Convenience constants for spatial filter types.</div><div class="ttdef"><b>Definition:</b> device.h:181</div></div>
-<div class="ttc" id="aclassifm3d_1_1json_html"><div class="ttname"><a href="classifm3d_1_1json.html">ifm3d::json</a></div><div class="ttdef"><b>Definition:</b> json.hpp:128</div></div>
-<div class="ttc" id="aclassifm3d_1_1Device_html_afebad872139042f57c28b95df7a1d483"><div class="ttname"><a href="classifm3d_1_1Device.html#afebad872139042f57c28b95df7a1d483">ifm3d::Device::temporal_filter</a></div><div class="ttdeci">temporal_filter</div><div class="ttdoc">Convenience constants for temporal filter types.</div><div class="ttdef"><b>Definition:</b> device.h:192</div></div>
-<div class="ttc" id="aclassifm3d_1_1Device_html_acafe3c37a98a3c47c8cbaaf07452bc31"><div class="ttname"><a href="classifm3d_1_1Device.html#acafe3c37a98a3c47c8cbaaf07452bc31">ifm3d::Device::mfilt_mask_size</a></div><div class="ttdeci">mfilt_mask_size</div><div class="ttdoc">Convenient constants for median filter mask sizes.</div><div class="ttdef"><b>Definition:</b> device.h:202</div></div>
-<div class="ttc" id="aclassifm3d_1_1Device_html_a752c3ebe308ebac6b2fe987cd0d53775"><div class="ttname"><a href="classifm3d_1_1Device.html#a752c3ebe308ebac6b2fe987cd0d53775">ifm3d::Device::boot_mode</a></div><div class="ttdeci">boot_mode</div><div class="ttdoc">Device boot up modes:</div><div class="ttdef"><b>Definition:</b> device.h:143</div></div>
+<div class="ttc" id="aclassifm3d_1_1Device_html_ab7be020a231eb7fc7c0b3b441d645084"><div class="ttname"><a href="classifm3d_1_1Device.html#ab7be020a231eb7fc7c0b3b441d645084">ifm3d::Device::OperatingMode</a></div><div class="ttdeci">OperatingMode</div><div class="ttdoc">Device operating modes: run (streaming pixel data), edit (configuring the device/applications).</div><div class="ttdef"><b>Definition:</b> device.h:153</div></div>
+<div class="ttc" id="aclassifm3d_1_1Device_html_afade3d3470c3ce231c117a11e9f05976"><div class="ttname"><a href="classifm3d_1_1Device.html#afade3d3470c3ce231c117a11e9f05976">ifm3d::Device::BootMode</a></div><div class="ttdeci">BootMode</div><div class="ttdoc">Device boot up modes:</div><div class="ttdef"><b>Definition:</b> device.h:143</div></div>
+<div class="ttc" id="aclassifm3d_1_1json_html"><div class="ttname"><a href="classifm3d_1_1json.html">ifm3d::json</a></div><div class="ttdef"><b>Definition:</b> json.hpp:130</div></div>
+<div class="ttc" id="aclassifm3d_1_1Device_html_a8bc27b6e9deb1e926bf6b1b5c52bbf7f"><div class="ttname"><a href="classifm3d_1_1Device.html#a8bc27b6e9deb1e926bf6b1b5c52bbf7f">ifm3d::Device::MedianfilterMaskSize</a></div><div class="ttdeci">MedianfilterMaskSize</div><div class="ttdoc">Convenient constants for median filter mask sizes.</div><div class="ttdef"><b>Definition:</b> device.h:202</div></div>
 <div class="ttc" id="aclassifm3d_1_1Device_html"><div class="ttname"><a href="classifm3d_1_1Device.html">ifm3d::Device</a></div><div class="ttdef"><b>Definition:</b> device.h:132</div></div>
-<div class="ttc" id="aclassifm3d_1_1Device_html_ad490f12fe50608c0d93a926271e9e7ea"><div class="ttname"><a href="classifm3d_1_1Device.html#ad490f12fe50608c0d93a926271e9e7ea">ifm3d::Device::operating_mode</a></div><div class="ttdeci">operating_mode</div><div class="ttdoc">Device operating modes: run (streaming pixel data), edit (configuring the device/applications).</div><div class="ttdef"><b>Definition:</b> device.h:153</div></div>
 <div class="ttc" id="aclassifm3d_1_1LegacyDevice_html"><div class="ttname"><a href="classifm3d_1_1LegacyDevice.html">ifm3d::LegacyDevice</a></div><div class="ttdef"><b>Definition:</b> legacy_device.h:13</div></div>
-<div class="ttc" id="aclassifm3d_1_1Device_html_ae98a6e123c250bfde6dea15214f4356f"><div class="ttname"><a href="classifm3d_1_1Device.html#ae98a6e123c250bfde6dea15214f4356f">ifm3d::Device::trigger_mode</a></div><div class="ttdeci">trigger_mode</div><div class="ttdoc">Image acquisition trigger modes.</div><div class="ttdef"><b>Definition:</b> device.h:162</div></div>
-<div class="ttc" id="aclassifm3d_1_1Device_html_a26d401dffabd97a0cd0675211cb80f65"><div class="ttname"><a href="classifm3d_1_1Device.html#a26d401dffabd97a0cd0675211cb80f65">ifm3d::Device::import_flags</a></div><div class="ttdeci">import_flags</div><div class="ttdoc">Import flags used when importing a Vision Assistant configuration.</div><div class="ttdef"><b>Definition:</b> device.h:171</div></div>
+<div class="ttc" id="aclassifm3d_1_1Device_html_a6dc1a80e8a36cf9ae0463a6f23767cb5"><div class="ttname"><a href="classifm3d_1_1Device.html#a6dc1a80e8a36cf9ae0463a6f23767cb5">ifm3d::Device::TriggerMode</a></div><div class="ttdeci">TriggerMode</div><div class="ttdoc">Image acquisition trigger modes.</div><div class="ttdef"><b>Definition:</b> device.h:162</div></div>
+<div class="ttc" id="aclassifm3d_1_1Device_html_afc196d65321ab88f8ba2e960015c5d42"><div class="ttname"><a href="classifm3d_1_1Device.html#afc196d65321ab88f8ba2e960015c5d42">ifm3d::Device::TemporalFilter</a></div><div class="ttdeci">TemporalFilter</div><div class="ttdoc">Convenience constants for temporal filter types.</div><div class="ttdef"><b>Definition:</b> device.h:192</div></div>
+<div class="ttc" id="aclassifm3d_1_1Device_html_a06d288514d9e8f6601f65624b38928c8"><div class="ttname"><a href="classifm3d_1_1Device.html#a06d288514d9e8f6601f65624b38928c8">ifm3d::Device::ImportFlags</a></div><div class="ttdeci">ImportFlags</div><div class="ttdoc">Import flags used when importing a Vision Assistant configuration.</div><div class="ttdef"><b>Definition:</b> device.h:171</div></div>
+<div class="ttc" id="aclassifm3d_1_1Device_html_ab13593f7e27a64b17368f9cf76fc36a0"><div class="ttname"><a href="classifm3d_1_1Device.html#ab13593f7e27a64b17368f9cf76fc36a0">ifm3d::Device::SpatialFilter</a></div><div class="ttdeci">SpatialFilter</div><div class="ttdoc">Convenience constants for spatial filter types.</div><div class="ttdef"><b>Definition:</b> device.h:181</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

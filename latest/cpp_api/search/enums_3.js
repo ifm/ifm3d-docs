@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operating_5fmode_376',['operating_mode',['../classifm3d_1_1Device.html#ad490f12fe50608c0d93a926271e9e7ea',1,'ifm3d::Device']]]
+  ['operatingmode_376',['OperatingMode',['../classifm3d_1_1Device.html#ab7be020a231eb7fc7c0b3b441d645084',1,'ifm3d::Device']]]
 ];

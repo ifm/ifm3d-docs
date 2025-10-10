@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['data_367',['data',['../classifm3d_1_1ArrayDeserialize.html#a2e6d34b5f4aff3bfe05f03dc6263f4a6',1,'ifm3d::ArrayDeserialize']]],
-  ['device_5ftype_5f_368',['device_type_',['../classifm3d_1_1Device.html#a440e1b50f9fe85768f148c10c51c0c89',1,'ifm3d::Device']]]
+  ['_5fdevice_5ftype_367',['_device_type',['../classifm3d_1_1Device.html#a9c209c54e76b0012bf814e0f6070980e',1,'ifm3d::Device']]]
 ];

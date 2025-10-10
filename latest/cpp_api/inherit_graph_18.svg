@@ -38,7 +38,7 @@
 <g id="a_node3"><a xlink:href="classifm3d_1_1LogWriterConsole.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="141,-98.5 141,-128.5 278,-128.5 278,-98.5 141,-98.5"/>
 <text text-anchor="start" x="149" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">ifm3d::LogWriterConsole</text>
-<text text-anchor="middle" x="209.5" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; Formatter, &gt;</text>
+<text text-anchor="middle" x="209.5" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; FORMATTER, &gt;</text>
 </a>
 </g>
 </g>
@@ -54,7 +54,7 @@
 <g id="a_node4"><a xlink:href="classifm3d_1_1LogWriterFile.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="151.5,-49.5 151.5,-79.5 267.5,-79.5 267.5,-49.5 151.5,-49.5"/>
 <text text-anchor="start" x="159.5" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">ifm3d::LogWriterFile</text>
-<text text-anchor="middle" x="209.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; Formatter &gt;</text>
+<text text-anchor="middle" x="209.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; FORMATTER &gt;</text>
 </a>
 </g>
 </g>
@@ -70,7 +70,7 @@
 <g id="a_node5"><a xlink:href="classifm3d_1_1LogWriterConsole.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="141,-0.5 141,-30.5 278,-30.5 278,-0.5 141,-0.5"/>
 <text text-anchor="start" x="149" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">ifm3d::LogWriterConsole</text>
-<text text-anchor="middle" x="209.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; Formatter &gt;</text>
+<text text-anchor="middle" x="209.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; FORMATTER &gt;</text>
 </a>
 </g>
 </g>
@@ -86,7 +86,7 @@
 <g id="a_node6"><a xlink:href="classifm3d_1_1LogWriterConsoleColored.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="321,-0.5 321,-30.5 496,-30.5 496,-0.5 321,-0.5"/>
 <text text-anchor="start" x="329" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">ifm3d::LogWriterConsoleColored</text>
-<text text-anchor="middle" x="408.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; Formatter, &gt;</text>
+<text text-anchor="middle" x="408.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; FORMATTER, &gt;</text>
 </a>
 </g>
 </g>

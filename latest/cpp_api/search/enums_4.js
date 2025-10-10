@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['spatial_5ffilter_377',['spatial_filter',['../classifm3d_1_1Device.html#affabf379ff6b7312fd7a79abdf55815e',1,'ifm3d::Device']]]
+  ['spatialfilter_377',['SpatialFilter',['../classifm3d_1_1Device.html#ab13593f7e27a64b17368f9cf76fc36a0',1,'ifm3d::Device']]]
 ];
