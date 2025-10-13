@@ -1,0 +1,31 @@
+ifm3dpy.device.PCICCommand
+==========================
+
+.. currentmodule:: ifm3dpy.device
+
+.. autoclass:: PCICCommand
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PCICCommand.__init__
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~PCICCommand.__doc__
+   
+   

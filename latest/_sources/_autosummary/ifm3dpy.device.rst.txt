@@ -26,8 +26,11 @@
       O3R
       O3RSealedBox
       O3X
+      PCICCommand
+      Parameter
       PortInfo
       SemVer
+      SetTemporaryApplicationParameter
    
    
 

@@ -36,6 +36,7 @@ var annotated_dup =
       [ "ODSPolarOccupancyGridV1", "classifm3d_1_1ODSPolarOccupancyGridV1.html", "classifm3d_1_1ODSPolarOccupancyGridV1" ],
       [ "Organizer", "classifm3d_1_1Organizer.html", "classifm3d_1_1Organizer" ],
       [ "PCICClient", "classifm3d_1_1PCICClient.html", "classifm3d_1_1PCICClient" ],
+      [ "PCICCommand", "classifm3d_1_1PCICCommand.html", "classifm3d_1_1PCICCommand" ],
       [ "Point", "structifm3d_1_1Point.html", "structifm3d_1_1Point" ],
       [ "PortInfo", "structifm3d_1_1PortInfo.html", "structifm3d_1_1PortInfo" ],
       [ "RGBInfoV1", "classifm3d_1_1RGBInfoV1.html", "classifm3d_1_1RGBInfoV1" ],

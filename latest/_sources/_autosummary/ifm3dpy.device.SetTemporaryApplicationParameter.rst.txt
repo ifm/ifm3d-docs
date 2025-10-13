@@ -1,0 +1,31 @@
+ifm3dpy.device.SetTemporaryApplicationParameter
+===============================================
+
+.. currentmodule:: ifm3dpy.device
+
+.. autoclass:: SetTemporaryApplicationParameter
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SetTemporaryApplicationParameter.__init__
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SetTemporaryApplicationParameter.__doc__
+   
+   

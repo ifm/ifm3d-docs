@@ -47,6 +47,9 @@ var hierarchy =
     [ "ifm3d::ODSPolarOccupancyGridV1", "classifm3d_1_1ODSPolarOccupancyGridV1.html", null ],
     [ "ifm3d::Organizer", "classifm3d_1_1Organizer.html", null ],
     [ "ifm3d::PCICClient", "classifm3d_1_1PCICClient.html", null ],
+    [ "ifm3d::PCICCommand", "classifm3d_1_1PCICCommand.html", [
+      [ "ifm3d::O3R::SetTemporaryApplicationParameter", "structifm3d_1_1O3R_1_1SetTemporaryApplicationParameter.html", null ]
+    ] ],
     [ "ifm3d::Point< T, N >", "structifm3d_1_1Point.html", null ],
     [ "ifm3d::PortInfo", "structifm3d_1_1PortInfo.html", null ],
     [ "ifm3d::Organizer::Result", "structifm3d_1_1Organizer_1_1Result.html", null ],

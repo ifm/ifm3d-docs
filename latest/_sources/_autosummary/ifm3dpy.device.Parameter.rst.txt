@@ -1,0 +1,40 @@
+ifm3dpy.device.Parameter
+========================
+
+.. currentmodule:: ifm3dpy.device
+
+.. autoclass:: Parameter
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Parameter.__init__
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Parameter.ODS_MAXIMUM_HEIGHT
+      ~Parameter.ODS_MOTION_DATA
+      ~Parameter.ODS_OVERHANGING_LOAD
+      ~Parameter.ODS_ZONE_SET
+      ~Parameter.PDS_GET_ITEM
+      ~Parameter.PDS_GET_PALLET
+      ~Parameter.PDS_GET_RACK
+      ~Parameter.PDS_VOL_CHECK
+      ~Parameter.name
+      ~Parameter.value
+   
+   

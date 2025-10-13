@@ -21,6 +21,7 @@
    
       Awaitable
       FrameAwaitable
+      PCICCommandResponseAwaitable
    
    
 

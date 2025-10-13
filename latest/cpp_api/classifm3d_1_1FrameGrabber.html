@@ -114,6 +114,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>ErrorCallback</b> = 
 <tr class="memitem:a0a81a3701da57be978361c2214fc96db"><td class="memItemLeft" align="right" valign="top"><a id="a0a81a3701da57be978361c2214fc96db"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>BufferList</b> = std::vector&lt; std::variant&lt; std::uint64_t, int, <a class="el" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a> &gt; &gt;</td></tr>
 <tr class="separator:a0a81a3701da57be978361c2214fc96db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82d666b11e2435049ea61b4f7a52cd15"><td class="memItemLeft" align="right" valign="top"><a id="a82d666b11e2435049ea61b4f7a52cd15"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>PCICCommandResponse</b> = std::variant&lt; std::monostate, std::string, std::vector&lt; std::uint8_t &gt; &gt;</td></tr>
+<tr class="separator:a82d666b11e2435049ea61b4f7a52cd15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -176,6 +179,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a0e003c3fa03666dfd385d44974e10d37">IsMasking</a> ()</td></tr>
 <tr class="memdesc:a0e003c3fa03666dfd385d44974e10d37"><td class="mdescLeft">&#160;</td><td class="mdescRight">return masking flag <br /></td></tr>
 <tr class="separator:a0e003c3fa03666dfd385d44974e10d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af62881968b3043d5e376853f37bf0a76"><td class="memItemLeft" align="right" valign="top">std::shared_future&lt; PCICCommandResponse &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#af62881968b3043d5e376853f37bf0a76">SendCommand</a> (const <a class="el" href="classifm3d_1_1PCICCommand.html">PCICCommand</a> &amp;command)</td></tr>
+<tr class="memdesc:af62881968b3043d5e376853f37bf0a76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a command to the frame grabber.  <a href="classifm3d_1_1FrameGrabber.html#af62881968b3043d5e376853f37bf0a76">More...</a><br /></td></tr>
+<tr class="separator:af62881968b3043d5e376853f37bf0a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implements a TCP <a class="el" href="classifm3d_1_1FrameGrabber.html">FrameGrabber</a> connected to the device passed to its ctor </p>
@@ -278,6 +284,34 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>The callback will be executed whenever a new frame is available. </p>
 <p>It receives a Frame::Ptr to the received frame as an argument. </p>
+
+</div>
+</div>
+<a id="af62881968b3043d5e376853f37bf0a76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af62881968b3043d5e376853f37bf0a76">&#9670;&nbsp;</a></span>SendCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_future&lt;PCICCommandResponse&gt; ifm3d::FrameGrabber::SendCommand </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classifm3d_1_1PCICCommand.html">PCICCommand</a> &amp;&#160;</td>
+          <td class="paramname"><em>command</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sends a command to the frame grabber. </p>
+<p>This function sends the specified command to the frame grabber and returns a shared future that will hold the response as a string once the command completes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">command</td><td>The command to send to the frame grabber.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_future&lt;PCICCommandResponse&gt; A shared future that resolves to the response from the frame grabber. </dd></dl>
 
 </div>
 </div>

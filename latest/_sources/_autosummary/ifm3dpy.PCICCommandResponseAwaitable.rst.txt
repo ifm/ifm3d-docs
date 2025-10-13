@@ -1,0 +1,27 @@
+ifm3dpy.PCICCommandResponseAwaitable
+====================================
+
+.. currentmodule:: ifm3dpy
+
+.. autoclass:: PCICCommandResponseAwaitable
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PCICCommandResponseAwaitable.__init__
+      ~PCICCommandResponseAwaitable.wait
+      ~PCICCommandResponseAwaitable.wait_for
+   
+   
+
+   
+   
+   
