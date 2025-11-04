@@ -232,6 +232,7 @@ var NAVTREEINDEX1 =
 "classifm3d_1_1TOFInfoV4.html#ab5823fd32a62b71423b3cc5bb21ce4f8":[1,5,8,4],
 "classifm3d_1_1json.html":[1,0,0],
 "common_2include_2ifm3d_2common_2err_8h_source.html":[3,0,2,0,1],
+"common_2include_2ifm3d_2common_2util_8h_source.html":[3,0,2,0,5],
 "common_8h_source.html":[3,0,2,1],
 "crypto_2crypto_8h_source.html":[3,0,6,0,0],
 "crypto_8h_source.html":[3,0,6,1],
@@ -241,13 +242,12 @@ var NAVTREEINDEX1 =
 "deserialize__utils_8hpp_source.html":[3,0,1,0,2],
 "device_2device_8h_source.html":[3,0,4,0,0],
 "device_2include_2ifm3d_2device_2err_8h_source.html":[3,0,4,0,1],
+"device_2include_2ifm3d_2device_2util_8h_source.html":[3,0,4,0,10],
 "device_8h_source.html":[3,0,4,1],
 "dir_0939d4c1cffafd7504a808dae1858057.html":[3,0,2,0],
 "dir_0dd447ddf8c56331cff544b168d1ab28.html":[3,0,2],
 "dir_177d23a80fb5db2a745a315f3e00b944.html":[3,0,6],
 "dir_18b60e0ffb775331b82bb1c2a4b090cb.html":[3,0,0],
 "dir_20fa7fa233dc11fa7c849cda439e4273.html":[3,0,3],
-"dir_33fbb11e0d344073934e48db6a77ccc4.html":[3,0,5,0],
-"dir_5982fa077b87aba016b4eded3957bfd3.html":[3,0,5],
-"dir_71c8b77f5269e782d2671d68758b91ce.html":[3,0,4,0]
+"dir_33fbb11e0d344073934e48db6a77ccc4.html":[3,0,5,0]
 };
