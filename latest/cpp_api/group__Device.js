@@ -128,6 +128,8 @@ var group__Device =
       [ "GetDiagnosticFilterSchema", "classifm3d_1_1O3R.html#a11fca069af27c5a8eea3deea8d330d76", null ],
       [ "GetInit", "classifm3d_1_1O3R.html#a0d703bc04a0d893733cbb1f5c6983d82", null ],
       [ "GetSchema", "classifm3d_1_1O3R.html#a1352ba9088aaea3cafd09d1c1a5d270c", null ],
+      [ "GetSchema", "classifm3d_1_1O3R.html#a255dd8619dccc4f92e298b5ad72ab837", null ],
+      [ "GetSchema", "classifm3d_1_1O3R.html#ae7c4ea3dff9fdeeee52edf1e92aa1210", null ],
       [ "operator=", "classifm3d_1_1O3R.html#a3931aee23506e131cfcb1cfa17484c32", null ],
       [ "operator=", "classifm3d_1_1O3R.html#a5275eb0252c5c0dc0fbbdd3c65744661", null ],
       [ "Port", "classifm3d_1_1O3R.html#ace851644d8586ad20a68865f80860f89", null ],

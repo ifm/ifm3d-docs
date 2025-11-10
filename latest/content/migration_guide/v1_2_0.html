@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Migration Guide V1.2.0 &mdash; ifm3d v1.7.2 documentation</title>
@@ -97,7 +97,7 @@
 <h2>Changes to the Python module structure<a class="headerlink" href="#changes-to-the-python-module-structure" title="Permalink to this heading"></a></h2>
 <p>With the growing number of classes and methods added to ifm3dpy, putting everything into the main module was beginning to get confusing and might be overwhelming to new users, therefore the Python module was split up into submodules akin to the C++ structure.<br />
 The existing classes have been moved according to the following table:</p>
-<table class="docutils align-default">
+<table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Old Location</p></th>
 <th class="head"><p>New Location</p></th>
@@ -138,7 +138,7 @@ A future version of ifm3dpy will remove the deprecated locations.</p>
 <h2>Naming changes to <code class="docutils literal notranslate"><span class="pre">SWUpdater</span></code> Python bindings<a class="headerlink" href="#naming-changes-to-swupdater-python-bindings" title="Permalink to this heading"></a></h2>
 <p>For our Python bindings we generally use <code class="docutils literal notranslate"><span class="pre">snake_case</span></code> for method names, however the bindings for the <code class="docutils literal notranslate"><span class="pre">SWUpdater</span></code> used <code class="docutils literal notranslate"><span class="pre">PascalCase</span></code>. To align the <code class="docutils literal notranslate"><span class="pre">SWUpdater</span></code> with the rest of ifm3dpy the methods have been renamed to be <code class="docutils literal notranslate"><span class="pre">snake_case</span></code> too.
 User will need to update their code accordingly, please see the following table for a list of changed names.</p>
-<table class="docutils align-default">
+<table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Old Name</p></th>
 <th class="head"><p>New Name</p></th>

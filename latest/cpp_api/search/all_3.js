@@ -9,7 +9,7 @@ var searchData=
   ['cartesian_5fy_5fcomponent_19',['CARTESIAN_Y_COMPONENT',['../group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50a20855a9b93845b52154c3ba90ca83b29',1,'ifm3d']]],
   ['cartesian_5fz_5fcomponent_20',['CARTESIAN_Z_COMPONENT',['../group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50a1561b8f6c501f773685e6b35a5b0c0df',1,'ifm3d']]],
   ['checkminimumfirmwareversion_21',['CheckMinimumFirmwareVersion',['../classifm3d_1_1Device.html#ad0d20a261a0dd280884bc5c59b3ce9f6',1,'ifm3d::Device']]],
-  ['clone_22',['Clone',['../classifm3d_1_1Buffer.html#a77544a961444d4d1d85eb13bcb12cbbc',1,'ifm3d::Buffer::Clone()'],['../classifm3d_1_1Buffer__.html#ad00ca0e5a12af3f60ffd4edbac61702e',1,'ifm3d::Buffer_::Clone()']]],
+  ['clone_22',['Clone',['../classifm3d_1_1Buffer__.html#ad00ca0e5a12af3f60ffd4edbac61702e',1,'ifm3d::Buffer_::Clone()'],['../classifm3d_1_1Buffer.html#a77544a961444d4d1d85eb13bcb12cbbc',1,'ifm3d::Buffer::Clone()']]],
   ['code_23',['code',['../classifm3d_1_1Error.html#a55941c65ba566878c000075bed9533b6',1,'ifm3d::Error']]],
   ['common_20module_24',['Common Module',['../group__Common.html',1,'']]],
   ['confidence_5fimage_25',['CONFIDENCE_IMAGE',['../group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50ab45463507e02af5daf2bdc908cc217ad',1,'ifm3d']]],

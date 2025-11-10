@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ifm3dpy.framegrabber.FrameGrabber &mdash; ifm3d v1.7.2 documentation</title>
@@ -109,7 +109,7 @@
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.framegrabber.FrameGrabber" title="ifm3dpy.framegrabber.FrameGrabber"><span class="pre">ifm3dpy.framegrabber.FrameGrabber</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">cam</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ifm3dpy.device.Device.html#ifm3dpy.device.Device" title="ifm3dpy.device.Device"><span class="pre">ifm3dpy.device.Device</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pcic_port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.framegrabber.FrameGrabber.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cam</strong> (<em>ifm3dpy.Camera</em>) – The camera instance to grab frames from.</p></li>
 <li><p><strong>pcic_port</strong> (<em>uint16</em>) – The PCIC port</p></li>
@@ -120,13 +120,17 @@
 
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.FrameGrabber.__init__" title="ifm3dpy.framegrabber.FrameGrabber.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self, cam[, pcic_port])</p></td>
 <td><p>Constructor</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.FrameGrabber.is_masking" title="ifm3dpy.framegrabber.FrameGrabber.is_masking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_masking</span></code></a>(self)</p></td>
 <td><p><dl class="field-list simple">
-<dt class="field-odd">rtype<span class="colon">:</span></dt>
+<dt class="field-odd">rtype</dt>
 <dd class="field-odd"><p>Masking flag</p>
 </dd>
 </dl>
@@ -171,7 +175,7 @@
 <dt class="sig sig-object py" id="ifm3dpy.framegrabber.FrameGrabber.is_masking">
 <span class="sig-name descname"><span class="pre">is_masking</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.framegrabber.FrameGrabber" title="ifm3dpy.framegrabber.FrameGrabber"><span class="pre">ifm3dpy.framegrabber.FrameGrabber</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ifm3dpy.framegrabber.FrameGrabber.is_masking" title="Permalink to this definition"></a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>Masking flag</p>
 </dd>
 </dl>
@@ -219,13 +223,13 @@ It receives the frame as an argument.</p>
 <span class="sig-name descname"><span class="pre">send_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.framegrabber.FrameGrabber" title="ifm3dpy.framegrabber.FrameGrabber"><span class="pre">ifm3dpy.framegrabber.FrameGrabber</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ifm3dpy.device.PCICCommand.html#ifm3dpy.device.PCICCommand" title="ifm3dpy.device.PCICCommand"><span class="pre">ifm3dpy.device.PCICCommand</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ifm3dpy.PCICCommandResponseAwaitable.html#ifm3dpy.PCICCommandResponseAwaitable" title="ifm3dpy.PCICCommandResponseAwaitable"><span class="pre">ifm3dpy.PCICCommandResponseAwaitable</span></a></span></span><a class="headerlink" href="#ifm3dpy.framegrabber.FrameGrabber.send_command" title="Permalink to this definition"></a></dt>
 <dd><p>Send a PCIC command asynchronously to the frame grabber.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>command</strong> (<a class="reference internal" href="ifm3dpy.device.PCICCommand.html#ifm3dpy.device.PCICCommand" title="ifm3dpy.device.PCICCommand"><em>PCICCommand</em></a>) – The command to send to the frame grabber.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>An awaitable object returns: None, a string, or a bytes object if the response is binary.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="ifm3dpy.PCICCommandResponseAwaitable.html#ifm3dpy.PCICCommandResponseAwaitable" title="ifm3dpy.PCICCommandResponseAwaitable">PCICCommandResponseAwaitable</a></p>
 </dd>
 </dl>
@@ -237,7 +241,7 @@ It receives the frame as an argument.</p>
 <dd><p>Enable/Disable masking on supported buffers
 Note: ifm3dpy.buffer_id.CONFIDENCE_IMAGE should be in schema  list passed to ifm3dpy.FrameGrabber.Start method</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>mask</strong> – flag to enable/disable masking.</p>
 </dd>
 </dl>
@@ -248,13 +252,13 @@ Note: ifm3dpy.buffer_id.CONFIDENCE_IMAGE should be in schema  list passed to ifm
 <span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.framegrabber.FrameGrabber" title="ifm3dpy.framegrabber.FrameGrabber"><span class="pre">ifm3dpy.framegrabber.FrameGrabber</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="ifm3dpy.framegrabber.buffer_id.html#ifm3dpy.framegrabber.buffer_id" title="ifm3dpy.framegrabber.buffer_id"><span class="pre">ifm3dpy.framegrabber.buffer_id</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pcic_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ifm3dpy.Awaitable.html#ifm3dpy.Awaitable" title="ifm3dpy.Awaitable"><span class="pre">ifm3dpy.Awaitable</span></a></span></span><a class="headerlink" href="#ifm3dpy.framegrabber.FrameGrabber.start" title="Permalink to this definition"></a></dt>
 <dd><p>Starts the worker thread for streaming in pixel data from the device</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>Resolves when framegrabber is ready to receive frames.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>FutureAwaitable</p>
 </dd>
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>buffers</strong> (<em>List</em><em>[</em><em>uint64</em><em>]</em>) – A List of buffer_ids for receiving, passing in an List
 set will received all available images. The buffer_ids are specific to
@@ -278,10 +282,10 @@ extract the image data.</p>
 <span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.framegrabber.FrameGrabber" title="ifm3dpy.framegrabber.FrameGrabber"><span class="pre">ifm3dpy.framegrabber.FrameGrabber</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ifm3dpy.Awaitable.html#ifm3dpy.Awaitable" title="ifm3dpy.Awaitable"><span class="pre">ifm3dpy.Awaitable</span></a></span></span><a class="headerlink" href="#ifm3dpy.framegrabber.FrameGrabber.stop" title="Permalink to this definition"></a></dt>
 <dd><p>Stops the worker thread for streaming in pixel data from the device</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>Resolves when framgrabber stops.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>FutureAwaitable</p>
 </dd>
 </dl>

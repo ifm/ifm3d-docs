@@ -1,7 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classifm3d_1_1Device.html" title=" " alt="" coords="5,56,119,83"/>
+<area shape="rect" id="node1" href="$classifm3d_1_1Device.html" title="Software interface to an ifm 3D device." alt="" coords="5,56,119,83"/>
 <area shape="rect" id="node2" href="$classifm3d_1_1LegacyDevice.html" title=" " alt="" coords="167,31,325,57"/>
-<area shape="rect" id="node5" href="$classifm3d_1_1O3R.html" title=" " alt="" coords="199,81,293,108"/>
-<area shape="rect" id="node3" href="$classifm3d_1_1O3D.html" title=" " alt="" coords="373,5,469,32"/>
-<area shape="rect" id="node4" href="$classifm3d_1_1O3X.html" title=" " alt="" coords="374,56,469,83"/>
+<area shape="rect" id="node5" href="$classifm3d_1_1O3R.html" title="Device specialization for O3R." alt="" coords="199,81,293,108"/>
+<area shape="rect" id="node3" href="$classifm3d_1_1O3D.html" title="Device specialization for O3D." alt="" coords="373,5,469,32"/>
+<area shape="rect" id="node4" href="$classifm3d_1_1O3X.html" title="Device specialization for O3X." alt="" coords="374,56,469,83"/>
 </map>

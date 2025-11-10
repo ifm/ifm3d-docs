@@ -13,7 +13,7 @@ var hierarchy =
       [ "ifm3d::O3R", "classifm3d_1_1O3R.html", null ]
     ] ],
     [ "ifm3d::DistanceImageInfo", "classifm3d_1_1DistanceImageInfo.html", null ],
-    [ "exception", null, [
+    [ "std::exception", null, [
       [ "ifm3d::Error", "classifm3d_1_1Error.html", null ]
     ] ],
     [ "ifm3d::calibration::ExtrinsicOpticToUser", "structifm3d_1_1calibration_1_1ExtrinsicOpticToUser.html", null ],
@@ -30,11 +30,10 @@ var hierarchy =
     [ "ifm3d::Logger", "classifm3d_1_1Logger.html", null ],
     [ "ifm3d::LogWriter", "classifm3d_1_1LogWriter.html", [
       [ "ifm3d::LogWriterComposite", "classifm3d_1_1LogWriterComposite.html", null ],
-      [ "ifm3d::LogWriterConsole< FORMATTER, >", "classifm3d_1_1LogWriterConsole.html", null ],
-      [ "ifm3d::LogWriterFile< FORMATTER >", "classifm3d_1_1LogWriterFile.html", null ],
-      [ "ifm3d::LogWriterConsole< FORMATTER >", "classifm3d_1_1LogWriterConsole.html", [
+      [ "ifm3d::LogWriterConsole< FORMATTER, >", "classifm3d_1_1LogWriterConsole.html", [
         [ "ifm3d::LogWriterConsoleColored< FORMATTER, >", "classifm3d_1_1LogWriterConsoleColored.html", null ]
-      ] ]
+      ] ],
+      [ "ifm3d::LogWriterFile< FORMATTER >", "classifm3d_1_1LogWriterFile.html", null ]
     ] ],
     [ "O3DExposureTimes", "classifm3d_1_1O3DExposureTimes.html", null ],
     [ "O3DExtrinsicCalibration", "classifm3d_1_1O3DExtrinsicCalibration.html", null ],
