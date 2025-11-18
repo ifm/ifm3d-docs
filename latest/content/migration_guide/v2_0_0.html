@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Migration Guide V2.0.0 &mdash; ifm3d v2.0.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Migration Guide V1.6.0" href="v1_6_0.html" />
+    <link rel="prev" title="Migrating guide" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> ifm3d
+          </a>
+              <div class="version">
+                v2.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../README.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation_instructions/index.html">Installation instructions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Migration Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">v2.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1_6_0.html">v1.6.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1_3_0.html">v1.3.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1_2_0.html">v1.2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1_1_0.html">v1.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="v1_0_0.html">v1.0.0</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../basic_lib_usage/index.html">Basic library usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cmdline_overview.html">Command Line tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manip_images/index.html">Manipulating images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python_api.html">Python API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cpp_api/annotated.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ChangeLog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">ifm3d</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Migrating guide</a></li>
+      <li class="breadcrumb-item active">Migration Guide V2.0.0</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/content/migration_guide/v2_0_0.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="migration-guide-v2-0-0">
+<h1>Migration Guide V2.0.0<a class="headerlink" href="#migration-guide-v2-0-0" title="Permalink to this heading"></a></h1>
+<p>This guide covers breaking changes introduced in ifm3d v2.0.0.</p>
+<section id="python-version-support-changes">
+<h2>Python Version Support Changes<a class="headerlink" href="#python-version-support-changes" title="Permalink to this heading"></a></h2>
+<section id="python-version-support-policy">
+<h3>Python Version Support Policy<a class="headerlink" href="#python-version-support-policy" title="Permalink to this heading"></a></h3>
+<p>Starting with v2.0.0, ifm3d will support <strong>all non-EOL versions of Python 3</strong>. At the time of this release, this includes Python 3.10 through 3.14.</p>
+</section>
+<section id="removed-support-for-python-3-9">
+<h3>Removed Support for Python 3.9<a class="headerlink" href="#removed-support-for-python-3-9" title="Permalink to this heading"></a></h3>
+<p>Python 3.9 reached end-of-life and is no longer supported. The minimum required Python version is now <strong>3.10</strong>.</p>
+<p><strong>Migration</strong>: Upgrade your Python environment to version 3.10 or newer.</p>
+</section>
+<section id="added-support-for-python-3-14">
+<h3>Added Support for Python 3.14<a class="headerlink" href="#added-support-for-python-3-14" title="Permalink to this heading"></a></h3>
+<p>Python 3.14.0 is now officially supported.</p>
+</section>
+</section>
+<section id="platform-support-changes">
+<h2>Platform Support Changes<a class="headerlink" href="#platform-support-changes" title="Permalink to this heading"></a></h2>
+<section id="ubuntu-version-support-policy">
+<h3>Ubuntu Version Support Policy<a class="headerlink" href="#ubuntu-version-support-policy" title="Permalink to this heading"></a></h3>
+<p>Starting with v2.0.0, ifm3d will support <strong>the latest 2 LTS releases of Ubuntu</strong>. Currently this means:</p>
+<ul class="simple">
+<li><p><strong>Supported</strong>: Ubuntu 22.04 LTS and Ubuntu 24.04 LTS</p></li>
+<li><p><strong>Removed</strong>: Ubuntu 20.04 LTS</p></li>
+</ul>
+</section>
+<section id="l4t-based-docker-images">
+<h3>L4T-Based Docker Images<a class="headerlink" href="#l4t-based-docker-images" title="Permalink to this heading"></a></h3>
+<p>Support for <strong>l4t-based docker images has been dropped</strong> in v2.0.0.</p>
+<p><strong>Migration for l4t users</strong>: Users who need l4t-based images for on-device hardware-accelerated workloads should stay on the <strong>v1.6.x branch</strong>, which will continue to receive bugfixes but no new features.</p>
+<p><strong>Migration for Ubuntu 20.04 users</strong>: Upgrade to Ubuntu 22.04 or 24.04 to continue receiving prebuilt packages.</p>
+</section>
+</section>
+<section id="build-dependency-changes">
+<h2>Build Dependency Changes<a class="headerlink" href="#build-dependency-changes" title="Permalink to this heading"></a></h2>
+<section id="replacement-of-curl-and-xmlrpc-c">
+<h3>Replacement of curl and xmlrpc-c<a class="headerlink" href="#replacement-of-curl-and-xmlrpc-c" title="Permalink to this heading"></a></h3>
+<p>ifm3d now uses <code class="docutils literal notranslate"><span class="pre">cpp-httplib</span></code> and <code class="docutils literal notranslate"><span class="pre">tinyxml2</span></code> instead of <code class="docutils literal notranslate"><span class="pre">curl</span></code> and <code class="docutils literal notranslate"><span class="pre">xmlrpc-c</span></code> for HTTP and XML-RPC communication.</p>
+<p><strong>Impact</strong>: This change only affects users who build ifm3d from source. Runtime behavior and API remain unchanged.</p>
+<p><strong>Migration for source builds</strong>:</p>
+<ul class="simple">
+<li><p>Remove <code class="docutils literal notranslate"><span class="pre">curl</span></code> and <code class="docutils literal notranslate"><span class="pre">xmlrpc-c</span></code> from your build dependencies</p></li>
+<li><p>The new dependencies (<code class="docutils literal notranslate"><span class="pre">cpp-httplib</span></code> and <code class="docutils literal notranslate"><span class="pre">tinyxml2</span></code>) are fetched automatically via CMake’s FetchContent</p></li>
+</ul>
+<p>No code changes are required in your application.</p>
+</section>
+</section>
+<section id="c-api-breaking-changes">
+<h2>C++ API Breaking Changes<a class="headerlink" href="#c-api-breaking-changes" title="Permalink to this heading"></a></h2>
+<section id="name-changes-due-to-enforcement-of-code-style">
+<h3>Name changes due to enforcement of code-style<a class="headerlink" href="#name-changes-due-to-enforcement-of-code-style" title="Permalink to this heading"></a></h3>
+<p>Code-style is now enforced using clang-format as such some code has been adjusted to follow the naming conventions:</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Old Name</p></th>
+<th class="head"><p>New Name</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::buffer_id</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::BufferId</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::pixel_format</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::PixelFormat</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::image_chunk</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::ImageChunk</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::intrinsic_param</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::IntrinsicParam</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::Device::boot_mode</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::Device::BootMode</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::Device::operating_mode</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::Device::OperatingMode</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::Device::trigger_mode</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::Device::TriggerMode</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::Device::import_flags</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::Device::ImportFlags</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::Device::spatial_filter</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::Device::SpatialFilter</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::Device::temporal_filter</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::Device::TemporalFilter</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::Device::mfilt_mask_size</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::Device::MedianfilterMaskSize</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::Device::device_family</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::Device::DeviceFamily</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::Device::swu_version</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::Device::SWUVersion</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::O3DILLUTemperature</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::O3DIlluTemperature</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer::clone</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ifm3d::Buffer::Clone</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Please update any references to these names.</p>
+</section>
+</section>
+<section id="summary-of-breaking-changes">
+<h2>Summary of Breaking Changes<a class="headerlink" href="#summary-of-breaking-changes" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Python Support</strong>: Only non-EOL Python versions supported (currently 3.10 through 3.14)</p>
+<ul class="simple">
+<li><p>Python 3.9 no longer supported - upgrade to Python 3.10+</p></li>
+</ul>
+</li>
+<li><p><strong>Ubuntu Support</strong>: Only the latest 2 LTS releases supported (currently 22.04 and 24.04)</p>
+<ul class="simple">
+<li><p>Ubuntu 20.04 no longer in official build matrix</p></li>
+</ul>
+</li>
+<li><p><strong>L4T Support</strong>: L4T-based docker images dropped - use v1.6.x branch for continued l4t support</p></li>
+<li><p><strong>Build dependencies</strong>: <code class="docutils literal notranslate"><span class="pre">curl</span></code> and <code class="docutils literal notranslate"><span class="pre">xmlrpc-c</span></code> replaced with <code class="docutils literal notranslate"><span class="pre">cpp-httplib</span></code> and <code class="docutils literal notranslate"><span class="pre">tinyxml2</span></code> (build-time only)</p></li>
+<li><p><strong>C++ API Changes</strong> due to enforcement of code-style, see above for the full list</p></li>
+</ol>
+<p>C++ applications will require code changes to adapt to the renamed types and methods. Platform and Python version upgrades may also be required for continued support.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          
+<html>
+<head>
+ 
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, address, phone, icons" />
+ 
+	<title>Footer With Address And Links</title>
+	
+	
+ 
+</head>
+ 
+	<body>
+		
+		<footer class="footer-distributed">
+ 
+		<div class="footer-left">
+ 
+ 
+		<p class="footer-company-name">ifm robotics &copy; 2023</p>
+		</div>
+ 
+		<div class="footer-right">
+ 
+		<div class="footer-icons">
+			<a href="mailto:support.efector.object-ident@ifm.com" target="_blank"><i class="fa fa-envelope"></i></a>
+			<a href="https://github.com/ifm" target="_blank"><i class="fa fa-github"></i></a>
+ 
+		</div>
+ 
+		</div>
+ 
+		</footer>
+ 
+	</body>
+ 
+</html>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

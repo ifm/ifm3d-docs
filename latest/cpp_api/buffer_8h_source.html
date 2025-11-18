@@ -131,7 +131,7 @@ $(document).ready(function(){initNavTree('buffer_8h_source.html',''); initResiza
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">/* @brief json formatted metadata of the chunk obtain from device*/</span></div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="classifm3d_1_1json.html">json</a> _metadata;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">/* @brief buffer id of Buffer */</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a> _buffer_id{};</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="group__FrameGrabber.html#gaca9d48fd13de3e0a7e7af60e518bfd35">ifm3d::buffer_id</a> _buffer_id{};</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">class </span>BufferAllocator;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    std::shared_ptr&lt;BufferAllocator&gt; _buffer_allocator;</div>
@@ -153,7 +153,7 @@ $(document).ready(function(){initNavTree('buffer_8h_source.html',''); initResiza
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;           std::uint32_t nchannel,</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;           ifm3d::PixelFormat format,</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;           <span class="keyword">const</span> std::optional&lt;ifm3d::json&gt;&amp; metadata = std::nullopt,</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;           <a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a> <a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">buffer_id</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a><span class="keyword">&gt;</span>(0));</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;           <a class="code" href="group__FrameGrabber.html#gaca9d48fd13de3e0a7e7af60e518bfd35">ifm3d::buffer_id</a> <a class="code" href="group__FrameGrabber.html#gaca9d48fd13de3e0a7e7af60e518bfd35">buffer_id</a> = <span class="keyword">static_cast&lt;</span><a class="code" href="group__FrameGrabber.html#gaca9d48fd13de3e0a7e7af60e518bfd35">ifm3d::buffer_id</a><span class="keyword">&gt;</span>(0));</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classifm3d_1_1Buffer.html">Buffer</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
@@ -177,7 +177,7 @@ $(document).ready(function(){initNavTree('buffer_8h_source.html',''); initResiza
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                std::uint32_t rows,</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                std::uint32_t nchannel,</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                ifm3d::PixelFormat format,</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                <a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a> <a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">buffer_id</a>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                <a class="code" href="group__FrameGrabber.html#gaca9d48fd13de3e0a7e7af60e518bfd35">ifm3d::buffer_id</a> <a class="code" href="group__FrameGrabber.html#gaca9d48fd13de3e0a7e7af60e518bfd35">buffer_id</a>);</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
 <div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="classifm3d_1_1Buffer.html#a77544a961444d4d1d85eb13bcb12cbbc">  178</a></span>&#160;    [[nodiscard]] <a class="code" href="classifm3d_1_1Buffer.html">Buffer</a> <a class="code" href="classifm3d_1_1Buffer.html#a77544a961444d4d1d85eb13bcb12cbbc">Clone</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
@@ -187,7 +187,7 @@ $(document).ready(function(){initNavTree('buffer_8h_source.html',''); initResiza
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    [[nodiscard]] std::uint32_t NumChannels() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    [[nodiscard]] ifm3d::PixelFormat DataFormat() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    [[nodiscard]] <a class="code" href="classifm3d_1_1json.html">ifm3d::json</a> Metadata() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    [[nodiscard]] <a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a> BufferId() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    [[nodiscard]] <a class="code" href="group__FrameGrabber.html#gaca9d48fd13de3e0a7e7af60e518bfd35">ifm3d::buffer_id</a> <a class="code" href="group__FrameGrabber.html#gaca9d48fd13de3e0a7e7af60e518bfd35">BufferId</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
 <div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="classifm3d_1_1Buffer.html#aee43d2c438000f8fe4925e25566be23a">  191</a></span>&#160;    [[nodiscard]] <span class="keywordtype">size_t</span> <a class="code" href="classifm3d_1_1Buffer.html#aee43d2c438000f8fe4925e25566be23a">Size</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = std::u<span class="keywordtype">int</span>8_t&gt;</div>
@@ -341,7 +341,7 @@ $(document).ready(function(){initNavTree('buffer_8h_source.html',''); initResiza
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="comment">     * ifm3d::formatType&lt;Tp&gt;::format, ifm3d::buffer_id buffer_id ) */</span></div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keywordtype">void</span> Create(std::uint32_t cols,</div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                std::uint32_t rows,</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                <a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a> <a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">buffer_id</a>);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                <a class="code" href="group__FrameGrabber.html#gaca9d48fd13de3e0a7e7af60e518bfd35">ifm3d::buffer_id</a> <a class="code" href="group__FrameGrabber.html#gaca9d48fd13de3e0a7e7af60e518bfd35">buffer_id</a>);</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
 <div class="line"><a name="l00364"></a><span class="lineno"><a class="line" href="classifm3d_1_1Buffer__.html#ad00ca0e5a12af3f60ffd4edbac61702e">  364</a></span>&#160;    <a class="code" href="classifm3d_1_1Buffer__.html">Buffer_</a> <a class="code" href="classifm3d_1_1Buffer__.html#ad00ca0e5a12af3f60ffd4edbac61702e">Clone</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160; </div>
@@ -423,7 +423,7 @@ $(document).ready(function(){initNavTree('buffer_8h_source.html',''); initResiza
 <div class="ttc" id="aclassifm3d_1_1Buffer_html_aee43d2c438000f8fe4925e25566be23a"><div class="ttname"><a href="classifm3d_1_1Buffer.html#aee43d2c438000f8fe4925e25566be23a">ifm3d::Buffer::Size</a></div><div class="ttdeci">size_t Size() const</div><div class="ttdoc">Return the size of the buffer in bytes.</div></div>
 <div class="ttc" id="aclassifm3d_1_1IteratorAdapter_html"><div class="ttname"><a href="classifm3d_1_1IteratorAdapter.html">ifm3d::IteratorAdapter</a></div><div class="ttdef"><b>Definition:</b> buffer.h:317</div></div>
 <div class="ttc" id="aclassifm3d_1_1json_html"><div class="ttname"><a href="classifm3d_1_1json.html">ifm3d::json</a></div><div class="ttdef"><b>Definition:</b> json.hpp:131</div></div>
-<div class="ttc" id="agroup__FrameGrabber_html_ga363ee802dc7953150dc23ba56d7e9c50"><div class="ttname"><a href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a></div><div class="ttdeci">buffer_id</div><div class="ttdoc">buffer_ids available for use with the default Organizer.</div><div class="ttdef"><b>Definition:</b> buffer_id.h:19</div></div>
+<div class="ttc" id="agroup__FrameGrabber_html_gaca9d48fd13de3e0a7e7af60e518bfd35"><div class="ttname"><a href="group__FrameGrabber.html#gaca9d48fd13de3e0a7e7af60e518bfd35">ifm3d::BufferId</a></div><div class="ttdeci">BufferId</div><div class="ttdoc">BufferIds available for use with the default Organizer.</div><div class="ttdef"><b>Definition:</b> buffer_id.h:19</div></div>
 <div class="ttc" id="astructifm3d_1_1Buffer_1_1Iterator_html"><div class="ttname"><a href="structifm3d_1_1Buffer_1_1Iterator.html">ifm3d::Buffer::Iterator</a></div><div class="ttdef"><b>Definition:</b> buffer.h:260</div></div>
 <div class="ttc" id="astructifm3d_1_1Point_html"><div class="ttname"><a href="structifm3d_1_1Point.html">ifm3d::Point</a></div><div class="ttdoc">Struct for 3D space point.</div><div class="ttdef"><b>Definition:</b> buffer.h:415</div></div>
 </div><!-- fragment --></div><!-- contents -->

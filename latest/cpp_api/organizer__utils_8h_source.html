@@ -192,13 +192,13 @@ $(document).ready(function(){initNavTree('organizer__utils_8h_source.html',''); 
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordtype">void</span> mask_images(</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    std::map&lt;ifm3d::buffer_id, ifm3d::BufferList&gt;&amp; images,</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="classifm3d_1_1Buffer.html">ifm3d::Buffer</a>&amp; mask,</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">const</span> std::function&lt;<span class="keywordtype">bool</span>(<a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a> <span class="keywordtype">id</span>)&gt;&amp; should_mask);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">const</span> std::function&lt;<span class="keywordtype">bool</span>(<a class="code" href="group__FrameGrabber.html#gaca9d48fd13de3e0a7e7af60e518bfd35">ifm3d::buffer_id</a> <span class="keywordtype">id</span>)&gt;&amp; should_mask);</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordtype">bool</span> has_metadata(<span class="keyword">const</span> std::vector&lt;std::uint8_t&gt;&amp; data, std::size_t idx);</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <a class="code" href="classifm3d_1_1json.html">ifm3d::json</a> create_metadata(<span class="keyword">const</span> std::vector&lt;std::uint8_t&gt;&amp; data,</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                              std::size_t idx);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <a class="code" href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">buffer_id</a> map_metadata_to_buffer_id(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1Buffer.html">ifm3d::Buffer</a>&amp; buffer);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  buffer_id map_metadata_to_buffer_id(<span class="keyword">const</span> <a class="code" href="classifm3d_1_1Buffer.html">ifm3d::Buffer</a>&amp; buffer);</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  std::map&lt;ifm3d::buffer_id, ifm3d::BufferList&gt; map_logical_buffers(</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">const</span> std::map&lt;ifm3d::buffer_id, ifm3d::BufferList&gt;&amp; images,</div>
@@ -320,7 +320,7 @@ $(document).ready(function(){initNavTree('organizer__utils_8h_source.html',''); 
 <div class="ttc" id="aclassifm3d_1_1Buffer_html"><div class="ttname"><a href="classifm3d_1_1Buffer.html">ifm3d::Buffer</a></div><div class="ttdoc">The class Buffer represent a STL container to store data from the ifm devices in 2 dimension and supp...</div><div class="ttdef"><b>Definition:</b> buffer.h:99</div></div>
 <div class="ttc" id="aclassifm3d_1_1Buffer_html_a316c4df00f4080a8a5727c0b9993950a"><div class="ttname"><a href="classifm3d_1_1Buffer.html#a316c4df00f4080a8a5727c0b9993950a">ifm3d::Buffer::Ptr</a></div><div class="ttdeci">T * Ptr(std::uint32_t row)</div><div class="ttdoc">returns a pointer to the specified Buffer row.</div></div>
 <div class="ttc" id="aclassifm3d_1_1json_html"><div class="ttname"><a href="classifm3d_1_1json.html">ifm3d::json</a></div><div class="ttdef"><b>Definition:</b> json.hpp:131</div></div>
-<div class="ttc" id="agroup__FrameGrabber_html_ga363ee802dc7953150dc23ba56d7e9c50"><div class="ttname"><a href="group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50">ifm3d::buffer_id</a></div><div class="ttdeci">buffer_id</div><div class="ttdoc">buffer_ids available for use with the default Organizer.</div><div class="ttdef"><b>Definition:</b> buffer_id.h:19</div></div>
+<div class="ttc" id="agroup__FrameGrabber_html_gaca9d48fd13de3e0a7e7af60e518bfd35"><div class="ttname"><a href="group__FrameGrabber.html#gaca9d48fd13de3e0a7e7af60e518bfd35">ifm3d::BufferId</a></div><div class="ttdeci">BufferId</div><div class="ttdoc">BufferIds available for use with the default Organizer.</div><div class="ttdef"><b>Definition:</b> buffer_id.h:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
