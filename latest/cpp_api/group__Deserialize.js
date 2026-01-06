@@ -16,6 +16,29 @@ var group__Deserialize =
       [ "model_id", "structifm3d_1_1calibration_1_1Calibration.html#a7b7600fa111e0da40f0994ac4e24a567", null ],
       [ "model_parameters", "structifm3d_1_1calibration_1_1Calibration.html#ad8d3b059db477473f493195ca2938a37", null ]
     ] ],
+    [ "IMUSample", "structifm3d_1_1calibration_1_1IMUSample.html", [
+      [ "Read", "structifm3d_1_1calibration_1_1IMUSample.html#aef51368be52159a45c799a6233eafe0a", null ],
+      [ "acc_x", "structifm3d_1_1calibration_1_1IMUSample.html#ae3e373660da06f0ad07399f6b8eac17f", null ],
+      [ "acc_y", "structifm3d_1_1calibration_1_1IMUSample.html#a823a3cfdecb554c99eeab96578074591", null ],
+      [ "acc_z", "structifm3d_1_1calibration_1_1IMUSample.html#a9e695a0d28fa2dd7f7b98d082c7e23d0", null ],
+      [ "gyro_x", "structifm3d_1_1calibration_1_1IMUSample.html#a44a0ac774bac67571c2eb24fcc049f7f", null ],
+      [ "gyro_y", "structifm3d_1_1calibration_1_1IMUSample.html#aaa0bef4c4a26cec5e70e3818ba659e62", null ],
+      [ "gyro_z", "structifm3d_1_1calibration_1_1IMUSample.html#a61d1e0b1aa9c5701a223a541d227d8c5", null ],
+      [ "hw_timestamp", "structifm3d_1_1calibration_1_1IMUSample.html#a845ee9b8ba9fc78e8055066cc79a58d1", null ],
+      [ "temperature", "structifm3d_1_1calibration_1_1IMUSample.html#a2abad4b620d73da6d310423baecf37c1", null ],
+      [ "timestamp", "structifm3d_1_1calibration_1_1IMUSample.html#a6a2ca6b2e528f096445f4e7739fd9c03", null ]
+    ] ],
+    [ "IMUInfoV1", "classifm3d_1_1IMUInfoV1.html", [
+      [ "Ptr", "classifm3d_1_1IMUInfoV1.html#a07796c5c48e58862e15d242b1ff74acd", null ],
+      [ "IsValid", "classifm3d_1_1IMUInfoV1.html#a297524bff320a23b5e1df6ebb112a0d8", null ],
+      [ "Read", "classifm3d_1_1IMUInfoV1.html#a6bef88431eb843f41f7f35bc9f3fed0b", null ],
+      [ "extrinsic_imu_to_user", "classifm3d_1_1IMUInfoV1.html#a3fe1a0f01d98be53221a4067e155b39f", null ],
+      [ "extrinsic_imu_to_vpu", "classifm3d_1_1IMUInfoV1.html#a3ed0b9e77ddfe52afa361c7a278ec8ef", null ],
+      [ "imu_fifo_rcv_timestamp", "classifm3d_1_1IMUInfoV1.html#af9b7451786c5e633ba920f8b4bd248a0", null ],
+      [ "imu_samples", "classifm3d_1_1IMUInfoV1.html#a6dfa2d7d47db742d3be7ccde2fc2f8ee", null ],
+      [ "imu_version", "classifm3d_1_1IMUInfoV1.html#a55eae8e429eb74aece6b41cb80c6eae5", null ],
+      [ "num_samples", "classifm3d_1_1IMUInfoV1.html#af972f4a3c2e359b78e9a2e7ba0338c4a", null ]
+    ] ],
     [ "ODSExtrinsicCalibrationCorrectionV1", "classifm3d_1_1ODSExtrinsicCalibrationCorrectionV1.html", [
       [ "Ptr", "classifm3d_1_1ODSExtrinsicCalibrationCorrectionV1.html#a832cc71611512a3212df1426a1341a72", null ],
       [ "Read", "classifm3d_1_1ODSExtrinsicCalibrationCorrectionV1.html#a73d23b3f9806952e0ee6878c94e30535", null ],

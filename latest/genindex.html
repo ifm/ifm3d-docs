@@ -118,6 +118,8 @@
 </li>
         <li><a href="_autosummary/ifm3dpy.deserialize.ExtrinsicOpticToUser.html#ifm3dpy.deserialize.ExtrinsicOpticToUser.__init__">(ifm3dpy.deserialize.ExtrinsicOpticToUser method)</a>
 </li>
+        <li><a href="_autosummary/ifm3dpy.deserialize.IMUInfoV1.html#ifm3dpy.deserialize.IMUInfoV1.__init__">(ifm3dpy.deserialize.IMUInfoV1 method)</a>
+</li>
         <li><a href="_autosummary/ifm3dpy.deserialize.O3DExposureTimes.html#ifm3dpy.deserialize.O3DExposureTimes.__init__">(ifm3dpy.deserialize.O3DExposureTimes method)</a>
 </li>
         <li><a href="_autosummary/ifm3dpy.deserialize.O3DExtrinsicCalibration.html#ifm3dpy.deserialize.O3DExtrinsicCalibration.__init__">(ifm3dpy.deserialize.O3DExtrinsicCalibration method)</a>
@@ -331,9 +333,11 @@
         <li><a href="_autosummary/ifm3dpy.device.O3X.html#ifm3dpy.device.O3X.delete_application">(ifm3dpy.device.O3X method)</a>
 </li>
       </ul></li>
-      <li><a href="_autosummary/ifm3dpy.deserialize.O3DExposureTimes.html#ifm3dpy.deserialize.O3DExposureTimes.deserialize">deserialize() (ifm3dpy.deserialize.O3DExposureTimes static method)</a>
+      <li><a href="_autosummary/ifm3dpy.deserialize.IMUInfoV1.html#ifm3dpy.deserialize.IMUInfoV1.deserialize">deserialize() (ifm3dpy.deserialize.IMUInfoV1 static method)</a>
 
       <ul>
+        <li><a href="_autosummary/ifm3dpy.deserialize.O3DExposureTimes.html#ifm3dpy.deserialize.O3DExposureTimes.deserialize">(ifm3dpy.deserialize.O3DExposureTimes static method)</a>
+</li>
         <li><a href="_autosummary/ifm3dpy.deserialize.O3DExtrinsicCalibration.html#ifm3dpy.deserialize.O3DExtrinsicCalibration.deserialize">(ifm3dpy.deserialize.O3DExtrinsicCalibration static method)</a>
 </li>
         <li><a href="_autosummary/ifm3dpy.deserialize.O3DILLUTemperature.html#ifm3dpy.deserialize.O3DILLUTemperature.deserialize">(ifm3dpy.deserialize.O3DILLUTemperature static method)</a>
@@ -445,20 +449,24 @@
       </ul></li>
       <li><a href="_autosummary/ifm3dpy.deserialize.RGBInfoV1.html#ifm3dpy.deserialize.RGBInfoV1.exposure_time">exposure_time (ifm3dpy.deserialize.RGBInfoV1 property)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="_autosummary/ifm3dpy.deserialize.TOFInfoV3.html#ifm3dpy.deserialize.TOFInfoV3.exposure_times_s">exposure_times_s (ifm3dpy.deserialize.TOFInfoV3 property)</a>
 
       <ul>
         <li><a href="_autosummary/ifm3dpy.deserialize.TOFInfoV4.html#ifm3dpy.deserialize.TOFInfoV4.exposure_times_s">(ifm3dpy.deserialize.TOFInfoV4 property)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="_autosummary/ifm3dpy.deserialize.TOFInfoV3.html#ifm3dpy.deserialize.TOFInfoV3.exposure_timestamps_ns">exposure_timestamps_ns (ifm3dpy.deserialize.TOFInfoV3 property)</a>
 
       <ul>
         <li><a href="_autosummary/ifm3dpy.deserialize.TOFInfoV4.html#ifm3dpy.deserialize.TOFInfoV4.exposure_timestamps_ns">(ifm3dpy.deserialize.TOFInfoV4 property)</a>
 </li>
       </ul></li>
+      <li><a href="_autosummary/ifm3dpy.deserialize.IMUInfoV1.html#ifm3dpy.deserialize.IMUInfoV1.extrinsic_imu_to_user">extrinsic_imu_to_user (ifm3dpy.deserialize.IMUInfoV1 property)</a>
+</li>
+      <li><a href="_autosummary/ifm3dpy.deserialize.IMUInfoV1.html#ifm3dpy.deserialize.IMUInfoV1.extrinsic_imu_to_vpu">extrinsic_imu_to_vpu (ifm3dpy.deserialize.IMUInfoV1 property)</a>
+</li>
       <li><a href="_autosummary/ifm3dpy.deserialize.RGBInfoV1.html#ifm3dpy.deserialize.RGBInfoV1.extrinsic_optic_to_user">extrinsic_optic_to_user (ifm3dpy.deserialize.RGBInfoV1 property)</a>
 
       <ul>
@@ -665,8 +673,6 @@
         <li><a href="_autosummary/ifm3dpy.device.O3X.html#ifm3dpy.device.O3X.imager_types">(ifm3dpy.device.O3X method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="_autosummary/ifm3dpy.device.LegacyDevice.html#ifm3dpy.device.LegacyDevice.import_ifm_app">import_ifm_app() (ifm3dpy.device.LegacyDevice method)</a>
 
       <ul>
@@ -675,6 +681,8 @@
         <li><a href="_autosummary/ifm3dpy.device.O3X.html#ifm3dpy.device.O3X.import_ifm_app">(ifm3dpy.device.O3X method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="_autosummary/ifm3dpy.device.LegacyDevice.html#ifm3dpy.device.LegacyDevice.import_ifm_config">import_ifm_config() (ifm3dpy.device.LegacyDevice method)</a>
 
       <ul>
@@ -683,6 +691,14 @@
         <li><a href="_autosummary/ifm3dpy.device.O3X.html#ifm3dpy.device.O3X.import_ifm_config">(ifm3dpy.device.O3X method)</a>
 </li>
       </ul></li>
+      <li><a href="_autosummary/ifm3dpy.deserialize.IMUInfoV1.html#ifm3dpy.deserialize.IMUInfoV1.imu_fifo_rcv_timestamp">imu_fifo_rcv_timestamp (ifm3dpy.deserialize.IMUInfoV1 property)</a>
+</li>
+      <li><a href="_autosummary/ifm3dpy.deserialize.IMUInfoV1.html#ifm3dpy.deserialize.IMUInfoV1.imu_samples">imu_samples (ifm3dpy.deserialize.IMUInfoV1 property)</a>
+</li>
+      <li><a href="_autosummary/ifm3dpy.deserialize.IMUInfoV1.html#ifm3dpy.deserialize.IMUInfoV1.imu_version">imu_version (ifm3dpy.deserialize.IMUInfoV1 property)</a>
+</li>
+      <li><a href="_autosummary/ifm3dpy.deserialize.IMUInfoV1.html#ifm3dpy.deserialize.IMUInfoV1">IMUInfoV1 (class in ifm3dpy.deserialize)</a>
+</li>
       <li><a href="_autosummary/ifm3dpy.deserialize.RGBInfoV1.html#ifm3dpy.deserialize.RGBInfoV1.intrinsic_calibration">intrinsic_calibration (ifm3dpy.deserialize.RGBInfoV1 property)</a>
 
       <ul>
@@ -900,6 +916,10 @@
         <li><a href="_autosummary/ifm3dpy.logging.LogLevel.html#ifm3dpy.logging.LogLevel.name">(ifm3dpy.logging.LogLevel property)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_autosummary/ifm3dpy.deserialize.IMUInfoV1.html#ifm3dpy.deserialize.IMUInfoV1.num_samples">num_samples (ifm3dpy.deserialize.IMUInfoV1 property)</a>
+</li>
   </ul></td>
 </tr></table>
 

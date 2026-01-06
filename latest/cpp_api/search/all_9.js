@@ -6,12 +6,14 @@ var searchData=
   ['importflags_87',['ImportFlags',['../classifm3d_1_1Device.html#a06d288514d9e8f6601f65624b38928c8',1,'ifm3d::Device']]],
   ['importifmapp_88',['ImportIFMApp',['../classifm3d_1_1LegacyDevice.html#a74e60894869c422947bea1ab9105cafa',1,'ifm3d::LegacyDevice']]],
   ['importifmconfig_89',['ImportIFMConfig',['../classifm3d_1_1LegacyDevice.html#a460d7b108ec64eb6b128c48690327193',1,'ifm3d::LegacyDevice']]],
-  ['intrinsic_5fcalib_90',['INTRINSIC_CALIB',['../group__FrameGrabber.html#ggaca9d48fd13de3e0a7e7af60e518bfd35abf604699680876b37a24bc5fb3bf4b9a',1,'ifm3d']]],
-  ['intrinsiccalibration_91',['IntrinsicCalibration',['../structifm3d_1_1IntrinsicCalibration.html',1,'ifm3d']]],
-  ['inverse_5fintrinsic_5fcalibration_92',['INVERSE_INTRINSIC_CALIBRATION',['../group__FrameGrabber.html#ggaca9d48fd13de3e0a7e7af60e518bfd35ab49765250e334a11ec065a3e9663d927',1,'ifm3d']]],
-  ['ip_93',['IP',['../classifm3d_1_1Device.html#a934743418fd4bd6605ef855501587b73',1,'ifm3d::Device']]],
-  ['ismasking_94',['IsMasking',['../classifm3d_1_1FrameGrabber.html#a0e003c3fa03666dfd385d44974e10d37',1,'ifm3d::FrameGrabber']]],
-  ['isrunning_95',['IsRunning',['../classifm3d_1_1FrameGrabber.html#a41863acd226d087671594f47af3b0e32',1,'ifm3d::FrameGrabber']]],
-  ['iterator_96',['Iterator',['../structifm3d_1_1Buffer_1_1Iterator.html',1,'ifm3d::Buffer']]],
-  ['iteratoradapter_97',['IteratorAdapter',['../classifm3d_1_1IteratorAdapter.html',1,'ifm3d']]]
+  ['imuinfov1_90',['IMUInfoV1',['../classifm3d_1_1IMUInfoV1.html',1,'ifm3d']]],
+  ['imusample_91',['IMUSample',['../structifm3d_1_1calibration_1_1IMUSample.html',1,'ifm3d::calibration']]],
+  ['intrinsic_5fcalib_92',['INTRINSIC_CALIB',['../group__FrameGrabber.html#ggaca9d48fd13de3e0a7e7af60e518bfd35abf604699680876b37a24bc5fb3bf4b9a',1,'ifm3d']]],
+  ['intrinsiccalibration_93',['IntrinsicCalibration',['../structifm3d_1_1IntrinsicCalibration.html',1,'ifm3d']]],
+  ['inverse_5fintrinsic_5fcalibration_94',['INVERSE_INTRINSIC_CALIBRATION',['../group__FrameGrabber.html#ggaca9d48fd13de3e0a7e7af60e518bfd35ab49765250e334a11ec065a3e9663d927',1,'ifm3d']]],
+  ['ip_95',['IP',['../classifm3d_1_1Device.html#a934743418fd4bd6605ef855501587b73',1,'ifm3d::Device']]],
+  ['ismasking_96',['IsMasking',['../classifm3d_1_1FrameGrabber.html#a0e003c3fa03666dfd385d44974e10d37',1,'ifm3d::FrameGrabber']]],
+  ['isrunning_97',['IsRunning',['../classifm3d_1_1FrameGrabber.html#a41863acd226d087671594f47af3b0e32',1,'ifm3d::FrameGrabber']]],
+  ['iterator_98',['Iterator',['../structifm3d_1_1Buffer_1_1Iterator.html',1,'ifm3d::Buffer']]],
+  ['iteratoradapter_99',['IteratorAdapter',['../classifm3d_1_1IteratorAdapter.html',1,'ifm3d']]]
 ];

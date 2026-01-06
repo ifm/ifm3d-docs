@@ -1,0 +1,37 @@
+ifm3dpy.deserialize.IMUInfoV1
+=============================
+
+.. currentmodule:: ifm3dpy.deserialize
+
+.. autoclass:: IMUInfoV1
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~IMUInfoV1.__init__
+      ~IMUInfoV1.deserialize
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~IMUInfoV1.extrinsic_imu_to_user
+      ~IMUInfoV1.extrinsic_imu_to_vpu
+      ~IMUInfoV1.imu_fifo_rcv_timestamp
+      ~IMUInfoV1.imu_samples
+      ~IMUInfoV1.imu_version
+      ~IMUInfoV1.num_samples
+   
+   

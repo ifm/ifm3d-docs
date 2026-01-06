@@ -20,6 +20,8 @@ var hierarchy =
     [ "ifm3d::Frame", "classifm3d_1_1Frame.html", null ],
     [ "ifm3d::FrameGrabber", "classifm3d_1_1FrameGrabber.html", null ],
     [ "ifm3d::IFMNetworkDevice", "classifm3d_1_1IFMNetworkDevice.html", null ],
+    [ "ifm3d::IMUInfoV1", "classifm3d_1_1IMUInfoV1.html", null ],
+    [ "ifm3d::calibration::IMUSample", "structifm3d_1_1calibration_1_1IMUSample.html", null ],
     [ "ifm3d::IntrinsicCalibration", "structifm3d_1_1IntrinsicCalibration.html", null ],
     [ "ifm3d::Buffer::Iterator< T >", "structifm3d_1_1Buffer_1_1Iterator.html", null ],
     [ "ifm3d::IteratorAdapter< T >", "classifm3d_1_1IteratorAdapter.html", null ],

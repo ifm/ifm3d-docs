@@ -3,7 +3,8 @@ var annotated_dup =
     [ "ifm3d", null, [
       [ "calibration", null, [
         [ "ExtrinsicOpticToUser", "structifm3d_1_1calibration_1_1ExtrinsicOpticToUser.html", "structifm3d_1_1calibration_1_1ExtrinsicOpticToUser" ],
-        [ "Calibration", "structifm3d_1_1calibration_1_1Calibration.html", "structifm3d_1_1calibration_1_1Calibration" ]
+        [ "Calibration", "structifm3d_1_1calibration_1_1Calibration.html", "structifm3d_1_1calibration_1_1Calibration" ],
+        [ "IMUSample", "structifm3d_1_1calibration_1_1IMUSample.html", "structifm3d_1_1calibration_1_1IMUSample" ]
       ] ],
       [ "Error", "classifm3d_1_1Error.html", "classifm3d_1_1Error" ],
       [ "json", "classifm3d_1_1json.html", null ],
@@ -38,6 +39,7 @@ var annotated_dup =
       [ "SWUpdater", "classifm3d_1_1SWUpdater.html", "classifm3d_1_1SWUpdater" ],
       [ "PCICClient", "classifm3d_1_1PCICClient.html", "classifm3d_1_1PCICClient" ],
       [ "ArrayDeserialize", "classifm3d_1_1ArrayDeserialize.html", "classifm3d_1_1ArrayDeserialize" ],
+      [ "IMUInfoV1", "classifm3d_1_1IMUInfoV1.html", "classifm3d_1_1IMUInfoV1" ],
       [ "ODSExtrinsicCalibrationCorrectionV1", "classifm3d_1_1ODSExtrinsicCalibrationCorrectionV1.html", "classifm3d_1_1ODSExtrinsicCalibrationCorrectionV1" ],
       [ "ODSInfoV1", "classifm3d_1_1ODSInfoV1.html", "classifm3d_1_1ODSInfoV1" ],
       [ "ODSOccupancyGridV1", "classifm3d_1_1ODSOccupancyGridV1.html", "classifm3d_1_1ODSOccupancyGridV1" ],
