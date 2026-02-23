@@ -1,0 +1,39 @@
+ifm3dpy.deserialize.IMUSample
+=============================
+
+.. currentmodule:: ifm3dpy.deserialize
+
+.. autoclass:: IMUSample
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~IMUSample.__init__
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~IMUSample.acc_x
+      ~IMUSample.acc_y
+      ~IMUSample.acc_z
+      ~IMUSample.gyro_x
+      ~IMUSample.gyro_y
+      ~IMUSample.gyro_z
+      ~IMUSample.hw_timestamp
+      ~IMUSample.temperature
+      ~IMUSample.timestamp
+   
+   

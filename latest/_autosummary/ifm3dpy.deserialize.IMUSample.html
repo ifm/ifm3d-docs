@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ifm3dpy.deserialize.ExtrinsicOpticToUser &mdash; ifm3d v2.0.0 documentation</title>
+  <title>ifm3dpy.deserialize.IMUSample &mdash; ifm3d v2.0.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -22,8 +22,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ifm3dpy.deserialize.IMUInfoV1" href="ifm3dpy.deserialize.IMUInfoV1.html" />
-    <link rel="prev" title="ifm3dpy.deserialize.Calibration" href="ifm3dpy.deserialize.Calibration.html" /> 
+    <link rel="next" title="ifm3dpy.deserialize.O3DExposureTimes" href="ifm3dpy.deserialize.O3DExposureTimes.html" />
+    <link rel="prev" title="ifm3dpy.deserialize.IMUInfoV1" href="ifm3dpy.deserialize.IMUInfoV1.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -59,9 +59,9 @@
 <li class="toctree-l2 current"><a class="reference internal" href="ifm3dpy.deserialize.html">ifm3dpy.deserialize</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.deserialize.html">ifm3dpy.deserialize.deserialize</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.Calibration.html">ifm3dpy.deserialize.Calibration</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">ifm3dpy.deserialize.ExtrinsicOpticToUser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.ExtrinsicOpticToUser.html">ifm3dpy.deserialize.ExtrinsicOpticToUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.IMUInfoV1.html">ifm3dpy.deserialize.IMUInfoV1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.IMUSample.html">ifm3dpy.deserialize.IMUSample</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ifm3dpy.deserialize.IMUSample</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.O3DExposureTimes.html">ifm3dpy.deserialize.O3DExposureTimes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.O3DExtrinsicCalibration.html">ifm3dpy.deserialize.O3DExtrinsicCalibration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.O3DILLUTemperature.html">ifm3dpy.deserialize.O3DILLUTemperature</a></li>
@@ -101,9 +101,9 @@
       <li><a href="../index.html" class="icon icon-home"></a></li>
           <li class="breadcrumb-item"><a href="../python_api.html">Python API Reference</a></li>
           <li class="breadcrumb-item"><a href="ifm3dpy.deserialize.html">ifm3dpy.deserialize</a></li>
-      <li class="breadcrumb-item active">ifm3dpy.deserialize.ExtrinsicOpticToUser</li>
+      <li class="breadcrumb-item active">ifm3dpy.deserialize.IMUSample</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/_autosummary/ifm3dpy.deserialize.ExtrinsicOpticToUser.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/_autosummary/ifm3dpy.deserialize.IMUSample.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -111,16 +111,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="ifm3dpy-deserialize-extrinsicoptictouser">
-<h1>ifm3dpy.deserialize.ExtrinsicOpticToUser<a class="headerlink" href="#ifm3dpy-deserialize-extrinsicoptictouser" title="Permalink to this heading"></a></h1>
+  <section id="ifm3dpy-deserialize-imusample">
+<h1>ifm3dpy.deserialize.IMUSample<a class="headerlink" href="#ifm3dpy-deserialize-imusample" title="Permalink to this heading"></a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="ifm3dpy.deserialize.ExtrinsicOpticToUser">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ifm3dpy.deserialize.</span></span><span class="sig-name descname"><span class="pre">ExtrinsicOpticToUser</span></span><a class="headerlink" href="#ifm3dpy.deserialize.ExtrinsicOpticToUser" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.IMUSample">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ifm3dpy.deserialize.</span></span><span class="sig-name descname"><span class="pre">IMUSample</span></span><a class="headerlink" href="#ifm3dpy.deserialize.IMUSample" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
-<p>Class for managing an instance Extrinsic parameters</p>
+<p>R(Class for managing an instance of imu sample data)</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="ifm3dpy.deserialize.ExtrinsicOpticToUser.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.deserialize.ExtrinsicOpticToUser" title="ifm3dpy.deserialize.ExtrinsicOpticToUser"><span class="pre">ifm3dpy.deserialize.ExtrinsicOpticToUser</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.deserialize.ExtrinsicOpticToUser.__init__" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.IMUSample.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.deserialize.IMUSample" title="ifm3dpy.deserialize.IMUSample"><span class="pre">ifm3dpy.deserialize.IMUSample</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.deserialize.IMUSample.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor</p>
 </dd></dl>
 
@@ -131,7 +131,7 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.ExtrinsicOpticToUser.__init__" title="ifm3dpy.deserialize.ExtrinsicOpticToUser.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.IMUSample.__init__" title="ifm3dpy.deserialize.IMUSample.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self)</p></td>
 <td><p>Constructor</p></td>
 </tr>
 </tbody>
@@ -143,60 +143,87 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.ExtrinsicOpticToUser.rot_x" title="ifm3dpy.deserialize.ExtrinsicOpticToUser.rot_x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rot_x</span></code></a></p></td>
-<td><p>Extrinsic Parameter rotX</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.IMUSample.acc_x" title="ifm3dpy.deserialize.IMUSample.acc_x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">acc_x</span></code></a></p></td>
+<td><p>Accelerometer X-axis data in [m/s^2]</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.ExtrinsicOpticToUser.rot_y" title="ifm3dpy.deserialize.ExtrinsicOpticToUser.rot_y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rot_y</span></code></a></p></td>
-<td><p>Extrinsic Parameter rotY</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.IMUSample.acc_y" title="ifm3dpy.deserialize.IMUSample.acc_y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">acc_y</span></code></a></p></td>
+<td><p>Accelerometer Y-axis data in [m/s^2]</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.ExtrinsicOpticToUser.rot_z" title="ifm3dpy.deserialize.ExtrinsicOpticToUser.rot_z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rot_z</span></code></a></p></td>
-<td><p>Extrinsic Parameter rotZ</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.IMUSample.acc_z" title="ifm3dpy.deserialize.IMUSample.acc_z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">acc_z</span></code></a></p></td>
+<td><p>Accelerometer Z-axis data in [m/s^2]</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.ExtrinsicOpticToUser.trans_x" title="ifm3dpy.deserialize.ExtrinsicOpticToUser.trans_x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trans_x</span></code></a></p></td>
-<td><p>Extrinsic Parameter transX</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.IMUSample.gyro_x" title="ifm3dpy.deserialize.IMUSample.gyro_x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gyro_x</span></code></a></p></td>
+<td><p>Gyroscope X-axis data in [rad/s]</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.ExtrinsicOpticToUser.trans_y" title="ifm3dpy.deserialize.ExtrinsicOpticToUser.trans_y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trans_y</span></code></a></p></td>
-<td><p>Extrinsic Parameter transY</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.IMUSample.gyro_y" title="ifm3dpy.deserialize.IMUSample.gyro_y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gyro_y</span></code></a></p></td>
+<td><p>Gyroscope Y-axis data in [rad/s]</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.ExtrinsicOpticToUser.trans_z" title="ifm3dpy.deserialize.ExtrinsicOpticToUser.trans_z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trans_z</span></code></a></p></td>
-<td><p>Extrinsic Parameter transZ</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.IMUSample.gyro_z" title="ifm3dpy.deserialize.IMUSample.gyro_z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gyro_z</span></code></a></p></td>
+<td><p>Gyroscope Z-axis data in [rad/s]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.IMUSample.hw_timestamp" title="ifm3dpy.deserialize.IMUSample.hw_timestamp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hw_timestamp</span></code></a></p></td>
+<td><p>Hardware timestamp of the IMU sample</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.IMUSample.temperature" title="ifm3dpy.deserialize.IMUSample.temperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">temperature</span></code></a></p></td>
+<td><p>Temperature at the time of the IMU sample</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.IMUSample.timestamp" title="ifm3dpy.deserialize.IMUSample.timestamp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timestamp</span></code></a></p></td>
+<td><p>Timestamp of the IMU sample</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py property">
-<dt class="sig sig-object py" id="ifm3dpy.deserialize.ExtrinsicOpticToUser.rot_x">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rot_x</span></span><a class="headerlink" href="#ifm3dpy.deserialize.ExtrinsicOpticToUser.rot_x" title="Permalink to this definition"></a></dt>
-<dd><p>Extrinsic Parameter rotX</p>
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.IMUSample.acc_x">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">acc_x</span></span><a class="headerlink" href="#ifm3dpy.deserialize.IMUSample.acc_x" title="Permalink to this definition"></a></dt>
+<dd><p>Accelerometer X-axis data in [m/s^2]</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="ifm3dpy.deserialize.ExtrinsicOpticToUser.rot_y">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rot_y</span></span><a class="headerlink" href="#ifm3dpy.deserialize.ExtrinsicOpticToUser.rot_y" title="Permalink to this definition"></a></dt>
-<dd><p>Extrinsic Parameter rotY</p>
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.IMUSample.acc_y">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">acc_y</span></span><a class="headerlink" href="#ifm3dpy.deserialize.IMUSample.acc_y" title="Permalink to this definition"></a></dt>
+<dd><p>Accelerometer Y-axis data in [m/s^2]</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="ifm3dpy.deserialize.ExtrinsicOpticToUser.rot_z">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rot_z</span></span><a class="headerlink" href="#ifm3dpy.deserialize.ExtrinsicOpticToUser.rot_z" title="Permalink to this definition"></a></dt>
-<dd><p>Extrinsic Parameter rotZ</p>
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.IMUSample.acc_z">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">acc_z</span></span><a class="headerlink" href="#ifm3dpy.deserialize.IMUSample.acc_z" title="Permalink to this definition"></a></dt>
+<dd><p>Accelerometer Z-axis data in [m/s^2]</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="ifm3dpy.deserialize.ExtrinsicOpticToUser.trans_x">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trans_x</span></span><a class="headerlink" href="#ifm3dpy.deserialize.ExtrinsicOpticToUser.trans_x" title="Permalink to this definition"></a></dt>
-<dd><p>Extrinsic Parameter transX</p>
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.IMUSample.gyro_x">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">gyro_x</span></span><a class="headerlink" href="#ifm3dpy.deserialize.IMUSample.gyro_x" title="Permalink to this definition"></a></dt>
+<dd><p>Gyroscope X-axis data in [rad/s]</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="ifm3dpy.deserialize.ExtrinsicOpticToUser.trans_y">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trans_y</span></span><a class="headerlink" href="#ifm3dpy.deserialize.ExtrinsicOpticToUser.trans_y" title="Permalink to this definition"></a></dt>
-<dd><p>Extrinsic Parameter transY</p>
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.IMUSample.gyro_y">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">gyro_y</span></span><a class="headerlink" href="#ifm3dpy.deserialize.IMUSample.gyro_y" title="Permalink to this definition"></a></dt>
+<dd><p>Gyroscope Y-axis data in [rad/s]</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="ifm3dpy.deserialize.ExtrinsicOpticToUser.trans_z">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trans_z</span></span><a class="headerlink" href="#ifm3dpy.deserialize.ExtrinsicOpticToUser.trans_z" title="Permalink to this definition"></a></dt>
-<dd><p>Extrinsic Parameter transZ</p>
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.IMUSample.gyro_z">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">gyro_z</span></span><a class="headerlink" href="#ifm3dpy.deserialize.IMUSample.gyro_z" title="Permalink to this definition"></a></dt>
+<dd><p>Gyroscope Z-axis data in [rad/s]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.IMUSample.hw_timestamp">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hw_timestamp</span></span><a class="headerlink" href="#ifm3dpy.deserialize.IMUSample.hw_timestamp" title="Permalink to this definition"></a></dt>
+<dd><p>Hardware timestamp of the IMU sample</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.IMUSample.temperature">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">temperature</span></span><a class="headerlink" href="#ifm3dpy.deserialize.IMUSample.temperature" title="Permalink to this definition"></a></dt>
+<dd><p>Temperature at the time of the IMU sample</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.IMUSample.timestamp">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">timestamp</span></span><a class="headerlink" href="#ifm3dpy.deserialize.IMUSample.timestamp" title="Permalink to this definition"></a></dt>
+<dd><p>Timestamp of the IMU sample</p>
 </dd></dl>
 
 </dd></dl>

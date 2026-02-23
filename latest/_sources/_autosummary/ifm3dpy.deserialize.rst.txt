@@ -29,6 +29,7 @@
       Calibration
       ExtrinsicOpticToUser
       IMUInfoV1
+      IMUSample
       O3DExposureTimes
       O3DExtrinsicCalibration
       O3DILLUTemperature

@@ -1,5 +1,6 @@
 var structifm3d_1_1calibration_1_1IMUSample =
 [
+    [ "Ptr", "structifm3d_1_1calibration_1_1IMUSample.html#a54aa1f59ce208f67e52bd809372aa876", null ],
     [ "Read", "structifm3d_1_1calibration_1_1IMUSample.html#aef51368be52159a45c799a6233eafe0a", null ],
     [ "acc_x", "structifm3d_1_1calibration_1_1IMUSample.html#ae3e373660da06f0ad07399f6b8eac17f", null ],
     [ "acc_y", "structifm3d_1_1calibration_1_1IMUSample.html#a823a3cfdecb554c99eeab96578074591", null ],
