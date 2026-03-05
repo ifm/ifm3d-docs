@@ -17,6 +17,7 @@ ifm3dpy.deserialize.O3DInverseInstrinsicCalibration
    .. autosummary::
    
       ~O3DInverseInstrinsicCalibration.__init__
+      ~O3DInverseInstrinsicCalibration._pybind11_conduit_v1_
       ~O3DInverseInstrinsicCalibration.deserialize
    
    

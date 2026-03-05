@@ -17,6 +17,7 @@ ifm3dpy.logging.LogFormatterText
    .. autosummary::
    
       ~LogFormatterText.__init__
+      ~LogFormatterText._pybind11_conduit_v1_
       ~LogFormatterText.format
    
    

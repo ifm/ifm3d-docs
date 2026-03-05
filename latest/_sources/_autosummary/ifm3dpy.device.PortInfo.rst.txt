@@ -17,6 +17,7 @@ ifm3dpy.device.PortInfo
    .. autosummary::
    
       ~PortInfo.__init__
+      ~PortInfo._pybind11_conduit_v1_
    
    
 

@@ -12,12 +12,6 @@ ifm3dpy.device.Parameter
    .. automethod:: __init__
 
    
-   .. rubric:: Methods
-
-   .. autosummary::
-   
-      ~Parameter.__init__
-   
    
 
    
@@ -26,15 +20,14 @@ ifm3dpy.device.Parameter
 
    .. autosummary::
    
-      ~Parameter.ODS_MAXIMUM_HEIGHT
-      ~Parameter.ODS_MOTION_DATA
       ~Parameter.ODS_OVERHANGING_LOAD
       ~Parameter.ODS_ZONE_SET
-      ~Parameter.PDS_GET_ITEM
+      ~Parameter.ODS_MAXIMUM_HEIGHT
+      ~Parameter.ODS_MOTION_DATA
       ~Parameter.PDS_GET_PALLET
+      ~Parameter.PDS_GET_ITEM
       ~Parameter.PDS_GET_RACK
       ~Parameter.PDS_VOL_CHECK
-      ~Parameter.name
-      ~Parameter.value
+      ~Parameter.__members__
    
    

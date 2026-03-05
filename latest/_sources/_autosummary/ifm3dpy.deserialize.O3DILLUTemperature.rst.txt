@@ -17,6 +17,7 @@ ifm3dpy.deserialize.O3DILLUTemperature
    .. autosummary::
    
       ~O3DILLUTemperature.__init__
+      ~O3DILLUTemperature._pybind11_conduit_v1_
       ~O3DILLUTemperature.deserialize
    
    

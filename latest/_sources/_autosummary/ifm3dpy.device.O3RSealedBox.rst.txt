@@ -17,6 +17,7 @@ ifm3dpy.device.O3RSealedBox
    .. autosummary::
    
       ~O3RSealedBox.__init__
+      ~O3RSealedBox._pybind11_conduit_v1_
       ~O3RSealedBox.get_public_key
       ~O3RSealedBox.is_password_protected
       ~O3RSealedBox.remove_password

@@ -17,6 +17,7 @@ ifm3dpy.deserialize.ODSInfoV1
    .. autosummary::
    
       ~ODSInfoV1.__init__
+      ~ODSInfoV1._pybind11_conduit_v1_
       ~ODSInfoV1.deserialize
    
    

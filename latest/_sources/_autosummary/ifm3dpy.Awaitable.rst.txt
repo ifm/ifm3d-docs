@@ -17,6 +17,7 @@ ifm3dpy.Awaitable
    .. autosummary::
    
       ~Awaitable.__init__
+      ~Awaitable._pybind11_conduit_v1_
       ~Awaitable.wait
       ~Awaitable.wait_for
    

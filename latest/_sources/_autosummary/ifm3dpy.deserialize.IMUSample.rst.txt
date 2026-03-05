@@ -17,6 +17,7 @@ ifm3dpy.deserialize.IMUSample
    .. autosummary::
    
       ~IMUSample.__init__
+      ~IMUSample._pybind11_conduit_v1_
    
    
 

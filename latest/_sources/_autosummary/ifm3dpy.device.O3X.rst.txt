@@ -17,6 +17,7 @@ ifm3dpy.device.O3X
    .. autosummary::
    
       ~O3X.__init__
+      ~O3X._pybind11_conduit_v1_
       ~O3X.active_application
       ~O3X.am_i
       ~O3X.application_list

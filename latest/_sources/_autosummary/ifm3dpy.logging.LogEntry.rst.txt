@@ -17,6 +17,7 @@ ifm3dpy.logging.LogEntry
    .. autosummary::
    
       ~LogEntry.__init__
+      ~LogEntry._pybind11_conduit_v1_
    
    
 

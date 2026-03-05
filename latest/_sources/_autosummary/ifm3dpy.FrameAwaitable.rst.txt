@@ -17,6 +17,7 @@ ifm3dpy.FrameAwaitable
    .. autosummary::
    
       ~FrameAwaitable.__init__
+      ~FrameAwaitable._pybind11_conduit_v1_
       ~FrameAwaitable.wait
       ~FrameAwaitable.wait_for
    

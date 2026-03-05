@@ -17,6 +17,7 @@ ifm3dpy.deserialize.O3DExtrinsicCalibration
    .. autosummary::
    
       ~O3DExtrinsicCalibration.__init__
+      ~O3DExtrinsicCalibration._pybind11_conduit_v1_
       ~O3DExtrinsicCalibration.deserialize
    
    

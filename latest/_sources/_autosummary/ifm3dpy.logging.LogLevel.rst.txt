@@ -12,12 +12,6 @@ ifm3dpy.logging.LogLevel
    .. automethod:: __init__
 
    
-   .. rubric:: Methods
-
-   .. autosummary::
-   
-      ~LogLevel.__init__
-   
    
 
    
@@ -26,14 +20,13 @@ ifm3dpy.logging.LogLevel
 
    .. autosummary::
    
-      ~LogLevel.Critical
-      ~LogLevel.Debug
-      ~LogLevel.Error
-      ~LogLevel.Info
       ~LogLevel.None
-      ~LogLevel.Verbose
+      ~LogLevel.Critical
+      ~LogLevel.Error
       ~LogLevel.Warning
-      ~LogLevel.name
-      ~LogLevel.value
+      ~LogLevel.Info
+      ~LogLevel.Debug
+      ~LogLevel.Verbose
+      ~LogLevel.__members__
    
    

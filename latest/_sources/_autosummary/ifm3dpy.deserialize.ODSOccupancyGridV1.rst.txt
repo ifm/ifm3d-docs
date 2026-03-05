@@ -17,6 +17,7 @@ ifm3dpy.deserialize.ODSOccupancyGridV1
    .. autosummary::
    
       ~ODSOccupancyGridV1.__init__
+      ~ODSOccupancyGridV1._pybind11_conduit_v1_
       ~ODSOccupancyGridV1.deserialize
    
    

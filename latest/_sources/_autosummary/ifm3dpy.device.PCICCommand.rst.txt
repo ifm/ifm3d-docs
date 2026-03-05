@@ -17,6 +17,7 @@ ifm3dpy.device.PCICCommand
    .. autosummary::
    
       ~PCICCommand.__init__
+      ~PCICCommand._pybind11_conduit_v1_
    
    
 

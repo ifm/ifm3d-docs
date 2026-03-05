@@ -17,6 +17,7 @@ ifm3dpy.framegrabber.FrameGrabber
    .. autosummary::
    
       ~FrameGrabber.__init__
+      ~FrameGrabber._pybind11_conduit_v1_
       ~FrameGrabber.is_masking
       ~FrameGrabber.is_running
       ~FrameGrabber.on_async_error

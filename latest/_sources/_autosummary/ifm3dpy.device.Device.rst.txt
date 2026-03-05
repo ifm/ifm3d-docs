@@ -17,6 +17,7 @@ ifm3dpy.device.Device
    .. autosummary::
    
       ~Device.__init__
+      ~Device._pybind11_conduit_v1_
       ~Device.am_i
       ~Device.check_minimum_firmware_version
       ~Device.device_discovery

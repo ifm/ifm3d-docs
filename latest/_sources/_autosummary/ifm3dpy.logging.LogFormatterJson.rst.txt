@@ -17,6 +17,7 @@ ifm3dpy.logging.LogFormatterJson
    .. autosummary::
    
       ~LogFormatterJson.__init__
+      ~LogFormatterJson._pybind11_conduit_v1_
       ~LogFormatterJson.format
    
    

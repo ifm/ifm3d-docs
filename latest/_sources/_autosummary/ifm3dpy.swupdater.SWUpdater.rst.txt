@@ -17,6 +17,7 @@ ifm3dpy.swupdater.SWUpdater
    .. autosummary::
    
       ~SWUpdater.__init__
+      ~SWUpdater._pybind11_conduit_v1_
       ~SWUpdater.flash_firmware
       ~SWUpdater.reboot_to_productive
       ~SWUpdater.reboot_to_recovery

@@ -17,6 +17,7 @@ ifm3dpy.device.SetTemporaryApplicationParameter
    .. autosummary::
    
       ~SetTemporaryApplicationParameter.__init__
+      ~SetTemporaryApplicationParameter._pybind11_conduit_v1_
    
    
 

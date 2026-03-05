@@ -17,6 +17,7 @@ ifm3dpy.deserialize.IMUInfoV1
    .. autosummary::
    
       ~IMUInfoV1.__init__
+      ~IMUInfoV1._pybind11_conduit_v1_
       ~IMUInfoV1.deserialize
    
    

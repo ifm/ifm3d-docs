@@ -17,6 +17,7 @@ ifm3dpy.device.LegacyDevice
    .. autosummary::
    
       ~LegacyDevice.__init__
+      ~LegacyDevice._pybind11_conduit_v1_
       ~LegacyDevice.active_application
       ~LegacyDevice.am_i
       ~LegacyDevice.application_list

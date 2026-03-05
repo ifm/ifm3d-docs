@@ -17,6 +17,7 @@ ifm3dpy.deserialize.ExtrinsicOpticToUser
    .. autosummary::
    
       ~ExtrinsicOpticToUser.__init__
+      ~ExtrinsicOpticToUser._pybind11_conduit_v1_
    
    
 

@@ -17,6 +17,7 @@ ifm3dpy.deserialize.TOFInfoV4
    .. autosummary::
    
       ~TOFInfoV4.__init__
+      ~TOFInfoV4._pybind11_conduit_v1_
       ~TOFInfoV4.deserialize
    
    

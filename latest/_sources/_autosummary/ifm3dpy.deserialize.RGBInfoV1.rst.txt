@@ -17,6 +17,7 @@ ifm3dpy.deserialize.RGBInfoV1
    .. autosummary::
    
       ~RGBInfoV1.__init__
+      ~RGBInfoV1._pybind11_conduit_v1_
       ~RGBInfoV1.deserialize
    
    

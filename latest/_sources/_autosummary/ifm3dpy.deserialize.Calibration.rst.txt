@@ -17,6 +17,7 @@ ifm3dpy.deserialize.Calibration
    .. autosummary::
    
       ~Calibration.__init__
+      ~Calibration._pybind11_conduit_v1_
    
    
 

@@ -17,6 +17,7 @@ ifm3dpy.deserialize.O3DExposureTimes
    .. autosummary::
    
       ~O3DExposureTimes.__init__
+      ~O3DExposureTimes._pybind11_conduit_v1_
       ~O3DExposureTimes.deserialize
    
    

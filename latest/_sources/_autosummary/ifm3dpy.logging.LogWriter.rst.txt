@@ -17,6 +17,7 @@ ifm3dpy.logging.LogWriter
    .. autosummary::
    
       ~LogWriter.__init__
+      ~LogWriter._pybind11_conduit_v1_
       ~LogWriter.write
    
    

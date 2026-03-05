@@ -17,6 +17,7 @@ ifm3dpy.device.IFMNetworkDevice
    .. autosummary::
    
       ~IFMNetworkDevice.__init__
+      ~IFMNetworkDevice._pybind11_conduit_v1_
    
    
 

@@ -17,6 +17,7 @@ ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1
    .. autosummary::
    
       ~ODSExtrinsicCalibrationCorrectionV1.__init__
+      ~ODSExtrinsicCalibrationCorrectionV1._pybind11_conduit_v1_
       ~ODSExtrinsicCalibrationCorrectionV1.deserialize
    
    

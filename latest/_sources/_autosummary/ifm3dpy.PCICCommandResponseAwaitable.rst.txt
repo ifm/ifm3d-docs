@@ -17,6 +17,7 @@ ifm3dpy.PCICCommandResponseAwaitable
    .. autosummary::
    
       ~PCICCommandResponseAwaitable.__init__
+      ~PCICCommandResponseAwaitable._pybind11_conduit_v1_
       ~PCICCommandResponseAwaitable.wait
       ~PCICCommandResponseAwaitable.wait_for
    

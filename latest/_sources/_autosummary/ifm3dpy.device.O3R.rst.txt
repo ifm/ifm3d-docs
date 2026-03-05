@@ -17,6 +17,7 @@ ifm3dpy.device.O3R
    .. autosummary::
    
       ~O3R.__init__
+      ~O3R._pybind11_conduit_v1_
       ~O3R.am_i
       ~O3R.check_minimum_firmware_version
       ~O3R.device_discovery
