@@ -141,10 +141,14 @@ Public Types</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a8bc27b6e9deb1e926bf6b1b5c52bbf7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenient constants for median filter mask sizes. <br /></td></tr>
 <tr class="separator:a8bc27b6e9deb1e926bf6b1b5c52bbf7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36e11371db2e46f64e8d06c69964c3d7"><td class="memItemLeft" align="right" valign="top"><a id="a36e11371db2e46f64e8d06c69964c3d7"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>DeviceFamily</b> : int { <b>UNKNOWN</b> = 0
+<tr class="memitem:a36e11371db2e46f64e8d06c69964c3d7"><td class="memItemLeft" align="right" valign="top"><a id="a36e11371db2e46f64e8d06c69964c3d7"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>DeviceFamily</b> : int { <br />
+&#160;&#160;<b>UNKNOWN</b> = 0
 , <b>O3D</b> = 1
 , <b>O3X</b> = 2
 , <b>O3R</b> = 3
+, <br />
+&#160;&#160;<b>O3C</b> = 4
+<br />
  }</td></tr>
 <tr class="separator:a36e11371db2e46f64e8d06c69964c3d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd204d150b3ad8eb78a4c37918a793aa"><td class="memItemLeft" align="right" valign="top"><a id="acd204d150b3ad8eb78a4c37918a793aa"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>SWUVersion</b> : int { <b>SWU_NOT_SUPPORTED</b> = 0
@@ -790,7 +794,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <p>Checks the swupdater version supported by device. </p>
 <dl class="section return"><dt>Returns</dt><dd>sw_version supported by device </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classifm3d_1_1O3R.html#abc0cf322eb4a1c12363a192a2f1a3729">ifm3d::O3R</a>.</p>
+<p>Reimplemented in <a class="el" href="classifm3d_1_1O3R.html#abc0cf322eb4a1c12363a192a2f1a3729">ifm3d::O3R</a>, and <a class="el" href="classifm3d_1_1O3C.html#a3c64bc90fcd37cbd8dd45e4063797592">ifm3d::O3C</a>.</p>
 
 </div>
 </div>
@@ -922,7 +926,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <p>This function can be used to retrieve the family of the connected device. </p>
 <dl class="section return"><dt>Returns</dt><dd>the device family of the connected device. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classifm3d_1_1O3X.html#a1ae50b53b4480e13106380f05c69b4df">ifm3d::O3X</a>, <a class="el" href="classifm3d_1_1O3R.html#aa130874e0175f1c6f35e55ca17df819b">ifm3d::O3R</a>, and <a class="el" href="classifm3d_1_1O3D.html#a3b82627eece036f6a4778fe53ce30e1e">ifm3d::O3D</a>.</p>
+<p>Reimplemented in <a class="el" href="classifm3d_1_1O3X.html#a1ae50b53b4480e13106380f05c69b4df">ifm3d::O3X</a>, <a class="el" href="classifm3d_1_1O3R.html#aa130874e0175f1c6f35e55ca17df819b">ifm3d::O3R</a>, <a class="el" href="classifm3d_1_1O3D.html#a3b82627eece036f6a4778fe53ce30e1e">ifm3d::O3D</a>, and <a class="el" href="classifm3d_1_1O3C.html#a9cca12298c2bf9c964dad2def8c88c7c">ifm3d::O3C</a>.</p>
 
 </div>
 </div>

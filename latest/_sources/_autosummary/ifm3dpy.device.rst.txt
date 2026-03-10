@@ -22,6 +22,7 @@
       Device
       IFMNetworkDevice
       LegacyDevice
+      O3C
       O3D
       O3R
       O3RSealedBox

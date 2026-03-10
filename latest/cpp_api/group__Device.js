@@ -17,7 +17,8 @@ var group__Device =
         [ "UNKNOWN", "classifm3d_1_1Device.html#a36e11371db2e46f64e8d06c69964c3d7a696b031073e74bf2cb98e5ef201d4aa3", null ],
         [ "O3D", "classifm3d_1_1Device.html#a36e11371db2e46f64e8d06c69964c3d7ad02c4788b1d3d3ea786f749ae160145f", null ],
         [ "O3X", "classifm3d_1_1Device.html#a36e11371db2e46f64e8d06c69964c3d7abbe120e3c29c5bf25f8aa1a3e50e1b5f", null ],
-        [ "O3R", "classifm3d_1_1Device.html#a36e11371db2e46f64e8d06c69964c3d7a68223c0506894e1dba21e99a8246cd69", null ]
+        [ "O3R", "classifm3d_1_1Device.html#a36e11371db2e46f64e8d06c69964c3d7a68223c0506894e1dba21e99a8246cd69", null ],
+        [ "O3C", "classifm3d_1_1Device.html#a36e11371db2e46f64e8d06c69964c3d7ac64058c60d5d57ba88aad98dc871c253", null ]
       ] ],
       [ "ImportFlags", "classifm3d_1_1Device.html#a06d288514d9e8f6601f65624b38928c8", [
         [ "GLOBAL", "classifm3d_1_1Device.html#a06d288514d9e8f6601f65624b38928c8a6eecfba72d12922ee1dead07a0ef3334", null ],
@@ -80,6 +81,18 @@ var group__Device =
       [ "XMLRPCPort", "classifm3d_1_1Device.html#ad7a08318bdee78328f567dbc47f0f221", null ],
       [ "_device_type", "classifm3d_1_1Device.html#a9c209c54e76b0012bf814e0f6070980e", null ],
       [ "_impl", "classifm3d_1_1Device.html#a0139eec108ab34906dab82f85820e35d", null ]
+    ] ],
+    [ "O3C", "classifm3d_1_1O3C.html", [
+      [ "Ptr", "classifm3d_1_1O3C.html#a95ad7095320401342807aae1f36c7483", null ],
+      [ "SetTemporaryApplicationParameter", "classifm3d_1_1O3C.html#abab7170323a9bbfd65484153e637074e", null ],
+      [ "O3C", "classifm3d_1_1O3C.html#a12e69ba5eb3f7ded273fa87dd9e55ad3", null ],
+      [ "~O3C", "classifm3d_1_1O3C.html#a63d618281b462b7b57b261dda87a4921", null ],
+      [ "O3C", "classifm3d_1_1O3C.html#a2dc457b13b07a6f3140fc3b4e76abd82", null ],
+      [ "O3C", "classifm3d_1_1O3C.html#a583df6a0c417ecde0d49e202bf8ab75c", null ],
+      [ "operator=", "classifm3d_1_1O3C.html#a587bf47243d3eea31309bae1a38bfab7", null ],
+      [ "operator=", "classifm3d_1_1O3C.html#ab2330c8a9476a92873c3ee07787d1527", null ],
+      [ "SwUpdateVersion", "classifm3d_1_1O3C.html#a3c64bc90fcd37cbd8dd45e4063797592", null ],
+      [ "WhoAmI", "classifm3d_1_1O3C.html#a9cca12298c2bf9c964dad2def8c88c7c", null ]
     ] ],
     [ "O3D", "classifm3d_1_1O3D.html", [
       [ "Ptr", "classifm3d_1_1O3D.html#ac5b4dd28c247500613ab0f74eb534fef", null ],

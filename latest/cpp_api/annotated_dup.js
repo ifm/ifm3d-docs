@@ -21,6 +21,7 @@ var annotated_dup =
       [ "Device", "classifm3d_1_1Device.html", "classifm3d_1_1Device" ],
       [ "IFMNetworkDevice", "classifm3d_1_1IFMNetworkDevice.html", "classifm3d_1_1IFMNetworkDevice" ],
       [ "LegacyDevice", "classifm3d_1_1LegacyDevice.html", "classifm3d_1_1LegacyDevice" ],
+      [ "O3C", "classifm3d_1_1O3C.html", "classifm3d_1_1O3C" ],
       [ "O3D", "classifm3d_1_1O3D.html", "classifm3d_1_1O3D" ],
       [ "PortInfo", "structifm3d_1_1PortInfo.html", "structifm3d_1_1PortInfo" ],
       [ "O3R", "classifm3d_1_1O3R.html", "classifm3d_1_1O3R" ],

@@ -10,7 +10,9 @@ var hierarchy =
         [ "ifm3d::O3D", "classifm3d_1_1O3D.html", null ],
         [ "ifm3d::O3X", "classifm3d_1_1O3X.html", null ]
       ] ],
-      [ "ifm3d::O3R", "classifm3d_1_1O3R.html", null ]
+      [ "ifm3d::O3R", "classifm3d_1_1O3R.html", [
+        [ "ifm3d::O3C", "classifm3d_1_1O3C.html", null ]
+      ] ]
     ] ],
     [ "ifm3d::DistanceImageInfo", "classifm3d_1_1DistanceImageInfo.html", null ],
     [ "std::exception", null, [

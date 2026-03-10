@@ -9,7 +9,8 @@ var classifm3d_1_1Device =
       [ "UNKNOWN", "classifm3d_1_1Device.html#a36e11371db2e46f64e8d06c69964c3d7a696b031073e74bf2cb98e5ef201d4aa3", null ],
       [ "O3D", "classifm3d_1_1Device.html#a36e11371db2e46f64e8d06c69964c3d7ad02c4788b1d3d3ea786f749ae160145f", null ],
       [ "O3X", "classifm3d_1_1Device.html#a36e11371db2e46f64e8d06c69964c3d7abbe120e3c29c5bf25f8aa1a3e50e1b5f", null ],
-      [ "O3R", "classifm3d_1_1Device.html#a36e11371db2e46f64e8d06c69964c3d7a68223c0506894e1dba21e99a8246cd69", null ]
+      [ "O3R", "classifm3d_1_1Device.html#a36e11371db2e46f64e8d06c69964c3d7a68223c0506894e1dba21e99a8246cd69", null ],
+      [ "O3C", "classifm3d_1_1Device.html#a36e11371db2e46f64e8d06c69964c3d7ac64058c60d5d57ba88aad98dc871c253", null ]
     ] ],
     [ "ImportFlags", "classifm3d_1_1Device.html#a06d288514d9e8f6601f65624b38928c8", [
       [ "GLOBAL", "classifm3d_1_1Device.html#a06d288514d9e8f6601f65624b38928c8a6eecfba72d12922ee1dead07a0ef3334", null ],

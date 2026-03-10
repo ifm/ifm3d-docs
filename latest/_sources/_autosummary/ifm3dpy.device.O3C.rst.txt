@@ -1,0 +1,62 @@
+ifm3dpy.device.O3C
+==================
+
+.. currentmodule:: ifm3dpy.device
+
+.. autoclass:: O3C
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~O3C.__init__
+      ~O3C._pybind11_conduit_v1_
+      ~O3C.am_i
+      ~O3C.check_minimum_firmware_version
+      ~O3C.device_discovery
+      ~O3C.device_parameter
+      ~O3C.device_type
+      ~O3C.factory_reset
+      ~O3C.firmware_version
+      ~O3C.force_trigger
+      ~O3C.from_json
+      ~O3C.get
+      ~O3C.get_diagnostic
+      ~O3C.get_diagnostic_filter_schema
+      ~O3C.get_diagnostic_filtered
+      ~O3C.get_init
+      ~O3C.get_schema
+      ~O3C.port
+      ~O3C.ports
+      ~O3C.reboot
+      ~O3C.reboot_to_recovery
+      ~O3C.remove
+      ~O3C.reset
+      ~O3C.resolve_config
+      ~O3C.save_init
+      ~O3C.sealed_box
+      ~O3C.set
+      ~O3C.set_temp_ip_address
+      ~O3C.to_json
+      ~O3C.trace_logs
+      ~O3C.who_am_i
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~O3C.ip
+      ~O3C.xmlrpc_port
+   
+   
