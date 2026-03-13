@@ -1,5 +1,8 @@
 var annotated_dup =
 [
+    [ "fmt", null, [
+      [ "formatter< ifm3d::SemVer >", "structfmt_1_1formatter_3_01ifm3d_1_1SemVer_01_4.html", "structfmt_1_1formatter_3_01ifm3d_1_1SemVer_01_4" ]
+    ] ],
     [ "ifm3d", null, [
       [ "calibration", null, [
         [ "ExtrinsicOpticToUser", "structifm3d_1_1calibration_1_1ExtrinsicOpticToUser.html", "structifm3d_1_1calibration_1_1ExtrinsicOpticToUser" ],

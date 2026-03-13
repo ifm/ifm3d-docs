@@ -18,6 +18,7 @@ ifm3dpy.device.IFMNetworkDevice
    
       ~IFMNetworkDevice.__init__
       ~IFMNetworkDevice._pybind11_conduit_v1_
+      ~IFMNetworkDevice.has_flag
    
    
 
@@ -30,7 +31,7 @@ ifm3dpy.device.IFMNetworkDevice
       ~IFMNetworkDevice.__doc__
       ~IFMNetworkDevice.device_id
       ~IFMNetworkDevice.device_name
-      ~IFMNetworkDevice.flag
+      ~IFMNetworkDevice.flags
       ~IFMNetworkDevice.found_via
       ~IFMNetworkDevice.gateway
       ~IFMNetworkDevice.host_name

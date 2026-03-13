@@ -19,6 +19,9 @@ var hierarchy =
       [ "ifm3d::Error", "classifm3d_1_1Error.html", null ]
     ] ],
     [ "ifm3d::calibration::ExtrinsicOpticToUser", "structifm3d_1_1calibration_1_1ExtrinsicOpticToUser.html", null ],
+    [ "fmt::formatter", null, [
+      [ "fmt::formatter< ifm3d::SemVer >", "structfmt_1_1formatter_3_01ifm3d_1_1SemVer_01_4.html", null ]
+    ] ],
     [ "ifm3d::Frame", "classifm3d_1_1Frame.html", null ],
     [ "ifm3d::FrameGrabber", "classifm3d_1_1FrameGrabber.html", null ],
     [ "ifm3d::IFMNetworkDevice", "classifm3d_1_1IFMNetworkDevice.html", null ],
