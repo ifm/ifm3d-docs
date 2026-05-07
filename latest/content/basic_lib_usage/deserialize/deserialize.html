@@ -210,123 +210,123 @@
     <span class="n">main</span><span class="p">(</span><span class="n">IP</span><span class="o">=</span><span class="n">IP</span><span class="p">)</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-0-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
-<span class="cm"> * Copyright 2024-present ifm electronic, gmbh</span>
-<span class="cm"> * SPDX-License-Identifier: Apache-2.0</span>
-<span class="cm"> */</span>
+</div><div aria-labelledby="tab-0-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/*
+ * Copyright 2024-present ifm electronic, gmbh
+ * SPDX-License-Identifier: Apache-2.0
+ */
 
-<span class="c1">// This examples shows how to use the deserializer module</span>
-<span class="c1">// to extract data from the TOFInfoV4 buffer.</span>
+// This examples shows how to use the deserializer module
+// to extract data from the TOFInfoV4 buffer.
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;chrono&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/deserialize.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/deserialize/struct_tof_info_v4.hpp&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/device/o3r.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifm3d/fg.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ostream&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;thread&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;typeinfo&gt;</span>
-<span class="c1">// Namespace used for writing time &quot;3s&quot;</span>
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">chrono_literals</span><span class="p">;</span>
-<span class="c1">// Namespace used for json pointers</span>
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">ifm3d</span><span class="o">::</span><span class="nn">literals</span><span class="p">;</span>
+#include &lt;chrono&gt;
+#include &lt;ifm3d/deserialize.h&gt;
+#include &lt;ifm3d/deserialize/struct_tof_info_v4.hpp&gt;
+#include &lt;ifm3d/device/o3r.h&gt;
+#include &lt;ifm3d/fg.h&gt;
+#include &lt;iostream&gt;
+#include &lt;ostream&gt;
+#include &lt;thread&gt;
+#include &lt;typeinfo&gt;
+// Namespace used for writing time &quot;3s&quot;
+using namespace std::chrono_literals;
+// Namespace used for json pointers
+using namespace ifm3d::literals;
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="c1">//////////////////////////</span>
-<span class="w">  </span><span class="c1">// Create the O3R object</span>
-<span class="w">  </span><span class="c1">//////////////////////////</span>
-<span class="w">  </span><span class="c1">// Get the IP from the environment if defined</span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">IP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">getenv</span><span class="p">(</span><span class="s">&quot;IFM3D_IP&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">getenv</span><span class="p">(</span><span class="s">&quot;IFM3D_IP&quot;</span><span class="p">)</span>
-<span class="w">                                           </span><span class="o">:</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">DEFAULT_IP</span><span class="p">.</span><span class="n">c_str</span><span class="p">();</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">clog</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;IP: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">IP</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+int main() {
+  //////////////////////////
+  // Create the O3R object
+  //////////////////////////
+  // Get the IP from the environment if defined
+  const char *IP = std::getenv(&quot;IFM3D_IP&quot;) ? std::getenv(&quot;IFM3D_IP&quot;)
+                                           : ifm3d::DEFAULT_IP.c_str();
+  std::clog &lt;&lt; &quot;IP: &quot; &lt;&lt; IP &lt;&lt; std::endl;
 
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">o3r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">O3R</span><span class="o">&gt;</span><span class="p">(</span><span class="n">IP</span><span class="p">);</span>
+  auto o3r = std::make_shared&lt;ifm3d::O3R&gt;(IP);
 
-<span class="w">  </span><span class="c1">// Get the current configuration of the camera in JSON format</span>
-<span class="w">  </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">json</span><span class="w"> </span><span class="n">conf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">o3r</span><span class="o">-&gt;</span><span class="n">Get</span><span class="p">();</span>
+  // Get the current configuration of the camera in JSON format
+  ifm3d::json conf = o3r-&gt;Get();
 
-<span class="w">  </span><span class="c1">//////////////////////////</span>
-<span class="w">  </span><span class="c1">// Select the first available</span>
-<span class="w">  </span><span class="c1">// 3D port from the configuration</span>
-<span class="w">  </span><span class="c1">//////////////////////////</span>
-<span class="w">  </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">pcic_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">port_3d</span><span class="p">;</span>
+  //////////////////////////
+  // Select the first available
+  // 3D port from the configuration
+  //////////////////////////
+  uint16_t pcic_port = 0;
+  std::string port_3d;
 
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">port</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">o3r</span><span class="o">-&gt;</span><span class="n">Ports</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">port</span><span class="p">.</span><span class="n">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;3D&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Using first available 3D port: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">port</span><span class="p">.</span><span class="n">port</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">      </span><span class="n">port_3d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">port</span><span class="p">.</span><span class="n">port</span><span class="p">;</span>
-<span class="w">      </span><span class="n">pcic_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">port</span><span class="p">.</span><span class="n">pcic_port</span><span class="p">;</span>
-<span class="w">      </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
+  for (const auto &amp;port : o3r-&gt;Ports()) {
+    if (port.type == &quot;3D&quot;) {
+      std::cout &lt;&lt; &quot;Using first available 3D port: &quot; &lt;&lt; port.port &lt;&lt; std::endl;
+      port_3d = port.port;
+      pcic_port = port.pcic_port;
+      break;
+    }
+  }
 
-<span class="w">  </span><span class="c1">/////////////////////////////////////////////////////////</span>
-<span class="w">  </span><span class="c1">// Alternatively, manually pick the port corresponding</span>
-<span class="w">  </span><span class="c1">// to your 2D camera (uncomment the line below and comment</span>
-<span class="w">  </span><span class="c1">// the block above)</span>
-<span class="w">  </span><span class="c1">/////////////////////////////////////////////////////////</span>
-<span class="w">  </span><span class="c1">// std::string port_nb = &quot;port0&quot;;</span>
-<span class="w">  </span><span class="c1">// if (o3r-&gt;Port(port_nb).type != &quot;3D&quot;) {</span>
-<span class="w">  </span><span class="c1">//   std::cerr &lt;&lt; &quot;Please provide a 3D port number.&quot; &lt;&lt; std::endl;</span>
-<span class="w">  </span><span class="c1">//   return -1;</span>
-<span class="w">  </span><span class="c1">// }</span>
-<span class="w">  </span><span class="c1">// uint16_t pcic_port = o3r-&gt;Port(port_nb).pcic_port;</span>
-<span class="w">  </span><span class="c1">// std::cout &lt;&lt; &quot;Using 3D port: &quot; &lt;&lt; port_nb &lt;&lt; std::endl;</span>
+  /////////////////////////////////////////////////////////
+  // Alternatively, manually pick the port corresponding
+  // to your 2D camera (uncomment the line below and comment
+  // the block above)
+  /////////////////////////////////////////////////////////
+  // std::string port_nb = &quot;port0&quot;;
+  // if (o3r-&gt;Port(port_nb).type != &quot;3D&quot;) {
+  //   std::cerr &lt;&lt; &quot;Please provide a 3D port number.&quot; &lt;&lt; std::endl;
+  //   return -1;
+  // }
+  // uint16_t pcic_port = o3r-&gt;Port(port_nb).pcic_port;
+  // std::cout &lt;&lt; &quot;Using 3D port: &quot; &lt;&lt; port_nb &lt;&lt; std::endl;
 
-<span class="w">  </span><span class="c1">//////////////////////////////////////////////////</span>
-<span class="w">  </span><span class="c1">// Verify that a correct port number was provided</span>
-<span class="w">  </span><span class="c1">// and create the framegrabber object</span>
-<span class="w">  </span><span class="c1">//////////////////////////////////////////////////</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pcic_port</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;No 3D port found in the configuration,&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
+  //////////////////////////////////////////////////
+  // Verify that a correct port number was provided
+  // and create the framegrabber object
+  //////////////////////////////////////////////////
+  if (pcic_port == 0) {
+    std::cerr &lt;&lt; &quot;No 3D port found in the configuration,&quot; &lt;&lt; std::endl;
+    return -1;
+  }
 
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">conf</span><span class="p">[</span><span class="s">&quot;ports&quot;</span><span class="p">][</span><span class="n">port_3d</span><span class="p">][</span><span class="s">&quot;state&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&quot;RUN&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Port&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">port_3d</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;is in &quot;</span>
-<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">conf</span><span class="p">[</span><span class="s">&quot;ports&quot;</span><span class="p">][</span><span class="n">port_3d</span><span class="p">][</span><span class="s">&quot;state&quot;</span><span class="p">]</span>
-<span class="w">              </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; state. Please set the port state to RUN&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
+  if (conf[&quot;ports&quot;][port_3d][&quot;state&quot;] != &quot;RUN&quot;) {
+    std::cerr &lt;&lt; &quot;Port&quot; &lt;&lt; port_3d &lt;&lt; &quot;is in &quot;
+              &lt;&lt; conf[&quot;ports&quot;][port_3d][&quot;state&quot;]
+              &lt;&lt; &quot; state. Please set the port state to RUN&quot; &lt;&lt; std::endl;
+    return -1;
+  }
 
-<span class="w">  </span><span class="c1">////////////////////////////</span>
-<span class="w">  </span><span class="c1">// Create the FrameGrabber object</span>
-<span class="w">  </span><span class="c1">////////////////////////////</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">fg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">FrameGrabber</span><span class="o">&gt;</span><span class="p">(</span><span class="n">o3r</span><span class="p">,</span><span class="w"> </span><span class="n">pcic_port</span><span class="p">);</span>
+  ////////////////////////////
+  // Create the FrameGrabber object
+  ////////////////////////////
+  auto fg = std::make_shared&lt;ifm3d::FrameGrabber&gt;(o3r, pcic_port);
 
-<span class="w">  </span><span class="c1">// Define which buffer to retrieve and start the data stream</span>
-<span class="w">  </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Start</span><span class="p">({</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">TOF_INFO</span><span class="p">});</span>
+  // Define which buffer to retrieve and start the data stream
+  fg-&gt;Start({ifm3d::buffer_id::TOF_INFO});
 
-<span class="w">  </span><span class="c1">//////////////////////////</span>
-<span class="w">  </span><span class="c1">// Receive a frame:</span>
-<span class="w">  </span><span class="c1">//////////////////////////</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">future</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">WaitForFrame</span><span class="p">();</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">future</span><span class="p">.</span><span class="n">wait_for</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span><span class="p">(</span><span class="mi">1000</span><span class="p">))</span><span class="w"> </span><span class="o">!=</span>
-<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">future_status</span><span class="o">::</span><span class="n">ready</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Timeout waiting for camera!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">frame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">future</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
-<span class="w">  </span><span class="n">fg</span><span class="o">-&gt;</span><span class="n">Stop</span><span class="p">();</span>
+  //////////////////////////
+  // Receive a frame:
+  //////////////////////////
+  auto future = fg-&gt;WaitForFrame();
+  if (future.wait_for(std::chrono::milliseconds(1000)) !=
+      std::future_status::ready) {
+    std::cerr &lt;&lt; &quot;Timeout waiting for camera!&quot; &lt;&lt; std::endl;
+    return -1;
+  }
+  auto frame = future.get();
+  fg-&gt;Stop();
 
-<span class="w">  </span><span class="c1">//////////////////////////</span>
-<span class="w">  </span><span class="c1">// Extract data from the buffer</span>
-<span class="w">  </span><span class="c1">// Using the deserializer module</span>
-<span class="w">  </span><span class="c1">//////////////////////////</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">tof_info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ifm3d</span><span class="o">::</span><span class="n">TOFInfoV4</span><span class="o">::</span><span class="n">Deserialize</span><span class="p">(</span>
-<span class="w">      </span><span class="n">frame</span><span class="o">-&gt;</span><span class="n">GetBuffer</span><span class="p">(</span><span class="n">ifm3d</span><span class="o">::</span><span class="n">buffer_id</span><span class="o">::</span><span class="n">TOF_INFO</span><span class="p">));</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Sample of data available in the TOFInfoV4 buffer:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Current minimum measurement range:&quot;</span>
-<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">tof_info</span><span class="p">.</span><span class="n">measurement_range_min</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;m&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Current maximum measurement range:&quot;</span>
-<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">tof_info</span><span class="p">.</span><span class="n">measurement_range_max</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;m&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Temperature of the illumination module:&quot;</span>
-<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">tof_info</span><span class="p">.</span><span class="n">illu_temperature</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;°C&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+  //////////////////////////
+  // Extract data from the buffer
+  // Using the deserializer module
+  //////////////////////////
+  auto tof_info = ifm3d::TOFInfoV4::Deserialize(
+      frame-&gt;GetBuffer(ifm3d::buffer_id::TOF_INFO));
+  std::cout &lt;&lt; &quot;Sample of data available in the TOFInfoV4 buffer:&quot; &lt;&lt; std::endl;
+  std::cout &lt;&lt; &quot;Current minimum measurement range:&quot;
+            &lt;&lt; tof_info.measurement_range_min &lt;&lt; &quot;m&quot; &lt;&lt; std::endl;
+  std::cout &lt;&lt; &quot;Current maximum measurement range:&quot;
+            &lt;&lt; tof_info.measurement_range_max &lt;&lt; &quot;m&quot; &lt;&lt; std::endl;
+  std::cout &lt;&lt; &quot;Temperature of the illumination module:&quot;
+            &lt;&lt; tof_info.illu_temperature &lt;&lt; &quot;°C&quot; &lt;&lt; std::endl;
 
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+  return 0;
+}
 </pre></div>
 </div>
 </div></div>
