@@ -27,12 +27,15 @@ var NAVTREE =
   [ "ifm3d", "index.html", [
     [ "Python API", "../python_api.html", null ],
     [ "Modules", "modules.html", "modules" ],
+    [ "Namespaces", "namespaces.html", [
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
         [ "Typedefs", "functions_type.html", null ],
@@ -48,8 +51,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "../python_api.html",
-"classifm3d_1_1LegacyDevice.html#a91de1a198af94a4d83d43951c7696a59",
-"classifm3d_1_1TOFInfoV3.html#aec2a8949cf6987a48aad2547f1abe653"
+"classifm3d_1_1LegacyDevice.html#a302dc4111ae1adc57d40e121957c0183",
+"classifm3d_1_1RtspClient.html#a3bea8be96b0109323099390c21397297af5ef036b4d8b630721e51fe23489fbc9",
+"distance__image__info_8h.html#aaaf86f934f3da0623789702f85102eee",
+"structifm3d_1_1Buffer_1_1Iterator.html#adf9a9358b475317bd816d7b47a0f5cd1"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

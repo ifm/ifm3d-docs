@@ -30,6 +30,9 @@
       PCICCommand
       Parameter
       PortInfo
+      RtspControlInfo
+      RtspInfo
+      RtspMediaEndpoint
       SemVer
       SetTemporaryApplicationParameter
    

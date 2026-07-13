@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ifm3dpy.device.PortInfo &mdash; ifm3d v2.0.2 documentation</title>
+  <title>ifm3dpy.device.PortInfo &mdash; ifm3d v2.0.3 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -22,7 +22,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ifm3dpy.device.SemVer" href="ifm3dpy.device.SemVer.html" />
+    <link rel="next" title="ifm3dpy.device.RtspControlInfo" href="ifm3dpy.device.RtspControlInfo.html" />
     <link rel="prev" title="ifm3dpy.device.Parameter" href="ifm3dpy.device.Parameter.html" /> 
 </head>
 
@@ -34,7 +34,7 @@
             <a href="../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v2.0.2
+                v2.0.3
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -65,12 +65,16 @@
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.PCICCommand.html">ifm3dpy.device.PCICCommand</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.Parameter.html">ifm3dpy.device.Parameter</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">ifm3dpy.device.PortInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.RtspControlInfo.html">ifm3dpy.device.RtspControlInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.RtspInfo.html">ifm3dpy.device.RtspInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.RtspMediaEndpoint.html">ifm3dpy.device.RtspMediaEndpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.SemVer.html">ifm3dpy.device.SemVer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.SetTemporaryApplicationParameter.html">ifm3dpy.device.SetTemporaryApplicationParameter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.Error.html">ifm3dpy.device.Error</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.framegrabber.html">ifm3dpy.framegrabber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.rtsp.html">ifm3dpy.rtsp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.swupdater.html">ifm3dpy.swupdater</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.deserialize.html">ifm3dpy.deserialize</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.logging.html">ifm3dpy.logging</a></li>
@@ -148,7 +152,10 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.PortInfo.port" title="ifm3dpy.device.PortInfo.port"><code class="xref py py-obj docutils literal notranslate"><span class="pre">port</span></code></a></p></td>
 <td><p>The name of the port.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.PortInfo.type" title="ifm3dpy.device.PortInfo.type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.PortInfo.rtsp" title="ifm3dpy.device.PortInfo.rtsp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rtsp</span></code></a></p></td>
+<td><p>RTSP streaming information, or None when the port does not advertise it.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.PortInfo.type" title="ifm3dpy.device.PortInfo.type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></a></p></td>
 <td><p>The type of the conntected sensor.</p></td>
 </tr>
 </tbody>
@@ -163,6 +170,12 @@
 <dt class="sig sig-object py" id="ifm3dpy.device.PortInfo.port">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">port</span></span><a class="headerlink" href="#ifm3dpy.device.PortInfo.port" title="Permalink to this definition"></a></dt>
 <dd><p>The name of the port.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.device.PortInfo.rtsp">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rtsp</span></span><a class="headerlink" href="#ifm3dpy.device.PortInfo.rtsp" title="Permalink to this definition"></a></dt>
+<dd><p>RTSP streaming information, or None when the port does not advertise it.</p>
 </dd></dl>
 
 <dl class="py property">

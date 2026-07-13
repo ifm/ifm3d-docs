@@ -1,7 +1,25 @@
 var searchData=
 [
-  ['timestamps_373',['TimeStamps',['../classifm3d_1_1Frame.html#af6501c61f1d9b47003cbac1119477e6e',1,'ifm3d::Frame']]],
-  ['tojson_374',['ToJSON',['../classifm3d_1_1Device.html#ae28a22aa0cdc1ec1365b165f053570a4',1,'ifm3d::Device::ToJSON()'],['../classifm3d_1_1LegacyDevice.html#a745e7ce575f78fb4940e910ed588ce2c',1,'ifm3d::LegacyDevice::ToJSON()'],['../classifm3d_1_1O3R.html#a9e9ae86629b8119af831aceaaa1c786c',1,'ifm3d::O3R::ToJSON()']]],
-  ['tojsonstr_375',['ToJSONStr',['../classifm3d_1_1Device.html#ae6a009493ff158fc3f18d86544aedad8',1,'ifm3d::Device']]],
-  ['tracelogs_376',['TraceLogs',['../classifm3d_1_1Device.html#a649d525094c8e266bc84decc4618f26d',1,'ifm3d::Device']]]
+  ['saveinit_442',['SaveInit',['../classifm3d_1_1O3R.html#a314f79eb3f3d0fffe469fb276376cf91',1,'ifm3d::O3R']]],
+  ['selecteddecodername_443',['SelectedDecoderName',['../classifm3d_1_1DecoderManager.html#a9e39bb397b929e8f0d244e8ad52fb353',1,'ifm3d::DecoderManager']]],
+  ['sendcommand_444',['SendCommand',['../classifm3d_1_1FrameGrabber.html#af62881968b3043d5e376853f37bf0a76',1,'ifm3d::FrameGrabber']]],
+  ['sendpacket_445',['SendPacket',['../classifm3d_1_1rtsp_1_1VideoDecoder.html#a84ffa98adeaf8faaebd00934e6d4432a',1,'ifm3d::rtsp::VideoDecoder']]],
+  ['serializedata_446',['SerializeData',['../structifm3d_1_1O3R_1_1SetTemporaryApplicationParameter.html#a7fa5d8fba38aa16a209bfffcf9523ed6',1,'ifm3d::O3R::SetTemporaryApplicationParameter::SerializeData()'],['../classifm3d_1_1PCICCommand.html#a75b907a2da41c9419739542ff2c1c686',1,'ifm3d::PCICCommand::SerializeData()']]],
+  ['sessionid_447',['SessionID',['../classifm3d_1_1LegacyDevice.html#adff53f585a25f92377c8b5afdc5b2265',1,'ifm3d::LegacyDevice']]],
+  ['set_448',['Set',['../classifm3d_1_1O3R.html#a0952daae6643332cbdd48d7c8d282e75',1,'ifm3d::O3R']]],
+  ['setcurrenttime_449',['SetCurrentTime',['../classifm3d_1_1LegacyDevice.html#a64fb88f6d7246f1920dd8589f042d153',1,'ifm3d::LegacyDevice']]],
+  ['seterrorcallback_450',['SetErrorCallback',['../classifm3d_1_1PCICClient.html#a6e003c59cae62678410aadeb06967ee7',1,'ifm3d::PCICClient']]],
+  ['setmasking_451',['SetMasking',['../classifm3d_1_1FrameGrabber.html#abdf589eba265eba196e215cb9a7aa65f',1,'ifm3d::FrameGrabber']]],
+  ['setnotificationcallback_452',['SetNotificationCallback',['../classifm3d_1_1PCICClient.html#a600017cd6a147eab52e8422e8cf82788',1,'ifm3d::PCICClient']]],
+  ['setorganizer_453',['SetOrganizer',['../classifm3d_1_1FrameGrabber.html#ad9b7752f418e4f937e31808b4c20c226',1,'ifm3d::FrameGrabber']]],
+  ['setpassword_454',['SetPassword',['../classifm3d_1_1LegacyDevice.html#a35d5e59e0696cd02d795544990126928',1,'ifm3d::LegacyDevice']]],
+  ['settempipaddress_455',['SetTempIPAddress',['../classifm3d_1_1Device.html#a75b740293bb02d60d7685fc3d0871ae2',1,'ifm3d::Device']]],
+  ['settemporaryapplicationparameters_456',['SetTemporaryApplicationParameters',['../classifm3d_1_1LegacyDevice.html#a25e6db8d8361111d22345885d8cdbcee',1,'ifm3d::LegacyDevice']]],
+  ['size_457',['Size',['../classifm3d_1_1Buffer.html#aee43d2c438000f8fe4925e25566be23a',1,'ifm3d::Buffer::Size()'],['../structifm3d_1_1NalUnit.html#aac1f0ab26d7249c6d3a2e3be9070e9ff',1,'ifm3d::NalUnit::Size()']]],
+  ['start_458',['Start',['../classifm3d_1_1FrameGrabber.html#a1c4942a1a0c5aedb6430b621fa9a3446',1,'ifm3d::FrameGrabber::Start()'],['../classifm3d_1_1RtspClient.html#a3f196a2198e6d2d913788abb374d6f86',1,'ifm3d::RtspClient::Start()']]],
+  ['stop_459',['Stop',['../classifm3d_1_1FrameGrabber.html#a6a12c26b81bd4cd01291f649ac7ce844',1,'ifm3d::FrameGrabber::Stop()'],['../classifm3d_1_1RtspClient.html#ab64c96fbf428d6b5d1af5608ac004db4',1,'ifm3d::RtspClient::Stop()'],['../classifm3d_1_1PCICClient.html#ae76ab7d6821e6c46b65f788045385de4',1,'ifm3d::PCICClient::Stop()']]],
+  ['supportscodec_460',['SupportsCodec',['../classifm3d_1_1rtsp_1_1VideoDecoderFactory.html#a0eb008b825047d17b31af44cace761f1',1,'ifm3d::rtsp::VideoDecoderFactory']]],
+  ['swtrigger_461',['SWTrigger',['../classifm3d_1_1FrameGrabber.html#a0bcaaf3a21897fadbcd4fe267aa139d9',1,'ifm3d::FrameGrabber']]],
+  ['swupdater_462',['SWUpdater',['../classifm3d_1_1SWUpdater.html#aa829f7665b8e0e07d6688f5ee5f76be2',1,'ifm3d::SWUpdater']]],
+  ['swupdateversion_463',['SwUpdateVersion',['../classifm3d_1_1Device.html#af566c3d0f173d16a4d40c7885eae09a5',1,'ifm3d::Device::SwUpdateVersion()'],['../classifm3d_1_1O3C.html#a3c64bc90fcd37cbd8dd45e4063797592',1,'ifm3d::O3C::SwUpdateVersion()'],['../classifm3d_1_1O3R.html#abc0cf322eb4a1c12363a192a2f1a3729',1,'ifm3d::O3R::SwUpdateVersion()']]]
 ];

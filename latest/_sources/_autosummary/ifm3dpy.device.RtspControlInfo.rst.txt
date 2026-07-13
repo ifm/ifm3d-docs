@@ -1,0 +1,32 @@
+ifm3dpy.device.RtspControlInfo
+==============================
+
+.. currentmodule:: ifm3dpy.device
+
+.. autoclass:: RtspControlInfo
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RtspControlInfo.__init__
+      ~RtspControlInfo._pybind11_conduit_v1_
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RtspControlInfo.tcp_port
+   
+   

@@ -1,0 +1,27 @@
+ifm3dpy.rtsp.DecoderManager
+===========================
+
+.. currentmodule:: ifm3dpy.rtsp
+
+.. autoclass:: DecoderManager
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DecoderManager.__init__
+      ~DecoderManager._pybind11_conduit_v1_
+      ~DecoderManager.discover_decoders
+   
+   
+
+   
+   
+   

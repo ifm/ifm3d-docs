@@ -29,6 +29,7 @@ ifm3dpy.device.PortInfo
    
       ~PortInfo.pcic_port
       ~PortInfo.port
+      ~PortInfo.rtsp
       ~PortInfo.type
    
    

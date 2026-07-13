@@ -1,0 +1,32 @@
+ifm3dpy.device.RtspMediaEndpoint
+================================
+
+.. currentmodule:: ifm3dpy.device
+
+.. autoclass:: RtspMediaEndpoint
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RtspMediaEndpoint.__init__
+      ~RtspMediaEndpoint._pybind11_conduit_v1_
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RtspMediaEndpoint.path
+   
+   

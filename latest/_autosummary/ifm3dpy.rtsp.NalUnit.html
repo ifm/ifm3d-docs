@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ifm3dpy.rtsp.NalUnit &mdash; ifm3d v2.0.3 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ifm3dpy.rtsp.RtspClient" href="ifm3dpy.rtsp.RtspClient.html" />
+    <link rel="prev" title="ifm3dpy.rtsp.DecoderManager" href="ifm3dpy.rtsp.DecoderManager.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> ifm3d
+          </a>
+              <div class="version">
+                v2.0.3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../content/README.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/installation_instructions/index.html">Installation instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/migration_guide/index.html">Migration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/basic_lib_usage/index.html">Basic library usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/cmdline_overview.html">Command Line tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/manip_images/index.html">Manipulating images</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../python_api.html">Python API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.html">ifm3dpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.device.html">ifm3dpy.device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.framegrabber.html">ifm3dpy.framegrabber</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="ifm3dpy.rtsp.html">ifm3dpy.rtsp</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.rtsp.DecoderManager.html">ifm3dpy.rtsp.DecoderManager</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ifm3dpy.rtsp.NalUnit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.rtsp.RtspClient.html">ifm3dpy.rtsp.RtspClient</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.swupdater.html">ifm3dpy.swupdater</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.deserialize.html">ifm3dpy.deserialize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.logging.html">ifm3dpy.logging</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/annotated.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/examples_list.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/ChangeLog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://ifm3d.com">&lt;&lt;&lt; Back to O3R docs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ifm3d</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../python_api.html">Python API Reference</a></li>
+          <li class="breadcrumb-item"><a href="ifm3dpy.rtsp.html">ifm3dpy.rtsp</a></li>
+      <li class="breadcrumb-item active">ifm3dpy.rtsp.NalUnit</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_autosummary/ifm3dpy.rtsp.NalUnit.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ifm3dpy-rtsp-nalunit">
+<h1>ifm3dpy.rtsp.NalUnit<a class="headerlink" href="#ifm3dpy-rtsp-nalunit" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.NalUnit">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ifm3dpy.rtsp.</span></span><span class="sig-name descname"><span class="pre">NalUnit</span></span><a class="headerlink" href="#ifm3dpy.rtsp.NalUnit" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+<p>A single, fully reassembled H.264 NAL unit.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.NalUnit.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ifm3dpy.rtsp.NalUnit.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.NalUnit.__init__" title="ifm3dpy.rtsp.NalUnit.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(*args, **kwargs)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_pybind11_conduit_v1_</span></code></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.NalUnit.data" title="ifm3dpy.rtsp.NalUnit.data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code></a></p></td>
+<td><p>Raw NAL payload (NAL-header byte first, without an Annex-B start code).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.NalUnit.first_sequence_number" title="ifm3dpy.rtsp.NalUnit.first_sequence_number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">first_sequence_number</span></code></a></p></td>
+<td><p>RTP sequence number of the first source packet.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.NalUnit.is_idr" title="ifm3dpy.rtsp.NalUnit.is_idr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_idr</span></code></a></p></td>
+<td><p>True when this NAL unit is an IDR slice.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.NalUnit.last_sequence_number" title="ifm3dpy.rtsp.NalUnit.last_sequence_number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">last_sequence_number</span></code></a></p></td>
+<td><p>RTP sequence number of the last source packet.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.NalUnit.nal_ref_idc" title="ifm3dpy.rtsp.NalUnit.nal_ref_idc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nal_ref_idc</span></code></a></p></td>
+<td><p>nal_ref_idc field from the NAL header (0-3).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.NalUnit.nal_unit_type" title="ifm3dpy.rtsp.NalUnit.nal_unit_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nal_unit_type</span></code></a></p></td>
+<td><p>nal_unit_type field from the NAL header (1-31).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.NalUnit.pts_us" title="ifm3dpy.rtsp.NalUnit.pts_us"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pts_us</span></code></a></p></td>
+<td><p>Presentation timestamp, in microseconds.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.NalUnit.Type">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ifm3dpy.rtsp.NalUnit.Type" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<p>H.264 NAL unit type values (ITU-T H.264 Table 7-1).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.NalUnit.data">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#ifm3dpy.rtsp.NalUnit.data" title="Permalink to this definition"></a></dt>
+<dd><p>Raw NAL payload (NAL-header byte first, without an Annex-B start code).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.NalUnit.first_sequence_number">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">first_sequence_number</span></span><a class="headerlink" href="#ifm3dpy.rtsp.NalUnit.first_sequence_number" title="Permalink to this definition"></a></dt>
+<dd><p>RTP sequence number of the first source packet.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.NalUnit.is_idr">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_idr</span></span><a class="headerlink" href="#ifm3dpy.rtsp.NalUnit.is_idr" title="Permalink to this definition"></a></dt>
+<dd><p>True when this NAL unit is an IDR slice.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.NalUnit.last_sequence_number">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">last_sequence_number</span></span><a class="headerlink" href="#ifm3dpy.rtsp.NalUnit.last_sequence_number" title="Permalink to this definition"></a></dt>
+<dd><p>RTP sequence number of the last source packet.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.NalUnit.nal_ref_idc">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nal_ref_idc</span></span><a class="headerlink" href="#ifm3dpy.rtsp.NalUnit.nal_ref_idc" title="Permalink to this definition"></a></dt>
+<dd><p>nal_ref_idc field from the NAL header (0-3).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.NalUnit.nal_unit_type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nal_unit_type</span></span><a class="headerlink" href="#ifm3dpy.rtsp.NalUnit.nal_unit_type" title="Permalink to this definition"></a></dt>
+<dd><p>nal_unit_type field from the NAL header (1-31).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.NalUnit.pts_us">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pts_us</span></span><a class="headerlink" href="#ifm3dpy.rtsp.NalUnit.pts_us" title="Permalink to this definition"></a></dt>
+<dd><p>Presentation timestamp, in microseconds.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          
+<html>
+<head>
+ 
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, address, phone, icons" />
+ 
+	<title>Footer With Address And Links</title>
+	
+	
+ 
+</head>
+ 
+	<body>
+		
+		<footer class="footer-distributed">
+ 
+		<div class="footer-left">
+ 
+ 
+		<p class="footer-company-name">ifm robotics &copy; 2023</p>
+		</div>
+ 
+		<div class="footer-right">
+ 
+		<div class="footer-icons">
+			<a href="mailto:support.efector.object-ident@ifm.com" target="_blank"><i class="fa fa-envelope"></i></a>
+			<a href="https://github.com/ifm" target="_blank"><i class="fa fa-github"></i></a>
+ 
+		</div>
+ 
+		</div>
+ 
+		</footer>
+ 
+	</body>
+ 
+</html>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

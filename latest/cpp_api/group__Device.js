@@ -105,9 +105,21 @@ var group__Device =
       [ "TimeInfo", "classifm3d_1_1O3D.html#a6be5fcf41d466e864c406b91f0843b12", null ],
       [ "WhoAmI", "classifm3d_1_1O3D.html#a3b82627eece036f6a4778fe53ce30e1e", null ]
     ] ],
+    [ "RtspControlInfo", "structifm3d_1_1RtspControlInfo.html", [
+      [ "tcp_port", "structifm3d_1_1RtspControlInfo.html#afa585098df212afaa4ddd37bad258358", null ]
+    ] ],
+    [ "RtspMediaEndpoint", "structifm3d_1_1RtspMediaEndpoint.html", [
+      [ "path", "structifm3d_1_1RtspMediaEndpoint.html#a1c4ec3ad5b60cc413bce8a60787aaf04", null ]
+    ] ],
+    [ "RtspInfo", "structifm3d_1_1RtspInfo.html", [
+      [ "control", "structifm3d_1_1RtspInfo.html#af15164645a90211ea6d23171df5d0b0f", null ],
+      [ "media_endpoints", "structifm3d_1_1RtspInfo.html#a39e7036f0c3fa293f0616c5da2651bcb", null ],
+      [ "supported_transports", "structifm3d_1_1RtspInfo.html#afd770c89ea9d5bb459cde397122f74b2", null ]
+    ] ],
     [ "PortInfo", "structifm3d_1_1PortInfo.html", [
       [ "pcic_port", "structifm3d_1_1PortInfo.html#a808b5949b5123ee6c323bd5a6d6dfbdc", null ],
       [ "port", "structifm3d_1_1PortInfo.html#a4e34d717bb4c0dcbd1e79ef44046602b", null ],
+      [ "rtsp", "structifm3d_1_1PortInfo.html#a8aabf74c9241613cb832c489834f3647", null ],
       [ "type", "structifm3d_1_1PortInfo.html#a357ddb0a27196c294ec77118c0f961d2", null ]
     ] ],
     [ "O3R", "classifm3d_1_1O3R.html", [

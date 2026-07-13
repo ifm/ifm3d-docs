@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tof_5finfo_5fv4_5fsize_390',['TOF_INFO_V4_SIZE',['../classifm3d_1_1TOFInfoV4.html#afc62226714815ebf4544cbaba255dc9f',1,'ifm3d::TOFInfoV4']]]
+  ['extrinsic_5foptic_5fto_5fuser_482',['extrinsic_optic_to_user',['../structifm3d_1_1RgbInfo.html#aa6131788b2a586e3727b086a472056f1',1,'ifm3d::RgbInfo']]]
 ];

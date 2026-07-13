@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['reboot_347',['Reboot',['../classifm3d_1_1Device.html#a2eb12e0e2fe0c713c1c32ef6cbb98a0e',1,'ifm3d::Device::Reboot()'],['../classifm3d_1_1O3R.html#a5221b42873be3fffa9534c3bfed7ceae',1,'ifm3d::O3R::Reboot()']]],
-  ['reboottoproductive_348',['RebootToProductive',['../classifm3d_1_1SWUpdater.html#a5ed7d927b9ff35a6808394345bdced8e',1,'ifm3d::SWUpdater']]],
-  ['reboottorecovery_349',['RebootToRecovery',['../classifm3d_1_1O3R.html#a89352db3458439c9a60c4b0422923322',1,'ifm3d::O3R::RebootToRecovery()'],['../classifm3d_1_1SWUpdater.html#a1f56ac0283802c2c1ec9c94fa39d3437',1,'ifm3d::SWUpdater::RebootToRecovery()']]],
-  ['remove_350',['Remove',['../classifm3d_1_1O3R.html#a40b239d4735ef706882881e7db10b52e',1,'ifm3d::O3R']]],
-  ['requestsession_351',['RequestSession',['../classifm3d_1_1LegacyDevice.html#ad9b77b797052f7e41ef12dced1d579aa',1,'ifm3d::LegacyDevice']]],
-  ['reset_352',['Reset',['../classifm3d_1_1O3R.html#a07202d5fee154fd19c3170dbdc6a12a7',1,'ifm3d::O3R']]],
-  ['resolveconfig_353',['ResolveConfig',['../classifm3d_1_1O3R.html#a3a829eb053ef1ca8e14c3e14284f5aec',1,'ifm3d::O3R']]]
+  ['password_428',['Password',['../classifm3d_1_1LegacyDevice.html#a680389e40a79887778f8aaf3ece24a24',1,'ifm3d::LegacyDevice']]],
+  ['pcicclient_429',['PCICClient',['../classifm3d_1_1PCICClient.html#aae3533c6f4a9dadda2e630e5f6652bd5',1,'ifm3d::PCICClient']]],
+  ['port_430',['Port',['../classifm3d_1_1O3R.html#ace851644d8586ad20a68865f80860f89',1,'ifm3d::O3R']]],
+  ['ports_431',['Ports',['../classifm3d_1_1O3R.html#ab82367443890c0526f2da7c79147e6b5',1,'ifm3d::O3R']]],
+  ['ptr_432',['Ptr',['../classifm3d_1_1Buffer.html#a316c4df00f4080a8a5727c0b9993950a',1,'ifm3d::Buffer::Ptr(std::uint32_t row)'],['../classifm3d_1_1Buffer.html#a6f7ebcc95ac56ba4072e23352a281989',1,'ifm3d::Buffer::Ptr(std::uint32_t row) const'],['../classifm3d_1_1Buffer.html#ab21715ba92a700ea4e2480272b2d576b',1,'ifm3d::Buffer::Ptr(std::uint32_t row, std::uint32_t col)'],['../classifm3d_1_1Buffer.html#a88a41073a1a9b969341eb2c5e846d26b',1,'ifm3d::Buffer::Ptr(std::uint32_t row, std::uint32_t col) const'],['../classifm3d_1_1Buffer__.html#a352c004823157048249c379aa532c318',1,'ifm3d::Buffer_::Ptr(std::uint32_t row)'],['../classifm3d_1_1Buffer__.html#aa79bd23ed9290da23d128844cc27c9b6',1,'ifm3d::Buffer_::Ptr(std::uint32_t row, std::uint32_t col)']]]
 ];

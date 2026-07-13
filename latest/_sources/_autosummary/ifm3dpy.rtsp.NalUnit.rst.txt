@@ -1,0 +1,38 @@
+ifm3dpy.rtsp.NalUnit
+====================
+
+.. currentmodule:: ifm3dpy.rtsp
+
+.. autoclass:: NalUnit
+   :members:                                   
+   :show-inheritance:                           
+   :inherited-members:                          
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~NalUnit.__init__
+      ~NalUnit._pybind11_conduit_v1_
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~NalUnit.data
+      ~NalUnit.first_sequence_number
+      ~NalUnit.is_idr
+      ~NalUnit.last_sequence_number
+      ~NalUnit.nal_ref_idc
+      ~NalUnit.nal_unit_type
+      ~NalUnit.pts_us
+   
+   
