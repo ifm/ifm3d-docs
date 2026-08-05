@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('classifm3d_1_1RtspClient.html',''); in
 </div><!--header-->
 <div class="contents">
 
-<p>RTSP/1.0 client that streams H.264 video from an ifm device and, optionally, decodes it into <code><a class="el" href="classifm3d_1_1Buffer.html" title="The class Buffer represent a STL container to store data from the ifm devices in 2 dimension and supp...">ifm3d::Buffer</a></code> frames using a compiled-in video decoder.  
+<p>RTSP/1.0 client that streams H.264 video from an ifm device and, optionally, decodes it into <code><a class="el" href="classifm3d_1_1Frame.html" title="Represent a frame of data received from the the device.">ifm3d::Frame</a></code> instances using a compiled-in video decoder.  
  <a href="classifm3d_1_1RtspClient.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="rtsp__client_8h_source.html">ifm3d/rtsp/rtsp_client.h</a>&gt;</code></p>
@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('classifm3d_1_1RtspClient.html',''); in
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structifm3d_1_1RtspClient_1_1Config.html">Config</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration for an <code><a class="el" href="classifm3d_1_1RtspClient.html" title="RTSP/1.0 client that streams H.264 video from an ifm device and, optionally, decodes it into ifm3d::B...">RtspClient</a></code> instance.  <a href="structifm3d_1_1RtspClient_1_1Config.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration for an <code><a class="el" href="classifm3d_1_1RtspClient.html" title="RTSP/1.0 client that streams H.264 video from an ifm device and, optionally, decodes it into ifm3d::F...">RtspClient</a></code> instance.  <a href="structifm3d_1_1RtspClient_1_1Config.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -123,17 +123,15 @@ Public Types</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a37bc0b76c7cd1dd9d4705cd5ca3eba12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lifecycle state of the RTSP session. <br /></td></tr>
 <tr class="separator:a37bc0b76c7cd1dd9d4705cd5ca3eba12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37133bceae3e5085b0ac4dcd467e2d7d"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1RtspClient.html#a37133bceae3e5085b0ac4dcd467e2d7d">OutputFormat</a> : std::uint8_t { <a class="el" href="classifm3d_1_1RtspClient.html#a37133bceae3e5085b0ac4dcd467e2d7da889574aebacda6bfd3e534e2b49b8028">RGB</a> = 0
-, <a class="el" href="classifm3d_1_1RtspClient.html#a37133bceae3e5085b0ac4dcd467e2d7da7e1d7a172afeb2743e03365a92cfd7e1">YUV420</a> = 1
- }</td></tr>
-<tr class="memdesc:a37133bceae3e5085b0ac4dcd467e2d7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pixel layout of decoded frames delivered to <code>OnNewFrame</code>.  <a href="classifm3d_1_1RtspClient.html#a37133bceae3e5085b0ac4dcd467e2d7d">More...</a><br /></td></tr>
-<tr class="separator:a37133bceae3e5085b0ac4dcd467e2d7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9574293251ce529e8b6118e706b3b2f"><td class="memItemLeft" align="right" valign="top"><a id="aa9574293251ce529e8b6118e706b3b2f"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>Ptr</b> = std::shared_ptr&lt; <a class="el" href="classifm3d_1_1RtspClient.html">RtspClient</a> &gt;</td></tr>
 <tr class="separator:aa9574293251ce529e8b6118e706b3b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94477a2c2a6e6e254e149992e0b6d1bc"><td class="memItemLeft" align="right" valign="top"><a id="a94477a2c2a6e6e254e149992e0b6d1bc"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>NewFrameCallback</b> = std::function&lt; void(<a class="el" href="classifm3d_1_1Buffer.html">ifm3d::Buffer</a>)&gt;</td></tr>
-<tr class="separator:a94477a2c2a6e6e254e149992e0b6d1bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacd09bf1367c1e43d617b652daababc2"><td class="memItemLeft" align="right" valign="top"><a id="aacd09bf1367c1e43d617b652daababc2"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>BufferIdList</b> = std::vector&lt; <a class="el" href="group__FrameGrabber.html#gaca9d48fd13de3e0a7e7af60e518bfd35">ifm3d::buffer_id</a> &gt;</td></tr>
+<tr class="separator:aacd09bf1367c1e43d617b652daababc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab309926f1e508a6419309494eb7e969f"><td class="memItemLeft" align="right" valign="top"><a id="ab309926f1e508a6419309494eb7e969f"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>NewFrameCallback</b> = std::function&lt; void(ifm3d::Frame::Ptr)&gt;</td></tr>
+<tr class="separator:ab309926f1e508a6419309494eb7e969f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96c26d677dd7ec02ff98721ce3fdd489"><td class="memItemLeft" align="right" valign="top"><a id="a96c26d677dd7ec02ff98721ce3fdd489"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>NalUnitCallback</b> = std::function&lt; void(const <a class="el" href="structifm3d_1_1NalUnit.html">ifm3d::NalUnit</a> &amp;)&gt;</td></tr>
 <tr class="separator:a96c26d677dd7ec02ff98721ce3fdd489"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,9 +168,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a17fbed9f5acdb33297a4b21a4e078fda"><td class="memItemLeft" align="right" valign="top"><a id="a17fbed9f5acdb33297a4b21a4e078fda"></a>
 <a class="el" href="classifm3d_1_1RtspClient.html">RtspClient</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classifm3d_1_1RtspClient.html">RtspClient</a> &amp;&amp;) noexcept</td></tr>
 <tr class="separator:a17fbed9f5acdb33297a4b21a4e078fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f196a2198e6d2d913788abb374d6f86"><td class="memItemLeft" align="right" valign="top">std::shared_future&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1RtspClient.html#a3f196a2198e6d2d913788abb374d6f86">Start</a> ()</td></tr>
-<tr class="memdesc:a3f196a2198e6d2d913788abb374d6f86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs the RTSP handshake and starts streaming.  <a href="classifm3d_1_1RtspClient.html#a3f196a2198e6d2d913788abb374d6f86">More...</a><br /></td></tr>
-<tr class="separator:a3f196a2198e6d2d913788abb374d6f86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1706b6c51a9d6a09c69f4c98073461cb"><td class="memItemLeft" align="right" valign="top">std::shared_future&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1RtspClient.html#a1706b6c51a9d6a09c69f4c98073461cb">Start</a> (const BufferIdList &amp;buffers={})</td></tr>
+<tr class="memdesc:a1706b6c51a9d6a09c69f4c98073461cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs the RTSP handshake and starts streaming.  <a href="classifm3d_1_1RtspClient.html#a1706b6c51a9d6a09c69f4c98073461cb">More...</a><br /></td></tr>
+<tr class="separator:a1706b6c51a9d6a09c69f4c98073461cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab64c96fbf428d6b5d1af5608ac004db4"><td class="memItemLeft" align="right" valign="top">std::shared_future&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1RtspClient.html#ab64c96fbf428d6b5d1af5608ac004db4">Stop</a> ()</td></tr>
 <tr class="memdesc:ab64c96fbf428d6b5d1af5608ac004db4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends <code>TEARDOWN</code>, stops the worker thread and closes the socket.  <a href="classifm3d_1_1RtspClient.html#ab64c96fbf428d6b5d1af5608ac004db4">More...</a><br /></td></tr>
 <tr class="separator:ab64c96fbf428d6b5d1af5608ac004db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,8 +178,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa8e6a0415059431a1d3ba1009c3e3f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2641b236457816ebc52e9b73f712b6f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classifm3d_1_1RtspClient.html#a37bc0b76c7cd1dd9d4705cd5ca3eba12">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1RtspClient.html#a2641b236457816ebc52e9b73f712b6f0">GetState</a> () const</td></tr>
 <tr class="separator:a2641b236457816ebc52e9b73f712b6f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9198fcb2f2026ebd6629c174fc17788"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1RtspClient.html#aa9198fcb2f2026ebd6629c174fc17788">OnNewFrame</a> (NewFrameCallback callback=nullptr)</td></tr>
-<tr class="memdesc:aa9198fcb2f2026ebd6629c174fc17788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a callback invoked for each decoded frame.  <a href="classifm3d_1_1RtspClient.html#aa9198fcb2f2026ebd6629c174fc17788">More...</a><br /></td></tr>
+<tr class="memitem:aa9198fcb2f2026ebd6629c174fc17788"><td class="memItemLeft" align="right" valign="top"><a id="aa9198fcb2f2026ebd6629c174fc17788"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1RtspClient.html#aa9198fcb2f2026ebd6629c174fc17788">OnNewFrame</a> (NewFrameCallback callback=nullptr)</td></tr>
+<tr class="memdesc:aa9198fcb2f2026ebd6629c174fc17788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a callback invoked for each received frame. <br /></td></tr>
 <tr class="separator:aa9198fcb2f2026ebd6629c174fc17788"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a240fb3b714b6fd38e8025b418e4044d6"><td class="memItemLeft" align="right" valign="top"><a id="a240fb3b714b6fd38e8025b418e4044d6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1RtspClient.html#a240fb3b714b6fd38e8025b418e4044d6">OnNalUnit</a> (NalUnitCallback callback=nullptr)</td></tr>
@@ -197,41 +196,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a00d33507958ca0d94280f9255b402a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>RTSP/1.0 client that streams H.264 video from an ifm device and, optionally, decodes it into <code><a class="el" href="classifm3d_1_1Buffer.html" title="The class Buffer represent a STL container to store data from the ifm devices in 2 dimension and supp...">ifm3d::Buffer</a></code> frames using a compiled-in video decoder. </p>
+<div class="textblock"><p>RTSP/1.0 client that streams H.264 video from an ifm device and, optionally, decodes it into <code><a class="el" href="classifm3d_1_1Frame.html" title="Represent a frame of data received from the the device.">ifm3d::Frame</a></code> instances using a compiled-in video decoder. </p>
 <p>The client mirrors the threading model of <code><a class="el" href="classifm3d_1_1FrameGrabber.html" title="Implements a TCP FrameGrabber connected to the device passed to its ctor.">ifm3d::FrameGrabber</a></code>: it owns a single asio <code>io_context</code> running on a dedicated worker thread. All user-supplied callbacks are invoked on that thread, so callbacks must not block.</p>
-<p>Decoding is delegated to a <code>VideoDecoder</code> selected by the <code><a class="el" href="classifm3d_1_1DecoderManager.html" title="Lists and selects the video decoder implementations that are compiled into the RTSP module.">ifm3d::DecoderManager</a></code>; the core RTSP module never links against an H.264 decoder. When no decoder is available, or when the <code>"null"</code> decoder is selected via <code><a class="el" href="structifm3d_1_1RtspClient_1_1Config.html#a54b3ec7030dee83773f2655224931dfa" title="Optional decoder selection.">Config::decoder</a></code>, the client operates in NAL-only mode and only the <code>OnNalUnit</code> callback fires. </p>
+<p>Decoding is delegated to a <code>VideoDecoder</code> selected by the <code><a class="el" href="classifm3d_1_1DecoderManager.html" title="Lists and selects the video decoder implementations that are compiled into the RTSP module.">ifm3d::DecoderManager</a></code>; the core RTSP module never links against an H.264 decoder. The null decoder is selected automatically when no decoded image buffer is requested. </p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="a37133bceae3e5085b0ac4dcd467e2d7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37133bceae3e5085b0ac4dcd467e2d7d">&#9670;&nbsp;</a></span>OutputFormat</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="classifm3d_1_1RtspClient.html#a37133bceae3e5085b0ac4dcd467e2d7d">ifm3d::RtspClient::OutputFormat</a> : std::uint8_t</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Pixel layout of decoded frames delivered to <code>OnNewFrame</code>. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a37133bceae3e5085b0ac4dcd467e2d7da889574aebacda6bfd3e534e2b49b8028"></a>RGB&#160;</td><td class="fielddoc"><p>3-channel RGB. </p>
-<p>The decoded YUV420P frame is converted to a width x height x 3 <code><a class="el" href="classifm3d_1_1Buffer.html" title="The class Buffer represent a STL container to store data from the ifm devices in 2 dimension and supp...">ifm3d::Buffer</a></code> of 8-bit RGB. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a37133bceae3e5085b0ac4dcd467e2d7da7e1d7a172afeb2743e03365a92cfd7e1"></a>YUV420&#160;</td><td class="fielddoc"><p>Raw planar I420 (YUV420P): a single-channel <code><a class="el" href="classifm3d_1_1Buffer.html" title="The class Buffer represent a STL container to store data from the ifm devices in 2 dimension and supp...">ifm3d::Buffer</a></code> of width x (height * 3 / 2), with the full-resolution Y plane followed by the half-resolution U and V planes. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
 <a id="a3bea8be96b0109323099390c21397297"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3bea8be96b0109323099390c21397297">&#9670;&nbsp;</a></span>Transport</h2>
 
@@ -452,29 +420,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a id="aa9198fcb2f2026ebd6629c174fc17788"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9198fcb2f2026ebd6629c174fc17788">&#9670;&nbsp;</a></span>OnNewFrame()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ifm3d::RtspClient::OnNewFrame </td>
-          <td>(</td>
-          <td class="paramtype">NewFrameCallback&#160;</td>
-          <td class="paramname"><em>callback</em> = <code>nullptr</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Registers a callback invoked for each decoded frame. </p>
-<p>The <code><a class="el" href="classifm3d_1_1Buffer.html" title="The class Buffer represent a STL container to store data from the ifm devices in 2 dimension and supp...">Buffer</a></code> carries any RGB_INFO SEI metadata in its JSON metadata. </p>
-
-</div>
-</div>
-<a id="a3f196a2198e6d2d913788abb374d6f86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f196a2198e6d2d913788abb374d6f86">&#9670;&nbsp;</a></span>Start()</h2>
+<a id="a1706b6c51a9d6a09c69f4c98073461cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1706b6c51a9d6a09c69f4c98073461cb">&#9670;&nbsp;</a></span>Start()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -482,13 +429,20 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         <tr>
           <td class="memname">std::shared_future&lt;void&gt; ifm3d::RtspClient::Start </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const BufferIdList &amp;&#160;</td>
+          <td class="paramname"><em>buffers</em> = <code>{}</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Performs the RTSP handshake and starts streaming. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffers</td><td>buffer IDs to receive. Supported IDs are <code>COMPRESSED_H264_FRAME</code>, <code>RGB_IMAGE</code>, <code>YUV420_IMAGE</code> and <code>RGB_INFO</code></td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>a future that resolves once the stream is playing, or that holds an <code><a class="el" href="classifm3d_1_1Error.html" title="Exception wrapper for library and system errors encountered by the library.">ifm3d::Error</a></code> on failure. </dd></dl>
 
 </div>

@@ -1,18 +1,5 @@
 var group__RTSP =
 [
-    [ "RgbInfo", "structifm3d_1_1RgbInfo.html", [
-      [ "Intrinsic", "structifm3d_1_1RgbInfo_1_1Intrinsic.html", [
-        [ "model_id", "structifm3d_1_1RgbInfo_1_1Intrinsic.html#a284a24fccde24e51bd51258889d64d5f", null ],
-        [ "model_parameters", "structifm3d_1_1RgbInfo_1_1Intrinsic.html#ad444bb90f546f7d89ed2a93aaf472297", null ]
-      ] ],
-      [ "exposure_time", "structifm3d_1_1RgbInfo.html#a05ec9f81ea8fb98d8a28e73360414658", null ],
-      [ "extrinsic_optic_to_user", "structifm3d_1_1RgbInfo.html#aa6131788b2a586e3727b086a472056f1", null ],
-      [ "frame_counter", "structifm3d_1_1RgbInfo.html#a424c42d53dd4a98ff91e9128b2e44561", null ],
-      [ "intrinsic", "structifm3d_1_1RgbInfo.html#ae7f114f8a60586fdc69e01198948db8e", null ],
-      [ "inverse_intrinsic", "structifm3d_1_1RgbInfo.html#a0575c896133e2b697e227df8125d8e1b", null ],
-      [ "timestamp_ns", "structifm3d_1_1RgbInfo.html#a08c0f98d3e753346e26cbb35752c8265", null ],
-      [ "version", "structifm3d_1_1RgbInfo.html#ab82937d5b4ced706bd88b6feef8439f7", null ]
-    ] ],
     [ "NalUnit", "structifm3d_1_1NalUnit.html", [
       [ "Type", "structifm3d_1_1NalUnit.html#a9a641069c1c1abf5cddaa902f4d076b1", [
         [ "NON_IDR_SLICE", "structifm3d_1_1NalUnit.html#a9a641069c1c1abf5cddaa902f4d076b1a091e3176f32ff0302ba7551d76a35b1f", null ],
@@ -34,21 +21,17 @@ var group__RTSP =
     [ "RtspClient", "classifm3d_1_1RtspClient.html", [
       [ "Config", "structifm3d_1_1RtspClient_1_1Config.html", [
         [ "decoder", "structifm3d_1_1RtspClient_1_1Config.html#a54b3ec7030dee83773f2655224931dfa", null ],
-        [ "output_format", "structifm3d_1_1RtspClient_1_1Config.html#a9aab09941c7e1b092966ad5473e27a60", null ],
         [ "port", "structifm3d_1_1RtspClient_1_1Config.html#ab20175bcbb612460bec2f3283da018fd", null ],
         [ "stream_path", "structifm3d_1_1RtspClient_1_1Config.html#ac64840927ae484fa5463d86d9f1a19e3", null ],
         [ "transport", "structifm3d_1_1RtspClient_1_1Config.html#a42a47966806ca8df912971e4a791cd35", null ],
         [ "url", "structifm3d_1_1RtspClient_1_1Config.html#ad4ac2216eacb7679b43efe6010436c47", null ]
       ] ],
+      [ "BufferIdList", "classifm3d_1_1RtspClient.html#aacd09bf1367c1e43d617b652daababc2", null ],
       [ "ErrorCallback", "classifm3d_1_1RtspClient.html#ac44b73d963072e90f7fdf1ba56c3fbd7", null ],
       [ "NalUnitCallback", "classifm3d_1_1RtspClient.html#a96c26d677dd7ec02ff98721ce3fdd489", null ],
-      [ "NewFrameCallback", "classifm3d_1_1RtspClient.html#a94477a2c2a6e6e254e149992e0b6d1bc", null ],
+      [ "NewFrameCallback", "classifm3d_1_1RtspClient.html#ab309926f1e508a6419309494eb7e969f", null ],
       [ "Ptr", "classifm3d_1_1RtspClient.html#aa9574293251ce529e8b6118e706b3b2f", null ],
       [ "StateChangeCallback", "classifm3d_1_1RtspClient.html#a097978f33b09829390266469721126a0", null ],
-      [ "OutputFormat", "classifm3d_1_1RtspClient.html#a37133bceae3e5085b0ac4dcd467e2d7d", [
-        [ "RGB", "classifm3d_1_1RtspClient.html#a37133bceae3e5085b0ac4dcd467e2d7da889574aebacda6bfd3e534e2b49b8028", null ],
-        [ "YUV420", "classifm3d_1_1RtspClient.html#a37133bceae3e5085b0ac4dcd467e2d7da7e1d7a172afeb2743e03365a92cfd7e1", null ]
-      ] ],
       [ "State", "classifm3d_1_1RtspClient.html#a37bc0b76c7cd1dd9d4705cd5ca3eba12", [
         [ "IDLE", "classifm3d_1_1RtspClient.html#a37bc0b76c7cd1dd9d4705cd5ca3eba12aa5daf7f2ebbba4975d61dab1c40188c7", null ],
         [ "CONNECTING", "classifm3d_1_1RtspClient.html#a37bc0b76c7cd1dd9d4705cd5ca3eba12a9a14f95e151eec641316e7c784ce832d", null ],
@@ -76,7 +59,7 @@ var group__RTSP =
       [ "OnStateChange", "classifm3d_1_1RtspClient.html#a00d33507958ca0d94280f9255b402a2a", null ],
       [ "operator=", "classifm3d_1_1RtspClient.html#a57eaa1ab9c5082c6afd3eb7d014c0607", null ],
       [ "operator=", "classifm3d_1_1RtspClient.html#a17fbed9f5acdb33297a4b21a4e078fda", null ],
-      [ "Start", "classifm3d_1_1RtspClient.html#a3f196a2198e6d2d913788abb374d6f86", null ],
+      [ "Start", "classifm3d_1_1RtspClient.html#a1706b6c51a9d6a09c69f4c98073461cb", null ],
       [ "Stop", "classifm3d_1_1RtspClient.html#ab64c96fbf428d6b5d1af5608ac004db4", null ]
     ] ]
 ];

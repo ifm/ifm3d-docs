@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['measurement_5fblock_5findex_487',['measurement_block_index',['../classifm3d_1_1TOFInfoV4.html#ab56a590751f8230292193ddc9c87c9b5',1,'ifm3d::TOFInfoV4']]],
-  ['media_5fendpoints_488',['media_endpoints',['../structifm3d_1_1RtspInfo.html#a39e7036f0c3fa293f0616c5da2651bcb',1,'ifm3d::RtspInfo']]]
+  ['nal_5fref_5fidc_476',['nal_ref_idc',['../structifm3d_1_1NalUnit.html#a460b2cfb273b4d539070113bf5d84695',1,'ifm3d::NalUnit']]],
+  ['nal_5funit_5ftype_477',['nal_unit_type',['../structifm3d_1_1NalUnit.html#af43156d35ddf6a91ed96818b48106b53',1,'ifm3d::NalUnit']]]
 ];

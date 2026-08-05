@@ -49,7 +49,6 @@ var annotated_dup =
       [ "FrameGrabber", "classifm3d_1_1FrameGrabber.html", "classifm3d_1_1FrameGrabber" ],
       [ "Organizer", "classifm3d_1_1Organizer.html", "classifm3d_1_1Organizer" ],
       [ "DecoderManager", "classifm3d_1_1DecoderManager.html", "classifm3d_1_1DecoderManager" ],
-      [ "RgbInfo", "structifm3d_1_1RgbInfo.html", "structifm3d_1_1RgbInfo" ],
       [ "NalUnit", "structifm3d_1_1NalUnit.html", "structifm3d_1_1NalUnit" ],
       [ "RtspClient", "classifm3d_1_1RtspClient.html", "classifm3d_1_1RtspClient" ],
       [ "SWUpdater", "classifm3d_1_1SWUpdater.html", "classifm3d_1_1SWUpdater" ],

@@ -1,15 +1,12 @@
 var classifm3d_1_1RtspClient =
 [
     [ "Config", "structifm3d_1_1RtspClient_1_1Config.html", "structifm3d_1_1RtspClient_1_1Config" ],
+    [ "BufferIdList", "classifm3d_1_1RtspClient.html#aacd09bf1367c1e43d617b652daababc2", null ],
     [ "ErrorCallback", "classifm3d_1_1RtspClient.html#ac44b73d963072e90f7fdf1ba56c3fbd7", null ],
     [ "NalUnitCallback", "classifm3d_1_1RtspClient.html#a96c26d677dd7ec02ff98721ce3fdd489", null ],
-    [ "NewFrameCallback", "classifm3d_1_1RtspClient.html#a94477a2c2a6e6e254e149992e0b6d1bc", null ],
+    [ "NewFrameCallback", "classifm3d_1_1RtspClient.html#ab309926f1e508a6419309494eb7e969f", null ],
     [ "Ptr", "classifm3d_1_1RtspClient.html#aa9574293251ce529e8b6118e706b3b2f", null ],
     [ "StateChangeCallback", "classifm3d_1_1RtspClient.html#a097978f33b09829390266469721126a0", null ],
-    [ "OutputFormat", "classifm3d_1_1RtspClient.html#a37133bceae3e5085b0ac4dcd467e2d7d", [
-      [ "RGB", "classifm3d_1_1RtspClient.html#a37133bceae3e5085b0ac4dcd467e2d7da889574aebacda6bfd3e534e2b49b8028", null ],
-      [ "YUV420", "classifm3d_1_1RtspClient.html#a37133bceae3e5085b0ac4dcd467e2d7da7e1d7a172afeb2743e03365a92cfd7e1", null ]
-    ] ],
     [ "State", "classifm3d_1_1RtspClient.html#a37bc0b76c7cd1dd9d4705cd5ca3eba12", [
       [ "IDLE", "classifm3d_1_1RtspClient.html#a37bc0b76c7cd1dd9d4705cd5ca3eba12aa5daf7f2ebbba4975d61dab1c40188c7", null ],
       [ "CONNECTING", "classifm3d_1_1RtspClient.html#a37bc0b76c7cd1dd9d4705cd5ca3eba12a9a14f95e151eec641316e7c784ce832d", null ],
@@ -37,6 +34,6 @@ var classifm3d_1_1RtspClient =
     [ "OnStateChange", "classifm3d_1_1RtspClient.html#a00d33507958ca0d94280f9255b402a2a", null ],
     [ "operator=", "classifm3d_1_1RtspClient.html#a57eaa1ab9c5082c6afd3eb7d014c0607", null ],
     [ "operator=", "classifm3d_1_1RtspClient.html#a17fbed9f5acdb33297a4b21a4e078fda", null ],
-    [ "Start", "classifm3d_1_1RtspClient.html#a3f196a2198e6d2d913788abb374d6f86", null ],
+    [ "Start", "classifm3d_1_1RtspClient.html#a1706b6c51a9d6a09c69f4c98073461cb", null ],
     [ "Stop", "classifm3d_1_1RtspClient.html#ab64c96fbf428d6b5d1af5608ac004db4", null ]
 ];

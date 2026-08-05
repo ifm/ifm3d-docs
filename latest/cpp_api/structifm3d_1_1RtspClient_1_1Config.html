@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('structifm3d_1_1RtspClient_1_1Config.ht
 </div><!--header-->
 <div class="contents">
 
-<p>Configuration for an <code><a class="el" href="classifm3d_1_1RtspClient.html" title="RTSP/1.0 client that streams H.264 video from an ifm device and, optionally, decodes it into ifm3d::B...">RtspClient</a></code> instance.  
+<p>Configuration for an <code><a class="el" href="classifm3d_1_1RtspClient.html" title="RTSP/1.0 client that streams H.264 video from an ifm device and, optionally, decodes it into ifm3d::F...">RtspClient</a></code> instance.  
  <a href="structifm3d_1_1RtspClient_1_1Config.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="rtsp__client_8h_source.html">ifm3d/rtsp/rtsp_client.h</a>&gt;</code></p>
@@ -114,14 +114,11 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memdesc:a42a47966806ca8df912971e4a791cd35"><td class="mdescLeft">&#160;</td><td class="mdescRight">RTP transport selection. <br /></td></tr>
 <tr class="separator:a42a47966806ca8df912971e4a791cd35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54b3ec7030dee83773f2655224931dfa"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structifm3d_1_1RtspClient_1_1Config.html#a54b3ec7030dee83773f2655224931dfa">decoder</a></td></tr>
-<tr class="memdesc:a54b3ec7030dee83773f2655224931dfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional decoder selection.  <a href="structifm3d_1_1RtspClient_1_1Config.html#a54b3ec7030dee83773f2655224931dfa">More...</a><br /></td></tr>
+<tr class="memdesc:a54b3ec7030dee83773f2655224931dfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override the decoder name used for decoding h264 video into buffers.  <a href="structifm3d_1_1RtspClient_1_1Config.html#a54b3ec7030dee83773f2655224931dfa">More...</a><br /></td></tr>
 <tr class="separator:a54b3ec7030dee83773f2655224931dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9aab09941c7e1b092966ad5473e27a60"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classifm3d_1_1RtspClient.html#a37133bceae3e5085b0ac4dcd467e2d7d">OutputFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structifm3d_1_1RtspClient_1_1Config.html#a9aab09941c7e1b092966ad5473e27a60">output_format</a> = <a class="el" href="classifm3d_1_1RtspClient.html#a37133bceae3e5085b0ac4dcd467e2d7da889574aebacda6bfd3e534e2b49b8028">OutputFormat::RGB</a></td></tr>
-<tr class="memdesc:a9aab09941c7e1b092966ad5473e27a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pixel layout of decoded frames delivered to <code>OnNewFrame</code>.  <a href="structifm3d_1_1RtspClient_1_1Config.html#a9aab09941c7e1b092966ad5473e27a60">More...</a><br /></td></tr>
-<tr class="separator:a9aab09941c7e1b092966ad5473e27a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Configuration for an <code><a class="el" href="classifm3d_1_1RtspClient.html" title="RTSP/1.0 client that streams H.264 video from an ifm device and, optionally, decodes it into ifm3d::B...">RtspClient</a></code> instance. </p>
+<div class="textblock"><p>Configuration for an <code><a class="el" href="classifm3d_1_1RtspClient.html" title="RTSP/1.0 client that streams H.264 video from an ifm device and, optionally, decodes it into ifm3d::F...">RtspClient</a></code> instance. </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a54b3ec7030dee83773f2655224931dfa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a54b3ec7030dee83773f2655224931dfa">&#9670;&nbsp;</a></span>decoder</h2>
@@ -135,25 +132,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
       </table>
 </div><div class="memdoc">
 
-<p>Optional decoder selection. </p>
-<p>When unset, the first available decoder is used. Set to a decoder name substring (e.g. <code>"ffmpeg"</code>) to prefer a specific decoder, or to <code>"null"</code> to explicitly disable decoding (NAL-only mode). </p>
-
-</div>
-</div>
-<a id="a9aab09941c7e1b092966ad5473e27a60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9aab09941c7e1b092966ad5473e27a60">&#9670;&nbsp;</a></span>output_format</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classifm3d_1_1RtspClient.html#a37133bceae3e5085b0ac4dcd467e2d7d">OutputFormat</a> ifm3d::RtspClient::Config::output_format = <a class="el" href="classifm3d_1_1RtspClient.html#a37133bceae3e5085b0ac4dcd467e2d7da889574aebacda6bfd3e534e2b49b8028">OutputFormat::RGB</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Pixel layout of decoded frames delivered to <code>OnNewFrame</code>. </p>
-<p>Defaults to <code><a class="el" href="classifm3d_1_1RtspClient.html#a37133bceae3e5085b0ac4dcd467e2d7da889574aebacda6bfd3e534e2b49b8028" title="3-channel RGB.">OutputFormat::RGB</a></code>. </p>
+<p>Override the decoder name used for decoding h264 video into buffers. </p>
+<p>When unset, the first available decoder is used. </p>
 
 </div>
 </div>

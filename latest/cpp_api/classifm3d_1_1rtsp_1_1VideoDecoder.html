@@ -99,9 +99,9 @@ $(document).ready(function(){initNavTree('classifm3d_1_1rtsp_1_1VideoDecoder.htm
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a84ffa98adeaf8faaebd00934e6d4432a"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1rtsp_1_1VideoDecoder.html#a84ffa98adeaf8faaebd00934e6d4432a">SendPacket</a> (const std::uint8_t *data, int size)=0</td></tr>
-<tr class="memdesc:a84ffa98adeaf8faaebd00934e6d4432a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push one unit of compressed data into the decoder.  <a href="classifm3d_1_1rtsp_1_1VideoDecoder.html#a84ffa98adeaf8faaebd00934e6d4432a">More...</a><br /></td></tr>
-<tr class="separator:a84ffa98adeaf8faaebd00934e6d4432a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a351a7cc81fbfb7610d928aca2048df95"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1rtsp_1_1VideoDecoder.html#a351a7cc81fbfb7610d928aca2048df95">SendPacket</a> (const std::uint8_t *data, int size, std::uint64_t pts)=0</td></tr>
+<tr class="memdesc:a351a7cc81fbfb7610d928aca2048df95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push one unit of compressed data into the decoder.  <a href="classifm3d_1_1rtsp_1_1VideoDecoder.html#a351a7cc81fbfb7610d928aca2048df95">More...</a><br /></td></tr>
+<tr class="separator:a351a7cc81fbfb7610d928aca2048df95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a235e8775a180d5f8e6e7db27fa4b7a"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1rtsp_1_1VideoDecoder.html#a4a235e8775a180d5f8e6e7db27fa4b7a">ReceiveFrame</a> (<a class="el" href="structifm3d_1_1rtsp_1_1VideoFrame.html">VideoFrame</a> &amp;out)=0</td></tr>
 <tr class="memdesc:a4a235e8775a180d5f8e6e7db27fa4b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pull a decoded frame.  <a href="classifm3d_1_1rtsp_1_1VideoDecoder.html#a4a235e8775a180d5f8e6e7db27fa4b7a">More...</a><br /></td></tr>
 <tr class="separator:a4a235e8775a180d5f8e6e7db27fa4b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,12 +158,14 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pull a decoded frame. </p>
-<dl class="section return"><dt>Returns</dt><dd>1 = frame ready in <code>out</code>, 0 = need more input, negative = error. </dd></dl>
+<p>Call repeatedly until it reports that no further frame is available.</p>
+<p><code>out.pts</code> identifies the SendPacket call this frame was decoded from. It is not necessarily the most recent one: an H.264 stream whose SPS advertises <code>max_num_reorder_frames &gt; 0</code> makes libavcodec hold frames back, so output routinely lags input by a fixed number of packets.</p>
+<dl class="section return"><dt>Returns</dt><dd>1 = frame ready in <code>out</code>, 0 = no further frame can be built from the data submitted so far, negative = error. </dd></dl>
 
 </div>
 </div>
-<a id="a84ffa98adeaf8faaebd00934e6d4432a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84ffa98adeaf8faaebd00934e6d4432a">&#9670;&nbsp;</a></span>SendPacket()</h2>
+<a id="a351a7cc81fbfb7610d928aca2048df95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a351a7cc81fbfb7610d928aca2048df95">&#9670;&nbsp;</a></span>SendPacket()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -181,7 +183,13 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::uint64_t&#160;</td>
+          <td class="paramname"><em>pts</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -197,6 +205,14 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Push one unit of compressed data into the decoder. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>compressed payload, valid for the duration of the call. </td></tr>
+    <tr><td class="paramname">size</td><td>size of <code>data</code> in bytes. </td></tr>
+    <tr><td class="paramname">pts</td><td>an opaque, caller-chosen identifier for this packet. The decoder does not interpret it; it only stores it and returns it on the <a class="el" href="structifm3d_1_1rtsp_1_1VideoFrame.html" title="Decoded frame view.">VideoFrame</a> decoded from this packet. Callers should keep it unique across the packets that may be in flight at once. Implementations that have no natural place to put it must carry it themselves.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, negative on error. </dd></dl>
 
 </div>

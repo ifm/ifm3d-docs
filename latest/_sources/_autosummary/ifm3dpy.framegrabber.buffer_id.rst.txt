@@ -57,6 +57,9 @@ ifm3dpy.framegrabber.buffer\_id
       ~buffer_id.ILLUMINATION_TEMP
       ~buffer_id.O3R_ODS_POLAR_OCC_GRID
       ~buffer_id.O3R_ODS_EXTRINSIC_CALIBRATION_CORRECTION
+      ~buffer_id.COMPRESSED_H264_FRAME
+      ~buffer_id.RGB_IMAGE
+      ~buffer_id.YUV420_IMAGE
       ~buffer_id.__members__
    
    

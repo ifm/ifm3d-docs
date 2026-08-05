@@ -81,6 +81,9 @@ var group__FrameGrabber =
       [ "O3R_ODS_EXTRINSIC_CALIBRATION_CORRECTION", "group__FrameGrabber.html#ggaca9d48fd13de3e0a7e7af60e518bfd35a2e7b6becfde7ca9d51925fe58c20137d", null ],
       [ "XYZ", "group__FrameGrabber.html#ggaca9d48fd13de3e0a7e7af60e518bfd35ae65075d550f9b5bf9992fa1d71a131be", null ],
       [ "EXPOSURE_TIME", "group__FrameGrabber.html#ggaca9d48fd13de3e0a7e7af60e518bfd35a6e156f284c1233d1eeae83454bcb9463", null ],
-      [ "ILLUMINATION_TEMP", "group__FrameGrabber.html#ggaca9d48fd13de3e0a7e7af60e518bfd35a1c7e2d5411452253dd2742dacf3b1b54", null ]
+      [ "ILLUMINATION_TEMP", "group__FrameGrabber.html#ggaca9d48fd13de3e0a7e7af60e518bfd35a1c7e2d5411452253dd2742dacf3b1b54", null ],
+      [ "COMPRESSED_H264_FRAME", "group__FrameGrabber.html#ggaca9d48fd13de3e0a7e7af60e518bfd35aecfac436eafbeffca7d04705b56ed78f", null ],
+      [ "RGB_IMAGE", "group__FrameGrabber.html#ggaca9d48fd13de3e0a7e7af60e518bfd35a138d73ede515e3d653497bd9f5686d7f", null ],
+      [ "YUV420_IMAGE", "group__FrameGrabber.html#ggaca9d48fd13de3e0a7e7af60e518bfd35aa4698e5e6c85de0d7a5513a3e5fe4e94", null ]
     ] ]
 ];
