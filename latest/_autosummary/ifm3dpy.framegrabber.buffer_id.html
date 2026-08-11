@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ifm3dpy.framegrabber.buffer_id &mdash; ifm3d v2.0.4 documentation</title>
+  <title>ifm3dpy.framegrabber.buffer_id &mdash; ifm3d v2.0.5 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -34,7 +34,7 @@
             <a href="../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v2.0.4
+                v2.0.5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -102,14 +102,9 @@
 <h1>ifm3dpy.framegrabber.buffer_id<a class="headerlink" href="#ifm3dpy-framegrabber-buffer-id" title="Permalink to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ifm3dpy.framegrabber.</span></span><span class="sig-name descname"><span class="pre">buffer_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ifm3dpy.framegrabber.</span></span><span class="sig-name descname"><span class="pre">buffer_id</span></span><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.IntEnum" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></a></p>
 <p>Enum: buffer_id available for use with the default Organizer.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.__init__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
 <p class="rubric">Attributes</p>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -117,131 +112,312 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">RADIAL_DISTANCE_IMAGE</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.RADIAL_DISTANCE_IMAGE" title="ifm3dpy.framegrabber.buffer_id.RADIAL_DISTANCE_IMAGE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RADIAL_DISTANCE_IMAGE</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">NORM_AMPLITUDE_IMAGE</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.NORM_AMPLITUDE_IMAGE" title="ifm3dpy.framegrabber.buffer_id.NORM_AMPLITUDE_IMAGE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NORM_AMPLITUDE_IMAGE</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">AMPLITUDE_IMAGE</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.AMPLITUDE_IMAGE" title="ifm3dpy.framegrabber.buffer_id.AMPLITUDE_IMAGE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AMPLITUDE_IMAGE</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">GRAYSCALE_IMAGE</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.GRAYSCALE_IMAGE" title="ifm3dpy.framegrabber.buffer_id.GRAYSCALE_IMAGE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GRAYSCALE_IMAGE</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">RADIAL_DISTANCE_NOISE</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.RADIAL_DISTANCE_NOISE" title="ifm3dpy.framegrabber.buffer_id.RADIAL_DISTANCE_NOISE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RADIAL_DISTANCE_NOISE</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">REFLECTIVITY</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.REFLECTIVITY" title="ifm3dpy.framegrabber.buffer_id.REFLECTIVITY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">REFLECTIVITY</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">CARTESIAN_X_COMPONENT</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.CARTESIAN_X_COMPONENT" title="ifm3dpy.framegrabber.buffer_id.CARTESIAN_X_COMPONENT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CARTESIAN_X_COMPONENT</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">CARTESIAN_Y_COMPONENT</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.CARTESIAN_Y_COMPONENT" title="ifm3dpy.framegrabber.buffer_id.CARTESIAN_Y_COMPONENT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CARTESIAN_Y_COMPONENT</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">CARTESIAN_Z_COMPONENT</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.CARTESIAN_Z_COMPONENT" title="ifm3dpy.framegrabber.buffer_id.CARTESIAN_Z_COMPONENT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CARTESIAN_Z_COMPONENT</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">CARTESIAN_ALL</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.CARTESIAN_ALL" title="ifm3dpy.framegrabber.buffer_id.CARTESIAN_ALL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CARTESIAN_ALL</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">UNIT_VECTOR_ALL</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.UNIT_VECTOR_ALL" title="ifm3dpy.framegrabber.buffer_id.UNIT_VECTOR_ALL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UNIT_VECTOR_ALL</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">MONOCHROM_2D_12BIT</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.MONOCHROM_2D_12BIT" title="ifm3dpy.framegrabber.buffer_id.MONOCHROM_2D_12BIT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MONOCHROM_2D_12BIT</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">MONOCHROM_2D</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.MONOCHROM_2D" title="ifm3dpy.framegrabber.buffer_id.MONOCHROM_2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MONOCHROM_2D</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">JPEG_IMAGE</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.JPEG_IMAGE" title="ifm3dpy.framegrabber.buffer_id.JPEG_IMAGE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JPEG_IMAGE</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONFIDENCE_IMAGE</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.CONFIDENCE_IMAGE" title="ifm3dpy.framegrabber.buffer_id.CONFIDENCE_IMAGE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CONFIDENCE_IMAGE</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">DIAGNOSTIC</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.DIAGNOSTIC" title="ifm3dpy.framegrabber.buffer_id.DIAGNOSTIC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DIAGNOSTIC</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">JSON_DIAGNOSTIC</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.JSON_DIAGNOSTIC" title="ifm3dpy.framegrabber.buffer_id.JSON_DIAGNOSTIC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JSON_DIAGNOSTIC</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXTRINSIC_CALIB</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.EXTRINSIC_CALIB" title="ifm3dpy.framegrabber.buffer_id.EXTRINSIC_CALIB"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXTRINSIC_CALIB</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">INTRINSIC_CALIB</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.INTRINSIC_CALIB" title="ifm3dpy.framegrabber.buffer_id.INTRINSIC_CALIB"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INTRINSIC_CALIB</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">INVERSE_INTRINSIC_CALIBRATION</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.INVERSE_INTRINSIC_CALIBRATION" title="ifm3dpy.framegrabber.buffer_id.INVERSE_INTRINSIC_CALIBRATION"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INVERSE_INTRINSIC_CALIBRATION</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">TOF_INFO</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.TOF_INFO" title="ifm3dpy.framegrabber.buffer_id.TOF_INFO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TOF_INFO</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_DISTANCE_IMAGE_INFO</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.RGB_INFO" title="ifm3dpy.framegrabber.buffer_id.RGB_INFO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RGB_INFO</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">RGB_INFO</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.JSON_MODEL" title="ifm3dpy.framegrabber.buffer_id.JSON_MODEL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JSON_MODEL</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_RGB_IMAGE_INFO</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.ALGO_DEBUG" title="ifm3dpy.framegrabber.buffer_id.ALGO_DEBUG"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ALGO_DEBUG</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">JSON_MODEL</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.O3R_ODS_OCCUPANCY_GRID" title="ifm3dpy.framegrabber.buffer_id.O3R_ODS_OCCUPANCY_GRID"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_ODS_OCCUPANCY_GRID</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ALGO_DEBUG</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.O3R_ODS_INFO" title="ifm3dpy.framegrabber.buffer_id.O3R_ODS_INFO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_ODS_INFO</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_ODS_OCCUPANCY_GRID</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.O3R_RESULT_JSON" title="ifm3dpy.framegrabber.buffer_id.O3R_RESULT_JSON"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_RESULT_JSON</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_ODS_INFO</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.O3R_RESULT_ARRAY2D" title="ifm3dpy.framegrabber.buffer_id.O3R_RESULT_ARRAY2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_RESULT_ARRAY2D</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_RESULT_JSON</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.O3R_RESULT_IMU" title="ifm3dpy.framegrabber.buffer_id.O3R_RESULT_IMU"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_RESULT_IMU</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_RESULT_ARRAY2D</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.O3R_ODS_RENDERED_ZONES" title="ifm3dpy.framegrabber.buffer_id.O3R_ODS_RENDERED_ZONES"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_ODS_RENDERED_ZONES</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_RESULT_IMU</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.XYZ" title="ifm3dpy.framegrabber.buffer_id.XYZ"><code class="xref py py-obj docutils literal notranslate"><span class="pre">XYZ</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_ODS_RENDERED_ZONES</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.EXPOSURE_TIME" title="ifm3dpy.framegrabber.buffer_id.EXPOSURE_TIME"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPOSURE_TIME</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">XYZ</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.ILLUMINATION_TEMP" title="ifm3dpy.framegrabber.buffer_id.ILLUMINATION_TEMP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ILLUMINATION_TEMP</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">EXPOSURE_TIME</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.O3R_ODS_POLAR_OCC_GRID" title="ifm3dpy.framegrabber.buffer_id.O3R_ODS_POLAR_OCC_GRID"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_ODS_POLAR_OCC_GRID</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ILLUMINATION_TEMP</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.O3R_ODS_EXTRINSIC_CALIBRATION_CORRECTION" title="ifm3dpy.framegrabber.buffer_id.O3R_ODS_EXTRINSIC_CALIBRATION_CORRECTION"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_ODS_EXTRINSIC_CALIBRATION_CORRECTION</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_ODS_POLAR_OCC_GRID</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.COMPRESSED_H264_FRAME" title="ifm3dpy.framegrabber.buffer_id.COMPRESSED_H264_FRAME"><code class="xref py py-obj docutils literal notranslate"><span class="pre">COMPRESSED_H264_FRAME</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R_ODS_EXTRINSIC_CALIBRATION_CORRECTION</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.RGB_IMAGE" title="ifm3dpy.framegrabber.buffer_id.RGB_IMAGE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RGB_IMAGE</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">COMPRESSED_H264_FRAME</span></code></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">RGB_IMAGE</span></code></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">YUV420_IMAGE</span></code></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__members__</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.buffer_id.YUV420_IMAGE" title="ifm3dpy.framegrabber.buffer_id.YUV420_IMAGE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">YUV420_IMAGE</span></code></a></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.ALGO_DEBUG">
+<span class="sig-name descname"><span class="pre">ALGO_DEBUG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">900</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.ALGO_DEBUG" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.AMPLITUDE_IMAGE">
+<span class="sig-name descname"><span class="pre">AMPLITUDE_IMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">103</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.AMPLITUDE_IMAGE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.CARTESIAN_ALL">
+<span class="sig-name descname"><span class="pre">CARTESIAN_ALL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">203</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.CARTESIAN_ALL" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.CARTESIAN_X_COMPONENT">
+<span class="sig-name descname"><span class="pre">CARTESIAN_X_COMPONENT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">200</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.CARTESIAN_X_COMPONENT" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.CARTESIAN_Y_COMPONENT">
+<span class="sig-name descname"><span class="pre">CARTESIAN_Y_COMPONENT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">201</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.CARTESIAN_Y_COMPONENT" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.CARTESIAN_Z_COMPONENT">
+<span class="sig-name descname"><span class="pre">CARTESIAN_Z_COMPONENT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">202</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.CARTESIAN_Z_COMPONENT" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.COMPRESSED_H264_FRAME">
+<span class="sig-name descname"><span class="pre">COMPRESSED_H264_FRAME</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4294967303</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.COMPRESSED_H264_FRAME" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.CONFIDENCE_IMAGE">
+<span class="sig-name descname"><span class="pre">CONFIDENCE_IMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">300</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.CONFIDENCE_IMAGE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.DIAGNOSTIC">
+<span class="sig-name descname"><span class="pre">DIAGNOSTIC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">302</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.DIAGNOSTIC" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.EXPOSURE_TIME">
+<span class="sig-name descname"><span class="pre">EXPOSURE_TIME</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4294967296</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.EXPOSURE_TIME" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.EXTRINSIC_CALIB">
+<span class="sig-name descname"><span class="pre">EXTRINSIC_CALIB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">400</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.EXTRINSIC_CALIB" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.GRAYSCALE_IMAGE">
+<span class="sig-name descname"><span class="pre">GRAYSCALE_IMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">104</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.GRAYSCALE_IMAGE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.ILLUMINATION_TEMP">
+<span class="sig-name descname"><span class="pre">ILLUMINATION_TEMP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4294967297</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.ILLUMINATION_TEMP" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.INTRINSIC_CALIB">
+<span class="sig-name descname"><span class="pre">INTRINSIC_CALIB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">401</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.INTRINSIC_CALIB" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.INVERSE_INTRINSIC_CALIBRATION">
+<span class="sig-name descname"><span class="pre">INVERSE_INTRINSIC_CALIBRATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">402</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.INVERSE_INTRINSIC_CALIBRATION" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.JPEG_IMAGE">
+<span class="sig-name descname"><span class="pre">JPEG_IMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">260</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.JPEG_IMAGE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.JSON_DIAGNOSTIC">
+<span class="sig-name descname"><span class="pre">JSON_DIAGNOSTIC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">305</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.JSON_DIAGNOSTIC" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.JSON_MODEL">
+<span class="sig-name descname"><span class="pre">JSON_MODEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">500</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.JSON_MODEL" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.MONOCHROM_2D">
+<span class="sig-name descname"><span class="pre">MONOCHROM_2D</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">251</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.MONOCHROM_2D" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.MONOCHROM_2D_12BIT">
+<span class="sig-name descname"><span class="pre">MONOCHROM_2D_12BIT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">250</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.MONOCHROM_2D_12BIT" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.NORM_AMPLITUDE_IMAGE">
+<span class="sig-name descname"><span class="pre">NORM_AMPLITUDE_IMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">101</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.NORM_AMPLITUDE_IMAGE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.O3R_ODS_EXTRINSIC_CALIBRATION_CORRECTION">
+<span class="sig-name descname"><span class="pre">O3R_ODS_EXTRINSIC_CALIBRATION_CORRECTION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1007</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.O3R_ODS_EXTRINSIC_CALIBRATION_CORRECTION" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.O3R_ODS_INFO">
+<span class="sig-name descname"><span class="pre">O3R_ODS_INFO</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1001</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.O3R_ODS_INFO" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.O3R_ODS_OCCUPANCY_GRID">
+<span class="sig-name descname"><span class="pre">O3R_ODS_OCCUPANCY_GRID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1000</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.O3R_ODS_OCCUPANCY_GRID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.O3R_ODS_POLAR_OCC_GRID">
+<span class="sig-name descname"><span class="pre">O3R_ODS_POLAR_OCC_GRID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1006</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.O3R_ODS_POLAR_OCC_GRID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.O3R_ODS_RENDERED_ZONES">
+<span class="sig-name descname"><span class="pre">O3R_ODS_RENDERED_ZONES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4294967302</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.O3R_ODS_RENDERED_ZONES" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.O3R_RESULT_ARRAY2D">
+<span class="sig-name descname"><span class="pre">O3R_RESULT_ARRAY2D</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1003</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.O3R_RESULT_ARRAY2D" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.O3R_RESULT_IMU">
+<span class="sig-name descname"><span class="pre">O3R_RESULT_IMU</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1004</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.O3R_RESULT_IMU" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.O3R_RESULT_JSON">
+<span class="sig-name descname"><span class="pre">O3R_RESULT_JSON</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1002</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.O3R_RESULT_JSON" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.RADIAL_DISTANCE_IMAGE">
+<span class="sig-name descname"><span class="pre">RADIAL_DISTANCE_IMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">100</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.RADIAL_DISTANCE_IMAGE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.RADIAL_DISTANCE_NOISE">
+<span class="sig-name descname"><span class="pre">RADIAL_DISTANCE_NOISE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">105</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.RADIAL_DISTANCE_NOISE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.REFLECTIVITY">
+<span class="sig-name descname"><span class="pre">REFLECTIVITY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">107</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.REFLECTIVITY" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.RGB_IMAGE">
+<span class="sig-name descname"><span class="pre">RGB_IMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4294967304</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.RGB_IMAGE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.RGB_INFO">
+<span class="sig-name descname"><span class="pre">RGB_INFO</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">421</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.RGB_INFO" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.TOF_INFO">
+<span class="sig-name descname"><span class="pre">TOF_INFO</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">420</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.TOF_INFO" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.UNIT_VECTOR_ALL">
+<span class="sig-name descname"><span class="pre">UNIT_VECTOR_ALL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">223</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.UNIT_VECTOR_ALL" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.XYZ">
+<span class="sig-name descname"><span class="pre">XYZ</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4294967295</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.XYZ" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.buffer_id.YUV420_IMAGE">
+<span class="sig-name descname"><span class="pre">YUV420_IMAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4294967305</span></em><a class="headerlink" href="#ifm3dpy.framegrabber.buffer_id.YUV420_IMAGE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 </section>

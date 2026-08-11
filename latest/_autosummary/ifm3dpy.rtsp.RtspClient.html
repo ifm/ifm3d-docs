@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ifm3dpy.rtsp.RtspClient &mdash; ifm3d v2.0.4 documentation</title>
+  <title>ifm3dpy.rtsp.RtspClient &mdash; ifm3d v2.0.5 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -34,7 +34,7 @@
             <a href="../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v2.0.4
+                v2.0.5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -103,57 +103,34 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="ifm3dpy.rtsp.RtspClient">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ifm3dpy.rtsp.</span></span><span class="sig-name descname"><span class="pre">RtspClient</span></span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>RTSP/1.0 client that streams H.264 video from an ifm device and,
 optionally, decodes it into buffers using a compiled-in video decoder.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.rtsp.RtspClient.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.__init__" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic">
-<li><p>__init__(self: ifm3dpy.rtsp.RtspClient, device: ifm3dpy.device.Device, url: str | None = None, port: typing.SupportsInt = 8554, stream_path: str = ‘port1’, transport: ifm3dpy.rtsp.RtspClient.Transport = &lt;Transport.INTERLEAVED: 0&gt;, decoder: str | None = None) -&gt; None</p>
-<blockquote>
-<div><p>Constructs a client that streams from the given device.</p>
-<dl class="simple">
-<dt>device<span class="classifier">ifm3dpy.device.Device</span></dt><dd><p>Device used to discover the stream IP (unless <code class="docutils literal notranslate"><span class="pre">url</span></code> is set).</p>
-</dd>
-<dt>url<span class="classifier">str, optional</span></dt><dd><p>Full RTSP URL override (e.g. <code class="docutils literal notranslate"><span class="pre">rtsp://192.168.0.69:8554/port1</span></code>).
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">ifm3dpy.rtsp.RtspClient</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device:</span> <span class="pre">ifm3dpy.device.Device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">ifm3dpy.device.PortInfo</span> <span class="pre">=</span> <span class="pre">8554</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream_path:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'port1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transport:</span> <span class="pre">ifm3dpy.rtsp.RtspClient.Transport</span> <span class="pre">=</span> <span class="pre">&lt;Transport.INTERLEAVED:</span> <span class="pre">0&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decoder:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Constructs a client that streams from the given device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>device</strong> (<a class="reference internal" href="ifm3dpy.device.Device.html#ifm3dpy.device.Device" title="ifm3dpy.device.Device"><code class="xref py py-class docutils literal notranslate"><span class="pre">ifm3dpy.device.Device</span></code></a>) – Device used to discover the stream IP (unless <code class="docutils literal notranslate"><span class="pre">url</span></code> is set).</p></li>
+<li><p><strong>url</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <em>optional</em>) – Full RTSP URL override (e.g. <code class="docutils literal notranslate"><span class="pre">rtsp://192.168.0.69:8554/port1</span></code>).
 When unset the URL is built from the device IP, <code class="docutils literal notranslate"><span class="pre">port</span></code> and
-<code class="docutils literal notranslate"><span class="pre">stream_path</span></code>.</p>
-</dd>
-<dt>port<span class="classifier">int, optional</span></dt><dd><p>RTSP server port, used when <code class="docutils literal notranslate"><span class="pre">url</span></code> is unset.</p>
-</dd>
-<dt>stream_path<span class="classifier">str, optional</span></dt><dd><p>Stream path appended to the device IP, used when <code class="docutils literal notranslate"><span class="pre">url</span></code> is unset.</p>
-</dd>
-<dt>transport<span class="classifier">ifm3dpy.rtsp.RtspClient.Transport, optional</span></dt><dd><p>RTP transport selection.</p>
-</dd>
-<dt>decoder<span class="classifier">str, optional</span></dt><dd><p>Override the decoder name used for decoding h264 video into buffers.
-When unset the decoder is chosen automatically.</p>
-</dd>
-</dl>
-</div></blockquote>
-</li>
-<li><p>__init__(self: ifm3dpy.rtsp.RtspClient, device: ifm3dpy.device.Device, port: ifm3dpy.device.PortInfo, url: str | None = None, transport: ifm3dpy.rtsp.RtspClient.Transport = &lt;Transport.INTERLEAVED: 0&gt;, decoder: str | None = None) -&gt; None</p>
-<blockquote>
-<div><p>Constructs a client for a specific port, deriving the RTSP port and
-stream path from the port’s advertised RtspInfo when available.</p>
-<dl class="simple">
-<dt>device<span class="classifier">ifm3dpy.device.Device</span></dt><dd><p>Device used to discover the stream IP (unless <code class="docutils literal notranslate"><span class="pre">url</span></code> is set).</p>
-</dd>
-<dt>port<span class="classifier">ifm3dpy.device.PortInfo</span></dt><dd><p>Port whose RTSP endpoint should be streamed.</p>
-</dd>
-<dt>url<span class="classifier">str, optional</span></dt><dd><p>Full RTSP URL override. When unset the URL is built from the device
-IP and the port’s RtspInfo.</p>
-</dd>
-<dt>transport<span class="classifier">ifm3dpy.rtsp.RtspClient.Transport, optional</span></dt><dd><p>RTP transport selection.</p>
-</dd>
-<dt>decoder<span class="classifier">str, optional</span></dt><dd><p>Override the decoder name used for decoding h264 video into buffers.
-When unset the decoder is chosen automatically.</p>
+<code class="docutils literal notranslate"><span class="pre">stream_path</span></code>.</p></li>
+<li><p><strong>port</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> or <a class="reference internal" href="ifm3dpy.device.PortInfo.html#ifm3dpy.device.PortInfo" title="ifm3dpy.device.PortInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">ifm3dpy.device.PortInfo</span></code></a>, <em>optional</em>) – Either the RTSP server port, or the port whose RTSP endpoint should
+be streamed. When a
+<a class="reference internal" href="ifm3dpy.device.PortInfo.html#ifm3dpy.device.PortInfo" title="ifm3dpy.device.PortInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">PortInfo</span></code></a> is given the RTSP port and the
+stream path are derived from its advertised <code class="docutils literal notranslate"><span class="pre">RtspInfo</span></code> when
+available, and <code class="docutils literal notranslate"><span class="pre">stream_path</span></code> is ignored. Used when <code class="docutils literal notranslate"><span class="pre">url</span></code> is
+unset.</p></li>
+<li><p><strong>stream_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <em>optional</em>) – Stream path appended to the device IP, used when <code class="docutils literal notranslate"><span class="pre">url</span></code> is unset
+and <code class="docutils literal notranslate"><span class="pre">port</span></code> is not a <a class="reference internal" href="ifm3dpy.device.PortInfo.html#ifm3dpy.device.PortInfo" title="ifm3dpy.device.PortInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">PortInfo</span></code></a>.</p></li>
+<li><p><strong>transport</strong> (<a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.Transport" title="ifm3dpy.rtsp.RtspClient.Transport"><code class="xref py py-class docutils literal notranslate"><span class="pre">ifm3dpy.rtsp.RtspClient.Transport</span></code></a>, <em>optional</em>) – RTP transport selection.</p></li>
+<li><p><strong>decoder</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <em>optional</em>) – Override the decoder name used for decoding h264 video into buffers.
+When unset the decoder is chosen automatically.</p></li>
+</ul>
 </dd>
 </dl>
-</div></blockquote>
-</li>
-</ol>
 </dd></dl>
 
 <p class="rubric">Methods</p>
@@ -163,95 +140,153 @@ When unset the decoder is chosen automatically.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.__init__" title="ifm3dpy.rtsp.RtspClient.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(*args, **kwargs)</p></td>
-<td><p>Overloaded function.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.__init__" title="ifm3dpy.rtsp.RtspClient.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self, device, url, port, ...)</p></td>
+<td><p>Constructs a client that streams from the given device.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_pybind11_conduit_v1_</span></code></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.get_state" title="ifm3dpy.rtsp.RtspClient.get_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_state</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.get_state" title="ifm3dpy.rtsp.RtspClient.get_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_state</span></code></a>(self)</p></td>
 <td><p>Returns the current session state.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.is_running" title="ifm3dpy.rtsp.RtspClient.is_running"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_running</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.is_running" title="ifm3dpy.rtsp.RtspClient.is_running"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_running</span></code></a>(self)</p></td>
 <td><p>Returns true while the worker thread is running.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.on_error" title="ifm3dpy.rtsp.RtspClient.on_error"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_error</span></code></a>(self[, callback])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.on_error" title="ifm3dpy.rtsp.RtspClient.on_error"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_error</span></code></a>(self[, callback])</p></td>
 <td><p>Registers a callback invoked on terminal errors.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.on_nal_unit" title="ifm3dpy.rtsp.RtspClient.on_nal_unit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_nal_unit</span></code></a>(self[, callback])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.on_nal_unit" title="ifm3dpy.rtsp.RtspClient.on_nal_unit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_nal_unit</span></code></a>(self[, callback])</p></td>
 <td><p>Registers a callback invoked for each reassembled NAL unit.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.on_new_frame" title="ifm3dpy.rtsp.RtspClient.on_new_frame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_new_frame</span></code></a>(self[, callback])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.on_new_frame" title="ifm3dpy.rtsp.RtspClient.on_new_frame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_new_frame</span></code></a>(self[, callback])</p></td>
 <td><p>Registers a callback invoked for each received frame.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.on_state_change" title="ifm3dpy.rtsp.RtspClient.on_state_change"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_state_change</span></code></a>(self[, callback])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.on_state_change" title="ifm3dpy.rtsp.RtspClient.on_state_change"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_state_change</span></code></a>(self[, callback])</p></td>
 <td><p>Registers a callback invoked on every session state transition.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.start" title="ifm3dpy.rtsp.RtspClient.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a>(self[, buffers])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.start" title="ifm3dpy.rtsp.RtspClient.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a>(self[, buffers])</p></td>
 <td><p>Performs the RTSP handshake and starts streaming.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.stop" title="ifm3dpy.rtsp.RtspClient.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.stop" title="ifm3dpy.rtsp.RtspClient.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>(self)</p></td>
 <td><p>Sends TEARDOWN, stops the worker thread and closes the socket.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Nested types</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.State" title="ifm3dpy.rtsp.RtspClient.State"><code class="xref py py-obj docutils literal notranslate"><span class="pre">State</span></code></a></p></td>
+<td><p>Lifecycle state of the RTSP session.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.Transport" title="ifm3dpy.rtsp.RtspClient.Transport"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transport</span></code></a></p></td>
+<td><p>RTP transport used for the media stream.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py class">
 <dt class="sig sig-object py" id="ifm3dpy.rtsp.RtspClient.State">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">State</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.State" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">State</span></span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.State" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.IntEnum" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></a></p>
 <p>Lifecycle state of the RTSP session.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.RtspClient.State.CONNECTING">
+<span class="sig-name descname"><span class="pre">CONNECTING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.State.CONNECTING" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.RtspClient.State.FAILED">
+<span class="sig-name descname"><span class="pre">FAILED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.State.FAILED" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.RtspClient.State.IDLE">
+<span class="sig-name descname"><span class="pre">IDLE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.State.IDLE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.RtspClient.State.PLAYING">
+<span class="sig-name descname"><span class="pre">PLAYING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.State.PLAYING" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.RtspClient.State.READY">
+<span class="sig-name descname"><span class="pre">READY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.State.READY" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.RtspClient.State.STOPPED">
+<span class="sig-name descname"><span class="pre">STOPPED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.State.STOPPED" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ifm3dpy.rtsp.RtspClient.Transport">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Transport</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.Transport" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Transport</span></span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.Transport" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.IntEnum" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></a></p>
 <p>RTP transport used for the media stream.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.RtspClient.Transport.INTERLEAVED">
+<span class="sig-name descname"><span class="pre">INTERLEAVED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.Transport.INTERLEAVED" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.RtspClient.Transport.UDP">
+<span class="sig-name descname"><span class="pre">UDP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.Transport.UDP" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.rtsp.RtspClient.get_state">
-<span class="sig-name descname"><span class="pre">get_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient" title="ifm3dpy.rtsp.RtspClient"><span class="pre">ifm3dpy.rtsp.RtspClient</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.State" title="ifm3dpy.rtsp.RtspClient.State"><span class="pre">ifm3dpy.rtsp.RtspClient.State</span></a></span></span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.get_state" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient" title="ifm3dpy.rtsp.RtspClient"><span class="pre">RtspClient</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.State" title="ifm3dpy.rtsp.RtspClient.State"><span class="pre">State</span></a></span></span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.get_state" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the current session state.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.rtsp.RtspClient.is_running">
-<span class="sig-name descname"><span class="pre">is_running</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient" title="ifm3dpy.rtsp.RtspClient"><span class="pre">ifm3dpy.rtsp.RtspClient</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.is_running" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">is_running</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient" title="ifm3dpy.rtsp.RtspClient"><span class="pre">RtspClient</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.is_running" title="Permalink to this definition"></a></dt>
 <dd><p>Returns true while the worker thread is running.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.rtsp.RtspClient.on_error">
-<span class="sig-name descname"><span class="pre">on_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient" title="ifm3dpy.rtsp.RtspClient"><span class="pre">ifm3dpy.rtsp.RtspClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="ifm3dpy.device.Error.html#ifm3dpy.device.Error" title="ifm3dpy.device.Error"><span class="pre">ifm3dpy.device.Error</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.on_error" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">on_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient" title="ifm3dpy.rtsp.RtspClient"><span class="pre">RtspClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="ifm3dpy.device.Error.html#ifm3dpy.device.Error" title="ifm3dpy.device.Error"><span class="pre">Error</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.on_error" title="Permalink to this definition"></a></dt>
 <dd><p>Registers a callback invoked on terminal errors.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.rtsp.RtspClient.on_nal_unit">
-<span class="sig-name descname"><span class="pre">on_nal_unit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient" title="ifm3dpy.rtsp.RtspClient"><span class="pre">ifm3dpy.rtsp.RtspClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="ifm3dpy.rtsp.NalUnit.html#ifm3dpy.rtsp.NalUnit" title="ifm3dpy.rtsp.NalUnit"><span class="pre">ifm3dpy.rtsp.NalUnit</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.on_nal_unit" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">on_nal_unit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient" title="ifm3dpy.rtsp.RtspClient"><span class="pre">RtspClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.14)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="ifm3dpy.rtsp.NalUnit.html#ifm3dpy.rtsp.NalUnit" title="ifm3dpy.rtsp.NalUnit"><span class="pre">NalUnit</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.on_nal_unit" title="Permalink to this definition"></a></dt>
 <dd><p>Registers a callback invoked for each reassembled NAL unit.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.rtsp.RtspClient.on_new_frame">
-<span class="sig-name descname"><span class="pre">on_new_frame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient" title="ifm3dpy.rtsp.RtspClient"><span class="pre">ifm3dpy.rtsp.RtspClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="ifm3dpy.framegrabber.Frame.html#ifm3dpy.framegrabber.Frame" title="ifm3dpy.framegrabber.Frame"><span class="pre">ifm3dpy.framegrabber.Frame</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.on_new_frame" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">on_new_frame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient" title="ifm3dpy.rtsp.RtspClient"><span class="pre">RtspClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.14)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="ifm3dpy.framegrabber.Frame.html#ifm3dpy.framegrabber.Frame" title="ifm3dpy.framegrabber.Frame"><span class="pre">Frame</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.on_new_frame" title="Permalink to this definition"></a></dt>
 <dd><p>Registers a callback invoked for each received frame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>callback</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Callable[[ifm3dpy.framegrabber.Frame]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">None]</span></code>, <em>optional</em>) – The callback receiving each decoded frame. Pass <code class="docutils literal notranslate"><span class="pre">None</span></code> to remove
+a previously registered callback.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.rtsp.RtspClient.on_state_change">
-<span class="sig-name descname"><span class="pre">on_state_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient" title="ifm3dpy.rtsp.RtspClient"><span class="pre">ifm3dpy.rtsp.RtspClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.State" title="ifm3dpy.rtsp.RtspClient.State"><span class="pre">ifm3dpy.rtsp.RtspClient.State</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.on_state_change" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">on_state_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient" title="ifm3dpy.rtsp.RtspClient"><span class="pre">RtspClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.14)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient.State" title="ifm3dpy.rtsp.RtspClient.State"><span class="pre">State</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.on_state_change" title="Permalink to this definition"></a></dt>
 <dd><p>Registers a callback invoked on every session state transition.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.rtsp.RtspClient.start">
-<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient" title="ifm3dpy.rtsp.RtspClient"><span class="pre">ifm3dpy.rtsp.RtspClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="ifm3dpy.framegrabber.buffer_id.html#ifm3dpy.framegrabber.buffer_id" title="ifm3dpy.framegrabber.buffer_id"><span class="pre">ifm3dpy.framegrabber.buffer_id</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ifm3dpy.Awaitable.html#ifm3dpy.Awaitable" title="ifm3dpy.Awaitable"><span class="pre">ifm3dpy.Awaitable</span></a></span></span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.start" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient" title="ifm3dpy.rtsp.RtspClient"><span class="pre">RtspClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.14)"><span class="pre">Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="ifm3dpy.framegrabber.buffer_id.html#ifm3dpy.framegrabber.buffer_id" title="ifm3dpy.framegrabber.buffer_id"><span class="pre">buffer_id</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ifm3dpy.Awaitable.html#ifm3dpy.Awaitable" title="ifm3dpy.Awaitable"><span class="pre">Awaitable</span></a></span></span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.start" title="Permalink to this definition"></a></dt>
 <dd><p>Performs the RTSP handshake and starts streaming.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>buffers</strong> (<em>list</em><em>[</em><a class="reference internal" href="ifm3dpy.framegrabber.buffer_id.html#ifm3dpy.framegrabber.buffer_id" title="ifm3dpy.framegrabber.buffer_id"><em>ifm3dpy.framegrabber.buffer_id</em></a><em>]</em><em>, </em><em>optional</em>) – Buffers to make available on each received frame. Supported ids are
+<dd class="field-odd"><p><strong>buffers</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list[ifm3dpy.framegrabber.buffer_id]</span></code>, <em>optional</em>) – Buffers to make available on each received frame. Supported ids are
 <code class="docutils literal notranslate"><span class="pre">COMPRESSED_H264_FRAME</span></code>, <code class="docutils literal notranslate"><span class="pre">RGB_IMAGE</span></code>, <code class="docutils literal notranslate"><span class="pre">YUV420_IMAGE</span></code> and
 <code class="docutils literal notranslate"><span class="pre">RGB_INFO</span></code>. An empty list, the default, requests all four; each
 one costs additional per-frame work, so pass only what you consume.</p>
@@ -260,21 +295,21 @@ one costs additional per-frame work, so pass only what you consume.</p>
 <dd class="field-even"><p>Resolves once the stream is playing, or raises on failure.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="ifm3dpy.Awaitable.html#ifm3dpy.Awaitable" title="ifm3dpy.Awaitable">Awaitable</a></p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Awaitable</span></code></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.rtsp.RtspClient.stop">
-<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient" title="ifm3dpy.rtsp.RtspClient"><span class="pre">ifm3dpy.rtsp.RtspClient</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ifm3dpy.Awaitable.html#ifm3dpy.Awaitable" title="ifm3dpy.Awaitable"><span class="pre">ifm3dpy.Awaitable</span></a></span></span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.stop" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.rtsp.RtspClient" title="ifm3dpy.rtsp.RtspClient"><span class="pre">RtspClient</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ifm3dpy.Awaitable.html#ifm3dpy.Awaitable" title="ifm3dpy.Awaitable"><span class="pre">Awaitable</span></a></span></span><a class="headerlink" href="#ifm3dpy.rtsp.RtspClient.stop" title="Permalink to this definition"></a></dt>
 <dd><p>Sends TEARDOWN, stops the worker thread and closes the socket.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>Resolves once the client has stopped.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="ifm3dpy.Awaitable.html#ifm3dpy.Awaitable" title="ifm3dpy.Awaitable">Awaitable</a></p>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Awaitable</span></code></p>
 </dd>
 </dl>
 </dd></dl>

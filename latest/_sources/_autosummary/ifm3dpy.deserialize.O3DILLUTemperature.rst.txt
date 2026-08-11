@@ -4,24 +4,89 @@ ifm3dpy.deserialize.O3DILLUTemperature
 .. currentmodule:: ifm3dpy.deserialize
 
 .. autoclass:: O3DILLUTemperature
-   :members:                                   
-   :show-inheritance:                           
-   :inherited-members:                          
+   :members:
+   :show-inheritance:
+   :inherited-members: ndarray, int, Enum
 
    
+   
    .. automethod:: __init__
+   
 
+   
    
    .. rubric:: Methods
 
    .. autosummary::
    
       ~O3DILLUTemperature.__init__
-      ~O3DILLUTemperature._pybind11_conduit_v1_
       ~O3DILLUTemperature.deserialize
    
    
 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
    
    
    .. rubric:: Attributes

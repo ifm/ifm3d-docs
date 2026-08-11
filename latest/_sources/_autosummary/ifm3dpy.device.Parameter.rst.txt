@@ -4,16 +4,48 @@ ifm3dpy.device.Parameter
 .. currentmodule:: ifm3dpy.device
 
 .. autoclass:: Parameter
-   :members:                                   
-   :show-inheritance:                           
-   :inherited-members:                          
-
-   
-   .. automethod:: __init__
+   :members:
+   :show-inheritance:
+   :inherited-members: ndarray, int, Enum
 
    
    
 
+   
+   
+   
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
    
    
    .. rubric:: Attributes
@@ -28,6 +60,5 @@ ifm3dpy.device.Parameter
       ~Parameter.PDS_GET_ITEM
       ~Parameter.PDS_GET_RACK
       ~Parameter.PDS_VOL_CHECK
-      ~Parameter.__members__
    
    

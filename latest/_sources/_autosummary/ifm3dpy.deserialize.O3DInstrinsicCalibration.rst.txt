@@ -4,24 +4,89 @@ ifm3dpy.deserialize.O3DInstrinsicCalibration
 .. currentmodule:: ifm3dpy.deserialize
 
 .. autoclass:: O3DInstrinsicCalibration
-   :members:                                   
-   :show-inheritance:                           
-   :inherited-members:                          
+   :members:
+   :show-inheritance:
+   :inherited-members: ndarray, int, Enum
 
    
+   
    .. automethod:: __init__
+   
 
+   
    
    .. rubric:: Methods
 
    .. autosummary::
    
       ~O3DInstrinsicCalibration.__init__
-      ~O3DInstrinsicCalibration._pybind11_conduit_v1_
       ~O3DInstrinsicCalibration.deserialize
    
    
 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
    
    
    .. rubric:: Attributes

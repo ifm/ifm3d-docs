@@ -4,31 +4,115 @@ ifm3dpy.device.IFMNetworkDevice
 .. currentmodule:: ifm3dpy.device
 
 .. autoclass:: IFMNetworkDevice
-   :members:                                   
-   :show-inheritance:                           
-   :inherited-members:                          
+   :members:
+   :show-inheritance:
+   :inherited-members: ndarray, int, Enum
 
    
+   
    .. automethod:: __init__
+   
 
+   
    
    .. rubric:: Methods
 
    .. autosummary::
    
       ~IFMNetworkDevice.__init__
-      ~IFMNetworkDevice._pybind11_conduit_v1_
       ~IFMNetworkDevice.has_flag
    
    
 
    
    
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
+   
+   
    .. rubric:: Attributes
 
    .. autosummary::
    
-      ~IFMNetworkDevice.__doc__
       ~IFMNetworkDevice.device_id
       ~IFMNetworkDevice.device_name
       ~IFMNetworkDevice.flags

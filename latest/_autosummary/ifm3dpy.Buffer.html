@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ifm3dpy.device.PCICCommand &mdash; ifm3d v2.0.5 documentation</title>
+  <title>ifm3dpy.Buffer &mdash; ifm3d v2.0.5 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -22,8 +22,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ifm3dpy.device.Parameter" href="ifm3dpy.device.Parameter.html" />
-    <link rel="prev" title="ifm3dpy.device.O3X" href="ifm3dpy.device.O3X.html" /> 
+    <link rel="next" title="ifm3dpy.FrameAwaitable" href="ifm3dpy.FrameAwaitable.html" />
+    <link rel="prev" title="ifm3dpy.Awaitable" href="ifm3dpy.Awaitable.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -52,27 +52,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../content/cmdline_overview.html">Command Line tool</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../content/manip_images/index.html">Manipulating images</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../python_api.html">Python API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.html">ifm3dpy</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="ifm3dpy.device.html">ifm3dpy.device</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.Device.html">ifm3dpy.device.Device</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.IFMNetworkDevice.html">ifm3dpy.device.IFMNetworkDevice</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.LegacyDevice.html">ifm3dpy.device.LegacyDevice</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.O3C.html">ifm3dpy.device.O3C</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.O3D.html">ifm3dpy.device.O3D</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.O3R.html">ifm3dpy.device.O3R</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.O3RSealedBox.html">ifm3dpy.device.O3RSealedBox</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.O3X.html">ifm3dpy.device.O3X</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">ifm3dpy.device.PCICCommand</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.Parameter.html">ifm3dpy.device.Parameter</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.PortInfo.html">ifm3dpy.device.PortInfo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.RtspControlInfo.html">ifm3dpy.device.RtspControlInfo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.RtspInfo.html">ifm3dpy.device.RtspInfo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.RtspMediaEndpoint.html">ifm3dpy.device.RtspMediaEndpoint</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.SemVer.html">ifm3dpy.device.SemVer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.SetTemporaryApplicationParameter.html">ifm3dpy.device.SetTemporaryApplicationParameter</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.Error.html">ifm3dpy.device.Error</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="ifm3dpy.html">ifm3dpy</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.Awaitable.html">ifm3dpy.Awaitable</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ifm3dpy.Buffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.FrameAwaitable.html">ifm3dpy.FrameAwaitable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.PCICCommandResponseAwaitable.html">ifm3dpy.PCICCommandResponseAwaitable</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.device.html">ifm3dpy.device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.framegrabber.html">ifm3dpy.framegrabber</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.rtsp.html">ifm3dpy.rtsp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.swupdater.html">ifm3dpy.swupdater</a></li>
@@ -101,10 +88,10 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a></li>
           <li class="breadcrumb-item"><a href="../python_api.html">Python API Reference</a></li>
-          <li class="breadcrumb-item"><a href="ifm3dpy.device.html">ifm3dpy.device</a></li>
-      <li class="breadcrumb-item active">ifm3dpy.device.PCICCommand</li>
+          <li class="breadcrumb-item"><a href="ifm3dpy.html">ifm3dpy</a></li>
+      <li class="breadcrumb-item active">ifm3dpy.Buffer</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/_autosummary/ifm3dpy.device.PCICCommand.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/_autosummary/ifm3dpy.Buffer.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -112,14 +99,36 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="ifm3dpy-device-pciccommand">
-<h1>ifm3dpy.device.PCICCommand<a class="headerlink" href="#ifm3dpy-device-pciccommand" title="Permalink to this heading"></a></h1>
+  <section id="ifm3dpy-buffer">
+<h1>ifm3dpy.Buffer<a class="headerlink" href="#ifm3dpy-buffer" title="Permalink to this heading"></a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="ifm3dpy.device.PCICCommand">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ifm3dpy.device.</span></span><span class="sig-name descname"><span class="pre">PCICCommand</span></span><a class="headerlink" href="#ifm3dpy.device.PCICCommand" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>Base class for the commands which can be sent to a device over PCIC.</p>
-<p>See <a class="reference internal" href="ifm3dpy.device.SetTemporaryApplicationParameter.html#ifm3dpy.device.SetTemporaryApplicationParameter" title="ifm3dpy.device.SetTemporaryApplicationParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">SetTemporaryApplicationParameter</span></code></a> for a concrete command.</p>
+<dt class="sig sig-object py" id="ifm3dpy.Buffer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ifm3dpy.</span></span><span class="sig-name descname"><span class="pre">Buffer</span></span><a class="headerlink" href="#ifm3dpy.Buffer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></p>
+<p>A <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> subclass carrying the image data of a single
+buffer together with the metadata reported by the device.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.Buffer.metadata">
+<span class="sig-name descname"><span class="pre">metadata</span></span><a class="headerlink" href="#ifm3dpy.Buffer.metadata" title="Permalink to this definition"></a></dt>
+<dd><p>The metadata associated with this buffer, as reported by the device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.Buffer.buffer_id">
+<span class="sig-name descname"><span class="pre">buffer_id</span></span><a class="headerlink" href="#ifm3dpy.Buffer.buffer_id" title="Permalink to this definition"></a></dt>
+<dd><p>The id of the buffer this data was received for.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ifm3dpy.framegrabber.buffer_id.html#ifm3dpy.framegrabber.buffer_id" title="ifm3dpy.framegrabber.buffer_id"><code class="xref py py-class docutils literal notranslate"><span class="pre">ifm3dpy.framegrabber.buffer_id</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </section>

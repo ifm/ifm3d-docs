@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ifm3dpy.deserialize.deserialize &mdash; ifm3d v2.0.4 documentation</title>
+  <title>ifm3dpy.deserialize.deserialize &mdash; ifm3d v2.0.5 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -34,7 +34,7 @@
             <a href="../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v2.0.4
+                v2.0.5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -116,9 +116,23 @@
 <h1>ifm3dpy.deserialize.deserialize<a class="headerlink" href="#ifm3dpy-deserialize-deserialize" title="Permalink to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="ifm3dpy.deserialize.deserialize">
-<span class="sig-prename descclassname"><span class="pre">ifm3dpy.deserialize.</span></span><span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#ifm3dpy.deserialize.deserialize" title="Permalink to this definition"></a></dt>
-<dd><p>Deserialize the given buffer and return the appropriate data structure.
-Returns None if the buffer could not be interpreted.</p>
+<span class="sig-prename descclassname"><span class="pre">ifm3dpy.deserialize.</span></span><span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ifm3dpy.Buffer.html#ifm3dpy.Buffer" title="ifm3dpy.Buffer"><span class="pre">Buffer</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ifm3dpy.deserialize.ODSInfoV1.html#ifm3dpy.deserialize.ODSInfoV1" title="ifm3dpy.deserialize.ODSInfoV1"><span class="pre">ODSInfoV1</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="ifm3dpy.deserialize.TOFInfoV3.html#ifm3dpy.deserialize.TOFInfoV3" title="ifm3dpy.deserialize.TOFInfoV3"><span class="pre">TOFInfoV3</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="ifm3dpy.deserialize.TOFInfoV4.html#ifm3dpy.deserialize.TOFInfoV4" title="ifm3dpy.deserialize.TOFInfoV4"><span class="pre">TOFInfoV4</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="ifm3dpy.deserialize.RGBInfoV1.html#ifm3dpy.deserialize.RGBInfoV1" title="ifm3dpy.deserialize.RGBInfoV1"><span class="pre">RGBInfoV1</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="ifm3dpy.deserialize.ODSOccupancyGridV1.html#ifm3dpy.deserialize.ODSOccupancyGridV1" title="ifm3dpy.deserialize.ODSOccupancyGridV1"><span class="pre">ODSOccupancyGridV1</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="ifm3dpy.deserialize.ODSPolarOccupancyGridV1.html#ifm3dpy.deserialize.ODSPolarOccupancyGridV1" title="ifm3dpy.deserialize.ODSPolarOccupancyGridV1"><span class="pre">ODSPolarOccupancyGridV1</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.html#ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1" title="ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1"><span class="pre">ODSExtrinsicCalibrationCorrectionV1</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="ifm3dpy.deserialize.IMUInfoV1.html#ifm3dpy.deserialize.IMUInfoV1" title="ifm3dpy.deserialize.IMUInfoV1"><span class="pre">IMUInfoV1</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#ifm3dpy.deserialize.deserialize" title="Permalink to this definition"></a></dt>
+<dd><p>Deserialize the given buffer and return the appropriate data structure.</p>
+<p>The structure returned is selected based on the <code class="docutils literal notranslate"><span class="pre">buffer_id</span></code> of the
+provided buffer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>buffer</strong> (<a class="reference internal" href="ifm3dpy.Buffer.html#ifm3dpy.Buffer" title="ifm3dpy.Buffer"><code class="xref py py-class docutils literal notranslate"><span class="pre">ifm3dpy.Buffer</span></code></a>) – A buffer as returned by
+<a class="reference internal" href="ifm3dpy.framegrabber.Frame.html#ifm3dpy.framegrabber.Frame.get_buffer" title="ifm3dpy.framegrabber.Frame.get_buffer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ifm3dpy.framegrabber.Frame.get_buffer()</span></code></a>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The deserialized structure, or <code class="docutils literal notranslate"><span class="pre">None</span></code> if the buffer could not be
+interpreted.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ifm3dpy.deserialize.ODSInfoV1.html#ifm3dpy.deserialize.ODSInfoV1" title="ifm3dpy.deserialize.ODSInfoV1"><code class="xref py py-class docutils literal notranslate"><span class="pre">ODSInfoV1</span></code></a> or <a class="reference internal" href="ifm3dpy.deserialize.TOFInfoV3.html#ifm3dpy.deserialize.TOFInfoV3" title="ifm3dpy.deserialize.TOFInfoV3"><code class="xref py py-class docutils literal notranslate"><span class="pre">TOFInfoV3</span></code></a> or <a class="reference internal" href="ifm3dpy.deserialize.TOFInfoV4.html#ifm3dpy.deserialize.TOFInfoV4" title="ifm3dpy.deserialize.TOFInfoV4"><code class="xref py py-class docutils literal notranslate"><span class="pre">TOFInfoV4</span></code></a> or <a class="reference internal" href="ifm3dpy.deserialize.RGBInfoV1.html#ifm3dpy.deserialize.RGBInfoV1" title="ifm3dpy.deserialize.RGBInfoV1"><code class="xref py py-class docutils literal notranslate"><span class="pre">RGBInfoV1</span></code></a> or <a class="reference internal" href="ifm3dpy.deserialize.ODSOccupancyGridV1.html#ifm3dpy.deserialize.ODSOccupancyGridV1" title="ifm3dpy.deserialize.ODSOccupancyGridV1"><code class="xref py py-class docutils literal notranslate"><span class="pre">ODSOccupancyGridV1</span></code></a> or <a class="reference internal" href="ifm3dpy.deserialize.ODSPolarOccupancyGridV1.html#ifm3dpy.deserialize.ODSPolarOccupancyGridV1" title="ifm3dpy.deserialize.ODSPolarOccupancyGridV1"><code class="xref py py-class docutils literal notranslate"><span class="pre">ODSPolarOccupancyGridV1</span></code></a> or <a class="reference internal" href="ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.html#ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1" title="ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1"><code class="xref py py-class docutils literal notranslate"><span class="pre">ODSExtrinsicCalibrationCorrectionV1</span></code></a> or <a class="reference internal" href="ifm3dpy.deserialize.IMUInfoV1.html#ifm3dpy.deserialize.IMUInfoV1" title="ifm3dpy.deserialize.IMUInfoV1"><code class="xref py py-class docutils literal notranslate"><span class="pre">IMUInfoV1</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
+</dd>
+</dl>
 </dd></dl>
 
 </section>

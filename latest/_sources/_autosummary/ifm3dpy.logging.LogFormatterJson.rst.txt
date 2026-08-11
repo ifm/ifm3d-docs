@@ -4,24 +4,84 @@ ifm3dpy.logging.LogFormatterJson
 .. currentmodule:: ifm3dpy.logging
 
 .. autoclass:: LogFormatterJson
-   :members:                                   
-   :show-inheritance:                           
-   :inherited-members:                          
+   :members:
+   :show-inheritance:
+   :inherited-members: ndarray, int, Enum
 
    
-   .. automethod:: __init__
+   
 
+   
    
    .. rubric:: Methods
 
    .. autosummary::
    
-      ~LogFormatterJson.__init__
-      ~LogFormatterJson._pybind11_conduit_v1_
       ~LogFormatterJson.format
    
    
 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
    
    
    

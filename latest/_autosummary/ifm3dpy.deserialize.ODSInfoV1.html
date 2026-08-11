@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ifm3dpy.deserialize.ODSInfoV1 &mdash; ifm3d v2.0.4 documentation</title>
+  <title>ifm3dpy.deserialize.ODSInfoV1 &mdash; ifm3d v2.0.5 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -34,7 +34,7 @@
             <a href="../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v2.0.4
+                v2.0.5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -117,11 +117,11 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="ifm3dpy.deserialize.ODSInfoV1">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ifm3dpy.deserialize.</span></span><span class="sig-name descname"><span class="pre">ODSInfoV1</span></span><a class="headerlink" href="#ifm3dpy.deserialize.ODSInfoV1" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Class for managing an instance of an struct ODSInfoV1</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.deserialize.ODSInfoV1.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.deserialize.ODSInfoV1" title="ifm3dpy.deserialize.ODSInfoV1"><span class="pre">ifm3dpy.deserialize.ODSInfoV1</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.deserialize.ODSInfoV1.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.deserialize.ODSInfoV1" title="ifm3dpy.deserialize.ODSInfoV1"><span class="pre">ODSInfoV1</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#ifm3dpy.deserialize.ODSInfoV1.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor</p>
 </dd></dl>
 
@@ -135,10 +135,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.ODSInfoV1.__init__" title="ifm3dpy.deserialize.ODSInfoV1.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self)</p></td>
 <td><p>Constructor</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_pybind11_conduit_v1_</span></code></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.ODSInfoV1.deserialize" title="ifm3dpy.deserialize.ODSInfoV1.deserialize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deserialize</span></code></a>(arg0)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.ODSInfoV1.deserialize" title="ifm3dpy.deserialize.ODSInfoV1.deserialize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deserialize</span></code></a>(buffer)</p></td>
 <td><p>Deserialize ODS_INFO Buffer to ODSInfoV1 struct</p></td>
 </tr>
 </tbody>
@@ -163,8 +160,19 @@
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.deserialize.ODSInfoV1.deserialize">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Annotated</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.ArrayLike</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.uint8</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#ifm3dpy.deserialize.ODSInfoV1" title="ifm3dpy.deserialize.ODSInfoV1"><span class="pre">ifm3dpy.deserialize.ODSInfoV1</span></a></span></span><a class="headerlink" href="#ifm3dpy.deserialize.ODSInfoV1.deserialize" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Annotated" title="(in Python v3.14)"><span class="pre">Annotated</span></a><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.ArrayLike</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.uint8</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#ifm3dpy.deserialize.ODSInfoV1" title="ifm3dpy.deserialize.ODSInfoV1"><span class="pre">ODSInfoV1</span></a></span></span><a class="headerlink" href="#ifm3dpy.deserialize.ODSInfoV1.deserialize" title="Permalink to this definition"></a></dt>
 <dd><p>Deserialize ODS_INFO Buffer to ODSInfoV1 struct</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>buffer</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>) – The raw buffer data as an array of <code class="docutils literal notranslate"><span class="pre">numpy.uint8</span></code>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The deserialized structure.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#ifm3dpy.deserialize.ODSInfoV1" title="ifm3dpy.deserialize.ODSInfoV1"><code class="xref py py-class docutils literal notranslate"><span class="pre">ODSInfoV1</span></code></a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py property">

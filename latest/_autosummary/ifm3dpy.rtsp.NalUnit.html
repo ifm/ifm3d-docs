@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ifm3dpy.rtsp.NalUnit &mdash; ifm3d v2.0.4 documentation</title>
+  <title>ifm3dpy.rtsp.NalUnit &mdash; ifm3d v2.0.5 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -34,7 +34,7 @@
             <a href="../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v2.0.4
+                v2.0.5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -103,25 +103,17 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="ifm3dpy.rtsp.NalUnit">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ifm3dpy.rtsp.</span></span><span class="sig-name descname"><span class="pre">NalUnit</span></span><a class="headerlink" href="#ifm3dpy.rtsp.NalUnit" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>A single, fully reassembled H.264 NAL unit.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="ifm3dpy.rtsp.NalUnit.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ifm3dpy.rtsp.NalUnit.__init__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<p class="rubric">Methods</p>
+<p class="rubric">Nested types</p>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.NalUnit.__init__" title="ifm3dpy.rtsp.NalUnit.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(*args, **kwargs)</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_pybind11_conduit_v1_</span></code></p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.rtsp.NalUnit.Type" title="ifm3dpy.rtsp.NalUnit.Type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Type</span></code></a></p></td>
+<td><p>H.264 NAL unit type values (ITU-T H.264 Table 7-1).</p></td>
 </tr>
 </tbody>
 </table>
@@ -157,9 +149,39 @@
 </table>
 <dl class="py class">
 <dt class="sig sig-object py" id="ifm3dpy.rtsp.NalUnit.Type">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ifm3dpy.rtsp.NalUnit.Type" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Type</span></span><a class="headerlink" href="#ifm3dpy.rtsp.NalUnit.Type" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.IntEnum" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></a></p>
 <p>H.264 NAL unit type values (ITU-T H.264 Table 7-1).</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.NalUnit.Type.ACCESS_UNIT_DELIMITER">
+<span class="sig-name descname"><span class="pre">ACCESS_UNIT_DELIMITER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#ifm3dpy.rtsp.NalUnit.Type.ACCESS_UNIT_DELIMITER" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.NalUnit.Type.IDR_SLICE">
+<span class="sig-name descname"><span class="pre">IDR_SLICE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#ifm3dpy.rtsp.NalUnit.Type.IDR_SLICE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.NalUnit.Type.NON_IDR_SLICE">
+<span class="sig-name descname"><span class="pre">NON_IDR_SLICE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#ifm3dpy.rtsp.NalUnit.Type.NON_IDR_SLICE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.NalUnit.Type.PPS">
+<span class="sig-name descname"><span class="pre">PPS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#ifm3dpy.rtsp.NalUnit.Type.PPS" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.NalUnit.Type.SEI">
+<span class="sig-name descname"><span class="pre">SEI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#ifm3dpy.rtsp.NalUnit.Type.SEI" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.rtsp.NalUnit.Type.SPS">
+<span class="sig-name descname"><span class="pre">SPS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#ifm3dpy.rtsp.NalUnit.Type.SPS" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="py property">

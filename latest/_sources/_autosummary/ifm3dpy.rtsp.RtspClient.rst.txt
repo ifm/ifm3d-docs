@@ -4,20 +4,22 @@ ifm3dpy.rtsp.RtspClient
 .. currentmodule:: ifm3dpy.rtsp
 
 .. autoclass:: RtspClient
-   :members:                                   
-   :show-inheritance:                           
-   :inherited-members:                          
+   :members:
+   :show-inheritance:
+   :inherited-members: ndarray, int, Enum
 
    
+   
    .. automethod:: __init__
+   
 
+   
    
    .. rubric:: Methods
 
    .. autosummary::
    
       ~RtspClient.__init__
-      ~RtspClient._pybind11_conduit_v1_
       ~RtspClient.get_state
       ~RtspClient.is_running
       ~RtspClient.on_error
@@ -29,6 +31,96 @@ ifm3dpy.rtsp.RtspClient
    
    
 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   .. rubric:: Nested types
+
+   .. autosummary::
+   
+      ~RtspClient.State
+      ~RtspClient.Transport
+   
+   
+
+   
    
    
    

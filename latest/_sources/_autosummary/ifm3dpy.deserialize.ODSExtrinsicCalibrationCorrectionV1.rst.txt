@@ -4,24 +4,97 @@ ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1
 .. currentmodule:: ifm3dpy.deserialize
 
 .. autoclass:: ODSExtrinsicCalibrationCorrectionV1
-   :members:                                   
-   :show-inheritance:                           
-   :inherited-members:                          
+   :members:
+   :show-inheritance:
+   :inherited-members: ndarray, int, Enum
 
    
+   
    .. automethod:: __init__
+   
 
+   
    
    .. rubric:: Methods
 
    .. autosummary::
    
       ~ODSExtrinsicCalibrationCorrectionV1.__init__
-      ~ODSExtrinsicCalibrationCorrectionV1._pybind11_conduit_v1_
       ~ODSExtrinsicCalibrationCorrectionV1.deserialize
    
    
 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
    
    
    .. rubric:: Attributes

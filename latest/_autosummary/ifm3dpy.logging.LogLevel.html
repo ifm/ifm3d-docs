@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ifm3dpy.logging.LogLevel &mdash; ifm3d v2.0.4 documentation</title>
+  <title>ifm3dpy.logging.LogLevel &mdash; ifm3d v2.0.5 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -34,7 +34,7 @@
             <a href="../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v2.0.4
+                v2.0.5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -105,14 +105,9 @@
 <h1>ifm3dpy.logging.LogLevel<a class="headerlink" href="#ifm3dpy-logging-loglevel" title="Permalink to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ifm3dpy.logging.LogLevel">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ifm3dpy.logging.</span></span><span class="sig-name descname"><span class="pre">LogLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ifm3dpy.logging.LogLevel" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ifm3dpy.logging.</span></span><span class="sig-name descname"><span class="pre">LogLevel</span></span><a class="headerlink" href="#ifm3dpy.logging.LogLevel" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.IntEnum" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></a></p>
 <p>Enum: The log level.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="ifm3dpy.logging.LogLevel.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ifm3dpy.logging.LogLevel.__init__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
 <p class="rubric">Attributes</p>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -120,32 +115,64 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.logging.LogLevel.Off" title="ifm3dpy.logging.LogLevel.Off"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Off</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Critical</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.logging.LogLevel.Critical" title="ifm3dpy.logging.LogLevel.Critical"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Critical</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Error</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.logging.LogLevel.Error" title="ifm3dpy.logging.LogLevel.Error"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Error</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Warning</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.logging.LogLevel.Warning" title="ifm3dpy.logging.LogLevel.Warning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Warning</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Info</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.logging.LogLevel.Info" title="ifm3dpy.logging.LogLevel.Info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Info</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Debug</span></code></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.logging.LogLevel.Debug" title="ifm3dpy.logging.LogLevel.Debug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Debug</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Verbose</span></code></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__members__</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.logging.LogLevel.Verbose" title="ifm3dpy.logging.LogLevel.Verbose"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Verbose</span></code></a></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.logging.LogLevel.Critical">
+<span class="sig-name descname"><span class="pre">Critical</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#ifm3dpy.logging.LogLevel.Critical" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.logging.LogLevel.Debug">
+<span class="sig-name descname"><span class="pre">Debug</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#ifm3dpy.logging.LogLevel.Debug" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.logging.LogLevel.Error">
+<span class="sig-name descname"><span class="pre">Error</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#ifm3dpy.logging.LogLevel.Error" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.logging.LogLevel.Info">
+<span class="sig-name descname"><span class="pre">Info</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#ifm3dpy.logging.LogLevel.Info" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.logging.LogLevel.Off">
+<span class="sig-name descname"><span class="pre">Off</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#ifm3dpy.logging.LogLevel.Off" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.logging.LogLevel.Verbose">
+<span class="sig-name descname"><span class="pre">Verbose</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#ifm3dpy.logging.LogLevel.Verbose" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ifm3dpy.logging.LogLevel.Warning">
+<span class="sig-name descname"><span class="pre">Warning</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#ifm3dpy.logging.LogLevel.Warning" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 </section>

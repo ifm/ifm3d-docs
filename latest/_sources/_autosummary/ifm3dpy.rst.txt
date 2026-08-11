@@ -20,6 +20,7 @@
       :template: class.rst               
    
       Awaitable
+      Buffer
       FrameAwaitable
       PCICCommandResponseAwaitable
    

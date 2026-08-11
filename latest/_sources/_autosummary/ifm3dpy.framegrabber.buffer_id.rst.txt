@@ -4,16 +4,108 @@ ifm3dpy.framegrabber.buffer\_id
 .. currentmodule:: ifm3dpy.framegrabber
 
 .. autoclass:: buffer_id
-   :members:                                   
-   :show-inheritance:                           
-   :inherited-members:                          
-
-   
-   .. automethod:: __init__
+   :members:
+   :show-inheritance:
+   :inherited-members: ndarray, int, Enum
 
    
    
 
+   
+   
+   
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
    
    
    .. rubric:: Attributes
@@ -41,9 +133,7 @@ ifm3dpy.framegrabber.buffer\_id
       ~buffer_id.INTRINSIC_CALIB
       ~buffer_id.INVERSE_INTRINSIC_CALIBRATION
       ~buffer_id.TOF_INFO
-      ~buffer_id.O3R_DISTANCE_IMAGE_INFO
       ~buffer_id.RGB_INFO
-      ~buffer_id.O3R_RGB_IMAGE_INFO
       ~buffer_id.JSON_MODEL
       ~buffer_id.ALGO_DEBUG
       ~buffer_id.O3R_ODS_OCCUPANCY_GRID
@@ -60,6 +150,5 @@ ifm3dpy.framegrabber.buffer\_id
       ~buffer_id.COMPRESSED_H264_FRAME
       ~buffer_id.RGB_IMAGE
       ~buffer_id.YUV420_IMAGE
-      ~buffer_id.__members__
    
    
