@@ -20,9 +20,12 @@ ifm3dpy.device.SetTemporaryApplicationParameter
    .. autosummary::
    
       ~SetTemporaryApplicationParameter.__init__
+      ~SetTemporaryApplicationParameter.serialize_data
    
    
 
+   
+   
    
    
    

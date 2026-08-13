@@ -10,11 +10,22 @@ ifm3dpy.device.PCICCommand
 
    
    
+   .. automethod:: __init__
+   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PCICCommand.__init__
+      ~PCICCommand.serialize_data
+   
+   
 
    
    
-   
-
    
    
    

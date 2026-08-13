@@ -118,8 +118,43 @@
 <dt class="sig sig-object py" id="ifm3dpy.device.PCICCommand">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ifm3dpy.device.</span></span><span class="sig-name descname"><span class="pre">PCICCommand</span></span><a class="headerlink" href="#ifm3dpy.device.PCICCommand" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>Base class for the commands which can be sent to a device over PCIC.</p>
-<p>See <a class="reference internal" href="ifm3dpy.device.SetTemporaryApplicationParameter.html#ifm3dpy.device.SetTemporaryApplicationParameter" title="ifm3dpy.device.SetTemporaryApplicationParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">SetTemporaryApplicationParameter</span></code></a> for a concrete command.</p>
+<p>Base class for PCIC commands.</p>
+<p>Use this class as a Python base type when implementing custom
+command payloads for framegrabber communication.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.device.PCICCommand.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.device.PCICCommand" title="ifm3dpy.device.PCICCommand"><span class="pre">PCICCommand</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#ifm3dpy.device.PCICCommand.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.device.PCICCommand.__init__" title="ifm3dpy.device.PCICCommand.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.device.PCICCommand.serialize_data" title="ifm3dpy.device.PCICCommand.serialize_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">serialize_data</span></code></a>(self)</p></td>
+<td><p>Serialize this command into the byte payload sent over PCIC.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.device.PCICCommand.serialize_data">
+<span class="sig-name descname"><span class="pre">serialize_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.device.PCICCommand" title="ifm3dpy.device.PCICCommand"><span class="pre">PCICCommand</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#ifm3dpy.device.PCICCommand.serialize_data" title="Permalink to this definition"></a></dt>
+<dd><p>Serialize this command into the byte payload sent over PCIC.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Serialized payload as byte values.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">list[int]</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </section>
