@@ -165,22 +165,22 @@
 
     <span class="c1"># Get the first available 3D port</span>
     <span class="k">for</span> <span class="n">port</span> <span class="ow">in</span> <span class="n">o3r</span><span class="o">.</span><span class="n">ports</span><span class="p">():</span>
-        <span class="k">if</span> <span class="n">port</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;3D&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">port</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">"3D"</span><span class="p">:</span>
             <span class="c1"># Get the first 3D port</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Using first available 3D Port </span><span class="si">{</span><span class="n">port</span><span class="o">.</span><span class="n">port</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Using first available 3D Port </span><span class="si">{</span><span class="n">port</span><span class="o">.</span><span class="n">port</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
             <span class="n">PORT</span> <span class="o">=</span> <span class="n">port</span><span class="o">.</span><span class="n">port</span>
             <span class="n">PCIC_PORT</span> <span class="o">=</span> <span class="n">port</span><span class="o">.</span><span class="n">pcic_port</span>
             <span class="k">break</span>
 
     <span class="k">if</span> <span class="n">PORT</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No 3D port found&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"No 3D port found"</span><span class="p">)</span>
         <span class="k">return</span>
 
-    <span class="n">STATE</span> <span class="o">=</span> <span class="n">CONFIG</span><span class="p">[</span><span class="s2">&quot;ports&quot;</span><span class="p">][</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">PORT</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">][</span><span class="s2">&quot;state&quot;</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">STATE</span> <span class="o">!=</span> <span class="s2">&quot;RUN&quot;</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Port </span><span class="si">{</span><span class="n">PORT</span><span class="si">}</span><span class="s2"> is in </span><span class="si">{</span><span class="n">STATE</span><span class="si">}</span><span class="s2"> state and not in RUN state&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Set the camera RUN state&quot;</span><span class="p">)</span>
-        <span class="n">o3r</span><span class="o">.</span><span class="n">set</span><span class="p">({</span><span class="s2">&quot;ports&quot;</span><span class="p">:</span> <span class="p">{</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">PORT</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;RUN&quot;</span><span class="p">}}})</span>
+    <span class="n">STATE</span> <span class="o">=</span> <span class="n">CONFIG</span><span class="p">[</span><span class="s2">"ports"</span><span class="p">][</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">PORT</span><span class="si">}</span><span class="s2">"</span><span class="p">][</span><span class="s2">"state"</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">STATE</span> <span class="o">!=</span> <span class="s2">"RUN"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Port </span><span class="si">{</span><span class="n">PORT</span><span class="si">}</span><span class="s2"> is in </span><span class="si">{</span><span class="n">STATE</span><span class="si">}</span><span class="s2"> state and not in RUN state"</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Set the camera RUN state"</span><span class="p">)</span>
+        <span class="n">o3r</span><span class="o">.</span><span class="n">set</span><span class="p">({</span><span class="s2">"ports"</span><span class="p">:</span> <span class="p">{</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">PORT</span><span class="si">}</span><span class="s2">"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"state"</span><span class="p">:</span> <span class="s2">"RUN"</span><span class="p">}}})</span>
 
     <span class="n">fg</span> <span class="o">=</span> <span class="n">FrameGrabber</span><span class="p">(</span><span class="n">cam</span><span class="o">=</span><span class="n">o3r</span><span class="p">,</span> <span class="n">pcic_port</span><span class="o">=</span><span class="n">PCIC_PORT</span><span class="p">)</span>
     <span class="c1"># Define the images to receive when starting the data stream</span>
@@ -190,7 +190,7 @@
     <span class="c1"># Raise timeout error is not frame is received</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">ok</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">TimeoutError</span><span class="p">(</span>
-            <span class="s2">&quot;No frame received, make sure the camera is not in ERROR state&quot;</span>
+            <span class="s2">"No frame received, make sure the camera is not in ERROR state"</span>
         <span class="p">)</span>
 
     <span class="n">fg</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
@@ -199,14 +199,14 @@
     <span class="c1"># Using the deserializer module</span>
     <span class="c1">###############################</span>
     <span class="n">tof_info</span> <span class="o">=</span> <span class="n">TOFInfoV4</span><span class="p">()</span><span class="o">.</span><span class="n">deserialize</span><span class="p">(</span><span class="n">frame</span><span class="o">.</span><span class="n">get_buffer</span><span class="p">(</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">TOF_INFO</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sample of data available in the TOFInfoV4 buffer:&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Current minimum measurement range: </span><span class="si">{</span><span class="n">tof_info</span><span class="o">.</span><span class="n">measurement_range_min</span><span class="si">}</span><span class="s2"> m&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Current maximum measurement range: </span><span class="si">{</span><span class="n">tof_info</span><span class="o">.</span><span class="n">measurement_range_max</span><span class="si">}</span><span class="s2"> m&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Temperature of the illumination module: </span><span class="si">{</span><span class="n">tof_info</span><span class="o">.</span><span class="n">illu_temperature</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Sample of data available in the TOFInfoV4 buffer:"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Current minimum measurement range: </span><span class="si">{</span><span class="n">tof_info</span><span class="o">.</span><span class="n">measurement_range_min</span><span class="si">}</span><span class="s2"> m"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Current maximum measurement range: </span><span class="si">{</span><span class="n">tof_info</span><span class="o">.</span><span class="n">measurement_range_max</span><span class="si">}</span><span class="s2"> m"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Temperature of the illumination module: </span><span class="si">{</span><span class="n">tof_info</span><span class="o">.</span><span class="n">illu_temperature</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">IP</span> <span class="o">=</span> <span class="s2">&quot;192.168.0.69&quot;</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="n">IP</span> <span class="o">=</span> <span class="s2">"192.168.0.69"</span>
     <span class="n">main</span><span class="p">(</span><span class="n">IP</span><span class="o">=</span><span class="n">IP</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -227,7 +227,7 @@
 #include &lt;ostream&gt;
 #include &lt;thread&gt;
 #include &lt;typeinfo&gt;
-// Namespace used for writing time &quot;3s&quot;
+// Namespace used for writing time "3s"
 using namespace std::chrono_literals;
 // Namespace used for json pointers
 using namespace ifm3d::literals;
@@ -237,9 +237,9 @@ int main() {
   // Create the O3R object
   //////////////////////////
   // Get the IP from the environment if defined
-  const char *IP = std::getenv(&quot;IFM3D_IP&quot;) ? std::getenv(&quot;IFM3D_IP&quot;)
+  const char *IP = std::getenv("IFM3D_IP") ? std::getenv("IFM3D_IP")
                                            : ifm3d::DEFAULT_IP.c_str();
-  std::clog &lt;&lt; &quot;IP: &quot; &lt;&lt; IP &lt;&lt; std::endl;
+  std::clog &lt;&lt; "IP: " &lt;&lt; IP &lt;&lt; std::endl;
 
   auto o3r = std::make_shared&lt;ifm3d::O3R&gt;(IP);
 
@@ -254,8 +254,8 @@ int main() {
   std::string port_3d;
 
   for (const auto &amp;port : o3r-&gt;Ports()) {
-    if (port.type == &quot;3D&quot;) {
-      std::cout &lt;&lt; &quot;Using first available 3D port: &quot; &lt;&lt; port.port &lt;&lt; std::endl;
+    if (port.type == "3D") {
+      std::cout &lt;&lt; "Using first available 3D port: " &lt;&lt; port.port &lt;&lt; std::endl;
       port_3d = port.port;
       pcic_port = port.pcic_port;
       break;
@@ -267,27 +267,27 @@ int main() {
   // to your 2D camera (uncomment the line below and comment
   // the block above)
   /////////////////////////////////////////////////////////
-  // std::string port_nb = &quot;port0&quot;;
-  // if (o3r-&gt;Port(port_nb).type != &quot;3D&quot;) {
-  //   std::cerr &lt;&lt; &quot;Please provide a 3D port number.&quot; &lt;&lt; std::endl;
+  // std::string port_nb = "port0";
+  // if (o3r-&gt;Port(port_nb).type != "3D") {
+  //   std::cerr &lt;&lt; "Please provide a 3D port number." &lt;&lt; std::endl;
   //   return -1;
   // }
   // uint16_t pcic_port = o3r-&gt;Port(port_nb).pcic_port;
-  // std::cout &lt;&lt; &quot;Using 3D port: &quot; &lt;&lt; port_nb &lt;&lt; std::endl;
+  // std::cout &lt;&lt; "Using 3D port: " &lt;&lt; port_nb &lt;&lt; std::endl;
 
   //////////////////////////////////////////////////
   // Verify that a correct port number was provided
   // and create the framegrabber object
   //////////////////////////////////////////////////
   if (pcic_port == 0) {
-    std::cerr &lt;&lt; &quot;No 3D port found in the configuration,&quot; &lt;&lt; std::endl;
+    std::cerr &lt;&lt; "No 3D port found in the configuration," &lt;&lt; std::endl;
     return -1;
   }
 
-  if (conf[&quot;ports&quot;][port_3d][&quot;state&quot;] != &quot;RUN&quot;) {
-    std::cerr &lt;&lt; &quot;Port&quot; &lt;&lt; port_3d &lt;&lt; &quot;is in &quot;
-              &lt;&lt; conf[&quot;ports&quot;][port_3d][&quot;state&quot;]
-              &lt;&lt; &quot; state. Please set the port state to RUN&quot; &lt;&lt; std::endl;
+  if (conf["ports"][port_3d]["state"] != "RUN") {
+    std::cerr &lt;&lt; "Port" &lt;&lt; port_3d &lt;&lt; "is in "
+              &lt;&lt; conf["ports"][port_3d]["state"]
+              &lt;&lt; " state. Please set the port state to RUN" &lt;&lt; std::endl;
     return -1;
   }
 
@@ -305,7 +305,7 @@ int main() {
   auto future = fg-&gt;WaitForFrame();
   if (future.wait_for(std::chrono::milliseconds(1000)) !=
       std::future_status::ready) {
-    std::cerr &lt;&lt; &quot;Timeout waiting for camera!&quot; &lt;&lt; std::endl;
+    std::cerr &lt;&lt; "Timeout waiting for camera!" &lt;&lt; std::endl;
     return -1;
   }
   auto frame = future.get();
@@ -317,13 +317,13 @@ int main() {
   //////////////////////////
   auto tof_info = ifm3d::TOFInfoV4::Deserialize(
       frame-&gt;GetBuffer(ifm3d::buffer_id::TOF_INFO));
-  std::cout &lt;&lt; &quot;Sample of data available in the TOFInfoV4 buffer:&quot; &lt;&lt; std::endl;
-  std::cout &lt;&lt; &quot;Current minimum measurement range:&quot;
-            &lt;&lt; tof_info.measurement_range_min &lt;&lt; &quot;m&quot; &lt;&lt; std::endl;
-  std::cout &lt;&lt; &quot;Current maximum measurement range:&quot;
-            &lt;&lt; tof_info.measurement_range_max &lt;&lt; &quot;m&quot; &lt;&lt; std::endl;
-  std::cout &lt;&lt; &quot;Temperature of the illumination module:&quot;
-            &lt;&lt; tof_info.illu_temperature &lt;&lt; &quot;°C&quot; &lt;&lt; std::endl;
+  std::cout &lt;&lt; "Sample of data available in the TOFInfoV4 buffer:" &lt;&lt; std::endl;
+  std::cout &lt;&lt; "Current minimum measurement range:"
+            &lt;&lt; tof_info.measurement_range_min &lt;&lt; "m" &lt;&lt; std::endl;
+  std::cout &lt;&lt; "Current maximum measurement range:"
+            &lt;&lt; tof_info.measurement_range_max &lt;&lt; "m" &lt;&lt; std::endl;
+  std::cout &lt;&lt; "Temperature of the illumination module:"
+            &lt;&lt; tof_info.illu_temperature &lt;&lt; "°C" &lt;&lt; std::endl;
 
   return 0;
 }

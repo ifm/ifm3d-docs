@@ -328,7 +328,7 @@ Some temperatures are only measured for specific part numbers, which might be wh
 <span class="c1"># Get the data from the collected frame </span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">get_buffer</span><span class="p">(</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">DIAGNOSTIC</span><span class="p">)</span>
 <span class="c1"># Unpack the data </span>
-<span class="n">unpacked_data</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;&lt;4i2I&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="n">unpacked_data</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s1">'&lt;4i2I'</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 
 <span class="n">fg</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
 </pre></div>
