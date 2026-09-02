@@ -51,14 +51,15 @@ var group__Deserialize =
     ] ],
     [ "ODSInfoV1", "classifm3d_1_1ODSInfoV1.html", [
       [ "Ptr", "classifm3d_1_1ODSInfoV1.html#a834ee48d3a744da5882b79fdded6a4de", null ],
+      [ "IsValid", "classifm3d_1_1ODSInfoV1.html#af4674eecc7cf942d98a6ca28f1d87d2a", null ],
       [ "Read", "classifm3d_1_1ODSInfoV1.html#ae2dae6a1891bfa4b5fac8dd3cb303d48", null ],
-      [ "ods_info_v1_size", "classifm3d_1_1ODSInfoV1.html#a82cf537964a653313669f7c6ea5e47b9", null ],
       [ "timestamp_ns", "classifm3d_1_1ODSInfoV1.html#ad111e845e130e938c65eea412102af99", null ],
       [ "zone_config_id", "classifm3d_1_1ODSInfoV1.html#af33a0e5f4b2a36db994a38aeeb11a4bc", null ],
       [ "zone_occupied", "classifm3d_1_1ODSInfoV1.html#a464f14e449b46db07f63c9e7fa3f7661", null ]
     ] ],
     [ "ODSOccupancyGridV1", "classifm3d_1_1ODSOccupancyGridV1.html", [
       [ "Ptr", "classifm3d_1_1ODSOccupancyGridV1.html#a5a0916645b6e6afbbd194c8cea771286", null ],
+      [ "IsValid", "classifm3d_1_1ODSOccupancyGridV1.html#a167e3b285d9810d0fdc8258b88c187c8", null ],
       [ "Read", "classifm3d_1_1ODSOccupancyGridV1.html#a8e178fdb921681594ed4b7e069e95c59", null ],
       [ "height", "classifm3d_1_1ODSOccupancyGridV1.html#a4ad2cf906a4e43b657ff80a1d26c9a09", null ],
       [ "image", "classifm3d_1_1ODSOccupancyGridV1.html#a1f1b5be7c236e82b87fd8863d41af6d1", null ],
@@ -70,7 +71,7 @@ var group__Deserialize =
     [ "ODSPolarOccupancyGridV1", "classifm3d_1_1ODSPolarOccupancyGridV1.html", [
       [ "Ptr", "classifm3d_1_1ODSPolarOccupancyGridV1.html#a18fce253ac67308ad71f32fc3dfc5132", null ],
       [ "Read", "classifm3d_1_1ODSPolarOccupancyGridV1.html#a92d05f63fccf065ab72d98efc1f3e906", null ],
-      [ "polarOccGrid", "classifm3d_1_1ODSPolarOccupancyGridV1.html#a1212bf7815c116584e478385000cd8d5", null ],
+      [ "polar_occ_grid", "classifm3d_1_1ODSPolarOccupancyGridV1.html#a4e03a9e84e0720c5ffea8b81b072ad02", null ],
       [ "timestamp_ns", "classifm3d_1_1ODSPolarOccupancyGridV1.html#ace482ca50b4f594726e206735c878af0", null ],
       [ "version", "classifm3d_1_1ODSPolarOccupancyGridV1.html#a39a5db6eaf8cf3759e0de96610ab784f", null ]
     ] ],
@@ -82,7 +83,6 @@ var group__Deserialize =
       [ "frame_counter", "classifm3d_1_1RGBInfoV1.html#a9c0642b76358ee8ae290ba6c09ddba3b", null ],
       [ "intrinsic_calibration", "classifm3d_1_1RGBInfoV1.html#a8f428e6bccf3d159b3ffb13ff3810aae", null ],
       [ "inverse_intrinsic_calibration", "classifm3d_1_1RGBInfoV1.html#a3374be6d666da869dbf11e23c7dfc6b5", null ],
-      [ "rgb_info_v1_size", "classifm3d_1_1RGBInfoV1.html#a55de51518605aafad15aaa5656500970", null ],
       [ "timestamp_ns", "classifm3d_1_1RGBInfoV1.html#a5f347edb80ac17612de21bf153720c6f", null ],
       [ "version", "classifm3d_1_1RGBInfoV1.html#a0f83961cae0af73bb83b4fba4a470f15", null ]
     ] ],
@@ -100,7 +100,6 @@ var group__Deserialize =
       [ "intrinsic_calibration", "classifm3d_1_1TOFInfoV3.html#a5a8ee9de09b08ebee7ab5f3192ada9db", null ],
       [ "inverse_intrinsic_calibration", "classifm3d_1_1TOFInfoV3.html#a596681c726e612c76b1a671ec1196e3b", null ],
       [ "mode", "classifm3d_1_1TOFInfoV3.html#a57aff1cdeba68cf8625b7a7ec1372555", null ],
-      [ "tof_info_v3_size", "classifm3d_1_1TOFInfoV3.html#a778ac89086f4f44b3f91a78e9127de3f", null ],
       [ "version", "classifm3d_1_1TOFInfoV3.html#a7f329a8c4c85745b4a789d9febe425b4", null ]
     ] ],
     [ "TOFInfoV4", "classifm3d_1_1TOFInfoV4.html", [
@@ -108,8 +107,7 @@ var group__Deserialize =
       [ "Read", "classifm3d_1_1TOFInfoV4.html#a2132fef6a6e6f03a2f2802508ddaa7ae", null ],
       [ "measurement_block_index", "classifm3d_1_1TOFInfoV4.html#ab56a590751f8230292193ddc9c87c9b5", null ],
       [ "measurement_range_max", "classifm3d_1_1TOFInfoV4.html#a3a8f2612bf27a2aef7a4568131695e0e", null ],
-      [ "measurement_range_min", "classifm3d_1_1TOFInfoV4.html#ab5823fd32a62b71423b3cc5bb21ce4f8", null ],
-      [ "tof_info_v4_size", "classifm3d_1_1TOFInfoV4.html#a3aede90e3cfe885f9379d4cb2decab3b", null ]
+      [ "measurement_range_min", "classifm3d_1_1TOFInfoV4.html#ab5823fd32a62b71423b3cc5bb21ce4f8", null ]
     ] ],
     [ "O3DInstrinsicCalibration", "classifm3d_1_1O3DInstrinsicCalibration.html", null ],
     [ "O3DInverseInstrinsicCalibration", "classifm3d_1_1O3DInverseInstrinsicCalibration.html", null ],

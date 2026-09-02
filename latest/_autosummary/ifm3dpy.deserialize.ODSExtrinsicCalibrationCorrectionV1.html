@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1 &mdash; ifm3d v1.6.16 documentation</title>
+  <title>ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1 &mdash; ifm3d v2.0.6 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -34,7 +34,7 @@
             <a href="../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v1.6.16
+                v2.0.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -55,8 +55,10 @@
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.html">ifm3dpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.device.html">ifm3dpy.device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.framegrabber.html">ifm3dpy.framegrabber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.rtsp.html">ifm3dpy.rtsp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.swupdater.html">ifm3dpy.swupdater</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="ifm3dpy.deserialize.html">ifm3dpy.deserialize</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.deserialize.html">ifm3dpy.deserialize.deserialize</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.Calibration.html">ifm3dpy.deserialize.Calibration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.ExtrinsicOpticToUser.html">ifm3dpy.deserialize.ExtrinsicOpticToUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.IMUInfoV1.html">ifm3dpy.deserialize.IMUInfoV1</a></li>
@@ -115,33 +117,41 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ifm3dpy.deserialize.</span></span><span class="sig-name descname"><span class="pre">ODSExtrinsicCalibrationCorrectionV1</span></span><a class="headerlink" href="#ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Class for managing an instance of an struct ODSExtrinsicCalibrationCorrectionV1</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1" title="ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1"><span class="pre">ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1" title="ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1"><span class="pre">ODSExtrinsicCalibrationCorrectionV1</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor</p>
 </dd></dl>
 
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.__init__" title="ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self)</p></td>
 <td><p>Constructor</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.deserialize" title="ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.deserialize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deserialize</span></code></a>(arg0)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.deserialize" title="ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.deserialize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deserialize</span></code></a>(buffer)</p></td>
 <td><p>Deserialize ODSExtrinsicCalibrationCorrectionV1 Buffer</p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Attributes</p>
 <table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.completion_rate" title="ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.completion_rate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">completion_rate</span></code></a></p></td>
 <td><p>The completion rate ranging from 0.0 to 1.0, where 1.0 indicates that sufficient data was collected to estimate all three delta values.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.rot_delta_valid" title="ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.rot_delta_valid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rot_delta_valid</span></code></a></p></td>
-<td><p>valid).</p></td>
+<td><p>A flag indicating a valid estimation of the rotation delta value.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.rot_delta_value" title="ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.rot_delta_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rot_delta_value</span></code></a></p></td>
 <td><p>The estimated rot delta value [rad] to correct the extrinsic calibration.</p></td>
@@ -154,6 +164,23 @@
 </tr>
 </tbody>
 </table>
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.deserialize">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Annotated" title="(in Python v3.14)"><span class="pre">Annotated</span></a><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.ArrayLike</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.uint8</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1" title="ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1"><span class="pre">ODSExtrinsicCalibrationCorrectionV1</span></a></span></span><a class="headerlink" href="#ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.deserialize" title="Permalink to this definition"></a></dt>
+<dd><p>Deserialize ODSExtrinsicCalibrationCorrectionV1 Buffer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>buffer</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>) – The raw buffer data as an array of <code class="docutils literal notranslate"><span class="pre">numpy.uint8</span></code>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The deserialized structure.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1" title="ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1"><code class="xref py py-class docutils literal notranslate"><span class="pre">ODSExtrinsicCalibrationCorrectionV1</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py property">
 <dt class="sig sig-object py" id="ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.completion_rate">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">completion_rate</span></span><a class="headerlink" href="#ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.completion_rate" title="Permalink to this definition"></a></dt>
@@ -161,25 +188,12 @@
 sufficient data was collected to estimate all three delta values.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.deserialize">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.uint8</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1" title="ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1"><span class="pre">ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1</span></a></span></span><a class="headerlink" href="#ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.deserialize" title="Permalink to this definition"></a></dt>
-<dd><p>Deserialize ODSExtrinsicCalibrationCorrectionV1 Buffer</p>
-</dd></dl>
-
 <dl class="py property">
 <dt class="sig sig-object py" id="ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.rot_delta_valid">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rot_delta_valid</span></span><a class="headerlink" href="#ifm3dpy.deserialize.ODSExtrinsicCalibrationCorrectionV1.rot_delta_valid" title="Permalink to this definition"></a></dt>
-<dd><p>valid).
+<dd><p>A flag indicating a valid estimation of the rotation delta value.
+<code class="docutils literal notranslate"><span class="pre">0</span></code> means invalid, <code class="docutils literal notranslate"><span class="pre">1</span></code> means valid.
 Array of [X, Y, Z].</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A flag indicating a valid estimation of rotation delta value (0</p>
-</dd>
-<dt class="field-even">Type<span class="colon">:</span></dt>
-<dd class="field-even"><p>invalid, 1</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py property">

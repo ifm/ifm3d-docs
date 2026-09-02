@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ifm3dpy.device &mdash; ifm3d v1.6.16 documentation</title>
+  <title>ifm3dpy.device &mdash; ifm3d v2.0.6 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -23,7 +23,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="ifm3dpy.device.Device" href="ifm3dpy.device.Device.html" />
-    <link rel="prev" title="ifm3dpy.FrameAwaitable" href="ifm3dpy.FrameAwaitable.html" /> 
+    <link rel="prev" title="ifm3dpy.PCICCommandResponseAwaitable" href="ifm3dpy.PCICCommandResponseAwaitable.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -34,7 +34,7 @@
             <a href="../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v1.6.16
+                v2.0.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -57,16 +57,24 @@
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.Device.html">ifm3dpy.device.Device</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.IFMNetworkDevice.html">ifm3dpy.device.IFMNetworkDevice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.LegacyDevice.html">ifm3dpy.device.LegacyDevice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.O3C.html">ifm3dpy.device.O3C</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.O3D.html">ifm3dpy.device.O3D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.O3R.html">ifm3dpy.device.O3R</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.O3RSealedBox.html">ifm3dpy.device.O3RSealedBox</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.O3X.html">ifm3dpy.device.O3X</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.PCICCommand.html">ifm3dpy.device.PCICCommand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.Parameter.html">ifm3dpy.device.Parameter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.PortInfo.html">ifm3dpy.device.PortInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.RtspControlInfo.html">ifm3dpy.device.RtspControlInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.RtspInfo.html">ifm3dpy.device.RtspInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.RtspMediaEndpoint.html">ifm3dpy.device.RtspMediaEndpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.SemVer.html">ifm3dpy.device.SemVer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.SetTemporaryApplicationParameter.html">ifm3dpy.device.SetTemporaryApplicationParameter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.device.Error.html">ifm3dpy.device.Error</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.framegrabber.html">ifm3dpy.framegrabber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.rtsp.html">ifm3dpy.rtsp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.swupdater.html">ifm3dpy.swupdater</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.deserialize.html">ifm3dpy.deserialize</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.logging.html">ifm3dpy.logging</a></li>
@@ -105,41 +113,71 @@
              
   <section id="module-ifm3dpy.device">
 <span id="ifm3dpy-device"></span><h1>ifm3dpy.device<a class="headerlink" href="#module-ifm3dpy.device" title="Permalink to this heading"></a></h1>
-<p>Provides an implementation of the XMLRPC protocol for configuring the camera and pmd imager settings.</p>
+<p>Provides an implementation of the XMLRPC protocol for configuring the
+camera and pmd imager settings.</p>
 <p class="rubric">Classes</p>
 <table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.device.Device.html#ifm3dpy.device.Device" title="ifm3dpy.device.Device"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Device</span></code></a></p></td>
 <td><p>Base class for managing an instance of an all cameras</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.device.IFMNetworkDevice.html#ifm3dpy.device.IFMNetworkDevice" title="ifm3dpy.device.IFMNetworkDevice"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IFMNetworkDevice</span></code></a></p></td>
-<td><p></p></td>
+<td><p>Describes an ifm device discovered on the local network.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.device.LegacyDevice.html#ifm3dpy.device.LegacyDevice" title="ifm3dpy.device.LegacyDevice"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LegacyDevice</span></code></a></p></td>
 <td><p>Class for managing an instance of an O3D/O3X Camera</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.device.O3D.html#ifm3dpy.device.O3D" title="ifm3dpy.device.O3D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3D</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.device.O3C.html#ifm3dpy.device.O3C" title="ifm3dpy.device.O3C"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3C</span></code></a></p></td>
+<td><p>Class for managing an instance of an O3C Camera.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.device.O3D.html#ifm3dpy.device.O3D" title="ifm3dpy.device.O3D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3D</span></code></a></p></td>
 <td><p>Class for managing an instance of an O3D Camera</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.device.O3R.html#ifm3dpy.device.O3R" title="ifm3dpy.device.O3R"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.device.O3R.html#ifm3dpy.device.O3R" title="ifm3dpy.device.O3R"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3R</span></code></a></p></td>
 <td><p>Class for managing an instance of an O3R Camera</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.device.O3RSealedBox.html#ifm3dpy.device.O3RSealedBox" title="ifm3dpy.device.O3RSealedBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3RSealedBox</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.device.O3RSealedBox.html#ifm3dpy.device.O3RSealedBox" title="ifm3dpy.device.O3RSealedBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3RSealedBox</span></code></a></p></td>
 <td><p>The O3RSealedBox class provides access to the SealedBox.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.device.O3X.html#ifm3dpy.device.O3X" title="ifm3dpy.device.O3X"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3X</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.device.O3X.html#ifm3dpy.device.O3X" title="ifm3dpy.device.O3X"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3X</span></code></a></p></td>
 <td><p>Class for managing an instance of an O3X Camera</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.device.PortInfo.html#ifm3dpy.device.PortInfo" title="ifm3dpy.device.PortInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PortInfo</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.device.PCICCommand.html#ifm3dpy.device.PCICCommand" title="ifm3dpy.device.PCICCommand"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PCICCommand</span></code></a></p></td>
+<td><p>Base class for PCIC commands.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.device.Parameter.html#ifm3dpy.device.Parameter" title="ifm3dpy.device.Parameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameter</span></code></a></p></td>
+<td><p>Enum: Parameters for SetTemporaryApplicationParameter</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.device.PortInfo.html#ifm3dpy.device.PortInfo" title="ifm3dpy.device.PortInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PortInfo</span></code></a></p></td>
 <td><p>Provides information about a connected Port</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.device.RtspControlInfo.html#ifm3dpy.device.RtspControlInfo" title="ifm3dpy.device.RtspControlInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RtspControlInfo</span></code></a></p></td>
+<td><p>RTSP control endpoint information for a port.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.device.RtspInfo.html#ifm3dpy.device.RtspInfo" title="ifm3dpy.device.RtspInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RtspInfo</span></code></a></p></td>
+<td><p>RTSP streaming information advertised by a port.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.device.RtspMediaEndpoint.html#ifm3dpy.device.RtspMediaEndpoint" title="ifm3dpy.device.RtspMediaEndpoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RtspMediaEndpoint</span></code></a></p></td>
+<td><p>A single RTSP media endpoint advertised by a port.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.device.SemVer.html#ifm3dpy.device.SemVer" title="ifm3dpy.device.SemVer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SemVer</span></code></a></p></td>
 <td><p>struct for holding the version information</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.device.SetTemporaryApplicationParameter.html#ifm3dpy.device.SetTemporaryApplicationParameter" title="ifm3dpy.device.SetTemporaryApplicationParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetTemporaryApplicationParameter</span></code></a></p></td>
+<td><p>PCIC command which temporarily overrides a single application parameter.</p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Exceptions</p>
 <table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.device.Error.html#ifm3dpy.device.Error" title="ifm3dpy.device.Error"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Error</span></code></a></p></td>
 <td><p>Exception wrapper for library and system errors encountered by the library.</p></td>

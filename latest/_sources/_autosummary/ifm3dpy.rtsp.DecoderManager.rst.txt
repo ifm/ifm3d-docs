@@ -1,0 +1,97 @@
+ifm3dpy.rtsp.DecoderManager
+===========================
+
+.. currentmodule:: ifm3dpy.rtsp
+
+.. autoclass:: DecoderManager
+   :members:
+   :show-inheritance:
+   :inherited-members: ndarray, int, Enum
+
+   
+   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DecoderManager.discover_decoders
+   
+   
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   .. rubric:: Nested types
+
+   .. autosummary::
+   
+      ~DecoderManager.DecoderInfo
+   
+   
+
+   
+   
+   
+   

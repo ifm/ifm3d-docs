@@ -1,8 +1,8 @@
 var classifm3d_1_1O3X =
 [
     [ "Ptr", "classifm3d_1_1O3X.html#a395a72e898e391bec89772992fad756f", null ],
-    [ "O3X", "classifm3d_1_1O3X.html#a81d5b199489c20fce2b64ab555dbcb93", null ],
-    [ "~O3X", "classifm3d_1_1O3X.html#afd3ebf0555d7e7490d6213f348f3cc80", null ],
+    [ "O3X", "classifm3d_1_1O3X.html#a8b3f849da19e292a340b05ed67f2bb64", null ],
+    [ "~O3X", "classifm3d_1_1O3X.html#a185ec14f71e5e4c915271c6397c8578e", null ],
     [ "O3X", "classifm3d_1_1O3X.html#a1562d88b3ae2240c4cfc8a732e481e76", null ],
     [ "O3X", "classifm3d_1_1O3X.html#aa51c494a92f94167277f484742a1c757", null ],
     [ "operator=", "classifm3d_1_1O3X.html#aa343ac61373681b6ed5ff627a4f7d25a", null ],

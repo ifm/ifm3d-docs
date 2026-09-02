@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>C++ examples &mdash; ifm3d v1.6.16 documentation</title>
+  <title>C++ examples &mdash; ifm3d v2.0.6 documentation</title>
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/tabs.css" type="text/css" />
@@ -32,7 +32,7 @@
             <a href="../../../../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v1.6.16
+                v2.0.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
@@ -142,11 +142,11 @@ CMakeFiles<span class="w">      </span>diagnostic<span class="w">           </sp
 <p>To change the IP address of the device, you can use an environment variable that will be retrieved in the code:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Edit with the IP address of your OVP8xx</span>
 <span class="c1"># On Linux</span>
-$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">IFM3D_IP</span><span class="o">=</span><span class="s2">&quot;192.168.0.69&quot;</span>
+$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">IFM3D_IP</span><span class="o">=</span><span class="s2">"192.168.0.69"</span>
 <span class="c1"># On Windows (standard command prompt)</span>
 $<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">IFM3D_IP</span><span class="o">=</span><span class="m">192</span>.168.0.69
 <span class="c1"># On Windows (PowerShell)</span>
-$<span class="w"> </span><span class="nv">$env</span>:IFM3D_IP<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;192.168.0.69&quot;</span>
+$<span class="w"> </span><span class="nv">$env</span>:IFM3D_IP<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"192.168.0.69"</span>
 </pre></div>
 </div>
 <p>To change the port used, you need to open up the code and edit the port number manually. The structure is already there to be able to use a hardcoded port number, and you just need to uncomment it and edit with your setup.
@@ -156,13 +156,13 @@ For example, in the <code class="docutils literal notranslate"><span class="pre"
 <span class="c1">// to your 3D camera (uncomment the line below and comment</span>
 <span class="c1">// the block above)</span>
 <span class="c1">/////////////////////////////////////////////////////////</span>
-<span class="c1">// std::string port_nb = &quot;port2&quot;;</span>
-<span class="c1">// if (o3r-&gt;Port(port_nb).type != &quot;3D&quot;) {</span>
-<span class="c1">//   std::cerr &lt;&lt; &quot;Please provide a 3D port number.&quot; &lt;&lt; std::endl;</span>
+<span class="c1">// std::string port_nb = "port2";</span>
+<span class="c1">// if (o3r-&gt;Port(port_nb).type != "3D") {</span>
+<span class="c1">//   std::cerr &lt;&lt; "Please provide a 3D port number." &lt;&lt; std::endl;</span>
 <span class="c1">//   return -1;</span>
 <span class="c1">// }</span>
 <span class="c1">// uint16_t pcic_port = o3r-&gt;Port(port_nb).pcic_port;</span>
-<span class="c1">// std::cout &lt;&lt; &quot;Using 3D port: &quot; &lt;&lt; port_nb &lt;&lt; std::endl;</span>
+<span class="c1">// std::cout &lt;&lt; "Using 3D port: " &lt;&lt; port_nb &lt;&lt; std::endl;</span>
 </pre></div>
 </div>
 <p>Uncomment the lines of code and replace the port number variable string <code class="docutils literal notranslate"><span class="pre">port_nb</span></code>.
@@ -199,7 +199,7 @@ Don’t forget to compile the code again after making these changes.</p>
 </section>
 <section id="available-pds-example-scripts">
 <h3>Available PDS Example scripts<a class="headerlink" href="#available-pds-example-scripts" title="Permalink to this heading"></a></h3>
-<table class="docutils align-default">
+<table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Example</p></th>
 <th class="head"><p>Description</p></th>

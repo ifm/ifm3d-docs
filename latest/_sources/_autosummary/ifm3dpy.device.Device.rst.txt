@@ -4,13 +4,16 @@ ifm3dpy.device.Device
 .. currentmodule:: ifm3dpy.device
 
 .. autoclass:: Device
-   :members:                                   
-   :show-inheritance:                           
-   :inherited-members:                          
+   :members:
+   :show-inheritance:
+   :inherited-members: ndarray, int, Enum
 
    
+   
    .. automethod:: __init__
+   
 
+   
    
    .. rubric:: Methods
 
@@ -33,6 +36,140 @@ ifm3dpy.device.Device
    
    
 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   .. rubric:: Nested types
+
+   .. autosummary::
+   
+      ~Device.boot_mode
+      ~Device.device_family
+      ~Device.import_flags
+      ~Device.mfilt_mask_size
+      ~Device.operating_mode
+      ~Device.spatial_filter
+      ~Device.temporal_filter
+      ~Device.trigger_mode
+   
+   
+
+   
    
    
    .. rubric:: Attributes

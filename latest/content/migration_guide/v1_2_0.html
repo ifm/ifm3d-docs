@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Migration Guide V1.2.0 &mdash; ifm3d v1.6.16 documentation</title>
+  <title>Migration Guide V1.2.0 &mdash; ifm3d v2.0.6 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
@@ -34,7 +34,7 @@
             <a href="../../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v1.6.16
+                v2.0.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -48,6 +48,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../README.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../installation_instructions/index.html">Installation instructions</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Migration Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="v2_0_0.html">v2.0.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1_6_0.html">v1.6.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="v1_3_0.html">v1.3.0</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">v1.2.0</a></li>
@@ -96,7 +97,7 @@
 <h2>Changes to the Python module structure<a class="headerlink" href="#changes-to-the-python-module-structure" title="Permalink to this heading"></a></h2>
 <p>With the growing number of classes and methods added to ifm3dpy, putting everything into the main module was beginning to get confusing and might be overwhelming to new users, therefore the Python module was split up into submodules akin to the C++ structure.<br />
 The existing classes have been moved according to the following table:</p>
-<table class="docutils align-default">
+<table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Old Location</p></th>
 <th class="head"><p>New Location</p></th>
@@ -137,7 +138,7 @@ A future version of ifm3dpy will remove the deprecated locations.</p>
 <h2>Naming changes to <code class="docutils literal notranslate"><span class="pre">SWUpdater</span></code> Python bindings<a class="headerlink" href="#naming-changes-to-swupdater-python-bindings" title="Permalink to this heading"></a></h2>
 <p>For our Python bindings we generally use <code class="docutils literal notranslate"><span class="pre">snake_case</span></code> for method names, however the bindings for the <code class="docutils literal notranslate"><span class="pre">SWUpdater</span></code> used <code class="docutils literal notranslate"><span class="pre">PascalCase</span></code>. To align the <code class="docutils literal notranslate"><span class="pre">SWUpdater</span></code> with the rest of ifm3dpy the methods have been renamed to be <code class="docutils literal notranslate"><span class="pre">snake_case</span></code> too.
 User will need to update their code accordingly, please see the following table for a list of changed names.</p>
-<table class="docutils align-default">
+<table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Old Name</p></th>
 <th class="head"><p>New Name</p></th>
@@ -178,7 +179,7 @@ User will need to update their code accordingly, please see the following table 
 </div>
 <p>Additionally to use the user-defined string literals <code class="docutils literal notranslate"><span class="pre">operator&quot;&quot;_json</span></code> and <code class="docutils literal notranslate"><span class="pre">operator&quot;&quot;_json_pointer</span></code> they have to be imported from the namespace</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">ifm3d</span><span class="o">::</span><span class="nn">literals</span><span class="p">;</span>
-<span class="n">ifm3d</span><span class="o">::</span><span class="n">json</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;[1,2,3]&quot;</span><span class="n">_json</span><span class="p">;</span>
+<span class="n">ifm3d</span><span class="o">::</span><span class="n">json</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"[1,2,3]"</span><span class="n">_json</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Note: By default <code class="docutils literal notranslate"><span class="pre">nlohmann::json</span></code> currently places it’s <code class="docutils literal notranslate"><span class="pre">operator&quot;&quot;_json</span></code> and <code class="docutils literal notranslate"><span class="pre">operator&quot;&quot;_json_pointer</span></code> into the global namespace, so this would lead to ambiguity errors, to solve this nlohmann can be configured to place them into the nlohmann namespace by defining <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">JSON_USE_GLOBAL_UDLS</span> <span class="pre">0</span></code> before including it (see the <a class="reference external" href="https://json.nlohmann.me/api/macros/json_use_global_udls/"><code class="docutils literal notranslate"><span class="pre">nlohmann::json</span></code> doc</a> for more details).</p>

@@ -13,6 +13,5 @@ var classifm3d_1_1TOFInfoV3 =
     [ "intrinsic_calibration", "classifm3d_1_1TOFInfoV3.html#a5a8ee9de09b08ebee7ab5f3192ada9db", null ],
     [ "inverse_intrinsic_calibration", "classifm3d_1_1TOFInfoV3.html#a596681c726e612c76b1a671ec1196e3b", null ],
     [ "mode", "classifm3d_1_1TOFInfoV3.html#a57aff1cdeba68cf8625b7a7ec1372555", null ],
-    [ "tof_info_v3_size", "classifm3d_1_1TOFInfoV3.html#a778ac89086f4f44b3f91a78e9127de3f", null ],
     [ "version", "classifm3d_1_1TOFInfoV3.html#a7f329a8c4c85745b4a789d9febe425b4", null ]
 ];

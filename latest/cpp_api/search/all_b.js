@@ -1,9 +1,16 @@
 var searchData=
 [
-  ['makeshared_113',['MakeShared',['../classifm3d_1_1Device.html#a28aac849be727299ab6eb780acb5b120',1,'ifm3d::Device::MakeShared()'],['../classifm3d_1_1LegacyDevice.html#a1745e665a699e5ab47ca88f0cbfbcb70',1,'ifm3d::LegacyDevice::MakeShared()']]],
-  ['measurement_5fblock_5findex_114',['measurement_block_index',['../classifm3d_1_1TOFInfoV4.html#ab56a590751f8230292193ddc9c87c9b5',1,'ifm3d::TOFInfoV4']]],
-  ['message_115',['message',['../classifm3d_1_1Error.html#aa1c693d09de6ccf38b576b58f11e5c54',1,'ifm3d::Error']]],
-  ['mfilt_5fmask_5fsize_116',['mfilt_mask_size',['../classifm3d_1_1Device.html#acafe3c37a98a3c47c8cbaaf07452bc31',1,'ifm3d::Device']]],
-  ['monochrom_5f2d_117',['MONOCHROM_2D',['../group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50a3b8ed6920a252719ff4b59dc8aea7280',1,'ifm3d']]],
-  ['monochrom_5f2d_5f12bit_118',['MONOCHROM_2D_12BIT',['../group__FrameGrabber.html#gga363ee802dc7953150dc23ba56d7e9c50a6173dce3bdd0ea823b461e92d160d061',1,'ifm3d']]]
+  ['last_5fsequence_5fnumber_121',['last_sequence_number',['../structifm3d_1_1NalUnit.html#a06d5b2a7ac13915d3dbe6fccf4b8843b',1,'ifm3d::NalUnit']]],
+  ['lasterror_122',['LastError',['../classifm3d_1_1rtsp_1_1VideoDecoder.html#a87aeee37f7a6c2aea2dd8cda248568a8',1,'ifm3d::rtsp::VideoDecoder']]],
+  ['legacydevice_123',['LegacyDevice',['../classifm3d_1_1LegacyDevice.html',1,'ifm3d::LegacyDevice'],['../classifm3d_1_1LegacyDevice.html#aace04df75d93e3e3b5c62fac7eab483c',1,'ifm3d::LegacyDevice::LegacyDevice()']]],
+  ['loaddecoders_124',['LoadDecoders',['../classifm3d_1_1DecoderManager.html#a7acffd66b0d9dffa56ff6528f1d0b776',1,'ifm3d::DecoderManager']]],
+  ['logentry_125',['LogEntry',['../classifm3d_1_1LogEntry.html',1,'ifm3d']]],
+  ['logformatterjson_126',['LogFormatterJson',['../classifm3d_1_1LogFormatterJson.html',1,'ifm3d']]],
+  ['logformattertext_127',['LogFormatterText',['../classifm3d_1_1LogFormatterText.html',1,'ifm3d']]],
+  ['logger_128',['Logger',['../classifm3d_1_1Logger.html',1,'ifm3d']]],
+  ['logwriter_129',['LogWriter',['../classifm3d_1_1LogWriter.html',1,'ifm3d']]],
+  ['logwritercomposite_130',['LogWriterComposite',['../classifm3d_1_1LogWriterComposite.html',1,'ifm3d']]],
+  ['logwriterconsole_131',['LogWriterConsole',['../classifm3d_1_1LogWriterConsole.html',1,'ifm3d']]],
+  ['logwriterconsolecolored_132',['LogWriterConsoleColored',['../classifm3d_1_1LogWriterConsoleColored.html',1,'ifm3d']]],
+  ['logwriterfile_133',['LogWriterFile',['../classifm3d_1_1LogWriterFile.html',1,'ifm3d']]]
 ];

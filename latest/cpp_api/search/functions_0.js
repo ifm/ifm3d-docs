@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['activeapplication_256',['ActiveApplication',['../classifm3d_1_1LegacyDevice.html#a91de1a198af94a4d83d43951c7696a59',1,'ifm3d::LegacyDevice']]],
-  ['ami_257',['AmI',['../classifm3d_1_1Device.html#a825db9a420e07ab247a664a58b320374',1,'ifm3d::Device']]],
-  ['applicationlist_258',['ApplicationList',['../classifm3d_1_1LegacyDevice.html#af1670594651bf115788e3d60ce1e733b',1,'ifm3d::LegacyDevice']]],
-  ['applicationtypes_259',['ApplicationTypes',['../classifm3d_1_1LegacyDevice.html#a925eaac36090795f0da30c74c33b6813',1,'ifm3d::LegacyDevice']]],
-  ['applydistanceresolution_260',['applyDistanceResolution',['../classifm3d_1_1DistanceImageInfo.html#aa31f6c991e3f0d64c6920126387b539e',1,'ifm3d::DistanceImageInfo']]]
+  ['activeapplication_334',['ActiveApplication',['../classifm3d_1_1LegacyDevice.html#a91de1a198af94a4d83d43951c7696a59',1,'ifm3d::LegacyDevice']]],
+  ['ami_335',['AmI',['../classifm3d_1_1Device.html#a5802ce9e716f128667a58c6706ab1f98',1,'ifm3d::Device']]],
+  ['applicationlist_336',['ApplicationList',['../classifm3d_1_1LegacyDevice.html#af1670594651bf115788e3d60ce1e733b',1,'ifm3d::LegacyDevice']]],
+  ['applicationtypes_337',['ApplicationTypes',['../classifm3d_1_1LegacyDevice.html#a925eaac36090795f0da30c74c33b6813',1,'ifm3d::LegacyDevice']]],
+  ['applydistanceresolution_338',['ApplyDistanceResolution',['../classifm3d_1_1DistanceImageInfo.html#a0f45e16de2738f7890a2e2dce8d6a6ac',1,'ifm3d::DistanceImageInfo']]],
+  ['availabilityerror_339',['AvailabilityError',['../classifm3d_1_1rtsp_1_1VideoDecoderFactory.html#a90c6c713ce78c3a47516688fd470fed4',1,'ifm3d::rtsp::VideoDecoderFactory']]]
 ];

@@ -4,25 +4,90 @@ ifm3dpy.logging.Logger
 .. currentmodule:: ifm3dpy.logging
 
 .. autoclass:: Logger
-   :members:                                   
-   :show-inheritance:                           
-   :inherited-members:                          
+   :members:
+   :show-inheritance:
+   :inherited-members: ndarray, int, Enum
 
    
-   .. automethod:: __init__
+   
 
+   
    
    .. rubric:: Methods
 
    .. autosummary::
    
-      ~Logger.__init__
       ~Logger.log_level
       ~Logger.set_log_level
       ~Logger.set_writer
    
    
 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
    
    
    

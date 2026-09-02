@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PPM IO &mdash; ifm3d v1.6.16 documentation</title>
+  <title>PPM IO &mdash; ifm3d v2.0.6 documentation</title>
       <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../../../../_static/tabs.css" type="text/css" />
@@ -32,7 +32,7 @@
             <a href="../../../../../../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v1.6.16
+                v2.0.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
@@ -93,7 +93,7 @@
 <span class="k">auto</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">size_t</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">size_t</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">pixel_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;</span><span class="p">();</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">ifs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ifstream</span><span class="p">(</span><span class="s">&quot;my_file.ppm&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ios</span><span class="o">::</span><span class="n">binary</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">ifs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ifstream</span><span class="p">(</span><span class="s">"my_file.ppm"</span><span class="p">,</span><span class="w"> </span><span class="n">ios</span><span class="o">::</span><span class="n">binary</span><span class="p">);</span>
 <span class="n">thinks</span><span class="o">::</span><span class="n">ppm</span><span class="o">::</span><span class="n">readRgbImage</span><span class="p">(</span><span class="n">ifs</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">pixel_data</span><span class="p">);</span>
 <span class="n">ifs</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
 </pre></div>
@@ -104,7 +104,7 @@
 <span class="k">auto</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">size_t</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">size_t</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">pixel_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;</span><span class="p">();</span>
-<span class="n">thinks</span><span class="o">::</span><span class="n">ppm</span><span class="o">::</span><span class="n">readRgbImage</span><span class="p">(</span><span class="s">&quot;my_file.ppm&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">pixel_data</span><span class="p">);</span>
+<span class="n">thinks</span><span class="o">::</span><span class="n">ppm</span><span class="o">::</span><span class="n">readRgbImage</span><span class="p">(</span><span class="s">"my_file.ppm"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">pixel_data</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Writing image files is done in a similar fashion.</p>
@@ -114,7 +114,7 @@
 <span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">size_t</span><span class="p">{</span><span class="mi">10</span><span class="p">};</span>
 <span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">size_t</span><span class="p">{</span><span class="mi">10</span><span class="p">};</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">pixel_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">128</span><span class="p">);</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">ofs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ofstream</span><span class="p">(</span><span class="s">&quot;my_file.ppm&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ios</span><span class="o">::</span><span class="n">binary</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">ofs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ofstream</span><span class="p">(</span><span class="s">"my_file.ppm"</span><span class="p">,</span><span class="w"> </span><span class="n">ios</span><span class="o">::</span><span class="n">binary</span><span class="p">);</span>
 <span class="n">thinks</span><span class="o">::</span><span class="n">ppm</span><span class="o">::</span><span class="n">writeRgbImage</span><span class="p">(</span><span class="n">ofs</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">pixel_data</span><span class="p">);</span>
 <span class="n">ofs</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
 </pre></div>
@@ -126,7 +126,7 @@
 <span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">size_t</span><span class="p">{</span><span class="mi">10</span><span class="p">};</span>
 <span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">size_t</span><span class="p">{</span><span class="mi">10</span><span class="p">};</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">pixel_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">128</span><span class="p">);</span>
-<span class="n">thinks</span><span class="o">::</span><span class="n">ppm</span><span class="o">::</span><span class="n">writeRgbImage</span><span class="p">(</span><span class="s">&quot;my_file.ppm&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">pixel_data</span><span class="p">);</span>
+<span class="n">thinks</span><span class="o">::</span><span class="n">ppm</span><span class="o">::</span><span class="n">writeRgbImage</span><span class="p">(</span><span class="s">"my_file.ppm"</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">pixel_data</span><span class="p">);</span>
 </pre></div>
 </div>
 </section>

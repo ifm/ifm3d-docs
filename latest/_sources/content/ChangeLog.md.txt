@@ -6,54 +6,113 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## 1.6.16 - 2026-06-24
+## 2.0.6 - 2026-08-14
 ### Added
-- Add support for firmware files larger than 2 GB
+- Add `PCICCommand` trampoline for Python command overrides
 
-## 1.6.15 - 2026-02-24
+### Fixed
+- Fix `ifm3d::RtspClient` symbols missing from the installed `libifm3d` shared library (the Debian package installed the `rtsp_client.h` header but never linked the RTSP module into `libifm3d`, causing linker errors in code that used the class) [O3C-7269]
+
+## 2.0.5 - 2026-08-10
+### Changed
+- Align RtspClient api with FrameGrabber api (O3C-7123)
+- Overhaul python documentation
+- Python `LogLevel.None` is now also available as `LogLevel.Off` and is reported under that name
+
+### Fixed
+- Fix `RtspClient` not reporting a failed connection: the RTSP handshake now checks the status of every response (previously `PLAY` was unchecked) and a connection dropped by the device is detected, so a failed `Start()` is reported instead of appearing to succeed
+- Fix Python `wait_for()` and `await` on void-returning futures (e.g. `RtspClient.start()`) swallowing errors and reporting success
+- Fix a failed `FrameGrabber.Start()` surfacing as `broken_promise` instead of the actual `ifm3d::Error` (`ifm3dpy.device.Error` in Python) when the connection to the device cannot be established, and a failed start leaving a stale error on, or never resolving, the future returned by the next `Start()`
+- Fix `FrameGrabber` delivering no frames at all after it recovered from a failed `Start()`: the frame promise still held the previous failure, so both the future returned by `WaitForFrame()` and the new frame callback were skipped
+- Fix `o3cxxx` config get path support to JSON-pointer filtering
+- Fix `o3cxxx` ifm3d cli `factoryReset` command fail
+- Fix python `Buffer` slices and views losing `metadata` and `buffer_id`
+- Fix python `Device.device_discovery` and `Device.set_temp_ip_address` not being usable as static methods
+- Fix python framegrabber bindings being gated on the swupdater feature flag
+
+## 2.0.4 - 2026-07-20
+### Added
+- Support for loading ffmpeg decoder libs from [ifm3d-ffmpeg](https://pypi.org/project/ifm3d-ffmpeg/) python package
+
+### Fixed
+- regression: Honor per-request XML-RPC timeouts, including the extended timeout used by `O3R::Set`
+
+## 2.0.3 - 2026-07-10
+### Added
+- RtspClient implementation with support for 2D Metadata
+  Currently supports libav/ffmpeg decoder which needs to be available on the system for decoding h264 frames (specifically libavcodec and libavutil), otherwise only encoded h264 packages can be received.
+
+## 2.0.2 - 2026-06-23
+### Fixed
+- Fix device discovery across different subnets
+- Fix `SWUpdate` timeout issue
+
+### Added
+- Add an `ifm3d` specific `user-agent` for `http` request
+- Add support for firmware files larger than 2 GB
+- Add Shell (`bash`, `zsh`, `pwsh`) Generation completion for `ifm3d` CLI commands `<TAB>` completion
+
+## 2.0.1 - 2026-03-09
+
+### Added
+- Add `IMUInfoV1` deserializer for O3R IMU data.
+- Add `o3c` device support to ifm3d
 
 ### Fixed
 - Fix `IMUInfoV1.imu_samples` Python binding to return a valid list instead of conversion error.
+- Fix `export` command fails for `o3d` and `o3x` devices
 
-## 1.6.14 - 2026-02-17
+### Changed
+- Migrated `pybind11` from `v2.12.0` to `v3.0.1`.
+- Migrate `pybind11` `py::enum_` to `py::native_enum` (v3.0)
+
+## 2.0.0 - 2025-11-17
+
 ### Added
-- Add `IMUInfoV1` deserializer for O3R IMU data.
-- Pin NumPy to version 2.3.2
+- Result buffers now auto-mapped to correct IDs on receive
+- Add support for Python `3.14.0` in Docker builds to avoid platform mis-match issue while installing `ifm3dpy`
+- Re-enabled NumPy installation and support in the Docker images.
 
-## 1.6.13 - 2025-11-24
+### Fixed
+- ifm3d O3D3xx `config` Command now automatically creates missing applications
+- Fix `.deb` artifacts names to ensure a consistent naming scheme for releases 
+- Fix missing Schema for the `O3R_RESULT_IMU` `buffer_id`
+
+### Changed
+- Update build matrix: remove `l4t` and `ubuntu:20.04`, keep `ubuntu:22.04` and `ubuntu:24.04`
+- Update Python matrix: remove `3.9` and add `3.14.0` for both `linux` and `windows`
+
+## 1.7.2 - 2025-10-15
+### Added
+- Add a new `--resetNetworkSettings` flag to the CLI, resolving an issue where network settings were not reset as expected.
+- Add JSON pointer to `get_schema`
+- Add ability to send `PCIC` commands (Currently available: f command for sending external ODS egomotion data).
+
+### Fixed
+- Fix in device discovery command always tries to access devices at `192.168.0.69`
+- Resolve issue where ODS application buffers were not received
+
+## 1.7.1 - 2025-07-31
 ### Removed
--[ifm3dpy] Remove `_run_cmdtool` entry point from metadata
+- [ifm3dpy] Remove `_run_cmdtool` entry point from metadata
 
 ### Fixed
 - Fix in device discovery, device showing multiple times
-- Fix in device discovery command always tries to access devices at `192.168.0.69`
-- Fix issue "network settings are not reset by CLI" by adding new flag `--resetNetworkSettings`
-- Fix Docker build failures when installing ifm3dpy by using Python version `3.13.0`
-- Pin NumPy to version 1.6.2
-- Fix missing Schema for the `O3R_RESULT_IMU` `buffer_id`
-- Fix excessive logging for `SWUpdate`
+- Fixed an issue in the Python bindings where log entry attributes were not exposed correctly due to repeated property names.
 
-## 1.6.12 - 2025-06-30
-### Fixed
-- Docker builds for `aarch64 `
-
-## 1.6.11 - 2025-06-10
-### Fixed
-- Inability to access SealedBox in C++ interface due to missing define
-
-## 1.6.10 - 2025-06-03
+## 1.7.0 - 2025-06-23
 ### Added
+- Improve Deserialize usages by adding global `Deserialize`
 - Support for accessing OVP8XX SealedBox
-- [CLI] `ovp8xx sealebox` command
+- Add code analysis using `clang-tidy`, `cppcheck`, `clang-format`
 
 ### Fixed
 - Parsing of multi-channel data (e.g. UNIT_VECTOR_ALL)
 - Fix issue when there was no applications configured in the device
+- Add fix to create a static library when `BUILD-SHARED_LIBS=OFF`
 
-## 1.6.9 - 2025-05-21
-### Added
-- Support for accessing OVP8XX SealedBox
-
+### Changed
+- Replace `curl` and `xmlrpc-c` with `cpp-httplib`, `tinyxml2` and a custom `xmlrpc` client
 
 ## 1.6.8 - 2025-04-16
 ### Removed

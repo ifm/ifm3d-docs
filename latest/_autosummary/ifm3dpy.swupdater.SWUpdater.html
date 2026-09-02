@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ifm3dpy.swupdater.SWUpdater &mdash; ifm3d v1.6.16 documentation</title>
+  <title>ifm3dpy.swupdater.SWUpdater &mdash; ifm3d v2.0.6 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -34,7 +34,7 @@
             <a href="../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v1.6.16
+                v2.0.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -55,6 +55,7 @@
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.html">ifm3dpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.device.html">ifm3dpy.device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.framegrabber.html">ifm3dpy.framegrabber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.rtsp.html">ifm3dpy.rtsp</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="ifm3dpy.swupdater.html">ifm3dpy.swupdater</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">ifm3dpy.swupdater.SWUpdater</a></li>
 </ul>
@@ -100,18 +101,19 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="ifm3dpy.swupdater.SWUpdater">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ifm3dpy.swupdater.</span></span><span class="sig-name descname"><span class="pre">SWUpdater</span></span><a class="headerlink" href="#ifm3dpy.swupdater.SWUpdater" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Class for managing an instance of an swupdater</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.swupdater.SWUpdater.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater" title="ifm3dpy.swupdater.SWUpdater"><span class="pre">ifm3dpy.swupdater.SWUpdater</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">cam</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ifm3dpy.device.Device.html#ifm3dpy.device.Device" title="ifm3dpy.device.Device"><span class="pre">ifm3dpy.device.Device</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swupdate_recovery_port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">8080</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.swupdater.SWUpdater.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater" title="ifm3dpy.swupdater.SWUpdater"><span class="pre">SWUpdater</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">cam</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ifm3dpy.device.Device.html#ifm3dpy.device.Device" title="ifm3dpy.device.Device"><span class="pre">Device</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">cb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.14)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swupdate_recovery_port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">8080</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#ifm3dpy.swupdater.SWUpdater.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cam</strong> (<em>ifm3dpy.Camera</em>) – The camera instance to grab frames from</p></li>
-<li><p><strong>cb</strong> (<em>callback function  with parameters</em><em> (</em><em>float</em><em>, </em><em>string</em><em>)</em>) – A  function for progress of the update</p></li>
-<li><p><strong>swupdate_recovery_port</strong> (<em>uint16_t</em>) – The Swupdate communication port</p></li>
+<li><p><strong>cam</strong> (<a class="reference internal" href="ifm3dpy.device.Device.html#ifm3dpy.device.Device" title="ifm3dpy.device.Device"><code class="xref py py-class docutils literal notranslate"><span class="pre">ifm3dpy.device.Device</span></code></a>) – The camera instance to grab frames from</p></li>
+<li><p><strong>cb</strong> (<a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Callable</span></code></a>) – A callable <code class="docutils literal notranslate"><span class="pre">cb(progress,</span> <span class="pre">message)</span></code> reporting the progress of the
+update, receiving a <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> and a <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>.</p></li>
+<li><p><strong>swupdate_recovery_port</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – The Swupdate communication port</p></li>
 </ul>
 </dd>
 </dl>
@@ -119,6 +121,10 @@
 
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater.__init__" title="ifm3dpy.swupdater.SWUpdater.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self, cam[, cb, swupdate_recovery_port])</p></td>
 <td><p>Constructor</p></td>
@@ -142,22 +148,22 @@
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.swupdater.SWUpdater.flash_firmware">
-<span class="sig-name descname"><span class="pre">flash_firmware</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater" title="ifm3dpy.swupdater.SWUpdater"><span class="pre">ifm3dpy.swupdater.SWUpdater</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">swu_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_millis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ifm3dpy.swupdater.SWUpdater.flash_firmware" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">flash_firmware</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater" title="ifm3dpy.swupdater.SWUpdater"><span class="pre">SWUpdater</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">swu_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_millis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#ifm3dpy.swupdater.SWUpdater.flash_firmware" title="Permalink to this definition"></a></dt>
 <dd><p>Flash the firmware .swu file to the device</p>
 <section id="parameter">
 <h2>Parameter<a class="headerlink" href="#parameter" title="Permalink to this heading"></a></h2>
 <dl class="simple">
-<dt>swu_file<span class="classifier">string</span></dt><dd><p>A .swu file to flash on the device</p>
+<dt>swu_file<span class="classifier">str</span></dt><dd><p>A .swu file to flash on the device</p>
 </dd>
 <dt>timeout_millis<span class="classifier">long</span></dt><dd><p>A timeout value in milliseconds</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">returns<span class="colon">:</span></dt>
+<dt class="field-odd">returns</dt>
 <dd class="field-odd"><p>True if firmware upload is successful</p>
 </dd>
-<dt class="field-even">rtype<span class="colon">:</span></dt>
-<dd class="field-even"><p>bool</p>
+<dt class="field-even">rtype</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </section>
@@ -165,19 +171,19 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.swupdater.SWUpdater.reboot_to_productive">
-<span class="sig-name descname"><span class="pre">reboot_to_productive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater" title="ifm3dpy.swupdater.SWUpdater"><span class="pre">ifm3dpy.swupdater.SWUpdater</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.swupdater.SWUpdater.reboot_to_productive" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">reboot_to_productive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater" title="ifm3dpy.swupdater.SWUpdater"><span class="pre">SWUpdater</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#ifm3dpy.swupdater.SWUpdater.reboot_to_productive" title="Permalink to this definition"></a></dt>
 <dd><p>Reboot the device in productive mode</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.swupdater.SWUpdater.reboot_to_recovery">
-<span class="sig-name descname"><span class="pre">reboot_to_recovery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater" title="ifm3dpy.swupdater.SWUpdater"><span class="pre">ifm3dpy.swupdater.SWUpdater</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.swupdater.SWUpdater.reboot_to_recovery" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">reboot_to_recovery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater" title="ifm3dpy.swupdater.SWUpdater"><span class="pre">SWUpdater</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#ifm3dpy.swupdater.SWUpdater.reboot_to_recovery" title="Permalink to this definition"></a></dt>
 <dd><p>Reboot the device in Recovery Modes</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.swupdater.SWUpdater.wait_for_productive">
-<span class="sig-name descname"><span class="pre">wait_for_productive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater" title="ifm3dpy.swupdater.SWUpdater"><span class="pre">ifm3dpy.swupdater.SWUpdater</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_millis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ifm3dpy.swupdater.SWUpdater.wait_for_productive" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">wait_for_productive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater" title="ifm3dpy.swupdater.SWUpdater"><span class="pre">SWUpdater</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_millis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#ifm3dpy.swupdater.SWUpdater.wait_for_productive" title="Permalink to this definition"></a></dt>
 <dd><p>Waits and check for device in productive mode
 till timeout</p>
 <section id="id1">
@@ -187,11 +193,11 @@ till timeout</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">returns<span class="colon">:</span></dt>
+<dt class="field-odd">returns</dt>
 <dd class="field-odd"><p>True if device in the productive mode</p>
 </dd>
-<dt class="field-even">rtype<span class="colon">:</span></dt>
-<dd class="field-even"><p>bool</p>
+<dt class="field-even">rtype</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </section>
@@ -199,7 +205,7 @@ till timeout</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.swupdater.SWUpdater.wait_for_recovery">
-<span class="sig-name descname"><span class="pre">wait_for_recovery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater" title="ifm3dpy.swupdater.SWUpdater"><span class="pre">ifm3dpy.swupdater.SWUpdater</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_millis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#ifm3dpy.swupdater.SWUpdater.wait_for_recovery" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">wait_for_recovery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater" title="ifm3dpy.swupdater.SWUpdater"><span class="pre">SWUpdater</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_millis</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#ifm3dpy.swupdater.SWUpdater.wait_for_recovery" title="Permalink to this definition"></a></dt>
 <dd><p>Waits and check for device in recovery mode
 till timeout</p>
 <section id="id2">
@@ -209,11 +215,11 @@ till timeout</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">returns<span class="colon">:</span></dt>
+<dt class="field-odd">returns</dt>
 <dd class="field-odd"><p>True if device in the recovery mode</p>
 </dd>
-<dt class="field-even">rtype<span class="colon">:</span></dt>
-<dd class="field-even"><p>bool</p>
+<dt class="field-even">rtype</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </section>

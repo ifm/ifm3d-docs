@@ -4,13 +4,16 @@ ifm3dpy.device.O3X
 .. currentmodule:: ifm3dpy.device
 
 .. autoclass:: O3X
-   :members:                                   
-   :show-inheritance:                           
-   :inherited-members:                          
+   :members:
+   :show-inheritance:
+   :inherited-members: ndarray, int, Enum
 
    
+   
    .. automethod:: __init__
+   
 
+   
    
    .. rubric:: Methods
 
@@ -51,6 +54,151 @@ ifm3dpy.device.O3X
    
    
 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
    
    
    .. rubric:: Attributes

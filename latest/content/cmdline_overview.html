@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ifm3d command line tool &mdash; ifm3d v1.6.16 documentation</title>
+  <title>ifm3d command line tool &mdash; ifm3d v2.0.6 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -34,7 +34,7 @@
             <a href="../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v1.6.16
+                v2.0.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -119,16 +119,16 @@ To access these, the name of the camera family will be used as the first subcomm
 <p>For example, to read out the current configuration on a connected OVP8xx, one would use:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovp8xx config get
 {
-  &quot;applications&quot;: {
-    &quot;classes&quot;: {
-      &quot;mcc&quot;: {
-        &quot;instanceSchema&quot;: {
-          &quot;$schema&quot;: &quot;http://json-schema.org/draft-07/schema#&quot;,
-          &quot;additionalProperties&quot;: false,
-          &quot;properties&quot;: {
-            &quot;class&quot;: {},
-            &quot;configuration&quot;: {},
-            &quot;data&quot;: {},
+  "applications": {
+    "classes": {
+      "mcc": {
+        "instanceSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "additionalProperties": false,
+          "properties": {
+            "class": {},
+            "configuration": {},
+            "data": {},
 ...
 </pre></div>
 </div>
@@ -136,16 +136,16 @@ To access these, the name of the camera family will be used as the first subcomm
 For example, to read out the current configuration of a connected OVP, at IP 192.168.0.70, one would use:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovp8xx config get --ip=192.168.0.70
 {
-  &quot;applications&quot;: {
-    &quot;classes&quot;: {
-      &quot;mcc&quot;: {
-        &quot;instanceSchema&quot;: {
-          &quot;$schema&quot;: &quot;http://json-schema.org/draft-07/schema#&quot;,
-          &quot;additionalProperties&quot;: false,
-          &quot;properties&quot;: {
-            &quot;class&quot;: {},
-            &quot;configuration&quot;: {},
-            &quot;data&quot;: {},
+  "applications": {
+    "classes": {
+      "mcc": {
+        "instanceSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "additionalProperties": false,
+          "properties": {
+            "class": {},
+            "configuration": {},
+            "data": {},
 ...
 </pre></div>
 </div>
@@ -160,14 +160,14 @@ Options:
 
 Subcommands:
   app-types                   List the application types supported by the sensor.
-  config                      Configure sensor settings from a JSON description of the desired sensor state. See also &#39;dump&#39;.
+  config                      Configure sensor settings from a JSON description of the desired sensor state. See also 'dump'.
   cp                          Create a new application on the sensor, bootstrapped from a copy of an existing one.
   discover                    Discover ifm devices on the network.
   dump                        Serialize the sensor state to JSON.
   export                      Export an application or whole sensor configuration into a format compatible with ifm Vision Assistant.
   hz                          Compute the actual frequency at which the FrameGrabber is running.
   imager-types                List the imager types supported by the sensor.
-  import                      Import an application or whole sensor configuration that is compatible with ifm Vision Assistant&#39;s export format (*.o3d3xxapp).
+  import                      Import an application or whole sensor configuration that is compatible with ifm Vision Assistant's export format (*.o3d3xxapp).
   jitter                      Collects statistics on framegrabber (and optionally, image construction) jitter.
   ls                          Lists the applications currently installed on the sensor.
   passwd                      Sets the password on the sensor.
@@ -185,7 +185,7 @@ Subcommands:
 <p>Using the ifm3d CLI can be a quick way to configure or read out parts of the device configuration.
 It can be used in conjunction with the tool <a class="reference external" href="https://jqlang.org/">jq</a> to set portions of the configuration, or alternatively a configuration file in JSON format can be used.</p>
 <p>For example, to change the name of an OVP8xx device, one can use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ echo {} | jq &#39;.device.info.name=&quot;My favorite O3R&quot;&#39; | ifm3d ovp8xx config set
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ echo {} | jq '.device.info.name="My favorite O3R"' | ifm3d ovp8xx config set
 </pre></div>
 </div>
 <p>Alternatively, a configuration file can be used, by providing its path in the <code class="docutils literal notranslate"><span class="pre">--file</span></code> argument.
@@ -194,11 +194,11 @@ For example:</p>
 </pre></div>
 </div>
 <p>To read out a specific subset of the configuration, one can use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovp8xx config get --path &quot;/device/info/name&quot;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovp8xx config get --path "/device/info/name"
 {
-  &quot;device&quot;: {
-    &quot;info&quot;: {
-      &quot;name&quot;: &quot;My favorite O3R&quot;
+  "device": {
+    "info": {
+      "name": "My favorite O3R"
     }
   }
 }
@@ -220,84 +220,84 @@ For example:</p>
 <p>To retrieve the currently active diagnostic, one can use:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovp8xx diagnostic get
 {
-  &quot;bootid&quot;: &quot;2e49ea23-2f03-4965-8d48-fe08e72c23dd&quot;,
-  &quot;events&quot;: [],
-  &quot;timestamp&quot;: &quot;1651170509113082016&quot;,
-  &quot;version&quot;: {
-    &quot;diagnostics&quot;: &quot;1.0.1&quot;,
-    &quot;euphrates&quot;: &quot;1.42.9&quot;,
-    &quot;firmware&quot;: &quot;1.20.11.6034&quot;
+  "bootid": "2e49ea23-2f03-4965-8d48-fe08e72c23dd",
+  "events": [],
+  "timestamp": "1651170509113082016",
+  "version": {
+    "diagnostics": "1.0.1",
+    "euphrates": "1.42.9",
+    "firmware": "1.20.11.6034"
   }
 }
 </pre></div>
 </div>
 <p>In the example above, there is no active diagnostics.</p>
 <p>By default, only the active diagnostic is displayed. To filter the diagnostic messages, for example to retrieve all active diagnostics from the “/applications/instances/app0/type” source, use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovp8xx diagnostic get --filter &#39;{&quot;source&quot;: &quot;/applications/instances/app0/type&quot;, &quot;state&quot;: &quot;active&quot;}&#39;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovp8xx diagnostic get --filter '{"source": "/applications/instances/app0/type", "state": "active"}'
 {
-  &quot;bootid&quot;: &quot;7a4ea1e6-1869-4500-bd2d-c32aad956ca9&quot;,
-  &quot;events&quot;: [
+  "bootid": "7a4ea1e6-1869-4500-bd2d-c32aad956ca9",
+  "events": [
     {
-      &quot;description&quot;: &quot;Short term unstable framerate of ODS input streams. This may happen sporadically (especially after changing the activePorts parameter). This might be caused by an overloaded system (please consider the potential influence of OEM Docker containers).&quot;,
-      &quot;id&quot;: 105006,
-      &quot;name&quot;: &quot;ERROR_ODSAPP_UNSTABLE_FRAMERATES&quot;,
-      &quot;severity&quot;: &quot;minor&quot;,
-      &quot;source&quot;: &quot;/applications/instances/app0/type&quot;,
-      &quot;state&quot;: &quot;active&quot;,
-      &quot;stats&quot;: {
-        &quot;count&quot;: 1,
-        &quot;lastActivated&quot;: {
-          &quot;bootid&quot;: &quot;7a4ea1e6-1869-4500-bd2d-c32aad956ca9&quot;,
-          &quot;timestamp&quot;: &quot;1703415152874733952&quot;
+      "description": "Short term unstable framerate of ODS input streams. This may happen sporadically (especially after changing the activePorts parameter). This might be caused by an overloaded system (please consider the potential influence of OEM Docker containers).",
+      "id": 105006,
+      "name": "ERROR_ODSAPP_UNSTABLE_FRAMERATES",
+      "severity": "minor",
+      "source": "/applications/instances/app0/type",
+      "state": "active",
+      "stats": {
+        "count": 1,
+        "lastActivated": {
+          "bootid": "7a4ea1e6-1869-4500-bd2d-c32aad956ca9",
+          "timestamp": "1703415152874733952"
         },
-        &quot;lastDeactivated&quot;: {
-          &quot;bootid&quot;: &quot;&quot;,
-          &quot;timestamp&quot;: &quot;0&quot;
+        "lastDeactivated": {
+          "bootid": "",
+          "timestamp": "0"
         }
       },
-      &quot;targets&quot;: [
+      "targets": [
         {
-          &quot;description&quot;: &quot;Targets one application&quot;,
-          &quot;name&quot;: &quot;app&quot;,
-          &quot;node&quot;: &quot;/applications/instances/app0&quot;
+          "description": "Targets one application",
+          "name": "app",
+          "node": "/applications/instances/app0"
         }
       ]
     },
   ],
-  &quot;groups&quot;: {
-    &quot;app0&quot;: &quot;minor&quot;,
-    &quot;app1&quot;: &quot;not_available&quot;,
-    &quot;app10&quot;: &quot;not_available&quot;,
-    &quot;app11&quot;: &quot;not_available&quot;,
-    &quot;app12&quot;: &quot;not_available&quot;,
-    &quot;app13&quot;: &quot;not_available&quot;,
-    &quot;app14&quot;: &quot;not_available&quot;,
-    &quot;app15&quot;: &quot;not_available&quot;,
-    &quot;app16&quot;: &quot;not_available&quot;,
-    &quot;app17&quot;: &quot;not_available&quot;,
-    &quot;app18&quot;: &quot;not_available&quot;,
-    &quot;app19&quot;: &quot;not_available&quot;,
-    &quot;app2&quot;: &quot;not_available&quot;,
-    &quot;app3&quot;: &quot;not_available&quot;,
-    &quot;app4&quot;: &quot;not_available&quot;,
-    &quot;app5&quot;: &quot;not_available&quot;,
-    &quot;app6&quot;: &quot;not_available&quot;,
-    &quot;app7&quot;: &quot;not_available&quot;,
-    &quot;app8&quot;: &quot;not_available&quot;,
-    &quot;app9&quot;: &quot;not_available&quot;,
-    &quot;port0&quot;: &quot;no_incident&quot;,
-    &quot;port1&quot;: &quot;no_incident&quot;,
-    &quot;port2&quot;: &quot;no_incident&quot;,
-    &quot;port3&quot;: &quot;no_incident&quot;,
-    &quot;port4&quot;: &quot;not_available&quot;,
-    &quot;port5&quot;: &quot;not_available&quot;,
-    &quot;port6&quot;: &quot;no_incident&quot;
+  "groups": {
+    "app0": "minor",
+    "app1": "not_available",
+    "app10": "not_available",
+    "app11": "not_available",
+    "app12": "not_available",
+    "app13": "not_available",
+    "app14": "not_available",
+    "app15": "not_available",
+    "app16": "not_available",
+    "app17": "not_available",
+    "app18": "not_available",
+    "app19": "not_available",
+    "app2": "not_available",
+    "app3": "not_available",
+    "app4": "not_available",
+    "app5": "not_available",
+    "app6": "not_available",
+    "app7": "not_available",
+    "app8": "not_available",
+    "app9": "not_available",
+    "port0": "no_incident",
+    "port1": "no_incident",
+    "port2": "no_incident",
+    "port3": "no_incident",
+    "port4": "not_available",
+    "port5": "not_available",
+    "port6": "no_incident"
   },
-  &quot;timestamp&quot;: &quot;1703415367567905984&quot;,
-  &quot;version&quot;: {
-    &quot;diagnostics&quot;: &quot;1.0.4&quot;,
-    &quot;euphrates&quot;: &quot;1.42.16&quot;,
-    &quot;firmware&quot;: &quot;1.20.19.6210&quot;
+  "timestamp": "1703415367567905984",
+  "version": {
+    "diagnostics": "1.0.4",
+    "euphrates": "1.42.16",
+    "firmware": "1.20.19.6210"
   }
 }
 

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['boot_5fmode_374',['boot_mode',['../classifm3d_1_1Device.html#a752c3ebe308ebac6b2fe987cd0d53775',1,'ifm3d::Device']]],
-  ['buffer_5fid_375',['buffer_id',['../group__FrameGrabber.html#ga363ee802dc7953150dc23ba56d7e9c50',1,'ifm3d']]]
+  ['bootmode_489',['BootMode',['../classifm3d_1_1Device.html#afade3d3470c3ce231c117a11e9f05976',1,'ifm3d::Device']]],
+  ['bufferid_490',['BufferId',['../group__FrameGrabber.html#gaca9d48fd13de3e0a7e7af60e518bfd35',1,'ifm3d']]]
 ];

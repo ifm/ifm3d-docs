@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['frame_214',['Frame',['../classifm3d_1_1Frame.html',1,'ifm3d']]],
-  ['framegrabber_215',['FrameGrabber',['../classifm3d_1_1FrameGrabber.html',1,'ifm3d']]]
+  ['formatter_3c_20ifm3d_3a_3asemver_20_3e_280',['formatter&lt; ifm3d::SemVer &gt;',['../structfmt_1_1formatter_3_01ifm3d_1_1SemVer_01_4.html',1,'fmt']]],
+  ['frame_281',['Frame',['../classifm3d_1_1Frame.html',1,'ifm3d']]],
+  ['framegrabber_282',['FrameGrabber',['../classifm3d_1_1FrameGrabber.html',1,'ifm3d']]]
 ];

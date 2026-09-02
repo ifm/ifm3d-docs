@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ifm3dpy.deserialize.TOFInfoV4 &mdash; ifm3d v1.6.16 documentation</title>
+  <title>ifm3dpy.deserialize.TOFInfoV4 &mdash; ifm3d v2.0.6 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -34,7 +34,7 @@
             <a href="../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v1.6.16
+                v2.0.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -55,8 +55,10 @@
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.html">ifm3dpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.device.html">ifm3dpy.device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.framegrabber.html">ifm3dpy.framegrabber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.rtsp.html">ifm3dpy.rtsp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.swupdater.html">ifm3dpy.swupdater</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="ifm3dpy.deserialize.html">ifm3dpy.deserialize</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.deserialize.html">ifm3dpy.deserialize.deserialize</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.Calibration.html">ifm3dpy.deserialize.Calibration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.ExtrinsicOpticToUser.html">ifm3dpy.deserialize.ExtrinsicOpticToUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.IMUInfoV1.html">ifm3dpy.deserialize.IMUInfoV1</a></li>
@@ -119,23 +121,31 @@
 <p>Class for managing an instance of an struct TofInfoV4</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.deserialize.TOFInfoV4.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV4" title="ifm3dpy.deserialize.TOFInfoV4"><span class="pre">ifm3dpy.deserialize.TOFInfoV4</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#ifm3dpy.deserialize.TOFInfoV4.__init__" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV4" title="ifm3dpy.deserialize.TOFInfoV4"><span class="pre">TOFInfoV4</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#ifm3dpy.deserialize.TOFInfoV4.__init__" title="Permalink to this definition"></a></dt>
 <dd><p>Constructor</p>
 </dd></dl>
 
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV4.__init__" title="ifm3dpy.deserialize.TOFInfoV4.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(self)</p></td>
 <td><p>Constructor</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV4.deserialize" title="ifm3dpy.deserialize.TOFInfoV4.deserialize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deserialize</span></code></a>(arg0)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV4.deserialize" title="ifm3dpy.deserialize.TOFInfoV4.deserialize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deserialize</span></code></a>(buffer)</p></td>
 <td><p>Deserialize TOF_INFO buffer to ToFInfoV4</p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Attributes</p>
 <table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV4.amp_normalization_factors" title="ifm3dpy.deserialize.TOFInfoV4.amp_normalization_factors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">amp_normalization_factors</span></code></a></p></td>
 <td><p>Amplitude normalization factors for the individual exposure times</p></td>
@@ -184,6 +194,23 @@
 </tr>
 </tbody>
 </table>
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.deserialize.TOFInfoV4.deserialize">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Annotated" title="(in Python v3.14)"><span class="pre">Annotated</span></a><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.ArrayLike</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">numpy.uint8</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV4" title="ifm3dpy.deserialize.TOFInfoV4"><span class="pre">TOFInfoV4</span></a></span></span><a class="headerlink" href="#ifm3dpy.deserialize.TOFInfoV4.deserialize" title="Permalink to this definition"></a></dt>
+<dd><p>Deserialize TOF_INFO buffer to ToFInfoV4</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>buffer</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>) – The raw buffer data as an array of <code class="docutils literal notranslate"><span class="pre">numpy.uint8</span></code>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The deserialized structure.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV4" title="ifm3dpy.deserialize.TOFInfoV4"><code class="xref py py-class docutils literal notranslate"><span class="pre">TOFInfoV4</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py property">
 <dt class="sig sig-object py" id="ifm3dpy.deserialize.TOFInfoV4.amp_normalization_factors">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">amp_normalization_factors</span></span><a class="headerlink" href="#ifm3dpy.deserialize.TOFInfoV4.amp_normalization_factors" title="Permalink to this definition"></a></dt>
@@ -194,12 +221,6 @@
 <dt class="sig sig-object py" id="ifm3dpy.deserialize.TOFInfoV4.amplitude_resolution">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">amplitude_resolution</span></span><a class="headerlink" href="#ifm3dpy.deserialize.TOFInfoV4.amplitude_resolution" title="Permalink to this definition"></a></dt>
 <dd><p>Resolution of the amplitude buffer</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="ifm3dpy.deserialize.TOFInfoV4.deserialize">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">deserialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.uint8</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#ifm3dpy.deserialize.TOFInfoV4" title="ifm3dpy.deserialize.TOFInfoV4"><span class="pre">ifm3dpy.deserialize.TOFInfoV4</span></a></span></span><a class="headerlink" href="#ifm3dpy.deserialize.TOFInfoV4.deserialize" title="Permalink to this definition"></a></dt>
-<dd><p>Deserialize TOF_INFO buffer to ToFInfoV4</p>
 </dd></dl>
 
 <dl class="py property">

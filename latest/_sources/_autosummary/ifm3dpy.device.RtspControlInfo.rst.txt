@@ -1,0 +1,87 @@
+ifm3dpy.device.RtspControlInfo
+==============================
+
+.. currentmodule:: ifm3dpy.device
+
+.. autoclass:: RtspControlInfo
+   :members:
+   :show-inheritance:
+   :inherited-members: ndarray, int, Enum
+
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RtspControlInfo.tcp_port
+   
+   

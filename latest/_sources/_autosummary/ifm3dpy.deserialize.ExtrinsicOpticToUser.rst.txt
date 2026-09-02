@@ -4,13 +4,16 @@ ifm3dpy.deserialize.ExtrinsicOpticToUser
 .. currentmodule:: ifm3dpy.deserialize
 
 .. autoclass:: ExtrinsicOpticToUser
-   :members:                                   
-   :show-inheritance:                           
-   :inherited-members:                          
+   :members:
+   :show-inheritance:
+   :inherited-members: ndarray, int, Enum
 
    
+   
    .. automethod:: __init__
+   
 
+   
    
    .. rubric:: Methods
 
@@ -20,6 +23,77 @@ ifm3dpy.deserialize.ExtrinsicOpticToUser
    
    
 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
    
    
    .. rubric:: Attributes

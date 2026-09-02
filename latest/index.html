@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ifm3d library &mdash; ifm3d v1.6.16 documentation</title>
+  <title>ifm3d library &mdash; ifm3d v2.0.6 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
@@ -33,7 +33,7 @@
             <a href="#" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v1.6.16
+                v2.0.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -85,7 +85,7 @@
 <h1>ifm3d library<a class="headerlink" href="#ifm3d-library" title="Permalink to this heading"></a></h1>
 <div class="admonition-news admonition">
 <p class="admonition-title">News</p>
-<p>The latest release of ifm3d is version v1.6.16. Please take a look at the <a class="reference internal" href="content/migration_guide/index.html"><span class="doc std std-doc">migration guide</span></a> for breaking changes.</p>
+<p>The latest release of ifm3d is version v2.0.6. Please take a look at the <a class="reference internal" href="content/migration_guide/index.html"><span class="doc std std-doc">migration guide</span></a> for breaking changes.</p>
 <p>A detailed list of all changes is available under <a class="reference internal" href="content/ChangeLog.html"><span class="doc std std-doc">Changelog</span></a>.</p>
 </div>
 <div class="toctree-wrapper compound">
@@ -107,6 +107,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="content/migration_guide/index.html">Migration Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content/migration_guide/v2_0_0.html">v2.0.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="content/migration_guide/v1_6_0.html">v1.6.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="content/migration_guide/v1_3_0.html">v1.3.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="content/migration_guide/v1_2_0.html">v1.2.0</a></li>
@@ -132,19 +133,28 @@
 <li class="toctree-l1"><a class="reference internal" href="python_api.html">Python API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/ifm3dpy.html">ifm3dpy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.Awaitable.html">ifm3dpy.Awaitable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.Buffer.html">ifm3dpy.Buffer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.FrameAwaitable.html">ifm3dpy.FrameAwaitable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.PCICCommandResponseAwaitable.html">ifm3dpy.PCICCommandResponseAwaitable</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/ifm3dpy.device.html">ifm3dpy.device</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.Device.html">ifm3dpy.device.Device</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.IFMNetworkDevice.html">ifm3dpy.device.IFMNetworkDevice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.LegacyDevice.html">ifm3dpy.device.LegacyDevice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.O3C.html">ifm3dpy.device.O3C</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.O3D.html">ifm3dpy.device.O3D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.O3R.html">ifm3dpy.device.O3R</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.O3RSealedBox.html">ifm3dpy.device.O3RSealedBox</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.O3X.html">ifm3dpy.device.O3X</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.PCICCommand.html">ifm3dpy.device.PCICCommand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.Parameter.html">ifm3dpy.device.Parameter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.PortInfo.html">ifm3dpy.device.PortInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.RtspControlInfo.html">ifm3dpy.device.RtspControlInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.RtspInfo.html">ifm3dpy.device.RtspInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.RtspMediaEndpoint.html">ifm3dpy.device.RtspMediaEndpoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.SemVer.html">ifm3dpy.device.SemVer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.SetTemporaryApplicationParameter.html">ifm3dpy.device.SetTemporaryApplicationParameter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.device.Error.html">ifm3dpy.device.Error</a></li>
 </ul>
 </li>
@@ -154,11 +164,18 @@
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.framegrabber.buffer_id.html">ifm3dpy.framegrabber.buffer_id</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ifm3dpy.rtsp.html">ifm3dpy.rtsp</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.rtsp.DecoderManager.html">ifm3dpy.rtsp.DecoderManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.rtsp.NalUnit.html">ifm3dpy.rtsp.NalUnit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.rtsp.RtspClient.html">ifm3dpy.rtsp.RtspClient</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/ifm3dpy.swupdater.html">ifm3dpy.swupdater</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.swupdater.SWUpdater.html">ifm3dpy.swupdater.SWUpdater</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/ifm3dpy.deserialize.html">ifm3dpy.deserialize</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.deserialize.deserialize.html">ifm3dpy.deserialize.deserialize</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.deserialize.Calibration.html">ifm3dpy.deserialize.Calibration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.deserialize.ExtrinsicOpticToUser.html">ifm3dpy.deserialize.ExtrinsicOpticToUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ifm3dpy.deserialize.IMUInfoV1.html">ifm3dpy.deserialize.IMUInfoV1</a></li>

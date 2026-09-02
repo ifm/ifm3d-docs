@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ifm3dpy.deserialize &mdash; ifm3d v1.6.16 documentation</title>
+  <title>ifm3dpy.deserialize &mdash; ifm3d v2.0.6 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -22,7 +22,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ifm3dpy.deserialize.Calibration" href="ifm3dpy.deserialize.Calibration.html" />
+    <link rel="next" title="ifm3dpy.deserialize.deserialize" href="ifm3dpy.deserialize.deserialize.html" />
     <link rel="prev" title="ifm3dpy.swupdater.SWUpdater" href="ifm3dpy.swupdater.SWUpdater.html" /> 
 </head>
 
@@ -34,7 +34,7 @@
             <a href="../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v1.6.16
+                v2.0.6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -55,8 +55,10 @@
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.html">ifm3dpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.device.html">ifm3dpy.device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.framegrabber.html">ifm3dpy.framegrabber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ifm3dpy.rtsp.html">ifm3dpy.rtsp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ifm3dpy.swupdater.html">ifm3dpy.swupdater</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">ifm3dpy.deserialize</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.deserialize.html">ifm3dpy.deserialize.deserialize</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.Calibration.html">ifm3dpy.deserialize.Calibration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.ExtrinsicOpticToUser.html">ifm3dpy.deserialize.ExtrinsicOpticToUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ifm3dpy.deserialize.IMUInfoV1.html">ifm3dpy.deserialize.IMUInfoV1</a></li>
@@ -112,8 +114,24 @@
   <section id="module-ifm3dpy.deserialize">
 <span id="ifm3dpy-deserialize"></span><h1>ifm3dpy.deserialize<a class="headerlink" href="#module-ifm3dpy.deserialize" title="Permalink to this heading"></a></h1>
 <p>Provides definitions and functions for deserializing structs sent over PCIC</p>
+<p class="rubric">Functions</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.deserialize.deserialize.html#ifm3dpy.deserialize.deserialize" title="ifm3dpy.deserialize.deserialize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deserialize</span></code></a>(buffer)</p></td>
+<td><p>Deserialize the given buffer and return the appropriate data structure.</p></td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Classes</p>
 <table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.deserialize.Calibration.html#ifm3dpy.deserialize.Calibration" title="ifm3dpy.deserialize.Calibration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Calibration</span></code></a></p></td>
 <td><p>Class for managing an instance calibration parameters</p></td>
@@ -125,19 +143,19 @@
 <td><p>Class for managing an instance of an struct IMUInfoV1</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.deserialize.IMUSample.html#ifm3dpy.deserialize.IMUSample" title="ifm3dpy.deserialize.IMUSample"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IMUSample</span></code></a></p></td>
-<td><p>Class for managing an instance of an struct IMUSample</p></td>
+<td><p>R(Class for managing an instance of imu sample data)</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.deserialize.O3DExposureTimes.html#ifm3dpy.deserialize.O3DExposureTimes" title="ifm3dpy.deserialize.O3DExposureTimes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3DExposureTimes</span></code></a></p></td>
-<td><p>Class for managing an o3d_parameter</p></td>
+<td><p>Class holding the deserialized O3DExposureTimes values of an O3D device.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.deserialize.O3DExtrinsicCalibration.html#ifm3dpy.deserialize.O3DExtrinsicCalibration" title="ifm3dpy.deserialize.O3DExtrinsicCalibration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3DExtrinsicCalibration</span></code></a></p></td>
-<td><p>Class for managing an o3d_parameter</p></td>
+<td><p>Class holding the deserialized O3DExtrinsicCalibration values of an O3D device.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.deserialize.O3DILLUTemperature.html#ifm3dpy.deserialize.O3DILLUTemperature" title="ifm3dpy.deserialize.O3DILLUTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3DILLUTemperature</span></code></a></p></td>
-<td><p>Class for managing an o3d_parameter</p></td>
+<td><p>Class holding the deserialized O3DILLUTemperature values of an O3D device.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="ifm3dpy.deserialize.O3DInstrinsicCalibration.html#ifm3dpy.deserialize.O3DInstrinsicCalibration" title="ifm3dpy.deserialize.O3DInstrinsicCalibration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3DInstrinsicCalibration</span></code></a></p></td>
-<td><p>Class for managing an o3d_parameter</p></td>
+<td><p>Class holding the deserialized O3DInstrinsicCalibration values of an O3D device.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="ifm3dpy.deserialize.O3DInverseInstrinsicCalibration.html#ifm3dpy.deserialize.O3DInverseInstrinsicCalibration" title="ifm3dpy.deserialize.O3DInverseInstrinsicCalibration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">O3DInverseInstrinsicCalibration</span></code></a></p></td>
 <td><p>alias of <a class="reference internal" href="ifm3dpy.deserialize.O3DInstrinsicCalibration.html#ifm3dpy.deserialize.O3DInstrinsicCalibration" title="ifm3dpy.deserialize.O3DInstrinsicCalibration"><code class="xref py py-class docutils literal notranslate"><span class="pre">O3DInstrinsicCalibration</span></code></a></p></td>

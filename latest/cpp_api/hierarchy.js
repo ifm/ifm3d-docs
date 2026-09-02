@@ -1,22 +1,30 @@
 var hierarchy =
 [
-    [ "ifm3d::ArrayDeserialize< T, num_of_parameter >", "classifm3d_1_1ArrayDeserialize.html", null ],
+    [ "ifm3d::ArrayDeserialize< T, NUM_OF_PARAMETERS >", "classifm3d_1_1ArrayDeserialize.html", null ],
     [ "ifm3d::Buffer", "classifm3d_1_1Buffer.html", [
-      [ "ifm3d::Buffer_< Tp >", "classifm3d_1_1Buffer__.html", null ]
+      [ "ifm3d::Buffer_< TP >", "classifm3d_1_1Buffer__.html", null ]
     ] ],
     [ "ifm3d::calibration::Calibration", "structifm3d_1_1calibration_1_1Calibration.html", null ],
+    [ "ifm3d::RtspClient::Config", "structifm3d_1_1RtspClient_1_1Config.html", null ],
+    [ "ifm3d::DecoderManager::DecoderInfo", "structifm3d_1_1DecoderManager_1_1DecoderInfo.html", null ],
+    [ "ifm3d::DecoderManager", "classifm3d_1_1DecoderManager.html", null ],
     [ "ifm3d::Device", "classifm3d_1_1Device.html", [
       [ "ifm3d::LegacyDevice", "classifm3d_1_1LegacyDevice.html", [
         [ "ifm3d::O3D", "classifm3d_1_1O3D.html", null ],
         [ "ifm3d::O3X", "classifm3d_1_1O3X.html", null ]
       ] ],
-      [ "ifm3d::O3R", "classifm3d_1_1O3R.html", null ]
+      [ "ifm3d::O3R", "classifm3d_1_1O3R.html", [
+        [ "ifm3d::O3C", "classifm3d_1_1O3C.html", null ]
+      ] ]
     ] ],
     [ "ifm3d::DistanceImageInfo", "classifm3d_1_1DistanceImageInfo.html", null ],
-    [ "exception", null, [
+    [ "std::exception", null, [
       [ "ifm3d::Error", "classifm3d_1_1Error.html", null ]
     ] ],
     [ "ifm3d::calibration::ExtrinsicOpticToUser", "structifm3d_1_1calibration_1_1ExtrinsicOpticToUser.html", null ],
+    [ "fmt::formatter", null, [
+      [ "fmt::formatter< ifm3d::SemVer >", "structfmt_1_1formatter_3_01ifm3d_1_1SemVer_01_4.html", null ]
+    ] ],
     [ "ifm3d::Frame", "classifm3d_1_1Frame.html", null ],
     [ "ifm3d::FrameGrabber", "classifm3d_1_1FrameGrabber.html", null ],
     [ "ifm3d::IFMNetworkDevice", "classifm3d_1_1IFMNetworkDevice.html", null ],
@@ -32,12 +40,12 @@ var hierarchy =
     [ "ifm3d::Logger", "classifm3d_1_1Logger.html", null ],
     [ "ifm3d::LogWriter", "classifm3d_1_1LogWriter.html", [
       [ "ifm3d::LogWriterComposite", "classifm3d_1_1LogWriterComposite.html", null ],
-      [ "ifm3d::LogWriterConsole< Formatter, >", "classifm3d_1_1LogWriterConsole.html", null ],
-      [ "ifm3d::LogWriterFile< Formatter >", "classifm3d_1_1LogWriterFile.html", null ],
-      [ "ifm3d::LogWriterConsole< Formatter >", "classifm3d_1_1LogWriterConsole.html", [
-        [ "ifm3d::LogWriterConsoleColored< Formatter, >", "classifm3d_1_1LogWriterConsoleColored.html", null ]
-      ] ]
+      [ "ifm3d::LogWriterConsole< FORMATTER, >", "classifm3d_1_1LogWriterConsole.html", [
+        [ "ifm3d::LogWriterConsoleColored< FORMATTER, >", "classifm3d_1_1LogWriterConsoleColored.html", null ]
+      ] ],
+      [ "ifm3d::LogWriterFile< FORMATTER >", "classifm3d_1_1LogWriterFile.html", null ]
     ] ],
+    [ "ifm3d::NalUnit", "structifm3d_1_1NalUnit.html", null ],
     [ "O3DExposureTimes", "classifm3d_1_1O3DExposureTimes.html", null ],
     [ "O3DExtrinsicCalibration", "classifm3d_1_1O3DExtrinsicCalibration.html", null ],
     [ "O3DILLUTemperature", "classifm3d_1_1O3DILLUTemperature.html", null ],
@@ -49,13 +57,24 @@ var hierarchy =
     [ "ifm3d::ODSPolarOccupancyGridV1", "classifm3d_1_1ODSPolarOccupancyGridV1.html", null ],
     [ "ifm3d::Organizer", "classifm3d_1_1Organizer.html", null ],
     [ "ifm3d::PCICClient", "classifm3d_1_1PCICClient.html", null ],
-    [ "ifm3d::Point< T, n >", "structifm3d_1_1Point.html", null ],
+    [ "ifm3d::PCICCommand", "classifm3d_1_1PCICCommand.html", [
+      [ "ifm3d::O3R::SetTemporaryApplicationParameter", "structifm3d_1_1O3R_1_1SetTemporaryApplicationParameter.html", null ]
+    ] ],
+    [ "ifm3d::Point< T, N >", "structifm3d_1_1Point.html", null ],
     [ "ifm3d::PortInfo", "structifm3d_1_1PortInfo.html", null ],
     [ "ifm3d::Organizer::Result", "structifm3d_1_1Organizer_1_1Result.html", null ],
     [ "ifm3d::RGBInfoV1", "classifm3d_1_1RGBInfoV1.html", null ],
+    [ "ifm3d::RtspClient", "classifm3d_1_1RtspClient.html", null ],
+    [ "ifm3d::RtspControlInfo", "structifm3d_1_1RtspControlInfo.html", null ],
+    [ "ifm3d::RtspInfo", "structifm3d_1_1RtspInfo.html", null ],
+    [ "ifm3d::RtspMediaEndpoint", "structifm3d_1_1RtspMediaEndpoint.html", null ],
+    [ "ifm3d::SealedBox", "classifm3d_1_1SealedBox.html", null ],
     [ "ifm3d::SemVer", "structifm3d_1_1SemVer.html", null ],
     [ "ifm3d::SWUpdater", "classifm3d_1_1SWUpdater.html", null ],
     [ "ifm3d::TOFInfoV3", "classifm3d_1_1TOFInfoV3.html", [
       [ "ifm3d::TOFInfoV4", "classifm3d_1_1TOFInfoV4.html", null ]
-    ] ]
+    ] ],
+    [ "ifm3d::rtsp::VideoDecoder", "classifm3d_1_1rtsp_1_1VideoDecoder.html", null ],
+    [ "ifm3d::rtsp::VideoDecoderFactory", "classifm3d_1_1rtsp_1_1VideoDecoderFactory.html", null ],
+    [ "ifm3d::rtsp::VideoFrame", "structifm3d_1_1rtsp_1_1VideoFrame.html", null ]
 ];

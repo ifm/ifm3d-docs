@@ -4,22 +4,88 @@ ifm3dpy.logging.LogEntry
 .. currentmodule:: ifm3dpy.logging
 
 .. autoclass:: LogEntry
-   :members:                                   
-   :show-inheritance:                           
-   :inherited-members:                          
+   :members:
+   :show-inheritance:
+   :inherited-members: ndarray, int, Enum
 
-   
-   .. automethod:: __init__
-
-   
-   .. rubric:: Methods
-
-   .. autosummary::
-   
-      ~LogEntry.__init__
    
    
 
+   
+   
+   
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
    
    
    .. rubric:: Attributes
@@ -27,5 +93,10 @@ ifm3dpy.logging.LogEntry
    .. autosummary::
    
       ~LogEntry.file
+      ~LogEntry.func
+      ~LogEntry.line
+      ~LogEntry.log_level
+      ~LogEntry.message
+      ~LogEntry.time
    
    

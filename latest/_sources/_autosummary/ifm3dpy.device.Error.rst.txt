@@ -4,16 +4,24 @@ ifm3dpy.device.Error
 .. currentmodule:: ifm3dpy.device
 
 .. autoclass:: Error
-   :members:                                   
-   :show-inheritance:                           
-   :inherited-members:                          
-
-   
-   .. automethod:: __init__
+   :members:
+   :show-inheritance:
+   :inherited-members: ndarray, int, Enum
 
    
    
 
+   
+   
+   
+
+   
+   
+   
+   
+   
+
+   
    
    
    

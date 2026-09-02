@@ -4,13 +4,16 @@ ifm3dpy.deserialize.ODSOccupancyGridV1
 .. currentmodule:: ifm3dpy.deserialize
 
 .. autoclass:: ODSOccupancyGridV1
-   :members:                                   
-   :show-inheritance:                           
-   :inherited-members:                          
+   :members:
+   :show-inheritance:
+   :inherited-members: ndarray, int, Enum
 
    
+   
    .. automethod:: __init__
+   
 
+   
    
    .. rubric:: Methods
 
@@ -21,6 +24,77 @@ ifm3dpy.deserialize.ODSOccupancyGridV1
    
    
 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
    
    
    .. rubric:: Attributes

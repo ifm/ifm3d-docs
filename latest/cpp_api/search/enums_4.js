@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['spatial_5ffilter_379',['spatial_filter',['../classifm3d_1_1Device.html#affabf379ff6b7312fd7a79abdf55815e',1,'ifm3d::Device']]]
+  ['spatialfilter_494',['SpatialFilter',['../classifm3d_1_1Device.html#ab13593f7e27a64b17368f9cf76fc36a0',1,'ifm3d::Device']]],
+  ['state_495',['State',['../classifm3d_1_1RtspClient.html#a37bc0b76c7cd1dd9d4705cd5ca3eba12',1,'ifm3d::RtspClient']]]
 ];

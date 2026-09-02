@@ -4,36 +4,58 @@ ifm3dpy.logging.LogLevel
 .. currentmodule:: ifm3dpy.logging
 
 .. autoclass:: LogLevel
-   :members:                                   
-   :show-inheritance:                           
-   :inherited-members:                          
+   :members:
+   :show-inheritance:
+   :inherited-members: ndarray, int, Enum
 
-   
-   .. automethod:: __init__
-
-   
-   .. rubric:: Methods
-
-   .. autosummary::
-   
-      ~LogLevel.__init__
    
    
 
+   
+   
+   
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
    
    
    .. rubric:: Attributes
 
    .. autosummary::
    
+      ~LogLevel.Off
       ~LogLevel.Critical
-      ~LogLevel.Debug
       ~LogLevel.Error
-      ~LogLevel.Info
-      ~LogLevel.None
-      ~LogLevel.Verbose
       ~LogLevel.Warning
-      ~LogLevel.name
-      ~LogLevel.value
+      ~LogLevel.Info
+      ~LogLevel.Debug
+      ~LogLevel.Verbose
    
    
