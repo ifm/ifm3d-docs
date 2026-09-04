@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How to: receive and use the 2D RGB image &mdash; ifm3d v2.0.6 documentation</title>
+  <title>How to: receive and use the 2D RGB image &mdash; ifm3d v2.0.7 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
@@ -35,7 +35,7 @@
             <a href="../../../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v2.0.6
+                v2.0.7
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -163,22 +163,44 @@ Follow the full example for the conversion to cv::Mat with or without copy.</p>
 <span class="kn">from</span><span class="w"> </span><span class="nn">ifm3dpy.device</span><span class="w"> </span><span class="kn">import</span> <span class="n">O3R</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">ifm3dpy.framegrabber</span><span class="w"> </span><span class="kn">import</span> <span class="n">FrameGrabber</span><span class="p">,</span> <span class="n">buffer_id</span>
 
+<span class="n">WINDOW_NAME</span> <span class="o">=</span> <span class="s2">"2D image"</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">display</span><span class="p">(</span><span class="n">img_queue</span><span class="p">:</span> <span class="n">collections</span><span class="o">.</span><span class="n">deque</span><span class="p">,</span> <span class="n">timeout</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Display the images from the queue in a window.</span>
-<span class="sd">    Args:</span>
-<span class="sd">        img_queue (collections.deque): Queue containing the images to be displayed.</span>
-<span class="sd">        timeout (int): Timeout in milliseconds for frame grabbing.</span>
-<span class="sd">    """</span>
-    <span class="c1"># Create a window to display the images</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">window_open</span><span class="p">(</span><span class="n">window_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">WINDOW_NAME</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Return True while the OpenCV window is still visible."""</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">cv2</span><span class="o">.</span><span class="n">getWindowProperty</span><span class="p">(</span><span class="n">window_name</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">WND_PROP_VISIBLE</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">1</span>
+    <span class="k">except</span> <span class="n">cv2</span><span class="o">.</span><span class="n">error</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">show_stream</span><span class="p">(</span><span class="n">img_queue</span><span class="p">:</span> <span class="n">collections</span><span class="o">.</span><span class="n">deque</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Display the latest image until the window is closed or q/ESC is pressed."""</span>
     <span class="n">cv2</span><span class="o">.</span><span class="n">startWindowThread</span><span class="p">()</span>
-    <span class="n">cv2</span><span class="o">.</span><span class="n">namedWindow</span><span class="p">(</span><span class="s2">"2D image"</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">WINDOW_NORMAL</span><span class="p">)</span>
-    <span class="n">start</span> <span class="o">=</span> <span class="n">perf_counter</span><span class="p">()</span>
-    <span class="k">while</span> <span class="p">(</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">&lt;=</span> <span class="n">timeout</span><span class="p">:</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">namedWindow</span><span class="p">(</span><span class="n">WINDOW_NAME</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">WINDOW_NORMAL</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">window_open</span><span class="p">():</span>
         <span class="k">if</span> <span class="n">img_queue</span><span class="p">:</span>
-            <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">"2D image"</span><span class="p">,</span> <span class="n">img_queue</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
-            <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">WINDOW_NAME</span><span class="p">,</span> <span class="n">img_queue</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
+
+        <span class="n">key</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFF</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">27</span><span class="p">,</span> <span class="nb">ord</span><span class="p">(</span><span class="s2">"q"</span><span class="p">)):</span>
+            <span class="k">break</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">save_first_image</span><span class="p">(</span>
+    <span class="n">img_queue</span><span class="p">:</span> <span class="n">collections</span><span class="o">.</span><span class="n">deque</span><span class="p">,</span> <span class="n">timeout</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">save_path</span><span class="p">:</span> <span class="nb">str</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Save the first received image within the timeout."""</span>
+    <span class="n">deadline</span> <span class="o">=</span> <span class="n">perf_counter</span><span class="p">()</span> <span class="o">+</span> <span class="n">timeout</span> <span class="o">/</span> <span class="mi">1000</span>
+    <span class="k">while</span> <span class="n">perf_counter</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">deadline</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">img_queue</span><span class="p">:</span>
+            <span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="n">save_path</span><span class="p">,</span> <span class="n">img_queue</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Image saved to: </span><span class="si">{</span><span class="n">save_path</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"ERROR: No image received within </span><span class="si">{</span><span class="n">timeout</span><span class="si">}</span><span class="s2"> ms."</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">False</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img_queue</span><span class="p">:</span> <span class="n">collections</span><span class="o">.</span><span class="n">deque</span><span class="p">):</span>
@@ -192,49 +214,58 @@ Follow the full example for the conversion to cv::Mat with or without copy.</p>
     <span class="n">img_queue</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rgb</span><span class="p">)</span>
 
 
-<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">ip</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">port</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">queue_length</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">timeout</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Main function to initialize the O3R device, set the port to RUN state,</span>
-<span class="sd">    and start streaming frames to a queue.</span>
-<span class="sd">    Args:</span>
-<span class="sd">        ip (str): IP address of the O3R device.</span>
-<span class="sd">        port (str): Port name to be set to RUN state.</span>
-<span class="sd">        queue_length (int): Maximum length of the image queue.</span>
-<span class="sd">        timeout (int): Timeout in milliseconds for frame grabbing.</span>
-<span class="sd">    """</span>
-    <span class="c1"># Initialize the O3R device</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">find_first_2d_stream</span><span class="p">(</span><span class="n">o3r</span><span class="p">:</span> <span class="n">O3R</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Return the first available 2D port and ensure it is in RUN state."""</span>
+    <span class="n">port</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">port</span> <span class="k">for</span> <span class="n">port</span> <span class="ow">in</span> <span class="n">o3r</span><span class="o">.</span><span class="n">ports</span><span class="p">()</span> <span class="k">if</span> <span class="n">port</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">"2D"</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">port</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">"No 2D port found."</span><span class="p">)</span>
+
+    <span class="n">state</span> <span class="o">=</span> <span class="n">o3r</span><span class="o">.</span><span class="n">get</span><span class="p">([</span><span class="sa">f</span><span class="s2">"/ports/</span><span class="si">{</span><span class="n">port</span><span class="o">.</span><span class="n">port</span><span class="si">}</span><span class="s2">/state"</span><span class="p">])[</span><span class="s2">"ports"</span><span class="p">][</span><span class="n">port</span><span class="o">.</span><span class="n">port</span><span class="p">][</span><span class="s2">"state"</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">state</span> <span class="o">!=</span> <span class="s2">"RUN"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Changing </span><span class="si">{</span><span class="n">port</span><span class="o">.</span><span class="n">port</span><span class="si">}</span><span class="s2"> from </span><span class="si">{</span><span class="n">state</span><span class="si">}</span><span class="s2"> to RUN"</span><span class="p">)</span>
+        <span class="n">o3r</span><span class="o">.</span><span class="n">set</span><span class="p">({</span><span class="s2">"ports"</span><span class="p">:</span> <span class="p">{</span><span class="n">port</span><span class="o">.</span><span class="n">port</span><span class="p">:</span> <span class="p">{</span><span class="s2">"state"</span><span class="p">:</span> <span class="s2">"RUN"</span><span class="p">}}})</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Found 2D stream on port </span><span class="si">{</span><span class="n">port</span><span class="o">.</span><span class="n">port</span><span class="si">}</span><span class="s2"> (PCIC port </span><span class="si">{</span><span class="n">port</span><span class="o">.</span><span class="n">pcic_port</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">port</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">ip</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">queue_length</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">timeout</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">save_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Open the first 2D stream, display it, or save the first image."""</span>
     <span class="n">o3r</span> <span class="o">=</span> <span class="n">O3R</span><span class="p">(</span><span class="n">ip</span><span class="p">)</span>
-    <span class="n">pcic_port</span> <span class="o">=</span> <span class="n">o3r</span><span class="o">.</span><span class="n">port</span><span class="p">(</span><span class="n">port</span><span class="p">)</span><span class="o">.</span><span class="n">pcic_port</span>
-    <span class="n">fg</span> <span class="o">=</span> <span class="n">FrameGrabber</span><span class="p">(</span><span class="n">cam</span><span class="o">=</span><span class="n">o3r</span><span class="p">,</span> <span class="n">pcic_port</span><span class="o">=</span><span class="n">pcic_port</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">port</span> <span class="o">=</span> <span class="n">find_first_2d_stream</span><span class="p">(</span><span class="n">o3r</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">RuntimeError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"ERROR: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">return</span>
 
-    <span class="c1"># Change port to RUN state</span>
-    <span class="n">config</span> <span class="o">=</span> <span class="n">o3r</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-    <span class="n">config</span><span class="p">[</span><span class="s2">"ports"</span><span class="p">][</span><span class="n">port</span><span class="p">][</span><span class="s2">"state"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"RUN"</span>
-    <span class="n">o3r</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
-
-    <span class="c1"># Create a queue to store the images</span>
     <span class="n">img_queue</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">deque</span><span class="p">(</span><span class="n">maxlen</span><span class="o">=</span><span class="n">queue_length</span><span class="p">)</span>
+    <span class="n">fg</span> <span class="o">=</span> <span class="n">FrameGrabber</span><span class="p">(</span><span class="n">cam</span><span class="o">=</span><span class="n">o3r</span><span class="p">,</span> <span class="n">pcic_port</span><span class="o">=</span><span class="n">port</span><span class="o">.</span><span class="n">pcic_port</span><span class="p">)</span>
 
-    <span class="c1"># Register a callback and start streaming frames</span>
     <span class="n">fg</span><span class="o">.</span><span class="n">on_new_frame</span><span class="p">(</span><span class="n">partial</span><span class="p">(</span><span class="n">callback</span><span class="p">,</span> <span class="n">img_queue</span><span class="o">=</span><span class="n">img_queue</span><span class="p">))</span>
     <span class="n">fg</span><span class="o">.</span><span class="n">start</span><span class="p">([</span><span class="n">buffer_id</span><span class="o">.</span><span class="n">JPEG_IMAGE</span><span class="p">])</span>
 
     <span class="k">try</span><span class="p">:</span>
-        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-            <span class="n">display</span><span class="p">(</span><span class="n">img_queue</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">save_path</span><span class="p">:</span>
+            <span class="n">save_first_image</span><span class="p">(</span><span class="n">img_queue</span><span class="p">,</span> <span class="n">timeout</span><span class="p">,</span> <span class="n">save_path</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">show_stream</span><span class="p">(</span><span class="n">img_queue</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Display window closed. Exiting..."</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">"Exiting..."</span><span class="p">)</span>
-
-    <span class="c1"># Stop the streaming</span>
-    <span class="n">fg</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="n">fg</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
 
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
     <span class="n">IP</span> <span class="o">=</span> <span class="s2">"192.168.0.69"</span>
-    <span class="n">PORT</span> <span class="o">=</span> <span class="s2">"port0"</span>
     <span class="n">queue_length</span> <span class="o">=</span> <span class="mi">5</span>
     <span class="n">timeout_ms</span> <span class="o">=</span> <span class="mi">300</span>
-    <span class="n">main</span><span class="p">(</span><span class="n">ip</span><span class="o">=</span><span class="n">IP</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">PORT</span><span class="p">,</span> <span class="n">queue_length</span><span class="o">=</span><span class="n">queue_length</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout_ms</span><span class="p">)</span>
+    <span class="c1"># Set to a path like "output.jpg" to save the first image and exit, or None to display the stream</span>
+    <span class="n">save_image_path</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">main</span><span class="p">(</span>
+        <span class="n">ip</span><span class="o">=</span><span class="n">IP</span><span class="p">,</span> <span class="n">queue_length</span><span class="o">=</span><span class="n">queue_length</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout_ms</span><span class="p">,</span> <span class="n">save_path</span><span class="o">=</span><span class="n">save_image_path</span>
+    <span class="p">)</span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-3-Qysr" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-3-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
