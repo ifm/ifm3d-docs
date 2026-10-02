@@ -40,6 +40,7 @@ var group__FrameGrabber =
       [ "operator=", "classifm3d_1_1FrameGrabber.html#afa616a11d0998001183522e5df9db5a4", null ],
       [ "operator=", "classifm3d_1_1FrameGrabber.html#a37e8d692b7cb118b374cb98fad80f696", null ],
       [ "SendCommand", "classifm3d_1_1FrameGrabber.html#af62881968b3043d5e376853f37bf0a76", null ],
+      [ "SetHeartbeatInterval", "classifm3d_1_1FrameGrabber.html#a6a842b783c4eff3a57a268cf0185c609", null ],
       [ "SetMasking", "classifm3d_1_1FrameGrabber.html#abdf589eba265eba196e215cb9a7aa65f", null ],
       [ "SetOrganizer", "classifm3d_1_1FrameGrabber.html#ad9b7752f418e4f937e31808b4c20c226", null ],
       [ "Start", "classifm3d_1_1FrameGrabber.html#a1c4942a1a0c5aedb6430b621fa9a3446", null ],

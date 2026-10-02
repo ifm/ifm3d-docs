@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ifm3dpy.framegrabber.FrameGrabber &mdash; ifm3d v2.0.7 documentation</title>
+  <title>ifm3dpy.framegrabber.FrameGrabber &mdash; ifm3d v2.0.8 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
@@ -34,7 +34,7 @@
             <a href="../index.html" class="icon icon-home"> ifm3d
           </a>
               <div class="version">
-                v2.0.7
+                v2.0.8
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -155,19 +155,22 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.FrameGrabber.send_command" title="ifm3dpy.framegrabber.FrameGrabber.send_command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">send_command</span></code></a>(self, command)</p></td>
 <td><p>Send a PCIC command asynchronously to the frame grabber.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.FrameGrabber.set_masking" title="ifm3dpy.framegrabber.FrameGrabber.set_masking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_masking</span></code></a>(self, mask)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.FrameGrabber.set_heartbeat_interval" title="ifm3dpy.framegrabber.FrameGrabber.set_heartbeat_interval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_heartbeat_interval</span></code></a>(self, interval_ms)</p></td>
+<td><p>Configure the PCIC heartbeat interval.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.FrameGrabber.set_masking" title="ifm3dpy.framegrabber.FrameGrabber.set_masking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_masking</span></code></a>(self, mask)</p></td>
 <td><p>Enable/Disable masking on supported buffers Note: ifm3dpy.buffer_id.CONFIDENCE_IMAGE should be in schema  list passed to ifm3dpy.FrameGrabber.Start method</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.FrameGrabber.start" title="ifm3dpy.framegrabber.FrameGrabber.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a>(self[, buffers, pcic_format])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.FrameGrabber.start" title="ifm3dpy.framegrabber.FrameGrabber.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a>(self[, buffers, pcic_format])</p></td>
 <td><p>Starts the worker thread for streaming in pixel data from the device</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.FrameGrabber.stop" title="ifm3dpy.framegrabber.FrameGrabber.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.FrameGrabber.stop" title="ifm3dpy.framegrabber.FrameGrabber.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>(self)</p></td>
 <td><p>Stops the worker thread for streaming in pixel data from the device</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.FrameGrabber.sw_trigger" title="ifm3dpy.framegrabber.FrameGrabber.sw_trigger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sw_trigger</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.FrameGrabber.sw_trigger" title="ifm3dpy.framegrabber.FrameGrabber.sw_trigger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sw_trigger</span></code></a>(self)</p></td>
 <td><p>Triggers the device for image acquisition</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.FrameGrabber.wait_for_frame" title="ifm3dpy.framegrabber.FrameGrabber.wait_for_frame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for_frame</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.framegrabber.FrameGrabber.wait_for_frame" title="ifm3dpy.framegrabber.FrameGrabber.wait_for_frame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for_frame</span></code></a>(self)</p></td>
 <td><p>Returns an Awaitable that will resolve when a new frame is available</p></td>
 </tr>
 </tbody>
@@ -235,6 +238,23 @@ It receives the frame as an argument.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="ifm3dpy.PCICCommandResponseAwaitable.html#ifm3dpy.PCICCommandResponseAwaitable" title="ifm3dpy.PCICCommandResponseAwaitable"><code class="xref py py-class docutils literal notranslate"><span class="pre">ifm3dpy.PCICCommandResponseAwaitable</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ifm3dpy.framegrabber.FrameGrabber.set_heartbeat_interval">
+<span class="sig-name descname"><span class="pre">set_heartbeat_interval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.framegrabber.FrameGrabber" title="ifm3dpy.framegrabber.FrameGrabber"><span class="pre">FrameGrabber</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval_ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/builtins/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#ifm3dpy.framegrabber.FrameGrabber.set_heartbeat_interval" title="Permalink to this definition"></a></dt>
+<dd><p>Configure the PCIC heartbeat interval. Defaults to 200 milliseconds.
+Changes apply while running and to subsequent start() calls. Time spent
+processing frames and in user callbacks is excluded from heartbeat
+deadlines.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>interval_ms</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – Interval in milliseconds. Zero disables the heartbeat.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/exceptions.html#RuntimeError" title="(in Python v3.14)"><strong>RuntimeError</strong></a> – If interval_ms is negative.</p>
 </dd>
 </dl>
 </dd></dl>

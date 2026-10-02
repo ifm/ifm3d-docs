@@ -27,6 +27,7 @@ ifm3dpy.framegrabber.FrameGrabber
       ~FrameGrabber.on_error
       ~FrameGrabber.on_new_frame
       ~FrameGrabber.send_command
+      ~FrameGrabber.set_heartbeat_interval
       ~FrameGrabber.set_masking
       ~FrameGrabber.start
       ~FrameGrabber.stop
@@ -35,6 +36,8 @@ ifm3dpy.framegrabber.FrameGrabber
    
    
 
+   
+   
    
    
    

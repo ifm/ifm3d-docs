@@ -158,6 +158,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a41863acd226d087671594f47af3b0e32">IsRunning</a> ()</td></tr>
 <tr class="memdesc:a41863acd226d087671594f47af3b0e32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the worker thread is currently running. <br /></td></tr>
 <tr class="separator:a41863acd226d087671594f47af3b0e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a842b783c4eff3a57a268cf0185c609"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a6a842b783c4eff3a57a268cf0185c609">SetHeartbeatInterval</a> (std::chrono::milliseconds interval)</td></tr>
+<tr class="memdesc:a6a842b783c4eff3a57a268cf0185c609"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the PCIC heartbeat interval.  <a href="classifm3d_1_1FrameGrabber.html#a6a842b783c4eff3a57a268cf0185c609">More...</a><br /></td></tr>
+<tr class="separator:a6a842b783c4eff3a57a268cf0185c609"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8911d6f0a032c9c072f812194ec9bb85"><td class="memItemLeft" align="right" valign="top"><a id="a8911d6f0a032c9c072f812194ec9bb85"></a>
 std::shared_future&lt; Frame::Ptr &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1FrameGrabber.html#a8911d6f0a032c9c072f812194ec9bb85">WaitForFrame</a> ()</td></tr>
 <tr class="memdesc:a8911d6f0a032c9c072f812194ec9bb85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a future that will resolve when a new frame is available. <br /></td></tr>
@@ -307,7 +310,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 
 <p>Sends a command to the frame grabber. </p>
-<p>This function sends the specified command to the frame grabber and returns a shared future that will hold the response as a string once the command completes.</p>
+<p>This function queues the specified command on the frame grabber worker and returns a shared future that holds the response once the command completes. Pending commands fail if the worker stops before replying.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">command</td><td>The command to send to the frame grabber.</td></tr>
@@ -315,6 +318,40 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::shared_future&lt;PCICCommandResponse&gt; A shared future that resolves to the response from the frame grabber. </dd></dl>
+
+</div>
+</div>
+<a id="a6a842b783c4eff3a57a268cf0185c609"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a842b783c4eff3a57a268cf0185c609">&#9670;&nbsp;</a></span>SetHeartbeatInterval()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ifm3d::FrameGrabber::SetHeartbeatInterval </td>
+          <td>(</td>
+          <td class="paramtype">std::chrono::milliseconds&#160;</td>
+          <td class="paramname"><em>interval</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configures the PCIC heartbeat interval. </p>
+<p>Defaults to 200 milliseconds.</p>
+<p>Sends a heartbeat periodically while running. A missing reply before the next heartbeat stops the worker with IFM3D_NETWORK_ERROR, reported through <a class="el" href="classifm3d_1_1FrameGrabber.html#ab45396f5e290ede681cb1639a9bf9060" title="The callback will be executed whenever an error condition occur while grabbing the data from device.">OnError()</a> and <a class="el" href="classifm3d_1_1FrameGrabber.html#a8911d6f0a032c9c072f812194ec9bb85" title="Returns a future that will resolve when a new frame is available.">WaitForFrame()</a>. The first heartbeat is sent one interval after connecting or changing the interval. Changes also apply to later <a class="el" href="classifm3d_1_1FrameGrabber.html#a1c4942a1a0c5aedb6430b621fa9a3446" title="Starts the worker thread for streaming in pixel data from the device.">Start()</a> calls. Time spent processing frames and executing user callbacks is excluded from the heartbeat countdown, so slow processing does not cause a timeout.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">interval</td><td>Heartbeat interval; zero disables the heartbeat. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>if interval is negative. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
