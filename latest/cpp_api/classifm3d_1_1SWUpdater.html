@@ -119,9 +119,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab78c2c926b27d73cc93536907cbdafb1"><td class="memItemLeft" align="right" valign="top"><a id="ab78c2c926b27d73cc93536907cbdafb1"></a>
 <a class="el" href="classifm3d_1_1SWUpdater.html">SWUpdater</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classifm3d_1_1SWUpdater.html">SWUpdater</a> &amp;)=delete</td></tr>
 <tr class="separator:ab78c2c926b27d73cc93536907cbdafb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f56ac0283802c2c1ec9c94fa39d3437"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1SWUpdater.html#a1f56ac0283802c2c1ec9c94fa39d3437">RebootToRecovery</a> ()</td></tr>
-<tr class="memdesc:a1f56ac0283802c2c1ec9c94fa39d3437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reboots the device from productive to recovery.  <a href="classifm3d_1_1SWUpdater.html#a1f56ac0283802c2c1ec9c94fa39d3437">More...</a><br /></td></tr>
-<tr class="separator:a1f56ac0283802c2c1ec9c94fa39d3437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9664e903a0d57f54e237c5ecc5d4b69b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1SWUpdater.html#a9664e903a0d57f54e237c5ecc5d4b69b">RebootToRecovery</a> (const std::optional&lt; std::string &gt; &amp;password=std::nullopt)</td></tr>
+<tr class="memdesc:a9664e903a0d57f54e237c5ecc5d4b69b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reboots the device from productive to recovery.  <a href="classifm3d_1_1SWUpdater.html#a9664e903a0d57f54e237c5ecc5d4b69b">More...</a><br /></td></tr>
+<tr class="separator:a9664e903a0d57f54e237c5ecc5d4b69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15b7cd28dd1fe49fb1f830862e1a555c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classifm3d_1_1SWUpdater.html#a15b7cd28dd1fe49fb1f830862e1a555c">WaitForRecovery</a> (long timeout_millis=0)</td></tr>
 <tr class="memdesc:a15b7cd28dd1fe49fb1f830862e1a555c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polls on status of the device, waiting for it to present in recovery mode.  <a href="classifm3d_1_1SWUpdater.html#a15b7cd28dd1fe49fb1f830862e1a555c">More...</a><br /></td></tr>
 <tr class="separator:a15b7cd28dd1fe49fb1f830862e1a555c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -283,8 +283,8 @@ class IFM3D_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><b>Impl</b
 
 </div>
 </div>
-<a id="a1f56ac0283802c2c1ec9c94fa39d3437"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f56ac0283802c2c1ec9c94fa39d3437">&#9670;&nbsp;</a></span>RebootToRecovery()</h2>
+<a id="a9664e903a0d57f54e237c5ecc5d4b69b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9664e903a0d57f54e237c5ecc5d4b69b">&#9670;&nbsp;</a></span>RebootToRecovery()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -292,7 +292,8 @@ class IFM3D_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><b>Impl</b
         <tr>
           <td class="memname">void ifm3d::SWUpdater::RebootToRecovery </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const std::optional&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>password</em> = <code>std::nullopt</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -300,6 +301,12 @@ class IFM3D_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><b>Impl</b
 
 <p>Reboots the device from productive to recovery. </p>
 <p>The function returns immediately, but the reboot process takes some time. The function <code>WaitForRecovery</code> may be used to poll for completion.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">password</td><td>The current password for the device (if required)</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">ifm3d::error_t</td><td>on error </td></tr>
@@ -360,7 +367,7 @@ class IFM3D_EXPORT&#160;</td><td class="memItemRight" valign="bottom"><b>Impl</b
 </div><div class="memdoc">
 
 <p>Polls on status of the device, waiting for it to present in recovery mode. </p>
-<p>Should be used following a call to <a class="el" href="classifm3d_1_1SWUpdater.html#a1f56ac0283802c2c1ec9c94fa39d3437" title="Reboots the device from productive to recovery.">RebootToRecovery()</a>.</p>
+<p>Should be used following a call to <a class="el" href="classifm3d_1_1SWUpdater.html#a9664e903a0d57f54e237c5ecc5d4b69b" title="Reboots the device from productive to recovery.">RebootToRecovery()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">timeout_millis</td><td>Timeout in millis to wait for the recovery system to become available. If <code>timeout_millis</code> is set to 0, this function will block indefinitely. If <code>timeout_millis</code> is set to -1, this function will check once and return immediately.</td></tr>

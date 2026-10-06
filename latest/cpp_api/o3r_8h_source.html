@@ -296,15 +296,17 @@ $(document).ready(function(){initNavTree('o3r_8h_source.html',''); initResizable
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160; </div>
 <div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    <span class="keywordtype">void</span> Set(<span class="keyword">const</span> std::string&amp; password, <span class="keyword">const</span> json&amp; configuration);</div>
 <div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160; </div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    std::vector&lt;uint8_t&gt; GetPublicKey();</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160; </div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    std::shared_ptr&lt;O3R::Impl&gt; _impl;</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;  };</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;}</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160; </div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// IFM3D_DEVICE_O3R_H</span></div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="keywordtype">void</span> RebootToRecovery(<span class="keyword">const</span> std::string&amp; password);</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160; </div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    std::vector&lt;uint8_t&gt; GetPublicKey();</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160; </div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    std::shared_ptr&lt;O3R::Impl&gt; _impl;</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;  };</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;}</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160; </div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// IFM3D_DEVICE_O3R_H</span></div>
 <div class="ttc" id="aclassifm3d_1_1Device_html"><div class="ttname"><a href="classifm3d_1_1Device.html">ifm3d::Device</a></div><div class="ttdoc">Software interface to an ifm 3D device.</div><div class="ttdef"><b>Definition:</b> device.h:136</div></div>
 <div class="ttc" id="aclassifm3d_1_1Device_html_afade3d3470c3ce231c117a11e9f05976"><div class="ttname"><a href="classifm3d_1_1Device.html#afade3d3470c3ce231c117a11e9f05976">ifm3d::Device::BootMode</a></div><div class="ttdeci">BootMode</div><div class="ttdoc">Device boot up modes:</div><div class="ttdef"><b>Definition:</b> device.h:147</div></div>
 <div class="ttc" id="aclassifm3d_1_1O3R_html"><div class="ttname"><a href="classifm3d_1_1O3R.html">ifm3d::O3R</a></div><div class="ttdoc">Device specialization for O3R.</div><div class="ttdef"><b>Definition:</b> o3r.h:82</div></div>

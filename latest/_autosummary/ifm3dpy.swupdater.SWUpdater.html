@@ -135,7 +135,7 @@ update, receiving a <a class="reference external" href="https://docs.python.org/
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater.reboot_to_productive" title="ifm3dpy.swupdater.SWUpdater.reboot_to_productive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reboot_to_productive</span></code></a>(self)</p></td>
 <td><p>Reboot the device in productive mode</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater.reboot_to_recovery" title="ifm3dpy.swupdater.SWUpdater.reboot_to_recovery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reboot_to_recovery</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater.reboot_to_recovery" title="ifm3dpy.swupdater.SWUpdater.reboot_to_recovery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reboot_to_recovery</span></code></a>(self[, password])</p></td>
 <td><p>Reboot the device in Recovery Modes</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater.wait_for_productive" title="ifm3dpy.swupdater.SWUpdater.wait_for_productive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for_productive</span></code></a>(self[, timeout_millis])</p></td>
@@ -177,8 +177,13 @@ update, receiving a <a class="reference external" href="https://docs.python.org/
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ifm3dpy.swupdater.SWUpdater.reboot_to_recovery">
-<span class="sig-name descname"><span class="pre">reboot_to_recovery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater" title="ifm3dpy.swupdater.SWUpdater"><span class="pre">SWUpdater</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/builtins/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#ifm3dpy.swupdater.SWUpdater.reboot_to_recovery" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">reboot_to_recovery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ifm3dpy.swupdater.SWUpdater" title="ifm3dpy.swupdater.SWUpdater"><span class="pre">SWUpdater</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/builtins/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#ifm3dpy.swupdater.SWUpdater.reboot_to_recovery" title="Permalink to this definition"></a></dt>
 <dd><p>Reboot the device in Recovery Modes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <em>optional</em>) – The current password for the device (if required)</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
