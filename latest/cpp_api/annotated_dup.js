@@ -60,6 +60,7 @@ var annotated_dup =
       [ "ODSOccupancyGridV1", "classifm3d_1_1ODSOccupancyGridV1.html", "classifm3d_1_1ODSOccupancyGridV1" ],
       [ "ODSPolarOccupancyGridV1", "classifm3d_1_1ODSPolarOccupancyGridV1.html", "classifm3d_1_1ODSPolarOccupancyGridV1" ],
       [ "RGBInfoV1", "classifm3d_1_1RGBInfoV1.html", "classifm3d_1_1RGBInfoV1" ],
+      [ "RGBInfoV2", "classifm3d_1_1RGBInfoV2.html", "classifm3d_1_1RGBInfoV2" ],
       [ "TOFInfoV3", "classifm3d_1_1TOFInfoV3.html", "classifm3d_1_1TOFInfoV3" ],
       [ "TOFInfoV4", "classifm3d_1_1TOFInfoV4.html", "classifm3d_1_1TOFInfoV4" ]
     ] ],

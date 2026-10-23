@@ -49,8 +49,8 @@ var NAVTREEINDEX =
 [
 "../python_api.html",
 "classifm3d_1_1LegacyDevice.html#a51d9d90a14c3808cad372e4fa5fc1af3",
-"classifm3d_1_1RtspClient.html#aacd09bf1367c1e43d617b652daababc2",
-"structifm3d_1_1Buffer_1_1Iterator.html#afc8ace4d609e2a49bad812369090fcbd"
+"classifm3d_1_1RtspClient.html#a9ff4a7d4c768197f71855bad9be7899d",
+"structifm3d_1_1Buffer_1_1Iterator.html#acb9aded936b8ea070b48d7fb4d906c06"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

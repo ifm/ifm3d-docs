@@ -86,6 +86,11 @@ var group__Deserialize =
       [ "timestamp_ns", "classifm3d_1_1RGBInfoV1.html#a5f347edb80ac17612de21bf153720c6f", null ],
       [ "version", "classifm3d_1_1RGBInfoV1.html#a0f83961cae0af73bb83b4fba4a470f15", null ]
     ] ],
+    [ "RGBInfoV2", "classifm3d_1_1RGBInfoV2.html", [
+      [ "Ptr", "classifm3d_1_1RGBInfoV2.html#a758713a5075950764b42a372a8c1096a", null ],
+      [ "Read", "classifm3d_1_1RGBInfoV2.html#aebcad8d250132537023a32f5f0f29acc", null ],
+      [ "rolling_shutter_row_offset_ns", "classifm3d_1_1RGBInfoV2.html#abfc2571590e15f0d59998110ddd5aa92", null ]
+    ] ],
     [ "TOFInfoV3", "classifm3d_1_1TOFInfoV3.html", [
       [ "Ptr", "classifm3d_1_1TOFInfoV3.html#a5abc4c84dbf6653a4eb161694b24d88f", null ],
       [ "Read", "classifm3d_1_1TOFInfoV3.html#adbe596d081d8911ab209aedb3a86e219", null ],

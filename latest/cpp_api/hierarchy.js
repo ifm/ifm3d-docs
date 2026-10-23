@@ -63,7 +63,9 @@ var hierarchy =
     [ "ifm3d::Point< T, N >", "structifm3d_1_1Point.html", null ],
     [ "ifm3d::PortInfo", "structifm3d_1_1PortInfo.html", null ],
     [ "ifm3d::Organizer::Result", "structifm3d_1_1Organizer_1_1Result.html", null ],
-    [ "ifm3d::RGBInfoV1", "classifm3d_1_1RGBInfoV1.html", null ],
+    [ "ifm3d::RGBInfoV1", "classifm3d_1_1RGBInfoV1.html", [
+      [ "ifm3d::RGBInfoV2", "classifm3d_1_1RGBInfoV2.html", null ]
+    ] ],
     [ "ifm3d::RtspClient", "classifm3d_1_1RtspClient.html", null ],
     [ "ifm3d::RtspControlInfo", "structifm3d_1_1RtspControlInfo.html", null ],
     [ "ifm3d::RtspInfo", "structifm3d_1_1RtspInfo.html", null ],

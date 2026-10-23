@@ -2,7 +2,7 @@ var searchData=
 [
   ['radial_5fdistance_5fimage_186',['RADIAL_DISTANCE_IMAGE',['../group__FrameGrabber.html#ggaca9d48fd13de3e0a7e7af60e518bfd35a30348e4c1992db760417360c0f3e8933',1,'ifm3d']]],
   ['radial_5fdistance_5fnoise_187',['RADIAL_DISTANCE_NOISE',['../group__FrameGrabber.html#ggaca9d48fd13de3e0a7e7af60e518bfd35ad3c0dc5e986ccc58d445e1b4debe7565',1,'ifm3d']]],
-  ['reboot_188',['Reboot',['../classifm3d_1_1O3R.html#a5221b42873be3fffa9534c3bfed7ceae',1,'ifm3d::O3R::Reboot()'],['../classifm3d_1_1Device.html#a2eb12e0e2fe0c713c1c32ef6cbb98a0e',1,'ifm3d::Device::Reboot()']]],
+  ['reboot_188',['Reboot',['../classifm3d_1_1Device.html#a2eb12e0e2fe0c713c1c32ef6cbb98a0e',1,'ifm3d::Device::Reboot()'],['../classifm3d_1_1O3R.html#a5221b42873be3fffa9534c3bfed7ceae',1,'ifm3d::O3R::Reboot()']]],
   ['reboottoproductive_189',['RebootToProductive',['../classifm3d_1_1SWUpdater.html#a5ed7d927b9ff35a6808394345bdced8e',1,'ifm3d::SWUpdater']]],
   ['reboottorecovery_190',['RebootToRecovery',['../classifm3d_1_1O3R.html#a89352db3458439c9a60c4b0422923322',1,'ifm3d::O3R::RebootToRecovery()'],['../classifm3d_1_1SWUpdater.html#a9664e903a0d57f54e237c5ecc5d4b69b',1,'ifm3d::SWUpdater::RebootToRecovery()']]],
   ['receiveframe_191',['ReceiveFrame',['../classifm3d_1_1rtsp_1_1VideoDecoder.html#a4a235e8775a180d5f8e6e7db27fa4b7a',1,'ifm3d::rtsp::VideoDecoder']]],
@@ -15,10 +15,12 @@ var searchData=
   ['rgb_5fimage_198',['RGB_IMAGE',['../group__FrameGrabber.html#ggaca9d48fd13de3e0a7e7af60e518bfd35a138d73ede515e3d653497bd9f5686d7f',1,'ifm3d']]],
   ['rgb_5finfo_199',['RGB_INFO',['../group__FrameGrabber.html#ggaca9d48fd13de3e0a7e7af60e518bfd35a5b339949508b99bdd22c5372d90080dd',1,'ifm3d']]],
   ['rgbinfov1_200',['RGBInfoV1',['../classifm3d_1_1RGBInfoV1.html',1,'ifm3d']]],
-  ['rtsp_201',['rtsp',['../structifm3d_1_1PortInfo.html#a8aabf74c9241613cb832c489834f3647',1,'ifm3d::PortInfo']]],
-  ['rtsp_20module_202',['RTSP Module',['../group__RTSP.html',1,'']]],
-  ['rtspclient_203',['RtspClient',['../classifm3d_1_1RtspClient.html',1,'ifm3d::RtspClient'],['../classifm3d_1_1RtspClient.html#a53c21d561575c7f1db7774fcc9e88a85',1,'ifm3d::RtspClient::RtspClient(ifm3d::Device::Ptr device)'],['../classifm3d_1_1RtspClient.html#af03d21a3ea25f7f526597574f2609663',1,'ifm3d::RtspClient::RtspClient(ifm3d::Device::Ptr device, Config config)'],['../classifm3d_1_1RtspClient.html#abab651d7704dbd9d3ec72a94b9d017d6',1,'ifm3d::RtspClient::RtspClient(ifm3d::Device::Ptr device, const ifm3d::PortInfo &amp;port)'],['../classifm3d_1_1RtspClient.html#a382ac703e9b6ed8e5f815d8d131392bd',1,'ifm3d::RtspClient::RtspClient(ifm3d::Device::Ptr device, const ifm3d::PortInfo &amp;port, Config config)']]],
-  ['rtspcontrolinfo_204',['RtspControlInfo',['../structifm3d_1_1RtspControlInfo.html',1,'ifm3d']]],
-  ['rtspinfo_205',['RtspInfo',['../structifm3d_1_1RtspInfo.html',1,'ifm3d']]],
-  ['rtspmediaendpoint_206',['RtspMediaEndpoint',['../structifm3d_1_1RtspMediaEndpoint.html',1,'ifm3d']]]
+  ['rgbinfov2_201',['RGBInfoV2',['../classifm3d_1_1RGBInfoV2.html',1,'ifm3d']]],
+  ['rolling_5fshutter_5frow_5foffset_5fns_202',['rolling_shutter_row_offset_ns',['../classifm3d_1_1RGBInfoV2.html#abfc2571590e15f0d59998110ddd5aa92',1,'ifm3d::RGBInfoV2']]],
+  ['rtsp_203',['rtsp',['../structifm3d_1_1PortInfo.html#a8aabf74c9241613cb832c489834f3647',1,'ifm3d::PortInfo']]],
+  ['rtsp_20module_204',['RTSP Module',['../group__RTSP.html',1,'']]],
+  ['rtspclient_205',['RtspClient',['../classifm3d_1_1RtspClient.html',1,'ifm3d::RtspClient'],['../classifm3d_1_1RtspClient.html#a53c21d561575c7f1db7774fcc9e88a85',1,'ifm3d::RtspClient::RtspClient(ifm3d::Device::Ptr device)'],['../classifm3d_1_1RtspClient.html#af03d21a3ea25f7f526597574f2609663',1,'ifm3d::RtspClient::RtspClient(ifm3d::Device::Ptr device, Config config)'],['../classifm3d_1_1RtspClient.html#abab651d7704dbd9d3ec72a94b9d017d6',1,'ifm3d::RtspClient::RtspClient(ifm3d::Device::Ptr device, const ifm3d::PortInfo &amp;port)'],['../classifm3d_1_1RtspClient.html#a382ac703e9b6ed8e5f815d8d131392bd',1,'ifm3d::RtspClient::RtspClient(ifm3d::Device::Ptr device, const ifm3d::PortInfo &amp;port, Config config)']]],
+  ['rtspcontrolinfo_206',['RtspControlInfo',['../structifm3d_1_1RtspControlInfo.html',1,'ifm3d']]],
+  ['rtspinfo_207',['RtspInfo',['../structifm3d_1_1RtspInfo.html',1,'ifm3d']]],
+  ['rtspmediaendpoint_208',['RtspMediaEndpoint',['../structifm3d_1_1RtspMediaEndpoint.html',1,'ifm3d']]]
 ];
