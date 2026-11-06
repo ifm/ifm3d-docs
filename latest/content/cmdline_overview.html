@@ -110,14 +110,14 @@ Options:
 Subcommands:
   o3x1xx                      Interact with the O3X1xx devices
   o3d3xx                      Interact with the O3D3xx devices
-  ovp8xx                      Interact with the OVP8xx video processing units
+  ovpxxx                      Interact with the OVPxxx video processing units
   discover                    Discover ifm devices on the network.
 </pre></div>
 </div>
 <p>Each of the supported family of cameras, O3X1xx, O3D3xx and OVP8xx, provides specific subcommands that cater to their specific features.
 To access these, the name of the camera family will be used as the first subcommand, potentially followed by additional commands.</p>
 <p>For example, to read out the current configuration on a connected OVP8xx, one would use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovp8xx config get
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovpxxx config get
 {
   "applications": {
     "classes": {
@@ -134,7 +134,7 @@ To access these, the name of the camera family will be used as the first subcomm
 </div>
 <p>When accessing a device using non-default parameters, one can add global arguments to the command.
 For example, to read out the current configuration of a connected OVP, at IP 192.168.0.70, one would use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovp8xx config get --ip=192.168.0.70
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovpxxx config get --ip=192.168.0.70
 {
   "applications": {
     "classes": {
@@ -185,16 +185,16 @@ Subcommands:
 <p>Using the ifm3d CLI can be a quick way to configure or read out parts of the device configuration.
 It can be used in conjunction with the tool <a class="reference external" href="https://jqlang.org/">jq</a> to set portions of the configuration, or alternatively a configuration file in JSON format can be used.</p>
 <p>For example, to change the name of an OVP8xx device, one can use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ echo {} | jq '.device.info.name="My favorite O3R"' | ifm3d ovp8xx config set
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ echo {} | jq '.device.info.name="My favorite O3R"' | ifm3d ovpxxx config set
 </pre></div>
 </div>
 <p>Alternatively, a configuration file can be used, by providing its path in the <code class="docutils literal notranslate"><span class="pre">--file</span></code> argument.
 For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovp8xx config set --file=config.json
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovpxxx config set --file=config.json
 </pre></div>
 </div>
 <p>To read out a specific subset of the configuration, one can use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovp8xx config get --path "/device/info/name"
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovpxxx config get --path "/device/info/name"
 {
   "device": {
     "info": {
@@ -218,7 +218,7 @@ For example:</p>
 <h3>Device diagnostic<a class="headerlink" href="#device-diagnostic" title="Permalink to this heading"></a></h3>
 <p>The O3R platforms provides diagnostic to help monitor the health of the system at runtime, and to provide debug information in case troubleshooting help is needed.</p>
 <p>To retrieve the currently active diagnostic, one can use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovp8xx diagnostic get
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovpxxx diagnostic get
 {
   "bootid": "2e49ea23-2f03-4965-8d48-fe08e72c23dd",
   "events": [],
@@ -233,7 +233,7 @@ For example:</p>
 </div>
 <p>In the example above, there is no active diagnostics.</p>
 <p>By default, only the active diagnostic is displayed. To filter the diagnostic messages, for example to retrieve all active diagnostics from the “/applications/instances/app0/type” source, use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovp8xx diagnostic get --filter '{"source": "/applications/instances/app0/type", "state": "active"}'
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovpxxx diagnostic get --filter '{"source": "/applications/instances/app0/type", "state": "active"}'
 {
   "bootid": "7a4ea1e6-1869-4500-bd2d-c32aad956ca9",
   "events": [
@@ -309,7 +309,7 @@ For example:</p>
 <p>In addition to the diagnostic, a service report can be downloaded.
 The generated ZIP file should be shared with ifm support team when requesting troubleshooting help, as it contains detailed information about the state and configuration of the system.</p>
 <p>To download it, use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovp8xx getServiceReport &gt; service_report.zip
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifm3d ovpxxx getServiceReport &gt; service_report.zip
 $ unzip service_report.zip
 $ ls
 configuration.json  deserializer_info.json  diagnostics.json  emmc_devices_health.json  filesystem_info.txt  journalctl.log  manifest.json  schema.json  service_report.zip
