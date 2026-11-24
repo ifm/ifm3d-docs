@@ -1,0 +1,122 @@
+ifm3dpy.deserialize.RGBInfoV2
+=============================
+
+.. currentmodule:: ifm3dpy.deserialize
+
+.. autoclass:: RGBInfoV2
+   :members:
+   :show-inheritance:
+   :inherited-members: ndarray, int, Enum
+
+   
+   
+   .. automethod:: __init__
+   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RGBInfoV2.__init__
+      ~RGBInfoV2.deserialize
+   
+   
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RGBInfoV2.exposure_time
+      ~RGBInfoV2.extrinsic_optic_to_user
+      ~RGBInfoV2.frame_counter
+      ~RGBInfoV2.intrinsic_calibration
+      ~RGBInfoV2.inverse_intrinsic_calibration
+      ~RGBInfoV2.reserved
+      ~RGBInfoV2.rolling_shutter_row_offset_ns
+      ~RGBInfoV2.timestamp_ns
+      ~RGBInfoV2.version
+   
+   

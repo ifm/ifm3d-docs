@@ -40,6 +40,7 @@
       ODSOccupancyGridV1
       ODSPolarOccupancyGridV1
       RGBInfoV1
+      RGBInfoV2
       TOFInfoV3
       TOFInfoV4
    
